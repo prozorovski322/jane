@@ -77,10 +77,7 @@ export const Bilingual = z.strictObject({ en: En, ru: Ru });
 export type Bilingual = z.infer<typeof Bilingual>;
 
 /** A picture for picture exercises: an emoji (rendered by the system font) or a bundled asset. */
-export const Picture = z.union([
-  z.strictObject({ emoji: text }),
-  z.strictObject({ asset: Id }),
-]);
+export const Picture = z.union([z.strictObject({ emoji: text }), z.strictObject({ asset: Id })]);
 export type Picture = z.infer<typeof Picture>;
 
 // ---------------------------------------------------------------------------
@@ -367,10 +364,7 @@ export const Write = z.strictObject({
 export const MinimalPair = z.strictObject({
   ...base,
   type: z.literal('minimal_pair'),
-  pair: z.tuple([
-    z.strictObject({ en: En, ipa: text }),
-    z.strictObject({ en: En, ipa: text }),
-  ]),
+  pair: z.tuple([z.strictObject({ en: En, ipa: text }), z.strictObject({ en: En, ipa: text })]),
   say: z.union([z.literal(0), z.literal(1)]),
 });
 

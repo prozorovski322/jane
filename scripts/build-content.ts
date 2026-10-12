@@ -17,7 +17,12 @@ import type {
   UnitOutline,
 } from '../src/core/content/bundle-types';
 import { exerciseStrings } from '../src/core/content/extract';
-import { expandContraction, headwordTokens, lemmaCandidates, tokenize } from '../src/core/content/lexical';
+import {
+  expandContraction,
+  headwordTokens,
+  lemmaCandidates,
+  tokenize,
+} from '../src/core/content/lexical';
 import type { Exercise, Unit } from '../src/core/content/schema';
 import { checkContent } from './lib/check';
 import { loadContent, ROOT } from './lib/load';
@@ -28,7 +33,11 @@ const OUT = join(ROOT, 'src', 'core', 'content', 'generated');
 /** Function words are not tracked per exercise: they are everywhere. */
 const UNTRACKED_POS = new Set(['pron', 'det', 'conj']);
 
-function withDerivedWords(ex: Exercise, unit: Unit, irregular: ReadonlyMap<string, readonly string[]>): Exercise {
+function withDerivedWords(
+  ex: Exercise,
+  unit: Unit,
+  irregular: ReadonlyMap<string, readonly string[]>,
+): Exercise {
   const lemmas = new Set(
     exerciseStrings(ex)
       .en.flatMap((s) => tokenize(s).flatMap((t) => expandContraction(t.lower)))
@@ -74,7 +83,10 @@ function main() {
         ...l,
         exercises: l.exercises.map((e) => withDerivedWords(e, unit, irregular)),
       })),
-      test: { ...unit.test, exercises: unit.test.exercises.map((e) => withDerivedWords(e, unit, irregular)) },
+      test: {
+        ...unit.test,
+        exercises: unit.test.exercises.map((e) => withDerivedWords(e, unit, irregular)),
+      },
     };
     writeJson(join(OUT, 'units', `${unit.id}.json`), bundle);
 
@@ -87,7 +99,12 @@ function main() {
       goals: unit.goals,
       grammar: unit.grammar,
       wordCount: unit.words.length,
-      lessons: unit.lessons.map((l) => ({ id: l.id, kind: l.kind, title: l.title, exerciseCount: l.exercises.length })),
+      lessons: unit.lessons.map((l) => ({
+        id: l.id,
+        kind: l.kind,
+        title: l.title,
+        exerciseCount: l.exercises.length,
+      })),
       testExerciseCount: unit.test.exercises.length,
     });
   }

@@ -10,7 +10,7 @@ const task: ExerciseOf<'write'> = {
   maxWords: 30,
   criteria: [
     { id: 'from', label: 'Откуда', patterns: ['\\bfrom\\b'], required: true },
-    { id: 'job', label: 'Профессия', patterns: ['\\b(I\'?m|I am) an? [a-z]+'], required: true },
+    { id: 'job', label: 'Профессия', patterns: ["\\b(I'?m|I am) an? [a-z]+"], required: true },
   ],
   commonErrors: [{ pattern: '\\bI from\\b', message: 'Нужен глагол.' }],
   samples: ["I'm Max. I'm from Kazan and I'm a designer."],
@@ -45,6 +45,11 @@ describe('checkWriting', () => {
 
 describe('countKeywordGroups', () => {
   it('counts each group once, case-insensitively', () => {
-    expect(countKeywordGroups('MY NAME IS Olga, my name is Olga', [['\\bmy name is\\b'], ['\\bfrom\\b']])).toBe(1);
+    expect(
+      countKeywordGroups('MY NAME IS Olga, my name is Olga', [
+        ['\\bmy name is\\b'],
+        ['\\bfrom\\b'],
+      ]),
+    ).toBe(1);
   });
 });

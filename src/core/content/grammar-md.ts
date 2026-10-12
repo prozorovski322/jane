@@ -121,7 +121,10 @@ export function parseGrammarMarkdown(source: string): ParsedGrammarNote {
       while (i < lines.length && lines[i]!.trim().startsWith('|')) {
         const row = splitRow(lines[i]!);
         if (row.length !== header.length) {
-          throw new GrammarParseError(`table row has ${row.length} cells, expected ${header.length}`, i + 1);
+          throw new GrammarParseError(
+            `table row has ${row.length} cells, expected ${header.length}`,
+            i + 1,
+          );
         }
         rows.push(row);
         i++;

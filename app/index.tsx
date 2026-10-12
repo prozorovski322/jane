@@ -32,8 +32,8 @@ export default function ContentPreview() {
                     {u.order}. {u.title.ru} · {u.title.en}
                   </Text>
                   <Text style={styles.muted}>
-                    {u.lessons.length} уроков · {exercises} заданий · тест {u.testExerciseCount} · слов{' '}
-                    {u.wordCount}
+                    {u.lessons.length} уроков · {exercises} заданий · тест {u.testExerciseCount} ·
+                    слов {u.wordCount}
                   </Text>
                   {u.lessons.map((l) => (
                     <Text key={l.id} style={styles.row}>

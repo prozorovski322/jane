@@ -95,7 +95,8 @@ class Vocabulary {
 
 function glossarySet(texts: readonly Text[]): Set<string> {
   const s = new Set<string>();
-  for (const t of texts) for (const g of t.glossary) for (const tok of headwordTokens(g.en)) s.add(tok);
+  for (const t of texts)
+    for (const g of t.glossary) for (const tok of headwordTokens(g.en)) s.add(tok);
   return s;
 }
 
@@ -151,14 +152,20 @@ function checkExercise(
       const key = tileMultisetKey(splitTiles(ex.answer));
       ex.alternatives.forEach((alt, i) => {
         if (tileMultisetKey(splitTiles(alt)) !== key) {
-          report('error', `alternatives[${i}]`, 'alternative must use exactly the same tiles as the answer');
+          report(
+            'error',
+            `alternatives[${i}]`,
+            'alternative must use exactly the same tiles as the answer',
+          );
         }
       });
       const answerTiles = new Set(splitTiles(ex.answer).map(normalizeAnswer));
       for (const d of ex.distractors) {
-        if (answerTiles.has(normalizeAnswer(d))) report('error', 'distractors', `"${d}" is also in the answer`);
+        if (answerTiles.has(normalizeAnswer(d)))
+          report('error', 'distractors', `"${d}" is also in the answer`);
       }
-      if (splitTiles(ex.answer).length > 12) report('warning', 'answer', 'more than 12 tiles is hard on a phone');
+      if (splitTiles(ex.answer).length > 12)
+        report('warning', 'answer', 'more than 12 tiles is hard on a phone');
       break;
     }
     case 'type_translation': {
@@ -168,30 +175,42 @@ function checkExercise(
       break;
     }
     case 'match_pairs': {
-      if (dupes(ex.pairs.map((p) => normalizeAnswer(p.en))).length) report('error', 'pairs', 'duplicate English items');
-      if (dupes(ex.pairs.map((p) => normalizeAnswer(p.ru))).length) report('error', 'pairs', 'duplicate Russian items');
+      if (dupes(ex.pairs.map((p) => normalizeAnswer(p.en))).length)
+        report('error', 'pairs', 'duplicate English items');
+      if (dupes(ex.pairs.map((p) => normalizeAnswer(p.ru))).length)
+        report('error', 'pairs', 'duplicate Russian items');
       break;
     }
     case 'fill_gap': {
       const gaps = ex.text.split('___').length - 1;
       if (gaps === 0) report('error', 'text', 'no ___ gap in text');
-      if (gaps !== ex.answers.length) report('error', 'answers', `${gaps} gaps but ${ex.answers.length} answer lists`);
+      if (gaps !== ex.answers.length)
+        report('error', 'answers', `${gaps} gaps but ${ex.answers.length} answer lists`);
       if (ex.options) {
         if (gaps !== 1) report('error', 'options', 'options are only allowed with a single gap');
         checkOptions(report, ex.options, undefined);
         const accepted = new Set((ex.answers[0] ?? []).map(normalizeAnswer));
         const correct = ex.options.filter((o) => accepted.has(normalizeAnswer(o)));
-        if (correct.length !== 1) report('error', 'options', `exactly one option must be correct, found ${correct.length}`);
+        if (correct.length !== 1)
+          report('error', 'options', `exactly one option must be correct, found ${correct.length}`);
       }
-      if (hintReveals(ex.answers[0]?.[0] ?? '')) report('warning', 'hint', 'hint contains the answer');
+      if (hintReveals(ex.answers[0]?.[0] ?? ''))
+        report('warning', 'hint', 'hint contains the answer');
       break;
     }
     case 'error_correction': {
       const occurrences = countFragment(ex.text, ex.wrong);
-      if (occurrences !== 1) report('error', 'wrong', `"${ex.wrong}" must occur exactly once in text (found ${occurrences})`);
+      if (occurrences !== 1)
+        report(
+          'error',
+          'wrong',
+          `"${ex.wrong}" must occur exactly once in text (found ${occurrences})`,
+        );
       checkOptions(report, ex.options, undefined);
-      if (!ex.options.includes(ex.correction)) report('error', 'options', 'options must include the correction');
-      if (normalizeAnswer(ex.wrong) === normalizeAnswer(ex.correction)) report('error', 'correction', 'correction equals the wrong fragment');
+      if (!ex.options.includes(ex.correction))
+        report('error', 'options', 'options must include the correction');
+      if (normalizeAnswer(ex.wrong) === normalizeAnswer(ex.correction))
+        report('error', 'correction', 'correction equals the wrong fragment');
       break;
     }
     case 'comprehension': {
@@ -206,7 +225,8 @@ function checkExercise(
     }
     case 'speak_answer':
     case 'speak_describe': {
-      if (ex.minKeywords > ex.keywords.length) report('error', 'minKeywords', 'minKeywords exceeds the number of groups');
+      if (ex.minKeywords > ex.keywords.length)
+        report('error', 'minKeywords', 'minKeywords exceeds the number of groups');
       for (const [gi, group] of ex.keywords.entries()) {
         for (const p of group) {
           try {
@@ -218,14 +238,22 @@ function checkExercise(
       }
       ex.samples.forEach((s, i) => {
         const n = countKeywordGroups(s, ex.keywords);
-        if (n < ex.minKeywords) report('error', `samples[${i}]`, `sample matches ${n} keyword groups, needs ${ex.minKeywords}`);
+        if (n < ex.minKeywords)
+          report(
+            'error',
+            `samples[${i}]`,
+            `sample matches ${n} keyword groups, needs ${ex.minKeywords}`,
+          );
       });
       break;
     }
     case 'write': {
       if (ex.minWords > ex.maxWords) report('error', 'minWords', 'minWords > maxWords');
       let patternsOk = true;
-      for (const p of [...ex.criteria.flatMap((c) => c.patterns), ...ex.commonErrors.map((e) => e.pattern)]) {
+      for (const p of [
+        ...ex.criteria.flatMap((c) => c.patterns),
+        ...ex.commonErrors.map((e) => e.pattern),
+      ]) {
         try {
           compilePattern(p);
         } catch {
@@ -249,7 +277,8 @@ function checkExercise(
       break;
     }
     case 'minimal_pair': {
-      if (normalizeAnswer(ex.pair[0].en) === normalizeAnswer(ex.pair[1].en)) report('error', 'pair', 'both words are the same');
+      if (normalizeAnswer(ex.pair[0].en) === normalizeAnswer(ex.pair[1].en))
+        report('error', 'pair', 'both words are the same');
       for (const [i, w] of ex.pair.entries()) {
         for (const m of ipaIssues(w.ipa)) report('error', `pair[${i}].ipa`, m);
       }
@@ -258,7 +287,8 @@ function checkExercise(
     case 'word_stress': {
       if (ex.stress >= ex.syllables.length) report('error', 'stress', 'stress index out of range');
       const joined = ex.syllables.join('').toLowerCase();
-      if (joined !== ex.word.toLowerCase().replace(/[\s-]/g, '')) report('error', 'syllables', `syllables spell "${joined}"`);
+      if (joined !== ex.word.toLowerCase().replace(/[\s-]/g, ''))
+        report('error', 'syllables', `syllables spell "${joined}"`);
       break;
     }
     case 'listen_dictation':
@@ -283,7 +313,13 @@ export function checkContent(content: LoadedContent): Issue[] {
 
   const claimId = (id: string, file: string, path: string) => {
     const prev = allIds.get(id);
-    if (prev) issues.push({ severity: 'error', file, path, message: `duplicate id "${id}" (also in ${prev})` });
+    if (prev)
+      issues.push({
+        severity: 'error',
+        file,
+        path,
+        message: `duplicate id "${id}" (also in ${prev})`,
+      });
     else allIds.set(id, `${file}:${path}`);
   };
 
@@ -291,23 +327,36 @@ export function checkContent(content: LoadedContent): Issue[] {
     const listed = content.course.levels.flatMap((l) => l.units);
     for (const id of listed) {
       if (!content.files.has(id)) {
-        issues.push({ severity: 'error', file: 'content/course.json', path: 'levels', message: `unit "${id}" is listed but has no file` });
+        issues.push({
+          severity: 'error',
+          file: 'content/course.json',
+          path: 'levels',
+          message: `unit "${id}" is listed but has no file`,
+        });
       }
     }
     for (const d of dupes(content.course.levels.map((l) => l.level))) {
-      issues.push({ severity: 'error', file: 'content/course.json', path: 'levels', message: `level ${d} listed twice` });
+      issues.push({
+        severity: 'error',
+        file: 'content/course.json',
+        path: 'levels',
+        message: `level ${d} listed twice`,
+      });
     }
   }
 
   for (const unit of content.units) {
     const file = content.files.get(unit.id) ?? '';
-    const at = (prefix: string): Report => (severity, path, message) =>
-      issues.push({ severity, file, path: path ? `${prefix}.${path}` : prefix, message });
+    const at =
+      (prefix: string): Report =>
+      (severity, path, message) =>
+        issues.push({ severity, file, path: path ? `${prefix}.${path}` : prefix, message });
     const unitReport = at('unit');
 
     // Identity.
     const expectedId = `${unit.level.toLowerCase()}.u${String(unit.order).padStart(2, '0')}`;
-    if (unit.id !== expectedId) unitReport('error', 'id', `expected id "${expectedId}" from level and order`);
+    if (unit.id !== expectedId)
+      unitReport('error', 'id', `expected id "${expectedId}" from level and order`);
     claimId(unit.id, file, 'id');
 
     // Vocabulary of this unit becomes available to all of its content.
@@ -321,7 +370,8 @@ export function checkContent(content: LoadedContent): Issue[] {
       wordKeys.set(key, w.id);
       vocab.addWord(w);
 
-      if (hasCyrillic(w.en) || hasCyrillic(w.example.en)) report('error', 'en', 'Cyrillic letters in English text');
+      if (hasCyrillic(w.en) || hasCyrillic(w.example.en))
+        report('error', 'en', 'Cyrillic letters in English text');
       for (const ru of [...w.ru, w.example.ru, w.note ?? 'ок']) {
         if (!hasCyrillic(ru)) report('error', 'ru', `"${ru}" has no Cyrillic letters`);
         if (MIXED_SCRIPT.test(ru)) report('error', 'ru', `mixed Latin/Cyrillic letters in "${ru}"`);
@@ -335,8 +385,18 @@ export function checkContent(content: LoadedContent): Issue[] {
         if (words.length === ipas.length) {
           words.forEach((word, wi) => {
             const cmp = compareWithCmu(word, ipas[wi]!);
-            if (!cmp.consonantsMatch) report('error', 'ipa', `"${word}" /${ipas[wi]}/ — consonants differ from CMUdict: ${cmp.expected}`);
-            else if (!cmp.stressMatch) report('error', 'ipa', `"${word}" /${ipas[wi]}/ — stress differs from CMUdict: ${cmp.expected}`);
+            if (!cmp.consonantsMatch)
+              report(
+                'error',
+                'ipa',
+                `"${word}" /${ipas[wi]}/ — consonants differ from CMUdict: ${cmp.expected}`,
+              );
+            else if (!cmp.stressMatch)
+              report(
+                'error',
+                'ipa',
+                `"${word}" /${ipas[wi]}/ — stress differs from CMUdict: ${cmp.expected}`,
+              );
           });
         } else {
           report('error', 'ipa', `${words.length} words but ${ipas.length} transcribed words`);
@@ -345,7 +405,9 @@ export function checkContent(content: LoadedContent): Issue[] {
 
       const head = new Set(headwordTokens(w.en));
       const exampleHasWord = tokenize(w.example.en).some((t) =>
-        expandContraction(t.lower).some((p) => lemmaCandidates(p, content.extras.irregular).some((c) => head.has(c))),
+        expandContraction(t.lower).some((p) =>
+          lemmaCandidates(p, content.extras.irregular).some((c) => head.has(c)),
+        ),
       );
       if (!exampleHasWord) report('warning', 'example', `example does not contain "${w.en}"`);
     });
@@ -364,7 +426,12 @@ export function checkContent(content: LoadedContent): Issue[] {
         unitReport('error', `grammar[${i}]`, `unknown grammar note "${g}"`);
         return;
       }
-      if (note.level !== unit.level) unitReport('warning', `grammar[${i}]`, `note "${g}" is ${note.level}, unit is ${unit.level}`);
+      if (note.level !== unit.level)
+        unitReport(
+          'warning',
+          `grammar[${i}]`,
+          `note "${g}" is ${note.level}, unit is ${unit.level}`,
+        );
       if (grammarSeen.has(g)) return;
       grammarSeen.add(g);
       const noteFile = content.files.get(g) ?? '';
@@ -372,11 +439,21 @@ export function checkContent(content: LoadedContent): Issue[] {
         const en = b.type === 'example' ? [b.en] : b.type === 'mistake' ? [b.right] : [];
         for (const s of en) {
           for (const t of vocab.unknownTokens(s, new Set(), `${noteFile}`)) {
-            issues.push({ severity: 'error', file: noteFile, path: `blocks[${bi}]`, message: `"${t.raw}" is above the level of ${unit.id}` });
+            issues.push({
+              severity: 'error',
+              file: noteFile,
+              path: `blocks[${bi}]`,
+              message: `"${t.raw}" is above the level of ${unit.id}`,
+            });
           }
         }
         if (b.type === 'example' && hasCyrillic(b.en)) {
-          issues.push({ severity: 'error', file: noteFile, path: `blocks[${bi}]`, message: 'Cyrillic in English example' });
+          issues.push({
+            severity: 'error',
+            file: noteFile,
+            path: `blocks[${bi}]`,
+            message: 'Cyrillic in English example',
+          });
         }
       });
     });
@@ -388,25 +465,41 @@ export function checkContent(content: LoadedContent): Issue[] {
       const report = at(`texts[${i}]`);
       claimId(t.id, file, `texts[${i}].id`);
       textIds.add(t.id);
-      if (!t.id.startsWith(`${unit.id}.`)) report('error', 'id', `text id must start with "${unit.id}."`);
+      if (!t.id.startsWith(`${unit.id}.`))
+        report('error', 'id', `text id must start with "${unit.id}."`);
       const speakers = new Set(t.speakers.map((s) => s.id));
       t.lines.forEach((l, li) => {
-        if (t.kind === 'dialogue' && (!l.speaker || !speakers.has(l.speaker))) report('error', `lines[${li}].speaker`, 'dialogue line needs a known speaker');
-        if (t.kind === 'reading' && l.speaker) report('error', `lines[${li}].speaker`, 'reading passage lines have no speaker');
-        if (hasCyrillic(l.en)) report('error', `lines[${li}].en`, 'Cyrillic letters in English text');
-        if (!hasCyrillic(l.ru)) report('error', `lines[${li}].ru`, 'translation has no Cyrillic letters');
+        if (t.kind === 'dialogue' && (!l.speaker || !speakers.has(l.speaker)))
+          report('error', `lines[${li}].speaker`, 'dialogue line needs a known speaker');
+        if (t.kind === 'reading' && l.speaker)
+          report('error', `lines[${li}].speaker`, 'reading passage lines have no speaker');
+        if (hasCyrillic(l.en))
+          report('error', `lines[${li}].en`, 'Cyrillic letters in English text');
+        if (!hasCyrillic(l.ru))
+          report('error', `lines[${li}].ru`, 'translation has no Cyrillic letters');
       });
-      if (t.kind === 'dialogue' && t.speakers.length < 2) report('error', 'speakers', 'a dialogue needs at least two speakers');
-      if (t.kind === 'dialogue' && (t.lines.length < 4 || t.lines.length > 24)) report('warning', 'lines', `dialogue has ${t.lines.length} lines (4–24 expected)`);
+      if (t.kind === 'dialogue' && t.speakers.length < 2)
+        report('error', 'speakers', 'a dialogue needs at least two speakers');
+      if (t.kind === 'dialogue' && (t.lines.length < 4 || t.lines.length > 24))
+        report('warning', 'lines', `dialogue has ${t.lines.length} lines (4–24 expected)`);
       if (t.kind === 'reading') {
         const words = t.lines.reduce((n, l) => n + tokenize(l.en).length, 0);
         const [min, max] = READING_WORDS[unit.level];
-        if (words < min || words > max) report('warning', 'lines', `reading has ${words} words (${min}–${max} expected for ${unit.level})`);
+        if (words < min || words > max)
+          report(
+            'warning',
+            'lines',
+            `reading has ${words} words (${min}–${max} expected for ${unit.level})`,
+          );
       }
       const gloss = glossarySet([t]);
       for (const [li, l] of t.lines.entries()) {
         for (const tok of vocab.unknownTokens(l.en, gloss, `${file} texts[${i}]`)) {
-          report('error', `lines[${li}]`, `"${tok.raw}" is above the level (add it to the unit words or to the glossary)`);
+          report(
+            'error',
+            `lines[${li}]`,
+            `"${tok.raw}" is above the level (add it to the unit words or to the glossary)`,
+          );
         }
       }
     });
@@ -414,27 +507,51 @@ export function checkContent(content: LoadedContent): Issue[] {
     // Lessons and test.
     const typesInUnit = new Set<string>();
     const comprehensionModes = new Set<string>();
-    const exerciseGroups: { prefix: string; idPrefix: string; textId?: string; exercises: Exercise[] }[] = [];
+    const exerciseGroups: {
+      prefix: string;
+      idPrefix: string;
+      textId?: string;
+      exercises: Exercise[];
+    }[] = [];
     unit.lessons.forEach((lesson, li) => {
       const report = at(`lessons[${li}]`);
       const expected = `${unit.id}.l${String(li + 1).padStart(2, '0')}`;
       if (lesson.id !== expected) report('error', 'id', `expected lesson id "${expected}"`);
       claimId(lesson.id, file, `lessons[${li}].id`);
-      if (lesson.grammar && !unit.grammar.includes(lesson.grammar)) report('error', 'grammar', `"${lesson.grammar}" is not in unit.grammar`);
+      if (lesson.grammar && !unit.grammar.includes(lesson.grammar))
+        report('error', 'grammar', `"${lesson.grammar}" is not in unit.grammar`);
       if (lesson.textId) {
-        if (!textIds.has(lesson.textId)) report('error', 'textId', `unknown text "${lesson.textId}"`);
+        if (!textIds.has(lesson.textId))
+          report('error', 'textId', `unknown text "${lesson.textId}"`);
         usedTexts.add(lesson.textId);
       }
       const [min, max] = LESSON_EXERCISES;
       if (lesson.exercises.length < min || lesson.exercises.length > max) {
-        report('warning', 'exercises', `${lesson.exercises.length} exercises (${min}–${max} expected)`);
+        report(
+          'warning',
+          'exercises',
+          `${lesson.exercises.length} exercises (${min}–${max} expected)`,
+        );
       }
-      exerciseGroups.push({ prefix: `lessons[${li}]`, idPrefix: `${lesson.id}.`, textId: lesson.textId, exercises: lesson.exercises });
+      exerciseGroups.push({
+        prefix: `lessons[${li}]`,
+        idPrefix: `${lesson.id}.`,
+        textId: lesson.textId,
+        exercises: lesson.exercises,
+      });
     });
     if (unit.test.exercises.length < TEST_EXERCISES_MIN) {
-      unitReport('error', 'test.exercises', `unit test needs at least ${TEST_EXERCISES_MIN} exercises`);
+      unitReport(
+        'error',
+        'test.exercises',
+        `unit test needs at least ${TEST_EXERCISES_MIN} exercises`,
+      );
     }
-    exerciseGroups.push({ prefix: 'test', idPrefix: `${unit.id}.test.`, exercises: unit.test.exercises });
+    exerciseGroups.push({
+      prefix: 'test',
+      idPrefix: `${unit.id}.test.`,
+      exercises: unit.test.exercises,
+    });
 
     const practiced = new Set<string>();
     for (const group of exerciseGroups) {
@@ -442,7 +559,8 @@ export function checkContent(content: LoadedContent): Issue[] {
         const path = `${group.prefix}.exercises[${ei}]`;
         const report = at(path);
         claimId(ex.id, file, `${path}.id`);
-        if (!ex.id.startsWith(group.idPrefix)) report('error', 'id', `exercise id must start with "${group.idPrefix}"`);
+        if (!ex.id.startsWith(group.idPrefix))
+          report('error', 'id', `exercise id must start with "${group.idPrefix}"`);
         typesInUnit.add(ex.type);
         if (ex.type === 'comprehension') {
           comprehensionModes.add(ex.mode);
@@ -474,37 +592,43 @@ export function checkContent(content: LoadedContent): Issue[] {
 
         for (const w of ex.words) practiced.add(w);
         const tokens = new Set(
-          strings.en.flatMap((s) => tokenize(s).flatMap((t) => expandContraction(t.lower))).flatMap((p) =>
-            lemmaCandidates(p, content.extras.irregular),
-          ),
+          strings.en
+            .flatMap((s) => tokenize(s).flatMap((t) => expandContraction(t.lower)))
+            .flatMap((p) => lemmaCandidates(p, content.extras.irregular)),
         );
         for (const w of unit.words) {
           if (headwordTokens(w.en).every((t) => tokens.has(t))) practiced.add(w.id);
         }
-        if (ex.type === 'picture_choice') [ex.word, ...ex.distractors].forEach((w) => practiced.add(w));
+        if (ex.type === 'picture_choice')
+          [ex.word, ...ex.distractors].forEach((w) => practiced.add(w));
       });
     }
 
     unit.words.forEach((w, i) => {
-      if (!practiced.has(w.id)) at(`words[${i}]`)('warning', '', `"${w.en}" is not used in any exercise`);
+      if (!practiced.has(w.id))
+        at(`words[${i}]`)('warning', '', `"${w.en}" is not used in any exercise`);
     });
     unit.texts.forEach((t, i) => {
-      if (!usedTexts.has(t.id)) at(`texts[${i}]`)('warning', '', `text "${t.id}" is not used by any lesson`);
+      if (!usedTexts.has(t.id))
+        at(`texts[${i}]`)('warning', '', `text "${t.id}" is not used by any lesson`);
     });
 
     // Completeness: every unit trains all four skills.
     const requireType = (types: string[], what: string) => {
       if (!types.some((t) => typesInUnit.has(t))) unitReport('error', '', `unit has no ${what}`);
     };
-    if (!comprehensionModes.has('reading')) unitReport('error', '', 'unit has no reading comprehension');
-    if (!comprehensionModes.has('listening')) unitReport('error', '', 'unit has no listening comprehension');
+    if (!comprehensionModes.has('reading'))
+      unitReport('error', '', 'unit has no reading comprehension');
+    if (!comprehensionModes.has('listening'))
+      unitReport('error', '', 'unit has no listening comprehension');
     requireType(['speak_repeat', 'speak_answer', 'speak_describe'], 'speaking exercise');
     requireType(['write'], 'writing exercise');
     requireType(['minimal_pair', 'word_stress'], 'pronunciation exercise');
     requireType(['listen_dictation', 'listen_choice'], 'listen-and-type/choose exercise');
     if (unit.goals.length < 3) unitReport('warning', 'goals', 'fewer than 3 can-do goals');
     unit.goals.forEach((g, i) => {
-      if (!/^Могу /.test(g)) unitReport('warning', `goals[${i}]`, 'can-do goals start with "Могу …"');
+      if (!/^Могу /.test(g))
+        unitReport('warning', `goals[${i}]`, 'can-do goals start with "Могу …"');
     });
   }
 
@@ -518,7 +642,12 @@ export function checkContent(content: LoadedContent): Issue[] {
   }
   for (const id of grammarIds) {
     if (!grammarSeen.has(id)) {
-      issues.push({ severity: 'warning', file: content.files.get(id) ?? '', path: '', message: `grammar note "${id}" is not used by any unit` });
+      issues.push({
+        severity: 'warning',
+        file: content.files.get(id) ?? '',
+        path: '',
+        message: `grammar note "${id}" is not used by any unit`,
+      });
     }
   }
 

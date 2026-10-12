@@ -107,7 +107,11 @@ export function exerciseStrings(ex: Exercise): ExerciseStrings {
       break;
     case 'write':
       en.push(...ex.samples);
-      ru.push(ex.task, ...ex.criteria.map((c) => c.label), ...ex.commonErrors.map((e) => e.message));
+      ru.push(
+        ex.task,
+        ...ex.criteria.map((c) => c.label),
+        ...ex.commonErrors.map((e) => e.message),
+      );
       break;
     case 'minimal_pair':
       en.push(ex.pair[0].en, ex.pair[1].en);

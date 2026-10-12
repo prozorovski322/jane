@@ -4,3 +4,5 @@ dist
 coverage
 src/core/content/generated
 package-lock.json
+content/**/*.json
+scripts/data

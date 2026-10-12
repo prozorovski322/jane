@@ -91,7 +91,10 @@ function undouble(stem: string): string | null {
  * Candidate base forms for an inflected word, most likely first. Always includes the word itself.
  * `irregular` maps irregular forms to their base forms ("went" → ["go"]).
  */
-export function lemmaCandidates(word: string, irregular?: ReadonlyMap<string, readonly string[]>): string[] {
+export function lemmaCandidates(
+  word: string,
+  irregular?: ReadonlyMap<string, readonly string[]>,
+): string[] {
   const w = word.toLowerCase();
   const out = new Set<string>([w]);
   const add = (s: string | null) => {

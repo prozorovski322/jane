@@ -19,6 +19,7 @@ jobs:
         run: |
           npm run content:build
           git diff --exit-code -- src/core/content/generated
+      - run: npm run format:check
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run content:check -- --strict

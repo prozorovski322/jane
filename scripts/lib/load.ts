@@ -69,7 +69,10 @@ function zodIssues(file: string, error: z.ZodError): Issue[] {
   return error.issues.map((i) => ({
     severity: 'error' as const,
     file: rel(file),
-    path: i.path.map((p) => (typeof p === 'number' ? `[${p}]` : `.${String(p)}`)).join('').replace(/^\./, ''),
+    path: i.path
+      .map((p) => (typeof p === 'number' ? `[${p}]` : `.${String(p)}`))
+      .join('')
+      .replace(/^\./, ''),
     message: i.message,
   }));
 }
@@ -78,12 +81,22 @@ function readJson(file: string, issues: Issue[]): unknown {
   try {
     return JSON.parse(readFileSync(file, 'utf8'));
   } catch (e) {
-    issues.push({ severity: 'error', file: rel(file), path: '', message: `invalid JSON: ${(e as Error).message}` });
+    issues.push({
+      severity: 'error',
+      file: rel(file),
+      path: '',
+      message: `invalid JSON: ${(e as Error).message}`,
+    });
     return undefined;
   }
 }
 
-function parseFile<T>(file: string, schema: z.ZodType<T>, data: unknown, issues: Issue[]): T | null {
+function parseFile<T>(
+  file: string,
+  schema: z.ZodType<T>,
+  data: unknown,
+  issues: Issue[],
+): T | null {
   if (data === undefined) return null;
   const r = schema.safeParse(data);
   if (!r.success) {
@@ -105,7 +118,8 @@ function loadExtras(issues: Issue[]): LexiconExtras {
   const irrFile = join(dir, 'irregular-verbs.json');
   if (existsSync(irrFile)) {
     const Irr = z.array(z.tuple([z.string(), z.string(), z.string()]));
-    for (const [base, past, pp] of parseFile(irrFile, Irr, readJson(irrFile, issues), issues) ?? []) {
+    for (const [base, past, pp] of parseFile(irrFile, Irr, readJson(irrFile, issues), issues) ??
+      []) {
       for (const form of [...past.split('/'), ...pp.split('/')]) {
         const bases = irregular.get(form) ?? [];
         if (!bases.includes(base)) bases.push(base);
@@ -160,7 +174,12 @@ export function loadContent(): LoadedContent {
     );
     if (!note) continue;
     if (grammar.has(note.id)) {
-      issues.push({ severity: 'error', file: rel(file), path: 'id', message: `duplicate grammar id ${note.id}` });
+      issues.push({
+        severity: 'error',
+        file: rel(file),
+        path: 'id',
+        message: `duplicate grammar id ${note.id}`,
+      });
     }
     grammar.set(note.id, note);
     files.set(note.id, rel(file));
@@ -182,7 +201,12 @@ export function loadContent(): LoadedContent {
     const unit = parseFile(file, Unit, data, issues);
     if (!unit) continue;
     if (byId.has(unit.id)) {
-      issues.push({ severity: 'error', file: rel(file), path: 'id', message: `duplicate unit id ${unit.id}` });
+      issues.push({
+        severity: 'error',
+        file: rel(file),
+        path: 'id',
+        message: `duplicate unit id ${unit.id}`,
+      });
     }
     byId.set(unit.id, unit);
     files.set(unit.id, rel(file));

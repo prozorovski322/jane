@@ -26,11 +26,45 @@ export function ipaIssues(ipa: string): string[] {
 }
 
 const ARPABET: Record<string, string> = {
-  AA: 'ɑː', AE: 'æ', AH: 'ʌ', AO: 'ɔː', AW: 'aʊ', AY: 'aɪ', EH: 'e', ER: 'ɝː', EY: 'eɪ',
-  IH: 'ɪ', IY: 'iː', OW: 'oʊ', OY: 'ɔɪ', UH: 'ʊ', UW: 'uː',
-  B: 'b', CH: 'tʃ', D: 'd', DH: 'ð', F: 'f', G: 'ɡ', HH: 'h', JH: 'dʒ', K: 'k', L: 'l', M: 'm',
-  N: 'n', NG: 'ŋ', P: 'p', R: 'r', S: 's', SH: 'ʃ', T: 't', TH: 'θ', V: 'v', W: 'w', Y: 'j',
-  Z: 'z', ZH: 'ʒ',
+  AA: 'ɑː',
+  AE: 'æ',
+  AH: 'ʌ',
+  AO: 'ɔː',
+  AW: 'aʊ',
+  AY: 'aɪ',
+  EH: 'e',
+  ER: 'ɝː',
+  EY: 'eɪ',
+  IH: 'ɪ',
+  IY: 'iː',
+  OW: 'oʊ',
+  OY: 'ɔɪ',
+  UH: 'ʊ',
+  UW: 'uː',
+  B: 'b',
+  CH: 'tʃ',
+  D: 'd',
+  DH: 'ð',
+  F: 'f',
+  G: 'ɡ',
+  HH: 'h',
+  JH: 'dʒ',
+  K: 'k',
+  L: 'l',
+  M: 'm',
+  N: 'n',
+  NG: 'ŋ',
+  P: 'p',
+  R: 'r',
+  S: 's',
+  SH: 'ʃ',
+  T: 't',
+  TH: 'θ',
+  V: 'v',
+  W: 'w',
+  Y: 'j',
+  Z: 'z',
+  ZH: 'ʒ',
 };
 
 /** CMUdict entry as a list of phones with stress digits, e.g. ["HH","AH0","L","OW1"]. */
@@ -38,7 +72,9 @@ export type CmuEntry = string[];
 
 let cmu: Map<string, CmuEntry[]> | null = null;
 
-export function loadCmudict(path = join(__dirname, '..', 'data', 'cmudict.dict')): Map<string, CmuEntry[]> {
+export function loadCmudict(
+  path = join(__dirname, '..', 'data', 'cmudict.dict'),
+): Map<string, CmuEntry[]> {
   if (cmu) return cmu;
   cmu = new Map();
   for (const line of readFileSync(path, 'utf8').split('\n')) {

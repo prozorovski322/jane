@@ -16,7 +16,10 @@ function errorsAfter(mutate: (unit: Unit) => void): string[] {
     .map((i) => `${i.path}: ${i.message}`);
 }
 
-function findExercise<T extends Exercise['type']>(unit: Unit, type: T): Extract<Exercise, { type: T }> {
+function findExercise<T extends Exercise['type']>(
+  unit: Unit,
+  type: T,
+): Extract<Exercise, { type: T }> {
   for (const lesson of unit.lessons) {
     const ex = lesson.exercises.find((e) => e.type === type);
     if (ex) return ex as Extract<Exercise, { type: T }>;

@@ -1,4 +1,10 @@
-import { countWords, expandContraction, headwordTokens, lemmaCandidates, tokenize } from '../lexical';
+import {
+  countWords,
+  expandContraction,
+  headwordTokens,
+  lemmaCandidates,
+  tokenize,
+} from '../lexical';
 
 describe('tokenize', () => {
   it('drops punctuation and marks sentence starts', () => {
@@ -8,7 +14,12 @@ describe('tokenize', () => {
   });
 
   it('keeps contractions together and normalizes typographic apostrophes', () => {
-    expect(tokenize('I’m Anna, she’s Kate.').map((t) => t.lower)).toEqual(['i\'m', 'anna', 'she\'s', 'kate']);
+    expect(tokenize('I’m Anna, she’s Kate.').map((t) => t.lower)).toEqual([
+      "i'm",
+      'anna',
+      "she's",
+      'kate',
+    ]);
   });
 
   it('splits spelled-out letters', () => {
