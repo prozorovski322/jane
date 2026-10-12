@@ -1,0 +1,351 @@
+{
+  "id": "a1.u01",
+  "level": "A1",
+  "order": 1,
+  "title": { "en": "Hello!", "ru": "Знакомство" },
+  "description": "Здороваемся, знакомимся, рассказываем, откуда мы и кем работаем. Глагол to be, артикли a и an, английский алфавит.",
+  "goals": [
+    "Могу поздороваться и попрощаться в разное время дня.",
+    "Могу представиться и представить другого человека.",
+    "Могу сказать, откуда я и кем работаю или учусь.",
+    "Могу продиктовать по буквам своё имя и фамилию.",
+    "Могу написать короткое приветствие о себе."
+  ],
+  "grammar": ["a1.be-present", "a1.articles-a-an", "a1.alphabet"],
+  "troubles": ["articles", "word-order", "pron-th", "pron-vowels"],
+  "words": [
+    { "id": "hello", "en": "hello", "ipa": "həˈloʊ", "pos": "interj", "ru": ["привет", "здравствуйте"], "example": { "en": "Hello! I'm Anna.", "ru": "Здравствуйте! Я Анна." }, "picture": { "emoji": "👋" }, "topics": ["greetings"] },
+    { "id": "hi", "en": "hi", "ipa": "haɪ", "pos": "interj", "ru": ["привет"], "example": { "en": "Hi, Max! How are you?", "ru": "Привет, Макс! Как дела?" }, "note": "Hi — неформальное приветствие, hello подходит для любой ситуации.", "topics": ["greetings"] },
+    { "id": "goodbye", "en": "goodbye", "ipa": "ɡʊdˈbaɪ", "pos": "interj", "ru": ["до свидания"], "example": { "en": "Goodbye, Anna!", "ru": "До свидания, Анна!" }, "topics": ["greetings"] },
+    { "id": "bye", "en": "bye", "ipa": "baɪ", "pos": "interj", "ru": ["пока"], "example": { "en": "Bye! See you tomorrow!", "ru": "Пока! До завтра!" }, "topics": ["greetings"] },
+    { "id": "see-you", "en": "see you", "ipa": "siː juː", "pos": "phrase", "ru": ["увидимся", "до встречи"], "example": { "en": "Bye, Li! See you!", "ru": "Пока, Ли! Увидимся!" }, "topics": ["greetings"] },
+    { "id": "tomorrow", "en": "tomorrow", "ipa": "təˈmɑːroʊ", "pos": "adv", "ru": ["завтра"], "example": { "en": "See you tomorrow!", "ru": "Увидимся завтра!" } },
+    { "id": "good-morning", "en": "good morning", "ipa": "ɡʊd ˈmɔːrnɪŋ", "pos": "phrase", "ru": ["доброе утро"], "example": { "en": "Good morning, Anna!", "ru": "Доброе утро, Анна!" }, "picture": { "emoji": "🌅" }, "topics": ["greetings"] },
+    { "id": "good-afternoon", "en": "good afternoon", "ipa": "ɡʊd ˌæftɚˈnuːn", "pos": "phrase", "ru": ["добрый день"], "example": { "en": "Good afternoon! I'm Tom.", "ru": "Добрый день! Я Том." }, "note": "Говорят примерно с полудня до шести вечера.", "topics": ["greetings"] },
+    { "id": "good-evening", "en": "good evening", "ipa": "ɡʊd ˈiːvnɪŋ", "pos": "phrase", "ru": ["добрый вечер"], "example": { "en": "Good evening! I'm Ivan.", "ru": "Добрый вечер! Я Иван." }, "topics": ["greetings"] },
+    { "id": "good-night", "en": "good night", "ipa": "ɡʊd naɪt", "pos": "phrase", "ru": ["спокойной ночи"], "example": { "en": "Good night, Kate! See you tomorrow.", "ru": "Спокойной ночи, Кейт! До завтра." }, "note": "Это прощание, а не приветствие. Вечером при встрече говорят good evening.", "picture": { "emoji": "🌙" }, "topics": ["greetings"] },
+    { "id": "how-are-you", "en": "how are you", "ipa": "haʊ ɑːr juː", "pos": "phrase", "ru": ["как дела?", "как поживаете?"], "example": { "en": "Hi, Tom! How are you?", "ru": "Привет, Том! Как дела?" }, "note": "Обычно это просто часть приветствия. Отвечают коротко: Fine, thanks. And you?", "topics": ["greetings"] },
+    { "id": "fine", "en": "fine", "ipa": "faɪn", "pos": "adj", "ru": ["хорошо", "нормально"], "example": { "en": "I'm fine, thanks. And you?", "ru": "Хорошо, спасибо. А ты?" }, "topics": ["greetings"] },
+    { "id": "not-bad", "en": "not bad", "ipa": "nɑːt bæd", "pos": "phrase", "ru": ["неплохо"], "example": { "en": "Not bad, thank you!", "ru": "Неплохо, спасибо!" }, "topics": ["greetings"] },
+    { "id": "great", "en": "great", "ipa": "ɡreɪt", "pos": "adj", "ru": ["отлично", "отличный"], "example": { "en": "I'm great, thanks!", "ru": "Отлично, спасибо!" } },
+    { "id": "good", "en": "good", "ipa": "ɡʊd", "pos": "adj", "ru": ["хороший", "хорошо"], "example": { "en": "I'm good, thank you.", "ru": "У меня всё хорошо, спасибо." }, "forms": { "comparative": "better", "superlative": "best" } },
+    { "id": "thanks", "en": "thanks", "ipa": "θæŋks", "pos": "interj", "ru": ["спасибо"], "example": { "en": "Thanks, Anna!", "ru": "Спасибо, Анна!" }, "troubles": ["pron-th"], "topics": ["greetings"] },
+    { "id": "thank-you", "en": "thank you", "ipa": "θæŋk juː", "pos": "phrase", "ru": ["спасибо"], "example": { "en": "Thank you, Max!", "ru": "Спасибо, Макс!" }, "note": "Thank you звучит чуть вежливее, чем thanks.", "troubles": ["pron-th"], "topics": ["greetings"] },
+    { "id": "please", "en": "please", "ipa": "pliːz", "pos": "adv", "ru": ["пожалуйста (при просьбе)"], "example": { "en": "Again, please.", "ru": "Ещё раз, пожалуйста." }, "note": "Только для просьбы. В ответ на «спасибо» please не говорят." },
+    { "id": "sorry", "en": "sorry", "ipa": "ˈsɑːri", "pos": "adj", "ru": ["извините", "простите"], "example": { "en": "Sorry, I'm new here.", "ru": "Извините, я здесь новенький." }, "note": "Sorry — когда извиняетесь. Чтобы обратиться к незнакомому человеку, говорят excuse me." },
+    { "id": "excuse-me", "en": "excuse me", "ipa": "ɪkˈskjuːz miː", "pos": "phrase", "ru": ["извините (чтобы обратиться)"], "example": { "en": "Excuse me, are you Anna?", "ru": "Извините, вы Анна?" } },
+    { "id": "yes", "en": "yes", "ipa": "jes", "pos": "adv", "ru": ["да"], "example": { "en": "Yes, I'm Max.", "ru": "Да, я Макс." } },
+    { "id": "no", "en": "no", "ipa": "noʊ", "pos": "adv", "ru": ["нет"], "example": { "en": "No, I'm Tom.", "ru": "Нет, я Том." } },
+    { "id": "nice-to-meet-you", "en": "nice to meet you", "ipa": "naɪs tə miːt juː", "pos": "phrase", "ru": ["приятно познакомиться"], "example": { "en": "Hi, I'm Kate. Nice to meet you!", "ru": "Привет, я Кейт. Приятно познакомиться!" }, "topics": ["greetings"] },
+    { "id": "you-too", "en": "you too", "ipa": "juː tuː", "pos": "phrase", "ru": ["мне тоже", "и вам того же"], "example": { "en": "Nice to meet you! — You too!", "ru": "Приятно познакомиться! — Мне тоже!" }, "note": "Отвечаем так на nice to meet you и на пожелания." },
+    { "id": "i", "en": "I", "ipa": "aɪ", "pos": "pron", "ru": ["я"], "example": { "en": "I'm Anna.", "ru": "Я Анна." }, "note": "Всегда пишется с большой буквы." },
+    { "id": "you", "en": "you", "ipa": "juː", "pos": "pron", "ru": ["ты", "вы"], "example": { "en": "You're a teacher.", "ru": "Ты учитель." } },
+    { "id": "he", "en": "he", "ipa": "hiː", "pos": "pron", "ru": ["он"], "example": { "en": "He's from Kazan.", "ru": "Он из Казани." } },
+    { "id": "she", "en": "she", "ipa": "ʃiː", "pos": "pron", "ru": ["она"], "example": { "en": "She's a doctor.", "ru": "Она врач." } },
+    { "id": "it", "en": "it", "ipa": "ɪt", "pos": "pron", "ru": ["он, она, оно (о предмете)", "это"], "example": { "en": "How do you spell it?", "ru": "Как это пишется?" } },
+    { "id": "we", "en": "we", "ipa": "wiː", "pos": "pron", "ru": ["мы"], "example": { "en": "We're from Russia.", "ru": "Мы из России." } },
+    { "id": "they", "en": "they", "ipa": "ðeɪ", "pos": "pron", "ru": ["они"], "example": { "en": "They're students.", "ru": "Они студенты." }, "troubles": ["pron-th"] },
+    { "id": "be", "en": "be", "ipa": "biː", "pos": "verb", "ru": ["быть", "являться"], "example": { "en": "We are from Kazan.", "ru": "Мы из Казани." }, "note": "Формы в настоящем: I am, he/she/it is, you/we/they are." },
+    { "id": "my", "en": "my", "ipa": "maɪ", "pos": "det", "ru": ["мой", "моя", "моё", "мои"], "example": { "en": "My name is Olga.", "ru": "Меня зовут Ольга." } },
+    { "id": "your", "en": "your", "ipa": "jʊr", "pos": "det", "ru": ["твой", "ваш"], "example": { "en": "What's your name?", "ru": "Как тебя зовут?" } },
+    { "id": "name", "en": "name", "ipa": "neɪm", "pos": "noun", "ru": ["имя"], "example": { "en": "My name is Max.", "ru": "Меня зовут Макс." }, "note": "My name is… — дословно «моё имя…», по-русски «меня зовут…»." },
+    { "id": "first-name", "en": "first name", "ipa": "fɝːst neɪm", "pos": "phrase", "ru": ["имя"], "example": { "en": "My first name is Ivan.", "ru": "Моё имя — Иван." } },
+    { "id": "last-name", "en": "last name", "ipa": "læst neɪm", "pos": "phrase", "ru": ["фамилия"], "example": { "en": "What's your last name?", "ru": "Какая у вас фамилия?" } },
+    { "id": "what", "en": "what", "ipa": "wʌt", "pos": "pron", "ru": ["что", "какой"], "example": { "en": "What's your name?", "ru": "Как вас зовут?" } },
+    { "id": "where", "en": "where", "ipa": "wer", "pos": "adv", "ru": ["где", "куда"], "example": { "en": "Where are you from?", "ru": "Откуда вы?" }, "note": "Where … from? — «откуда?»: from стоит в конце вопроса." },
+    { "id": "from", "en": "from", "ipa": "frʌm", "pos": "prep", "ru": ["из", "от"], "example": { "en": "I'm from Moscow.", "ru": "Я из Москвы." } },
+    { "id": "and", "en": "and", "ipa": "ænd", "pos": "conj", "ru": ["и", "а"], "example": { "en": "I'm fine. And you?", "ru": "Хорошо. А ты?" } },
+    { "id": "how", "en": "how", "ipa": "haʊ", "pos": "adv", "ru": ["как"], "example": { "en": "How are you?", "ru": "Как дела?" } },
+    { "id": "this", "en": "this", "ipa": "ðɪs", "pos": "pron", "ru": ["это", "этот"], "example": { "en": "This is Li. She's a programmer.", "ru": "Это Ли. Она программист." }, "troubles": ["pron-th"] },
+    { "id": "too", "en": "too", "ipa": "tuː", "pos": "adv", "ru": ["тоже"], "example": { "en": "I'm a student too.", "ru": "Я тоже студент." }, "note": "Обычно стоит в конце предложения." },
+    { "id": "the", "en": "the", "ipa": "ðə", "pos": "det", "ru": ["определённый артикль"], "example": { "en": "Welcome to the team!", "ru": "Добро пожаловать в команду!" }, "note": "Подробно об артикле the — в юните 3.", "troubles": ["articles", "pron-th"] },
+    { "id": "a", "en": "a", "ipa": "ə", "pos": "det", "ru": ["неопределённый артикль"], "example": { "en": "I'm a teacher.", "ru": "Я учитель." }, "note": "Не переводится. Ставится перед профессией в единственном числе: a doctor.", "troubles": ["articles"] },
+    { "id": "an", "en": "an", "ipa": "æn", "pos": "det", "ru": ["неопределённый артикль (перед гласным звуком)"], "example": { "en": "He's an engineer.", "ru": "Он инженер." }, "troubles": ["articles"] },
+    { "id": "friend", "en": "friend", "ipa": "frend", "pos": "noun", "ru": ["друг", "подруга"], "example": { "en": "This is my friend Kate.", "ru": "Это моя подруга Кейт." } },
+    { "id": "colleague", "en": "colleague", "ipa": "ˈkɑːliːɡ", "pos": "noun", "ru": ["коллега"], "example": { "en": "This is my colleague Tom.", "ru": "Это мой коллега Том." } },
+    { "id": "team", "en": "team", "ipa": "tiːm", "pos": "noun", "ru": ["команда"], "example": { "en": "Welcome to the team, Max!", "ru": "Добро пожаловать в команду, Макс!" } },
+    { "id": "welcome", "en": "welcome", "ipa": "ˈwelkəm", "pos": "interj", "ru": ["добро пожаловать"], "example": { "en": "Welcome to the team!", "ru": "Добро пожаловать в команду!" } },
+    { "id": "new", "en": "new", "ipa": "nuː", "pos": "adj", "ru": ["новый"], "example": { "en": "I'm new here.", "ru": "Я здесь новенький." } },
+    { "id": "here", "en": "here", "ipa": "hɪr", "pos": "adv", "ru": ["здесь", "тут"], "example": { "en": "Anna is here.", "ru": "Анна здесь." } },
+    { "id": "call", "en": "call", "ipa": "kɔːl", "pos": "verb", "ru": ["называть, звать"], "example": { "en": "I'm Ivan. Call me Vanya.", "ru": "Я Иван. Зовите меня Ваня." } },
+    { "id": "letter", "en": "letter", "ipa": "ˈletɚ", "pos": "noun", "ru": ["буква", "письмо"], "example": { "en": "My name is Max. The first letter is M.", "ru": "Меня зовут Макс. Первая буква — M." } },
+    { "id": "spell", "en": "spell", "ipa": "spel", "pos": "verb", "ru": ["называть по буквам", "писать (слово)"], "example": { "en": "How do you spell your name?", "ru": "Как пишется ваше имя?" } },
+    { "id": "double", "en": "double", "ipa": "ˈdʌbəl", "pos": "adj", "ru": ["двойной"], "example": { "en": "Anna is A, double N, A.", "ru": "Анна пишется так: эй, дабл эн, эй." } },
+    { "id": "again", "en": "again", "ipa": "əˈɡen", "pos": "adv", "ru": ["ещё раз", "снова"], "example": { "en": "Sorry, again, please.", "ru": "Извините, ещё раз, пожалуйста." } },
+    { "id": "russia", "en": "Russia", "ipa": "ˈrʌʃə", "pos": "noun", "ru": ["Россия"], "example": { "en": "We're from Russia.", "ru": "Мы из России." }, "topics": ["countries"] },
+    { "id": "russian", "en": "Russian", "ipa": "ˈrʌʃən", "pos": "adj", "ru": ["русский", "российский"], "example": { "en": "I'm Russian.", "ru": "Я русский." }, "note": "Национальности пишутся с большой буквы и без артикля: I'm Russian.", "topics": ["countries"] },
+    { "id": "england", "en": "England", "ipa": "ˈɪŋɡlənd", "pos": "noun", "ru": ["Англия"], "example": { "en": "Tom is from England.", "ru": "Том из Англии." }, "topics": ["countries"] },
+    { "id": "english", "en": "English", "ipa": "ˈɪŋɡlɪʃ", "pos": "adj", "ru": ["английский", "англичанин"], "example": { "en": "My English is not great.", "ru": "Мой английский пока не очень." }, "topics": ["countries"] },
+    { "id": "america", "en": "America", "ipa": "əˈmerɪkə", "pos": "noun", "ru": ["Америка"], "example": { "en": "Kate is from America.", "ru": "Кейт из Америки." }, "topics": ["countries"] },
+    { "id": "american", "en": "American", "ipa": "əˈmerɪkən", "pos": "adj", "ru": ["американский", "американец"], "example": { "en": "Tom and Kate are American.", "ru": "Том и Кейт американцы." }, "topics": ["countries"] },
+    { "id": "spain", "en": "Spain", "ipa": "speɪn", "pos": "noun", "ru": ["Испания"], "example": { "en": "Lucas is from Spain.", "ru": "Лукас из Испании." }, "topics": ["countries"] },
+    { "id": "spanish", "en": "Spanish", "ipa": "ˈspænɪʃ", "pos": "adj", "ru": ["испанский", "испанец"], "example": { "en": "Lucas is Spanish.", "ru": "Лукас испанец." }, "topics": ["countries"] },
+    { "id": "italy", "en": "Italy", "ipa": "ˈɪtəli", "pos": "noun", "ru": ["Италия"], "example": { "en": "Marco is from Italy.", "ru": "Марко из Италии." }, "topics": ["countries"] },
+    { "id": "italian", "en": "Italian", "ipa": "ɪˈtæljən", "pos": "adj", "ru": ["итальянский", "итальянец"], "example": { "en": "Marco is Italian.", "ru": "Марко итальянец." }, "topics": ["countries"] },
+    { "id": "china", "en": "China", "ipa": "ˈtʃaɪnə", "pos": "noun", "ru": ["Китай"], "example": { "en": "Li is from China.", "ru": "Ли из Китая." }, "topics": ["countries"] },
+    { "id": "chinese", "en": "Chinese", "ipa": "ˌtʃaɪˈniːz", "pos": "adj", "ru": ["китайский", "китаец"], "example": { "en": "Wei is Chinese.", "ru": "Вэй китаец." }, "topics": ["countries"] },
+    { "id": "job", "en": "job", "ipa": "dʒɑːb", "pos": "noun", "ru": ["работа", "должность"], "example": { "en": "I'm a designer. It's a new job.", "ru": "Я дизайнер. Это новая работа." }, "topics": ["jobs"] },
+    { "id": "what-do-you-do", "en": "what do you do", "ipa": "wʌt duː juː duː", "pos": "phrase", "ru": ["кем вы работаете?", "чем вы занимаетесь?"], "example": { "en": "What do you do? — I'm a nurse.", "ru": "Кем вы работаете? — Я медсестра." }, "note": "Устойчивый вопрос о профессии. Дословно «что вы делаете?», но спрашивают именно о работе.", "topics": ["jobs"] },
+    { "id": "teacher", "en": "teacher", "ipa": "ˈtiːtʃɚ", "pos": "noun", "ru": ["учитель", "преподаватель"], "example": { "en": "Tom is a teacher.", "ru": "Том учитель." }, "picture": { "emoji": "🧑‍🏫" }, "topics": ["jobs"] },
+    { "id": "student", "en": "student", "ipa": "ˈstuːdənt", "pos": "noun", "ru": ["студент", "студентка", "учащийся"], "example": { "en": "I'm a student.", "ru": "Я студент." }, "picture": { "emoji": "🧑‍🎓" }, "topics": ["jobs"] },
+    { "id": "doctor", "en": "doctor", "ipa": "ˈdɑːktɚ", "pos": "noun", "ru": ["врач", "доктор"], "example": { "en": "She's a doctor.", "ru": "Она врач." }, "picture": { "emoji": "🧑‍⚕️" }, "topics": ["jobs"] },
+    { "id": "nurse", "en": "nurse", "ipa": "nɝːs", "pos": "noun", "ru": ["медсестра", "медбрат"], "example": { "en": "Elena is a nurse.", "ru": "Елена медсестра." }, "topics": ["jobs"] },
+    { "id": "engineer", "en": "engineer", "ipa": "ˌendʒɪˈnɪr", "pos": "noun", "ru": ["инженер"], "example": { "en": "Ivan is an engineer.", "ru": "Иван инженер." }, "topics": ["jobs"] },
+    { "id": "designer", "en": "designer", "ipa": "dɪˈzaɪnɚ", "pos": "noun", "ru": ["дизайнер"], "example": { "en": "Max is a designer.", "ru": "Макс дизайнер." }, "topics": ["jobs"] },
+    { "id": "manager", "en": "manager", "ipa": "ˈmænɪdʒɚ", "pos": "noun", "ru": ["менеджер", "руководитель"], "example": { "en": "Anna is the manager here.", "ru": "Анна здесь руководитель." }, "note": "Ударение на первый слог: MAnager.", "topics": ["jobs"] },
+    { "id": "programmer", "en": "programmer", "ipa": "ˈproʊɡræmɚ", "pos": "noun", "ru": ["программист"], "example": { "en": "Li is a programmer.", "ru": "Ли программист." }, "picture": { "emoji": "🧑‍💻" }, "topics": ["jobs"] },
+    { "id": "driver", "en": "driver", "ipa": "ˈdraɪvɚ", "pos": "noun", "ru": ["водитель"], "example": { "en": "He's a driver.", "ru": "Он водитель." }, "topics": ["jobs"] },
+    { "id": "cook", "en": "cook", "ipa": "kʊk", "pos": "noun", "ru": ["повар"], "example": { "en": "Marco is a cook.", "ru": "Марко повар." }, "picture": { "emoji": "🧑‍🍳" }, "topics": ["jobs"] },
+    { "id": "artist", "en": "artist", "ipa": "ˈɑːrtɪst", "pos": "noun", "ru": ["художник", "художница"], "example": { "en": "Kate is an artist.", "ru": "Кейт художница." }, "note": "Ложный друг: artist — прежде всего «художник». Артист на сцене — чаще actor или performer.", "picture": { "emoji": "🧑‍🎨" }, "troubles": ["false-friends"], "topics": ["jobs"] },
+    { "id": "accountant", "en": "accountant", "ipa": "əˈkaʊntənt", "pos": "noun", "ru": ["бухгалтер"], "example": { "en": "Olga is an accountant.", "ru": "Ольга бухгалтер." }, "note": "Не путайте с account — «счёт, аккаунт».", "troubles": ["false-friends"], "topics": ["jobs"] }
+  ],
+  "texts": [
+    {
+      "id": "a1.u01.first-day",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "First day", "ru": "Первый день" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "max", "name": "Max", "voice": "male" },
+        { "id": "li", "name": "Li", "voice": "female" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Good morning! Are you Max?", "ru": "Доброе утро! Вы Макс?" },
+        { "speaker": "max", "en": "Yes, I am. Hello!", "ru": "Да. Здравствуйте!" },
+        { "speaker": "anna", "en": "Hi, Max! I'm Anna, the manager. Welcome to the team!", "ru": "Привет, Макс! Я Анна, руководитель. Добро пожаловать в команду!" },
+        { "speaker": "max", "en": "Thank you! Nice to meet you, Anna.", "ru": "Спасибо! Приятно познакомиться, Анна." },
+        { "speaker": "anna", "en": "You too. Li, this is Max. He's new here. He's a designer.", "ru": "Мне тоже. Ли, это Макс. Он у нас новенький. Он дизайнер." },
+        { "speaker": "li", "en": "Hi, Max! I'm Li. I'm a programmer. Where are you from?", "ru": "Привет, Макс! Я Ли, программист. Ты откуда?" },
+        { "speaker": "max", "en": "I'm from Kazan. And you?", "ru": "Я из Казани. А ты?" },
+        { "speaker": "li", "en": "I'm from China. How do you spell your last name, Max?", "ru": "Я из Китая. Макс, как пишется твоя фамилия?" },
+        { "speaker": "max", "en": "K, U, Z, N, E, T, S, O, V.", "ru": "Кузнецов: K, U, Z, N, E, T, S, O, V." },
+        { "speaker": "li", "en": "Great, thanks!", "ru": "Отлично, спасибо!" }
+      ]
+    },
+    {
+      "id": "a1.u01.club",
+      "kind": "reading",
+      "genre": "profile",
+      "title": { "en": "Language club: new members", "ru": "Языковой клуб: новые участники" },
+      "lines": [
+        { "en": "Hi! I'm Elena, and I'm from Moscow. I'm a nurse. My English is not great, sorry!", "ru": "Привет! Я Елена, я из Москвы. Я медсестра. Мой английский пока не очень, извините!" },
+        { "en": "Hello! My name is Marco. I'm Italian, from Rome. I'm a cook. Nice to meet you!", "ru": "Здравствуйте! Меня зовут Марко. Я итальянец, из Рима. Я повар. Приятно познакомиться!" },
+        { "en": "Hi! We're Kate and Tom, from New York. I'm an artist, and Tom is a teacher.", "ru": "Привет! Мы Кейт и Том из Нью-Йорка. Я художница, а Том учитель." },
+        { "en": "Hello, I'm Wei. I'm Chinese. I'm a student, and my friend Lucas is a student too. He's from Spain.", "ru": "Здравствуйте, я Вэй. Я китаец. Я студент, и мой друг Лукас тоже студент. Он из Испании." },
+        { "en": "Good evening! I'm Ivan, an engineer from Kazan. Call me Vanya. See you!", "ru": "Добрый вечер! Я Иван, инженер из Казани. Зовите меня Ваня. До встречи!" }
+      ],
+      "glossary": [{ "en": "language club", "ru": "языковой клуб" }, { "en": "members", "ru": "участники" }]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "a1.u01.l01",
+      "kind": "vocabulary",
+      "title": "Привет и пока",
+      "exercises": [
+        { "id": "a1.u01.l01.e01", "type": "picture_choice", "mode": "picture-to-word", "word": "hello", "distractors": ["good-night", "good-morning"], "hint": "Этим жестом машут при встрече.", "explanation": "Hello — «привет, здравствуйте». Подходит для любой ситуации и любого времени дня." },
+        { "id": "a1.u01.l01.e02", "type": "translate_choice", "from": "en", "text": "Good evening!", "options": ["Добрый вечер!", "Доброе утро!", "Спокойной ночи!"], "answer": 0, "hint": "Evening — вечер.", "explanation": "Good evening — приветствие вечером. А good night говорят, когда прощаются перед сном." },
+        { "id": "a1.u01.l01.e03", "type": "match_pairs", "pairs": [{ "en": "hello", "ru": "здравствуйте" }, { "en": "goodbye", "ru": "до свидания" }, { "en": "thanks", "ru": "спасибо" }, { "en": "sorry", "ru": "извините" }, { "en": "please", "ru": "пожалуйста" }], "hint": "Начните с самых знакомых слов, остальные найдутся сами.", "explanation": "Please — «пожалуйста», когда о чём-то просите. Sorry — «извините», когда извиняетесь." },
+        { "id": "a1.u01.l01.e04", "type": "translate_choice", "from": "ru", "text": "Пока!", "options": ["Bye!", "Hi!", "Please!"], "answer": 0, "hint": "Так прощаются с друзьями.", "explanation": "Bye — «пока», разговорная версия goodbye. Hi — «привет» при встрече." },
+        { "id": "a1.u01.l01.e05", "type": "listen_choice", "audio": "Good afternoon!", "question": "Что вы слышите?", "options": ["Good afternoon!", "Good evening!", "Good morning!"], "answer": 0, "hint": "Слово длинное, ударение в конце: after-NOON.", "explanation": "Good afternoon — «добрый день». Так здороваются примерно с полудня до шести вечера." },
+        { "id": "a1.u01.l01.e06", "type": "tiles", "from": "ru", "text": "Приятно познакомиться!", "answer": "Nice to meet you!", "distractors": ["see", "too"], "hint": "Дословно: «приятно встретить тебя».", "explanation": "Nice to meet you — устойчивая фраза при знакомстве. В ответ можно сказать: You too!" },
+        { "id": "a1.u01.l01.e07", "type": "fill_gap", "text": "How are you? — I'm ___, thanks.", "translation": "Как дела? — Хорошо, спасибо.", "answers": [["fine", "good", "great", "OK"]], "options": ["fine", "sorry", "please"], "hint": "Нужно слово со значением «хорошо, нормально».", "explanation": "На How are you? обычно отвечают коротко: I'm fine, thanks. Подробно о своих делах при этом не рассказывают." },
+        { "id": "a1.u01.l01.e08", "type": "translate_choice", "from": "en", "text": "Excuse me, are you Anna?", "options": ["Извините, вы Анна?", "Спасибо, вы Анна?", "Пока, Анна!"], "answer": 0, "hint": "Excuse me говорят, чтобы обратиться к человеку.", "explanation": "Excuse me — чтобы привлечь внимание незнакомого человека. Sorry — чтобы извиниться за ошибку или неудобство." },
+        { "id": "a1.u01.l01.e09", "type": "type_translation", "from": "ru", "text": "Спасибо!", "answers": ["Thank you!", "Thanks!"], "hint": "Подойдёт короткий или полный вариант.", "explanation": "Thanks и thank you — оба «спасибо». Thank you звучит чуть вежливее.", "troubles": ["pron-th"] },
+        { "id": "a1.u01.l01.e10", "type": "tiles", "from": "en", "text": "Good morning! How are you?", "answer": "Доброе утро! Как дела?", "distractors": ["вечер", "пока"], "hint": "Morning — утро.", "explanation": "How are you? переводим как «Как дела?», а не «Как ты?»: это часть приветствия." },
+        { "id": "a1.u01.l01.e11", "type": "speak_repeat", "text": "Nice to meet you!", "hint": "Говорите слитно: nice-to-MEET-you, ударение на meet.", "explanation": "В быстрой речи to звучит коротко, почти «тэ»: nice tə meet you." },
+        { "id": "a1.u01.l01.e12", "type": "type_translation", "from": "en", "text": "Bye! See you tomorrow!", "answers": ["Пока! До завтра!", "Пока! Увидимся завтра!", "До свидания! До завтра!"], "hint": "Tomorrow — завтра.", "explanation": "See you tomorrow — дословно «увижу тебя завтра». По-русски естественнее «до завтра»." },
+        { "id": "a1.u01.l01.e13", "type": "translate_choice", "from": "en", "text": "Are you Kate? — No, I'm Anna.", "options": ["Вы Кейт? — Нет, я Анна.", "Вы Кейт? — Да, я Анна.", "Вы Кейт? — Пока, Анна."], "answer": 0, "hint": "No — нет, yes — да.", "explanation": "No, I'm Anna — «Нет, я Анна». Если бы ответ был «да», сказали бы: Yes, I am." }
+      ]
+    },
+    {
+      "id": "a1.u01.l02",
+      "kind": "grammar",
+      "title": "Я, ты, он: am, is, are",
+      "grammar": "a1.be-present",
+      "exercises": [
+        { "id": "a1.u01.l02.e01", "type": "match_pairs", "pairs": [{ "en": "I", "ru": "я" }, { "en": "you", "ru": "ты, вы" }, { "en": "he", "ru": "он" }, { "en": "she", "ru": "она" }, { "en": "we", "ru": "мы" }, { "en": "they", "ru": "они" }], "hint": "You — одно слово и для «ты», и для «вы».", "explanation": "Местоимения нужны в каждом предложении: в английском нельзя сказать просто «из Казани», только I'm from Kazan.", "grammar": ["a1.be-present"] },
+        { "id": "a1.u01.l02.e02", "type": "fill_gap", "text": "I ___ Anna.", "translation": "Я Анна.", "answers": [["am"]], "options": ["am", "is", "are"], "hint": "С I всегда одна и та же форма.", "explanation": "I am, сокращённо I'm. Am бывает только с I.", "grammar": ["a1.be-present"] },
+        { "id": "a1.u01.l02.e03", "type": "fill_gap", "text": "She ___ from Spain.", "translation": "Она из Испании.", "answers": [["is"]], "options": ["am", "is", "are"], "hint": "He, she, it — одна форма на троих.", "explanation": "She is (she's) from Spain. С he, she, it — только is.", "grammar": ["a1.be-present"] },
+        { "id": "a1.u01.l02.e04", "type": "fill_gap", "text": "We ___ from Russia.", "translation": "Мы из России.", "answers": [["are"]], "options": ["am", "is", "are"], "hint": "We, you, they — одна форма.", "explanation": "We are (we're) from Russia. С we, you, they — are.", "grammar": ["a1.be-present"] },
+        { "id": "a1.u01.l02.e05", "type": "fill_gap", "text": "They ___ students.", "translation": "Они студенты.", "answers": [["are"]], "cue": "be", "difficulty": 2, "hint": "They — «они», как we и you.", "explanation": "They are students. По-русски глагола нет, а по-английски он обязателен.", "grammar": ["a1.be-present"] },
+        { "id": "a1.u01.l02.e06", "type": "error_correction", "text": "He are a doctor.", "wrong": "are", "correction": "is", "options": ["is", "am", "be"], "hint": "Посмотрите на первое слово.", "explanation": "С he — is: He is (he's) a doctor.", "grammar": ["a1.be-present"] },
+        { "id": "a1.u01.l02.e07", "type": "tiles", "from": "ru", "text": "Я учитель.", "answer": "I'm a teacher.", "distractors": ["is", "an"], "hint": "Не забудьте глагол и артикль.", "explanation": "I'm a teacher: am (сокращённо 'm) — глагол, a — артикль перед профессией.", "grammar": ["a1.be-present", "a1.articles-a-an"], "troubles": ["articles", "word-order"] },
+        { "id": "a1.u01.l02.e08", "type": "error_correction", "text": "I from Kazan.", "wrong": "I", "correction": "I'm", "options": ["I'm", "I is", "Me"], "hint": "В предложении не хватает глагола.", "explanation": "По-русски «Я из Казани» — без глагола. По-английски нужен am: I'm from Kazan.", "grammar": ["a1.be-present"], "troubles": ["word-order"] },
+        { "id": "a1.u01.l02.e09", "type": "type_translation", "from": "ru", "text": "Она из Италии.", "answers": ["She's from Italy.", "She is from Italy."], "difficulty": 2, "hint": "Она — she, из — from.", "explanation": "She's from Italy. Глагол is обязателен, хотя по-русски его нет.", "grammar": ["a1.be-present"] },
+        { "id": "a1.u01.l02.e10", "type": "fill_gap", "text": "This ___ Max. He ___ from Kazan.", "translation": "Это Макс. Он из Казани.", "answers": [["is"], ["is"]], "difficulty": 2, "hint": "This (это) и he — оба про одного человека.", "explanation": "This is Max — так представляют человека. He is (he's) from Kazan.", "grammar": ["a1.be-present"] },
+        { "id": "a1.u01.l02.e11", "type": "translate_choice", "from": "en", "text": "They're from China.", "options": ["Они из Китая.", "Мы из Китая.", "Она из Китая."], "answer": 0, "hint": "They're — это сокращение от they are.", "explanation": "They're — сокращение от they are, «они». We're — «мы», she's — «она»." },
+        { "id": "a1.u01.l02.e12", "type": "tiles", "from": "ru", "text": "Мы из Америки.", "answer": "We're from America.", "distractors": ["is", "an"], "hint": "We're — это сокращение от we are.", "explanation": "We're from America. Сокращение we're звучит естественнее, чем we are.", "grammar": ["a1.be-present"] }
+      ]
+    },
+    {
+      "id": "a1.u01.l03",
+      "kind": "pronunciation",
+      "title": "Как это пишется?",
+      "grammar": "a1.alphabet",
+      "exercises": [
+        { "id": "a1.u01.l03.e01", "type": "listen_choice", "audio": "J", "question": "Какую букву вы слышите?", "options": ["J", "G", "H"], "answer": 0, "hint": "Звучит как «джей».", "explanation": "J — [dʒeɪ] «джей», G — [dʒiː] «джи». Эти две буквы путают чаще всего.", "grammar": ["a1.alphabet"] },
+        { "id": "a1.u01.l03.e02", "type": "listen_choice", "audio": "E", "question": "Какую букву вы слышите?", "options": ["E", "I", "A"], "answer": 0, "hint": "Звучит как долгое «и:».", "explanation": "E называется [iː] «и:». А буква I — это «ай».", "grammar": ["a1.alphabet"], "troubles": ["pron-vowels"] },
+        { "id": "a1.u01.l03.e03", "type": "listen_choice", "audio": "R", "question": "Какую букву вы слышите?", "options": ["R", "A", "H"], "answer": 0, "hint": "Звучит как «а:р».", "explanation": "R — [ɑːr] «а:р», не «эр». A — «эй», H — «эйч».", "grammar": ["a1.alphabet"] },
+        { "id": "a1.u01.l03.e04", "type": "match_pairs", "pairs": [{ "en": "A", "ru": "эй" }, { "en": "E", "ru": "и:" }, { "en": "I", "ru": "ай" }, { "en": "Y", "ru": "уай" }, { "en": "H", "ru": "эйч" }], "hint": "Названия английских гласных не совпадают с русскими.", "explanation": "A — «эй», E — «и:», I — «ай». Привыкнуть помогает имя Kate: «кей-эй-ти-и:».", "grammar": ["a1.alphabet"] },
+        { "id": "a1.u01.l03.e05", "type": "listen_dictation", "text": "M, A, R, C, O.", "answers": ["Marco"], "hint": "Запишите имя целиком, одним словом.", "explanation": "M, A, R, C, O — это Marco. Имена людей пишутся с большой буквы.", "grammar": ["a1.alphabet"] },
+        { "id": "a1.u01.l03.e06", "type": "fill_gap", "text": "Anna is A, ___ N, A.", "translation": "Анна пишется так: эй, дабл эн, эй.", "answers": [["double"]], "options": ["double", "again", "good"], "hint": "Так говорят про две одинаковые буквы подряд.", "explanation": "Две одинаковые буквы подряд называют со словом double: double N, double L.", "grammar": ["a1.alphabet"] },
+        { "id": "a1.u01.l03.e07", "type": "tiles", "from": "ru", "text": "Как пишется ваше имя?", "answer": "How do you spell your name?", "distractors": ["what", "is"], "hint": "Дословно: «Как вы называете по буквам ваше имя?»", "explanation": "How do you spell…? — главный вопрос, чтобы узнать, как пишется слово или имя." },
+        { "id": "a1.u01.l03.e08", "type": "minimal_pair", "pair": [{ "en": "sheep", "ipa": "ʃiːp" }, { "en": "ship", "ipa": "ʃɪp" }], "say": 1, "hint": "Один звук долгий, другой короткий и более открытый.", "explanation": "[iː] в sheep — долгий и напряжённый, [ɪ] в ship — короткий, ближе к русскому «ы/и». В русском долготы нет, поэтому эти звуки легко спутать.", "troubles": ["pron-vowels"] },
+        { "id": "a1.u01.l03.e09", "type": "word_stress", "word": "hello", "syllables": ["hel", "lo"], "stress": 1, "hint": "Произнесите вслух, как приветствие.", "explanation": "he-LLO — ударение на второй слог. Первый слог звучит коротко, почти «хэ»." },
+        { "id": "a1.u01.l03.e10", "type": "word_stress", "word": "engineer", "syllables": ["en", "gi", "neer"], "stress": 2, "hint": "Ударение не там, где в русском «инженер»… или всё-таки там?", "explanation": "en-gi-NEER — ударение на последний слог, как и в русском «инженер»." },
+        { "id": "a1.u01.l03.e11", "type": "speak_repeat", "text": "How do you spell it?", "hint": "Голос идёт вниз в конце вопроса.", "explanation": "В вопросах с how, what, where голос в конце обычно понижается." },
+        { "id": "a1.u01.l03.e12", "type": "type_translation", "from": "ru", "text": "Ещё раз, пожалуйста.", "answers": ["Again, please."], "hint": "Ещё раз — again.", "explanation": "Again, please — короткая вежливая просьба повторить. Пригодится, когда диктуют по буквам." },
+        { "id": "a1.u01.l03.e13", "type": "match_pairs", "pairs": [{ "en": "letter", "ru": "буква" }, { "en": "first name", "ru": "имя" }, { "en": "last name", "ru": "фамилия" }, { "en": "spell", "ru": "называть по буквам" }, { "en": "again", "ru": "ещё раз" }], "hint": "First — первый, last — последний.", "explanation": "First name — имя (стоит первым), last name — фамилия (стоит последней). Letter — и «буква», и «письмо»." }
+      ]
+    },
+    {
+      "id": "a1.u01.l04",
+      "kind": "vocabulary",
+      "title": "Кем вы работаете?",
+      "grammar": "a1.articles-a-an",
+      "exercises": [
+        { "id": "a1.u01.l04.e01", "type": "picture_choice", "mode": "word-to-picture", "word": "teacher", "distractors": ["doctor", "cook"], "hint": "Этот человек работает в школе.", "explanation": "Teacher — учитель или преподаватель: a teacher." },
+        { "id": "a1.u01.l04.e02", "type": "picture_choice", "mode": "picture-to-word", "word": "programmer", "distractors": ["artist", "student"], "hint": "Он работает за компьютером.", "explanation": "Programmer — программист. Ударение на первый слог: PRO-gram-mer." },
+        { "id": "a1.u01.l04.e03", "type": "match_pairs", "pairs": [{ "en": "nurse", "ru": "медсестра" }, { "en": "engineer", "ru": "инженер" }, { "en": "driver", "ru": "водитель" }, { "en": "accountant", "ru": "бухгалтер" }, { "en": "manager", "ru": "менеджер" }], "hint": "Engineer и manager похожи на русские слова.", "explanation": "Accountant — не «аккаунт», а «бухгалтер». Nurse — и медсестра, и медбрат.", "troubles": ["false-friends"] },
+        { "id": "a1.u01.l04.e04", "type": "fill_gap", "text": "He's ___ engineer.", "translation": "Он инженер.", "answers": [["an"]], "options": ["a", "an", "the"], "hint": "Engineer начинается с гласного звука.", "explanation": "An — перед гласным звуком: an engineer, an artist.", "grammar": ["a1.articles-a-an"], "troubles": ["articles"] },
+        { "id": "a1.u01.l04.e05", "type": "fill_gap", "text": "I'm ___ designer.", "translation": "Я дизайнер.", "answers": [["a"]], "options": ["a", "an"], "hint": "Designer начинается с согласного звука.", "explanation": "A — перед согласным звуком: a designer, a teacher.", "grammar": ["a1.articles-a-an"], "troubles": ["articles"] },
+        { "id": "a1.u01.l04.e06", "type": "fill_gap", "text": "She's ___ artist.", "translation": "Она художница.", "answers": [["an"]], "difficulty": 2, "hint": "Какой первый звук в слове artist?", "explanation": "Artist начинается с гласного звука, поэтому an artist.", "grammar": ["a1.articles-a-an"], "troubles": ["articles"] },
+        { "id": "a1.u01.l04.e07", "type": "error_correction", "text": "Kate is a accountant.", "wrong": "a", "correction": "an", "options": ["an", "the", "is"], "hint": "Проверьте артикль перед профессией.", "explanation": "Accountant начинается с гласного звука, поэтому an accountant.", "grammar": ["a1.articles-a-an"], "troubles": ["articles"] },
+        { "id": "a1.u01.l04.e08", "type": "error_correction", "text": "Tom is doctor.", "wrong": "doctor", "correction": "a doctor", "options": ["a doctor", "an doctor", "doctors"], "hint": "По-русски «Том врач», а по-английски чего-то не хватает.", "explanation": "Перед профессией в единственном числе нужен артикль: Tom is a doctor.", "grammar": ["a1.articles-a-an"], "troubles": ["articles"] },
+        { "id": "a1.u01.l04.e09", "type": "translate_choice", "from": "ru", "text": "Кем вы работаете?", "options": ["What do you do?", "How are you?", "What's your name?"], "answer": 0, "hint": "Дословно: «Что вы делаете?»", "explanation": "What do you do? — устойчивый вопрос о профессии. How are you? — «как дела?», What's your name? — «как вас зовут?»." },
+        { "id": "a1.u01.l04.e10", "type": "tiles", "from": "ru", "text": "Я программист, а он водитель.", "answer": "I'm a programmer, and he's a driver.", "distractors": ["an", "she's"], "difficulty": 2, "hint": "«А» здесь переводится как and.", "explanation": "Перед каждой профессией свой артикль: a programmer, a driver. Русское «а» при сравнении часто переводится как and.", "grammar": ["a1.articles-a-an", "a1.be-present"], "troubles": ["articles"] },
+        { "id": "a1.u01.l04.e11", "type": "type_translation", "from": "ru", "text": "Она медсестра.", "answers": ["She's a nurse.", "She is a nurse."], "difficulty": 2, "hint": "Нужны глагол и артикль.", "explanation": "She's a nurse: is — глагол, a — артикль перед профессией.", "grammar": ["a1.articles-a-an", "a1.be-present"], "troubles": ["articles"] },
+        { "id": "a1.u01.l04.e12", "type": "speak_answer", "question": "What do you do?", "questionRu": "Кем вы работаете или на кого учитесь? Ответьте о себе.", "keywords": [["\\bI'?m\\b", "\\bI am\\b"], ["\\ban? [a-z]+"]], "minKeywords": 2, "samples": ["I'm a student.", "I'm an engineer."], "difficulty": 3, "hint": "Начните с I'm a… или I'm an…", "explanation": "Отвечаем так: I'm + a/an + профессия. Например: I'm a manager, I'm an accountant.", "grammar": ["a1.articles-a-an"] }
+      ]
+    },
+    {
+      "id": "a1.u01.l05",
+      "kind": "listening",
+      "title": "Первый день в команде",
+      "textId": "a1.u01.first-day",
+      "exercises": [
+        {
+          "id": "a1.u01.l05.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "a1.u01.first-day",
+          "hint": "Послушайте диалог целиком. Если нужно, включите его ещё раз.",
+          "explanation": "Анна — руководитель, Ли — программист, Макс — новый дизайнер из Казани.",
+          "questions": [
+            { "kind": "mcq", "question": "Кто такая Анна?", "options": ["the manager", "a designer", "a programmer"], "answer": 0, "explanation": "Анна говорит: I'm Anna, the manager." },
+            { "kind": "mcq", "question": "Откуда Макс?", "options": ["Kazan", "China", "Moscow"], "answer": 0, "explanation": "Макс отвечает: I'm from Kazan." },
+            { "kind": "tfn", "statement": "Li is a designer.", "answer": "false", "explanation": "Ли — программист: I'm a programmer. Дизайнер — Макс." },
+            { "kind": "tfn", "statement": "Max is new here.", "answer": "true", "explanation": "Анна говорит о Максе: He's new here." },
+            { "kind": "tfn", "statement": "Li is from Beijing.", "answer": "not_given", "explanation": "Ли говорит только, что она из Китая. Город она не называет." }
+          ]
+        },
+        { "id": "a1.u01.l05.e02", "type": "listen_choice", "audio": "Welcome to the team!", "question": "Что говорит Анна?", "options": ["Welcome to the team!", "Nice to meet you!", "Good morning!"], "answer": 0, "hint": "Так встречают нового человека в коллективе.", "explanation": "Welcome to the team! — «Добро пожаловать в команду!»." },
+        { "id": "a1.u01.l05.e03", "type": "listen_dictation", "text": "Where are you from?", "hint": "Вопрос из четырёх слов: где… откуда.", "explanation": "Where are you from? — «Откуда вы?». From стоит в конце вопроса." },
+        { "id": "a1.u01.l05.e04", "type": "listen_dictation", "text": "He's new here.", "answers": ["He is new here."], "hint": "Три слова, первое — сокращение.", "explanation": "He's new here — «Он здесь новенький». He's = he is." },
+        { "id": "a1.u01.l05.e05", "type": "fill_gap", "text": "Nice to meet you, Anna. — You ___.", "translation": "Приятно познакомиться, Анна. — Мне тоже.", "answers": [["too"]], "options": ["too", "here", "again"], "hint": "Это слово значит «тоже».", "explanation": "You too — короткий ответ на nice to meet you: «мне тоже»." },
+        { "id": "a1.u01.l05.e06", "type": "minimal_pair", "pair": [{ "en": "thank", "ipa": "θæŋk" }, { "en": "tank", "ipa": "tæŋk" }], "say": 0, "hint": "При звуке th кончик языка между зубами.", "explanation": "[θ] в thank — язык между зубами, воздух проходит мягко. [t] в tank — язык за зубами. Замена th на «т» или «с» — самая заметная ошибка русскоговорящих.", "troubles": ["pron-th"] },
+        { "id": "a1.u01.l05.e07", "type": "minimal_pair", "pair": [{ "en": "three", "ipa": "θriː" }, { "en": "tree", "ipa": "triː" }], "say": 1, "hint": "Слушайте первый звук.", "explanation": "Tree начинается с [t], three — с [θ], язык между зубами.", "troubles": ["pron-th"] },
+        { "id": "a1.u01.l05.e08", "type": "speak_repeat", "text": "Thank you! Nice to meet you.", "hint": "В thank язык между зубами, не «сэнк» и не «тэнк».", "explanation": "Th [θ] — глухой звук: кончик языка между зубами, выдыхайте воздух.", "troubles": ["pron-th"] },
+        { "id": "a1.u01.l05.e09", "type": "tiles", "from": "en", "text": "Where are you from? I'm from Kazan.", "answer": "Откуда ты? Я из Казани.", "distractors": ["где", "в"], "hint": "Where … from — одно слово по-русски.", "explanation": "Where are you from? — «Откуда ты?». Где — просто where, без from." },
+        { "id": "a1.u01.l05.e10", "type": "speak_answer", "question": "Where are you from?", "questionRu": "Откуда вы? Ответьте о себе.", "keywords": [["\\bI'?m from\\b", "\\bI am from\\b"]], "minKeywords": 1, "samples": ["I'm from Moscow.", "I'm from Russia."], "difficulty": 3, "hint": "Начните с I'm from…", "explanation": "I'm from + город или страна. Не забудьте 'm: просто I from — ошибка.", "grammar": ["a1.be-present"] },
+        { "id": "a1.u01.l05.e11", "type": "fill_gap", "text": "Good morning! Are you Max? — ___, I am. Hello!", "translation": "Доброе утро! Вы Макс? — Да. Здравствуйте!", "answers": [["Yes"]], "options": ["Yes", "No", "Hi"], "hint": "Макс отвечает утвердительно.", "explanation": "Yes, I am — короткий утвердительный ответ на вопрос Are you…? По-русски просто «да»." }
+      ]
+    },
+    {
+      "id": "a1.u01.l06",
+      "kind": "reading",
+      "title": "Языковой клуб",
+      "textId": "a1.u01.club",
+      "exercises": [
+        {
+          "id": "a1.u01.l06.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "a1.u01.club",
+          "hint": "Ответы ищите в анкетах. «Нет информации» — когда в тексте об этом ничего не сказано.",
+          "explanation": "Елена — медсестра из Москвы, Марко — повар из Рима, Кейт — художница, Том — учитель, Вэй и Лукас — студенты, Иван — инженер из Казани.",
+          "questions": [
+            { "kind": "mcq", "question": "Кем работает Марко?", "options": ["a cook", "a teacher", "a nurse"], "answer": 0, "explanation": "Марко пишет: I'm a cook." },
+            { "kind": "tfn", "statement": "Elena is a doctor.", "answer": "false", "explanation": "Елена — медсестра: I'm a nurse." },
+            { "kind": "tfn", "statement": "Kate is a teacher.", "answer": "false", "explanation": "Кейт — художница (I'm an artist). Учитель — Том." },
+            { "kind": "tfn", "statement": "Lucas is a student.", "answer": "true", "explanation": "Вэй пишет: my friend Lucas is a student too." },
+            { "kind": "tfn", "statement": "Ivan is from Moscow.", "answer": "false", "explanation": "Иван из Казани: an engineer from Kazan." },
+            { "kind": "tfn", "statement": "Wei is from Beijing.", "answer": "not_given", "explanation": "Вэй пишет только, что он китаец. Город не назван." }
+          ]
+        },
+        { "id": "a1.u01.l06.e02", "type": "translate_choice", "from": "en", "text": "My English is not great, sorry!", "options": ["Мой английский пока не очень, извините!", "Я не англичанка, извините!", "Мой друг не англичанин, извините!"], "answer": 0, "hint": "My English — «мой английский».", "explanation": "Not great — «не очень, не отлично». Так скромно говорят о своём уровне языка." },
+        { "id": "a1.u01.l06.e03", "type": "fill_gap", "text": "I'm Ivan. Call ___ Vanya.", "translation": "Я Иван. Зовите меня Ваня.", "answers": [["me"]], "options": ["me", "my", "I"], "hint": "«Меня» — как в excuse me.", "explanation": "Call me… — «зовите меня…». После глагола говорим me, а не I." },
+        { "id": "a1.u01.l06.e04", "type": "match_pairs", "pairs": [{ "en": "Russia", "ru": "Россия" }, { "en": "Italy", "ru": "Италия" }, { "en": "Spain", "ru": "Испания" }, { "en": "China", "ru": "Китай" }, { "en": "England", "ru": "Англия" }], "hint": "Названия стран пишутся с большой буквы.", "explanation": "Страны: Russia, Italy, Spain, China, England. Ударение: RUS-sia, I-ta-ly, CHI-na, ENG-land." },
+        { "id": "a1.u01.l06.e05", "type": "match_pairs", "pairs": [{ "en": "Russian", "ru": "русский" }, { "en": "Italian", "ru": "итальянский" }, { "en": "Spanish", "ru": "испанский" }, { "en": "Chinese", "ru": "китайский" }, { "en": "American", "ru": "американский" }], "hint": "Национальности тоже пишутся с большой буквы.", "explanation": "Russian, Italian, Spanish — это и «русский язык», и «русский человек». I'm Russian — «Я русский»." },
+        { "id": "a1.u01.l06.e06", "type": "error_correction", "text": "I'm Italy, from Rome.", "wrong": "Italy", "correction": "Italian", "options": ["Italian", "an Italy", "Italians"], "hint": "Italy — это страна. А как сказать «итальянец»?", "explanation": "Italy — страна, Italian — национальность: I'm Italian = «Я итальянец». Или: I'm from Italy." },
+        { "id": "a1.u01.l06.e07", "type": "fill_gap", "text": "We're Kate and Tom, ___ New York.", "translation": "Мы Кейт и Том из Нью-Йорка.", "answers": [["from"]], "options": ["from", "to", "and"], "hint": "«Из» — откуда люди.", "explanation": "From — «из»: from New York, from Moscow." },
+        { "id": "a1.u01.l06.e08", "type": "type_translation", "from": "ru", "text": "Мы американцы.", "answers": ["We're American.", "We are American.", "We're Americans.", "We are Americans."], "difficulty": 2, "hint": "Американцы — American.", "explanation": "We're American — без артикля. Национальность здесь — как прилагательное: «мы американские».", "grammar": ["a1.be-present"] },
+        { "id": "a1.u01.l06.e09", "type": "tiles", "from": "ru", "text": "Мой друг Лукас тоже студент.", "answer": "My friend Lucas is a student too.", "distractors": ["an", "to"], "difficulty": 2, "hint": "«Тоже» — too, в конце предложения.", "explanation": "Too обычно стоит в конце: …is a student too. Не путайте too и to: звучат одинаково, значат разное.", "grammar": ["a1.be-present", "a1.articles-a-an"], "troubles": ["word-order"] }
+      ]
+    },
+    {
+      "id": "a1.u01.l07",
+      "kind": "writing",
+      "title": "Расскажите о себе",
+      "exercises": [
+        { "id": "a1.u01.l07.e01", "type": "speak_describe", "picture": { "emoji": "🧑‍🍳" }, "situation": "Это Марко из Рима. Расскажите о нём: кто это, откуда он, кем работает.", "keywords": [["\\bMarco\\b"], ["\\bItal(y|ian)\\b", "\\bRome\\b"], ["\\ba cook\\b"]], "minKeywords": 2, "samples": ["This is Marco. He's from Rome. He's a cook."], "difficulty": 3, "hint": "Начните с This is Marco. Дальше He's…", "explanation": "Рассказывая о человеке, используем he's: He's from Rome. He's a cook.", "grammar": ["a1.be-present", "a1.articles-a-an"] },
+        { "id": "a1.u01.l07.e02", "type": "fill_gap", "text": "Hi! ___ name is Olga. I'm ___ accountant. I'm from Moscow. Nice to ___ you!", "translation": "Привет! Меня зовут Ольга. Я бухгалтер. Я из Москвы. Приятно познакомиться!", "answers": [["My"], ["an"], ["meet"]], "difficulty": 2, "hint": "Мой, артикль, «встретить».", "explanation": "My name is…, an accountant (перед гласным звуком — an), nice to meet you.", "grammar": ["a1.articles-a-an"] },
+        { "id": "a1.u01.l07.e03", "type": "tiles", "from": "ru", "text": "Меня зовут Ольга. Я из Москвы.", "answer": "My name is Olga. I'm from Moscow.", "distractors": ["are", "an"], "hint": "«Меня зовут» — дословно «моё имя есть».", "explanation": "My name is Olga — так по-английски говорят «меня зовут Ольга»." },
+        { "id": "a1.u01.l07.e04", "type": "error_correction", "text": "My name are Olga.", "wrong": "are", "correction": "is", "options": ["is", "am", "be"], "hint": "My name — это «он» или «они»?", "explanation": "My name — одно имя, как it. Поэтому is: My name is Olga.", "grammar": ["a1.be-present"] },
+        { "id": "a1.u01.l07.e05", "type": "speak_answer", "question": "What's your name?", "questionRu": "Как вас зовут? Ответьте полным предложением.", "keywords": [["\\bmy name('s| is)\\b", "\\bI'?m\\b", "\\bI am\\b", "\\bcall me\\b"]], "minKeywords": 1, "samples": ["My name is Olga.", "I'm Max."], "difficulty": 3, "hint": "My name is… или I'm…", "explanation": "Оба варианта правильные: My name is Olga и I'm Olga. Второй звучит проще и дружелюбнее." },
+        { "id": "a1.u01.l07.e06", "type": "speak_answer", "question": "How are you?", "questionRu": "Как у вас дела? Ответьте и спросите в ответ.", "keywords": [["\\bfine\\b", "\\bgood\\b", "\\bgreat\\b", "\\bOK\\b", "\\bokay\\b", "\\bnot bad\\b"], ["\\band you\\b"]], "minKeywords": 1, "samples": ["I'm fine, thanks. And you?", "Not bad, thank you! And you?"], "difficulty": 3, "hint": "Например: Fine, thanks. And you?", "explanation": "Короткий ответ и встречный вопрос — так звучит естественно: I'm fine, thanks. And you?" },
+        {
+          "id": "a1.u01.l07.e07",
+          "type": "write",
+          "task": "Вы вступили в языковой клуб. Напишите приветствие для других участников: поздоровайтесь, назовите себя, скажите, откуда вы и кем работаете или учитесь.",
+          "minWords": 12,
+          "maxWords": 50,
+          "criteria": [
+            { "id": "greeting", "label": "Есть приветствие", "patterns": ["\\b(hi|hello|good (morning|afternoon|evening))\\b"] },
+            { "id": "name", "label": "Вы назвали себя", "patterns": ["\\bmy name('s| is)\\b", "\\bcall me\\b", "\\bI'?m (?!from\\b|an?\\b|the\\b|not\\b|fine\\b|new\\b|good\\b|great\\b)[a-z]+", "\\bI am (?!from\\b|an?\\b|the\\b|not\\b)[a-z]+"] },
+            { "id": "from", "label": "Сказали, откуда вы", "patterns": ["\\bfrom\\b"] },
+            { "id": "job", "label": "Сказали, кем работаете или учитесь", "patterns": ["\\b(I'?m|I am) an? [a-z]+", "\\b(student|teacher|doctor|nurse|engineer|designer|manager|programmer|driver|cook|artist|accountant)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\bI (from|an?) \\b", "message": "После I нужен глагол: I'm from…, I'm a…" },
+            { "pattern": "\\b(I'?m|I am|he'?s|she'?s|he is|she is) (teacher|student|doctor|nurse|engineer|designer|manager|programmer|driver|cook|artist|accountant)\\b", "message": "Перед профессией нужен артикль: I'm a teacher, I'm an engineer." },
+            { "pattern": "\\ba (engineer|artist|accountant)\\b", "message": "Перед гласным звуком — an: an engineer, an artist, an accountant." },
+            { "pattern": "\\bI (is|are)\\b", "message": "С I — только am: I am, I'm." },
+            { "pattern": "\\b(he|she|it|my name) are\\b", "message": "С he, she, it и my name — is." }
+          ],
+          "samples": [
+            "Hi! My name is Olga. I'm from Moscow, and I'm an accountant. Nice to meet you!",
+            "Hello! I'm Max. I'm from Kazan, and I'm a designer. See you!"
+          ],
+          "difficulty": 3,
+          "hint": "План: Hi! → My name is… → I'm from… → I'm a/an… → Nice to meet you!",
+          "explanation": "Хорошее короткое приветствие: приветствие, имя, откуда вы, профессия и вежливая фраза в конце. Проверьте am/is/are и a/an перед профессией.",
+          "grammar": ["a1.be-present", "a1.articles-a-an"]
+        },
+        { "id": "a1.u01.l07.e08", "type": "type_translation", "from": "ru", "text": "Привет! Я Макс, я из Казани.", "answers": ["Hi! I'm Max, I'm from Kazan.", "Hello! I'm Max, I'm from Kazan.", "Hi! I'm Max, and I'm from Kazan.", "Hello! I'm Max, and I'm from Kazan."], "difficulty": 2, "hint": "Два раза нужен I'm.", "explanation": "Hi! I'm Max, I'm from Kazan. В каждой части нужен глагол: I'm Max, I'm from Kazan.", "grammar": ["a1.be-present"] }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "a1.u01.test.e01", "type": "translate_choice", "from": "ru", "text": "Добрый вечер!", "options": ["Good evening!", "Good night!", "Good afternoon!"], "answer": 0, "hint": "Вечер — evening.", "explanation": "Good evening — при встрече вечером. Good night — при прощании перед сном." },
+      { "id": "a1.u01.test.e02", "type": "fill_gap", "text": "They ___ from Italy.", "translation": "Они из Италии.", "answers": [["are"]], "options": ["am", "is", "are"], "hint": "They — «они».", "explanation": "С they — are: They are (they're) from Italy.", "grammar": ["a1.be-present"] },
+      { "id": "a1.u01.test.e03", "type": "fill_gap", "text": "He's ___ accountant.", "translation": "Он бухгалтер.", "answers": [["an"]], "options": ["a", "an"], "hint": "Первый звук слова accountant — гласный.", "explanation": "An — перед гласным звуком: an accountant.", "grammar": ["a1.articles-a-an"], "troubles": ["articles"] },
+      { "id": "a1.u01.test.e04", "type": "error_correction", "text": "She are a student.", "wrong": "are", "correction": "is", "options": ["is", "am", "be"], "hint": "She — «она».", "explanation": "С she — is: She is (she's) a student.", "grammar": ["a1.be-present"] },
+      { "id": "a1.u01.test.e05", "type": "tiles", "from": "ru", "text": "Это Ли. Она программист.", "answer": "This is Li. She's a programmer.", "distractors": ["he's", "an"], "difficulty": 2, "hint": "Так представляют человека: This is…", "explanation": "This is Li — «это Ли». She's a programmer — с артиклем a.", "grammar": ["a1.be-present", "a1.articles-a-an"] },
+      { "id": "a1.u01.test.e06", "type": "type_translation", "from": "ru", "text": "Приятно познакомиться!", "answers": ["Nice to meet you!"], "difficulty": 2, "hint": "Четыре слова, третье — «встретить».", "explanation": "Nice to meet you — устойчивая фраза при знакомстве." },
+      { "id": "a1.u01.test.e07", "type": "listen_choice", "audio": "G", "question": "Какую букву вы слышите?", "options": ["G", "J", "Z"], "answer": 0, "hint": "Звучит как «джи».", "explanation": "G — «джи», J — «джей», Z — «зи».", "grammar": ["a1.alphabet"] },
+      { "id": "a1.u01.test.e08", "type": "listen_dictation", "text": "What's your last name?", "answers": ["What is your last name?"], "difficulty": 2, "hint": "Вопрос о фамилии.", "explanation": "What's your last name? — «Какая у вас фамилия?». Last name — фамилия, first name — имя." },
+      { "id": "a1.u01.test.e09", "type": "match_pairs", "pairs": [{ "en": "designer", "ru": "дизайнер" }, { "en": "cook", "ru": "повар" }, { "en": "colleague", "ru": "коллега" }, { "en": "team", "ru": "команда" }, { "en": "job", "ru": "работа" }], "hint": "Designer и colleague похожи на русские слова.", "explanation": "Cook — «повар» (и глагол «готовить»). Job — «работа, должность»." },
+      { "id": "a1.u01.test.e10", "type": "translate_choice", "from": "en", "text": "Excuse me, where is Anna?", "options": ["Извините, где Анна?", "Спасибо, где Анна?", "Извините, это Анна?"], "answer": 0, "hint": "Where — где.", "explanation": "Excuse me — чтобы обратиться к человеку. Where is…? — «где…?»." },
+      { "id": "a1.u01.test.e11", "type": "word_stress", "word": "designer", "syllables": ["de", "sign", "er"], "stress": 1, "hint": "Как в русском «дизайнер».", "explanation": "de-SIGN-er — ударение на второй слог." },
+      { "id": "a1.u01.test.e12", "type": "type_translation", "from": "ru", "text": "Мы из России.", "answers": ["We're from Russia.", "We are from Russia."], "difficulty": 2, "hint": "Не забудьте глагол.", "explanation": "We're from Russia: are обязателен, хотя по-русски глагола нет.", "grammar": ["a1.be-present"] },
+      { "id": "a1.u01.test.e13", "type": "fill_gap", "text": "How are you? — ___, thanks. And you?", "translation": "Как дела? — Хорошо, спасибо. А ты?", "answers": [["Fine", "Good", "Great", "OK", "Not bad", "I'm fine", "I'm good", "I'm OK", "I'm great"]], "difficulty": 2, "hint": "Любой короткий ответ со значением «хорошо».", "explanation": "Подойдёт fine, good, great, OK или not bad." },
+      { "id": "a1.u01.test.e14", "type": "translate_choice", "from": "ru", "text": "Как пишется ваше имя?", "options": ["How do you spell your name?", "What's your name?", "How are you?"], "answer": 0, "hint": "Spell — называть по буквам.", "explanation": "How do you spell your name? — «Как пишется ваше имя?». What's your name? — «Как вас зовут?»." },
+      { "id": "a1.u01.test.e15", "type": "speak_repeat", "text": "Good morning! I'm a new designer.", "hint": "Не забудьте артикль a перед new.", "explanation": "Артикль стоит перед всей группой слов: a new designer." }
+    ]
+  }
+}

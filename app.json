@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "Jane",
+    "slug": "jane",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "jane",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "app.jane.english",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "app.jane.english",
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-audio",
+      "expo-secure-store",
+      "expo-sharing",
+      "expo-localization",
+      "expo-speech-recognition"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
