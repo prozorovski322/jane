@@ -1,0 +1,340 @@
+{
+  "id": "a2.u01",
+  "level": "A2",
+  "order": 1,
+  "title": { "en": "Yesterday and the weekend", "ru": "Вчера и на выходных" },
+  "description": "Рассказываем о прошлом: что делали вчера и на выходных, где были, что видели. Was и were, Past Simple с правильными и неправильными глаголами, отрицание и вопросы с did.",
+  "goals": [
+    "Могу сказать, где я был и как всё было: I was tired. The film was boring.",
+    "Могу рассказать, что делал вчера: I visited my friend. I went to a concert.",
+    "Могу сказать, что не делал: I didn't go out.",
+    "Могу спросить о прошлом: What did you do? Did you like it?",
+    "Могу назвать время: yesterday, last night, two days ago.",
+    "Могу написать короткий рассказ о выходных."
+  ],
+  "grammar": ["a2.was-were", "a2.past-simple-regular", "a2.past-simple-irregular", "a2.past-simple-questions"],
+  "troubles": ["tenses"],
+  "words": [
+    { "id": "yesterday", "en": "yesterday", "ipa": "ˈjestɚdeɪ", "pos": "adv", "ru": ["вчера"], "example": { "en": "I visited my friend yesterday.", "ru": "Вчера я навестил друга." }, "topics": ["time"] },
+    { "id": "last", "en": "last", "ipa": "læst", "pos": "det", "ru": ["прошлый"], "example": { "en": "We met last week.", "ru": "Мы встретились на прошлой неделе." }, "note": "Last night — «вчера вечером», last week — «на прошлой неделе», last year — «в прошлом году». Предлог перед last не нужен.", "topics": ["time"] },
+    { "id": "ago", "en": "ago", "ipa": "əˈɡoʊ", "pos": "adv", "ru": ["назад"], "example": { "en": "She came two days ago.", "ru": "Она приехала два дня назад." }, "note": "Ago стоит после времени: two days ago.", "topics": ["time"] },
+    { "id": "when", "en": "when", "ipa": "wen", "pos": "adv", "ru": ["когда"], "example": { "en": "When did you get up?", "ru": "Когда вы встали?" }, "topics": ["time"] },
+    { "id": "after", "en": "after", "ipa": "ˈæftɚ", "pos": "prep", "ru": ["после"], "example": { "en": "We had dinner after the concert.", "ru": "После концерта мы поужинали." }, "topics": ["time"] },
+    { "id": "before", "en": "before", "ipa": "bɪˈfɔːr", "pos": "prep", "ru": ["до", "перед"], "example": { "en": "I had breakfast before school.", "ru": "Я позавтракал перед школой." }, "topics": ["time"] },
+    { "id": "later", "en": "later", "ipa": "ˈleɪtɚ", "pos": "adv", "ru": ["позже"], "example": { "en": "I called her later.", "ru": "Позже я ей позвонил." }, "topics": ["time"] },
+    { "id": "visit", "en": "visit", "ipa": "ˈvɪzɪt", "pos": "verb", "ru": ["навещать", "посещать"], "example": { "en": "I visited my friend yesterday.", "ru": "Вчера я навестил друга." }, "forms": { "third": "visits" }, "topics": ["verbs"] },
+    { "id": "stay", "en": "stay", "ipa": "steɪ", "pos": "verb", "ru": ["оставаться"], "example": { "en": "I stayed at home on Sunday.", "ru": "В воскресенье я остался дома." }, "forms": { "third": "stays" }, "topics": ["verbs"] },
+    { "id": "help", "en": "help", "ipa": "help", "pos": "verb", "ru": ["помогать"], "example": { "en": "My brother helped me with my homework.", "ru": "Брат помог мне с домашним заданием." }, "forms": { "third": "helps" }, "topics": ["verbs"] },
+    { "id": "ask", "en": "ask", "ipa": "æsk", "pos": "verb", "ru": ["спрашивать", "просить"], "example": { "en": "She asked me my name.", "ru": "Она спросила, как меня зовут." }, "forms": { "third": "asks" }, "topics": ["verbs"] },
+    { "id": "answer", "en": "answer", "ipa": "ˈænsɚ", "pos": "verb", "ru": ["отвечать"], "example": { "en": "I answered the phone.", "ru": "Я ответил на звонок." }, "forms": { "third": "answers" }, "note": "Answer — глагол и существительное: I answered the phone; the answer is yes. W в слове не читается.", "topics": ["verbs"] },
+    { "id": "close", "en": "close", "ipa": "kloʊz", "pos": "verb", "ru": ["закрывать"], "example": { "en": "I closed the door.", "ru": "Я закрыл дверь." }, "forms": { "third": "closes" }, "topics": ["verbs"] },
+    { "id": "enjoy", "en": "enjoy", "ipa": "ɪnˈdʒɔɪ", "pos": "verb", "ru": ["наслаждаться", "получать удовольствие"], "example": { "en": "We enjoyed the concert.", "ru": "Нам понравился концерт." }, "forms": { "third": "enjoys" }, "topics": ["verbs"] },
+    { "id": "love", "en": "love", "ipa": "lʌv", "pos": "verb", "ru": ["любить", "обожать"], "example": { "en": "I love this song.", "ru": "Я обожаю эту песню." }, "forms": { "third": "loves" }, "note": "Love сильнее, чем like. Про людей говорят love, про вещи — like или love.", "topics": ["verbs"] },
+    { "id": "use", "en": "use", "ipa": "juːz", "pos": "verb", "ru": ["использовать", "пользоваться"], "example": { "en": "I used the map.", "ru": "Я пользовался картой." }, "forms": { "third": "uses" }, "topics": ["verbs"] },
+    { "id": "try", "en": "try", "ipa": "traɪ", "pos": "verb", "ru": ["пробовать", "пытаться"], "example": { "en": "I tried the soup.", "ru": "Я попробовал суп." }, "forms": { "third": "tries" }, "topics": ["verbs"] },
+    { "id": "see", "en": "see", "ipa": "siː", "pos": "verb", "ru": ["видеть"], "example": { "en": "We saw a good film.", "ru": "Мы посмотрели хороший фильм." }, "forms": { "third": "sees" }, "topics": ["verbs"] },
+    { "id": "make", "en": "make", "ipa": "meɪk", "pos": "verb", "ru": ["делать", "готовить"], "example": { "en": "I made dinner.", "ru": "Я приготовил ужин." }, "forms": { "third": "makes" }, "note": "Make — делать что-то новое: make dinner. Do — выполнять действие: do homework.", "topics": ["verbs"] },
+    { "id": "get", "en": "get", "ipa": "ɡet", "pos": "verb", "ru": ["получать", "добираться"], "example": { "en": "I got a gift.", "ru": "Я получил подарок." }, "forms": { "third": "gets" }, "topics": ["verbs"] },
+    { "id": "say", "en": "say", "ipa": "seɪ", "pos": "verb", "ru": ["говорить", "сказать"], "example": { "en": "She said hello.", "ru": "Она сказала «привет»." }, "forms": { "third": "says" }, "topics": ["verbs"] },
+    { "id": "think", "en": "think", "ipa": "θɪŋk", "pos": "verb", "ru": ["думать"], "example": { "en": "I thought it was good.", "ru": "Я думал, что это хорошо." }, "forms": { "third": "thinks" }, "troubles": ["pron-th"], "topics": ["verbs"] },
+    { "id": "know", "en": "know", "ipa": "noʊ", "pos": "verb", "ru": ["знать"], "example": { "en": "I knew the answer.", "ru": "Я знал ответ." }, "forms": { "third": "knows" }, "note": "K в начале слова не читается: know [noʊ].", "topics": ["verbs"] },
+    { "id": "find", "en": "find", "ipa": "faɪnd", "pos": "verb", "ru": ["находить"], "example": { "en": "I found my phone.", "ru": "Я нашёл свой телефон." }, "forms": { "third": "finds" }, "topics": ["verbs"] },
+    { "id": "tell", "en": "tell", "ipa": "tel", "pos": "verb", "ru": ["рассказывать", "сказать"], "example": { "en": "She told me her name.", "ru": "Она назвала мне своё имя." }, "forms": { "third": "tells" }, "topics": ["verbs"] },
+    { "id": "go-out", "en": "go out", "ipa": "ɡoʊ aʊt", "pos": "phrasal", "ru": ["выходить", "ходить куда-то"], "example": { "en": "I didn't go out on Sunday.", "ru": "В воскресенье я никуда не выходил." }, "forms": { "third": "goes out" }, "topics": ["verbs"] },
+    { "id": "because", "en": "because", "ipa": "bɪˈkɔːz", "pos": "conj", "ru": ["потому что"], "example": { "en": "I stayed at home because I was tired.", "ru": "Я остался дома, потому что устал." }, "topics": ["connectors"] },
+    { "id": "gift", "en": "gift", "ipa": "ɡɪft", "pos": "noun", "ru": ["подарок"], "example": { "en": "I got a gift on my birthday.", "ru": "На день рождения я получил подарок." }, "picture": { "emoji": "🎁" }, "topics": ["things"] },
+    { "id": "concert", "en": "concert", "ipa": "ˈkɑːnsɚt", "pos": "noun", "ru": ["концерт"], "example": { "en": "We went to a concert on Saturday.", "ru": "В субботу мы ходили на концерт." }, "picture": { "emoji": "🎤" }, "topics": ["leisure"] },
+    { "id": "lesson", "en": "lesson", "ipa": "ˈlesən", "pos": "noun", "ru": ["урок", "занятие"], "example": { "en": "The lesson started at nine.", "ru": "Урок начался в девять." }, "topics": ["school"] },
+    { "id": "homework", "en": "homework", "ipa": "ˈhoʊmwɝːk", "pos": "noun", "ru": ["домашнее задание"], "example": { "en": "I did my homework after dinner.", "ru": "Я сделал домашнее задание после ужина." }, "note": "Homework — несчитаемое слово: нельзя сказать a homework или homeworks.", "topics": ["school"] },
+    { "id": "exam", "en": "exam", "ipa": "ɪɡˈzæm", "pos": "noun", "ru": ["экзамен"], "example": { "en": "The exam was difficult.", "ru": "Экзамен был трудным." }, "topics": ["school"] },
+    { "id": "email", "en": "email", "ipa": "iˈmeɪl", "pos": "noun", "ru": ["электронное письмо"], "example": { "en": "I wrote an email to my friend.", "ru": "Я написал другу письмо по электронной почте." }, "topics": ["things"] },
+    { "id": "tired", "en": "tired", "ipa": "ˈtaɪɚd", "pos": "adj", "ru": ["уставший"], "example": { "en": "I was tired yesterday.", "ru": "Вчера я устал." }, "topics": ["adjectives"] },
+    { "id": "sad", "en": "sad", "ipa": "sæd", "pos": "adj", "ru": ["грустный"], "example": { "en": "She was sad.", "ru": "Ей было грустно." }, "topics": ["adjectives"] },
+    { "id": "boring", "en": "boring", "ipa": "ˈbɔːrɪŋ", "pos": "adj", "ru": ["скучный"], "example": { "en": "The film was boring.", "ru": "Фильм был скучным." }, "note": "Boring — «скучный» (о том, что вызывает скуку). Bored — «скучающий».", "topics": ["adjectives"] },
+    { "id": "interesting", "en": "interesting", "ipa": "ˈɪntrəstɪŋ", "pos": "adj", "ru": ["интересный"], "example": { "en": "The museum was interesting.", "ru": "Музей был интересным." }, "topics": ["adjectives"] },
+    { "id": "difficult", "en": "difficult", "ipa": "ˈdɪfɪkəlt", "pos": "adj", "ru": ["трудный"], "example": { "en": "The exam was difficult.", "ru": "Экзамен был трудным." }, "topics": ["adjectives"] },
+    { "id": "easy", "en": "easy", "ipa": "ˈiːzi", "pos": "adj", "ru": ["лёгкий"], "example": { "en": "The lesson was easy.", "ru": "Урок был лёгким." }, "topics": ["adjectives"] }
+  ],
+  "texts": [
+    {
+      "id": "a2.u01.weekend",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "How was your weekend?", "ru": "Как прошли выходные?" },
+      "speakers": [
+        { "id": "tom", "name": "Tom", "voice": "male" },
+        { "id": "anna", "name": "Anna", "voice": "female" }
+      ],
+      "lines": [
+        { "speaker": "tom", "en": "Hi, Anna! How was your weekend?", "ru": "Привет, Анна! Как прошли выходные?" },
+        { "speaker": "anna", "en": "It was great! On Saturday I visited my friend and we went to a concert.", "ru": "Отлично! В субботу я навестила подругу, и мы сходили на концерт." },
+        { "speaker": "tom", "en": "Was it good?", "ru": "Он был хорошим?" },
+        { "speaker": "anna", "en": "Yes, it was. I loved the music. What did you do?", "ru": "Да. Мне очень понравилась музыка. А ты что делал?" },
+        { "speaker": "tom", "en": "I didn't go out. I was tired. I slept and made dinner.", "ru": "Я никуда не выходил. Я устал. Я спал и готовил ужин." },
+        { "speaker": "anna", "en": "Did you do your homework?", "ru": "Ты сделал домашнее задание?" },
+        { "speaker": "tom", "en": "No, I didn't. It was difficult.", "ru": "Нет. Оно было трудным." }
+      ]
+    },
+    {
+      "id": "a2.u01.tom-saturday",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "Last Saturday", "ru": "В прошлую субботу" },
+      "lines": [
+        { "en": "Last Saturday Tom got up late. He had breakfast at ten and called his friend.", "ru": "В прошлую субботу Том встал поздно. Он позавтракал в десять и позвонил другу." },
+        { "en": "In the afternoon they played tennis in the park. It was sunny and warm. They were tired, but happy.", "ru": "Днём они играли в теннис в парке. Было солнечно и тепло. Они устали, но были счастливы." },
+        { "en": "In the evening Tom made dinner and watched a film. The film was boring, and he slept on the sofa. He didn't do his homework.", "ru": "Вечером Том приготовил ужин и посмотрел фильм. Фильм был скучным, и он уснул на диване. Домашнее задание он не сделал." },
+        { "en": "On Sunday Tom stayed at home. He cleaned the kitchen and wrote an email to his sister. She answered and said she was happy. Tom thought it was a good weekend.", "ru": "В воскресенье Том остался дома. Он убрал кухню и написал письмо сестре. Она ответила и сказала, что рада. Том решил, что выходные были хорошими." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "a2.u01.l01",
+      "kind": "vocabulary",
+      "title": "Время в прошлом",
+      "exercises": [
+        { "id": "a2.u01.l01.e01", "type": "match_pairs", "pairs": [{ "en": "yesterday", "ru": "вчера" }, { "en": "last night", "ru": "вчера вечером" }, { "en": "ago", "ru": "назад" }, { "en": "later", "ru": "позже" }, { "en": "when", "ru": "когда" }], "hint": "Ago ставят после времени.", "explanation": "Yesterday — вчера, last night — вчера вечером, ago — назад, later — позже, when — когда." },
+        { "id": "a2.u01.l01.e02", "type": "match_pairs", "pairs": [{ "en": "before", "ru": "до" }, { "en": "after", "ru": "после" }, { "en": "last week", "ru": "на прошлой неделе" }, { "en": "two days ago", "ru": "два дня назад" }, { "en": "last year", "ru": "в прошлом году" }], "hint": "Before и after — противоположные слова.", "explanation": "Before — до, after — после, last week — на прошлой неделе, two days ago — два дня назад, last year — в прошлом году." },
+        { "id": "a2.u01.l01.e03", "type": "translate_choice", "from": "ru", "text": "вчера", "options": ["yesterday", "tomorrow", "today"], "answer": 0, "hint": "Не сегодня и не завтра.", "explanation": "Yesterday — «вчера», tomorrow — «завтра», today — «сегодня»." },
+        { "id": "a2.u01.l01.e04", "type": "translate_choice", "from": "en", "text": "three days ago", "options": ["три дня назад", "через три дня", "три дня подряд"], "answer": 0, "hint": "Ago смотрит в прошлое.", "explanation": "Three days ago — «три дня назад»." },
+        { "id": "a2.u01.l01.e05", "type": "fill_gap", "text": "I called her two days ___.", "translation": "Я позвонил ей два дня назад.", "answers": [["ago"]], "options": ["ago", "last", "before"], "hint": "Слово «назад».", "explanation": "I called her two days ago. Ago стоит после времени.", "grammar": ["a2.past-simple-questions"] },
+        { "id": "a2.u01.l01.e06", "type": "fill_gap", "text": "We met ___ week.", "translation": "Мы встретились на прошлой неделе.", "answers": [["last"]], "options": ["last", "ago", "yesterday"], "hint": "Слово «прошлый».", "explanation": "We met last week. Перед last предлог не нужен.", "grammar": ["a2.past-simple-questions"] },
+        { "id": "a2.u01.l01.e07", "type": "fill_gap", "text": "I had breakfast ___ school.", "translation": "Я позавтракал перед школой.", "answers": [["before"]], "options": ["before", "after", "ago"], "hint": "Сначала завтрак, потом школа.", "explanation": "Правильно: I had breakfast before school.", "grammar": ["a2.past-simple-questions"] },
+        { "id": "a2.u01.l01.e08", "type": "error_correction", "text": "We met in last week.", "wrong": "in last week", "correction": "last week", "options": ["last week", "on last week", "at last week"], "hint": "Предлог лишний.", "explanation": "We met last week. Перед last предлог не нужен.", "troubles": ["prepositions"] },
+        { "id": "a2.u01.l01.e09", "type": "error_correction", "text": "I called her ago two days.", "wrong": "ago two days", "correction": "two days ago", "options": ["two days ago", "ago two day", "two ago days"], "hint": "Ago стоит после времени.", "explanation": "Правильно: I called her two days ago.", "troubles": ["word-order"] },
+        { "id": "a2.u01.l01.e10", "type": "tiles", "from": "ru", "text": "Я позвонил ей вчера.", "answer": "I called her yesterday.", "distractors": ["call", "ago"], "hint": "Прошедшее время с -ed.", "explanation": "Правильно: I called her yesterday. Call → called.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u01.l01.e11", "type": "listen_choice", "audio": "I saw her two days ago.", "question": "Что вы слышите?", "options": ["I saw her two days ago.", "I see her two days ago.", "I saw her today."], "answer": 0, "hint": "Прошедшее время и слово «назад».", "explanation": "I saw her two days ago — «я видел её два дня назад»." },
+        { "id": "a2.u01.l01.e12", "type": "listen_dictation", "text": "We met last week.", "hint": "Четыре слова.", "explanation": "We met last week — «мы встретились на прошлой неделе»." },
+        { "id": "a2.u01.l01.e13", "type": "type_translation", "from": "ru", "text": "позже", "answers": ["later"], "hint": "Пять букв.", "explanation": "Later [ˈleɪtɚ] — «позже»." },
+        { "id": "a2.u01.l01.e14", "type": "word_stress", "word": "yesterday", "syllables": ["yes", "ter", "day"], "stress": 0, "hint": "Первый слог.", "explanation": "YES-ter-day — ударение на первый слог." }
+      ]
+    },
+    {
+      "id": "a2.u01.l02",
+      "kind": "vocabulary",
+      "title": "Глаголы, прилагательные и вещи",
+      "exercises": [
+        { "id": "a2.u01.l02.e01", "type": "match_pairs", "pairs": [{ "en": "visit", "ru": "навещать" }, { "en": "stay", "ru": "оставаться" }, { "en": "help", "ru": "помогать" }, { "en": "ask", "ru": "спрашивать" }, { "en": "answer", "ru": "отвечать" }], "hint": "Ask и answer — пара.", "explanation": "Visit — навещать, stay — оставаться, help — помогать, ask — спрашивать, answer — отвечать." },
+        { "id": "a2.u01.l02.e02", "type": "match_pairs", "pairs": [{ "en": "enjoy", "ru": "наслаждаться" }, { "en": "love", "ru": "обожать" }, { "en": "use", "ru": "использовать" }, { "en": "try", "ru": "пробовать" }, { "en": "close", "ru": "закрывать" }], "hint": "Close — противоположно open.", "explanation": "Enjoy — наслаждаться, love — обожать, use — использовать, try — пробовать, close — закрывать." },
+        { "id": "a2.u01.l02.e03", "type": "match_pairs", "pairs": [{ "en": "tired", "ru": "уставший" }, { "en": "sad", "ru": "грустный" }, { "en": "boring", "ru": "скучный" }, { "en": "interesting", "ru": "интересный" }, { "en": "difficult", "ru": "трудный" }], "hint": "Difficult — противоположно easy.", "explanation": "Tired — уставший, sad — грустный, boring — скучный, interesting — интересный, difficult — трудный." },
+        { "id": "a2.u01.l02.e04", "type": "match_pairs", "pairs": [{ "en": "gift", "ru": "подарок" }, { "en": "concert", "ru": "концерт" }, { "en": "lesson", "ru": "урок" }, { "en": "exam", "ru": "экзамен" }, { "en": "homework", "ru": "домашнее задание" }], "hint": "Три слова про учёбу.", "explanation": "Gift — подарок, concert — концерт, lesson — урок, exam — экзамен, homework — домашнее задание." },
+        { "id": "a2.u01.l02.e05", "type": "picture_choice", "mode": "picture-to-word", "word": "gift", "distractors": ["concert", "cake"], "hint": "Его дарят на день рождения.", "explanation": "Gift — «подарок»: [ɡɪft]." },
+        { "id": "a2.u01.l02.e06", "type": "picture_choice", "mode": "word-to-picture", "word": "concert", "distractors": ["gift", "cake"], "hint": "Туда идут слушать музыку.", "explanation": "Concert — «концерт»: [ˈkɑːnsɚt]." },
+        { "id": "a2.u01.l02.e07", "type": "translate_choice", "from": "ru", "text": "Фильм был скучным.", "options": ["The film was boring.", "The film was easy.", "The film was tired."], "answer": 0, "hint": "Скучный — не интересный.", "explanation": "The film was boring. Boring — «скучный»." },
+        { "id": "a2.u01.l02.e08", "type": "translate_choice", "from": "en", "text": "The exam was easy.", "options": ["Экзамен был лёгким.", "Экзамен был трудным.", "Экзамен был скучным."], "answer": 0, "hint": "Easy — не difficult.", "explanation": "The exam was easy — «экзамен был лёгким»." },
+        { "id": "a2.u01.l02.e09", "type": "fill_gap", "text": "I ___ my homework after dinner.", "translation": "Я делал домашнее задание после ужина.", "answers": [["did"]], "options": ["did", "made", "had"], "hint": "Домашнее задание «выполняют».", "explanation": "I did my homework. С homework говорят do, а не make." },
+        { "id": "a2.u01.l02.e10", "type": "fill_gap", "text": "I ___ dinner for my friends.", "translation": "Я приготовил ужин для друзей.", "answers": [["made"]], "options": ["made", "did", "got"], "hint": "Ужин «создают».", "explanation": "I made dinner. Make — «готовить, создавать»." },
+        { "id": "a2.u01.l02.e11", "type": "fill_gap", "text": "The museum was ___.", "translation": "Музей был интересным.", "answers": [["interesting"]], "options": ["interesting", "tired", "sad"], "hint": "Там было на что посмотреть.", "explanation": "Правильно: The museum was interesting.", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l02.e12", "type": "listen_choice", "audio": "The exam was difficult.", "question": "Что вы слышите?", "options": ["The exam was difficult.", "The exam was easy.", "The lesson was difficult."], "answer": 0, "hint": "Слово «трудный».", "explanation": "The exam was difficult — «экзамен был трудным».", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l02.e13", "type": "listen_dictation", "text": "We enjoyed the concert.", "hint": "Четыре слова.", "explanation": "We enjoyed the concert — «нам понравился концерт»." },
+        { "id": "a2.u01.l02.e14", "type": "word_stress", "word": "interesting", "syllables": ["in", "ter", "est", "ing"], "stress": 0, "hint": "Первый слог.", "explanation": "IN-ter-est-ing — ударение на первый слог." }
+      ]
+    },
+    {
+      "id": "a2.u01.l03",
+      "kind": "grammar",
+      "title": "Was и were",
+      "grammar": "a2.was-were",
+      "exercises": [
+        { "id": "a2.u01.l03.e01", "type": "fill_gap", "text": "I ___ tired yesterday.", "translation": "Вчера я устал.", "answers": [["was"]], "options": ["was", "were", "am"], "hint": "С I в прошлом.", "explanation": "I was tired yesterday. С I — was.", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l03.e02", "type": "fill_gap", "text": "We ___ at the concert.", "translation": "Мы были на концерте.", "answers": [["were"]], "options": ["were", "was", "are"], "hint": "С we в прошлом.", "explanation": "We were at the concert. С we, you, they — were.", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l03.e03", "type": "fill_gap", "text": "The film ___ boring.", "translation": "Фильм был скучным.", "answers": [["was"]], "options": ["was", "were", "is"], "hint": "Один фильм.", "explanation": "Правильно: The film was boring.", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l03.e04", "type": "fill_gap", "text": "They ___ at the party.", "translation": "Они были на вечеринке.", "answers": [["were"]], "options": ["were", "was", "are"], "hint": "Несколько человек.", "explanation": "Правильно: They were at the party.", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l03.e05", "type": "fill_gap", "text": "He ___ at school yesterday.", "translation": "Вчера его не было в школе.", "answers": [["wasn't", "was not"]], "options": ["wasn't", "weren't", "didn't"], "hint": "Отрицание от be.", "explanation": "Правильно: He wasn't at school yesterday.", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l03.e06", "type": "fill_gap", "text": "___ you at home last night?", "translation": "Вы были дома вчера вечером?", "answers": [["Were"]], "options": ["Were", "Was", "Did"], "hint": "Вопрос с you в прошлом.", "explanation": "Правильно: Were you at home last night?", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l03.e07", "type": "fill_gap", "text": "Was the lesson difficult? — No, it ___.", "translation": "Урок был трудным? — Нет.", "answers": [["wasn't", "was not"]], "options": ["wasn't", "weren't", "didn't"], "hint": "Короткий ответ.", "explanation": "No, it wasn't. Короткий ответ повторяет was.", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l03.e08", "type": "error_correction", "text": "I am tired yesterday.", "wrong": "am", "correction": "was", "options": ["was", "were", "be"], "hint": "Вчера — прошлое.", "explanation": "Правильно: I was tired yesterday.", "grammar": ["a2.was-were"], "troubles": ["tenses"] },
+        { "id": "a2.u01.l03.e09", "type": "error_correction", "text": "We was at the concert.", "wrong": "was", "correction": "were", "options": ["were", "are", "be"], "hint": "С we — другая форма.", "explanation": "Правильно: We were at the concert.", "grammar": ["a2.was-were"], "troubles": ["tenses"] },
+        { "id": "a2.u01.l03.e10", "type": "error_correction", "text": "Did you were at home?", "wrong": "Did you were", "correction": "Were you", "options": ["Were you", "Was you", "Did you be"], "hint": "С be не нужен вспомогательный глагол.", "explanation": "Правильно: Were you at home?", "grammar": ["a2.was-were"], "troubles": ["word-order"] },
+        { "id": "a2.u01.l03.e11", "type": "tiles", "from": "ru", "text": "Где вы были в субботу?", "answer": "Where were you on Saturday?", "distractors": ["was", "did"], "hint": "Образец: Where + were + you.", "explanation": "Правильно: Where were you on Saturday?", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l03.e12", "type": "type_translation", "from": "ru", "text": "Концерт был хорошим.", "answers": ["The concert was good."], "hint": "Четыре слова.", "explanation": "Правильно: The concert was good.", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l03.e13", "type": "type_translation", "from": "ru", "text": "Мы не были дома вчера.", "answers": ["We weren't at home yesterday.", "We were not at home yesterday."], "difficulty": 2, "hint": "Образец: Weren't + at home.", "explanation": "Правильно: We weren't at home yesterday.", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l03.e14", "type": "speak_answer", "question": "Where were you yesterday?", "questionRu": "Где вы были вчера? Ответьте: I was at home. I was at work.", "keywords": [["\\bI was\\b"], ["\\b(home|work|school|park|office|cinema|restaurant|town|city)\\b"]], "minKeywords": 2, "samples": ["I was at home.", "I was at work."], "difficulty": 3, "hint": "Образец: I was at…", "explanation": "Ответ: I was at home.", "grammar": ["a2.was-were"] }
+      ]
+    },
+    {
+      "id": "a2.u01.l04",
+      "kind": "grammar",
+      "title": "Правильные глаголы на -ed",
+      "grammar": "a2.past-simple-regular",
+      "exercises": [
+        { "id": "a2.u01.l04.e01", "type": "fill_gap", "text": "I ___ my friend yesterday.", "translation": "Вчера я навестил друга.", "answers": [["visited"]], "options": ["visited", "visit", "visits"], "hint": "Вчера — прошлое.", "explanation": "Правильно: I visited my friend yesterday.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u01.l04.e02", "type": "fill_gap", "text": "We ___ tennis in the park.", "translation": "Мы играли в теннис в парке.", "answers": [["played"]], "options": ["played", "play", "plays"], "hint": "Прошлое.", "explanation": "Правильно: We played tennis in the park.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u01.l04.e03", "type": "fill_gap", "text": "She ___ English last night.", "translation": "Вчера вечером она занималась английским.", "answers": [["studied"]], "options": ["studied", "studyed", "studies"], "hint": "Согласная + y.", "explanation": "Правильно: She studied English. Study → studied.", "grammar": ["a2.past-simple-regular"], "troubles": ["tenses"] },
+        { "id": "a2.u01.l04.e04", "type": "fill_gap", "text": "I ___ the door.", "translation": "Я закрыл дверь.", "answers": [["closed"]], "options": ["closed", "closeed", "closes"], "hint": "Глагол уже заканчивается на e.", "explanation": "Правильно: I closed the door. Close → closed.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u01.l04.e05", "type": "fill_gap", "text": "The bus ___ at the corner.", "translation": "Автобус остановился на углу.", "answers": [["stopped"]], "options": ["stopped", "stoped", "stops"], "hint": "Короткое слово: согласная удваивается.", "explanation": "Правильно: The bus stopped at the corner.", "grammar": ["a2.past-simple-regular"], "troubles": ["tenses"] },
+        { "id": "a2.u01.l04.e06", "type": "fill_gap", "text": "They ___ the concert.", "translation": "Им понравился концерт.", "answers": [["enjoyed"]], "options": ["enjoyed", "enjoy", "enjoys"], "hint": "Прошлое.", "explanation": "Правильно: They enjoyed the concert.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u01.l04.e07", "type": "error_correction", "text": "I visit my friend yesterday.", "wrong": "visit", "correction": "visited", "options": ["visited", "visiting", "visits"], "hint": "Прошлое время.", "explanation": "Правильно: I visited my friend yesterday.", "grammar": ["a2.past-simple-regular"], "troubles": ["tenses"] },
+        { "id": "a2.u01.l04.e08", "type": "error_correction", "text": "She studyed last night.", "wrong": "studyed", "correction": "studied", "options": ["studied", "studies", "study"], "hint": "Y меняется.", "explanation": "Правильно: She studied last night.", "grammar": ["a2.past-simple-regular"], "troubles": ["tenses"] },
+        { "id": "a2.u01.l04.e09", "type": "error_correction", "text": "We stoped at the corner.", "wrong": "stoped", "correction": "stopped", "options": ["stopped", "stops", "stop"], "hint": "Согласная удваивается.", "explanation": "Правильно: We stopped at the corner.", "grammar": ["a2.past-simple-regular"], "troubles": ["tenses"] },
+        { "id": "a2.u01.l04.e10", "type": "minimal_pair", "pair": [{ "en": "walked", "ipa": "wɔːkt" }, { "en": "wanted", "ipa": "ˈwɑːntɪd" }], "say": 1, "hint": "Одно слово на один слог длиннее.", "explanation": "Walked [wɔːkt] — один слог, wanted [ˈwɑːntɪd] — два слога." },
+        { "id": "a2.u01.l04.e11", "type": "tiles", "from": "ru", "text": "Мы смотрели фильм вчера вечером.", "answer": "We watched a film last night.", "distractors": ["watch", "ago"], "hint": "Образец: Watch → watched.", "explanation": "Правильно: We watched a film last night.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u01.l04.e12", "type": "type_translation", "from": "ru", "text": "Я позвонил другу.", "answers": ["I called my friend."], "hint": "Образец: Call → called.", "explanation": "Правильно: I called my friend.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u01.l04.e13", "type": "type_translation", "from": "ru", "text": "Вчера мы остались дома.", "answers": ["We stayed at home yesterday.", "Yesterday we stayed at home."], "difficulty": 2, "hint": "Образец: Stay → stayed.", "explanation": "Правильно: We stayed at home yesterday.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u01.l04.e14", "type": "speak_repeat", "text": "I visited my friend and we played tennis.", "hint": "Окончание -ed читается по-разному.", "explanation": "Visited [ɪd], played [d]: окончание -ed читается по-разному." }
+      ]
+    },
+    {
+      "id": "a2.u01.l05",
+      "kind": "grammar",
+      "title": "Неправильные глаголы",
+      "grammar": "a2.past-simple-irregular",
+      "exercises": [
+        { "id": "a2.u01.l05.e01", "type": "match_pairs", "pairs": [{ "en": "go", "ru": "went — ходил" }, { "en": "see", "ru": "saw — видел" }, { "en": "make", "ru": "made — сделал" }, { "en": "buy", "ru": "bought — купил" }, { "en": "eat", "ru": "ate — съел" }], "hint": "В правой колонке — форма прошедшего времени.", "explanation": "Правильно: Go — went, see — saw, make — made, buy — bought, eat — ate." },
+        { "id": "a2.u01.l05.e02", "type": "fill_gap", "text": "I ___ to the cinema last night.", "translation": "Вчера вечером я ходил в кино.", "answers": [["went"]], "options": ["went", "goed", "go"], "hint": "Go — особый глагол.", "explanation": "I went to the cinema. Прошедшее от go — went.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u01.l05.e03", "type": "fill_gap", "text": "We ___ a good film.", "translation": "Мы посмотрели хороший фильм.", "answers": [["saw"]], "options": ["saw", "seed", "see"], "hint": "See — особый глагол.", "explanation": "We saw a good film. Прошедшее от see — saw.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u01.l05.e04", "type": "fill_gap", "text": "She ___ a new coat yesterday.", "translation": "Вчера она купила новое пальто.", "answers": [["bought"]], "options": ["bought", "buyed", "buy"], "hint": "Buy — особый глагол.", "explanation": "Правильно: She bought a new coat. Buy — bought.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u01.l05.e05", "type": "fill_gap", "text": "I ___ dinner at six.", "translation": "Я приготовил ужин в шесть.", "answers": [["made"]], "options": ["made", "maked", "make"], "hint": "Make — особый глагол.", "explanation": "Правильно: I made dinner at six.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u01.l05.e06", "type": "fill_gap", "text": "They ___ pizza and drank juice.", "translation": "Они ели пиццу и пили сок.", "answers": [["ate"]], "options": ["ate", "eated", "eat"], "hint": "Eat — особый глагол.", "explanation": "Правильно: They ate pizza and drank juice.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u01.l05.e07", "type": "fill_gap", "text": "I ___ tired. I slept.", "translation": "Я устал. Я спал.", "answers": [["was"]], "options": ["was", "were", "am"], "hint": "Прошедшее от be.", "explanation": "I was tired. Прошедшее от be с I — was.", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l05.e08", "type": "error_correction", "text": "I goed to the park.", "wrong": "goed", "correction": "went", "options": ["went", "gone", "going"], "hint": "Это особая форма.", "explanation": "Правильно: I went to the park.", "grammar": ["a2.past-simple-irregular"], "troubles": ["tenses"] },
+        { "id": "a2.u01.l05.e09", "type": "error_correction", "text": "She buyed a bag.", "wrong": "buyed", "correction": "bought", "options": ["bought", "buys", "buying"], "hint": "Особая форма.", "explanation": "Правильно: She bought a bag.", "grammar": ["a2.past-simple-irregular"], "troubles": ["tenses"] },
+        { "id": "a2.u01.l05.e10", "type": "error_correction", "text": "We seed a film.", "wrong": "seed", "correction": "saw", "options": ["saw", "see", "seen"], "hint": "Особая форма.", "explanation": "Правильно: We saw a film.", "grammar": ["a2.past-simple-irregular"], "troubles": ["tenses"] },
+        { "id": "a2.u01.l05.e11", "type": "tiles", "from": "ru", "text": "Вчера я встретил друга.", "answer": "I met my friend yesterday.", "distractors": ["meet", "meeted"], "hint": "Образец: Meet — met.", "explanation": "Правильно: I met my friend yesterday.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u01.l05.e12", "type": "type_translation", "from": "ru", "text": "Она написала письмо.", "answers": ["She wrote an email.", "She wrote a letter."], "hint": "Образец: Write — wrote.", "explanation": "She wrote an email. Wrote — прошедшее от write.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u01.l05.e13", "type": "type_translation", "from": "ru", "text": "Он спал на диване.", "answers": ["He slept on the sofa."], "hint": "Образец: Sleep — slept.", "explanation": "Правильно: He slept on the sofa.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u01.l05.e16", "type": "fill_gap", "text": "She ___ hello and went home.", "translation": "Она сказала «привет» и пошла домой.", "answers": [["said"]], "options": ["said", "says", "saied"], "hint": "Особая форма от say.", "explanation": "Правильно: She said hello. Say — said.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u01.l05.e17", "type": "fill_gap", "text": "I ___ the exam was easy.", "translation": "Я думал, что экзамен лёгкий.", "answers": [["thought"]], "options": ["thought", "thinked", "think"], "hint": "Особая форма от think.", "explanation": "Правильно: I thought the exam was easy. Think — thought.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u01.l05.e18", "type": "fill_gap", "text": "I ___ the answer.", "translation": "Я знал ответ.", "answers": [["knew"]], "options": ["knew", "knowed", "know"], "hint": "Особая форма от know.", "explanation": "Правильно: I knew the answer. Know — knew.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u01.l05.e19", "type": "fill_gap", "text": "I ___ my phone in the bag.", "translation": "Я нашёл телефон в сумке.", "answers": [["found"]], "options": ["found", "finded", "find"], "hint": "Особая форма от find.", "explanation": "Правильно: I found my phone in the bag. Find — found.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u01.l05.e14", "type": "listen_choice", "audio": "She told me her name.", "question": "Что вы слышите?", "options": ["She told me her name.", "She tells me her name.", "She asked me her name."], "answer": 0, "hint": "Прошедшее время.", "explanation": "She told me about the party — «она назвала мне своё имя».", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u01.l05.e15", "type": "listen_dictation", "text": "I got a gift on my birthday.", "hint": "Семь слов.", "explanation": "I got a gift on my birthday — «на день рождения я получил подарок»." }
+      ]
+    },
+    {
+      "id": "a2.u01.l06",
+      "kind": "grammar",
+      "title": "Didn't и did: отрицание и вопросы",
+      "grammar": "a2.past-simple-questions",
+      "exercises": [
+        { "id": "a2.u01.l06.e01", "type": "fill_gap", "text": "I ___ go to the cinema.", "translation": "Я не ходил в кино.", "answers": [["didn't", "did not"]], "options": ["didn't", "don't", "wasn't"], "hint": "Отрицание в прошлом.", "explanation": "Правильно: I didn't go to the cinema.", "grammar": ["a2.past-simple-questions"] },
+        { "id": "a2.u01.l06.e02", "type": "fill_gap", "text": "She didn't ___ me yesterday.", "translation": "Вчера она мне не звонила.", "answers": [["call"]], "options": ["call", "called", "calls"], "hint": "После didn't — без -ed.", "explanation": "Правильно: She didn't call me yesterday.", "grammar": ["a2.past-simple-questions"], "troubles": ["tenses"] },
+        { "id": "a2.u01.l06.e03", "type": "fill_gap", "text": "___ you watch the film?", "translation": "Вы смотрели фильм?", "answers": [["Did"]], "options": ["Did", "Do", "Were"], "hint": "Вопрос в прошлом.", "explanation": "Правильно: Did you watch the film?", "grammar": ["a2.past-simple-questions"] },
+        { "id": "a2.u01.l06.e04", "type": "fill_gap", "text": "Did he finish his homework? — No, he ___.", "translation": "Он закончил домашнее задание? — Нет.", "answers": [["didn't", "did not"]], "options": ["didn't", "wasn't", "doesn't"], "hint": "Короткий ответ.", "explanation": "Правильно: No, he didn't.", "grammar": ["a2.past-simple-questions"] },
+        { "id": "a2.u01.l06.e05", "type": "fill_gap", "text": "What did you ___ last weekend?", "translation": "Что вы делали в прошлые выходные?", "answers": [["do"]], "options": ["do", "did", "done"], "hint": "После did — начальная форма.", "explanation": "Правильно: What did you do last weekend?", "grammar": ["a2.past-simple-questions"] },
+        { "id": "a2.u01.l06.e06", "type": "fill_gap", "text": "Where did he ___?", "translation": "Куда он ходил?", "answers": [["go"]], "options": ["go", "went", "goes"], "hint": "После did — без изменений.", "explanation": "Where did he go? Went нельзя: прошедшее время уже в did.", "grammar": ["a2.past-simple-questions"], "troubles": ["tenses"] },
+        { "id": "a2.u01.l06.e07", "type": "error_correction", "text": "I didn't went to the park.", "wrong": "went", "correction": "go", "options": ["go", "gone", "going"], "hint": "Прошлое уже в didn't.", "explanation": "Правильно: I didn't go to the park.", "grammar": ["a2.past-simple-questions"], "troubles": ["tenses"] },
+        { "id": "a2.u01.l06.e08", "type": "error_correction", "text": "Did you went there?", "wrong": "went", "correction": "go", "options": ["go", "goes", "going"], "hint": "После did — начальная форма.", "explanation": "Правильно: Did you go there?", "grammar": ["a2.past-simple-questions"], "troubles": ["tenses"] },
+        { "id": "a2.u01.l06.e09", "type": "error_correction", "text": "She didn't called me.", "wrong": "called", "correction": "call", "options": ["call", "calls", "calling"], "hint": "Без -ed.", "explanation": "Правильно: She didn't call me.", "grammar": ["a2.past-simple-questions"], "troubles": ["tenses"] },
+        { "id": "a2.u01.l06.e10", "type": "error_correction", "text": "You watched the film?", "wrong": "You watched", "correction": "Did you watch", "options": ["Did you watch", "Do you watched", "Were you watch"], "hint": "Для вопроса нужен вспомогательный глагол.", "explanation": "Правильно: Did you watch the film?", "grammar": ["a2.past-simple-questions"], "troubles": ["word-order"] },
+        { "id": "a2.u01.l06.e11", "type": "tiles", "from": "ru", "text": "Что вы делали вчера?", "answer": "What did you do yesterday?", "distractors": ["does", "were"], "hint": "Образец: What + did + you.", "explanation": "Правильно: What did you do yesterday?", "grammar": ["a2.past-simple-questions"] },
+        { "id": "a2.u01.l06.e12", "type": "tiles", "from": "ru", "text": "Мы не ходили в парк.", "answer": "We didn't go to the park.", "distractors": ["went", "don't"], "hint": "Образец: Didn't + go.", "explanation": "Правильно: We didn't go to the park.", "grammar": ["a2.past-simple-questions"] },
+        { "id": "a2.u01.l06.e13", "type": "type_translation", "from": "ru", "text": "Вы позвонили ему?", "answers": ["Did you call him?"], "hint": "Образец: Did + you + call.", "explanation": "Правильно: Did you call him?", "grammar": ["a2.past-simple-questions"] },
+        { "id": "a2.u01.l06.e14", "type": "type_translation", "from": "ru", "text": "Он не сделал домашнее задание.", "answers": ["He didn't do his homework.", "He did not do his homework."], "difficulty": 2, "hint": "Образец: Didn't + do.", "explanation": "Правильно: He didn't do his homework.", "grammar": ["a2.past-simple-questions"] },
+        { "id": "a2.u01.l06.e15", "type": "speak_answer", "question": "What did you do yesterday?", "questionRu": "Что вы делали вчера? Ответьте: I went to… I watched…", "keywords": [["\\bI\\b"], ["\\b(went|watched|visited|played|made|saw|met|had|was|stayed|worked|studied|cooked|called|walked|read|wrote|slept|bought)\\b"]], "minKeywords": 2, "samples": ["I watched a film.", "I went to work and met my friend."], "difficulty": 3, "hint": "I + глагол в прошедшем.", "explanation": "Ответ: I watched a film and slept.", "grammar": ["a2.past-simple-regular"] }
+      ]
+    },
+    {
+      "id": "a2.u01.l07",
+      "kind": "listening",
+      "title": "Как прошли выходные?",
+      "textId": "a2.u01.weekend",
+      "exercises": [
+        {
+          "id": "a2.u01.l07.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "a2.u01.weekend",
+          "hint": "Слушайте, кто что делал.",
+          "explanation": "Анна навестила подругу и ходила на концерт. Том остался дома: устал, спал и готовил ужин. Домашнее задание не сделал.",
+          "questions": [
+            { "kind": "mcq", "question": "Что Анна делала в субботу?", "options": ["She went to a concert.", "She stayed at home.", "She did her homework."], "answer": 0, "explanation": "Анна говорит: we went to a concert." },
+            { "kind": "mcq", "question": "Почему Том не выходил?", "options": ["He was tired.", "He was sad.", "He was at work."], "answer": 0, "explanation": "Том говорит: I was tired." },
+            { "kind": "tfn", "statement": "Anna enjoyed the music.", "answer": "true", "explanation": "Анна говорит: I loved the music." },
+            { "kind": "tfn", "statement": "Tom did his homework.", "answer": "false", "explanation": "Том говорит: No, I didn't." },
+            { "kind": "tfn", "statement": "Anna's friend is a teacher.", "answer": "not_given", "explanation": "Про профессию подруги не сказано." }
+          ]
+        },
+        { "id": "a2.u01.l07.e02", "type": "listen_choice", "audio": "How was your weekend?", "question": "Что вы слышите?", "options": ["How was your weekend?", "How is your weekend?", "Where was your weekend?"], "answer": 0, "hint": "Вопрос про прошедшие выходные.", "explanation": "How was your weekend? — «Как прошли выходные?»" },
+        { "id": "a2.u01.l07.e03", "type": "listen_dictation", "text": "I didn't go out.", "answers": ["I did not go out."], "hint": "Четыре слова.", "explanation": "I didn't go out — «я никуда не выходил»." },
+        { "id": "a2.u01.l07.e04", "type": "listen_dictation", "text": "It was difficult.", "hint": "Три слова.", "explanation": "It was difficult — «это было трудно»." },
+        { "id": "a2.u01.l07.e05", "type": "fill_gap", "text": "Anna ___ her friend on Saturday.", "translation": "В субботу Анна навестила подругу.", "answers": [["visited"]], "options": ["visited", "visits", "visit"], "hint": "Прошлое.", "explanation": "Правильно: Anna visited her friend on Saturday.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u01.l07.e06", "type": "fill_gap", "text": "Tom ___ and made dinner.", "translation": "Том спал и готовил ужин.", "answers": [["slept"]], "options": ["slept", "sleeped", "sleeps"], "hint": "Особая форма.", "explanation": "Правильно: Tom slept and made dinner.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u01.l07.e07", "type": "tiles", "from": "ru", "text": "Ты сделал домашнее задание?", "answer": "Did you do your homework?", "distractors": ["done", "were"], "hint": "Образец: Did + you + do.", "explanation": "Правильно: Did you do your homework?", "grammar": ["a2.past-simple-questions"] },
+        { "id": "a2.u01.l07.e08", "type": "type_translation", "from": "ru", "text": "Как прошли выходные?", "answers": ["How was your weekend?"], "hint": "Weekend — одно.", "explanation": "Правильно: How was your weekend?", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l07.e09", "type": "speak_answer", "question": "How was your weekend?", "questionRu": "Как прошли ваши выходные? Ответьте: It was great. I went to…", "keywords": [["\\b(it was|I was|I went|I visited|I stayed|I watched|I played)\\b"], ["\\b(great|good|nice|boring|interesting|tired|busy|sunny|fine)\\b", "\\b(went|visited|stayed|watched|played|made|saw|met)\\b"]], "minKeywords": 2, "samples": ["It was great. I went to the park.", "It was boring. I stayed at home."], "difficulty": 3, "hint": "Образец: It was… I went…", "explanation": "Ответ: It was great. I visited my friend.", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l07.e10", "type": "speak_repeat", "text": "I didn't go out because I was tired.", "hint": "Because — «потому что».", "explanation": "Because [bɪˈkɔːz]: ударение на второй слог." }
+      ]
+    },
+    {
+      "id": "a2.u01.l08",
+      "kind": "writing",
+      "title": "В прошлую субботу",
+      "textId": "a2.u01.tom-saturday",
+      "exercises": [
+        {
+          "id": "a2.u01.l08.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "a2.u01.tom-saturday",
+          "hint": "Следите за порядком событий.",
+          "explanation": "Том встал поздно, позвонил другу, днём они играли в теннис, а вечером он готовил ужин и смотрел фильм.",
+          "questions": [
+            { "kind": "mcq", "question": "Во сколько Том позавтракал?", "options": ["at ten", "at eight", "at nine"], "answer": 0, "explanation": "В тексте: He had breakfast at ten." },
+            { "kind": "mcq", "question": "Что они делали днём?", "options": ["played tennis", "watched a film", "made dinner"], "answer": 0, "explanation": "В тексте: In the afternoon they played tennis in the park." },
+            { "kind": "mcq", "question": "Какой был фильм?", "options": ["boring", "interesting", "difficult"], "answer": 0, "explanation": "В тексте: The film was boring." },
+            { "kind": "tfn", "statement": "Tom slept on the sofa.", "answer": "true", "explanation": "В тексте: he slept on the sofa." },
+            { "kind": "tfn", "statement": "Tom did his homework.", "answer": "false", "explanation": "В тексте: He didn't do his homework." },
+            { "kind": "tfn", "statement": "Tom's friend played well.", "answer": "not_given", "explanation": "Как играл друг, в тексте не сказано." }
+          ]
+        },
+        { "id": "a2.u01.l08.e08", "type": "translate_choice", "from": "en", "text": "He cleaned the kitchen and wrote an email.", "options": ["Он убрал кухню и написал письмо.", "Он готовил на кухне и читал.", "Он убирает кухню и пишет письмо."], "answer": 0, "hint": "Оба глагола в прошедшем.", "explanation": "He cleaned the kitchen and wrote an email — «он убрал кухню и написал письмо»." },
+        { "id": "a2.u01.l08.e02", "type": "translate_choice", "from": "en", "text": "They were tired, but happy.", "options": ["Они устали, но были счастливы.", "Они не устали и были счастливы.", "Они были грустными."], "answer": 0, "hint": "But — «но».", "explanation": "They were tired, but happy — «они устали, но были счастливы»." },
+        { "id": "a2.u01.l08.e03", "type": "fill_gap", "text": "Last Saturday Tom ___ up late.", "translation": "В прошлую субботу Том встал поздно.", "answers": [["got"]], "options": ["got", "get", "gets"], "hint": "Особая форма.", "explanation": "Правильно: Tom got up late. Get up → got up.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u01.l08.e04", "type": "fill_gap", "text": "The film ___ boring.", "translation": "Фильм был скучным.", "answers": [["was"]], "options": ["was", "were", "is"], "hint": "Один фильм.", "explanation": "Правильно: The film was boring.", "grammar": ["a2.was-were"] },
+        { "id": "a2.u01.l08.e05", "type": "type_translation", "from": "ru", "text": "Вечером Том приготовил ужин и посмотрел фильм.", "answers": ["In the evening Tom made dinner and watched a film."], "difficulty": 3, "hint": "Made и watched.", "explanation": "Правильно: In the evening Tom made dinner and watched a film.", "grammar": ["a2.past-simple-irregular", "a2.past-simple-regular"] },
+        { "id": "a2.u01.l08.e06", "type": "speak_describe", "picture": { "emoji": "🎾" }, "situation": "Расскажите, что вы делали в прошлые выходные: два-три действия в прошедшем времени.", "keywords": [["\\bI\\b"], ["\\b(went|watched|visited|played|made|saw|met|had|was|stayed|worked|studied|cooked|called|walked|read|wrote|slept|bought)\\b"]], "minKeywords": 2, "samples": ["On Saturday I visited my friend. We played tennis. In the evening I watched a film."], "difficulty": 3, "hint": "Образец: On Saturday I…", "explanation": "Используйте прошедшее время: I visited, we played.", "grammar": ["a2.past-simple-regular"] },
+        {
+          "id": "a2.u01.l08.e07",
+          "type": "write",
+          "task": "Расскажите, как вы провели прошлые выходные: что делали утром, днём и вечером, где были, как всё было. Что вы не сделали? Например: Last Saturday I got up late. I visited my friend. I didn't do my homework.",
+          "minWords": 40,
+          "maxWords": 110,
+          "criteria": [
+            { "id": "past", "label": "Есть глаголы в прошедшем времени", "patterns": ["\\b(went|watched|visited|played|made|saw|met|had|stayed|worked|studied|cooked|called|walked|slept|bought|got|wrote|read|ate|drank|came|took|gave|enjoyed|loved|tried|helped|asked)\\b"] },
+            { "id": "was", "label": "Есть was или were", "patterns": ["\\b(was|were|wasn't|weren't)\\b"] },
+            { "id": "neg", "label": "Есть didn't", "patterns": ["\\b(didn't|did not)\\b"] },
+            { "id": "time", "label": "Есть слова времени", "patterns": ["\\b(yesterday|last (night|week|weekend|saturday|sunday)|on (saturday|sunday)|in the (morning|afternoon|evening)|ago|after|before|then)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\b(goed|buyed|seed|maked|eated|writed|sleeped|comed|taked|geted|haved)\\b", "message": "Это неправильный глагол: went, bought, saw, made, ate, wrote, slept, came, took, got, had." },
+            { "pattern": "\\bdidn't (went|saw|made|bought|ate|wrote|slept|came|took|got|had|[a-z]+ed)\\b", "message": "После didn't глагол в начальной форме: didn't go, didn't call." },
+            { "pattern": "\\bdid [a-z]+ (went|saw|made|bought|ate|wrote|slept|came|took|got|had)\\b", "message": "После did глагол в начальной форме: Did you go?" },
+            { "pattern": "\\b(we|you|they) was\\b", "message": "С we, you, they — were: we were." },
+            { "pattern": "\\b(I|he|she|it) were\\b", "message": "С I, he, she, it — was: I was." }
+          ],
+          "samples": [
+            "Last Saturday I got up late. I had breakfast at ten and called my friend. In the afternoon we went to the park and played tennis. It was sunny and warm. I was tired in the evening. I made dinner and watched a film. I didn't do my homework.",
+            "Last weekend was great. On Saturday I visited my sister and we went to a concert. The music was interesting. After the concert we had dinner in a restaurant. On Sunday I stayed at home and slept. I didn't go out because I was tired."
+          ],
+          "difficulty": 3,
+          "hint": "План: когда → что делал → как было → что не сделал.",
+          "explanation": "Рассказывая о прошлом, используйте Past Simple: -ed у правильных глаголов, особые формы у неправильных. С be — was и were. Для отрицания — didn't и глагол без -ed.",
+          "grammar": ["a2.was-were", "a2.past-simple-regular", "a2.past-simple-irregular", "a2.past-simple-questions"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "a2.u01.test.e01", "type": "match_pairs", "pairs": [{ "en": "yesterday", "ru": "вчера" }, { "en": "ago", "ru": "назад" }, { "en": "later", "ru": "позже" }, { "en": "before", "ru": "до" }, { "en": "after", "ru": "после" }], "hint": "Слова времени.", "explanation": "Yesterday — вчера, ago — назад, later — позже, before — до, after — после." },
+      { "id": "a2.u01.test.e02", "type": "translate_choice", "from": "ru", "text": "скучный", "options": ["boring", "sad", "easy"], "answer": 0, "hint": "Про фильм без интереса.", "explanation": "Boring — «скучный»." },
+      { "id": "a2.u01.test.e03", "type": "fill_gap", "text": "I ___ tired yesterday.", "translation": "Вчера я устал.", "answers": [["was"]], "options": ["was", "were", "am"], "hint": "С I.", "explanation": "Правильно: I was tired yesterday.", "grammar": ["a2.was-were"] },
+      { "id": "a2.u01.test.e04", "type": "fill_gap", "text": "They ___ at the concert.", "translation": "Они были на концерте.", "answers": [["were"]], "options": ["were", "was", "are"], "hint": "Несколько человек.", "explanation": "Правильно: They were at the concert.", "grammar": ["a2.was-were"] },
+      { "id": "a2.u01.test.e05", "type": "fill_gap", "text": "She ___ English last night.", "translation": "Вчера вечером она занималась английским.", "answers": [["studied"]], "options": ["studied", "studyed", "studies"], "hint": "Согласная + y.", "explanation": "Правильно: She studied English last night.", "grammar": ["a2.past-simple-regular"] },
+      { "id": "a2.u01.test.e06", "type": "fill_gap", "text": "We ___ a good film.", "translation": "Мы посмотрели хороший фильм.", "answers": [["saw"]], "options": ["saw", "seed", "see"], "hint": "Особая форма.", "explanation": "Правильно: We saw a good film.", "grammar": ["a2.past-simple-irregular"] },
+      { "id": "a2.u01.test.e07", "type": "fill_gap", "text": "He ___ a coat yesterday.", "translation": "Вчера он купил пальто.", "answers": [["bought"]], "options": ["bought", "buyed", "buys"], "hint": "Особая форма.", "explanation": "Правильно: He bought a coat yesterday.", "grammar": ["a2.past-simple-irregular"] },
+      { "id": "a2.u01.test.e08", "type": "fill_gap", "text": "I ___ go out last night.", "translation": "Вчера вечером я не выходил.", "answers": [["didn't", "did not"]], "options": ["didn't", "don't", "wasn't"], "hint": "Отрицание в прошлом.", "explanation": "Правильно: I didn't go out last night.", "grammar": ["a2.past-simple-questions"] },
+      { "id": "a2.u01.test.e09", "type": "fill_gap", "text": "___ you enjoy the concert?", "translation": "Вам понравился концерт?", "answers": [["Did"]], "options": ["Did", "Were", "Do"], "hint": "Вопрос в прошлом.", "explanation": "Правильно: Did you enjoy the concert?", "grammar": ["a2.past-simple-questions"] },
+      { "id": "a2.u01.test.e10", "type": "error_correction", "text": "We was at the party.", "wrong": "was", "correction": "were", "options": ["were", "are", "be"], "hint": "С we.", "explanation": "Правильно: We were at the party.", "grammar": ["a2.was-were"] },
+      { "id": "a2.u01.test.e11", "type": "error_correction", "text": "I didn't went to school.", "wrong": "went", "correction": "go", "options": ["go", "gone", "going"], "hint": "Прошлое уже в didn't.", "explanation": "Правильно: I didn't go to school.", "grammar": ["a2.past-simple-questions"] },
+      { "id": "a2.u01.test.e12", "type": "error_correction", "text": "I goed to the park.", "wrong": "goed", "correction": "went", "options": ["went", "gone", "going"], "hint": "Особая форма.", "explanation": "Правильно: I went to the park.", "grammar": ["a2.past-simple-irregular"] },
+      { "id": "a2.u01.test.e13", "type": "listen_choice", "audio": "She didn't call me yesterday.", "question": "Что вы слышите?", "options": ["She didn't call me yesterday.", "She called me yesterday.", "She doesn't call me."], "answer": 0, "hint": "Отрицание в прошлом.", "explanation": "She didn't call me yesterday — «вчера она мне не звонила».", "grammar": ["a2.past-simple-questions"] },
+      { "id": "a2.u01.test.e14", "type": "listen_dictation", "text": "We went to a concert.", "hint": "Пять слов.", "explanation": "We went to a concert — «мы ходили на концерт»." },
+      { "id": "a2.u01.test.e15", "type": "tiles", "from": "ru", "text": "Что вы делали в субботу?", "answer": "What did you do on Saturday?", "distractors": ["were", "does"], "difficulty": 2, "hint": "Образец: What + did + you.", "explanation": "Правильно: What did you do on Saturday?", "grammar": ["a2.past-simple-questions"] },
+      { "id": "a2.u01.test.e16", "type": "type_translation", "from": "ru", "text": "Я не сделал домашнее задание.", "answers": ["I didn't do my homework.", "I did not do my homework."], "difficulty": 2, "hint": "Образец: Didn't + do.", "explanation": "Правильно: I didn't do my homework.", "grammar": ["a2.past-simple-questions"] }
+    ]
+  }
+}

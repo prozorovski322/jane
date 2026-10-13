@@ -170,9 +170,8 @@
             "Могу рассказать историю из детства.",
             "Могу рассказать о поездке."
           ],
-          "units": [],
+          "units": ["a2.u01"],
           "planned": [
-            { "id": "a2.u01", "title": { "en": "Yesterday and the weekend", "ru": "Вчера и на выходных" } },
             { "id": "a2.u02", "title": { "en": "Childhood and stories", "ru": "Детство и истории" } },
             { "id": "a2.u03", "title": { "en": "Trips in the past", "ru": "Путешествия в прошлом" } }
           ]
