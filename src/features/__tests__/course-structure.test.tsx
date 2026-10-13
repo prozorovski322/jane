@@ -1,6 +1,6 @@
 import { render, screen, userEvent, waitFor } from '@testing-library/react-native';
 
-import { getGrammarNote, getUnit } from '@/core/content';
+import { getCourse, getGrammarNote, getUnit } from '@/core/content';
 import type { Exercise } from '@/core/content/schema';
 import { setDb } from '@/core/storage';
 import type { Db } from '@/core/storage/db';
@@ -77,7 +77,7 @@ describe('Path', () => {
     expect(screen.getByText('Pre-A1 · С нуля')).toBeOnTheScreen();
     expect(screen.getByText('A1 · Начальный')).toBeOnTheScreen();
     expect(screen.getByText('Модуль 1 · Я и другие')).toBeOnTheScreen();
-    expect(screen.getByLabelText('Юнит 2: Семья и друзья. Скоро.')).toBeOnTheScreen();
+    expect(screen.getByLabelText('Юнит 4: Дом. Скоро.')).toBeOnTheScreen();
     expect(
       screen.getAllByText(/Появится, когда будут готовы все юниты модуля/).length,
     ).toBeGreaterThan(3);
@@ -214,8 +214,11 @@ describe('time to the next level', () => {
   });
 
   it('counts what is left in the written units of a level', () => {
-    expect(remainingInLevel('A1', new Set())).toBe(8);
-    expect(remainingInLevel('A1', new Set(['a1.u01.l01', 'a1.u01.test']))).toBe(6);
+    const a1Total = getCourse()
+      .levels.find((l) => l.level === 'A1')!
+      .units.reduce((n, u) => n + u.lessons.length + 1, 0);
+    expect(remainingInLevel('A1', new Set())).toBe(a1Total);
+    expect(remainingInLevel('A1', new Set(['a1.u01.l01', 'a1.u01.test']))).toBe(a1Total - 2);
     expect(remainingInLevel('B2', new Set())).toBe(0);
     expect(remainingInLevel('PA1', new Set())).toBeGreaterThan(20);
   });

@@ -19,8 +19,8 @@
     { "id": "who", "en": "who", "ipa": "huː", "pos": "pron", "ru": ["кто"], "example": { "en": "Who is it?", "ru": "Кто это?" } },
     { "id": "boy", "en": "boy", "ipa": "bɔɪ", "pos": "noun", "ru": ["мальчик"], "example": { "en": "A small boy.", "ru": "Маленький мальчик." }, "picture": { "emoji": "👦" }, "topics": ["people"] },
     { "id": "girl", "en": "girl", "ipa": "ɡɝːl", "pos": "noun", "ru": ["девочка"], "example": { "en": "A small girl.", "ru": "Маленькая девочка." }, "picture": { "emoji": "👧" }, "topics": ["people"] },
-    { "id": "man", "en": "man", "ipa": "mæn", "pos": "noun", "ru": ["мужчина"], "example": { "en": "A big man.", "ru": "Большой мужчина." }, "note": "Множественное число — men [men].", "picture": { "emoji": "👨" }, "topics": ["people"] },
-    { "id": "woman", "en": "woman", "ipa": "ˈwʊmən", "pos": "noun", "ru": ["женщина"], "example": { "en": "A man and a woman.", "ru": "Мужчина и женщина." }, "note": "Woman читается [ˈwʊmən]: первая гласная как в book. Множественное число — women [ˈwɪmɪn].", "picture": { "emoji": "👩" }, "topics": ["people"] },
+    { "id": "man", "en": "man", "ipa": "mæn", "pos": "noun", "ru": ["мужчина"], "example": { "en": "A big man.", "ru": "Большой мужчина." }, "forms": { "plural": "men" }, "note": "Множественное число — men [men].", "picture": { "emoji": "👨" }, "topics": ["people"] },
+    { "id": "woman", "en": "woman", "ipa": "ˈwʊmən", "pos": "noun", "ru": ["женщина"], "example": { "en": "A man and a woman.", "ru": "Мужчина и женщина." }, "forms": { "plural": "women" }, "note": "Woman читается [ˈwʊmən]: первая гласная как в book. Множественное число — women [ˈwɪmɪn].", "picture": { "emoji": "👩" }, "topics": ["people"] },
     { "id": "baby", "en": "baby", "ipa": "ˈbeɪbi", "pos": "noun", "ru": ["младенец", "малыш"], "example": { "en": "A small baby.", "ru": "Маленький малыш." }, "picture": { "emoji": "👶" }, "topics": ["people"] }
   ],
   "texts": [

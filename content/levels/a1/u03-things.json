@@ -1,0 +1,287 @@
+{
+  "id": "a1.u03",
+  "level": "A1",
+  "order": 3,
+  "title": { "en": "My things", "ru": "Мои вещи" },
+  "description": "Говорим о вещах: что это, чьё это, один предмет или несколько. This, that, these, those, множественное число, артикли a, an, the.",
+  "goals": [
+    "Могу назвать вещи вокруг и спросить, что это.",
+    "Могу показать на предмет вблизи и вдали: this, that, these, those.",
+    "Могу сказать «один» и «много»: a book, two books, three boxes.",
+    "Могу выбрать артикль a, an или the.",
+    "Могу спросить и ответить, чья это вещь: Whose bag is this? — It is mine.",
+    "Могу описать несколько своих вещей в коротком тексте."
+  ],
+  "grammar": ["a1.this-that", "a1.plurals", "a1.the"],
+  "troubles": ["articles", "pron-th", "word-order"],
+  "words": [
+    { "id": "that", "en": "that", "ipa": "ðæt", "pos": "pron", "ru": ["то", "тот"], "example": { "en": "That is my bag.", "ru": "То моя сумка." }, "troubles": ["pron-th"] },
+    { "id": "these", "en": "these", "ipa": "ðiːz", "pos": "pron", "ru": ["эти"], "example": { "en": "These are my keys.", "ru": "Это мои ключи." }, "troubles": ["pron-th"] },
+    { "id": "those", "en": "those", "ipa": "ðoʊz", "pos": "pron", "ru": ["те"], "example": { "en": "Those are my glasses.", "ru": "То мои очки." }, "troubles": ["pron-th"] },
+    { "id": "person", "en": "person", "ipa": "ˈpɝːsən", "pos": "noun", "ru": ["человек"], "example": { "en": "Tom is a nice person.", "ru": "Том — хороший человек." }, "forms": { "plural": "people" } },
+    { "id": "people", "en": "people", "ipa": "ˈpiːpəl", "pos": "noun", "ru": ["люди"], "example": { "en": "Those people are friends.", "ru": "Эти люди — друзья." }, "note": "People — множественное число слова person. Глагол после people — are: people are.", "troubles": ["word-order"] },
+    { "id": "notebook", "en": "notebook", "ipa": "ˈnoʊtbʊk", "pos": "noun", "ru": ["тетрадь", "блокнот"], "example": { "en": "This is my red notebook.", "ru": "Это моя красная тетрадь." }, "picture": { "emoji": "📓" }, "topics": ["things"] },
+    { "id": "laptop", "en": "laptop", "ipa": "ˈlæptɑːp", "pos": "noun", "ru": ["ноутбук"], "example": { "en": "My laptop is new.", "ru": "Мой ноутбук новый." }, "topics": ["things"] },
+    { "id": "wallet", "en": "wallet", "ipa": "ˈwɑːlɪt", "pos": "noun", "ru": ["кошелёк", "бумажник"], "example": { "en": "The wallet is brown.", "ru": "Кошелёк коричневый." }, "topics": ["things"] },
+    { "id": "watch", "en": "watch", "ipa": "wɑːtʃ", "pos": "noun", "ru": ["наручные часы"], "example": { "en": "My watch is old.", "ru": "Мои часы старые." }, "note": "Watch — наручные часы. Настенные и настольные — clock. Во множественном числе — watches.", "picture": { "emoji": "⌚" }, "topics": ["things"] },
+    { "id": "glasses", "en": "glasses", "ipa": "ˈɡlæsɪz", "pos": "noun", "ru": ["очки"], "example": { "en": "These are my glasses.", "ru": "Это мои очки." }, "note": "Glasses всегда во множественном числе: my glasses are new. Одни очки — a pair of glasses.", "picture": { "emoji": "👓" }, "topics": ["things"] },
+    { "id": "passport", "en": "passport", "ipa": "ˈpæspɔːrt", "pos": "noun", "ru": ["паспорт (заграничный)"], "example": { "en": "This is my passport.", "ru": "Это мой паспорт." }, "picture": { "emoji": "🛂" }, "topics": ["things"] },
+    { "id": "ticket", "en": "ticket", "ipa": "ˈtɪkɪt", "pos": "noun", "ru": ["билет"], "example": { "en": "This is my ticket.", "ru": "Это мой билет." }, "picture": { "emoji": "🎫" }, "topics": ["things"] },
+    { "id": "card", "en": "card", "ipa": "kɑːrd", "pos": "noun", "ru": ["карта", "открытка"], "example": { "en": "This is my card.", "ru": "Это моя карта." }, "picture": { "emoji": "💳" }, "topics": ["things"] },
+    { "id": "lamp", "en": "lamp", "ipa": "læmp", "pos": "noun", "ru": ["лампа"], "example": { "en": "A small lamp.", "ru": "Маленькая лампа." }, "topics": ["things"] },
+    { "id": "picture", "en": "picture", "ipa": "ˈpɪktʃɚ", "pos": "noun", "ru": ["картина", "картинка"], "example": { "en": "That is a nice picture.", "ru": "То красивая картина." }, "picture": { "emoji": "🖼️" }, "topics": ["things"] },
+    { "id": "mirror", "en": "mirror", "ipa": "ˈmɪrɚ", "pos": "noun", "ru": ["зеркало"], "example": { "en": "A big mirror.", "ru": "Большое зеркало." }, "picture": { "emoji": "🪞" }, "topics": ["things"] },
+    { "id": "headphones", "en": "headphones", "ipa": "ˈhedfoʊnz", "pos": "noun", "ru": ["наушники"], "example": { "en": "These are my headphones.", "ru": "Это мои наушники." }, "note": "Как и glasses, слово headphones — всегда множественное число.", "picture": { "emoji": "🎧" }, "topics": ["things"] },
+    { "id": "magazine", "en": "magazine", "ipa": "ˈmæɡəˌziːn", "pos": "noun", "ru": ["журнал"], "example": { "en": "This is a magazine.", "ru": "Это журнал." }, "note": "Ударение на первый слог: MAG-a-zine. Magazine — это именно журнал, а не склад.", "picture": { "emoji": "📰" }, "topics": ["things"] },
+    { "id": "newspaper", "en": "newspaper", "ipa": "ˈnuːzˌpeɪpɚ", "pos": "noun", "ru": ["газета"], "example": { "en": "That is a newspaper.", "ru": "То газета." }, "topics": ["things"] },
+    { "id": "nice", "en": "nice", "ipa": "naɪs", "pos": "adj", "ru": ["приятный", "хороший", "милый"], "example": { "en": "That is a nice bag.", "ru": "То хорошая сумка." }, "note": "Nice — «приятный, милый». Подходит и для вещей, и для людей." },
+    { "id": "beautiful", "en": "beautiful", "ipa": "ˈbjuːtɪfəl", "pos": "adj", "ru": ["красивый"], "example": { "en": "That is a beautiful picture.", "ru": "То красивая картина." }, "note": "Ударение на первый слог: BEAU-ti-ful." },
+    { "id": "favorite", "en": "favorite", "ipa": "ˈfeɪvərɪt", "pos": "adj", "ru": ["любимый"], "example": { "en": "This is my favorite book.", "ru": "Это моя любимая книга." }, "note": "В британском варианте пишется favourite." },
+    { "id": "bad", "en": "bad", "ipa": "bæd", "pos": "adj", "ru": ["плохой"], "example": { "en": "That is a bad picture.", "ru": "То плохая картина." } },
+    { "id": "mine", "en": "mine", "ipa": "maɪn", "pos": "pron", "ru": ["мой (без существительного)"], "example": { "en": "This bag is mine.", "ru": "Эта сумка моя." }, "note": "Mine стоит без существительного: It is mine. Вместе с существительным — my: my bag." },
+    { "id": "yours", "en": "yours", "ipa": "jɔːrz", "pos": "pron", "ru": ["твой, ваш (без существительного)"], "example": { "en": "Is this bag yours?", "ru": "Эта сумка твоя?" } },
+    { "id": "whose", "en": "whose", "ipa": "huːz", "pos": "pron", "ru": ["чей"], "example": { "en": "Whose bag is this?", "ru": "Чья это сумка?" }, "note": "Whose пишется с w, но читается как [huːz], как who + z." },
+    { "id": "or", "en": "or", "ipa": "ɔːr", "pos": "conj", "ru": ["или"], "example": { "en": "Is it a pen or a pencil?", "ru": "Это ручка или карандаш?" } }
+  ],
+  "texts": [
+    {
+      "id": "a1.u03.whose-bag",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Whose bag is this?", "ru": "Чья это сумка?" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Tom, whose bag is this?", "ru": "Том, чья это сумка?" },
+        { "speaker": "tom", "en": "It is not my bag. Is it yours?", "ru": "Это не моя сумка. Это твоя?" },
+        { "speaker": "anna", "en": "No, it isn't mine. It is not my bag.", "ru": "Нет, она не моя. Это не моя сумка." },
+        { "speaker": "tom", "en": "Whose is it? Is it Max's bag?", "ru": "Чья она? Это сумка Макса?" },
+        { "speaker": "anna", "en": "Yes, it is. This is his passport, and those are his keys.", "ru": "Да. Это его паспорт, а то его ключи." },
+        { "speaker": "tom", "en": "Great! Thank you, Anna!", "ru": "Отлично! Спасибо, Анна!" }
+      ]
+    },
+    {
+      "id": "a1.u03.my-things",
+      "kind": "reading",
+      "genre": "profile",
+      "title": { "en": "My things", "ru": "Мои вещи" },
+      "lines": [
+        { "en": "This is my desk. These are my things.", "ru": "Это мой письменный стол. Это мои вещи." },
+        { "en": "This is my laptop. It is new. That is my phone. It is black.", "ru": "Это мой ноутбук. Он новый. То мой телефон. Он чёрный." },
+        { "en": "Those are my keys. These are my glasses. They are old, but they are nice.", "ru": "То мои ключи. Это мои очки. Они старые, но хорошие." },
+        { "en": "The notebook is my favorite thing. It is red.", "ru": "Тетрадь — моя любимая вещь. Она красная." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "a1.u03.l01",
+      "kind": "vocabulary",
+      "title": "Что в моей сумке?",
+      "exercises": [
+        { "id": "a1.u03.l01.e01", "type": "picture_choice", "mode": "picture-to-word", "word": "watch", "distractors": ["ticket", "card"], "hint": "Её носят на руке.", "explanation": "Watch — «наручные часы». Настенные часы называются clock." },
+        { "id": "a1.u03.l01.e02", "type": "picture_choice", "mode": "word-to-picture", "word": "glasses", "distractors": ["headphones", "mirror"], "hint": "Их носят на носу.", "explanation": "Glasses — «очки». Слово всегда во множественном числе." },
+        { "id": "a1.u03.l01.e03", "type": "picture_choice", "mode": "picture-to-word", "word": "passport", "distractors": ["ticket", "card"], "hint": "Его показывают на границе.", "explanation": "Passport — «паспорт» для поездок за границу: [ˈpæspɔːrt]." },
+        { "id": "a1.u03.l01.e04", "type": "picture_choice", "mode": "picture-to-word", "word": "headphones", "distractors": ["glasses", "notebook"], "hint": "В них слушают музыку.", "explanation": "Headphones — «наушники»: head («голова») + phones." },
+        { "id": "a1.u03.l01.e05", "type": "translate_choice", "from": "en", "text": "notebook", "options": ["тетрадь, блокнот", "ноутбук", "книга"], "answer": 0, "hint": "Это не компьютер.", "explanation": "Notebook — «тетрадь, блокнот». Ноутбук — laptop.", "troubles": ["false-friends"] },
+        { "id": "a1.u03.l01.e06", "type": "translate_choice", "from": "ru", "text": "ноутбук", "options": ["laptop", "notebook", "clock"], "answer": 0, "hint": "Он лежит на коленях.", "explanation": "Laptop — «ноутбук». Notebook — «тетрадь».", "troubles": ["false-friends"] },
+        { "id": "a1.u03.l01.e07", "type": "match_pairs", "pairs": [{ "en": "wallet", "ru": "кошелёк" }, { "en": "ticket", "ru": "билет" }, { "en": "card", "ru": "карта" }, { "en": "lamp", "ru": "лампа" }, { "en": "mirror", "ru": "зеркало" }], "hint": "Wallet и ticket лежат в сумке.", "explanation": "Wallet — «кошелёк», ticket — «билет», card — «карта», lamp — «лампа», mirror — «зеркало»." },
+        { "id": "a1.u03.l01.e08", "type": "match_pairs", "pairs": [{ "en": "magazine", "ru": "журнал" }, { "en": "newspaper", "ru": "газета" }, { "en": "picture", "ru": "картина" }, { "en": "person", "ru": "человек" }, { "en": "people", "ru": "люди" }], "hint": "Magazine — не «магазин».", "explanation": "Magazine — «журнал», newspaper — «газета», picture — «картина», person — «человек», people — «люди».", "troubles": ["false-friends"] },
+        { "id": "a1.u03.l01.e09", "type": "match_pairs", "pairs": [{ "en": "nice", "ru": "приятный" }, { "en": "beautiful", "ru": "красивый" }, { "en": "bad", "ru": "плохой" }, { "en": "favorite", "ru": "любимый" }, { "en": "new", "ru": "новый" }], "hint": "Bad и nice — противоположные слова.", "explanation": "Nice — «приятный», beautiful — «красивый», bad — «плохой», favorite — «любимый», new — «новый»." },
+        { "id": "a1.u03.l01.e10", "type": "listen_choice", "audio": "ticket", "question": "Какое слово вы слышите?", "options": ["ticket", "picture", "wallet"], "answer": 0, "hint": "Слово из двух слогов, в начале звук [t].", "explanation": "Ticket — «билет»: [ˈtɪkɪt]. Ударение на первый слог." },
+        { "id": "a1.u03.l01.e11", "type": "listen_dictation", "text": "wallet", "hint": "Шесть букв.", "explanation": "Wallet — «кошелёк». Читается [ˈwɑːlɪt], не «валет»." },
+        { "id": "a1.u03.l01.e12", "type": "type_translation", "from": "ru", "text": "зеркало", "answers": ["mirror"], "hint": "Шесть букв.", "explanation": "Mirror — «зеркало»: [ˈmɪrɚ]. Две r в слове." },
+        { "id": "a1.u03.l01.e13", "type": "fill_gap", "text": "This is my ___ book.", "translation": "Это моя любимая книга.", "answers": [["favorite"]], "options": ["favorite", "or", "bad"], "hint": "Книга, которая нравится больше других.", "explanation": "Favorite — «любимый»: my favorite book." },
+        { "id": "a1.u03.l01.e14", "type": "word_stress", "word": "beautiful", "syllables": ["beau", "ti", "ful"], "stress": 0, "hint": "Первый слог — beau.", "explanation": "BEAU-ti-ful — ударение на первый слог." }
+      ]
+    },
+    {
+      "id": "a1.u03.l02",
+      "kind": "grammar",
+      "title": "This и that: близко и далеко",
+      "grammar": "a1.this-that",
+      "exercises": [
+        { "id": "a1.u03.l02.e01", "type": "fill_gap", "text": "___ is my phone.", "translation": "Это мой телефон (он рядом).", "answers": [["This"]], "options": ["This", "That", "These"], "hint": "Один предмет и он близко.", "explanation": "This is my phone: this — один предмет рядом.", "grammar": ["a1.this-that"] },
+        { "id": "a1.u03.l02.e02", "type": "fill_gap", "text": "___ is my bag.", "translation": "То моя сумка (она далеко).", "answers": [["That"]], "options": ["This", "That", "Those"], "hint": "Один предмет и он далеко.", "explanation": "That is my bag: that — один предмет вдали.", "grammar": ["a1.this-that"] },
+        { "id": "a1.u03.l02.e03", "type": "fill_gap", "text": "What is ___?", "translation": "Что это? (рядом)", "answers": [["this"]], "options": ["this", "that", "these"], "hint": "Предмет рядом.", "explanation": "What is this? — вопрос о предмете рядом.", "grammar": ["a1.this-that"] },
+        { "id": "a1.u03.l02.e04", "type": "translate_choice", "from": "en", "text": "That is a nice picture.", "options": ["То красивая картина.", "Это красивая картина.", "То плохая картина."], "answer": 0, "hint": "Nice — «приятный».", "explanation": "That is a nice picture — «то красивая картина». That — вдали." },
+        { "id": "a1.u03.l02.e05", "type": "translate_choice", "from": "ru", "text": "То газета.", "options": ["That is a newspaper.", "This is a newspaper.", "That is a magazine."], "answer": 0, "hint": "То — далеко.", "explanation": "That is a newspaper — «то газета». Newspaper — газета, magazine — журнал." },
+        { "id": "a1.u03.l02.e06", "type": "error_correction", "text": "This is my keys.", "wrong": "This is", "correction": "These are", "options": ["These are", "That is", "Those is"], "hint": "Ключей несколько.", "explanation": "These are my keys. Несколько предметов рядом — these are.", "grammar": ["a1.this-that"] },
+        { "id": "a1.u03.l02.e07", "type": "tiles", "from": "ru", "text": "Что это?", "answer": "What is this?", "distractors": ["are", "that"], "hint": "Предмет рядом.", "explanation": "What is this? — «Что это?».", "grammar": ["a1.this-that"] },
+        { "id": "a1.u03.l02.e08", "type": "tiles", "from": "ru", "text": "То мой билет.", "answer": "That is my ticket.", "distractors": ["this", "are"], "hint": "То — that.", "explanation": "That is my ticket — «то мой билет».", "grammar": ["a1.this-that"] },
+        { "id": "a1.u03.l02.e09", "type": "type_translation", "from": "ru", "text": "Это твоя карта?", "answers": ["Is this your card?"], "difficulty": 2, "hint": "В вопросе is идёт первым.", "explanation": "Is this your card? Is стоит перед this.", "grammar": ["a1.this-that", "a1.be-questions"], "troubles": ["word-order"] },
+        { "id": "a1.u03.l02.e10", "type": "minimal_pair", "pair": [{ "en": "this", "ipa": "ðɪs" }, { "en": "these", "ipa": "ðiːz" }], "say": 1, "hint": "Гласный в одном слове долгий.", "explanation": "This [ðɪs] — короткая гласная и [s]. These [ðiːz] — долгая гласная и [z].", "troubles": ["pron-th"] },
+        { "id": "a1.u03.l02.e11", "type": "speak_repeat", "text": "This is my bag. That is your bag.", "hint": "В this и that — звонкий th, язык между зубами.", "explanation": "This [ðɪs], that [ðæt]. Язык между зубами, голос включён.", "troubles": ["pron-th"] },
+        { "id": "a1.u03.l02.e12", "type": "speak_answer", "question": "What is this?", "questionRu": "Возьмите любой предмет в руки и скажите, что это. Например: This is a pen.", "keywords": [["\\bthis is\\b", "\\bit is\\b", "\\bit'?s\\b"], ["\\ban? [a-z]+"]], "minKeywords": 2, "samples": ["This is a pen.", "It is a phone."], "difficulty": 3, "hint": "This is a… и предмет.", "explanation": "Отвечаем: This is a/an + предмет.", "grammar": ["a1.this-that"] }
+      ]
+    },
+    {
+      "id": "a1.u03.l03",
+      "kind": "grammar",
+      "title": "Много вещей: these и those, -s и -es",
+      "grammar": "a1.plurals",
+      "exercises": [
+        { "id": "a1.u03.l03.e01", "type": "fill_gap", "text": "These ___ my keys.", "translation": "Это мои ключи.", "answers": [["are"]], "options": ["are", "is", "am"], "hint": "These — много предметов.", "explanation": "These are my keys. После these и those — are.", "grammar": ["a1.this-that"] },
+        { "id": "a1.u03.l03.e02", "type": "fill_gap", "text": "Those ___ my glasses.", "translation": "То мои очки.", "answers": [["are"]], "options": ["are", "is"], "hint": "Those — много предметов.", "explanation": "Those are my glasses. Те — are.", "grammar": ["a1.this-that"] },
+        { "id": "a1.u03.l03.e03", "type": "fill_gap", "text": "Two ___.", "translation": "Две книги.", "answers": [["books"]], "options": ["books", "book", "bookes"], "hint": "После two — -s.", "explanation": "Two books. После числа больше единицы к слову добавляется -s.", "grammar": ["a1.plurals"] },
+        { "id": "a1.u03.l03.e04", "type": "fill_gap", "text": "Three ___.", "translation": "Три коробки.", "answers": [["boxes"]], "options": ["boxes", "boxs", "box"], "hint": "Слово на x получает -es.", "explanation": "Three boxes. После x, s, ch, sh добавляется -es: box — boxes.", "grammar": ["a1.plurals"] },
+        { "id": "a1.u03.l03.e05", "type": "fill_gap", "text": "Two ___.", "translation": "Двое часов.", "answers": [["watches"]], "options": ["watches", "watchs", "watch"], "hint": "Слово на ch получает -es.", "explanation": "Two watches. Watch оканчивается на ch, поэтому -es.", "grammar": ["a1.plurals"] },
+        { "id": "a1.u03.l03.e06", "type": "fill_gap", "text": "Two ___.", "translation": "Двое детей.", "answers": [["children"]], "options": ["children", "childs", "childes"], "hint": "Неправильное слово.", "explanation": "Two children. Множественное число слова child — children.", "grammar": ["a1.plurals"] },
+        { "id": "a1.u03.l03.e07", "type": "match_pairs", "pairs": [{ "en": "men", "ru": "мужчины" }, { "en": "women", "ru": "женщины" }, { "en": "children", "ru": "дети" }, { "en": "people", "ru": "люди" }, { "en": "babies", "ru": "малыши" }], "hint": "Все эти слова — множественное число, но не по правилу -s.", "explanation": "Men — «мужчины», women — «женщины», children — «дети», people — «люди», babies — «малыши».", "grammar": ["a1.plurals"] },
+        { "id": "a1.u03.l03.e08", "type": "error_correction", "text": "Two childs.", "wrong": "childs", "correction": "children", "options": ["children", "childes", "child"], "hint": "Это неправильное слово.", "explanation": "Two children. Слово child образует множественное число особо.", "grammar": ["a1.plurals"] },
+        { "id": "a1.u03.l03.e09", "type": "error_correction", "text": "Three box.", "wrong": "box", "correction": "boxes", "options": ["boxes", "boxs", "box"], "hint": "После three — множественное число.", "explanation": "Three boxes. Слово на x получает -es.", "grammar": ["a1.plurals"] },
+        { "id": "a1.u03.l03.e10", "type": "error_correction", "text": "These are two a books.", "wrong": "two a books", "correction": "two books", "options": ["two books", "a two books", "two a book"], "hint": "Перед несколькими предметами нет a.", "explanation": "These are two books. Артикль a не ставят со словом во множественном числе.", "grammar": ["a1.plurals"], "troubles": ["articles"] },
+        { "id": "a1.u03.l03.e11", "type": "tiles", "from": "ru", "text": "Это мои очки.", "answer": "These are my glasses.", "distractors": ["is", "this"], "hint": "Очки — несколько.", "explanation": "These are my glasses. Glasses — слово только во множественном числе.", "grammar": ["a1.this-that", "a1.plurals"] },
+        { "id": "a1.u03.l03.e12", "type": "type_translation", "from": "ru", "text": "Две женщины и три ребёнка.", "answers": ["Two women and three children."], "difficulty": 2, "hint": "Оба слова неправильные.", "explanation": "Two women and three children. Women и children — неправильные формы.", "grammar": ["a1.plurals"] },
+        { "id": "a1.u03.l03.e13", "type": "listen_choice", "audio": "watches", "question": "Что вы слышите?", "options": ["watches", "watch", "wallets"], "answer": 0, "hint": "В конце слышно отдельный слог «из».", "explanation": "Watches [ˈwɑːtʃɪz] — окончание -es читается как отдельный слог [ɪz].", "grammar": ["a1.plurals"] },
+        { "id": "a1.u03.l03.e14", "type": "listen_dictation", "text": "Those are my keys.", "answers": ["Those are my keys"], "hint": "Четыре слова.", "explanation": "Those are my keys — «то мои ключи».", "grammar": ["a1.this-that"] }
+      ]
+    },
+    {
+      "id": "a1.u03.l04",
+      "kind": "grammar",
+      "title": "A, an или the?",
+      "grammar": "a1.the",
+      "exercises": [
+        { "id": "a1.u03.l04.e01", "type": "fill_gap", "text": "This is ___ bag.", "translation": "Это сумка. (впервые)", "answers": [["a"]], "options": ["a", "an", "the"], "hint": "Сумку называют впервые.", "explanation": "This is a bag. Первый раз — a или an.", "grammar": ["a1.the"], "troubles": ["articles"] },
+        { "id": "a1.u03.l04.e02", "type": "fill_gap", "text": "This is a bag. ___ bag is blue.", "translation": "Это сумка. Сумка синяя.", "answers": [["The"]], "options": ["The", "A", "An"], "hint": "О какой сумке — понятно, мы её уже назвали.", "explanation": "The bag is blue. Второй раз — the.", "grammar": ["a1.the"], "troubles": ["articles"] },
+        { "id": "a1.u03.l04.e03", "type": "fill_gap", "text": "This is ___ umbrella.", "translation": "Это зонт.", "answers": [["an"]], "options": ["a", "an", "the"], "hint": "Зонт начинается с гласного звука.", "explanation": "An umbrella — гласный звук в начале.", "grammar": ["a1.the"], "troubles": ["articles"] },
+        { "id": "a1.u03.l04.e04", "type": "fill_gap", "text": "Tom is ___ teacher.", "translation": "Том — учитель.", "answers": [["a"]], "options": ["a", "the", "an"], "hint": "Профессию называют с a/an.", "explanation": "Tom is a teacher. С профессией — a или an.", "grammar": ["a1.the"], "troubles": ["articles"] },
+        { "id": "a1.u03.l04.e05", "type": "error_correction", "text": "This is the my notebook.", "wrong": "the my", "correction": "my", "options": ["my", "a my", "the"], "hint": "Перед my артикль не нужен.", "explanation": "This is my notebook. Артикль и my вместе не ставят.", "grammar": ["a1.the"], "troubles": ["articles"] },
+        { "id": "a1.u03.l04.e06", "type": "error_correction", "text": "I am the student.", "wrong": "the", "correction": "a", "options": ["a", "an", "my"], "hint": "Профессия — любой из многих.", "explanation": "I am a student. Профессию называют с a или an.", "grammar": ["a1.the"], "troubles": ["articles"] },
+        { "id": "a1.u03.l04.e07", "type": "error_correction", "text": "Max is a designer. A designer is from Kazan.", "wrong": "A designer", "correction": "The designer", "options": ["The designer", "An designer", "Designer"], "hint": "Макс уже назван, речь о нём.", "explanation": "The designer is from Kazan. Когда речь о том же человеке — the.", "grammar": ["a1.the"], "troubles": ["articles"] },
+        { "id": "a1.u03.l04.e08", "type": "tiles", "from": "ru", "text": "Это сумка. Сумка новая.", "answer": "This is a bag. The bag is new.", "distractors": ["an", "my"], "difficulty": 2, "hint": "Сначала a, потом the.", "explanation": "This is a bag. The bag is new. Первый раз a, потом the.", "grammar": ["a1.the"] },
+        { "id": "a1.u03.l04.e09", "type": "type_translation", "from": "ru", "text": "Это красная книга. Книга новая.", "answers": ["This is a red book. The book is new."], "difficulty": 3, "hint": "A, потом the.", "explanation": "This is a red book. The book is new. Первый раз — a, потом — the.", "grammar": ["a1.the"], "troubles": ["articles"] },
+        { "id": "a1.u03.l04.e10", "type": "translate_choice", "from": "en", "text": "I am a nurse, but my sister is a doctor.", "options": ["Я медсестра, а моя сестра врач.", "Я врач, а моя сестра медсестра.", "Я медсестра, и моя сестра тоже."], "answer": 0, "hint": "But — «а, но».", "explanation": "I am a nurse, but my sister is a doctor — «я медсестра, а моя сестра врач»." },
+        { "id": "a1.u03.l04.e11", "type": "listen_choice", "audio": "The apple is red.", "question": "Что вы слышите?", "options": ["The apple is red.", "An apple is red.", "The ball is red."], "answer": 0, "hint": "Первое слово — the.", "explanation": "The apple is red. Перед гласным the читается [ði]: the apple." },
+        { "id": "a1.u03.l04.e12", "type": "minimal_pair", "pair": [{ "en": "the", "ipa": "ðə" }, { "en": "she", "ipa": "ʃiː" }], "say": 0, "hint": "Первый звук — язык между зубами.", "explanation": "The начинается с [ð], she — с [ʃ] («ш»).", "troubles": ["pron-th", "articles"] },
+        { "id": "a1.u03.l04.e13", "type": "speak_repeat", "text": "This is a bag. The bag is new.", "hint": "The звучит коротко: ðə.", "explanation": "Артикль the читается слабо [ðə], не «зе». Язык между зубами.", "troubles": ["pron-th", "articles"] }
+      ]
+    },
+    {
+      "id": "a1.u03.l05",
+      "kind": "listening",
+      "title": "Чья это сумка?",
+      "textId": "a1.u03.whose-bag",
+      "exercises": [
+        {
+          "id": "a1.u03.l05.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "a1.u03.whose-bag",
+          "hint": "Слушайте, чья сумка и что в ней.",
+          "explanation": "Анна и Том ищут хозяина сумки: ею оказывается Макс.",
+          "questions": [
+            { "kind": "mcq", "question": "Чья это сумка?", "options": ["Max's", "Tom's", "Anna's"], "answer": 0, "explanation": "Анна говорит: Yes, it is — сумка Макса." },
+            { "kind": "mcq", "question": "Что в сумке? (названо в диалоге)", "options": ["a passport and keys", "a laptop and a phone", "glasses and a notebook"], "answer": 0, "explanation": "Анна говорит: This is his passport, and those are his keys." },
+            { "kind": "tfn", "statement": "The bag is Tom's.", "answer": "false", "explanation": "Том говорит: It is not my bag." },
+            { "kind": "tfn", "statement": "The bag is Anna's.", "answer": "false", "explanation": "Анна говорит: No, it isn't mine." },
+            { "kind": "tfn", "statement": "The bag is blue.", "answer": "not_given", "explanation": "О цвете сумки в диалоге ничего не сказано." }
+          ]
+        },
+        { "id": "a1.u03.l05.e02", "type": "listen_choice", "audio": "Whose bag is this?", "question": "Что вы слышите?", "options": ["Whose bag is this?", "Who is this?", "What is this?"], "answer": 0, "hint": "Первое слово звучит как «ху:з».", "explanation": "Whose bag is this? — «Чья это сумка?». Whose читается [huːz]." },
+        { "id": "a1.u03.l05.e03", "type": "listen_dictation", "text": "It isn't mine.", "answers": ["It is not mine.", "It's not mine."], "hint": "Три слова.", "explanation": "It isn't mine — «это не моё». Mine — без существительного." },
+        { "id": "a1.u03.l05.e04", "type": "fill_gap", "text": "Is this bag ___? — No, it isn't mine.", "translation": "Эта сумка твоя? — Нет, она не моя.", "answers": [["yours"]], "options": ["yours", "your", "you"], "hint": "Слово стоит без существительного.", "explanation": "Is this bag yours? Yours — без существительного: «твоя». С существительным — your bag.", "grammar": ["a1.possessives"] },
+        { "id": "a1.u03.l05.e05", "type": "fill_gap", "text": "This bag is ___.", "translation": "Эта сумка моя.", "answers": [["mine"]], "options": ["mine", "my", "me"], "hint": "Без существительного после is.", "explanation": "This bag is mine. Mine — «мой» без существительного.", "grammar": ["a1.possessives"] },
+        { "id": "a1.u03.l05.e06", "type": "fill_gap", "text": "Is it a pen ___ a pencil?", "translation": "Это ручка или карандаш?", "answers": [["or"]], "options": ["or", "and", "but"], "hint": "Выбор между двумя вещами.", "explanation": "Is it a pen or a pencil? Or — «или».", "grammar": ["a1.be-questions"] },
+        { "id": "a1.u03.l05.e07", "type": "tiles", "from": "ru", "text": "Чья это сумка?", "answer": "Whose bag is this?", "distractors": ["who", "are"], "hint": "Whose + предмет.", "explanation": "Whose bag is this? После whose стоит предмет.", "grammar": ["a1.possessives"] },
+        { "id": "a1.u03.l05.e08", "type": "type_translation", "from": "ru", "text": "Это не моя сумка.", "answers": ["It is not my bag.", "It isn't my bag.", "This is not my bag.", "This isn't my bag."], "difficulty": 2, "hint": "Not — после is.", "explanation": "It is not my bag. Not стоит после is.", "grammar": ["a1.be-questions"] },
+        { "id": "a1.u03.l05.e09", "type": "speak_answer", "question": "Is this your pen?", "questionRu": "Это ваша ручка? Ответьте коротко: Yes, it is или No, it isn't. Можно добавить: It is mine.", "keywords": [["\\b(yes|no)\\b"], ["\\b(it is|it isn't|it's|it is not|mine|my pen)\\b"]], "minKeywords": 2, "samples": ["Yes, it is. It is mine.", "No, it isn't."], "difficulty": 3, "hint": "Yes, it is. или No, it isn't.", "explanation": "Короткий ответ с be: Yes, it is. No, it isn't.", "grammar": ["a1.be-questions"] }
+      ]
+    },
+    {
+      "id": "a1.u03.l06",
+      "kind": "reading",
+      "title": "Мои вещи",
+      "textId": "a1.u03.my-things",
+      "exercises": [
+        {
+          "id": "a1.u03.l06.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "a1.u03.my-things",
+          "hint": "Обращайте внимание на this, that, these, those.",
+          "explanation": "Автор рассказывает о своих вещах: ноутбук, телефон, ключи, очки и тетрадь.",
+          "questions": [
+            { "kind": "mcq", "question": "Какой телефон?", "options": ["black", "new", "red"], "answer": 0, "explanation": "В тексте: That is my phone. It is black." },
+            { "kind": "mcq", "question": "Какая тетрадь?", "options": ["red", "black", "old"], "answer": 0, "explanation": "В тексте: The notebook is my favorite thing. It is red." },
+            { "kind": "tfn", "statement": "The laptop is new.", "answer": "true", "explanation": "В тексте: This is my laptop. It is new." },
+            { "kind": "tfn", "statement": "The glasses are new.", "answer": "false", "explanation": "В тексте: They are old, but they are nice." },
+            { "kind": "tfn", "statement": "The keys are brown.", "answer": "not_given", "explanation": "О цвете ключей в тексте ничего не сказано." }
+          ]
+        },
+        { "id": "a1.u03.l06.e02", "type": "translate_choice", "from": "en", "text": "They are old, but they are nice.", "options": ["Они старые, но хорошие.", "Они новые, но плохие.", "Они старые, и они красивые."], "answer": 0, "hint": "But — «но».", "explanation": "They are old, but they are nice — «они старые, но хорошие». They — для нескольких вещей." },
+        { "id": "a1.u03.l06.e03", "type": "fill_gap", "text": "My glasses ___ old.", "translation": "Мои очки старые.", "answers": [["are"]], "options": ["are", "is"], "hint": "Glasses — множественное число.", "explanation": "My glasses are old. С glasses — are.", "grammar": ["a1.plurals"] },
+        { "id": "a1.u03.l06.e04", "type": "fill_gap", "text": "My laptop is new. ___ is black.", "translation": "Мой ноутбук новый. Он чёрный.", "answers": [["It"]], "options": ["It", "They", "These"], "hint": "Ноутбук — один предмет.", "explanation": "It is black. Для одного предмета — it, для нескольких — they." },
+        { "id": "a1.u03.l06.e05", "type": "type_translation", "from": "ru", "text": "Это мой ноутбук. Он новый.", "answers": ["This is my laptop. It is new.", "This is my laptop. It's new."], "difficulty": 2, "hint": "It — вместо слова «ноутбук».", "explanation": "This is my laptop. It is new. Дальше о предмете говорим it.", "grammar": ["a1.this-that"] },
+        { "id": "a1.u03.l06.e06", "type": "type_translation", "from": "ru", "text": "То мои ключи.", "answers": ["Those are my keys."], "hint": "Много предметов вдали.", "explanation": "Those are my keys. Те — those, предметов несколько — are.", "grammar": ["a1.this-that"] },
+        { "id": "a1.u03.l06.e07", "type": "speak_repeat", "text": "These are my glasses. They are old, but they are nice.", "hint": "Следите за th в these и they.", "explanation": "These [ðiːz], they [ðeɪ]: звонкий th, язык между зубами.", "troubles": ["pron-th"] },
+        { "id": "a1.u03.l06.e08", "type": "word_stress", "word": "magazine", "syllables": ["mag", "a", "zine"], "stress": 0, "hint": "В американском варианте ударение в начале.", "explanation": "MAG-a-zine — ударение на первый слог (в британском чаще на последний)." }
+      ]
+    },
+    {
+      "id": "a1.u03.l07",
+      "kind": "writing",
+      "title": "Расскажите о своих вещах",
+      "exercises": [
+        { "id": "a1.u03.l07.e01", "type": "speak_describe", "picture": { "emoji": "👓" }, "situation": "Покажите очки и скажите, что это, чьи они и какие.", "keywords": [["\\b(these|those|they|it)\\b"], ["\\b(glasses)\\b"], ["\\b(my|his|her|new|old|nice)\\b"]], "minKeywords": 2, "samples": ["These are my glasses. They are new."], "difficulty": 3, "hint": "Начните с фразы These are my glasses…", "explanation": "Очки — это glasses, множественное число: These are my glasses. They are old.", "grammar": ["a1.this-that"] },
+        { "id": "a1.u03.l07.e02", "type": "fill_gap", "text": "This is a laptop. ___ laptop is new. These are ___ keys.", "translation": "Это ноутбук. Ноутбук новый. Это мои ключи.", "answers": [["The"], ["my"]], "difficulty": 2, "hint": "Первый пропуск — артикль, второй — мой.", "explanation": "The laptop is new — предмет уже назван. These are my keys — перед my артикль не нужен.", "grammar": ["a1.the", "a1.possessives"] },
+        { "id": "a1.u03.l07.e03", "type": "error_correction", "text": "Those is my glasses.", "wrong": "Those is", "correction": "Those are", "options": ["Those are", "That is", "These is"], "hint": "Glasses — несколько.", "explanation": "Those are my glasses. После those — are.", "grammar": ["a1.this-that"] },
+        { "id": "a1.u03.l07.e04", "type": "tiles", "from": "ru", "text": "Это моя любимая вещь.", "answer": "This is my favorite thing.", "distractors": ["these", "a"], "hint": "Перед favorite — my.", "explanation": "This is my favorite thing — «это моя любимая вещь».", "grammar": ["a1.possessives"] },
+        { "id": "a1.u03.l07.e05", "type": "speak_answer", "question": "What is your favorite thing?", "questionRu": "Какая у вас любимая вещь? Скажите: My favorite thing is… и назовите предмет.", "keywords": [["\\bmy favorite\\b", "\\bit is\\b", "\\bit'?s\\b"], ["\\b(phone|laptop|watch|notebook|book|bag|pen|glasses|keys|headphones|bike|car|picture|lamp)\\b"]], "minKeywords": 2, "samples": ["My favorite thing is my phone.", "My favorite thing is my bike."], "difficulty": 3, "hint": "Начните: My favorite thing is…", "explanation": "Ответ: My favorite thing is + предмет. Например: My favorite thing is my laptop." },
+        { "id": "a1.u03.l07.e07", "type": "type_translation", "from": "ru", "text": "То мои наушники. Они новые.", "answers": ["Those are my headphones. They are new.", "Those are my headphones. They're new."], "difficulty": 2, "hint": "Много предметов — those, they.", "explanation": "Those are my headphones. They are new. Наушники — множественное число: those, are, they.", "grammar": ["a1.this-that"] },
+        { "id": "a1.u03.l07.e08", "type": "fill_gap", "text": "Is this your phone? — Yes, it ___.", "translation": "Это твой телефон? — Да.", "answers": [["is"]], "options": ["is", "are", "am"], "hint": "В коротком ответе повторяется is.", "explanation": "Yes, it is. Короткий ответ повторяет глагол вопроса.", "grammar": ["a1.be-questions"] },
+        {
+          "id": "a1.u03.l07.e06",
+          "type": "write",
+          "task": "Расскажите о трёх своих вещах: что это, какого они цвета, какие они (new, old, nice). Используйте this, that, these или those. Например: This is my phone. It is black. These are my keys.",
+          "minWords": 20,
+          "maxWords": 70,
+          "criteria": [
+            { "id": "demonstrative", "label": "Есть this, that, these или those", "patterns": ["\\b(this|that|these|those)\\b"] },
+            { "id": "things", "label": "Названы вещи", "patterns": ["\\b(phone|laptop|watch|notebook|book|bag|pen|glasses|keys?|headphones|bike|car|picture|lamp|wallet|passport|ticket|card|mirror|cup|bottle|desk|computer|pencil|clock)\\b"] },
+            { "id": "description", "label": "Есть описание: цвет или какая вещь", "patterns": ["\\b(red|blue|green|yellow|black|white|pink|brown|grey|new|old|nice|big|small|beautiful|favorite)\\b"] },
+            { "id": "verb", "label": "Есть is или are", "patterns": ["\\b(is|are|it's|they're|that's)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\b(this|that) are\\b", "message": "С this и that — is: This is… That is…" },
+            { "pattern": "\\b(these|those) is\\b", "message": "С these и those — are: These are… Those are…" },
+            { "pattern": "\\b(my|your|his|her|our|their) (is|are)\\b", "message": "После my нужно существительное: my phone is…" },
+            { "pattern": "\\b(the|a|an) (my|your|his|her|our|their)\\b", "message": "Перед my артикль не нужен: my phone, а не a my phone." },
+            { "pattern": "\\b(two|three|four|five|six|seven|eight|nine|ten) (book|key|pen|bag|phone|watch|box)\\b", "message": "После числа больше единицы слово во множественном числе: two keys, three watches." }
+          ],
+          "samples": [
+            "This is my phone. It is black. That is my laptop. It is new. These are my keys. They are old.",
+            "This is my bag. It is blue. These are my glasses. They are nice. Those are my headphones. They are new."
+          ],
+          "difficulty": 3,
+          "hint": "План: This is my… It is… → These are my… They are…",
+          "explanation": "Для одной вещи — this/that, is, it; для нескольких — these/those, are, they. Проверьте, что вы не поставили артикль перед my.",
+          "grammar": ["a1.this-that", "a1.plurals", "a1.possessives"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "a1.u03.test.e01", "type": "picture_choice", "mode": "picture-to-word", "word": "ticket", "distractors": ["passport", "card"], "hint": "Его покупают на поезд или самолёт.", "explanation": "Ticket — «билет»: [ˈtɪkɪt]." },
+      { "id": "a1.u03.test.e02", "type": "translate_choice", "from": "en", "text": "newspaper", "options": ["газета", "журнал", "тетрадь"], "answer": 0, "hint": "News — новости, paper — бумага.", "explanation": "Newspaper — «газета», magazine — «журнал», notebook — «тетрадь»." },
+      { "id": "a1.u03.test.e03", "type": "match_pairs", "pairs": [{ "en": "wallet", "ru": "кошелёк" }, { "en": "mirror", "ru": "зеркало" }, { "en": "watch", "ru": "часы" }, { "en": "glasses", "ru": "очки" }, { "en": "headphones", "ru": "наушники" }], "hint": "Glasses и headphones — только множественное число.", "explanation": "Wallet — «кошелёк», mirror — «зеркало», watch — «часы», glasses — «очки», headphones — «наушники»." },
+      { "id": "a1.u03.test.e04", "type": "fill_gap", "text": "___ are my keys.", "translation": "Это мои ключи.", "answers": [["These"]], "options": ["These", "This", "That"], "hint": "Ключей несколько.", "explanation": "These are my keys. Несколько предметов рядом — these.", "grammar": ["a1.this-that"] },
+      { "id": "a1.u03.test.e05", "type": "fill_gap", "text": "___ is my bag.", "translation": "То моя сумка (она далеко).", "answers": [["That"]], "options": ["That", "These", "Those"], "hint": "Один предмет вдали.", "explanation": "Правильно: That is my bag. С that — is.", "grammar": ["a1.this-that"] },
+      { "id": "a1.u03.test.e06", "type": "fill_gap", "text": "Two ___.", "translation": "Две коробки.", "answers": [["boxes"]], "options": ["boxes", "boxs", "box"], "hint": "Слово на x.", "explanation": "Two boxes. После x — -es.", "grammar": ["a1.plurals"] },
+      { "id": "a1.u03.test.e07", "type": "fill_gap", "text": "This is a bag. ___ bag is new.", "translation": "Это сумка. Сумка новая.", "answers": [["The"]], "options": ["The", "A", "My"], "hint": "О какой сумке — понятно.", "explanation": "The bag is new. Предмет уже упомянут — the.", "grammar": ["a1.the"] },
+      { "id": "a1.u03.test.e08", "type": "error_correction", "text": "Three woman.", "wrong": "woman", "correction": "women", "options": ["women", "womans", "womens"], "hint": "Неправильное слово.", "explanation": "Three women. Множественное число слова woman — women.", "grammar": ["a1.plurals"] },
+      { "id": "a1.u03.test.e09", "type": "error_correction", "text": "This is the my phone.", "wrong": "the my", "correction": "my", "options": ["my", "a my", "the"], "hint": "Перед my артикль не нужен.", "explanation": "Правильно: This is my phone. Перед my артикль не ставят.", "grammar": ["a1.the"], "troubles": ["articles"] },
+      { "id": "a1.u03.test.e10", "type": "listen_choice", "audio": "those", "question": "Какое слово вы слышите?", "options": ["those", "these", "this"], "answer": 0, "hint": "Гласная — «оу».", "explanation": "Those [ðoʊz]. These [ðiːz] — другая гласная.", "troubles": ["pron-th"] },
+      { "id": "a1.u03.test.e11", "type": "listen_dictation", "text": "Whose bag is this?", "hint": "Четыре слова.", "explanation": "Whose bag is this? — «Чья это сумка?»." },
+      { "id": "a1.u03.test.e12", "type": "tiles", "from": "ru", "text": "Это не мои очки.", "answer": "These are not my glasses.", "distractors": ["is", "that"], "difficulty": 2, "hint": "Not — после are.", "explanation": "These are not my glasses. Not стоит после are.", "grammar": ["a1.this-that", "a1.be-questions"] },
+      { "id": "a1.u03.test.e13", "type": "type_translation", "from": "ru", "text": "Это мой ноутбук. Он новый.", "answers": ["This is my laptop. It is new.", "This is my laptop. It's new."], "difficulty": 2, "hint": "It — вместо слова «ноутбук».", "explanation": "Правильно: This is my laptop. It is new.", "grammar": ["a1.this-that"] },
+      { "id": "a1.u03.test.e14", "type": "minimal_pair", "pair": [{ "en": "bad", "ipa": "bæd" }, { "en": "bed", "ipa": "bed" }], "say": 0, "hint": "Гласный открытый, как в cat.", "explanation": "Bad [bæd] — открытый [æ]. Bed [bed] — [e].", "troubles": ["pron-vowels"] },
+      { "id": "a1.u03.test.e15", "type": "speak_repeat", "text": "These are my keys, and those are my glasses.", "hint": "Следите за th в these.", "explanation": "These [ðiːz], those [ðoʊz]: звонкий th, окончание [z].", "troubles": ["pron-th"] }
+    ]
+  }
+}

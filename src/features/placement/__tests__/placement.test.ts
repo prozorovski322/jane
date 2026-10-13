@@ -118,12 +118,12 @@ describe('applying the result', () => {
     expect(
       lessonsToCredit(course, result({ level: 'A2', position: 0.1 })).map((l) => l.lessonId),
     ).toEqual(all);
-    // At A1 the pre-A1 level below is credited, and nothing of A1 itself.
+    // At the start of A1 the pre-A1 level below is credited, and nothing of A1 itself.
     const preA1 = course.levels
       .find((l) => l.level === 'PA1')!
       .units.flatMap((u) => [...u.lessons.map((x) => x.id), `${u.id}.test`]);
     expect(
-      lessonsToCredit(course, result({ level: 'A1', position: 0.9 })).map((l) => l.lessonId),
+      lessonsToCredit(course, result({ level: 'A1', position: 0.1 })).map((l) => l.lessonId),
     ).toEqual(preA1);
     expect(lessonsToCredit(course, result({ level: 'B1', fromZero: true }))).toEqual([]);
   });
@@ -145,7 +145,10 @@ describe('applying the result', () => {
     const preA1 = getCourse()
       .levels.find((l) => l.level === 'PA1')!
       .units.reduce((n, u) => n + u.lessons.length + 1, 0);
-    expect(credited).toBe(preA1 + 7);
+    const a1Units = getCourse()
+      .levels.find((l) => l.level === 'A1')!
+      .units.reduce((n, u) => n + u.lessons.length + 1, 0);
+    expect(credited).toBe(preA1 + a1Units - 1);
     expect(
       await db.get("SELECT source, times FROM lesson_progress WHERE lesson_id = 'a1.u01.l01'"),
     ).toEqual({ source: 'lesson', times: 2 });

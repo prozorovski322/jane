@@ -74,8 +74,8 @@ describe('selectExercises', () => {
   });
 });
 
-/** A course in which a1.m1 consists of the written unit a1.u01 only, so its test is available. */
-function readyCourse(): CourseOutline {
+/** The real course with an unwritten unit added to the first A1 module, so its test is not ready. */
+function courseWithUnwrittenUnit(): CourseOutline {
   const course = getCourse();
   return {
     ...course,
@@ -83,7 +83,11 @@ function readyCourse(): CourseOutline {
       l.level === 'A1'
         ? {
             ...l,
-            modules: l.modules.map((m, i) => (i === 0 ? { ...m, planned: [] } : m)),
+            modules: l.modules.map((m, i) =>
+              i === 0
+                ? { ...m, planned: [{ id: 'a1.u99', title: { en: 'Soon', ru: 'Скоро' } }] }
+                : m,
+            ),
           }
         : l,
     ),
@@ -93,14 +97,9 @@ function readyCourse(): CourseOutline {
 describe('sessionForExam', () => {
   afterEach(() => jest.restoreAllMocks());
 
-  it('is not available while units of the module are still to be written', () => {
-    expect(sessionForExam('a1.m1.test', 's')).toBeNull();
-    expect(sessionForExam('a1.exam', 's')).toBeNull();
-    expect(sessionForExam('a1.u01.l01', 's')).toBeNull();
-  });
-
-  it("builds a module test from the module's units once they are all written", () => {
-    jest.spyOn(content, 'getCourse').mockReturnValue(readyCourse());
+  it('builds a module test from the units of a finished module', () => {
+    const module = getCourse().levels.find((l) => l.level === 'A1')!.modules[0]!;
+    expect(isModuleReady(module)).toBe(true);
     const session = sessionForExam('a1.m1.test', 's')!;
     expect(session).toMatchObject({
       id: 'a1.m1.test',
@@ -110,17 +109,26 @@ describe('sessionForExam', () => {
     });
     expect(session.exercises).toHaveLength(MODULE_TEST.size);
     expect(session.title).toMatch(/^Контрольная:/);
-    // Reading and listening exercises find their texts.
+    // Only exercises of the module's own units, with the texts that reading and listening need.
+    const unitIds = new Set(module.units.map((u) => u.id));
+    for (const ex of session.exercises)
+      expect(unitIds.has(ex.id.split('.').slice(0, 2).join('.'))).toBe(true);
     expect(session.texts.length).toBeGreaterThan(0);
+  });
+
+  it('is not available while units of the module are still to be written', () => {
+    jest.spyOn(content, 'getCourse').mockReturnValue(courseWithUnwrittenUnit());
+    expect(sessionForExam('a1.m1.test', 's')).toBeNull();
+    expect(sessionForExam('a1.exam', 's')).toBeNull();
+    expect(sessionForExam('a1.u01.l01', 's')).toBeNull();
   });
 
   it('readiness follows the planned units', () => {
     const level = getCourse().levels.find((l) => l.level === 'A1')!;
-    expect(isModuleReady(level.modules[0]!)).toBe(false);
-    expect(isLevelReady(level)).toBe(false);
-    const ready = readyCourse().levels.find((l) => l.level === 'A1')!;
-    expect(isModuleReady(ready.modules[0]!)).toBe(true);
-    expect(isLevelReady(ready)).toBe(false);
+    expect(isModuleReady(level.modules[0]!)).toBe(true);
+    const unfinished = courseWithUnwrittenUnit().levels.find((l) => l.level === 'A1')!;
+    expect(isModuleReady(unfinished.modules[0]!)).toBe(false);
+    expect(isLevelReady(unfinished)).toBe(false);
   });
 
   it('exam constants match the course plan', () => {
@@ -129,7 +137,7 @@ describe('sessionForExam', () => {
 });
 
 describe('path with modules and exams', () => {
-  it('lists modules, planned units and exam nodes without blocking anything', () => {
+  it('lists modules, written and planned units and exam nodes without blocking anything', () => {
     const a1 = pathState(getCourse(), new Set()).levels.find((l) => l.level === 'A1')!;
     expect(a1.modules.map((m) => m.title.ru)).toEqual([
       'Я и другие',
@@ -137,9 +145,12 @@ describe('path with modules and exams', () => {
       'Город',
       'Здесь и сейчас',
     ]);
-    expect(a1.modules[0]!.units.map((u) => u.id)).toEqual(['a1.u01']);
-    expect(a1.modules[0]!.planned.map((p) => p.id)).toEqual(['a1.u02', 'a1.u03']);
-    expect(a1.modules[0]!.test).toEqual({ id: 'a1.m1.test', kind: 'module', status: 'soon' });
+    expect(a1.modules[0]!.units.map((u) => u.id)).toEqual(['a1.u01', 'a1.u02', 'a1.u03']);
+    expect(a1.modules[0]!.planned).toEqual([]);
+    expect(a1.modules[0]!.test).toEqual({ id: 'a1.m1.test', kind: 'module', status: 'open' });
+    // The second module is still being written.
+    expect(a1.modules[1]!.planned.length).toBeGreaterThan(0);
+    expect(a1.modules[1]!.test).toEqual({ id: 'a1.m2.test', kind: 'module', status: 'soon' });
     expect(a1.exam).toEqual({ id: 'a1.exam', kind: 'level', status: 'soon' });
   });
 
