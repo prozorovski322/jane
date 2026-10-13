@@ -77,7 +77,11 @@ describe('Path', () => {
     expect(screen.getByText('Pre-A1 · С нуля')).toBeOnTheScreen();
     expect(screen.getByText('A1 · Начальный')).toBeOnTheScreen();
     expect(screen.getByText('Модуль 1 · Я и другие')).toBeOnTheScreen();
-    expect(screen.getByLabelText('Юнит 6: Еда. Скоро.')).toBeOnTheScreen();
+    const planned = getCourse()
+      .levels.flatMap((l) => l.modules)
+      .flatMap((m) => m.planned)[0]!;
+    const number = Number(planned.id.split('.u')[1]);
+    expect(screen.getByLabelText(`Юнит ${number}: ${planned.title.ru}. Скоро.`)).toBeOnTheScreen();
     expect(
       screen.getAllByText(/Появится, когда будут готовы все юниты модуля/).length,
     ).toBeGreaterThan(3);

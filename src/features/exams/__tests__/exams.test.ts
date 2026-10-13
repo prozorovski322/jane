@@ -116,6 +116,16 @@ describe('sessionForExam', () => {
     expect(session.texts.length).toBeGreaterThan(0);
   });
 
+  it('builds the test of the second A1 module from its own units', () => {
+    const module = getCourse().levels.find((l) => l.level === 'A1')!.modules[1]!;
+    expect(isModuleReady(module)).toBe(true);
+    const session = sessionForExam('a1.m2.test', 's')!;
+    expect(session.exercises).toHaveLength(MODULE_TEST.size);
+    const unitIds = new Set(module.units.map((u) => u.id));
+    for (const ex of session.exercises)
+      expect(unitIds.has(ex.id.split('.').slice(0, 2).join('.'))).toBe(true);
+  });
+
   it('is not available while units of the module are still to be written', () => {
     jest.spyOn(content, 'getCourse').mockReturnValue(courseWithUnwrittenUnit());
     expect(sessionForExam('a1.m1.test', 's')).toBeNull();
@@ -148,10 +158,13 @@ describe('path with modules and exams', () => {
     expect(a1.modules[0]!.units.map((u) => u.id)).toEqual(['a1.u01', 'a1.u02', 'a1.u03']);
     expect(a1.modules[0]!.planned).toEqual([]);
     expect(a1.modules[0]!.test).toEqual({ id: 'a1.m1.test', kind: 'module', status: 'open' });
-    // The second module is still being written.
-    expect(a1.modules[1]!.planned.length).toBeGreaterThan(0);
-    expect(a1.modules[1]!.test).toEqual({ id: 'a1.m2.test', kind: 'module', status: 'soon' });
-    expect(a1.exam).toEqual({ id: 'a1.exam', kind: 'level', status: 'soon' });
+    // A module opens its test as soon as all its units are written.
+    for (const m of a1.modules) {
+      expect(m.test.status).toBe(m.planned.length === 0 ? 'open' : 'soon');
+    }
+    // Modules that are still being written keep the level exam closed.
+    const unfinished = a1.modules.some((m) => m.planned.length > 0);
+    expect(a1.exam).toEqual({ id: 'a1.exam', kind: 'level', status: unfinished ? 'soon' : 'open' });
   });
 
   it('marks passed tests and keeps the next lesson in the first written unit', () => {
