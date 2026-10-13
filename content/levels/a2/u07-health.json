@@ -1,0 +1,308 @@
+{
+  "id": "a2.u07",
+  "level": "A2",
+  "order": 7,
+  "title": { "en": "Health", "ru": "Здоровье" },
+  "description": "Говорим о здоровье: рассказываем врачу, что болит, как себя чувствуем, и даём советы. I have a headache, My back hurts, should, must и have to.",
+  "goals": [
+    "Могу сказать, что болит: My back hurts. I have a sore throat.",
+    "Могу описать самочувствие: I feel ill. I feel better.",
+    "Могу поговорить с врачом: What's the matter? I have a fever.",
+    "Могу дать совет: You should rest. You shouldn't go to work.",
+    "Могу сказать, что надо и чего нельзя: I have to take pills. You mustn't drive.",
+    "Могу написать короткий текст о болезни."
+  ],
+  "grammar": ["a2.health-complaints", "a2.should", "a2.must-have-to"],
+  "troubles": ["word-order", "tenses"],
+  "words": [
+    { "id": "health", "en": "health", "ipa": "helθ", "pos": "noun", "ru": ["здоровье"], "example": { "en": "Health is important.", "ru": "Здоровье важно." }, "troubles": ["pron-th"], "topics": ["health"] },
+    { "id": "healthy", "en": "healthy", "ipa": "ˈhelθi", "pos": "adj", "ru": ["здоровый", "полезный"], "example": { "en": "Fruit and vegetables are healthy.", "ru": "Фрукты и овощи полезны." }, "topics": ["health"] },
+    { "id": "medicine", "en": "medicine", "ipa": "ˈmedəsən", "pos": "noun", "ru": ["лекарство"], "example": { "en": "I take medicine every morning.", "ru": "Каждое утро я принимаю лекарство." }, "topics": ["health"] },
+    { "id": "pill", "en": "pill", "ipa": "pɪl", "pos": "noun", "ru": ["таблетка"], "example": { "en": "She takes a pill.", "ru": "Она принимает таблетку." }, "picture": { "emoji": "💊" }, "topics": ["health"] },
+    { "id": "ill", "en": "ill", "ipa": "ɪl", "pos": "adj", "ru": ["больной"], "example": { "en": "I feel ill today.", "ru": "Сегодня я плохо себя чувствую." }, "topics": ["health"] },
+    { "id": "sick", "en": "sick", "ipa": "sɪk", "pos": "adj", "ru": ["больной", "тошнит"], "example": { "en": "My brother is sick.", "ru": "Мой брат болеет." }, "note": "Sick и ill значат «больной». Ill — после глагола, sick — ещё и перед существительным: a sick child.", "topics": ["health"] },
+    { "id": "headache", "en": "headache", "ipa": "ˈhedeɪk", "pos": "noun", "ru": ["головная боль"], "example": { "en": "I have a headache.", "ru": "У меня болит голова." }, "topics": ["health"] },
+    { "id": "toothache", "en": "toothache", "ipa": "ˈtuːθeɪk", "pos": "noun", "ru": ["зубная боль"], "example": { "en": "She has a toothache.", "ru": "У неё болит зуб." }, "topics": ["health"] },
+    { "id": "stomachache", "en": "stomachache", "ipa": "ˈstʌməkeɪk", "pos": "noun", "ru": ["боль в животе"], "example": { "en": "I have a stomachache.", "ru": "У меня болит живот." }, "topics": ["health"] },
+    { "id": "flu", "en": "flu", "ipa": "fluː", "pos": "noun", "ru": ["грипп"], "example": { "en": "I think you have the flu.", "ru": "Думаю, у вас грипп." }, "topics": ["health"] },
+    { "id": "fever", "en": "fever", "ipa": "ˈfiːvɚ", "pos": "noun", "ru": ["жар", "высокая температура"], "example": { "en": "He has a fever.", "ru": "У него жар." }, "topics": ["health"] },
+    { "id": "cough", "en": "cough", "ipa": "kɔːf", "pos": "noun", "ru": ["кашель"], "example": { "en": "I have a cough.", "ru": "У меня кашель." }, "note": "Cough читается [kɔːf]: сочетание ugh здесь звучит как [f].", "topics": ["health"] },
+    { "id": "pain", "en": "pain", "ipa": "peɪn", "pos": "noun", "ru": ["боль"], "example": { "en": "I have a pain in my back.", "ru": "У меня болит спина." }, "topics": ["health"] },
+    { "id": "sore", "en": "sore", "ipa": "sɔːr", "pos": "adj", "ru": ["больной (о горле)", "ноющий"], "example": { "en": "My throat is sore.", "ru": "У меня болит горло." }, "topics": ["health"] },
+    { "id": "back", "en": "back", "ipa": "bæk", "pos": "noun", "ru": ["спина"], "example": { "en": "My back hurts.", "ru": "У меня болит спина." }, "topics": ["body"] },
+    { "id": "throat", "en": "throat", "ipa": "θroʊt", "pos": "noun", "ru": ["горло"], "example": { "en": "I have a sore throat.", "ru": "У меня болит горло." }, "troubles": ["pron-th"], "topics": ["body"] },
+    { "id": "stomach", "en": "stomach", "ipa": "ˈstʌmək", "pos": "noun", "ru": ["живот", "желудок"], "example": { "en": "My stomach hurts.", "ru": "У меня болит живот." }, "topics": ["body"] },
+    { "id": "tooth", "en": "tooth", "ipa": "tuːθ", "pos": "noun", "ru": ["зуб"], "example": { "en": "I have a bad tooth.", "ru": "У меня плохой зуб." }, "forms": { "plural": "teeth" }, "topics": ["body"] },
+    { "id": "neck", "en": "neck", "ipa": "nek", "pos": "noun", "ru": ["шея"], "example": { "en": "My neck hurts.", "ru": "У меня болит шея." }, "topics": ["body"] },
+    { "id": "foot", "en": "foot", "ipa": "fʊt", "pos": "noun", "ru": ["ступня", "нога (ниже щиколотки)"], "example": { "en": "My foot hurts.", "ru": "У меня болит ступня." }, "forms": { "plural": "feet" }, "topics": ["body"] },
+    { "id": "finger", "en": "finger", "ipa": "ˈfɪŋɡɚ", "pos": "noun", "ru": ["палец (руки)"], "example": { "en": "I broke my finger.", "ru": "Я сломал палец." }, "topics": ["body"] },
+    { "id": "patient", "en": "patient", "ipa": "ˈpeɪʃənt", "pos": "noun", "ru": ["пациент"], "example": { "en": "The doctor has many patients.", "ru": "У врача много пациентов." }, "topics": ["health"] },
+    { "id": "hurt", "en": "hurt", "ipa": "hɝːt", "pos": "verb", "ru": ["болеть", "причинять боль"], "example": { "en": "My head hurts.", "ru": "У меня болит голова." }, "forms": { "third": "hurts" }, "topics": ["health"] },
+    { "id": "feel", "en": "feel", "ipa": "fiːl", "pos": "verb", "ru": ["чувствовать"], "example": { "en": "I feel better today.", "ru": "Сегодня я чувствую себя лучше." }, "forms": { "third": "feels" }, "topics": ["health"] },
+    { "id": "rest", "en": "rest", "ipa": "rest", "pos": "verb", "ru": ["отдыхать"], "example": { "en": "You should rest.", "ru": "Вам нужно отдохнуть." }, "forms": { "third": "rests" }, "topics": ["health"] },
+    { "id": "advice", "en": "advice", "ipa": "ədˈvaɪs", "pos": "noun", "ru": ["совет"], "example": { "en": "The doctor gave me some advice.", "ru": "Врач дал мне несколько советов." }, "note": "Advice — несчитаемое слово: some advice, а не an advice и не advices.", "topics": ["health"] },
+    { "id": "better", "en": "better", "ipa": "ˈbetɚ", "pos": "adj", "ru": ["лучше"], "example": { "en": "I feel better today.", "ru": "Сегодня мне лучше." }, "topics": ["health"] },
+    { "id": "worse", "en": "worse", "ipa": "wɝːs", "pos": "adj", "ru": ["хуже"], "example": { "en": "I feel worse today.", "ru": "Сегодня мне хуже." }, "topics": ["health"] },
+    { "id": "exercise", "en": "exercise", "ipa": "ˈeksɚsaɪz", "pos": "noun", "ru": ["физические упражнения", "зарядка"], "example": { "en": "Exercise is good for you.", "ru": "Упражнения полезны для вас." }, "topics": ["health"] },
+    { "id": "matter", "en": "matter", "ipa": "ˈmætɚ", "pos": "noun", "ru": ["дело", "проблема"], "example": { "en": "What's the matter?", "ru": "Что случилось?" }, "note": "What's the matter? — «Что случилось?» У вас болит или что-то не так.", "topics": ["health"] },
+    { "id": "should", "en": "should", "ipa": "ʃʊd", "pos": "modal", "ru": ["следует", "стоит"], "example": { "en": "You should rest.", "ru": "Вам стоит отдохнуть." }, "note": "Should — совет. После него глагол без to и без -s. L в слове не читается.", "topics": ["grammar"] },
+    { "id": "must", "en": "must", "ipa": "mʌst", "pos": "modal", "ru": ["должен", "надо"], "example": { "en": "You must stay in bed.", "ru": "Вы должны оставаться в постели." }, "note": "Must — сильное «надо». Mustn't — «нельзя».", "topics": ["grammar"] },
+    { "id": "have-to", "en": "have to", "ipa": "hæv tuː", "pos": "phrase", "ru": ["надо", "приходится"], "example": { "en": "I have to go to the doctor.", "ru": "Мне надо идти к врачу." }, "forms": { "third": "has to" }, "topics": ["grammar"] }
+  ],
+  "texts": [
+    {
+      "id": "a2.u07.doctor",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "At the doctor", "ru": "У врача" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Good morning, doctor.", "ru": "Доброе утро, доктор." },
+        { "speaker": "tom", "en": "Good morning. What's the matter?", "ru": "Доброе утро. Что случилось?" },
+        { "speaker": "anna", "en": "I feel ill. I have a headache and a sore throat.", "ru": "Я плохо себя чувствую. У меня болят голова и горло." },
+        { "speaker": "tom", "en": "Do you have a fever?", "ru": "У вас есть температура?" },
+        { "speaker": "anna", "en": "Yes, I do. My temperature is thirty-eight.", "ru": "Да. У меня тридцать восемь." },
+        { "speaker": "tom", "en": "I think you have the flu. You should stay in bed and drink water. You mustn't go to work.", "ru": "Думаю, у вас грипп. Вам стоит лежать в постели и пить воду. На работу вам нельзя." },
+        { "speaker": "anna", "en": "Do I have to take pills?", "ru": "Мне надо принимать таблетки?" },
+        { "speaker": "tom", "en": "Yes, you must take this medicine every morning and every evening. You will feel better in three days.", "ru": "Да, вы должны принимать это лекарство каждое утро и каждый вечер. Через три дня вам станет лучше." }
+      ]
+    },
+    {
+      "id": "a2.u07.ill",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "A bad week", "ru": "Плохая неделя" },
+      "lines": [
+        { "en": "Last week Max felt ill. He had a headache, a cough and a fever. In the morning he called his boss and said that he was ill.", "ru": "На прошлой неделе Максу было плохо. У него болела голова, был кашель и температура. Утром он позвонил начальнику и сказал, что болеет." },
+        { "en": "After that he went to the doctor. The doctor said it was the flu. Max had to stay in bed for three days. He took medicine and drank tea with lemon.", "ru": "После этого он пошёл к врачу. Врач сказал, что это грипп. Максу пришлось три дня лежать в постели. Он принимал лекарство и пил чай с лимоном." },
+        { "en": "On the fourth day he felt better. Now he knows: when you are ill, you should rest, and you shouldn't go to work. Health is important.", "ru": "На четвёртый день ему стало лучше. Теперь он знает: когда болеешь, нужно отдыхать и не стоит ходить на работу. Здоровье важно." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "a2.u07.l01",
+      "kind": "vocabulary",
+      "title": "Что болит",
+      "exercises": [
+        { "id": "a2.u07.l01.e01", "type": "match_pairs", "pairs": [{ "en": "headache", "ru": "головная боль" }, { "en": "toothache", "ru": "зубная боль" }, { "en": "stomachache", "ru": "боль в животе" }, { "en": "flu", "ru": "грипп" }, { "en": "fever", "ru": "жар" }], "hint": "Слова на -ache — «боль».", "explanation": "Headache — головная боль, toothache — зубная, stomachache — боль в животе, flu — грипп, fever — жар." },
+        { "id": "a2.u07.l01.e02", "type": "match_pairs", "pairs": [{ "en": "cough", "ru": "кашель" }, { "en": "pain", "ru": "боль" }, { "en": "sore", "ru": "больной" }, { "en": "ill", "ru": "больной человек" }, { "en": "sick", "ru": "болеющий" }], "hint": "Sore — о горле.", "explanation": "Cough — кашель, pain — боль, sore — больной (о горле), ill — больной, sick — болеющий." },
+        { "id": "a2.u07.l01.e03", "type": "match_pairs", "pairs": [{ "en": "back", "ru": "спина" }, { "en": "throat", "ru": "горло" }, { "en": "stomach", "ru": "живот" }, { "en": "tooth", "ru": "зуб" }, { "en": "neck", "ru": "шея" }], "hint": "Части тела.", "explanation": "Back — спина, throat — горло, stomach — живот, tooth — зуб, neck — шея." },
+        { "id": "a2.u07.l01.e04", "type": "match_pairs", "pairs": [{ "en": "foot", "ru": "ступня" }, { "en": "finger", "ru": "палец" }, { "en": "patient", "ru": "пациент" }, { "en": "medicine", "ru": "лекарство" }, { "en": "pill", "ru": "таблетка" }], "hint": "Три слова — у врача.", "explanation": "Foot — ступня, finger — палец, patient — пациент, medicine — лекарство, pill — таблетка." },
+        { "id": "a2.u07.l01.e05", "type": "picture_choice", "mode": "picture-to-word", "word": "pill", "distractors": ["gift", "cloud"], "hint": "Её глотают с водой.", "explanation": "Pill — «таблетка»: [pɪl]." },
+        { "id": "a2.u07.l01.e06", "type": "translate_choice", "from": "ru", "text": "У меня болит голова.", "options": ["I have a headache.", "I am headache.", "I have headache me."], "answer": 0, "hint": "Образец: Have + headache.", "explanation": "Правильно: I have a headache.", "grammar": ["a2.health-complaints"] },
+        { "id": "a2.u07.l01.e07", "type": "translate_choice", "from": "en", "text": "My throat is sore.", "options": ["У меня болит горло.", "Моё горло красивое.", "У меня кашель."], "answer": 0, "hint": "Sore — «больной».", "explanation": "My throat is sore — «у меня болит горло»." },
+        { "id": "a2.u07.l01.e08", "type": "fill_gap", "text": "I have a ___ and I need a pill.", "translation": "У меня головная боль, и мне нужна таблетка.", "answers": [["headache"]], "options": ["headache", "flu", "foot"], "hint": "Боль в голове.", "explanation": "Правильно: I have a headache and I need a pill." },
+        { "id": "a2.u07.l01.e09", "type": "fill_gap", "text": "My back ___ .", "translation": "У меня болит спина.", "answers": [["hurts"]], "options": ["hurts", "hurt", "is hurting"], "hint": "С back — окончание.", "explanation": "Правильно: My back hurts.", "grammar": ["a2.health-complaints"] },
+        { "id": "a2.u07.l01.e10", "type": "fill_gap", "text": "I think you have the ___.", "translation": "Думаю, у вас грипп.", "answers": [["flu"]], "options": ["flu", "pill", "neck"], "hint": "Сезонная болезнь.", "explanation": "Правильно: I think you have the flu." },
+        { "id": "a2.u07.l01.e11", "type": "listen_choice", "audio": "I have a cough and a fever.", "question": "Что вы слышите?", "options": ["I have a cough and a fever.", "I have a headache and a fever.", "I have a cough and the flu."], "answer": 0, "hint": "Первый симптом — кашель.", "explanation": "I have a cough and a fever — «у меня кашель и жар».", "grammar": ["a2.health-complaints"] },
+        { "id": "a2.u07.l01.e12", "type": "listen_dictation", "text": "My throat is sore.", "hint": "Четыре слова.", "explanation": "My throat is sore — «у меня болит горло»." },
+        { "id": "a2.u07.l01.e13", "type": "type_translation", "from": "ru", "text": "лекарство", "answers": ["medicine"], "hint": "Восемь букв.", "explanation": "Medicine [ˈmedəsən] — «лекарство»." },
+        { "id": "a2.u07.l01.e14", "type": "word_stress", "word": "headache", "syllables": ["head", "ache"], "stress": 0, "hint": "Первый слог.", "explanation": "HEAD-ache — ударение на первый слог." }
+      ]
+    },
+    {
+      "id": "a2.u07.l02",
+      "kind": "vocabulary",
+      "title": "Самочувствие и советы",
+      "exercises": [
+        { "id": "a2.u07.l02.e01", "type": "match_pairs", "pairs": [{ "en": "health", "ru": "здоровье" }, { "en": "healthy", "ru": "здоровый" }, { "en": "hurt", "ru": "болеть" }, { "en": "feel", "ru": "чувствовать" }, { "en": "rest", "ru": "отдыхать" }], "hint": "Первые два слова родственные.", "explanation": "Health — здоровье, healthy — здоровый, hurt — болеть, feel — чувствовать, rest — отдыхать." },
+        { "id": "a2.u07.l02.e02", "type": "match_pairs", "pairs": [{ "en": "advice", "ru": "совет" }, { "en": "better", "ru": "лучше" }, { "en": "worse", "ru": "хуже" }, { "en": "exercise", "ru": "упражнения" }, { "en": "matter", "ru": "проблема" }], "hint": "Better и worse — противоположные.", "explanation": "Advice — совет, better — лучше, worse — хуже, exercise — упражнения, matter — проблема." },
+        { "id": "a2.u07.l02.e03", "type": "translate_choice", "from": "ru", "text": "Что случилось?", "options": ["What's the matter?", "What is the health?", "What happens?"], "answer": 0, "hint": "Matter — «дело».", "explanation": "What's the matter? — «Что случилось?»" },
+        { "id": "a2.u07.l02.e04", "type": "translate_choice", "from": "en", "text": "I feel better today.", "options": ["Сегодня мне лучше.", "Сегодня мне хуже.", "Сегодня я чувствую усталость."], "answer": 0, "hint": "Better — «лучше».", "explanation": "I feel better today — «сегодня мне лучше»." },
+        { "id": "a2.u07.l02.e05", "type": "fill_gap", "text": "I ___ ill today.", "translation": "Сегодня я плохо себя чувствую.", "answers": [["feel"]], "options": ["feel", "hurt", "have"], "hint": "Самочувствие.", "explanation": "Правильно: I feel ill today." },
+        { "id": "a2.u07.l02.e06", "type": "fill_gap", "text": "I feel ___ today. I have a fever and a cough.", "translation": "Сегодня мне хуже. У меня жар и кашель.", "answers": [["worse"]], "options": ["worse", "better", "healthy"], "hint": "Состояние ухудшилось.", "explanation": "Правильно: I feel worse today." },
+        { "id": "a2.u07.l02.e07", "type": "fill_gap", "text": "Fruit and vegetables are ___.", "translation": "Фрукты и овощи полезны.", "answers": [["healthy"]], "options": ["healthy", "sick", "sore"], "hint": "Хороши для здоровья.", "explanation": "Правильно: Fruit and vegetables are healthy." },
+        { "id": "a2.u07.l02.e08", "type": "fill_gap", "text": "The doctor gave me some ___.", "translation": "Врач дал мне несколько советов.", "answers": [["advice"]], "options": ["advice", "pill", "finger"], "hint": "Что даёт консультант.", "explanation": "Правильно: The doctor gave me some advice." },
+        { "id": "a2.u07.l02.e09", "type": "fill_gap", "text": "I do ___ every morning. It is good for my back.", "translation": "Я делаю зарядку каждое утро. Это полезно для спины.", "answers": [["exercise"]], "options": ["exercise", "matter", "advice"], "hint": "Физическая активность.", "explanation": "Правильно: I do exercise every morning." },
+        { "id": "a2.u07.l02.e10", "type": "listen_choice", "audio": "What's the matter?", "question": "Что вы слышите?", "options": ["What's the matter?", "What's the weather?", "What's your name?"], "answer": 0, "hint": "Спрашивает врач.", "explanation": "What's the matter? — «Что случилось?»" },
+        { "id": "a2.u07.l02.e11", "type": "listen_dictation", "text": "I feel better today.", "hint": "Четыре слова.", "explanation": "I feel better today — «сегодня мне лучше»." },
+        { "id": "a2.u07.l02.e12", "type": "type_translation", "from": "ru", "text": "здоровье", "answers": ["health"], "hint": "Шесть букв.", "explanation": "Health [helθ] — «здоровье»." },
+        { "id": "a2.u07.l02.e13", "type": "minimal_pair", "pair": [{ "en": "feel", "ipa": "fiːl" }, { "en": "fill", "ipa": "fɪl" }], "say": 0, "hint": "Здесь слышен долгий гласный.", "explanation": "Feel [fiːl] — «чувствовать», fill [fɪl] — «наполнять».", "troubles": ["pron-vowels"] },
+        { "id": "a2.u07.l02.e14", "type": "speak_answer", "question": "How do you feel today?", "questionRu": "Как вы себя чувствуете сегодня? Ответьте: I feel good. I feel tired. I feel ill.", "keywords": [["\\bI feel\\b"], ["\\b(good|great|fine|well|tired|ill|sick|better|worse|happy)\\b"]], "minKeywords": 2, "samples": ["I feel good.", "I feel tired."], "difficulty": 3, "hint": "Образец: I feel…", "explanation": "Ответ: I feel good.", "grammar": ["a2.health-complaints"] }
+      ]
+    },
+    {
+      "id": "a2.u07.l03",
+      "kind": "grammar",
+      "title": "У меня болит",
+      "grammar": "a2.health-complaints",
+      "exercises": [
+        { "id": "a2.u07.l03.e01", "type": "fill_gap", "text": "I ___ a headache.", "translation": "У меня болит голова.", "answers": [["have"]], "options": ["have", "am", "feel"], "hint": "Болезнь называют особым глаголом.", "explanation": "Правильно: I have a headache.", "grammar": ["a2.health-complaints"] },
+        { "id": "a2.u07.l03.e02", "type": "fill_gap", "text": "My head ___ .", "translation": "У меня болит голова.", "answers": [["hurts"]], "options": ["hurts", "hurt", "have"], "hint": "С head — окончание.", "explanation": "Правильно: My head hurts.", "grammar": ["a2.health-complaints"] },
+        { "id": "a2.u07.l03.e03", "type": "fill_gap", "text": "My feet ___ .", "translation": "У меня болят ноги.", "answers": [["hurt"]], "options": ["hurt", "hurts", "is hurt"], "hint": "Feet — несколько.", "explanation": "Правильно: My feet hurt.", "grammar": ["a2.health-complaints"] },
+        { "id": "a2.u07.l03.e04", "type": "fill_gap", "text": "I ___ a sore throat.", "translation": "У меня болит горло.", "answers": [["have"]], "options": ["have", "am", "feel"], "hint": "Проблема, а не самочувствие.", "explanation": "Правильно: I have a sore throat.", "grammar": ["a2.health-complaints"] },
+        { "id": "a2.u07.l03.e05", "type": "fill_gap", "text": "I feel ___ today.", "translation": "Сегодня мне лучше.", "answers": [["better"]], "options": ["better", "pain", "flu"], "hint": "Лучше.", "explanation": "Правильно: I feel better today.", "grammar": ["a2.health-complaints"] },
+        { "id": "a2.u07.l03.e06", "type": "error_correction", "text": "I am headache.", "wrong": "am", "correction": "have a", "options": ["have a", "has a", "feel a"], "hint": "Болезнь — другой глагол.", "explanation": "Правильно: I have a headache.", "grammar": ["a2.health-complaints"], "troubles": ["word-order"] },
+        { "id": "a2.u07.l03.e07", "type": "error_correction", "text": "My head hurt.", "wrong": "hurt", "correction": "hurts", "options": ["hurts", "hurting", "hurted"], "hint": "С head — окончание.", "explanation": "Правильно: My head hurts.", "grammar": ["a2.health-complaints"], "troubles": ["tenses"] },
+        { "id": "a2.u07.l03.e08", "type": "error_correction", "text": "I feel me ill.", "wrong": "feel me", "correction": "feel", "options": ["feel", "feels", "am feel"], "hint": "Лишнее слово.", "explanation": "Правильно: I feel ill.", "grammar": ["a2.health-complaints"], "troubles": ["word-order"] },
+        { "id": "a2.u07.l03.e09", "type": "tiles", "from": "ru", "text": "У меня кашель и жар.", "answer": "I have a cough and a fever.", "distractors": ["am", "has"], "hint": "Have + два слова.", "explanation": "Правильно: I have a cough and a fever.", "grammar": ["a2.health-complaints"] },
+        { "id": "a2.u07.l03.e10", "type": "tiles", "from": "ru", "text": "У меня болит спина.", "answer": "My back hurts.", "distractors": ["hurt", "is"], "hint": "Образец: Back + hurts.", "explanation": "Правильно: My back hurts.", "grammar": ["a2.health-complaints"] },
+        { "id": "a2.u07.l03.e11", "type": "type_translation", "from": "ru", "text": "Что случилось? — У меня болит живот.", "answers": ["What's the matter? — I have a stomachache.", "What's the matter? I have a stomachache.", "What's the matter? My stomach hurts."], "difficulty": 3, "hint": "Два предложения.", "explanation": "Правильно: What's the matter? I have a stomachache.", "grammar": ["a2.health-complaints"] },
+        { "id": "a2.u07.l03.e12", "type": "type_translation", "from": "ru", "text": "Сегодня я плохо себя чувствую.", "answers": ["I feel ill today."], "hint": "Feel + прилагательное.", "explanation": "Правильно: I feel ill today.", "grammar": ["a2.health-complaints"] },
+        { "id": "a2.u07.l03.e13", "type": "listen_choice", "audio": "My back hurts and I have a fever.", "question": "Что вы слышите?", "options": ["My back hurts and I have a fever.", "My neck hurts and I have a cough.", "My back hurts and I have the flu."], "answer": 0, "hint": "Спина и жар.", "explanation": "Правильно: My back hurts and I have a fever.", "grammar": ["a2.health-complaints"] },
+        { "id": "a2.u07.l03.e14", "type": "speak_answer", "question": "What's the matter?", "questionRu": "Вы пришли к врачу, он спрашивает: «Что случилось?» Ответьте: I have a… My … hurts.", "keywords": [["\\b(I have|my [a-z]+ (hurts|is sore)|I feel)\\b"], ["\\b(headache|cough|fever|flu|throat|back|stomach|ill|sick|sore|toothache|pain)\\b"]], "minKeywords": 2, "samples": ["I have a headache.", "My throat is sore and I have a cough."], "difficulty": 3, "hint": "Образец: I have a… My… hurts.", "explanation": "Ответ: I have a headache and a sore throat.", "grammar": ["a2.health-complaints"] }
+      ]
+    },
+    {
+      "id": "a2.u07.l04",
+      "kind": "grammar",
+      "title": "Should: советы",
+      "grammar": "a2.should",
+      "exercises": [
+        { "id": "a2.u07.l04.e01", "type": "fill_gap", "text": "You ___ rest.", "translation": "Вам стоит отдохнуть.", "answers": [["should"]], "options": ["should", "must to", "shoulds"], "hint": "Совет.", "explanation": "Правильно: You should rest.", "grammar": ["a2.should"] },
+        { "id": "a2.u07.l04.e02", "type": "fill_gap", "text": "She should ___ a doctor.", "translation": "Ей стоит сходить к врачу.", "answers": [["see"]], "options": ["see", "sees", "to see"], "hint": "После should — без окончания.", "explanation": "Правильно: She should see a doctor.", "grammar": ["a2.should"] },
+        { "id": "a2.u07.l04.e03", "type": "fill_gap", "text": "You ___ go to work.", "translation": "Вам не стоит идти на работу.", "answers": [["shouldn't", "should not"]], "options": ["shouldn't", "don't should", "not should"], "hint": "Отрицание.", "explanation": "Правильно: You shouldn't go to work.", "grammar": ["a2.should"] },
+        { "id": "a2.u07.l04.e04", "type": "fill_gap", "text": "___ I take a pill?", "translation": "Мне принять таблетку?", "answers": [["Should"]], "options": ["Should", "Do", "Am"], "hint": "Вопрос.", "explanation": "Правильно: Should I take a pill?", "grammar": ["a2.should"] },
+        { "id": "a2.u07.l04.e05", "type": "fill_gap", "text": "What ___ I do?", "translation": "Что мне делать?", "answers": [["should"]], "options": ["should", "must", "am"], "hint": "Просим совета.", "explanation": "Правильно: What should I do?", "grammar": ["a2.should"] },
+        { "id": "a2.u07.l04.e06", "type": "fill_gap", "text": "Should I rest? — Yes, you ___.", "translation": "Мне отдохнуть? — Да.", "answers": [["should"]], "options": ["should", "do", "must"], "hint": "Короткий ответ.", "explanation": "Правильно: Yes, you should.", "grammar": ["a2.should"] },
+        { "id": "a2.u07.l04.e07", "type": "error_correction", "text": "You should to rest.", "wrong": "to rest", "correction": "rest", "options": ["rest", "rests", "resting"], "hint": "Лишнее слово.", "explanation": "Правильно: You should rest.", "grammar": ["a2.should"], "troubles": ["word-order"] },
+        { "id": "a2.u07.l04.e08", "type": "error_correction", "text": "She should rests.", "wrong": "rests", "correction": "rest", "options": ["rest", "resting", "rested"], "hint": "После should — без -s.", "explanation": "Правильно: She should rest.", "grammar": ["a2.should"], "troubles": ["tenses"] },
+        { "id": "a2.u07.l04.e09", "type": "error_correction", "text": "You don't should go.", "wrong": "don't should", "correction": "shouldn't", "options": ["shouldn't", "not should", "doesn't should"], "hint": "Отрицание один раз.", "explanation": "Правильно: You shouldn't go.", "grammar": ["a2.should"], "troubles": ["word-order"] },
+        { "id": "a2.u07.l04.e10", "type": "tiles", "from": "ru", "text": "Вам стоит пить воду.", "answer": "You should drink water.", "distractors": ["drinks", "to"], "hint": "Образец: Should + drink.", "explanation": "Правильно: You should drink water.", "grammar": ["a2.should"] },
+        { "id": "a2.u07.l04.e11", "type": "tiles", "from": "ru", "text": "Ей не стоит идти на работу.", "answer": "She shouldn't go to work.", "distractors": ["doesn't", "goes"], "hint": "Образец: Shouldn't + go.", "explanation": "Правильно: She shouldn't go to work.", "grammar": ["a2.should"] },
+        { "id": "a2.u07.l04.e12", "type": "type_translation", "from": "ru", "text": "Вам стоит остаться дома и отдохнуть.", "answers": ["You should stay at home and rest."], "difficulty": 2, "hint": "Should + два глагола.", "explanation": "Правильно: You should stay at home and rest.", "grammar": ["a2.should"] },
+        { "id": "a2.u07.l04.e13", "type": "listen_choice", "audio": "You should stay in bed.", "question": "Что вы слышите?", "options": ["You should stay in bed.", "You must stay in bed.", "You stayed in bed."], "answer": 0, "hint": "Мягкий совет.", "explanation": "You should stay in bed — «вам стоит лежать в постели».", "grammar": ["a2.should"] },
+        { "id": "a2.u07.l04.e14", "type": "speak_answer", "question": "I have a headache. What should I do?", "questionRu": "У друга болит голова. Дайте совет: You should rest. You should take a pill.", "keywords": [["\\b(you should|you shouldn't)\\b"], ["\\b(rest|take|drink|stay|sleep|go|see|call)\\b"]], "minKeywords": 2, "samples": ["You should rest.", "You should take a pill and drink water."], "difficulty": 3, "hint": "Образец: You should…", "explanation": "Ответ: You should rest and drink water.", "grammar": ["a2.should"] }
+      ]
+    },
+    {
+      "id": "a2.u07.l05",
+      "kind": "grammar",
+      "title": "Must и have to",
+      "grammar": "a2.must-have-to",
+      "exercises": [
+        { "id": "a2.u07.l05.e01", "type": "fill_gap", "text": "You ___ stay in bed.", "translation": "Вы должны оставаться в постели.", "answers": [["must"]], "options": ["must", "musts", "must to"], "hint": "Сильное «надо».", "explanation": "Правильно: You must stay in bed.", "grammar": ["a2.must-have-to"] },
+        { "id": "a2.u07.l05.e02", "type": "fill_gap", "text": "I ___ to go to the doctor.", "translation": "Мне надо идти к врачу.", "answers": [["have"]], "options": ["have", "has", "must"], "hint": "С I.", "explanation": "Правильно: I have to go to the doctor.", "grammar": ["a2.must-have-to"] },
+        { "id": "a2.u07.l05.e03", "type": "fill_gap", "text": "She ___ to take pills.", "translation": "Ей надо принимать таблетки.", "answers": [["has"]], "options": ["has", "have", "must"], "hint": "С she.", "explanation": "Правильно: She has to take pills.", "grammar": ["a2.must-have-to"] },
+        { "id": "a2.u07.l05.e04", "type": "fill_gap", "text": "You ___ drive when you are ill.", "translation": "Нельзя водить машину, когда вы больны.", "answers": [["mustn't", "must not"]], "options": ["mustn't", "don't have to", "shouldn't to"], "hint": "Запрет.", "explanation": "Правильно: You mustn't drive when you are ill.", "grammar": ["a2.must-have-to"] },
+        { "id": "a2.u07.l05.e05", "type": "fill_gap", "text": "I ___ have to work on Sunday.", "translation": "В воскресенье мне не надо работать.", "answers": [["don't"]], "options": ["don't", "mustn't", "can't"], "hint": "Не обязательно.", "explanation": "Правильно: I don't have to work on Sunday.", "grammar": ["a2.must-have-to"] },
+        { "id": "a2.u07.l05.e06", "type": "fill_gap", "text": "___ you have to work tomorrow?", "translation": "Вам завтра надо работать?", "answers": [["Do"]], "options": ["Do", "Does", "Must"], "hint": "Вопрос с you.", "explanation": "Правильно: Do you have to work tomorrow?", "grammar": ["a2.must-have-to"] },
+        { "id": "a2.u07.l05.e07", "type": "error_correction", "text": "She must to rest.", "wrong": "must to", "correction": "must", "options": ["must", "musts", "has to to"], "hint": "Лишнее слово.", "explanation": "Правильно: She must rest.", "grammar": ["a2.must-have-to"], "troubles": ["word-order"] },
+        { "id": "a2.u07.l05.e08", "type": "error_correction", "text": "He has to goes.", "wrong": "goes", "correction": "go", "options": ["go", "going", "gone"], "hint": "После has to — без -s.", "explanation": "Правильно: He has to go.", "grammar": ["a2.must-have-to"], "troubles": ["tenses"] },
+        { "id": "a2.u07.l05.e09", "type": "error_correction", "text": "I don't must work.", "wrong": "don't must", "correction": "don't have to", "options": ["don't have to", "mustn't to", "not must"], "hint": "Для «не надо».", "explanation": "Правильно: I don't have to work.", "grammar": ["a2.must-have-to"], "troubles": ["word-order"] },
+        { "id": "a2.u07.l05.e10", "type": "tiles", "from": "ru", "text": "Мне надо принимать лекарство.", "answer": "I have to take medicine.", "distractors": ["has", "must to"], "hint": "Образец: Have to + take.", "explanation": "Правильно: I have to take medicine.", "grammar": ["a2.must-have-to"] },
+        { "id": "a2.u07.l05.e11", "type": "tiles", "from": "ru", "text": "Вам нельзя идти на работу.", "answer": "You mustn't go to work.", "distractors": ["don't", "must"], "hint": "Образец: Mustn't + go.", "explanation": "Правильно: You mustn't go to work.", "grammar": ["a2.must-have-to"] },
+        { "id": "a2.u07.l05.e12", "type": "type_translation", "from": "ru", "text": "Ему надо остаться в постели три дня.", "answers": ["He has to stay in bed for three days."], "difficulty": 2, "hint": "Образец: Has to + stay.", "explanation": "Правильно: He has to stay in bed for three days.", "grammar": ["a2.must-have-to"] },
+        { "id": "a2.u07.l05.e13", "type": "type_translation", "from": "ru", "text": "В субботу мне не надо работать.", "answers": ["I don't have to work on Saturday."], "difficulty": 2, "hint": "Образец: Don't have to.", "explanation": "Правильно: I don't have to work on Saturday.", "grammar": ["a2.must-have-to"] },
+        { "id": "a2.u07.l05.e14", "type": "listen_choice", "audio": "You mustn't drive.", "question": "Что вы слышите?", "options": ["You mustn't drive.", "You don't have to drive.", "You shouldn't drive."], "answer": 0, "hint": "Запрет.", "explanation": "You mustn't drive — «вам нельзя водить»." },
+        { "id": "a2.u07.l05.e15", "type": "speak_answer", "question": "Do you have to work tomorrow?", "questionRu": "Вам завтра надо работать? Ответьте: Yes, I do. или No, I don't.", "keywords": [["\\b(yes|no)\\b"], ["\\bI (do|don't|have to)\\b"]], "minKeywords": 2, "samples": ["Yes, I do. I have to work.", "No, I don't."], "difficulty": 3, "hint": "Образец: Yes, I do. / No, I don't.", "explanation": "Ответ: Yes, I do. или No, I don't.", "grammar": ["a2.must-have-to"] }
+      ]
+    },
+    {
+      "id": "a2.u07.l06",
+      "kind": "listening",
+      "title": "У врача",
+      "textId": "a2.u07.doctor",
+      "exercises": [
+        {
+          "id": "a2.u07.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "a2.u07.doctor",
+          "hint": "Слушайте жалобы и советы врача.",
+          "explanation": "У Анны болят голова и горло, у неё температура. Врач думает, что это грипп, и советует лежать в постели и принимать лекарство.",
+          "questions": [
+            { "kind": "mcq", "question": "Что болит у Анны?", "options": ["her head and throat", "her back", "her stomach"], "answer": 0, "explanation": "Анна говорит: I have a headache and a sore throat." },
+            { "kind": "mcq", "question": "Какой диагноз?", "options": ["the flu", "a cough", "a toothache"], "answer": 0, "explanation": "Врач говорит: I think you have the flu." },
+            { "kind": "mcq", "question": "Через сколько дней ей станет лучше?", "options": ["in three days", "in a week", "tomorrow"], "answer": 0, "explanation": "Врач говорит: You will feel better in three days." },
+            { "kind": "tfn", "statement": "Anna has a fever.", "answer": "true", "explanation": "Анна говорит: Yes, I do." },
+            { "kind": "tfn", "statement": "Anna can go to work.", "answer": "false", "explanation": "Врач говорит: You mustn't go to work." },
+            { "kind": "tfn", "statement": "Anna has the flu every year.", "answer": "not_given", "explanation": "Это в диалоге не сказано." }
+          ]
+        },
+        { "id": "a2.u07.l06.e02", "type": "listen_choice", "audio": "You must take this medicine every morning.", "question": "Что вы слышите?", "options": ["You must take this medicine every morning.", "You should take this medicine every morning.", "You took this medicine every morning."], "answer": 0, "hint": "Сильное «надо».", "explanation": "Правильно: You must take this medicine every morning.", "grammar": ["a2.must-have-to"] },
+        { "id": "a2.u07.l06.e03", "type": "listen_dictation", "text": "You will feel better in three days.", "hint": "Семь слов.", "explanation": "You will feel better in three days — «через три дня вам станет лучше»." },
+        { "id": "a2.u07.l06.e04", "type": "listen_dictation", "text": "What's the matter?", "hint": "Три слова.", "explanation": "What's the matter? — «Что случилось?»" },
+        { "id": "a2.u07.l06.e05", "type": "fill_gap", "text": "You ___ stay in bed and drink water.", "translation": "Вам стоит лежать в постели и пить воду.", "answers": [["should"]], "options": ["should", "shoulds", "shouldn't"], "hint": "Совет.", "explanation": "Правильно: You should stay in bed and drink water.", "grammar": ["a2.should"] },
+        { "id": "a2.u07.l06.e06", "type": "fill_gap", "text": "Do I ___ to take pills?", "translation": "Мне надо принимать таблетки?", "answers": [["have"]], "options": ["have", "has", "must"], "hint": "Вопрос с I.", "explanation": "Правильно: Do I have to take pills?", "grammar": ["a2.must-have-to"] },
+        { "id": "a2.u07.l06.e07", "type": "tiles", "from": "ru", "text": "У вас есть температура?", "answer": "Do you have a fever?", "distractors": ["are", "has"], "hint": "Образец: Do you have…", "explanation": "Правильно: Do you have a fever?", "grammar": ["a2.health-complaints"] },
+        { "id": "a2.u07.l06.e08", "type": "type_translation", "from": "ru", "text": "Я плохо себя чувствую. У меня болит голова.", "answers": ["I feel ill. I have a headache.", "I feel ill. My head hurts."], "difficulty": 2, "hint": "Образец: Feel ill + have a headache.", "explanation": "Правильно: I feel ill. I have a headache.", "grammar": ["a2.health-complaints"] },
+        { "id": "a2.u07.l06.e09", "type": "speak_answer", "question": "Do you have a fever?", "questionRu": "Врач спрашивает: «У вас есть температура?» Ответьте: Yes, I do. или No, I don't.", "keywords": [["\\b(yes|no)\\b"], ["\\bI (do|don't)\\b"]], "minKeywords": 2, "samples": ["Yes, I do.", "No, I don't."], "difficulty": 3, "hint": "Образец: Yes, I do. / No, I don't.", "explanation": "Короткий ответ: Yes, I do. или No, I don't." },
+        { "id": "a2.u07.l06.e10", "type": "speak_repeat", "text": "I feel ill. I have a headache and a sore throat.", "hint": "Два предложения.", "explanation": "Throat [θroʊt] — начинается со звука [θ]." }
+      ]
+    },
+    {
+      "id": "a2.u07.l07",
+      "kind": "writing",
+      "title": "Плохая неделя",
+      "textId": "a2.u07.ill",
+      "exercises": [
+        {
+          "id": "a2.u07.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "a2.u07.ill",
+          "hint": "Следите за порядком событий.",
+          "explanation": "Макс заболел гриппом, позвонил начальнику, сходил к врачу и три дня пролежал в постели. На четвёртый день ему стало лучше.",
+          "questions": [
+            { "kind": "mcq", "question": "Что было у Макса?", "options": ["the flu", "a toothache", "a broken arm"], "answer": 0, "explanation": "В тексте: The doctor said it was the flu." },
+            { "kind": "mcq", "question": "Сколько дней он лежал в постели?", "options": ["three", "four", "seven"], "answer": 0, "explanation": "В тексте: stay in bed for three days." },
+            { "kind": "mcq", "question": "Что он пил?", "options": ["tea with lemon", "coffee", "juice"], "answer": 0, "explanation": "В тексте: drank tea with lemon." },
+            { "kind": "tfn", "statement": "Max called his boss.", "answer": "true", "explanation": "В тексте: he called his boss." },
+            { "kind": "tfn", "statement": "Max felt better on the fourth day.", "answer": "true", "explanation": "В тексте: On the fourth day he felt better." },
+            { "kind": "tfn", "statement": "Max has a sister who is a doctor.", "answer": "not_given", "explanation": "Про сестру врача не сказано." }
+          ]
+        },
+        { "id": "a2.u07.l07.e02", "type": "translate_choice", "from": "en", "text": "Health is important.", "options": ["Здоровье важно.", "Здоровье дорогое.", "Здоровье лучше."], "answer": 0, "hint": "Important — «важный».", "explanation": "Health is important — «здоровье важно»." },
+        { "id": "a2.u07.l07.e03", "type": "fill_gap", "text": "Max ___ to stay in bed for three days.", "translation": "Максу пришлось три дня лежать в постели.", "answers": [["had"]], "options": ["had", "has", "must"], "hint": "Прошлое от have to.", "explanation": "Правильно: Max had to stay in bed.", "grammar": ["a2.must-have-to"] },
+        { "id": "a2.u07.l07.e04", "type": "fill_gap", "text": "When you are ill, you ___ rest.", "translation": "Когда болеешь, нужно отдыхать.", "answers": [["should"]], "options": ["should", "shoulds", "to"], "hint": "Совет.", "explanation": "Правильно: When you are ill, you should rest.", "grammar": ["a2.should"] },
+        { "id": "a2.u07.l07.e05", "type": "type_translation", "from": "ru", "text": "Врач сказал, что это грипп.", "answers": ["The doctor said it was the flu."], "difficulty": 2, "hint": "Said + прошедшее.", "explanation": "Правильно: The doctor said it was the flu.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u07.l07.e06", "type": "speak_describe", "picture": { "emoji": "🤒" }, "situation": "Расскажите, как вы однажды болели: что болело, что сказал врач, что вы делали.", "keywords": [["\\b(I had|I felt|I was|I went|the doctor)\\b"], ["\\b(headache|cough|fever|flu|throat|ill|medicine|bed|pill|doctor)\\b"]], "minKeywords": 2, "samples": ["Last year I had the flu. I had a fever. I stayed in bed for three days."], "difficulty": 3, "hint": "Образец: Last year I had…", "explanation": "Рассказывайте в прошедшем времени: I had, I felt, I went.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u07.l07.e07", "type": "speak_answer", "question": "What should you do when you are ill?", "questionRu": "Что нужно делать, когда болеешь? Ответьте: You should rest. You should drink water.", "keywords": [["\\b(you should|I should|you must|I have to)\\b"], ["\\b(rest|drink|stay|take|sleep|see|call)\\b"]], "minKeywords": 2, "samples": ["You should rest and drink water."], "difficulty": 3, "hint": "Образец: You should…", "explanation": "Ответ: You should rest and drink water.", "grammar": ["a2.should"] },
+        {
+          "id": "a2.u07.l07.e08",
+          "type": "write",
+          "task": "Расскажите о случае, когда вы болели или плохо себя чувствовали: что болело, что сказал врач, что вы должны были делать и что вам советуют. Например: Last week I had the flu. I had a fever. I had to stay in bed. I think you should rest when you are ill.",
+          "minWords": 40,
+          "maxWords": 110,
+          "criteria": [
+            { "id": "symptom", "label": "Названа болезнь или боль", "patterns": ["\\b(headache|cough|fever|flu|throat|back|stomach|toothache|pain|ill|sick|sore|hurts?)\\b"] },
+            { "id": "past", "label": "Есть прошедшее время", "patterns": ["\\b(had|felt|went|was|said|took|stayed|drank|called|slept)\\b"] },
+            { "id": "should", "label": "Есть should, must или have to", "patterns": ["\\b(should|shouldn't|must|mustn't|have to|has to|had to)\\b"] },
+            { "id": "advice", "label": "Есть совет или лекарство", "patterns": ["\\b(rest|medicine|pill|doctor|bed|water|advice|better)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\bI am (headache|cough|fever|flu|stomachache|toothache)\\b", "message": "Болезнь называют с have: I have a headache." },
+            { "pattern": "\\bmy [a-z]+ hurt\\b", "message": "С единственным числом hurt получает -s: my head hurts." },
+            { "pattern": "\\b(should|must) (to|[a-z]+s)\\b", "message": "После should и must — глагол без to и без -s." },
+            { "pattern": "\\bdon't should\\b", "message": "Отрицание от should — shouldn't." },
+            { "pattern": "\\bI don't must\\b", "message": "Для «не надо» — don't have to." }
+          ],
+          "samples": [
+            "Last week I had the flu. I had a headache, a cough and a fever. I called my boss and went to the doctor. The doctor said I had to stay in bed for three days. I took medicine and drank water. On the fourth day I felt better. When you are ill, you should rest.",
+            "Yesterday I felt ill and my back was sore. I think I should go to the doctor. My sister says I must take a pill and I shouldn't go to work. I don't have to work on Sunday. I will rest. Health is important."
+          ],
+          "difficulty": 3,
+          "hint": "План: что болело → к врачу → что делал → совет.",
+          "explanation": "О болезни — have и hurts. О советах — should, о необходимости — must и have to. Рассказывайте в прошедшем времени.",
+          "grammar": ["a2.health-complaints", "a2.should", "a2.must-have-to"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "a2.u07.test.e01", "type": "match_pairs", "pairs": [{ "en": "headache", "ru": "головная боль" }, { "en": "throat", "ru": "горло" }, { "en": "medicine", "ru": "лекарство" }, { "en": "advice", "ru": "совет" }, { "en": "fever", "ru": "жар" }], "hint": "Слова про здоровье.", "explanation": "Headache — головная боль, throat — горло, medicine — лекарство, advice — совет, fever — жар." },
+      { "id": "a2.u07.test.e02", "type": "translate_choice", "from": "ru", "text": "лучше", "options": ["better", "worse", "ill"], "answer": 0, "hint": "Не хуже.", "explanation": "Better — «лучше»." },
+      { "id": "a2.u07.test.e03", "type": "fill_gap", "text": "I ___ a headache.", "translation": "У меня болит голова.", "answers": [["have"]], "options": ["have", "am", "feel"], "hint": "Болезнь.", "explanation": "Правильно: I have a headache.", "grammar": ["a2.health-complaints"] },
+      { "id": "a2.u07.test.e04", "type": "fill_gap", "text": "My back ___ .", "translation": "У меня болит спина.", "answers": [["hurts"]], "options": ["hurts", "hurt", "have"], "hint": "С back — окончание.", "explanation": "Правильно: My back hurts.", "grammar": ["a2.health-complaints"] },
+      { "id": "a2.u07.test.e05", "type": "fill_gap", "text": "You ___ rest.", "translation": "Вам стоит отдохнуть.", "answers": [["should"]], "options": ["should", "must to", "shoulds"], "hint": "Совет.", "explanation": "Правильно: You should rest.", "grammar": ["a2.should"] },
+      { "id": "a2.u07.test.e06", "type": "fill_gap", "text": "You ___ go to work.", "translation": "Вам не стоит идти на работу.", "answers": [["shouldn't", "should not"]], "options": ["shouldn't", "don't should", "not should"], "hint": "Отрицание.", "explanation": "Правильно: You shouldn't go to work.", "grammar": ["a2.should"] },
+      { "id": "a2.u07.test.e07", "type": "fill_gap", "text": "She ___ to take pills.", "translation": "Ей надо принимать таблетки.", "answers": [["has"]], "options": ["has", "have", "must"], "hint": "С she.", "explanation": "Правильно: She has to take pills.", "grammar": ["a2.must-have-to"] },
+      { "id": "a2.u07.test.e08", "type": "fill_gap", "text": "I ___ have to work on Sunday.", "translation": "В воскресенье мне не надо работать.", "answers": [["don't"]], "options": ["don't", "mustn't", "can't"], "hint": "Не обязательно.", "explanation": "Правильно: I don't have to work on Sunday.", "grammar": ["a2.must-have-to"] },
+      { "id": "a2.u07.test.e09", "type": "error_correction", "text": "I am headache.", "wrong": "am", "correction": "have a", "options": ["have a", "has a", "feel a"], "hint": "Болезнь.", "explanation": "Правильно: I have a headache.", "grammar": ["a2.health-complaints"] },
+      { "id": "a2.u07.test.e10", "type": "error_correction", "text": "You should to rest.", "wrong": "to rest", "correction": "rest", "options": ["rest", "rests", "resting"], "hint": "Лишнее слово.", "explanation": "Правильно: You should rest.", "grammar": ["a2.should"] },
+      { "id": "a2.u07.test.e11", "type": "error_correction", "text": "I don't must work.", "wrong": "don't must", "correction": "don't have to", "options": ["don't have to", "mustn't to", "not must"], "hint": "Для «не надо».", "explanation": "Правильно: I don't have to work.", "grammar": ["a2.must-have-to"] },
+      { "id": "a2.u07.test.e12", "type": "listen_choice", "audio": "My throat is sore and I have a cough.", "question": "Что вы слышите?", "options": ["My throat is sore and I have a cough.", "My head hurts and I have a fever.", "My back hurts and I have the flu."], "answer": 0, "hint": "Горло и кашель.", "explanation": "Правильно: My throat is sore and I have a cough.", "grammar": ["a2.health-complaints"] },
+      { "id": "a2.u07.test.e13", "type": "listen_dictation", "text": "You must stay in bed.", "hint": "Пять слов.", "explanation": "You must stay in bed — «вы должны оставаться в постели»." },
+      { "id": "a2.u07.test.e14", "type": "tiles", "from": "ru", "text": "Что мне делать?", "answer": "What should I do?", "distractors": ["must", "am"], "difficulty": 2, "hint": "Образец: What + should.", "explanation": "Правильно: What should I do?", "grammar": ["a2.should"] },
+      { "id": "a2.u07.test.e15", "type": "type_translation", "from": "ru", "text": "Мне надо идти к врачу.", "answers": ["I have to go to the doctor."], "difficulty": 2, "hint": "Образец: Have to + go.", "explanation": "Правильно: I have to go to the doctor.", "grammar": ["a2.must-have-to"] },
+      { "id": "a2.u07.test.e16", "type": "speak_repeat", "text": "I feel ill and I should stay in bed.", "hint": "Две части.", "explanation": "Should [ʃʊd] — буква l не читается." }
+    ]
+  }
+}

@@ -1,0 +1,307 @@
+{
+  "id": "a2.u06",
+  "level": "A2",
+  "order": 6,
+  "title": { "en": "People and looks", "ru": "Люди и внешность" },
+  "description": "Описываем людей: как они выглядят и какие у них характеры. He is tall, she has long hair, What does she look like?, порядок прилагательных.",
+  "goals": [
+    "Могу описать внешность: She is tall and slim. She has long dark hair.",
+    "Могу описать характер: He is kind and quiet.",
+    "Могу спросить: What does she look like? What is he like?",
+    "Могу сказать, что человек выглядит усталым или счастливым: She looks tired.",
+    "Могу расставить прилагательные по порядку: a beautiful young woman.",
+    "Могу написать короткое описание человека."
+  ],
+  "grammar": ["a2.describing-people", "a2.look-like", "a2.adjective-order"],
+  "troubles": ["word-order"],
+  "words": [
+    { "id": "tall", "en": "tall", "ipa": "tɔːl", "pos": "adj", "ru": ["высокий"], "example": { "en": "My brother is tall.", "ru": "Мой брат высокий." }, "topics": ["looks"] },
+    { "id": "short", "en": "short", "ipa": "ʃɔːrt", "pos": "adj", "ru": ["низкий", "короткий"], "example": { "en": "She has short hair.", "ru": "У неё короткие волосы." }, "topics": ["looks"] },
+    { "id": "slim", "en": "slim", "ipa": "slɪm", "pos": "adj", "ru": ["стройный"], "example": { "en": "My sister is tall and slim.", "ru": "Моя сестра высокая и стройная." }, "topics": ["looks"] },
+    { "id": "hair", "en": "hair", "ipa": "her", "pos": "noun", "ru": ["волосы"], "example": { "en": "She has long dark hair.", "ru": "У неё длинные тёмные волосы." }, "note": "Hair — несчитаемое слово: her hair is long, а не her hairs are long.", "topics": ["looks"] },
+    { "id": "eye", "en": "eye", "ipa": "aɪ", "pos": "noun", "ru": ["глаз"], "example": { "en": "He has brown eyes.", "ru": "У него карие глаза." }, "forms": { "plural": "eyes" }, "topics": ["looks"] },
+    { "id": "face", "en": "face", "ipa": "feɪs", "pos": "noun", "ru": ["лицо"], "example": { "en": "She has a kind face.", "ru": "У неё доброе лицо." }, "topics": ["looks"] },
+    { "id": "beard", "en": "beard", "ipa": "bɪrd", "pos": "noun", "ru": ["борода"], "example": { "en": "My uncle has a beard.", "ru": "У моего дяди борода." }, "topics": ["looks"] },
+    { "id": "long", "en": "long", "ipa": "lɔːŋ", "pos": "adj", "ru": ["длинный"], "example": { "en": "She has long hair.", "ru": "У неё длинные волосы." }, "topics": ["looks"] },
+    { "id": "blond", "en": "blond", "ipa": "blɑːnd", "pos": "adj", "ru": ["светловолосый"], "example": { "en": "He has blond hair.", "ru": "У него светлые волосы." }, "topics": ["looks"] },
+    { "id": "dark", "en": "dark", "ipa": "dɑːrk", "pos": "adj", "ru": ["тёмный"], "example": { "en": "She has dark hair and brown eyes.", "ru": "У неё тёмные волосы и карие глаза." }, "topics": ["looks"] },
+    { "id": "curly", "en": "curly", "ipa": "ˈkɝːli", "pos": "adj", "ru": ["кудрявый"], "example": { "en": "My sister has curly hair.", "ru": "У моей сестры кудрявые волосы." }, "topics": ["looks"] },
+    { "id": "handsome", "en": "handsome", "ipa": "ˈhænsəm", "pos": "adj", "ru": ["красивый (о мужчине)"], "example": { "en": "He is a handsome young man.", "ru": "Он красивый молодой человек." }, "note": "Handsome говорят о мужчинах, о женщинах — pretty или beautiful.", "topics": ["looks"] },
+    { "id": "pretty", "en": "pretty", "ipa": "ˈprɪti", "pos": "adj", "ru": ["симпатичная", "хорошенькая"], "example": { "en": "She is a pretty girl.", "ru": "Она симпатичная девушка." }, "topics": ["looks"] },
+    { "id": "mouth", "en": "mouth", "ipa": "maʊθ", "pos": "noun", "ru": ["рот"], "example": { "en": "Open your mouth.", "ru": "Откройте рот." }, "troubles": ["pron-th"], "topics": ["body"] },
+    { "id": "ear", "en": "ear", "ipa": "ɪr", "pos": "noun", "ru": ["ухо"], "example": { "en": "He has small ears.", "ru": "У него маленькие уши." }, "forms": { "plural": "ears" }, "topics": ["body"] },
+    { "id": "hand", "en": "hand", "ipa": "hænd", "pos": "noun", "ru": ["рука (кисть)"], "example": { "en": "I have a book in my hand.", "ru": "У меня в руке книга." }, "topics": ["body"] },
+    { "id": "head", "en": "head", "ipa": "hed", "pos": "noun", "ru": ["голова"], "example": { "en": "I have a hat on my head.", "ru": "На голове у меня шляпа." }, "topics": ["body"] },
+    { "id": "arm", "en": "arm", "ipa": "ɑːrm", "pos": "noun", "ru": ["рука (от плеча)"], "example": { "en": "He broke his arm.", "ru": "Он сломал руку." }, "topics": ["body"] },
+    { "id": "leg", "en": "leg", "ipa": "leɡ", "pos": "noun", "ru": ["нога"], "example": { "en": "She has long legs.", "ru": "У неё длинные ноги." }, "topics": ["body"] },
+    { "id": "friendly", "en": "friendly", "ipa": "ˈfrendli", "pos": "adj", "ru": ["дружелюбный"], "example": { "en": "My neighbor is friendly.", "ru": "Мой сосед дружелюбный." }, "topics": ["character"] },
+    { "id": "kind", "en": "kind", "ipa": "kaɪnd", "pos": "adj", "ru": ["добрый"], "example": { "en": "My grandmother is kind.", "ru": "Моя бабушка добрая." }, "topics": ["character"] },
+    { "id": "shy", "en": "shy", "ipa": "ʃaɪ", "pos": "adj", "ru": ["застенчивый"], "example": { "en": "He is shy and quiet.", "ru": "Он застенчивый и тихий." }, "topics": ["character"] },
+    { "id": "quiet", "en": "quiet", "ipa": "ˈkwaɪət", "pos": "adj", "ru": ["тихий"], "example": { "en": "My sister is quiet.", "ru": "Моя сестра тихая." }, "topics": ["character"] },
+    { "id": "clever", "en": "clever", "ipa": "ˈklevɚ", "pos": "adj", "ru": ["умный"], "example": { "en": "Our teacher is clever.", "ru": "Наш учитель умный." }, "topics": ["character"] },
+    { "id": "lazy", "en": "lazy", "ipa": "ˈleɪzi", "pos": "adj", "ru": ["ленивый"], "example": { "en": "My brother is lazy on Sunday.", "ru": "По воскресеньям мой брат ленивый." }, "topics": ["character"] },
+    { "id": "polite", "en": "polite", "ipa": "pəˈlaɪt", "pos": "adj", "ru": ["вежливый"], "example": { "en": "The waiter is polite.", "ru": "Официант вежливый." }, "topics": ["character"] },
+    { "id": "serious", "en": "serious", "ipa": "ˈsɪriəs", "pos": "adj", "ru": ["серьёзный"], "example": { "en": "My boss is serious.", "ru": "Мой босс серьёзный." }, "topics": ["character"] },
+    { "id": "honest", "en": "honest", "ipa": "ˈɑːnɪst", "pos": "adj", "ru": ["честный"], "example": { "en": "He is an honest man.", "ru": "Он честный человек." }, "note": "Буква h в слове honest не читается.", "topics": ["character"] },
+    { "id": "describe", "en": "describe", "ipa": "dɪˈskraɪb", "pos": "verb", "ru": ["описывать"], "example": { "en": "Describe your friend.", "ru": "Опишите вашего друга." }, "forms": { "third": "describes" }, "topics": ["verbs"] },
+    { "id": "neighbor", "en": "neighbor", "ipa": "ˈneɪbɚ", "pos": "noun", "ru": ["сосед"], "example": { "en": "My neighbor is a nice woman.", "ru": "Моя соседка — приятная женщина." }, "note": "Британский вариант написания — neighbour.", "topics": ["people"] },
+    { "id": "boss", "en": "boss", "ipa": "bɔːs", "pos": "noun", "ru": ["начальник"], "example": { "en": "My boss is serious.", "ru": "Мой начальник серьёзный." }, "topics": ["people"] },
+    { "id": "twin", "en": "twin", "ipa": "twɪn", "pos": "noun", "ru": ["близнец"], "example": { "en": "I have a twin brother.", "ru": "У меня есть брат-близнец." }, "topics": ["people"] },
+    { "id": "look-like", "en": "look like", "ipa": "lʊk laɪk", "pos": "phrase", "ru": ["быть похожим", "выглядеть как"], "example": { "en": "She looks like her mother.", "ru": "Она похожа на свою мать." }, "forms": { "third": "looks like" }, "topics": ["looks"] }
+  ],
+  "texts": [
+    {
+      "id": "a2.u06.sister",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "What does she look like?", "ru": "Как она выглядит?" },
+      "speakers": [
+        { "id": "tom", "name": "Tom", "voice": "male" },
+        { "id": "anna", "name": "Anna", "voice": "female" }
+      ],
+      "lines": [
+        { "speaker": "tom", "en": "Anna, I am going to meet your sister at the station. What does she look like?", "ru": "Анна, я собираюсь встретить твою сестру на вокзале. Как она выглядит?" },
+        { "speaker": "anna", "en": "She is tall and slim. She has long dark hair and brown eyes.", "ru": "Она высокая и стройная. У неё длинные тёмные волосы и карие глаза." },
+        { "speaker": "tom", "en": "How old is she?", "ru": "Сколько ей лет?" },
+        { "speaker": "anna", "en": "She is twenty-five. She wears glasses.", "ru": "Ей двадцать пять. Она носит очки." },
+        { "speaker": "tom", "en": "What is she like?", "ru": "А какая она по характеру?" },
+        { "speaker": "anna", "en": "She is kind and quiet, but she is shy. She is clever and funny too.", "ru": "Она добрая и тихая, но застенчивая. Ещё она умная и смешная." },
+        { "speaker": "tom", "en": "OK. I will find her.", "ru": "Хорошо. Я её найду." },
+        { "speaker": "anna", "en": "She will smile at you. You will see.", "ru": "Она тебе улыбнётся. Сам увидишь." }
+      ]
+    },
+    {
+      "id": "a2.u06.twin",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "My twin brother", "ru": "Мой брат-близнец" },
+      "lines": [
+        { "en": "I have a twin brother. His name is Ivan. He is my best friend and I love him. We are twins: we are tall, with short dark hair and brown eyes.", "ru": "У меня есть брат-близнец. Его зовут Иван. Он мой лучший друг, и я его люблю. Мы близнецы: мы высокие, у нас короткие тёмные волосы и карие глаза." },
+        { "en": "But we are different. I am serious and quiet, and my boss says that I am honest and polite. Ivan is funny and friendly.", "ru": "Но мы разные. Я серьёзный и тихий, и мой начальник говорит, что я честный и вежливый. Иван смешной и дружелюбный." },
+        { "en": "He is never shy and he talks to new people. On Sunday he is lazy and sleeps late, but I am always busy. Now Ivan has a beard, and I don't.", "ru": "Он никогда не стесняется и разговаривает с новыми людьми. В воскресенье он ленивый и долго спит, а я всегда занят. Теперь у Ивана борода, а у меня нет." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "a2.u06.l01",
+      "kind": "vocabulary",
+      "title": "Внешность и части тела",
+      "exercises": [
+        { "id": "a2.u06.l01.e01", "type": "match_pairs", "pairs": [{ "en": "tall", "ru": "высокий" }, { "en": "short", "ru": "низкий" }, { "en": "slim", "ru": "стройный" }, { "en": "long", "ru": "длинный" }, { "en": "dark", "ru": "тёмный" }], "hint": "Tall и short — противоположные.", "explanation": "Tall — высокий, short — низкий, slim — стройный, long — длинный, dark — тёмный." },
+        { "id": "a2.u06.l01.e02", "type": "match_pairs", "pairs": [{ "en": "blond", "ru": "светловолосый" }, { "en": "curly", "ru": "кудрявый" }, { "en": "handsome", "ru": "красивый" }, { "en": "pretty", "ru": "симпатичная" }, { "en": "beard", "ru": "борода" }], "hint": "Handsome — о мужчине.", "explanation": "Blond — светловолосый, curly — кудрявый, handsome — красивый, pretty — симпатичная, beard — борода." },
+        { "id": "a2.u06.l01.e03", "type": "match_pairs", "pairs": [{ "en": "hair", "ru": "волосы" }, { "en": "eye", "ru": "глаз" }, { "en": "face", "ru": "лицо" }, { "en": "mouth", "ru": "рот" }, { "en": "ear", "ru": "ухо" }], "hint": "Части лица.", "explanation": "Hair — волосы, eye — глаз, face — лицо, mouth — рот, ear — ухо." },
+        { "id": "a2.u06.l01.e04", "type": "match_pairs", "pairs": [{ "en": "hand", "ru": "рука" }, { "en": "head", "ru": "голова" }, { "en": "arm", "ru": "рука от плеча" }, { "en": "leg", "ru": "нога" }, { "en": "twin", "ru": "близнец" }], "hint": "Hand и arm — две руки.", "explanation": "Hand — кисть, head — голова, arm — рука, leg — нога, twin — близнец." },
+        { "id": "a2.u06.l01.e05", "type": "translate_choice", "from": "ru", "text": "У неё длинные тёмные волосы.", "options": ["She has long dark hair.", "She is long dark hair.", "She have long dark hair."], "answer": 0, "hint": "Волосы — с have.", "explanation": "She has long dark hair. С she — has.", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l01.e06", "type": "translate_choice", "from": "en", "text": "He has a beard.", "options": ["У него борода.", "Он бородатый человек.", "Он носит бороду."], "answer": 0, "hint": "Have — «иметь».", "explanation": "He has a beard — «у него борода»." },
+        { "id": "a2.u06.l01.e07", "type": "fill_gap", "text": "My brother is ___ and slim.", "translation": "Мой брат высокий и стройный.", "answers": [["tall"]], "options": ["tall", "short", "long"], "hint": "Противоположное — short.", "explanation": "Правильно: My brother is tall and slim." },
+        { "id": "a2.u06.l01.e08", "type": "fill_gap", "text": "She has ___ hair.", "translation": "У неё кудрявые волосы.", "answers": [["curly"]], "options": ["curly", "tall", "slim"], "hint": "Волосы, которые завиваются.", "explanation": "Правильно: She has curly hair." },
+        { "id": "a2.u06.l01.e09", "type": "fill_gap", "text": "I have a ___ brother.", "translation": "У меня есть брат-близнец.", "answers": [["twin"]], "options": ["twin", "beard", "short"], "hint": "Родились вместе.", "explanation": "Правильно: I have a twin brother." },
+        { "id": "a2.u06.l01.e10", "type": "listen_choice", "audio": "He has brown eyes and a beard.", "question": "Что вы слышите?", "options": ["He has brown eyes and a beard.", "He has blue eyes and a beard.", "He has brown eyes and short hair."], "answer": 0, "hint": "Цвет глаз — карий.", "explanation": "He has brown eyes and a beard — «у него карие глаза и борода».", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l01.e11", "type": "listen_dictation", "text": "She has long dark hair.", "hint": "Пять слов.", "explanation": "She has long dark hair — «у неё длинные тёмные волосы»." },
+        { "id": "a2.u06.l01.e12", "type": "type_translation", "from": "ru", "text": "лицо", "answers": ["face"], "hint": "Четыре буквы.", "explanation": "Face [feɪs] — «лицо»." },
+        { "id": "a2.u06.l01.e13", "type": "minimal_pair", "pair": [{ "en": "hair", "ipa": "her" }, { "en": "here", "ipa": "hɪr" }], "say": 0, "hint": "В одном слове гласный как в слове «хэр».", "explanation": "Hair [her] — «волосы», here [hɪr] — «здесь».", "troubles": ["pron-vowels"] },
+        { "id": "a2.u06.l01.e14", "type": "word_stress", "word": "handsome", "syllables": ["hand", "some"], "stress": 0, "hint": "Первый слог.", "explanation": "HAND-some — ударение на первый слог." }
+      ]
+    },
+    {
+      "id": "a2.u06.l02",
+      "kind": "vocabulary",
+      "title": "Характер",
+      "exercises": [
+        { "id": "a2.u06.l02.e01", "type": "match_pairs", "pairs": [{ "en": "friendly", "ru": "дружелюбный" }, { "en": "kind", "ru": "добрый" }, { "en": "shy", "ru": "застенчивый" }, { "en": "quiet", "ru": "тихий" }, { "en": "clever", "ru": "умный" }], "hint": "Слова про характер.", "explanation": "Friendly — дружелюбный, kind — добрый, shy — застенчивый, quiet — тихий, clever — умный." },
+        { "id": "a2.u06.l02.e02", "type": "match_pairs", "pairs": [{ "en": "lazy", "ru": "ленивый" }, { "en": "polite", "ru": "вежливый" }, { "en": "serious", "ru": "серьёзный" }, { "en": "honest", "ru": "честный" }, { "en": "describe", "ru": "описывать" }], "hint": "Первые четыре — черты характера.", "explanation": "Lazy — ленивый, polite — вежливый, serious — серьёзный, honest — честный, describe — описывать." },
+        { "id": "a2.u06.l02.e03", "type": "match_pairs", "pairs": [{ "en": "neighbor", "ru": "сосед" }, { "en": "boss", "ru": "начальник" }, { "en": "look like", "ru": "быть похожим" }, { "en": "funny", "ru": "смешной" }, { "en": "twin", "ru": "близнец" }], "hint": "Люди вокруг нас.", "explanation": "Neighbor — сосед, boss — начальник, look like — быть похожим, funny — смешной, twin — близнец." },
+        { "id": "a2.u06.l02.e04", "type": "translate_choice", "from": "ru", "text": "вежливый", "options": ["polite", "lazy", "shy"], "answer": 0, "hint": "Говорит «пожалуйста» и «спасибо».", "explanation": "Polite [pəˈlaɪt] — «вежливый»." },
+        { "id": "a2.u06.l02.e05", "type": "translate_choice", "from": "en", "text": "honest", "options": ["честный", "серьёзный", "смешной"], "answer": 0, "hint": "Не обманывает.", "explanation": "Honest [ˈɑːnɪst] — «честный». Буква h не читается." },
+        { "id": "a2.u06.l02.e06", "type": "fill_gap", "text": "My boss is ___. He never laughs at work.", "translation": "Мой начальник серьёзный. Он никогда не смеётся на работе.", "answers": [["serious"]], "options": ["serious", "lazy", "funny"], "hint": "Не смеётся.", "explanation": "Правильно: My boss is serious." },
+        { "id": "a2.u06.l02.e07", "type": "fill_gap", "text": "My brother is ___. He sleeps late.", "translation": "Мой брат ленивый. Он долго спит.", "answers": [["lazy"]], "options": ["lazy", "polite", "honest"], "hint": "Не любит работать.", "explanation": "Правильно: My brother is lazy." },
+        { "id": "a2.u06.l02.e08", "type": "fill_gap", "text": "She is ___ and does not talk to new people.", "translation": "Она застенчивая и не разговаривает с новыми людьми.", "answers": [["shy"]], "options": ["shy", "friendly", "clever"], "hint": "Смущается.", "explanation": "Правильно: She is shy." },
+        { "id": "a2.u06.l02.e09", "type": "fill_gap", "text": "My ___ is a friendly woman.", "translation": "Моя соседка — дружелюбная женщина.", "answers": [["neighbor"]], "options": ["neighbor", "boss", "twin"], "hint": "Живёт рядом.", "explanation": "Правильно: My neighbor is a friendly woman." },
+        { "id": "a2.u06.l02.e10", "type": "listen_choice", "audio": "My boss is serious but polite.", "question": "Что вы слышите?", "options": ["My boss is serious but polite.", "My boss is funny and polite.", "My boss is lazy but honest."], "answer": 0, "hint": "Строгий начальник.", "explanation": "My boss is serious but polite — «мой начальник серьёзный, но вежливый»." },
+        { "id": "a2.u06.l02.e11", "type": "listen_dictation", "text": "She is kind and quiet.", "hint": "Пять слов.", "explanation": "She is kind and quiet — «она добрая и тихая»." },
+        { "id": "a2.u06.l02.e12", "type": "type_translation", "from": "ru", "text": "описывать", "answers": ["describe"], "hint": "Восемь букв.", "explanation": "Describe [dɪˈskraɪb] — «описывать»." },
+        { "id": "a2.u06.l02.e13", "type": "word_stress", "word": "describe", "syllables": ["de", "scribe"], "stress": 1, "hint": "Второй слог.", "explanation": "de-SCRIBE — ударение на второй слог." },
+        { "id": "a2.u06.l02.e14", "type": "speak_answer", "question": "What is your best friend like?", "questionRu": "Какой ваш лучший друг по характеру? Ответьте: He is kind and funny. She is quiet.", "keywords": [["\\b(he|she|my friend) (is|are)\\b", "\\bis\\b"], ["\\b(kind|funny|quiet|shy|clever|lazy|polite|serious|honest|friendly)\\b"]], "minKeywords": 2, "samples": ["She is kind and funny.", "He is quiet and clever."], "difficulty": 3, "hint": "Образец: She is… and…", "explanation": "Ответ: She is kind and funny.", "grammar": ["a2.look-like"] }
+      ]
+    },
+    {
+      "id": "a2.u06.l03",
+      "kind": "grammar",
+      "title": "He is tall, she has long hair",
+      "grammar": "a2.describing-people",
+      "exercises": [
+        { "id": "a2.u06.l03.e01", "type": "fill_gap", "text": "She ___ long dark hair.", "translation": "У неё длинные тёмные волосы.", "answers": [["has"]], "options": ["has", "is", "have"], "hint": "Волосы — с have.", "explanation": "Правильно: She has long dark hair.", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l03.e02", "type": "fill_gap", "text": "He ___ tall and slim.", "translation": "Он высокий и стройный.", "answers": [["is"]], "options": ["is", "has", "have"], "hint": "Рост — с be.", "explanation": "Правильно: He is tall and slim.", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l03.e03", "type": "fill_gap", "text": "My brother ___ a beard.", "translation": "У моего брата борода.", "answers": [["has"]], "options": ["has", "is", "wears"], "hint": "Борода — с have.", "explanation": "Правильно: My brother has a beard.", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l03.e04", "type": "fill_gap", "text": "She ___ glasses.", "translation": "Она носит очки.", "answers": [["wears"]], "options": ["wears", "has", "is"], "hint": "Очки носят.", "explanation": "She wears glasses. Очки и одежду — wear.", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l03.e05", "type": "fill_gap", "text": "They ___ twins.", "translation": "Они близнецы.", "answers": [["are"]], "options": ["are", "have", "is"], "hint": "Они — кто?", "explanation": "Правильно: They are twins.", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l03.e06", "type": "fill_gap", "text": "My boss ___ serious, but he is polite.", "translation": "Мой начальник серьёзный, но вежливый.", "answers": [["is"]], "options": ["is", "has", "does"], "hint": "Характер — с be.", "explanation": "Правильно: My boss is serious.", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l03.e07", "type": "error_correction", "text": "She is long dark hair.", "wrong": "is", "correction": "has", "options": ["has", "have", "wears"], "hint": "Волосы — другой глагол.", "explanation": "Правильно: She has long dark hair.", "grammar": ["a2.describing-people"], "troubles": ["word-order"] },
+        { "id": "a2.u06.l03.e08", "type": "error_correction", "text": "He has tall.", "wrong": "has", "correction": "is", "options": ["is", "are", "have"], "hint": "Рост — другой глагол.", "explanation": "Правильно: He is tall.", "grammar": ["a2.describing-people"], "troubles": ["word-order"] },
+        { "id": "a2.u06.l03.e09", "type": "error_correction", "text": "She have blue eyes.", "wrong": "have", "correction": "has", "options": ["has", "is", "having"], "hint": "С she — другая форма.", "explanation": "Правильно: She has blue eyes.", "grammar": ["a2.describing-people"], "troubles": ["tenses"] },
+        { "id": "a2.u06.l03.e10", "type": "tiles", "from": "ru", "text": "У него карие глаза.", "answer": "He has brown eyes.", "distractors": ["is", "have"], "hint": "Образец: Has + brown eyes.", "explanation": "Правильно: He has brown eyes.", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l03.e11", "type": "tiles", "from": "ru", "text": "Она высокая и стройная.", "answer": "She is tall and slim.", "distractors": ["has", "are"], "hint": "Is + прилагательные.", "explanation": "Правильно: She is tall and slim.", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l03.e12", "type": "type_translation", "from": "ru", "text": "Мой брат высокий, у него короткие тёмные волосы.", "answers": ["My brother is tall and he has short dark hair.", "My brother is tall. He has short dark hair."], "difficulty": 3, "hint": "Is и has.", "explanation": "Правильно: My brother is tall and he has short dark hair.", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l03.e13", "type": "listen_choice", "audio": "My sister has curly hair.", "question": "Что вы слышите?", "options": ["My sister has curly hair.", "My sister is curly.", "My sister has long hair."], "answer": 0, "hint": "Какие волосы?", "explanation": "My sister has curly hair — «у моей сестры кудрявые волосы».", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l03.e14", "type": "speak_describe", "picture": { "emoji": "🧑" }, "situation": "Опишите человека, которого вы хорошо знаете: рост, волосы и глаза.", "keywords": [["\\b(he|she|my [a-z]+) (is|has)\\b"], ["\\b(tall|short|slim|hair|eyes|beard|young|old)\\b"]], "minKeywords": 2, "samples": ["My brother is tall. He has short dark hair and brown eyes."], "difficulty": 3, "hint": "Образец: He is… He has…", "explanation": "Рост — is, волосы и глаза — has.", "grammar": ["a2.describing-people"] }
+      ]
+    },
+    {
+      "id": "a2.u06.l04",
+      "kind": "grammar",
+      "title": "What does she look like?",
+      "grammar": "a2.look-like",
+      "exercises": [
+        { "id": "a2.u06.l04.e01", "type": "fill_gap", "text": "What ___ she look like?", "translation": "Как она выглядит?", "answers": [["does"]], "options": ["does", "is", "do"], "hint": "Вопрос о внешности.", "explanation": "Правильно: What does she look like?", "grammar": ["a2.look-like"] },
+        { "id": "a2.u06.l04.e02", "type": "fill_gap", "text": "What ___ he like?", "translation": "Какой он по характеру?", "answers": [["is"]], "options": ["is", "does", "has"], "hint": "О характере.", "explanation": "Правильно: What is he like?", "grammar": ["a2.look-like"] },
+        { "id": "a2.u06.l04.e03", "type": "fill_gap", "text": "She ___ tired today.", "translation": "Сегодня она выглядит усталой.", "answers": [["looks"]], "options": ["looks", "look", "is looking"], "hint": "С she — окончание.", "explanation": "Правильно: She looks tired today.", "grammar": ["a2.look-like"] },
+        { "id": "a2.u06.l04.e04", "type": "fill_gap", "text": "She looks ___ her mother.", "translation": "Она похожа на свою мать.", "answers": [["like"]], "options": ["like", "for", "with"], "hint": "Перед существительным.", "explanation": "Правильно: She looks like her mother.", "grammar": ["a2.look-like"] },
+        { "id": "a2.u06.l04.e05", "type": "fill_gap", "text": "He looks ___ . He has a big smile.", "translation": "Он выглядит счастливым. У него широкая улыбка.", "answers": [["happy"]], "options": ["happy", "like happy", "sad"], "hint": "После look — прилагательное.", "explanation": "Правильно: He looks happy.", "grammar": ["a2.look-like"] },
+        { "id": "a2.u06.l04.e06", "type": "error_correction", "text": "How does she look like?", "wrong": "How", "correction": "What", "options": ["What", "Where", "Who"], "hint": "Другое слово-вопрос.", "explanation": "Правильно: What does she look like?", "grammar": ["a2.look-like"], "troubles": ["word-order"] },
+        { "id": "a2.u06.l04.e07", "type": "error_correction", "text": "She looks like tired.", "wrong": "like tired", "correction": "tired", "options": ["tired", "like tired", "for tired"], "hint": "Лишнее слово.", "explanation": "Правильно: She looks tired.", "grammar": ["a2.look-like"], "troubles": ["word-order"] },
+        { "id": "a2.u06.l04.e08", "type": "error_correction", "text": "What is she look like?", "wrong": "is", "correction": "does", "options": ["does", "do", "has"], "hint": "Другой вспомогательный глагол.", "explanation": "Правильно: What does she look like?", "grammar": ["a2.look-like"], "troubles": ["word-order"] },
+        { "id": "a2.u06.l04.e09", "type": "tiles", "from": "ru", "text": "Как выглядит ваша сестра?", "answer": "What does your sister look like?", "distractors": ["is", "how"], "hint": "Образец: What + does.", "explanation": "Правильно: What does your sister look like?", "grammar": ["a2.look-like"] },
+        { "id": "a2.u06.l04.e10", "type": "tiles", "from": "ru", "text": "Какой у вас начальник по характеру?", "answer": "What is your boss like?", "distractors": ["does", "look"], "hint": "Образец: What is … like.", "explanation": "Правильно: What is your boss like?", "grammar": ["a2.look-like"] },
+        { "id": "a2.u06.l04.e11", "type": "type_translation", "from": "ru", "text": "Он похож на своего отца.", "answers": ["He looks like his father."], "hint": "Образец: Looks like.", "explanation": "Правильно: He looks like his father.", "grammar": ["a2.look-like"] },
+        { "id": "a2.u06.l04.e12", "type": "type_translation", "from": "ru", "text": "Она выглядит счастливой.", "answers": ["She looks happy."], "hint": "Без like.", "explanation": "Правильно: She looks happy.", "grammar": ["a2.look-like"] },
+        { "id": "a2.u06.l04.e13", "type": "listen_choice", "audio": "What is your neighbor like?", "question": "Что вы слышите?", "options": ["What is your neighbor like?", "What does your neighbor look like?", "Who is your neighbor?"], "answer": 0, "hint": "О характере.", "explanation": "What is your neighbor like? — «Какой ваш сосед по характеру?»", "grammar": ["a2.look-like"] },
+        { "id": "a2.u06.l04.e14", "type": "speak_answer", "question": "What does your mother look like?", "questionRu": "Как выглядит ваша мама? Ответьте: She is tall. She has… или She looks like…", "keywords": [["\\b(she|my mother) (is|has|looks)\\b"], ["\\b(tall|short|slim|hair|eyes|young|old|kind|pretty|beautiful)\\b"]], "minKeywords": 2, "samples": ["She is tall and she has short hair.", "She looks young."], "difficulty": 3, "hint": "Образец: She is… She has…", "explanation": "Ответ: She is tall and she has short hair.", "grammar": ["a2.look-like"] }
+      ]
+    },
+    {
+      "id": "a2.u06.l05",
+      "kind": "grammar",
+      "title": "Порядок прилагательных",
+      "grammar": "a2.adjective-order",
+      "exercises": [
+        { "id": "a2.u06.l05.e01", "type": "fill_gap", "text": "She is a ___ young woman.", "translation": "Она красивая молодая женщина.", "answers": [["beautiful"]], "options": ["beautiful", "dark", "tall"], "hint": "Мнение — первым.", "explanation": "Правильно: She is a beautiful young woman.", "grammar": ["a2.adjective-order"] },
+        { "id": "a2.u06.l05.e02", "type": "fill_gap", "text": "He has a big ___ dog.", "translation": "У него большая коричневая собака.", "answers": [["brown"]], "options": ["brown", "kind", "slim"], "hint": "Цвет — последним.", "explanation": "Правильно: He has a big brown dog.", "grammar": ["a2.adjective-order"] },
+        { "id": "a2.u06.l05.e03", "type": "fill_gap", "text": "I have a nice ___ flat.", "translation": "У меня хорошая маленькая квартира.", "answers": [["small"]], "options": ["small", "kind", "old"], "hint": "Размер.", "explanation": "Правильно: I have a nice small flat.", "grammar": ["a2.adjective-order"] },
+        { "id": "a2.u06.l05.e04", "type": "fill_gap", "text": "She has ___ hair.", "translation": "У неё длинные волосы.", "answers": [["long"]], "options": ["long", "longs", "a long"], "hint": "Прилагательное не меняется.", "explanation": "Правильно: She has long hair.", "grammar": ["a2.adjective-order"] },
+        { "id": "a2.u06.l05.e05", "type": "error_correction", "text": "He has a brown big dog.", "wrong": "brown big", "correction": "big brown", "options": ["big brown", "small brown", "brown black"], "hint": "Размер раньше цвета.", "explanation": "Правильно: He has a big brown dog.", "grammar": ["a2.adjective-order"], "troubles": ["word-order"] },
+        { "id": "a2.u06.l05.e06", "type": "error_correction", "text": "She is a young beautiful woman.", "wrong": "young beautiful", "correction": "beautiful young", "options": ["beautiful young", "pretty old", "dark young"], "hint": "Мнение раньше возраста.", "explanation": "Правильно: She is a beautiful young woman.", "grammar": ["a2.adjective-order"], "troubles": ["word-order"] },
+        { "id": "a2.u06.l05.e07", "type": "error_correction", "text": "She has a hair long.", "wrong": "a hair long", "correction": "long hair", "options": ["long hair", "hair long", "a long hair"], "hint": "Прилагательное перед существительным.", "explanation": "Правильно: She has long hair.", "grammar": ["a2.adjective-order"], "troubles": ["word-order"] },
+        { "id": "a2.u06.l05.e08", "type": "tiles", "from": "ru", "text": "У него большая чёрная собака.", "answer": "He has a big black dog.", "distractors": ["black big", "is"], "hint": "Размер, потом цвет.", "explanation": "Правильно: He has a big black dog.", "grammar": ["a2.adjective-order"] },
+        { "id": "a2.u06.l05.e09", "type": "tiles", "from": "ru", "text": "Это красивая старая квартира.", "answer": "It is a beautiful old flat.", "distractors": ["old beautiful", "are"], "hint": "Мнение, потом возраст.", "explanation": "Правильно: It is a beautiful old flat.", "grammar": ["a2.adjective-order"] },
+        { "id": "a2.u06.l05.e10", "type": "type_translation", "from": "ru", "text": "Она симпатичная молодая девушка.", "answers": ["She is a pretty young girl."], "hint": "Образец: Pretty + young.", "explanation": "Правильно: She is a pretty young girl.", "grammar": ["a2.adjective-order"] },
+        { "id": "a2.u06.l05.e11", "type": "type_translation", "from": "ru", "text": "У меня есть маленькая коричневая сумка.", "answers": ["I have a small brown bag."], "hint": "Размер, потом цвет.", "explanation": "Правильно: I have a small brown bag.", "grammar": ["a2.adjective-order"] },
+        { "id": "a2.u06.l05.e12", "type": "listen_choice", "audio": "He is a handsome young man.", "question": "Что вы слышите?", "options": ["He is a handsome young man.", "He is a young handsome man.", "He is a handsome old man."], "answer": 0, "hint": "Мнение, потом возраст.", "explanation": "Правильно: He is a handsome young man.", "grammar": ["a2.adjective-order"] },
+        { "id": "a2.u06.l05.e13", "type": "listen_dictation", "text": "I have a big brown dog.", "hint": "Шесть слов.", "explanation": "I have a big brown dog — «у меня большая коричневая собака»." },
+        { "id": "a2.u06.l05.e14", "type": "speak_repeat", "text": "She is a beautiful young woman with long dark hair.", "hint": "Говорите плавно.", "explanation": "Правильно: Beautiful [ˈbjuːtɪfəl], young [jʌŋ]." }
+      ]
+    },
+    {
+      "id": "a2.u06.l06",
+      "kind": "listening",
+      "title": "Как она выглядит?",
+      "textId": "a2.u06.sister",
+      "exercises": [
+        {
+          "id": "a2.u06.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "a2.u06.sister",
+          "hint": "Слушайте внешность и характер сестры.",
+          "explanation": "Сестра Анны высокая и стройная, у неё длинные тёмные волосы, карие глаза и очки. Она добрая, тихая, застенчивая, умная и смешная.",
+          "questions": [
+            { "kind": "mcq", "question": "Какие у неё волосы?", "options": ["long and dark", "short and blond", "curly and brown"], "answer": 0, "explanation": "Анна говорит: She has long dark hair." },
+            { "kind": "mcq", "question": "Сколько ей лет?", "options": ["twenty-five", "twenty", "thirty"], "answer": 0, "explanation": "Анна говорит: She is twenty-five." },
+            { "kind": "mcq", "question": "Что она носит?", "options": ["glasses", "a hat", "a coat"], "answer": 0, "explanation": "Анна говорит: She wears glasses." },
+            { "kind": "tfn", "statement": "Anna's sister is shy.", "answer": "true", "explanation": "Анна говорит: she is shy." },
+            { "kind": "tfn", "statement": "Anna's sister is short.", "answer": "false", "explanation": "Анна говорит: She is tall and slim." },
+            { "kind": "tfn", "statement": "Tom knows Anna's sister.", "answer": "not_given", "explanation": "Знаком ли Том с сестрой, не сказано." }
+          ]
+        },
+        { "id": "a2.u06.l06.e02", "type": "listen_choice", "audio": "What does she look like?", "question": "Что вы слышите?", "options": ["What does she look like?", "What is she like?", "Who is she?"], "answer": 0, "hint": "О внешности.", "explanation": "What does she look like? — «Как она выглядит?»", "grammar": ["a2.look-like"] },
+        { "id": "a2.u06.l06.e03", "type": "listen_dictation", "text": "She is tall and slim.", "hint": "Пять слов.", "explanation": "She is tall and slim — «она высокая и стройная»." },
+        { "id": "a2.u06.l06.e04", "type": "listen_dictation", "text": "She has long dark hair and brown eyes.", "hint": "Восемь слов.", "explanation": "She has long dark hair and brown eyes — «у неё длинные тёмные волосы и карие глаза»." },
+        { "id": "a2.u06.l06.e05", "type": "fill_gap", "text": "She is kind and ___, but she is shy.", "translation": "Она добрая и тихая, но застенчивая.", "answers": [["quiet"]], "options": ["quiet", "serious", "lazy"], "hint": "Не шумит.", "explanation": "Правильно: She is kind and quiet.", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l06.e06", "type": "fill_gap", "text": "She ___ glasses.", "translation": "Она носит очки.", "answers": [["wears"]], "options": ["wears", "has", "is"], "hint": "Очки надевают.", "explanation": "Правильно: She wears glasses.", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l06.e07", "type": "tiles", "from": "ru", "text": "Какая она по характеру?", "answer": "What is she like?", "distractors": ["does", "look"], "hint": "Образец: What is … like.", "explanation": "Правильно: What is she like?", "grammar": ["a2.look-like"] },
+        { "id": "a2.u06.l06.e08", "type": "type_translation", "from": "ru", "text": "Она тебе улыбнётся.", "answers": ["She will smile at you."], "hint": "Образец: Will + smile.", "explanation": "Правильно: She will smile at you.", "grammar": ["a2.will"] },
+        { "id": "a2.u06.l06.e09", "type": "speak_answer", "question": "What is your sister like?", "questionRu": "Какая ваша сестра (брат, друг) по характеру? Ответьте: She is kind. He is quiet.", "keywords": [["\\b(he|she|my [a-z]+) (is|are)\\b"], ["\\b(kind|funny|quiet|shy|clever|lazy|polite|serious|honest|friendly)\\b"]], "minKeywords": 2, "samples": ["She is kind and funny.", "He is quiet and clever."], "difficulty": 3, "hint": "Образец: She is… and…", "explanation": "Ответ: She is kind and funny.", "grammar": ["a2.look-like"] },
+        { "id": "a2.u06.l06.e10", "type": "speak_repeat", "text": "She is kind and quiet, but she is shy.", "hint": "Две части с but.", "explanation": "Quiet [ˈkwaɪət] — три звука в двух слогах." }
+      ]
+    },
+    {
+      "id": "a2.u06.l07",
+      "kind": "writing",
+      "title": "Мой брат-близнец",
+      "textId": "a2.u06.twin",
+      "exercises": [
+        {
+          "id": "a2.u06.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "a2.u06.twin",
+          "hint": "Сравните характеры братьев.",
+          "explanation": "Братья похожи внешне, но разные по характеру: автор серьёзный и тихий, Иван смешной и дружелюбный. Теперь у Ивана борода.",
+          "questions": [
+            { "kind": "mcq", "question": "Какие у братьев волосы и глаза?", "options": ["short dark hair and brown eyes", "long blond hair and blue eyes", "curly hair and green eyes"], "answer": 0, "explanation": "В тексте: short dark hair and brown eyes." },
+            { "kind": "mcq", "question": "Какой Иван?", "options": ["funny and friendly", "serious and quiet", "honest and polite"], "answer": 0, "explanation": "В тексте: Ivan is funny and friendly." },
+            { "kind": "mcq", "question": "Что у Ивана теперь?", "options": ["a beard", "glasses", "long hair"], "answer": 0, "explanation": "В тексте: Now Ivan has a beard." },
+            { "kind": "tfn", "statement": "The writer is shy.", "answer": "not_given", "explanation": "Про застенчивость автора не сказано, он тихий и серьёзный." },
+            { "kind": "tfn", "statement": "Ivan is lazy on Sunday.", "answer": "true", "explanation": "В тексте: On Sunday he is lazy." },
+            { "kind": "tfn", "statement": "The twins are short.", "answer": "false", "explanation": "В тексте: we are tall." }
+          ]
+        },
+        { "id": "a2.u06.l07.e02", "type": "translate_choice", "from": "en", "text": "We look like twins.", "options": ["Мы выглядим как близнецы.", "Мы смотрим на близнецов.", "Мы любим близнецов."], "answer": 0, "hint": "Look like — «выглядеть как».", "explanation": "We look like twins — «мы выглядим как близнецы»." },
+        { "id": "a2.u06.l07.e03", "type": "fill_gap", "text": "Ivan ___ never shy.", "translation": "Иван никогда не стесняется.", "answers": [["is"]], "options": ["is", "has", "does"], "hint": "Слово never стоит после be.", "explanation": "Правильно: Ivan is never shy.", "grammar": ["a1.frequency"] },
+        { "id": "a2.u06.l07.e04", "type": "fill_gap", "text": "Now Ivan ___ a beard.", "translation": "Теперь у Ивана борода.", "answers": [["has"]], "options": ["has", "is", "wears"], "hint": "Борода — с have.", "explanation": "Правильно: Now Ivan has a beard.", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l07.e05", "type": "type_translation", "from": "ru", "text": "Я серьёзный и тихий, а мой брат смешной и дружелюбный.", "answers": ["I am serious and quiet, but my brother is funny and friendly.", "I am serious and quiet and my brother is funny and friendly."], "difficulty": 3, "hint": "Две части с but.", "explanation": "Правильно: I am serious and quiet, but my brother is funny and friendly.", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l07.e06", "type": "speak_describe", "picture": { "emoji": "👨‍👩‍👧" }, "situation": "Опишите двух людей из вашей семьи: как они выглядят и какие у них характеры.", "keywords": [["\\b(he|she|my [a-z]+) (is|has)\\b"], ["\\b(tall|short|slim|hair|eyes|kind|quiet|funny|serious|shy|friendly)\\b"]], "minKeywords": 2, "samples": ["My mother is tall and she has dark hair. She is kind. My father is serious and quiet."], "difficulty": 3, "hint": "Образец: My mother is… She has…", "explanation": "Опишите внешность с is и has, характер — с is.", "grammar": ["a2.describing-people"] },
+        { "id": "a2.u06.l07.e07", "type": "speak_answer", "question": "What do you look like?", "questionRu": "Как вы выглядите? Ответьте: I am tall. I have short dark hair.", "keywords": [["\\bI (am|have)\\b"], ["\\b(tall|short|slim|hair|eyes|beard|young)\\b"]], "minKeywords": 2, "samples": ["I am tall and I have short hair.", "I have brown eyes."], "difficulty": 3, "hint": "Образец: I am… I have…", "explanation": "Ответ: I am tall and I have short hair.", "grammar": ["a2.describing-people"] },
+        {
+          "id": "a2.u06.l07.e08",
+          "type": "write",
+          "task": "Опишите близкого человека: как он выглядит (рост, волосы, глаза) и какой у него характер. Сравните его с собой. Например: My friend is tall and slim. He has short dark hair. He is kind and funny, but I am quiet.",
+          "minWords": 40,
+          "maxWords": 110,
+          "criteria": [
+            { "id": "looks", "label": "Есть внешность: tall, hair, eyes", "patterns": ["\\b(tall|short|slim|hair|eyes|beard|young|old|blond|dark|curly|long)\\b"] },
+            { "id": "has", "label": "Есть has или have", "patterns": ["\\b(has|have)\\b"] },
+            { "id": "character", "label": "Есть характер: kind, quiet, funny", "patterns": ["\\b(kind|quiet|funny|shy|clever|lazy|polite|serious|honest|friendly)\\b"] },
+            { "id": "contrast", "label": "Есть сравнение: but или and", "patterns": ["\\b(but|and)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\b(is|are) (long|short|dark|blond|curly) (hair|eyes)\\b", "message": "Волосы и глаза описывают с has или have: She has long hair." },
+            { "pattern": "\\b(has|have) (tall|slim|kind|quiet|funny|shy|clever|lazy)\\b", "message": "Рост и характер описывают с be: He is tall, she is kind." },
+            { "pattern": "\\b(she|he) have\\b", "message": "С he и she — has: she has long hair." },
+            { "pattern": "\\bhow (does|do) [a-z]+ look like\\b", "message": "Вопрос о внешности: What does she look like?" },
+            { "pattern": "\\blooks like (tired|happy|sad|young|old)\\b", "message": "После looks — прилагательное без like: she looks tired." }
+          ],
+          "samples": [
+            "My friend Elena is tall and slim. She has long dark hair and brown eyes. She is kind and funny, but she is shy. I am quiet and serious. We look different, but we are good friends. She always smiles and she is polite.",
+            "My neighbor is a handsome young man. He is short and he has blond hair and a beard. He is friendly and clever. He looks like my brother. My brother is lazy on Sunday, but my neighbor is always busy."
+          ],
+          "difficulty": 3,
+          "hint": "План: кто → внешность → характер → сравнение.",
+          "explanation": "Внешность: is + рост, has + волосы и глаза. Характер: is + прилагательное. Для сравнения — but.",
+          "grammar": ["a2.describing-people", "a2.look-like", "a2.adjective-order"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "a2.u06.test.e01", "type": "match_pairs", "pairs": [{ "en": "tall", "ru": "высокий" }, { "en": "beard", "ru": "борода" }, { "en": "kind", "ru": "добрый" }, { "en": "lazy", "ru": "ленивый" }, { "en": "boss", "ru": "начальник" }], "hint": "Смесь внешности и характера.", "explanation": "Tall — высокий, beard — борода, kind — добрый, lazy — ленивый, boss — начальник." },
+      { "id": "a2.u06.test.e02", "type": "translate_choice", "from": "ru", "text": "застенчивый", "options": ["shy", "polite", "honest"], "answer": 0, "hint": "Смущается незнакомых.", "explanation": "Shy [ʃaɪ] — «застенчивый»." },
+      { "id": "a2.u06.test.e03", "type": "fill_gap", "text": "She ___ long dark hair.", "translation": "У неё длинные тёмные волосы.", "answers": [["has"]], "options": ["has", "is", "have"], "hint": "Волосы.", "explanation": "Правильно: She has long dark hair.", "grammar": ["a2.describing-people"] },
+      { "id": "a2.u06.test.e04", "type": "fill_gap", "text": "He ___ tall and slim.", "translation": "Он высокий и стройный.", "answers": [["is"]], "options": ["is", "has", "have"], "hint": "Рост.", "explanation": "Правильно: He is tall and slim.", "grammar": ["a2.describing-people"] },
+      { "id": "a2.u06.test.e05", "type": "fill_gap", "text": "What ___ she look like?", "translation": "Как она выглядит?", "answers": [["does"]], "options": ["does", "is", "do"], "hint": "О внешности.", "explanation": "Правильно: What does she look like?", "grammar": ["a2.look-like"] },
+      { "id": "a2.u06.test.e06", "type": "fill_gap", "text": "She ___ tired today.", "translation": "Сегодня она выглядит уставшей.", "answers": [["looks"]], "options": ["looks", "look", "looks like"], "hint": "С she — окончание.", "explanation": "Правильно: She looks tired today.", "grammar": ["a2.look-like"] },
+      { "id": "a2.u06.test.e07", "type": "fill_gap", "text": "He has a big ___ dog.", "translation": "У него большая коричневая собака.", "answers": [["brown"]], "options": ["brown", "kind", "slim"], "hint": "Цвет последним.", "explanation": "Правильно: He has a big brown dog.", "grammar": ["a2.adjective-order"] },
+      { "id": "a2.u06.test.e08", "type": "fill_gap", "text": "She is a ___ young woman.", "translation": "Она красивая молодая женщина.", "answers": [["beautiful"]], "options": ["beautiful", "dark", "tall"], "hint": "Мнение первым.", "explanation": "Правильно: She is a beautiful young woman.", "grammar": ["a2.adjective-order"] },
+      { "id": "a2.u06.test.e09", "type": "error_correction", "text": "She is long dark hair.", "wrong": "is", "correction": "has", "options": ["has", "have", "wears"], "hint": "Другой глагол.", "explanation": "Правильно: She has long dark hair.", "grammar": ["a2.describing-people"] },
+      { "id": "a2.u06.test.e10", "type": "error_correction", "text": "She looks like tired.", "wrong": "like tired", "correction": "tired", "options": ["tired", "like tired", "for tired"], "hint": "Лишнее слово.", "explanation": "Правильно: She looks tired.", "grammar": ["a2.look-like"] },
+      { "id": "a2.u06.test.e11", "type": "error_correction", "text": "He has a brown big dog.", "wrong": "brown big", "correction": "big brown", "options": ["big brown", "small brown", "brown black"], "hint": "Размер раньше цвета.", "explanation": "Правильно: He has a big brown dog.", "grammar": ["a2.adjective-order"] },
+      { "id": "a2.u06.test.e12", "type": "listen_choice", "audio": "My boss is serious but polite.", "question": "Что вы слышите?", "options": ["My boss is serious but polite.", "My boss is funny and polite.", "My boss is lazy but honest."], "answer": 0, "hint": "Строгий начальник.", "explanation": "Правильно: My boss is serious but polite.", "grammar": ["a2.describing-people"] },
+      { "id": "a2.u06.test.e13", "type": "listen_dictation", "text": "He has brown eyes and a beard.", "hint": "Семь слов.", "explanation": "He has brown eyes and a beard — «у него карие глаза и борода»." },
+      { "id": "a2.u06.test.e14", "type": "tiles", "from": "ru", "text": "Какой он по характеру?", "answer": "What is he like?", "distractors": ["does", "look"], "difficulty": 2, "hint": "Образец: What is … like.", "explanation": "Правильно: What is he like?", "grammar": ["a2.look-like"] },
+      { "id": "a2.u06.test.e15", "type": "type_translation", "from": "ru", "text": "У моей сестры кудрявые волосы.", "answers": ["My sister has curly hair."], "difficulty": 2, "hint": "Образец: Has + curly hair.", "explanation": "Правильно: My sister has curly hair.", "grammar": ["a2.describing-people"] },
+      { "id": "a2.u06.test.e16", "type": "speak_repeat", "text": "She is tall and slim and she has long dark hair.", "hint": "Две части.", "explanation": "Правильно: Slim [slɪm], dark [dɑːrk]." }
+    ]
+  }
+}
