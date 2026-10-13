@@ -77,16 +77,17 @@ describe('Path', () => {
     expect(screen.getByText('Pre-A1 · С нуля')).toBeOnTheScreen();
     expect(screen.getByText('A1 · Начальный')).toBeOnTheScreen();
     expect(screen.getByText('Модуль 1 · Я и другие')).toBeOnTheScreen();
-    const planned = getCourse()
+    const unfinished = getCourse()
       .levels.flatMap((l) => l.modules)
-      .flatMap((m) => m.planned)[0]!;
-    const number = Number(planned.id.split('.u')[1]);
-    expect(screen.getByLabelText(`Юнит ${number}: ${planned.title.ru}. Скоро.`)).toBeOnTheScreen();
-    const unfinishedModules = getCourse()
-      .levels.flatMap((l) => l.modules)
-      .filter((m) => m.planned.length > 0).length;
-    expect(screen.getAllByText(/Появится, когда будут готовы все юниты модуля/)).toHaveLength(
-      unfinishedModules,
+      .filter((m) => m.planned.length > 0);
+    // Units that are still being written show as «Скоро»; a finished course has none.
+    const first = unfinished[0]?.planned[0];
+    if (first) {
+      const number = Number(first.id.split('.u')[1]);
+      expect(screen.getByLabelText(`Юнит ${number}: ${first.title.ru}. Скоро.`)).toBeOnTheScreen();
+    }
+    expect(screen.queryAllByText(/Появится, когда будут готовы все юниты модуля/)).toHaveLength(
+      unfinished.length,
     );
     expect(screen.getByText('Экзамен уровня A1')).toBeOnTheScreen();
   });

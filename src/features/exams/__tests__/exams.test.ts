@@ -126,6 +126,15 @@ describe('sessionForExam', () => {
     expect(units.size).toBeGreaterThanOrEqual(8);
   });
 
+  it('builds an exam for every level that is fully written', () => {
+    const ready = getCourse().levels.filter((l) => isLevelReady(l));
+    expect(ready.map((l) => l.level)).toEqual(expect.arrayContaining(['PA1', 'A1', 'A2']));
+    for (const level of ready) {
+      const session = sessionForExam(`${level.level.toLowerCase()}.exam`, 's')!;
+      expect(session.exercises).toHaveLength(LEVEL_EXAM.size);
+    }
+  });
+
   it('builds the test of the second A1 module from its own units', () => {
     const module = getCourse().levels.find((l) => l.level === 'A1')!.modules[1]!;
     expect(isModuleReady(module)).toBe(true);
