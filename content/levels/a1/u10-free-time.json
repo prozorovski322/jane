@@ -1,0 +1,298 @@
+{
+  "id": "a1.u10",
+  "level": "A1",
+  "order": 10,
+  "title": { "en": "Free time", "ru": "Свободное время" },
+  "description": "Рассказываем о хобби и свободном времени: что мы любим, как часто это делаем, что умеем и куда зовём друзей. Always, often, never, can и приглашения Let's.",
+  "goals": [
+    "Могу рассказать о хобби и спорте: I play football. I like music.",
+    "Могу сказать, как часто что-то делаю: I often play tennis. I never work on Sunday.",
+    "Могу сказать, что умею: I can swim. She can't play the piano.",
+    "Могу пригласить друга: Let's play tennis. Do you want to go to the cinema?",
+    "Могу согласиться или вежливо отказаться: Good idea! Sorry, I can't.",
+    "Могу написать короткий рассказ о своём свободном времени."
+  ],
+  "grammar": ["a1.frequency", "a1.can-ability", "a1.invitations"],
+  "troubles": ["word-order", "articles"],
+  "words": [
+    { "id": "free-time", "en": "free time", "ipa": "friː taɪm", "pos": "noun", "ru": ["свободное время"], "example": { "en": "I play tennis in my free time.", "ru": "В свободное время я играю в теннис." }, "topics": ["leisure"] },
+    { "id": "hobby", "en": "hobby", "ipa": "ˈhɑːbi", "pos": "noun", "ru": ["хобби"], "example": { "en": "My hobby is music.", "ru": "Моё хобби — музыка." }, "forms": { "plural": "hobbies" }, "topics": ["leisure"] },
+    { "id": "sport", "en": "sport", "ipa": "spɔːrt", "pos": "noun", "ru": ["спорт", "вид спорта"], "example": { "en": "Tennis is a good sport.", "ru": "Теннис — хороший спорт." }, "topics": ["leisure"] },
+    { "id": "football", "en": "football", "ipa": "ˈfʊtbɔːl", "pos": "noun", "ru": ["футбол"], "example": { "en": "I play football on Saturday.", "ru": "По субботам я играю в футбол." }, "note": "Football — в британском английском это игра, которую в США называют soccer.", "picture": { "emoji": "⚽" }, "topics": ["leisure"] },
+    { "id": "tennis", "en": "tennis", "ipa": "ˈtenɪs", "pos": "noun", "ru": ["теннис"], "example": { "en": "We play tennis in the park.", "ru": "Мы играем в теннис в парке." }, "picture": { "emoji": "🎾" }, "topics": ["leisure"] },
+    { "id": "chess", "en": "chess", "ipa": "tʃes", "pos": "noun", "ru": ["шахматы"], "example": { "en": "My brother plays chess.", "ru": "Мой брат играет в шахматы." }, "note": "Chess — слово единственного числа: chess is, а не chess are.", "picture": { "emoji": "♟️" }, "topics": ["leisure"] },
+    { "id": "game", "en": "game", "ipa": "ɡeɪm", "pos": "noun", "ru": ["игра"], "example": { "en": "I like this game.", "ru": "Мне нравится эта игра." }, "topics": ["leisure"] },
+    { "id": "guitar", "en": "guitar", "ipa": "ɡɪˈtɑːr", "pos": "noun", "ru": ["гитара"], "example": { "en": "He can play the guitar.", "ru": "Он умеет играть на гитаре." }, "picture": { "emoji": "🎸" }, "topics": ["leisure"] },
+    { "id": "piano", "en": "piano", "ipa": "piˈænoʊ", "pos": "noun", "ru": ["пианино"], "example": { "en": "She plays the piano every day.", "ru": "Она играет на пианино каждый день." }, "picture": { "emoji": "🎹" }, "topics": ["leisure"] },
+    { "id": "film", "en": "film", "ipa": "fɪlm", "pos": "noun", "ru": ["фильм"], "example": { "en": "We watch a film on Friday.", "ru": "В пятницу мы смотрим фильм." }, "picture": { "emoji": "🎬" }, "topics": ["leisure"] },
+    { "id": "swim", "en": "swim", "ipa": "swɪm", "pos": "verb", "ru": ["плавать"], "example": { "en": "I can swim.", "ru": "Я умею плавать." }, "forms": { "third": "swims", "ing": "swimming" }, "topics": ["verbs"] },
+    { "id": "draw", "en": "draw", "ipa": "drɔː", "pos": "verb", "ru": ["рисовать"], "example": { "en": "She can draw well.", "ru": "Она хорошо рисует." }, "forms": { "third": "draws" }, "topics": ["verbs"] },
+    { "id": "party", "en": "party", "ipa": "ˈpɑːrti", "pos": "noun", "ru": ["вечеринка"], "example": { "en": "There is a party on Saturday.", "ru": "В субботу будет вечеринка." }, "forms": { "plural": "parties" }, "topics": ["leisure"] },
+    { "id": "birthday", "en": "birthday", "ipa": "ˈbɝːθdeɪ", "pos": "noun", "ru": ["день рождения"], "example": { "en": "My birthday is on Friday.", "ru": "У меня день рождения в пятницу." }, "topics": ["leisure"] },
+    { "id": "together", "en": "together", "ipa": "təˈɡeðɚ", "pos": "adv", "ru": ["вместе"], "example": { "en": "We play tennis together.", "ru": "Мы играем в теннис вместе." }, "topics": ["leisure"] },
+    { "id": "well", "en": "well", "ipa": "wel", "pos": "adv", "ru": ["хорошо"], "example": { "en": "She can swim well.", "ru": "Она хорошо плавает." }, "note": "Хорошо — well, а не good. Good — это «хороший»: a good player — can play well.", "topics": ["adverbs"] },
+    { "id": "always", "en": "always", "ipa": "ˈɔːlweɪz", "pos": "adv", "ru": ["всегда"], "example": { "en": "I always get up at seven.", "ru": "Я всегда встаю в семь." }, "topics": ["frequency"] },
+    { "id": "usually", "en": "usually", "ipa": "ˈjuːʒuəli", "pos": "adv", "ru": ["обычно"], "example": { "en": "I usually have breakfast at eight.", "ru": "Обычно я завтракаю в восемь." }, "topics": ["frequency"] },
+    { "id": "often", "en": "often", "ipa": "ˈɔːfən", "pos": "adv", "ru": ["часто"], "example": { "en": "I often play football.", "ru": "Я часто играю в футбол." }, "topics": ["frequency"] },
+    { "id": "sometimes", "en": "sometimes", "ipa": "ˈsʌmtaɪmz", "pos": "adv", "ru": ["иногда"], "example": { "en": "We sometimes go to the cinema.", "ru": "Мы иногда ходим в кино." }, "topics": ["frequency"] },
+    { "id": "never", "en": "never", "ipa": "ˈnevɚ", "pos": "adv", "ru": ["никогда"], "example": { "en": "He never works on Sunday.", "ru": "Он никогда не работает в воскресенье." }, "topics": ["frequency"] },
+    { "id": "lets", "en": "let's", "ipa": "lets", "pos": "phrase", "ru": ["давайте"], "example": { "en": "Let's play tennis.", "ru": "Давайте сыграем в теннис." }, "note": "Let's — сокращение от let us. После него идёт глагол без to.", "topics": ["invitations"] },
+    { "id": "idea", "en": "idea", "ipa": "aɪˈdiːə", "pos": "noun", "ru": ["идея"], "example": { "en": "Good idea!", "ru": "Хорошая идея!" }, "topics": ["invitations"] },
+    { "id": "sure", "en": "sure", "ipa": "ʃʊr", "pos": "adv", "ru": ["конечно"], "example": { "en": "Sure! I can come.", "ru": "Конечно! Я могу прийти." }, "topics": ["invitations"] }
+  ],
+  "texts": [
+    {
+      "id": "a1.u10.invite",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Let's play tennis", "ru": "Давай сыграем в теннис" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Tom, what do you do in your free time?", "ru": "Том, что ты делаешь в свободное время?" },
+        { "speaker": "tom", "en": "I often play football. Sometimes I play the guitar.", "ru": "Я часто играю в футбол. Иногда играю на гитаре." },
+        { "speaker": "anna", "en": "Great! Do you like tennis?", "ru": "Здорово! Ты любишь теннис?" },
+        { "speaker": "tom", "en": "Yes, but I can't play tennis well.", "ru": "Да, но я не умею хорошо играть в теннис." },
+        { "speaker": "anna", "en": "Let's play together on Saturday.", "ru": "Давай сыграем вместе в субботу." },
+        { "speaker": "tom", "en": "Good idea! What time?", "ru": "Хорошая идея! Во сколько?" },
+        { "speaker": "anna", "en": "At ten o'clock, in the park.", "ru": "В десять часов, в парке." },
+        { "speaker": "tom", "en": "Sure! See you on Saturday.", "ru": "Конечно! Увидимся в субботу." }
+      ]
+    },
+    {
+      "id": "a1.u10.max-weekend",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "Max's free time", "ru": "Свободное время Макса" },
+      "lines": [
+        { "en": "Max is a designer, but he always has free time on Saturday and Sunday. He never works at the weekend.", "ru": "Макс — дизайнер, но у него всегда есть свободное время в субботу и воскресенье. В выходные он никогда не работает." },
+        { "en": "He often plays tennis in the park, and sometimes he plays chess with his friend. He can draw, and he can play the guitar well.", "ru": "Он часто играет в теннис в парке, а иногда играет в шахматы с другом. Он умеет рисовать и хорошо играет на гитаре." },
+        { "en": "His sister can swim, but she can't play tennis. In the evening they usually watch a film together. On Friday it is his birthday, and there is a party.", "ru": "Его сестра умеет плавать, но не умеет играть в теннис. Вечером они обычно вместе смотрят фильм. В пятницу у него день рождения, и будет вечеринка." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "a1.u10.l01",
+      "kind": "vocabulary",
+      "title": "Хобби и спорт",
+      "exercises": [
+        { "id": "a1.u10.l01.e01", "type": "match_pairs", "pairs": [{ "en": "football", "ru": "футбол" }, { "en": "tennis", "ru": "теннис" }, { "en": "chess", "ru": "шахматы" }, { "en": "sport", "ru": "спорт" }, { "en": "game", "ru": "игра" }], "hint": "Все слова про игры и спорт.", "explanation": "Football — футбол, tennis — теннис, chess — шахматы, sport — спорт, game — игра." },
+        { "id": "a1.u10.l01.e02", "type": "match_pairs", "pairs": [{ "en": "guitar", "ru": "гитара" }, { "en": "piano", "ru": "пианино" }, { "en": "music", "ru": "музыка" }, { "en": "film", "ru": "фильм" }, { "en": "party", "ru": "вечеринка" }], "hint": "Первые два слова — музыкальные инструменты.", "explanation": "Guitar — гитара, piano — пианино, music — музыка, film — фильм, party — вечеринка." },
+        { "id": "a1.u10.l01.e03", "type": "match_pairs", "pairs": [{ "en": "swim", "ru": "плавать" }, { "en": "draw", "ru": "рисовать" }, { "en": "sing", "ru": "петь" }, { "en": "dance", "ru": "танцевать" }, { "en": "hobby", "ru": "хобби" }], "hint": "Swim, draw, sing и dance — занятия.", "explanation": "Swim — плавать, draw — рисовать, sing — петь, dance — танцевать, hobby — хобби." },
+        { "id": "a1.u10.l01.e04", "type": "picture_choice", "mode": "picture-to-word", "word": "football", "distractors": ["tennis", "chess"], "hint": "В неё играют ногами.", "explanation": "Football — «футбол»: [ˈfʊtbɔːl]." },
+        { "id": "a1.u10.l01.e05", "type": "picture_choice", "mode": "picture-to-word", "word": "guitar", "distractors": ["piano", "film"], "hint": "У неё шесть струн.", "explanation": "Guitar — «гитара»: [ɡɪˈtɑːr]." },
+        { "id": "a1.u10.l01.e06", "type": "picture_choice", "mode": "word-to-picture", "word": "tennis", "distractors": ["football", "chess"], "hint": "Играют ракеткой.", "explanation": "Tennis — «теннис»: [ˈtenɪs]." },
+        { "id": "a1.u10.l01.e07", "type": "picture_choice", "mode": "word-to-picture", "word": "piano", "distractors": ["guitar", "film"], "hint": "У него клавиши.", "explanation": "Piano — «пианино»: [piˈænoʊ]." },
+        { "id": "a1.u10.l01.e08", "type": "translate_choice", "from": "ru", "text": "свободное время", "options": ["free time", "work time", "night time"], "answer": 0, "hint": "Это время, когда не работаешь.", "explanation": "Free time — «свободное время»." },
+        { "id": "a1.u10.l01.e09", "type": "translate_choice", "from": "en", "text": "birthday", "options": ["день рождения", "вечеринка", "праздник"], "answer": 0, "hint": "Birth — «рождение».", "explanation": "Birthday [ˈbɝːθdeɪ] — «день рождения»." },
+        { "id": "a1.u10.l01.e10", "type": "fill_gap", "text": "I play ___ on Saturday.", "translation": "По субботам я играю в футбол.", "answers": [["football", "tennis", "chess"]], "options": ["football", "the football", "a football"], "hint": "Для игры артикль не нужен.", "explanation": "I play football. С играми и спортом артикль не нужен.", "troubles": ["articles"] },
+        { "id": "a1.u10.l01.e11", "type": "fill_gap", "text": "He can play the ___.", "translation": "Он умеет играть на гитаре.", "answers": [["guitar", "piano"]], "options": ["guitar", "football", "chess"], "hint": "Инструмент — перед ним the.", "explanation": "He can play the guitar. С инструментами — the." },
+        { "id": "a1.u10.l01.e12", "type": "listen_choice", "audio": "guitar", "question": "Что вы слышите?", "options": ["guitar", "piano", "party"], "answer": 0, "hint": "Первый звук — [ɡ].", "explanation": "Guitar [ɡɪˈtɑːr] — «гитара»: ударение на втором слоге." },
+        { "id": "a1.u10.l01.e13", "type": "listen_dictation", "text": "We play tennis together.", "hint": "Четыре слова.", "explanation": "We play tennis together — «мы играем в теннис вместе»." },
+        { "id": "a1.u10.l01.e14", "type": "word_stress", "word": "guitar", "syllables": ["gui", "tar"], "stress": 1, "hint": "Ударение на втором слоге.", "explanation": "gui-TAR — ударение на второй слог." }
+      ]
+    },
+    {
+      "id": "a1.u10.l02",
+      "kind": "vocabulary",
+      "title": "Как часто?",
+      "grammar": "a1.frequency",
+      "exercises": [
+        { "id": "a1.u10.l02.e01", "type": "match_pairs", "pairs": [{ "en": "always", "ru": "всегда" }, { "en": "usually", "ru": "обычно" }, { "en": "often", "ru": "часто" }, { "en": "sometimes", "ru": "иногда" }, { "en": "never", "ru": "никогда" }], "hint": "Слова идут по убыванию частоты.", "explanation": "Always — всегда, usually — обычно, often — часто, sometimes — иногда, never — никогда." },
+        { "id": "a1.u10.l02.e02", "type": "match_pairs", "pairs": [{ "en": "together", "ru": "вместе" }, { "en": "well", "ru": "хорошо" }, { "en": "party", "ru": "вечеринка" }, { "en": "idea", "ru": "идея" }, { "en": "sure", "ru": "конечно" }], "hint": "Idea очень похоже на русское слово.", "explanation": "Together — вместе, well — хорошо, party — вечеринка, idea — идея, sure — конечно." },
+        { "id": "a1.u10.l02.e03", "type": "translate_choice", "from": "ru", "text": "иногда", "options": ["sometimes", "always", "never"], "answer": 0, "hint": "Не всегда и не никогда.", "explanation": "Sometimes — «иногда»." },
+        { "id": "a1.u10.l02.e04", "type": "translate_choice", "from": "en", "text": "often", "options": ["часто", "редко", "иногда"], "answer": 0, "hint": "Много раз.", "explanation": "Often [ˈɔːfən] — «часто». T в этом слове обычно не читают." },
+        { "id": "a1.u10.l02.e05", "type": "fill_gap", "text": "I ___ get up at seven.", "translation": "Я всегда встаю в семь.", "answers": [["always"]], "options": ["always", "never", "sometimes"], "hint": "Каждый день без исключения.", "explanation": "I always get up at seven. Always — «всегда».", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l02.e06", "type": "fill_gap", "text": "I ___ work on Sunday.", "translation": "Я никогда не работаю в воскресенье.", "answers": [["never"]], "options": ["never", "always", "often"], "hint": "Ни разу.", "explanation": "I never work on Sunday. Never — «никогда».", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l02.e07", "type": "fill_gap", "text": "We ___ go to the cinema.", "translation": "Мы иногда ходим в кино.", "answers": [["sometimes"]], "options": ["sometimes", "always", "never"], "hint": "Бывает, но не часто.", "explanation": "Правильно: We sometimes go to the cinema.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l02.e08", "type": "tiles", "from": "ru", "text": "Я часто играю в футбол.", "answer": "I often play football.", "distractors": ["plays", "the"], "hint": "Often стоит перед глаголом.", "explanation": "Правильно: I often play football.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l02.e09", "type": "type_translation", "from": "ru", "text": "Мы играем вместе.", "answers": ["We play together."], "hint": "Три слова.", "explanation": "Правильно: We play together.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l02.e10", "type": "listen_choice", "audio": "I never play chess.", "question": "Что вы слышите?", "options": ["I never play chess.", "I often play chess.", "I always play chess."], "answer": 0, "hint": "Слово после I — отрицание.", "explanation": "I never play chess — «я никогда не играю в шахматы».", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l02.e11", "type": "listen_dictation", "text": "I usually have breakfast at eight.", "hint": "Шесть слов.", "explanation": "I usually have breakfast at eight — «обычно я завтракаю в восемь»." },
+        { "id": "a1.u10.l02.e12", "type": "word_stress", "word": "sometimes", "syllables": ["some", "times"], "stress": 0, "hint": "Ударение на первом слоге.", "explanation": "SOME-times — ударение на первый слог." },
+        { "id": "a1.u10.l02.e13", "type": "speak_repeat", "text": "I always get up at seven and I never work on Sunday.", "hint": "Две части.", "explanation": "Always [ˈɔːlweɪz] и never [ˈnevɚ]: ударение на первый слог." }
+      ]
+    },
+    {
+      "id": "a1.u10.l03",
+      "kind": "grammar",
+      "title": "Always, often, never: где стоит слово",
+      "grammar": "a1.frequency",
+      "exercises": [
+        { "id": "a1.u10.l03.e01", "type": "fill_gap", "text": "I ___ play tennis.", "translation": "Я часто играю в теннис.", "answers": [["often"]], "options": ["often", "never", "always"], "hint": "Много раз, но не всегда.", "explanation": "Правильно: I often play tennis.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l03.e02", "type": "fill_gap", "text": "She is ___ late.", "translation": "Она никогда не опаздывает.", "answers": [["never"]], "options": ["never", "always", "often"], "hint": "Ни разу.", "explanation": "She is never late. После be слово стоит после глагола.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l03.e03", "type": "fill_gap", "text": "He ___ goes to the park on Sunday.", "translation": "Обычно он ходит в парк в воскресенье.", "answers": [["usually"]], "options": ["usually", "never", "well"], "hint": "Почти всегда.", "explanation": "Правильно: He usually goes to the park on Sunday.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l03.e04", "type": "fill_gap", "text": "We are ___ at home on Sunday.", "translation": "Мы всегда дома в воскресенье.", "answers": [["always"]], "options": ["always", "never", "sometimes"], "hint": "Каждое воскресенье.", "explanation": "Правильно: We are always at home on Sunday.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l03.e05", "type": "error_correction", "text": "I go always to school.", "wrong": "go always", "correction": "always go", "options": ["always go", "go often", "always goes"], "hint": "Слово перед глаголом.", "explanation": "Правильно: I always go to school.", "grammar": ["a1.frequency"], "troubles": ["word-order"] },
+        { "id": "a1.u10.l03.e06", "type": "error_correction", "text": "She never is late.", "wrong": "never is", "correction": "is never", "options": ["is never", "never are", "does never"], "hint": "С be слово идёт после глагола.", "explanation": "Правильно: She is never late.", "grammar": ["a1.frequency"], "troubles": ["word-order"] },
+        { "id": "a1.u10.l03.e07", "type": "error_correction", "text": "I don't never work on Sunday.", "wrong": "don't never", "correction": "never", "options": ["never", "not never", "do never"], "hint": "Достаточно одного отрицания.", "explanation": "I never work on Sunday. Never уже значит «не».", "grammar": ["a1.frequency"], "troubles": ["word-order"] },
+        { "id": "a1.u10.l03.e08", "type": "tiles", "from": "ru", "text": "Мы иногда ходим в кино.", "answer": "We sometimes go to the cinema.", "distractors": ["goes", "at"], "hint": "Sometimes перед глаголом.", "explanation": "Правильно: We sometimes go to the cinema.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l03.e09", "type": "tiles", "from": "ru", "text": "Она всегда дома.", "answer": "She is always at home.", "distractors": ["are", "in"], "hint": "Always после is.", "explanation": "Правильно: She is always at home.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l03.e10", "type": "type_translation", "from": "ru", "text": "Он никогда не работает в воскресенье.", "answers": ["He never works on Sunday."], "difficulty": 2, "hint": "Образец: Never + works.", "explanation": "He never works on Sunday. Never уже значит «не», поэтому doesn't не нужен.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l03.e11", "type": "type_translation", "from": "ru", "text": "Я обычно завтракаю в восемь.", "answers": ["I usually have breakfast at eight."], "difficulty": 2, "hint": "Usually перед have.", "explanation": "Правильно: I usually have breakfast at eight.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l03.e12", "type": "speak_answer", "question": "Do you often play sports?", "questionRu": "Вы часто занимаетесь спортом? Ответьте: I often play… или I never play…", "keywords": [["\\bI (often|sometimes|always|usually|never)\\b"], ["\\b(play|run|swim|walk)\\b"]], "minKeywords": 2, "samples": ["I often play football.", "I never play tennis."], "difficulty": 3, "hint": "I often… или I never…", "explanation": "Ответ: I often play football. или I never play tennis.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l03.e13", "type": "speak_repeat", "text": "He is never late and he always works on Monday.", "hint": "Две части.", "explanation": "Never [ˈnevɚ] и always [ˈɔːlweɪz]: ударение на первый слог." }
+      ]
+    },
+    {
+      "id": "a1.u10.l04",
+      "kind": "grammar",
+      "title": "Что я умею: can",
+      "grammar": "a1.can-ability",
+      "exercises": [
+        { "id": "a1.u10.l04.e01", "type": "fill_gap", "text": "I ___ swim.", "translation": "Я умею плавать.", "answers": [["can"]], "options": ["can", "am", "do"], "hint": "Умею — модальное слово.", "explanation": "I can swim. Can — «умею, могу».", "grammar": ["a1.can-ability"] },
+        { "id": "a1.u10.l04.e02", "type": "fill_gap", "text": "She can ___ the piano.", "translation": "Она умеет играть на пианино.", "answers": [["play"]], "options": ["play", "plays", "playing"], "hint": "После can окончание не нужно.", "explanation": "She can play the piano. После can — глагол без -s.", "grammar": ["a1.can-ability"], "troubles": ["tenses"] },
+        { "id": "a1.u10.l04.e03", "type": "fill_gap", "text": "He ___ dance.", "translation": "Он не умеет танцевать.", "answers": [["can't"]], "options": ["can't", "don't", "isn't"], "hint": "Отрицание с can.", "explanation": "Правильно: He can't dance.", "grammar": ["a1.can-ability"] },
+        { "id": "a1.u10.l04.e04", "type": "fill_gap", "text": "___ you play tennis?", "translation": "Вы умеете играть в теннис?", "answers": [["Can"]], "options": ["Can", "Do", "Are"], "hint": "Вопрос про умение.", "explanation": "Правильно: Can you play tennis?", "grammar": ["a1.can-ability"] },
+        { "id": "a1.u10.l04.e05", "type": "fill_gap", "text": "Can you swim? — Yes, I ___.", "translation": "Вы умеете плавать? — Да.", "answers": [["can"]], "options": ["can", "do", "am"], "hint": "Короткий ответ.", "explanation": "Правильно: Yes, I can.", "grammar": ["a1.can-ability"] },
+        { "id": "a1.u10.l04.e06", "type": "fill_gap", "text": "I play ___ guitar.", "translation": "Я играю на гитаре.", "answers": [["the"]], "options": ["the", "a", "—"], "hint": "С инструментами — один и тот же артикль.", "explanation": "I play the guitar. С инструментами — the.", "grammar": ["a1.can-ability"], "troubles": ["articles"] },
+        { "id": "a1.u10.l04.e07", "type": "error_correction", "text": "I can swimming.", "wrong": "swimming", "correction": "swim", "options": ["swim", "swims", "to swim"], "hint": "После can — форма без изменений.", "explanation": "Правильно: I can swim.", "grammar": ["a1.can-ability"], "troubles": ["tenses"] },
+        { "id": "a1.u10.l04.e08", "type": "error_correction", "text": "She can plays the piano.", "wrong": "plays", "correction": "play", "options": ["play", "playing", "to play"], "hint": "Окончание не нужно.", "explanation": "Правильно: She can play the piano.", "grammar": ["a1.can-ability"], "troubles": ["tenses"] },
+        { "id": "a1.u10.l04.e09", "type": "error_correction", "text": "I play the tennis.", "wrong": "the tennis", "correction": "tennis", "options": ["tennis", "a tennis", "an tennis"], "hint": "Спорт без артикля.", "explanation": "I play tennis. С играми и спортом артикль не нужен.", "grammar": ["a1.can-ability"], "troubles": ["articles"] },
+        { "id": "a1.u10.l04.e10", "type": "tiles", "from": "ru", "text": "Она хорошо умеет плавать.", "answer": "She can swim well.", "distractors": ["swims", "good"], "hint": "Well стоит в конце.", "explanation": "She can swim well. Хорошо — well.", "grammar": ["a1.can-ability"] },
+        { "id": "a1.u10.l04.e11", "type": "tiles", "from": "ru", "text": "Он не умеет играть в теннис.", "answer": "He can't play tennis.", "distractors": ["plays", "the"], "hint": "Can't + глагол.", "explanation": "Правильно: He can't play tennis.", "grammar": ["a1.can-ability"] },
+        { "id": "a1.u10.l04.e12", "type": "type_translation", "from": "ru", "text": "Я умею играть на гитаре.", "answers": ["I can play the guitar."], "hint": "На гитаре — the guitar.", "explanation": "Правильно: I can play the guitar.", "grammar": ["a1.can-ability"] },
+        { "id": "a1.u10.l04.e13", "type": "type_translation", "from": "ru", "text": "Она умеет хорошо рисовать.", "answers": ["She can draw well."], "difficulty": 2, "hint": "Образец: Can + draw + well.", "explanation": "Правильно: She can draw well.", "grammar": ["a1.can-ability"] },
+        { "id": "a1.u10.l04.e14", "type": "speak_answer", "question": "What can you do well?", "questionRu": "Что вы умеете делать хорошо? Ответьте: I can swim. I can play the guitar.", "keywords": [["\\bI can\\b"], ["\\b(swim|draw|play|dance|sing|cook|run|write|speak)\\b"]], "minKeywords": 2, "samples": ["I can swim well.", "I can play the guitar."], "difficulty": 3, "hint": "I can + глагол.", "explanation": "Ответ: I can swim well.", "grammar": ["a1.can-ability"] },
+        { "id": "a1.u10.l04.e15", "type": "listen_choice", "audio": "She can't swim.", "question": "Что вы слышите?", "options": ["She can't swim.", "She can swim.", "He can't swim."], "answer": 0, "hint": "Отрицание.", "explanation": "She can't swim — «она не умеет плавать».", "grammar": ["a1.can-ability"] }
+      ]
+    },
+    {
+      "id": "a1.u10.l05",
+      "kind": "grammar",
+      "title": "Приглашаем и отвечаем",
+      "grammar": "a1.invitations",
+      "exercises": [
+        { "id": "a1.u10.l05.e01", "type": "fill_gap", "text": "___ play tennis on Saturday.", "translation": "Давайте сыграем в теннис в субботу.", "answers": [["Let's"]], "options": ["Let's", "Do", "Can"], "hint": "Предложение сделать вместе.", "explanation": "Правильно: Let's play tennis on Saturday.", "grammar": ["a1.invitations"] },
+        { "id": "a1.u10.l05.e02", "type": "fill_gap", "text": "Let's ___ to the cinema.", "translation": "Давайте пойдём в кино.", "answers": [["go"]], "options": ["go", "going", "goes"], "hint": "После let's — без окончания.", "explanation": "Правильно: Let's go to the cinema.", "grammar": ["a1.invitations"] },
+        { "id": "a1.u10.l05.e03", "type": "fill_gap", "text": "Do you want ___ play football?", "translation": "Хотите сыграть в футбол?", "answers": [["to"]], "options": ["to", "for", "with"], "hint": "Между want и глаголом.", "explanation": "Do you want to play football? После want нужно to.", "grammar": ["a1.invitations"] },
+        { "id": "a1.u10.l05.e04", "type": "fill_gap", "text": "Let's meet at ten o'clock. — Good ___!", "translation": "Давайте встретимся в десять. — Хорошая идея!", "answers": [["idea"]], "options": ["idea", "game", "party"], "hint": "Так соглашаются.", "explanation": "Good idea! — «Хорошая идея!»", "grammar": ["a1.invitations"] },
+        { "id": "a1.u10.l05.e05", "type": "fill_gap", "text": "Sorry, I ___. I am busy.", "translation": "Извините, не могу. Я занят.", "answers": [["can't"]], "options": ["can't", "don't", "isn't"], "hint": "Вежливый отказ.", "explanation": "Правильно: Sorry, I can't. I am busy.", "grammar": ["a1.invitations"] },
+        { "id": "a1.u10.l05.e06", "type": "match_pairs", "pairs": [{ "en": "Good idea!", "ru": "хорошая идея" }, { "en": "Sure!", "ru": "конечно" }, { "en": "Sorry, I can't.", "ru": "извините, не могу" }, { "en": "Let's go.", "ru": "давайте пойдём" }, { "en": "No, thanks.", "ru": "нет, спасибо" }], "hint": "У ответа может быть пара.", "explanation": "Good idea! — хорошая идея, Sure! — конечно, Sorry, I can't — извините, не могу, Let's go — давайте пойдём, No, thanks — нет, спасибо." },
+        { "id": "a1.u10.l05.e07", "type": "error_correction", "text": "Let's to go.", "wrong": "to go", "correction": "go", "options": ["go", "going", "goes"], "hint": "Лишнее слово.", "explanation": "Let's go. После let's — без to.", "grammar": ["a1.invitations"], "troubles": ["word-order"] },
+        { "id": "a1.u10.l05.e08", "type": "error_correction", "text": "Let's going to the park.", "wrong": "going", "correction": "go", "options": ["go", "goes", "to go"], "hint": "Без -ing.", "explanation": "Правильно: Let's go to the park.", "grammar": ["a1.invitations"], "troubles": ["word-order"] },
+        { "id": "a1.u10.l05.e09", "type": "error_correction", "text": "Do you want play tennis?", "wrong": "want play", "correction": "want to play", "options": ["want to play", "want playing", "wants play"], "hint": "Нужно короткое слово.", "explanation": "Правильно: Do you want to play tennis?", "grammar": ["a1.invitations"], "troubles": ["word-order"] },
+        { "id": "a1.u10.l05.e10", "type": "tiles", "from": "ru", "text": "Давайте сыграем в шахматы.", "answer": "Let's play chess.", "distractors": ["the", "to"], "hint": "Три слова.", "explanation": "Правильно: Let's play chess.", "grammar": ["a1.invitations"] },
+        { "id": "a1.u10.l05.e11", "type": "tiles", "from": "ru", "text": "Хотите пойти в парк?", "answer": "Do you want to go to the park?", "distractors": ["going", "does"], "difficulty": 2, "hint": "Образец: Do you want to + go.", "explanation": "Правильно: Do you want to go to the park?", "grammar": ["a1.invitations"] },
+        { "id": "a1.u10.l05.e12", "type": "type_translation", "from": "ru", "text": "Давайте встретимся в субботу.", "answers": ["Let's meet on Saturday."], "hint": "Образец: Let's + meet.", "explanation": "Let's meet on Saturday. Перед днём недели — on.", "grammar": ["a1.invitations"] },
+        { "id": "a1.u10.l05.e13", "type": "type_translation", "from": "ru", "text": "Хорошая идея!", "answers": ["Good idea!"], "hint": "Два слова.", "explanation": "Правильно: Good idea!", "grammar": ["a1.invitations"] },
+        { "id": "a1.u10.l05.e14", "type": "speak_answer", "question": "Do you want to play tennis on Saturday?", "questionRu": "Вас зовут играть в теннис в субботу. Согласитесь или откажитесь: Good idea! или Sorry, I can't.", "keywords": [["\\b(good idea|sure|yes|sorry|no)\\b"], ["\\b(I can't|let's|I am busy|great|OK|thanks)\\b"]], "minKeywords": 1, "samples": ["Good idea! Let's play.", "Sorry, I can't. I am busy."], "difficulty": 3, "hint": "Good idea! или Sorry, I can't.", "explanation": "Согласие: Good idea! Отказ: Sorry, I can't. I am busy.", "grammar": ["a1.invitations"] },
+        { "id": "a1.u10.l05.e15", "type": "speak_repeat", "text": "Let's play tennis together on Saturday.", "hint": "Дружелюбная интонация.", "explanation": "Let's [lets] — звук [s] в конце слышен отчётливо." }
+      ]
+    },
+    {
+      "id": "a1.u10.l06",
+      "kind": "listening",
+      "title": "Давай сыграем в теннис",
+      "textId": "a1.u10.invite",
+      "exercises": [
+        {
+          "id": "a1.u10.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "a1.u10.invite",
+          "hint": "Слушайте, что делает Том и о чём договариваются.",
+          "explanation": "Том часто играет в футбол и иногда на гитаре. Анна зовёт его играть в теннис в субботу в десять.",
+          "questions": [
+            { "kind": "mcq", "question": "Что Том часто делает?", "options": ["plays football", "plays chess", "plays the piano"], "answer": 0, "explanation": "Том говорит: I often play football." },
+            { "kind": "mcq", "question": "Когда они играют?", "options": ["on Saturday", "on Sunday", "on Friday"], "answer": 0, "explanation": "Анна говорит: Let's play together on Saturday." },
+            { "kind": "mcq", "question": "Во сколько?", "options": ["at ten o'clock", "at nine o'clock", "at six o'clock"], "answer": 0, "explanation": "Анна говорит: At ten o'clock, in the park." },
+            { "kind": "tfn", "statement": "Tom can play tennis well.", "answer": "false", "explanation": "Том говорит: I can't play tennis well." },
+            { "kind": "tfn", "statement": "Tom plays the guitar sometimes.", "answer": "true", "explanation": "Том говорит: Sometimes I play the guitar." },
+            { "kind": "tfn", "statement": "Anna can swim.", "answer": "not_given", "explanation": "Про плавание Анны в диалоге не говорится." }
+          ]
+        },
+        { "id": "a1.u10.l06.e02", "type": "listen_choice", "audio": "Let's play together on Saturday.", "question": "Что вы слышите?", "options": ["Let's play together on Saturday.", "Let's play tennis on Sunday.", "Do you want to play on Saturday?"], "answer": 0, "hint": "Предложение — слово let's.", "explanation": "Let's play together on Saturday — «давай сыграем вместе в субботу»." },
+        { "id": "a1.u10.l06.e03", "type": "listen_dictation", "text": "I can't play tennis well.", "hint": "Пять слов.", "explanation": "I can't play tennis well — «я не умею хорошо играть в теннис»." },
+        { "id": "a1.u10.l06.e04", "type": "listen_dictation", "text": "Good idea! What time?", "hint": "Четыре слова.", "explanation": "Good idea! What time? — «Хорошая идея! Во сколько?»" },
+        { "id": "a1.u10.l06.e05", "type": "fill_gap", "text": "Tom ___ plays football.", "translation": "Том часто играет в футбол.", "answers": [["often"]], "options": ["often", "never", "well"], "hint": "Много раз.", "explanation": "Правильно: Tom often plays football.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l06.e06", "type": "fill_gap", "text": "Tom ___ play tennis well.", "translation": "Том не умеет хорошо играть в теннис.", "answers": [["can't"]], "options": ["can't", "doesn't", "isn't"], "hint": "Умение.", "explanation": "Правильно: Tom can't play tennis well.", "grammar": ["a1.can-ability"] },
+        { "id": "a1.u10.l06.e07", "type": "tiles", "from": "ru", "text": "Что ты делаешь в свободное время?", "answer": "What do you do in your free time?", "distractors": ["does", "at"], "difficulty": 2, "hint": "What do you do — вопрос о привычке.", "explanation": "Правильно: What do you do in your free time?", "grammar": ["a1.present-simple-questions"] },
+        { "id": "a1.u10.l06.e08", "type": "type_translation", "from": "ru", "text": "Конечно! Увидимся в субботу.", "answers": ["Sure! See you on Saturday."], "hint": "See you — «увидимся».", "explanation": "Правильно: Sure! See you on Saturday." },
+        { "id": "a1.u10.l06.e09", "type": "speak_answer", "question": "What do you do in your free time?", "questionRu": "Что вы делаете в свободное время? Ответьте: I often play… или I sometimes…", "keywords": [["\\bI (often|sometimes|always|usually|never|play|can)\\b"], ["\\b(play|swim|draw|read|walk|cook|watch|listen|meet|dance|sing)\\b"]], "minKeywords": 2, "samples": ["I often play football.", "I sometimes read and walk."], "difficulty": 3, "hint": "I often… или I sometimes…", "explanation": "Ответ: I often play football and sometimes I read.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l06.e10", "type": "speak_repeat", "text": "Great! Do you like tennis?", "hint": "Радостная интонация.", "explanation": "Great! — [ɡreɪt]. Вопрос без вопросительного слова — интонация вверх." }
+      ]
+    },
+    {
+      "id": "a1.u10.l07",
+      "kind": "writing",
+      "title": "Свободное время Макса",
+      "textId": "a1.u10.max-weekend",
+      "exercises": [
+        {
+          "id": "a1.u10.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "a1.u10.max-weekend",
+          "hint": "Обратите внимание на слова always, often, never.",
+          "explanation": "Макс по выходным не работает: играет в теннис, в шахматы, рисует, играет на гитаре и ждёт вечеринку в пятницу.",
+          "questions": [
+            { "kind": "mcq", "question": "Что Макс часто делает?", "options": ["plays tennis", "plays chess", "swims"], "answer": 0, "explanation": "В тексте: He often plays tennis in the park." },
+            { "kind": "mcq", "question": "Что умеет сестра Макса?", "options": ["swim", "play tennis", "draw"], "answer": 0, "explanation": "В тексте: His sister can swim, but she can't play tennis." },
+            { "kind": "tfn", "statement": "Max works at the weekend.", "answer": "false", "explanation": "В тексте: He never works at the weekend." },
+            { "kind": "tfn", "statement": "Max can play the guitar well.", "answer": "true", "explanation": "В тексте: he can play the guitar well." },
+            { "kind": "tfn", "statement": "Max plays football on Sunday.", "answer": "not_given", "explanation": "Про футбол в тексте ничего не сказано." }
+          ]
+        },
+        { "id": "a1.u10.l07.e02", "type": "translate_choice", "from": "en", "text": "He never works at the weekend.", "options": ["Он никогда не работает в выходные.", "Он всегда работает в выходные.", "Он иногда работает в выходные."], "answer": 0, "hint": "Never — «никогда».", "explanation": "He never works at the weekend — «в выходные он никогда не работает»." },
+        { "id": "a1.u10.l07.e03", "type": "fill_gap", "text": "His sister can ___, but she can't play tennis.", "translation": "Его сестра умеет плавать, но не умеет играть в теннис.", "answers": [["swim"]], "options": ["swim", "swims", "swimming"], "hint": "После can — без окончания.", "explanation": "Правильно: His sister can swim.", "grammar": ["a1.can-ability"] },
+        { "id": "a1.u10.l07.e04", "type": "fill_gap", "text": "In the evening they ___ watch a film together.", "translation": "Вечером они обычно вместе смотрят фильм.", "answers": [["usually"]], "options": ["usually", "never", "well"], "hint": "Почти всегда.", "explanation": "Правильно: They usually watch a film together.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l07.e05", "type": "type_translation", "from": "ru", "text": "Он иногда играет в шахматы с другом.", "answers": ["He sometimes plays chess with his friend."], "difficulty": 3, "hint": "Sometimes перед plays.", "explanation": "Правильно: He sometimes plays chess with his friend.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l07.e06", "type": "speak_describe", "picture": { "emoji": "🎾" }, "situation": "Расскажите, что вы делаете в свободное время и как часто. Назовите два-три занятия.", "keywords": [["\\bI (often|sometimes|always|usually|never|play|can)\\b"], ["\\b(play|swim|draw|read|walk|cook|watch|listen|meet|dance|sing|tennis|football|chess|guitar|piano)\\b"]], "minKeywords": 2, "samples": ["I often play tennis. Sometimes I read. I never play chess."], "difficulty": 3, "hint": "Образец: I often… Sometimes I…", "explanation": "Назовите занятие и частоту: I often play tennis.", "grammar": ["a1.frequency"] },
+        { "id": "a1.u10.l07.e07", "type": "speak_answer", "question": "Can you play tennis?", "questionRu": "Вы умеете играть в теннис? Ответьте: Yes, I can. или No, I can't.", "keywords": [["\\b(yes|no)\\b"], ["\\bI (can|can't|cannot)\\b"]], "minKeywords": 2, "samples": ["Yes, I can.", "No, I can't."], "difficulty": 3, "hint": "Yes, I… или No, I…", "explanation": "Короткий ответ: Yes, I can. или No, I can't.", "grammar": ["a1.can-ability"] },
+        {
+          "id": "a1.u10.l07.e08",
+          "type": "write",
+          "task": "Расскажите о своём свободном времени: что вы делаете, как часто, что умеете и что хотите сделать с другом. Например: I often play tennis. I can swim. Let's play together on Saturday.",
+          "minWords": 30,
+          "maxWords": 90,
+          "criteria": [
+            { "id": "freq", "label": "Есть always, often, sometimes или never", "patterns": ["\\b(always|usually|often|sometimes|never)\\b"] },
+            { "id": "can", "label": "Есть can или can't", "patterns": ["\\b(can|can't|cannot)\\b"] },
+            { "id": "hobby", "label": "Названо хобби или занятие", "patterns": ["\\b(tennis|football|chess|guitar|piano|swim|draw|dance|sing|music|film|game|read|walk|cook|play)\\b"] },
+            { "id": "invite", "label": "Есть приглашение: let's или do you want to", "patterns": ["\\b(let's|do you want to)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\bI (go|play|read|watch|work|walk) (always|often|sometimes|never|usually)\\b", "message": "Слово частоты стоит перед глаголом: I often play, а не I play often." },
+            { "pattern": "\\bcan (to [a-z]+|[a-z]{3,}ing|plays|swims|draws|dances|sings)\\b", "message": "После can глагол стоит без to, -s и -ing: can swim." },
+            { "pattern": "\\bplay the (tennis|football|chess)\\b", "message": "С играми и спортом артикль не нужен: play tennis." },
+            { "pattern": "\\blet's (to|[a-z]+ing)\\b", "message": "После let's глагол стоит без to и -ing: let's play." },
+            { "pattern": "\\bdon't never\\b", "message": "Never уже значит «не»: I never work, а не I don't never work." }
+          ],
+          "samples": [
+            "In my free time I often play tennis in the park. I sometimes play chess with my brother. I can swim and I can draw, but I can't play the guitar. I never work on Sunday. Let's play tennis together on Saturday!",
+            "My hobby is music. I always listen to music in the evening. I can play the piano well and my sister can sing. We sometimes watch a film together. I usually meet my friends on Friday. Do you want to play chess?"
+          ],
+          "difficulty": 3,
+          "hint": "План: что делаю → как часто → что умею → приглашение.",
+          "explanation": "В рассказе о свободном времени используйте always, often, sometimes, never перед глаголом. Для умений — can + глагол без изменений. Приглашение — Let's + глагол.",
+          "grammar": ["a1.frequency", "a1.can-ability", "a1.invitations"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "a1.u10.test.e01", "type": "match_pairs", "pairs": [{ "en": "always", "ru": "всегда" }, { "en": "often", "ru": "часто" }, { "en": "sometimes", "ru": "иногда" }, { "en": "never", "ru": "никогда" }, { "en": "together", "ru": "вместе" }], "hint": "Все слова из урока о частоте.", "explanation": "Always — всегда, often — часто, sometimes — иногда, never — никогда, together — вместе." },
+      { "id": "a1.u10.test.e02", "type": "translate_choice", "from": "ru", "text": "умею плавать", "options": ["I can swim", "I swim can", "I am swim"], "answer": 0, "hint": "Can перед глаголом.", "explanation": "I can swim — «я умею плавать»." },
+      { "id": "a1.u10.test.e03", "type": "picture_choice", "mode": "picture-to-word", "word": "chess", "distractors": ["tennis", "football"], "hint": "Игра на клетчатой доске.", "explanation": "Chess — «шахматы»: [tʃes]." },
+      { "id": "a1.u10.test.e04", "type": "fill_gap", "text": "I ___ get up at seven.", "translation": "Я всегда встаю в семь.", "answers": [["always"]], "options": ["always", "never", "well"], "hint": "Каждый день.", "explanation": "Правильно: I always get up at seven.", "grammar": ["a1.frequency"] },
+      { "id": "a1.u10.test.e05", "type": "fill_gap", "text": "She is ___ late.", "translation": "Она никогда не опаздывает.", "answers": [["never"]], "options": ["never", "always", "often"], "hint": "Ни разу.", "explanation": "Правильно: She is never late.", "grammar": ["a1.frequency"] },
+      { "id": "a1.u10.test.e06", "type": "fill_gap", "text": "He can ___ the guitar.", "translation": "Он умеет играть на гитаре.", "answers": [["play"]], "options": ["play", "plays", "playing"], "hint": "После can окончание не нужно.", "explanation": "Правильно: He can play the guitar.", "grammar": ["a1.can-ability"] },
+      { "id": "a1.u10.test.e07", "type": "fill_gap", "text": "I play ___ on Saturday.", "translation": "По субботам я играю в теннис.", "answers": [["tennis"]], "options": ["tennis", "the tennis", "a tennis"], "hint": "Без артикля.", "explanation": "Правильно: I play tennis on Saturday.", "grammar": ["a1.can-ability"] },
+      { "id": "a1.u10.test.e08", "type": "fill_gap", "text": "___ meet at ten o'clock.", "translation": "Давайте встретимся в десять.", "answers": [["Let's"]], "options": ["Let's", "Do", "Can"], "hint": "Предложение сделать вместе.", "explanation": "Правильно: Let's meet at ten o'clock.", "grammar": ["a1.invitations"] },
+      { "id": "a1.u10.test.e09", "type": "error_correction", "text": "I go always to school.", "wrong": "go always", "correction": "always go", "options": ["always go", "go often", "always goes"], "hint": "Слово перед глаголом.", "explanation": "Правильно: I always go to school.", "grammar": ["a1.frequency"], "troubles": ["word-order"] },
+      { "id": "a1.u10.test.e10", "type": "error_correction", "text": "I can swimming.", "wrong": "swimming", "correction": "swim", "options": ["swim", "swims", "to swim"], "hint": "После can — форма без изменений.", "explanation": "Правильно: I can swim.", "grammar": ["a1.can-ability"] },
+      { "id": "a1.u10.test.e11", "type": "error_correction", "text": "Let's to go.", "wrong": "to go", "correction": "go", "options": ["go", "going", "goes"], "hint": "Лишнее слово.", "explanation": "Правильно: Let's go.", "grammar": ["a1.invitations"], "troubles": ["word-order"] },
+      { "id": "a1.u10.test.e12", "type": "listen_choice", "audio": "I sometimes play chess.", "question": "Что вы слышите?", "options": ["I sometimes play chess.", "I always play chess.", "I never play chess."], "answer": 0, "hint": "Не всегда и не никогда.", "explanation": "I sometimes play chess — «я иногда играю в шахматы».", "grammar": ["a1.frequency"] },
+      { "id": "a1.u10.test.e13", "type": "listen_dictation", "text": "She can't play tennis.", "hint": "Четыре слова.", "explanation": "She can't play tennis — «она не умеет играть в теннис»." },
+      { "id": "a1.u10.test.e14", "type": "tiles", "from": "ru", "text": "Давайте сыграем вместе.", "answer": "Let's play together.", "distractors": ["to", "plays"], "difficulty": 2, "hint": "Образец: Let's + play.", "explanation": "Правильно: Let's play together.", "grammar": ["a1.invitations"] },
+      { "id": "a1.u10.test.e15", "type": "type_translation", "from": "ru", "text": "Я часто играю в футбол.", "answers": ["I often play football."], "difficulty": 2, "hint": "Often перед play.", "explanation": "Правильно: I often play football.", "grammar": ["a1.frequency"] },
+      { "id": "a1.u10.test.e16", "type": "speak_repeat", "text": "I often play tennis, but I can't play chess.", "hint": "Две части с but.", "explanation": "But [bʌt] — «но». Две части произносите отдельно." }
+    ]
+  }
+}

@@ -116,6 +116,16 @@ describe('sessionForExam', () => {
     expect(session.texts.length).toBeGreaterThan(0);
   });
 
+  it('builds the A1 level exam from all ten units once the level is written', () => {
+    const level = getCourse().levels.find((l) => l.level === 'A1')!;
+    expect(isLevelReady(level)).toBe(true);
+    const session = sessionForExam('a1.exam', 's')!;
+    expect(session).toMatchObject({ id: 'a1.exam', kind: 'test', passScore: LEVEL_EXAM.passScore });
+    expect(session.exercises).toHaveLength(LEVEL_EXAM.size);
+    const units = new Set(session.exercises.map((e) => e.id.split('.').slice(0, 2).join('.')));
+    expect(units.size).toBeGreaterThanOrEqual(8);
+  });
+
   it('builds the test of the second A1 module from its own units', () => {
     const module = getCourse().levels.find((l) => l.level === 'A1')!.modules[1]!;
     expect(isModuleReady(module)).toBe(true);

@@ -1,0 +1,301 @@
+{
+  "id": "a1.u09",
+  "level": "A1",
+  "order": 9,
+  "title": { "en": "Right now", "ru": "Прямо сейчас" },
+  "description": "Рассказываем, что происходит прямо сейчас: действия, погода, звонок другу. Present Continuous, вопросы What are you doing? и разница с Present Simple.",
+  "goals": [
+    "Могу сказать, что делаю или делает человек прямо сейчас: I am cooking. She is walking.",
+    "Могу сказать «не»: I am not working. He isn't sleeping.",
+    "Могу спросить: What are you doing? Is it raining?",
+    "Могу сказать о погоде: It is sunny and warm.",
+    "Могу выбрать между Present Simple и Present Continuous.",
+    "Могу написать короткий текст о том, что происходит вокруг."
+  ],
+  "grammar": ["a1.present-continuous", "a1.continuous-questions", "a1.simple-vs-continuous"],
+  "troubles": ["tenses", "word-order"],
+  "words": [
+    { "id": "now", "en": "now", "ipa": "naʊ", "pos": "adv", "ru": ["сейчас"], "example": { "en": "I am cooking dinner now.", "ru": "Я сейчас готовлю ужин." }, "topics": ["time"] },
+    { "id": "right-now", "en": "right now", "ipa": "raɪt naʊ", "pos": "phrase", "ru": ["прямо сейчас"], "example": { "en": "I am busy right now.", "ru": "Я сейчас занят." }, "topics": ["time"] },
+    { "id": "look", "en": "look", "ipa": "lʊk", "pos": "verb", "ru": ["смотреть", "выглядеть"], "example": { "en": "Look at the map.", "ru": "Посмотрите на карту." }, "forms": { "third": "looks" }, "note": "Look at — «смотреть на». Без at слово look не используют: look at me.", "topics": ["verbs"] },
+    { "id": "listen", "en": "listen", "ipa": "ˈlɪsən", "pos": "verb", "ru": ["слушать"], "example": { "en": "I listen to music.", "ru": "Я слушаю музыку." }, "forms": { "third": "listens" }, "note": "Listen to — «слушать». Предлог to нужен: listen to music. T в listen не читается.", "topics": ["verbs"] },
+    { "id": "talk", "en": "talk", "ipa": "tɔːk", "pos": "verb", "ru": ["разговаривать"], "example": { "en": "She is talking on the phone.", "ru": "Она разговаривает по телефону." }, "forms": { "third": "talks" }, "topics": ["verbs"] },
+    { "id": "speak", "en": "speak", "ipa": "spiːk", "pos": "verb", "ru": ["говорить (на языке)"], "example": { "en": "I speak English and Russian.", "ru": "Я говорю по-английски и по-русски." }, "forms": { "third": "speaks" }, "topics": ["verbs"] },
+    { "id": "sit", "en": "sit", "ipa": "sɪt", "pos": "verb", "ru": ["сидеть"], "example": { "en": "He is sitting on the sofa.", "ru": "Он сидит на диване." }, "forms": { "third": "sits", "ing": "sitting" }, "topics": ["verbs"] },
+    { "id": "stand", "en": "stand", "ipa": "stænd", "pos": "verb", "ru": ["стоять"], "example": { "en": "She is standing at the bus stop.", "ru": "Она стоит на автобусной остановке." }, "forms": { "third": "stands" }, "topics": ["verbs"] },
+    { "id": "run", "en": "run", "ipa": "rʌn", "pos": "verb", "ru": ["бегать"], "example": { "en": "A woman is running in the park.", "ru": "Женщина бегает в парке." }, "forms": { "third": "runs", "ing": "running" }, "topics": ["verbs"] },
+    { "id": "write", "en": "write", "ipa": "raɪt", "pos": "verb", "ru": ["писать"], "example": { "en": "I am writing my name.", "ru": "Я пишу своё имя." }, "forms": { "third": "writes", "ing": "writing" }, "topics": ["verbs"] },
+    { "id": "wait", "en": "wait", "ipa": "weɪt", "pos": "verb", "ru": ["ждать"], "example": { "en": "I am waiting at the station.", "ru": "Я жду на вокзале." }, "forms": { "third": "waits" }, "topics": ["verbs"] },
+    { "id": "sing", "en": "sing", "ipa": "sɪŋ", "pos": "verb", "ru": ["петь"], "example": { "en": "Two girls are singing.", "ru": "Две девочки поют." }, "forms": { "third": "sings", "ing": "singing" }, "topics": ["verbs"] },
+    { "id": "dance", "en": "dance", "ipa": "dæns", "pos": "verb", "ru": ["танцевать"], "example": { "en": "They are dancing in the park.", "ru": "Они танцуют в парке." }, "forms": { "third": "dances", "ing": "dancing" }, "topics": ["verbs"] },
+    { "id": "music", "en": "music", "ipa": "ˈmjuːzɪk", "pos": "noun", "ru": ["музыка"], "example": { "en": "I like music.", "ru": "Я люблю музыку." }, "note": "Music — несчитаемое слово: a music и musics не бывает.", "topics": ["leisure"] },
+    { "id": "song", "en": "song", "ipa": "sɔːŋ", "pos": "noun", "ru": ["песня"], "example": { "en": "I like this song.", "ru": "Мне нравится эта песня." }, "topics": ["leisure"] },
+    { "id": "weather", "en": "weather", "ipa": "ˈweðɚ", "pos": "noun", "ru": ["погода"], "example": { "en": "The weather is nice today.", "ru": "Сегодня хорошая погода." }, "troubles": ["pron-th"], "note": "Weather — несчитаемое слово. Не путайте с whether.", "topics": ["weather"] },
+    { "id": "sunny", "en": "sunny", "ipa": "ˈsʌni", "pos": "adj", "ru": ["солнечный"], "example": { "en": "It is sunny today.", "ru": "Сегодня солнечно." }, "picture": { "emoji": "☀️" }, "topics": ["weather"] },
+    { "id": "cloudy", "en": "cloudy", "ipa": "ˈklaʊdi", "pos": "adj", "ru": ["облачный"], "example": { "en": "It is cloudy in the morning.", "ru": "Утром облачно." }, "picture": { "emoji": "☁️" }, "topics": ["weather"] },
+    { "id": "windy", "en": "windy", "ipa": "ˈwɪndi", "pos": "adj", "ru": ["ветреный"], "example": { "en": "It is windy and cold.", "ru": "Ветрено и холодно." }, "picture": { "emoji": "💨" }, "topics": ["weather"] },
+    { "id": "warm", "en": "warm", "ipa": "wɔːrm", "pos": "adj", "ru": ["тёплый"], "example": { "en": "It is warm today.", "ru": "Сегодня тепло." }, "topics": ["weather"] },
+    { "id": "rain#verb", "en": "rain", "ipa": "reɪn", "pos": "verb", "ru": ["идти (о дожде)"], "example": { "en": "It is raining now.", "ru": "Сейчас идёт дождь." }, "forms": { "third": "rains" }, "topics": ["weather"] },
+    { "id": "snow", "en": "snow", "ipa": "snoʊ", "pos": "verb", "ru": ["идти (о снеге)", "снег"], "example": { "en": "It is snowing in the morning.", "ru": "Утром идёт снег." }, "picture": { "emoji": "❄️" }, "topics": ["weather"] },
+    { "id": "outside", "en": "outside", "ipa": "ˌaʊtˈsaɪd", "pos": "adv", "ru": ["на улице", "снаружи"], "example": { "en": "The children are playing outside.", "ru": "Дети играют на улице." }, "topics": ["places"] },
+    { "id": "busy", "en": "busy", "ipa": "ˈbɪzi", "pos": "adj", "ru": ["занятой"], "example": { "en": "I am busy now.", "ru": "Я сейчас занят." }, "note": "Busy читается [ˈbɪzi]: буква u звучит как [ɪ].", "topics": ["adjectives"] }
+  ],
+  "texts": [
+    {
+      "id": "a1.u09.call",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "A phone call", "ru": "Телефонный разговор" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Hello, Tom! What are you doing?", "ru": "Привет, Том! Что ты делаешь?" },
+        { "speaker": "tom", "en": "I am cooking dinner. And you?", "ru": "Я готовлю ужин. А ты?" },
+        { "speaker": "anna", "en": "I am walking in the park. It is sunny and warm.", "ru": "Я гуляю в парке. Солнечно и тепло." },
+        { "speaker": "tom", "en": "Is your sister with you?", "ru": "Твоя сестра с тобой?" },
+        { "speaker": "anna", "en": "Yes, she is. She is talking on the phone.", "ru": "Да. Она разговаривает по телефону." },
+        { "speaker": "tom", "en": "Is it raining?", "ru": "Дождь идёт?" },
+        { "speaker": "anna", "en": "No, it isn't. We are sitting and listening to music.", "ru": "Нет. Мы сидим и слушаем музыку." },
+        { "speaker": "tom", "en": "OK. I am busy now. Call me tomorrow.", "ru": "Хорошо. Я сейчас занят. Позвони мне завтра." }
+      ]
+    },
+    {
+      "id": "a1.u09.park",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "Saturday in the park", "ru": "Суббота в парке" },
+      "lines": [
+        { "en": "It is Saturday afternoon. The weather is sunny and warm, and there are many people in the park.", "ru": "Сейчас субботний день. Погода солнечная и тёплая, и в парке много людей." },
+        { "en": "The children are playing in the garden. A man is sitting and reading a newspaper. Two girls are dancing and singing. A woman is running.", "ru": "Дети играют в саду. Мужчина сидит и читает газету. Две девочки танцуют и поют. Женщина бежит." },
+        { "en": "I am not working today. I am sitting with my friend and drinking coffee. We are listening to music.", "ru": "Сегодня я не работаю. Я сижу с другом и пью кофе. Мы слушаем музыку." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "a1.u09.l01",
+      "kind": "vocabulary",
+      "title": "Что люди делают",
+      "exercises": [
+        { "id": "a1.u09.l01.e01", "type": "match_pairs", "pairs": [{ "en": "sit", "ru": "сидеть" }, { "en": "stand", "ru": "стоять" }, { "en": "run", "ru": "бегать" }, { "en": "wait", "ru": "ждать" }, { "en": "dance", "ru": "танцевать" }], "hint": "Sit и stand отличаются одной буквой.", "explanation": "Sit — сидеть, stand — стоять, run — бегать, wait — ждать, dance — танцевать." },
+        { "id": "a1.u09.l01.e02", "type": "match_pairs", "pairs": [{ "en": "look", "ru": "смотреть" }, { "en": "listen", "ru": "слушать" }, { "en": "talk", "ru": "разговаривать" }, { "en": "speak", "ru": "говорить" }, { "en": "write", "ru": "писать" }], "hint": "Talk и speak близки по смыслу.", "explanation": "Look — смотреть, listen — слушать, talk — разговаривать, speak — говорить, write — писать." },
+        { "id": "a1.u09.l01.e03", "type": "match_pairs", "pairs": [{ "en": "sing", "ru": "петь" }, { "en": "song", "ru": "песня" }, { "en": "music", "ru": "музыка" }, { "en": "now", "ru": "сейчас" }, { "en": "busy", "ru": "занятой" }], "hint": "Sing и song — родственные слова.", "explanation": "Sing — петь, song — песня, music — музыка, now — сейчас, busy — занятой." },
+        { "id": "a1.u09.l01.e04", "type": "translate_choice", "from": "ru", "text": "слушать", "options": ["listen", "look", "wait"], "answer": 0, "hint": "Слушают ушами.", "explanation": "Listen [ˈlɪsən] — «слушать». Буква t не читается." },
+        { "id": "a1.u09.l01.e05", "type": "translate_choice", "from": "ru", "text": "писать", "options": ["write", "read", "walk"], "answer": 0, "hint": "Это делают ручкой.", "explanation": "Write [raɪt] — «писать». Read — «читать»." },
+        { "id": "a1.u09.l01.e06", "type": "translate_choice", "from": "en", "text": "right now", "options": ["прямо сейчас", "справа", "каждый день"], "answer": 0, "hint": "Это про время.", "explanation": "Right now — «прямо сейчас». Right бывает ещё «справа», «направо»." },
+        { "id": "a1.u09.l01.e07", "type": "fill_gap", "text": "I ___ to music in the evening.", "translation": "Вечером я слушаю музыку.", "answers": [["listen"]], "options": ["listen", "look", "speak"], "hint": "Предлог to подсказывает глагол.", "explanation": "I listen to music. Listen to — «слушать».", "troubles": ["prepositions"] },
+        { "id": "a1.u09.l01.e08", "type": "fill_gap", "text": "Please ___ at the map.", "translation": "Пожалуйста, посмотрите на карту.", "answers": [["look"]], "options": ["look", "listen", "wait"], "hint": "Предлог at подсказывает глагол.", "explanation": "Please look at the map. Look at — «смотреть на».", "troubles": ["prepositions"] },
+        { "id": "a1.u09.l01.e09", "type": "fill_gap", "text": "I ___ English and Russian.", "translation": "Я говорю по-английски и по-русски.", "answers": [["speak"]], "options": ["speak", "talk", "write"], "hint": "Язык — глагол для языка.", "explanation": "I speak English and Russian. Для языка — speak." },
+        { "id": "a1.u09.l01.e10", "type": "listen_choice", "audio": "I am waiting.", "question": "Что вы слышите?", "options": ["I am waiting.", "I am writing.", "I am walking."], "answer": 0, "hint": "Первый звук — [w].", "explanation": "I am waiting — «я жду». Writing [ˈraɪtɪŋ] — «пишу».", "troubles": ["pron-vowels"] },
+        { "id": "a1.u09.l01.e11", "type": "listen_dictation", "text": "Two girls are singing.", "hint": "Четыре слова.", "explanation": "Two girls are singing — «две девочки поют»." },
+        { "id": "a1.u09.l01.e12", "type": "type_translation", "from": "ru", "text": "музыка", "answers": ["music"], "hint": "Пять букв.", "explanation": "Music [ˈmjuːzɪk] — «музыка»." },
+        { "id": "a1.u09.l01.e13", "type": "minimal_pair", "pair": [{ "en": "sit", "ipa": "sɪt" }, { "en": "seat", "ipa": "siːt" }], "say": 0, "hint": "В одном слове гласный короткий.", "explanation": "Sit [sɪt] — «сидеть», seat [siːt] — «место». Звуки отличаются длиной.", "troubles": ["pron-vowels"] },
+        { "id": "a1.u09.l01.e14", "type": "speak_repeat", "text": "I am sitting and listening to music.", "hint": "Два действия подряд.", "explanation": "Sitting [ˈsɪtɪŋ], listening [ˈlɪsənɪŋ]: окончание -ing читается [ɪŋ]." }
+      ]
+    },
+    {
+      "id": "a1.u09.l02",
+      "kind": "vocabulary",
+      "title": "Погода",
+      "exercises": [
+        { "id": "a1.u09.l02.e01", "type": "match_pairs", "pairs": [{ "en": "sunny", "ru": "солнечный" }, { "en": "cloudy", "ru": "облачный" }, { "en": "windy", "ru": "ветреный" }, { "en": "warm", "ru": "тёплый" }, { "en": "cold", "ru": "холодный" }], "hint": "Warm и cold — противоположные.", "explanation": "Sunny — солнечный, cloudy — облачный, windy — ветреный, warm — тёплый, cold — холодный." },
+        { "id": "a1.u09.l02.e02", "type": "match_pairs", "pairs": [{ "en": "rain", "ru": "дождь" }, { "en": "snow", "ru": "снег" }, { "en": "weather", "ru": "погода" }, { "en": "outside", "ru": "на улице" }, { "en": "sun", "ru": "солнце" }], "hint": "Три слова — про осадки и небо.", "explanation": "Rain — дождь, snow — снег, weather — погода, outside — на улице, sun — солнце." },
+        { "id": "a1.u09.l02.e03", "type": "picture_choice", "mode": "picture-to-word", "word": "sunny", "distractors": ["cloudy", "windy"], "hint": "На небе нет облаков.", "explanation": "Sunny — «солнечный»: [ˈsʌni]." },
+        { "id": "a1.u09.l02.e04", "type": "picture_choice", "mode": "picture-to-word", "word": "cloudy", "distractors": ["sunny", "windy"], "hint": "Небо серое.", "explanation": "Cloudy — «облачный»: [ˈklaʊdi]." },
+        { "id": "a1.u09.l02.e05", "type": "fill_gap", "text": "The weather is ___. I want a coat.", "translation": "Холодная погода. Я хочу пальто.", "answers": [["cold"]], "options": ["cold", "warm", "sunny"], "hint": "Зимой нужна тёплая одежда.", "explanation": "The weather is cold. I want a coat. Cold — «холодный»." },
+        { "id": "a1.u09.l02.e06", "type": "fill_gap", "text": "It is ___ today. I wear a shirt.", "translation": "Сегодня тепло. Я надеваю рубашку.", "answers": [["warm"]], "options": ["warm", "cold", "windy"], "hint": "Пальто не нужно.", "explanation": "It is warm today. Warm — «тёплый»." },
+        { "id": "a1.u09.l02.e07", "type": "fill_gap", "text": "It is ___ now. I have an umbrella.", "translation": "Сейчас идёт дождь. У меня есть зонт.", "answers": [["raining"]], "options": ["raining", "sunny", "snow"], "hint": "Зонт нужен при дожде.", "explanation": "It is raining now. После is — глагол с -ing.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l02.e08", "type": "translate_choice", "from": "en", "text": "It is snowing.", "options": ["Идёт снег.", "Идёт дождь.", "Ветрено."], "answer": 0, "hint": "Snow — зимний снег.", "explanation": "It is snowing — «идёт снег». Snow — снег." },
+        { "id": "a1.u09.l02.e09", "type": "translate_choice", "from": "ru", "text": "Какая погода?", "options": ["What is the weather like?", "Where is the weather?", "How old is the weather?"], "answer": 0, "hint": "Начинается с What.", "explanation": "What is the weather like? — «Какая погода?». Здесь like значит «какой», а не «нравится».", "troubles": ["false-friends"] },
+        { "id": "a1.u09.l02.e10", "type": "listen_choice", "audio": "It is cloudy and windy.", "question": "Что вы слышите?", "options": ["It is cloudy and windy.", "It is sunny and warm.", "It is cold and windy."], "answer": 0, "hint": "Два слова на -y.", "explanation": "It is cloudy and windy — «облачно и ветрено»." },
+        { "id": "a1.u09.l02.e11", "type": "listen_dictation", "text": "It is sunny and warm.", "hint": "Пять слов.", "explanation": "It is sunny and warm — «солнечно и тепло»." },
+        { "id": "a1.u09.l02.e12", "type": "type_translation", "from": "ru", "text": "ветреный", "answers": ["windy"], "hint": "Пять букв.", "explanation": "Windy [ˈwɪndi] — «ветреный»." },
+        { "id": "a1.u09.l02.e13", "type": "word_stress", "word": "outside", "syllables": ["out", "side"], "stress": 1, "hint": "Ударение на втором слоге.", "explanation": "out-SIDE — ударение на второй слог." },
+        { "id": "a1.u09.l02.e14", "type": "speak_answer", "question": "What is the weather like today?", "questionRu": "Какая сегодня погода? Ответьте: It is sunny. или It is cold and windy.", "keywords": [["\\bit is\\b", "\\bit's\\b"], ["\\b(sunny|cloudy|windy|warm|cold|raining|snowing|hot)\\b"]], "minKeywords": 2, "samples": ["It is sunny and warm.", "It is cold and windy."], "difficulty": 3, "hint": "It is… и два слова про погоду.", "explanation": "Ответ: It is sunny and warm." }
+      ]
+    },
+    {
+      "id": "a1.u09.l03",
+      "kind": "grammar",
+      "title": "Что происходит сейчас",
+      "grammar": "a1.present-continuous",
+      "exercises": [
+        { "id": "a1.u09.l03.e01", "type": "fill_gap", "text": "I ___ cooking dinner now.", "translation": "Я сейчас готовлю ужин.", "answers": [["am"]], "options": ["am", "is", "are"], "hint": "С I — особая форма.", "explanation": "I am cooking dinner now. С I — am.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l03.e02", "type": "fill_gap", "text": "She ___ walking in the park.", "translation": "Она гуляет в парке.", "answers": [["is"]], "options": ["is", "am", "are"], "hint": "С she — коротко.", "explanation": "She is walking in the park. С she — is.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l03.e03", "type": "fill_gap", "text": "They ___ playing in the garden.", "translation": "Они играют в саду.", "answers": [["are"]], "options": ["are", "is", "am"], "hint": "О нескольких людях.", "explanation": "They are playing in the garden. С they — are.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l03.e04", "type": "fill_gap", "text": "He is ___ a book.", "translation": "Он читает книгу.", "answers": [["reading"]], "options": ["reading", "reads", "read"], "hint": "После is — форма на -ing.", "explanation": "He is reading a book. После is — глагол с -ing.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l03.e05", "type": "fill_gap", "text": "A woman is ___ in the park.", "translation": "Женщина бегает в парке.", "answers": [["running"]], "options": ["running", "runing", "runs"], "hint": "Согласная удваивается.", "explanation": "Правильно: A woman is running in the park. Run → running.", "grammar": ["a1.present-continuous"], "troubles": ["tenses"] },
+        { "id": "a1.u09.l03.e06", "type": "fill_gap", "text": "We are ___ English.", "translation": "Мы пишем по-английски.", "answers": [["writing"]], "options": ["writing", "writeing", "write"], "hint": "Конечную e убираем.", "explanation": "We are writing English. Write → writing: e убирается.", "grammar": ["a1.present-continuous"], "troubles": ["tenses"] },
+        { "id": "a1.u09.l03.e07", "type": "fill_gap", "text": "The girls are ___ and singing.", "translation": "Девочки танцуют и поют.", "answers": [["dancing"]], "options": ["dancing", "danceing", "dance"], "hint": "Конечную e убираем.", "explanation": "Правильно: The girls are dancing and singing. Dance → dancing.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l03.e08", "type": "fill_gap", "text": "I am not ___ now.", "translation": "Сейчас я не работаю.", "answers": [["working"]], "options": ["working", "work", "works"], "hint": "После not — форма на -ing.", "explanation": "I am not working now. Отрицание — am not + глагол с -ing.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l03.e09", "type": "fill_gap", "text": "He ___ sleeping.", "translation": "Он не спит.", "answers": [["isn't", "is not"]], "options": ["isn't", "doesn't", "aren't"], "hint": "С he — отрицание be.", "explanation": "He isn't sleeping. Isn't — сокращение от is not.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l03.e10", "type": "error_correction", "text": "I cooking dinner now.", "wrong": "I cooking", "correction": "I am cooking", "options": ["I am cooking", "I cook", "I is cooking"], "hint": "Пропущено слово.", "explanation": "I am cooking dinner now. Нужен am.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l03.e11", "type": "error_correction", "text": "She is walk in the park.", "wrong": "walk", "correction": "walking", "options": ["walking", "walks", "walked"], "hint": "После is — форма на -ing.", "explanation": "Правильно: She is walking in the park.", "grammar": ["a1.present-continuous"], "troubles": ["tenses"] },
+        { "id": "a1.u09.l03.e12", "type": "error_correction", "text": "He is runing.", "wrong": "runing", "correction": "running", "options": ["running", "runs", "run"], "hint": "Согласная удваивается.", "explanation": "He is running. Одна гласная и одна согласная — согласная удваивается.", "grammar": ["a1.present-continuous"], "troubles": ["tenses"] },
+        { "id": "a1.u09.l03.e13", "type": "tiles", "from": "ru", "text": "Мы сидим и слушаем музыку.", "answer": "We are sitting and listening to music.", "distractors": ["is", "listen"], "difficulty": 2, "hint": "Два глагола с -ing.", "explanation": "We are sitting and listening to music. Listen to — «слушать».", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l03.e14", "type": "type_translation", "from": "ru", "text": "Она сейчас разговаривает по телефону.", "answers": ["She is talking on the phone now.", "She is talking on the phone."], "difficulty": 2, "hint": "На телефоне — on the phone.", "explanation": "Правильно: She is talking on the phone now.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l03.e15", "type": "speak_repeat", "text": "I am cooking dinner and she is sitting at the table.", "hint": "Две части.", "explanation": "Am cooking — [æm ˈkʊkɪŋ]: ударение на глаголе." }
+      ]
+    },
+    {
+      "id": "a1.u09.l04",
+      "kind": "grammar",
+      "title": "Что вы делаете?",
+      "grammar": "a1.continuous-questions",
+      "exercises": [
+        { "id": "a1.u09.l04.e01", "type": "fill_gap", "text": "___ you working now?", "translation": "Вы сейчас работаете?", "answers": [["Are"]], "options": ["Are", "Do", "Is"], "hint": "Вопрос с you.", "explanation": "Are you working now? С you — are.", "grammar": ["a1.continuous-questions"] },
+        { "id": "a1.u09.l04.e02", "type": "fill_gap", "text": "___ she sleeping?", "translation": "Она спит?", "answers": [["Is"]], "options": ["Is", "Are", "Does"], "hint": "Вопрос с she.", "explanation": "Is she sleeping? С she — is.", "grammar": ["a1.continuous-questions"] },
+        { "id": "a1.u09.l04.e03", "type": "fill_gap", "text": "What are you ___?", "translation": "Что вы делаете?", "answers": [["doing"]], "options": ["doing", "do", "does"], "hint": "После are — форма на -ing.", "explanation": "What are you doing? Doing — форма глагола do с -ing.", "grammar": ["a1.continuous-questions"] },
+        { "id": "a1.u09.l04.e04", "type": "fill_gap", "text": "Where ___ they walking?", "translation": "Где они гуляют?", "answers": [["are"]], "options": ["are", "is", "do"], "hint": "О нескольких людях.", "explanation": "Правильно: Where are they walking?", "grammar": ["a1.continuous-questions"] },
+        { "id": "a1.u09.l04.e05", "type": "fill_gap", "text": "Is it raining? — No, it ___.", "translation": "Идёт дождь? — Нет.", "answers": [["isn't", "is not"]], "options": ["isn't", "doesn't", "don't"], "hint": "Короткий отрицательный ответ.", "explanation": "No, it isn't. Короткий ответ повторяет be.", "grammar": ["a1.continuous-questions"] },
+        { "id": "a1.u09.l04.e06", "type": "fill_gap", "text": "Are you walking? — Yes, I ___.", "translation": "Вы гуляете? — Да.", "answers": [["am"]], "options": ["am", "do", "are"], "hint": "Ответ с I.", "explanation": "Yes, I am. После yes be не сокращается.", "grammar": ["a1.continuous-questions"] },
+        { "id": "a1.u09.l04.e07", "type": "error_correction", "text": "You are working?", "wrong": "You are", "correction": "Are you", "options": ["Are you", "Do you", "Is you"], "hint": "Порядок слов нужно поменять.", "explanation": "Are you working? Be выходит перед подлежащим.", "grammar": ["a1.continuous-questions"], "troubles": ["word-order"] },
+        { "id": "a1.u09.l04.e08", "type": "error_correction", "text": "What you are doing?", "wrong": "you are", "correction": "are you", "options": ["are you", "do you", "is you"], "hint": "После what сразу be.", "explanation": "Правильно: What are you doing?", "grammar": ["a1.continuous-questions"], "troubles": ["word-order"] },
+        { "id": "a1.u09.l04.e09", "type": "error_correction", "text": "Are you work now?", "wrong": "work", "correction": "working", "options": ["working", "works", "worked"], "hint": "После are — форма на -ing.", "explanation": "Правильно: Are you working now?", "grammar": ["a1.continuous-questions"], "troubles": ["tenses"] },
+        { "id": "a1.u09.l04.e10", "type": "tiles", "from": "ru", "text": "Что он готовит?", "answer": "What is he cooking?", "distractors": ["does", "are"], "hint": "Образец: What + is + he.", "explanation": "Правильно: What is he cooking?", "grammar": ["a1.continuous-questions"] },
+        { "id": "a1.u09.l04.e11", "type": "tiles", "from": "ru", "text": "Идёт ли дождь?", "answer": "Is it raining?", "distractors": ["Are", "rain"], "hint": "Начните с Is.", "explanation": "Правильно: Is it raining?", "grammar": ["a1.continuous-questions"] },
+        { "id": "a1.u09.l04.e12", "type": "type_translation", "from": "ru", "text": "Что вы делаете?", "answers": ["What are you doing?"], "hint": "Три слова и doing.", "explanation": "Правильно: What are you doing?", "grammar": ["a1.continuous-questions"] },
+        { "id": "a1.u09.l04.e13", "type": "type_translation", "from": "ru", "text": "Твоя сестра слушает музыку?", "answers": ["Is your sister listening to music?"], "difficulty": 2, "hint": "Образец: Is + your sister + listening.", "explanation": "Правильно: Is your sister listening to music?", "grammar": ["a1.continuous-questions"] },
+        { "id": "a1.u09.l04.e14", "type": "listen_choice", "audio": "What is she doing?", "question": "Что вы слышите?", "options": ["What is she doing?", "What are you doing?", "What does she do?"], "answer": 0, "hint": "Спрашивают про неё.", "explanation": "What is she doing? — «Что она сейчас делает?»", "grammar": ["a1.continuous-questions"] },
+        { "id": "a1.u09.l04.e15", "type": "speak_answer", "question": "What are you doing right now?", "questionRu": "Что вы делаете прямо сейчас? Ответьте: I am sitting. I am learning English.", "keywords": [["\\bI am\\b", "\\bI'm\\b"], ["\\b[a-z]+ing\\b"]], "minKeywords": 2, "samples": ["I am sitting and reading.", "I am working."], "difficulty": 3, "hint": "I am + глагол с -ing.", "explanation": "Ответ: I am sitting and reading.", "grammar": ["a1.present-continuous"] }
+      ]
+    },
+    {
+      "id": "a1.u09.l05",
+      "kind": "grammar",
+      "title": "Каждый день или сейчас?",
+      "grammar": "a1.simple-vs-continuous",
+      "exercises": [
+        { "id": "a1.u09.l05.e01", "type": "fill_gap", "text": "I ___ in an office every day.", "translation": "Я работаю в офисе каждый день.", "answers": [["work"]], "options": ["work", "am working", "works"], "hint": "Каждый день — привычка.", "explanation": "Правильно: I work in an office every day. Every day — Present Simple.", "grammar": ["a1.simple-vs-continuous"] },
+        { "id": "a1.u09.l05.e02", "type": "fill_gap", "text": "I ___ in an office now.", "translation": "Сейчас я работаю в офисе.", "answers": [["am working"]], "options": ["am working", "work", "works"], "hint": "Now — прямо сейчас.", "explanation": "Правильно: I am working in an office now. Now — Present Continuous.", "grammar": ["a1.simple-vs-continuous"] },
+        { "id": "a1.u09.l05.e03", "type": "fill_gap", "text": "She ___ coffee every morning.", "translation": "Она пьёт кофе каждое утро.", "answers": [["drinks"]], "options": ["drinks", "is drinking", "drink"], "hint": "Каждое утро — привычка.", "explanation": "Правильно: She drinks coffee every morning.", "grammar": ["a1.simple-vs-continuous"] },
+        { "id": "a1.u09.l05.e04", "type": "fill_gap", "text": "She ___ coffee right now.", "translation": "Прямо сейчас она пьёт кофе.", "answers": [["is drinking"]], "options": ["is drinking", "drinks", "drink"], "hint": "Right now — этот момент.", "explanation": "Правильно: She is drinking coffee right now.", "grammar": ["a1.simple-vs-continuous"] },
+        { "id": "a1.u09.l05.e05", "type": "fill_gap", "text": "I ___ tea.", "translation": "Я люблю чай. (вообще)", "answers": [["like"]], "options": ["like", "am liking", "likes"], "hint": "Глаголу нравится — не нужен -ing.", "explanation": "I like tea. Like обычно используют в Present Simple.", "grammar": ["a1.simple-vs-continuous"], "troubles": ["tenses"] },
+        { "id": "a1.u09.l05.e06", "type": "error_correction", "text": "I cook now.", "wrong": "cook", "correction": "am cooking", "options": ["am cooking", "cooks", "cooking"], "hint": "Now — действие сейчас.", "explanation": "I am cooking now. Со словом now — Present Continuous.", "grammar": ["a1.simple-vs-continuous"], "troubles": ["tenses"] },
+        { "id": "a1.u09.l05.e07", "type": "error_correction", "text": "She is working every day.", "wrong": "is working", "correction": "works", "options": ["works", "work", "working"], "hint": "Every day — привычка.", "explanation": "Правильно: She works every day. Every day — Present Simple.", "grammar": ["a1.simple-vs-continuous"], "troubles": ["tenses"] },
+        { "id": "a1.u09.l05.e08", "type": "error_correction", "text": "I am liking tea.", "wrong": "am liking", "correction": "like", "options": ["like", "likes", "liking"], "hint": "Глагол чувств не требует -ing.", "explanation": "I like tea. Like не ставят в Continuous.", "grammar": ["a1.simple-vs-continuous"], "troubles": ["tenses"] },
+        { "id": "a1.u09.l05.e09", "type": "translate_choice", "from": "en", "text": "I am reading a book.", "options": ["Я читаю книгу прямо сейчас.", "Я читаю книги каждый день.", "Я люблю книги."], "answer": 0, "hint": "Am reading — действие идёт.", "explanation": "I am reading a book — «я сейчас читаю книгу»." },
+        { "id": "a1.u09.l05.e10", "type": "translate_choice", "from": "en", "text": "I read a book every evening.", "options": ["Я читаю книгу каждый вечер.", "Я читаю книгу сейчас.", "Я не читаю."], "answer": 0, "hint": "Every evening — привычка.", "explanation": "I read a book every evening — «я читаю книгу каждый вечер»." },
+        { "id": "a1.u09.l05.e11", "type": "tiles", "from": "ru", "text": "Он обычно не работает в воскресенье, но сейчас работает.", "answer": "He doesn't work on Sunday, but he is working now.", "distractors": ["works", "are"], "difficulty": 3, "hint": "Две части: привычка и сейчас.", "explanation": "Привычка — He doesn't work on Sunday. Сейчас — he is working now.", "grammar": ["a1.simple-vs-continuous"] },
+        { "id": "a1.u09.l05.e12", "type": "type_translation", "from": "ru", "text": "Я пью чай каждое утро.", "answers": ["I drink tea every morning."], "hint": "Каждое утро — привычка.", "explanation": "Правильно: I drink tea every morning.", "grammar": ["a1.simple-vs-continuous"] },
+        { "id": "a1.u09.l05.e13", "type": "type_translation", "from": "ru", "text": "Я пью чай прямо сейчас.", "answers": ["I am drinking tea right now.", "I am drinking tea now."], "hint": "Сейчас — Continuous.", "explanation": "Правильно: I am drinking tea right now.", "grammar": ["a1.simple-vs-continuous"] },
+        { "id": "a1.u09.l05.e14", "type": "listen_choice", "audio": "She is working today.", "question": "Что вы слышите?", "options": ["She is working today.", "She works every day.", "She doesn't work today."], "answer": 0, "hint": "Есть слово today.", "explanation": "She is working today — «сегодня она работает».", "grammar": ["a1.simple-vs-continuous"] },
+        { "id": "a1.u09.l05.e15", "type": "speak_repeat", "text": "I work in the morning, but today I am sitting at home.", "hint": "Две части с but.", "explanation": "But [bʌt] — «но». Две части произносите с паузой." }
+      ]
+    },
+    {
+      "id": "a1.u09.l06",
+      "kind": "listening",
+      "title": "Телефонный разговор",
+      "textId": "a1.u09.call",
+      "exercises": [
+        {
+          "id": "a1.u09.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "a1.u09.call",
+          "hint": "Слушайте, кто что делает сейчас.",
+          "explanation": "Том готовит ужин, Анна гуляет в парке. Сестра Анны разговаривает по телефону.",
+          "questions": [
+            { "kind": "mcq", "question": "Что делает Том?", "options": ["He is cooking dinner.", "He is walking.", "He is sleeping."], "answer": 0, "explanation": "Том говорит: I am cooking dinner." },
+            { "kind": "mcq", "question": "Где Анна?", "options": ["in the park", "at home", "in the restaurant"], "answer": 0, "explanation": "Анна говорит: I am walking in the park." },
+            { "kind": "mcq", "question": "Какая погода?", "options": ["sunny and warm", "cold and windy", "cloudy"], "answer": 0, "explanation": "Анна говорит: It is sunny and warm." },
+            { "kind": "tfn", "statement": "It is raining.", "answer": "false", "explanation": "Анна говорит: No, it isn't." },
+            { "kind": "tfn", "statement": "Anna's sister is talking on the phone.", "answer": "true", "explanation": "Анна говорит: She is talking on the phone." },
+            { "kind": "tfn", "statement": "Tom is cooking chicken.", "answer": "not_given", "explanation": "Что именно готовит Том, не сказано." }
+          ]
+        },
+        { "id": "a1.u09.l06.e02", "type": "listen_choice", "audio": "We are sitting and listening to music.", "question": "Что вы слышите?", "options": ["We are sitting and listening to music.", "We are standing and singing.", "We are sitting and reading."], "answer": 0, "hint": "Слушают музыку.", "explanation": "We are sitting and listening to music — «мы сидим и слушаем музыку»." },
+        { "id": "a1.u09.l06.e03", "type": "listen_dictation", "text": "What are you doing?", "hint": "Четыре слова.", "explanation": "What are you doing? — «Что ты делаешь?»" },
+        { "id": "a1.u09.l06.e04", "type": "listen_dictation", "text": "I am busy now.", "hint": "Четыре слова.", "explanation": "I am busy now — «я сейчас занят»." },
+        { "id": "a1.u09.l06.e05", "type": "fill_gap", "text": "Anna ___ walking in the park.", "translation": "Анна гуляет в парке.", "answers": [["is"]], "options": ["is", "are", "am"], "hint": "О женщине.", "explanation": "Правильно: Anna is walking in the park.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l06.e06", "type": "fill_gap", "text": "___ it raining? — No, it isn't.", "translation": "Идёт дождь? — Нет.", "answers": [["Is"]], "options": ["Is", "Are", "Does"], "hint": "Вопрос про it.", "explanation": "Правильно: Is it raining? — No, it isn't.", "grammar": ["a1.continuous-questions"] },
+        { "id": "a1.u09.l06.e07", "type": "tiles", "from": "ru", "text": "Я сейчас занят.", "answer": "I am busy now.", "distractors": ["is", "work"], "hint": "Четыре слова.", "explanation": "Правильно: I am busy now.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l06.e08", "type": "type_translation", "from": "ru", "text": "Позвони мне завтра.", "answers": ["Call me tomorrow."], "hint": "Команда с me.", "explanation": "Call me tomorrow. После call — me.", "grammar": ["a1.imperatives", "a1.object-pronouns"] },
+        { "id": "a1.u09.l06.e09", "type": "speak_answer", "question": "What are you doing?", "questionRu": "Вам звонит друг: «Что ты делаешь?» Ответьте: I am cooking. I am working.", "keywords": [["\\bI am\\b", "\\bI'm\\b"], ["\\b[a-z]+ing\\b"]], "minKeywords": 2, "samples": ["I am cooking dinner.", "I am walking in the park."], "difficulty": 3, "hint": "I am + глагол с -ing.", "explanation": "Ответ: I am cooking dinner.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l06.e10", "type": "speak_repeat", "text": "Hello! What are you doing?", "hint": "Дружелюбная интонация.", "explanation": "В вопросе с what интонация идёт вниз." }
+      ]
+    },
+    {
+      "id": "a1.u09.l07",
+      "kind": "writing",
+      "title": "Суббота в парке",
+      "textId": "a1.u09.park",
+      "exercises": [
+        {
+          "id": "a1.u09.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "a1.u09.park",
+          "hint": "Найдите, кто что делает.",
+          "explanation": "В парке тёплый солнечный день: дети играют, мужчина читает, девочки танцуют, женщина бегает.",
+          "questions": [
+            { "kind": "mcq", "question": "Какая погода?", "options": ["sunny and warm", "cloudy and cold", "windy"], "answer": 0, "explanation": "В тексте: The weather is sunny and warm." },
+            { "kind": "mcq", "question": "Что делает мужчина?", "options": ["He is reading a newspaper.", "He is running.", "He is singing."], "answer": 0, "explanation": "В тексте: A man is sitting and reading a newspaper." },
+            { "kind": "mcq", "question": "Что делают две девочки?", "options": ["dancing and singing", "sitting and writing", "playing in the garden"], "answer": 0, "explanation": "В тексте: Two girls are dancing and singing." },
+            { "kind": "tfn", "statement": "The writer is working today.", "answer": "false", "explanation": "В тексте: I am not working today." },
+            { "kind": "tfn", "statement": "The writer is drinking coffee.", "answer": "true", "explanation": "В тексте: I am sitting with my friend and drinking coffee." },
+            { "kind": "tfn", "statement": "The woman is running with a dog.", "answer": "not_given", "explanation": "Про собаку текст не говорит." }
+          ]
+        },
+        { "id": "a1.u09.l07.e02", "type": "translate_choice", "from": "en", "text": "There are many people in the park.", "options": ["В парке много людей.", "В парке мало людей.", "В парке нет людей."], "answer": 0, "hint": "Many — «много».", "explanation": "There are many people in the park — «в парке много людей»." },
+        { "id": "a1.u09.l07.e03", "type": "fill_gap", "text": "The children ___ playing in the garden.", "translation": "Дети играют в саду.", "answers": [["are"]], "options": ["are", "is", "am"], "hint": "Дети — несколько.", "explanation": "Правильно: The children are playing in the garden.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l07.e04", "type": "fill_gap", "text": "I am ___ working today.", "translation": "Сегодня я не работаю.", "answers": [["not"]], "options": ["not", "no", "don't"], "hint": "Отрицание после am.", "explanation": "I am not working today. Am not — отрицание.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l07.e05", "type": "type_translation", "from": "ru", "text": "Мужчина сидит и читает газету.", "answers": ["A man is sitting and reading a newspaper."], "difficulty": 3, "hint": "Два глагола с -ing.", "explanation": "A man is sitting and reading a newspaper. Is стоит один раз.", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l07.e06", "type": "speak_describe", "picture": { "emoji": "🌳" }, "situation": "Расскажите, что люди делают в парке: два-три действия и какая погода.", "keywords": [["\\b(is|are)\\b"], ["\\b[a-z]+ing\\b"]], "minKeywords": 2, "samples": ["A man is reading a newspaper. Two girls are dancing. The weather is sunny and warm."], "difficulty": 3, "hint": "Образец: A man is… Two girls are…", "explanation": "Начните с A man is…, потом Two girls are…", "grammar": ["a1.present-continuous"] },
+        { "id": "a1.u09.l07.e07", "type": "speak_answer", "question": "What is the weather like today?", "questionRu": "Какая погода сегодня? Ответьте: It is sunny. или It is cold.", "keywords": [["\\bit is\\b", "\\bit's\\b"], ["\\b(sunny|cloudy|windy|warm|cold|raining|snowing|hot)\\b"]], "minKeywords": 2, "samples": ["It is cloudy and cold."], "difficulty": 3, "hint": "It is… и слово о погоде.", "explanation": "Ответ: It is cloudy and cold." },
+        {
+          "id": "a1.u09.l07.e08",
+          "type": "write",
+          "task": "Опишите, что происходит вокруг вас прямо сейчас: где вы, какая погода, что делаете вы и другие люди. Например: I am sitting at home. It is sunny. My sister is listening to music.",
+          "minWords": 30,
+          "maxWords": 90,
+          "criteria": [
+            { "id": "ing", "label": "Есть глаголы с -ing", "patterns": ["\\b[a-z]+ing\\b"] },
+            { "id": "be", "label": "Есть am, is или are", "patterns": ["\\b(am|is|are|isn't|aren't)\\b"] },
+            { "id": "weather", "label": "Есть погода", "patterns": ["\\b(sunny|cloudy|windy|warm|cold|raining|snowing|weather|hot)\\b"] },
+            { "id": "now", "label": "Есть now, right now или today", "patterns": ["\\b(now|right now|today)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\bI (cooking|working|sitting|reading|writing|walking|listening)\\b", "message": "Перед глаголом с -ing нужно am: I am working." },
+            { "pattern": "\\b(he|she|it) (am|are) [a-z]+ing\\b", "message": "С he, she, it — is: she is working." },
+            { "pattern": "\\b(we|you|they) (am|is) [a-z]+ing\\b", "message": "С we, you, they — are: they are playing." },
+            { "pattern": "\\b(runing|writeing|sitings|danceing|siting|geting)\\b", "message": "Проверьте написание с -ing: running, writing, sitting, dancing." },
+            { "pattern": "\\b(am|is|are) (work|read|play|sit|walk|cook|sleep|run|write|sing|dance)\\b", "message": "После am, is, are нужен глагол с -ing: is working, а не is work." }
+          ],
+          "samples": [
+            "I am sitting at home. It is cloudy and cold today. I am writing my name. My sister is listening to music. She is not working now. My friend is waiting for me outside.",
+            "It is Sunday and I am in the park. The weather is sunny and warm. The children are playing. A man is running and a woman is singing. I am drinking coffee now. I am not working today."
+          ],
+          "difficulty": 3,
+          "hint": "План: где я → погода → что делаю я и другие.",
+          "explanation": "Для действий, которые идут сейчас, используйте am, is, are и глагол с -ing. Для отрицания добавляйте not.",
+          "grammar": ["a1.present-continuous", "a1.continuous-questions", "a1.simple-vs-continuous"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "a1.u09.test.e01", "type": "match_pairs", "pairs": [{ "en": "listen", "ru": "слушать" }, { "en": "sit", "ru": "сидеть" }, { "en": "wait", "ru": "ждать" }, { "en": "sing", "ru": "петь" }, { "en": "write", "ru": "писать" }], "hint": "Все слова из первого урока.", "explanation": "Listen — слушать, sit — сидеть, wait — ждать, sing — петь, write — писать." },
+      { "id": "a1.u09.test.e02", "type": "translate_choice", "from": "ru", "text": "солнечный", "options": ["sunny", "cloudy", "windy"], "answer": 0, "hint": "Связано со словом sun.", "explanation": "Sunny — «солнечный»." },
+      { "id": "a1.u09.test.e03", "type": "fill_gap", "text": "I ___ cooking dinner now.", "translation": "Я сейчас готовлю ужин.", "answers": [["am"]], "options": ["am", "is", "are"], "hint": "С I.", "explanation": "Правильно: I am cooking dinner now.", "grammar": ["a1.present-continuous"] },
+      { "id": "a1.u09.test.e04", "type": "fill_gap", "text": "They are ___ in the park.", "translation": "Они танцуют в парке.", "answers": [["dancing"]], "options": ["dancing", "danceing", "dance"], "hint": "Конечную e убираем.", "explanation": "Правильно: They are dancing in the park.", "grammar": ["a1.present-continuous"] },
+      { "id": "a1.u09.test.e05", "type": "fill_gap", "text": "He is ___ a newspaper.", "translation": "Он читает газету.", "answers": [["reading"]], "options": ["reading", "reads", "read"], "hint": "После is — форма на -ing.", "explanation": "Правильно: He is reading a newspaper.", "grammar": ["a1.present-continuous"] },
+      { "id": "a1.u09.test.e06", "type": "fill_gap", "text": "___ she working now?", "translation": "Она сейчас работает?", "answers": [["Is"]], "options": ["Is", "Are", "Does"], "hint": "Вопрос про she.", "explanation": "Правильно: Is she working now?", "grammar": ["a1.continuous-questions"] },
+      { "id": "a1.u09.test.e07", "type": "fill_gap", "text": "I ___ in an office every day.", "translation": "Я работаю в офисе каждый день.", "answers": [["work"]], "options": ["work", "am working", "works"], "hint": "Каждый день — привычка.", "explanation": "Правильно: I work in an office every day.", "grammar": ["a1.simple-vs-continuous"] },
+      { "id": "a1.u09.test.e08", "type": "fill_gap", "text": "She is not ___ now.", "translation": "Сейчас она не спит.", "answers": [["sleeping"]], "options": ["sleeping", "sleep", "sleeps"], "hint": "После not — форма на -ing.", "explanation": "Правильно: She is not sleeping now.", "grammar": ["a1.present-continuous"] },
+      { "id": "a1.u09.test.e09", "type": "error_correction", "text": "I cooking dinner now.", "wrong": "I cooking", "correction": "I am cooking", "options": ["I am cooking", "I cook", "I is cooking"], "hint": "Пропущено слово.", "explanation": "Правильно: I am cooking dinner now.", "grammar": ["a1.present-continuous"] },
+      { "id": "a1.u09.test.e10", "type": "error_correction", "text": "He is runing.", "wrong": "runing", "correction": "running", "options": ["running", "runs", "run"], "hint": "Согласная удваивается.", "explanation": "Правильно: He is running.", "grammar": ["a1.present-continuous"], "troubles": ["tenses"] },
+      { "id": "a1.u09.test.e11", "type": "error_correction", "text": "I am liking tea.", "wrong": "am liking", "correction": "like", "options": ["like", "likes", "liking"], "hint": "Это не действие сейчас.", "explanation": "Правильно: I like tea.", "grammar": ["a1.simple-vs-continuous"], "troubles": ["tenses"] },
+      { "id": "a1.u09.test.e12", "type": "listen_choice", "audio": "It is snowing outside.", "question": "Что вы слышите?", "options": ["It is snowing outside.", "It is raining outside.", "It is windy outside."], "answer": 0, "hint": "Зимнее слово.", "explanation": "It is snowing outside — «на улице идёт снег».", "grammar": ["a1.present-continuous"] },
+      { "id": "a1.u09.test.e13", "type": "listen_dictation", "text": "She is talking on the phone.", "hint": "Шесть слов.", "explanation": "She is talking on the phone — «она разговаривает по телефону»." },
+      { "id": "a1.u09.test.e14", "type": "tiles", "from": "ru", "text": "Что вы делаете сейчас?", "answer": "What are you doing now?", "distractors": ["do", "is"], "difficulty": 2, "hint": "Образец: What + are + you.", "explanation": "Правильно: What are you doing now?", "grammar": ["a1.continuous-questions"] },
+      { "id": "a1.u09.test.e15", "type": "type_translation", "from": "ru", "text": "Сейчас я слушаю музыку.", "answers": ["I am listening to music now.", "Now I am listening to music."], "difficulty": 2, "hint": "Listen to — «слушать».", "explanation": "Правильно: I am listening to music now.", "grammar": ["a1.present-continuous"] },
+      { "id": "a1.u09.test.e16", "type": "speak_repeat", "text": "I am sitting in the park and it is sunny.", "hint": "Две части.", "explanation": "Sitting [ˈsɪtɪŋ]: окончание -ing читается [ɪŋ]." }
+    ]
+  }
+}
