@@ -18,6 +18,8 @@ export const BACKUP_TABLES = [
   'streak_freezes',
   'srs_cards',
   'srs_log',
+  'favorites',
+  'user_words',
 ] as const;
 
 const Row = z.record(z.string(), z.union([z.string(), z.number(), z.null()]));
@@ -26,10 +28,11 @@ export const Snapshot = z.strictObject({
   app: z.literal('jane'),
   schema: z.number().int().min(1),
   exportedAt: z.string(),
+  // Tables added by later schema versions are missing from older backups: default to empty.
   tables: z.strictObject(
-    Object.fromEntries(BACKUP_TABLES.map((t) => [t, z.array(Row)])) as Record<
+    Object.fromEntries(BACKUP_TABLES.map((t) => [t, z.array(Row).default([])])) as Record<
       (typeof BACKUP_TABLES)[number],
-      z.ZodArray<typeof Row>
+      z.ZodDefault<z.ZodArray<typeof Row>>
     >,
   ),
 });

@@ -19,6 +19,10 @@ import {
 interface ProgressStore {
   snapshot: ProgressSnapshot | null;
   dueCount: number;
+  /** Bumped on every refresh; screens reload their own queries when it changes. */
+  version: number;
+  /** Signals that data changed outside a session (dictionary edits, imports). */
+  touch: () => void;
   refresh: (db: Db, now?: Date) => Promise<void>;
   record: (db: Db, meta: SessionMeta, summary: LessonSummary) => Promise<CompletionInfo>;
 }
@@ -26,9 +30,11 @@ interface ProgressStore {
 export const useProgress = create<ProgressStore>((set, get) => ({
   snapshot: null,
   dueCount: 0,
+  version: 0,
+  touch: () => set((s) => ({ version: s.version + 1 })),
   refresh: async (db, now = new Date()) => {
     const [snapshot, dueCount] = await Promise.all([loadProgress(db, now), countDue(db, now)]);
-    set({ snapshot, dueCount });
+    set((s) => ({ snapshot, dueCount, version: s.version + 1 }));
   },
   record: async (db, meta, summary) => {
     const info = await recordSession(db, meta, summary);

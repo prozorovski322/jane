@@ -108,6 +108,26 @@ export const MIGRATIONS: readonly Migration[] = [
       CREATE INDEX srs_log_card ON srs_log (card_id);
     `,
   },
+  {
+    version: 2,
+    sql: `
+      -- Dictionary: favorite words (course or own) and the learner's own words.
+      CREATE TABLE favorites (
+        word_id TEXT PRIMARY KEY NOT NULL,
+        added_at INTEGER NOT NULL
+      );
+
+      CREATE TABLE user_words (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        en TEXT NOT NULL,
+        ru TEXT NOT NULL,
+        example_en TEXT,
+        example_ru TEXT,
+        note TEXT,
+        created_at INTEGER NOT NULL
+      );
+    `,
+  },
 ];
 
 export const SCHEMA_VERSION = MIGRATIONS[MIGRATIONS.length - 1]!.version;

@@ -16,7 +16,21 @@ export type IconName =
   | 'arrow-right'
   | 'skip'
   | 'refresh'
-  | 'book';
+  | 'book'
+  | 'path'
+  | 'sun'
+  | 'target'
+  | 'user'
+  | 'search'
+  | 'star'
+  | 'star-filled'
+  | 'plus'
+  | 'cards'
+  | 'chevron-right'
+  | 'back'
+  | 'trash'
+  | 'flame'
+  | 'snow';
 
 const paths: Record<IconName, React.ReactNode> = {
   close: <Path d="M6 6l12 12M18 6L6 18" />,
@@ -73,6 +87,59 @@ const paths: Record<IconName, React.ReactNode> = {
       <Path d="M4 20.5A2.5 2.5 0 006.5 23H20v-5" />
     </>
   ),
+  path: (
+    <>
+      <Circle cx={6} cy={18} r={2.5} />
+      <Circle cx={18} cy={6} r={2.5} />
+      <Path d="M8.5 18H15a3.5 3.5 0 000-7H9a3.5 3.5 0 010-7h6.5" />
+    </>
+  ),
+  sun: (
+    <>
+      <Circle cx={12} cy={12} r={4} />
+      <Path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4" />
+    </>
+  ),
+  target: (
+    <>
+      <Circle cx={12} cy={12} r={9} />
+      <Circle cx={12} cy={12} r={5} />
+      <Circle cx={12} cy={12} r={1} />
+    </>
+  ),
+  user: (
+    <>
+      <Circle cx={12} cy={8} r={4} />
+      <Path d="M4 21a8 8 0 0116 0" />
+    </>
+  ),
+  search: (
+    <>
+      <Circle cx={10.5} cy={10.5} r={6.5} />
+      <Path d="M15.5 15.5L21 21" />
+    </>
+  ),
+  star: <Path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" />,
+  'star-filled': (
+    <Path
+      d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"
+      fill="currentColor"
+    />
+  ),
+  plus: <Path d="M12 5v14M5 12h14" />,
+  cards: (
+    <>
+      <Rect x={3} y={7} width={13} height={14} rx={2} />
+      <Path d="M8 3h11a2 2 0 012 2v12" />
+    </>
+  ),
+  'chevron-right': <Path d="M9 5l7 7-7 7" />,
+  back: <Path d="M19 12H5M11 5.5L4.5 12l6.5 6.5" />,
+  trash: <Path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3" />,
+  flame: (
+    <Path d="M12 21c-4 0-7-2.7-7-6.5 0-3.4 2.6-5.2 3.6-8.5.4 2 1.6 3.2 2.9 3.6C11.8 6.6 13 4.2 15 3c-.4 2.6.6 4.5 2 6.3 1.3 1.6 2 3.3 2 5.2C19 18.3 16 21 12 21z" />
+  ),
+  snow: <Path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7M9 4l3 2 3-2M9 20l3-2 3 2" />,
 };
 
 export function Icon({ name, size = 24, color }: { name: IconName; size?: number; color: string }) {
@@ -82,6 +149,8 @@ export function Icon({ name, size = 24, color }: { name: IconName; size?: number
       height={size}
       viewBox="0 0 24 24"
       fill="none"
+      // `currentColor` in filled icons resolves to this.
+      color={color}
       stroke={color}
       strokeWidth={2}
       strokeLinecap="round"

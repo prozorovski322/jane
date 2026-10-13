@@ -33,7 +33,10 @@ const GRAMMAR_TYPES = new Set<Exercise['type']>([
 const LEVEL_ORDER = ['A1', 'A2', 'B1', 'B2'];
 
 function explanation(w: LexiconEntry): string {
-  const parts = [`${w.en} /${w.ipa}/ — ${w.ru.join(', ')}.`, `${w.example.en} — ${w.example.ru}`];
+  // The learner's own words have no transcription.
+  const head = w.ipa ? `${w.en} /${w.ipa}/` : w.en;
+  const parts = [`${head} — ${w.ru.join(', ')}.`];
+  if (w.example.en !== w.en) parts.push(`${w.example.en} — ${w.example.ru}`);
   if (w.note) parts.push(w.note);
   return parts.join(' ');
 }

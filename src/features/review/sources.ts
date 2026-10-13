@@ -1,4 +1,5 @@
 import { getCourse, getLexicon, getUnit } from '@/core/content';
+import type { LexiconEntry } from '@/core/content/bundle-types';
 import type { Exercise } from '@/core/content/schema';
 import { isMastered, type SrsCard } from '@/core/srs/scheduler';
 import type { Db } from '@/core/storage/db';
@@ -6,22 +7,37 @@ import { allCards, dueCards } from '@/core/storage/srs-repo';
 import { hashString } from '@/lib/random';
 import { dayOf } from '@/core/progress/dates';
 
+import { loadOwnLexicon } from '../dictionary/load';
 import type { LessonSession } from '../lesson/session';
 import { textsFor } from '../lesson/session';
 import { buildReview, REVIEW_SIZE, type ReviewSources } from './generate';
 
-/** Exercises of lessons the learner has completed, for grammar reviews. */
-export function reviewSources(completedLessons: ReadonlySet<string>): ReviewSources {
-  const lexicon = getLexicon();
-  const seen: Exercise[] = [];
+/** Exercises of completed lessons (or of all lessons), in course order. */
+export function courseExercises(completedLessons?: ReadonlySet<string>): Exercise[] {
+  const out: Exercise[] = [];
   for (const level of getCourse().levels) {
     for (const u of level.units) {
-      const unit = getUnit(u.id);
-      for (const l of unit.lessons) if (completedLessons.has(l.id)) seen.push(...l.exercises);
+      for (const l of getUnit(u.id).lessons) {
+        if (!completedLessons || completedLessons.has(l.id)) out.push(...l.exercises);
+      }
     }
   }
+  return out;
+}
+
+/**
+ * Sources for reviews: course words plus the learner's own words; grammar exercises from
+ * completed lessons. Own words are looked up but never used as distractors.
+ */
+export function reviewSources(
+  completedLessons: ReadonlySet<string>,
+  ownWords: readonly LexiconEntry[] = [],
+): ReviewSources {
+  const lexicon = getLexicon();
+  const own = new Map(ownWords.map((w) => [w.id, w]));
+  const seen = courseExercises(completedLessons);
   return {
-    word: (id) => lexicon.get(id),
+    word: (id) => lexicon.get(id) ?? own.get(id),
     words: [...lexicon.values()],
     grammarExercises: (id) => seen.filter((e) => e.grammar.includes(id)),
   };
@@ -33,11 +49,11 @@ export async function loadReviewSession(
   completedLessons: ReadonlySet<string>,
   now = new Date(),
 ): Promise<LessonSession> {
-  const cards = await dueCards(db, now, REVIEW_SIZE * 2);
+  const [cards, own] = await Promise.all([dueCards(db, now, REVIEW_SIZE * 2), loadOwnLexicon(db)]);
   // One seed per day: reopening the review the same day shows the same exercises.
   const exercises = buildReview(
     cards,
-    reviewSources(completedLessons),
+    reviewSources(completedLessons, own),
     `${dayOf(now)}:${hashString(cards.map((c) => c.id).join())}`,
   );
   return {

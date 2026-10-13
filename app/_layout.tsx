@@ -84,6 +84,10 @@ function ThemedStack() {
           name="review"
           options={{ presentation: 'fullScreenModal', gestureEnabled: false }}
         />
+        <Stack.Screen
+          name="practice/[kind]"
+          options={{ presentation: 'fullScreenModal', gestureEnabled: false }}
+        />
       </Stack>
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
     </>

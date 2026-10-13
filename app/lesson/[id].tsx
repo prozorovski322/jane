@@ -40,18 +40,16 @@ export default function LessonRoute() {
         startAt > 0 || !session
           ? undefined
           : (summary) =>
-              useProgress
-                .getState()
-                .record(
-                  getDb(),
-                  {
-                    id: session.id,
-                    unitId: session.unitId,
-                    kind: session.kind,
-                    passScore: session.passScore,
-                  },
-                  summary,
-                )
+              useProgress.getState().record(
+                getDb(),
+                {
+                  id: session.id,
+                  unitId: session.unitId,
+                  kind: session.kind,
+                  passScore: session.passScore,
+                },
+                summary,
+              )
       }
       onExit={() => (router.canGoBack() ? router.back() : router.replace('/'))}
     />
