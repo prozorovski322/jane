@@ -17,7 +17,7 @@ export interface AchievementStats {
   perfect: number;
   /** Units with all lessons and the unit test passed. */
   units: number;
-  /** Levels with every unit finished. */
+  /** Levels whose exam was passed (certificates). */
   levels: number;
   /** Cards answered in reviews. */
   reviews: number;
@@ -219,11 +219,20 @@ export const ACHIEVEMENTS: readonly Achievement[] = [
   a(
     'level-1',
     'course',
-    'Уровень пройден',
-    'Пройдите уровень целиком.',
-    'star-filled',
+    'Сертификат уровня',
+    'Сдайте экзамен уровня и получите сертификат.',
+    'trophy',
     'levels',
     1,
+  ),
+  a(
+    'levels-3',
+    'course',
+    'Три уровня',
+    'Получите сертификаты трёх уровней.',
+    'trophy',
+    'levels',
+    3,
   ),
 ];
 

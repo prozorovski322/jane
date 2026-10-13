@@ -153,6 +153,18 @@ export const MIGRATIONS: readonly Migration[] = [
       );
     `,
   },
+  {
+    version: 5,
+    sql: `
+      -- Level certificates: earned by passing the level exam, or credited by the placement test.
+      CREATE TABLE certificates (
+        level TEXT PRIMARY KEY NOT NULL,
+        earned_at INTEGER NOT NULL,
+        score REAL NOT NULL,
+        source TEXT NOT NULL CHECK (source IN ('exam', 'placement'))
+      );
+    `,
+  },
 ];
 
 export const SCHEMA_VERSION = MIGRATIONS[MIGRATIONS.length - 1]!.version;

@@ -228,6 +228,7 @@ describe('Lesson summary: rewards', () => {
     freezeEarned: false,
     passed: true,
     cardsUpdated: 0,
+    certificate: null,
     bonusXp: 15,
     questsCompleted: ['Пройдите урок'],
     allQuestsDone: true,

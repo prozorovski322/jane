@@ -24,14 +24,34 @@ export interface UnitOutline {
   testExerciseCount: number;
 }
 
+export interface ModuleOutline {
+  id: string;
+  order: number;
+  title: Unit['title'];
+  goals: string[];
+  /** Written units of the module. */
+  units: UnitOutline[];
+  /** Units still to be written (shown as "soon"). */
+  planned: { id: string; title: Unit['title'] }[];
+}
+
+export interface LevelOutline {
+  level: Level;
+  title: string;
+  description: string;
+  canDo: string[];
+  vocabTarget: number;
+  grammarScope: string[];
+  functions: string[];
+  modules: ModuleOutline[];
+  /** All written units of the level in course order (the modules' units, flattened). */
+  units: UnitOutline[];
+}
+
 export interface CourseOutline {
   version: Course['version'];
-  levels: {
-    level: Level;
-    title: string;
-    description: string;
-    units: UnitOutline[];
-  }[];
+  levels: LevelOutline[];
+  tracks: Course['tracks'];
 }
 
 export interface LexiconEntry extends Word {

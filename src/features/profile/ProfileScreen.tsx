@@ -7,7 +7,9 @@ import { isMastered } from '@/core/srs/scheduler';
 import { allCards } from '@/core/storage/srs-repo';
 import { useDbQuery } from '@/lib/useDbQuery';
 import { AppText } from '@/ui/components/AppText';
-import { Card } from '@/ui/components/Card';
+import { LEVEL_LABEL } from '@/core/content/schema';
+import { Card, ListRow } from '@/ui/components/Card';
+import { loadCertificates, type Certificate } from '../certificates/service';
 import { IconButton } from '@/ui/components/IconButton';
 import { AchievementsSection } from '../achievements/AchievementsSection';
 import { WeekSummaryCards } from '../progress/WeekSummaryCard';
@@ -23,6 +25,8 @@ import { useProgress } from '../progress/store';
 import { Button } from '@/ui/components/Button';
 import { ProgressBar } from '@/ui/components/ProgressBar';
 import { SkillRadar } from './SkillRadar';
+
+const NO_CERTIFICATES: Certificate[] = [];
 
 function Stat({
   value,
@@ -90,14 +94,16 @@ export function ProfileScreen() {
   const goal = useOnboarding((s) => s.data?.goal);
   const data = useDbQuery(
     async (db) => {
-      const [skills, history, cards, forecast, placement] = await Promise.all([
+      const [skills, history, cards, forecast, placement, certificates] = await Promise.all([
         loadSkillStats(db),
         loadHistory(db, 15),
         allCards(db, 'word'),
         loadForecast(db, completed ?? new Set()),
         lastPlacement(db),
+        loadCertificates(db),
       ]);
       return {
+        certificates,
         skills,
         history,
         forecast,
@@ -110,6 +116,7 @@ export function ProfileScreen() {
   );
   const forecast = data ? data.forecast : null;
   const placement = data ? data.placement : null;
+  const certificates = data ? data.certificates : NO_CERTIFICATES;
 
   return (
     <Screen
@@ -164,6 +171,25 @@ export function ProfileScreen() {
           onPress={() => router.push('/placement')}
         />
       </Card>
+
+      {certificates.length > 0 && (
+        <>
+          <SectionTitle>Сертификаты</SectionTitle>
+          {certificates.map((c) => (
+            <ListRow
+              key={c.level}
+              icon="trophy"
+              title={`Уровень ${LEVEL_LABEL[c.level]}`}
+              subtitle={
+                c.source === 'exam'
+                  ? `Экзамен сдан на ${Math.round(c.score * 100)}%`
+                  : 'Засчитан по тесту уровня'
+              }
+              onPress={() => router.push(`/certificate/${c.level.toLowerCase()}`)}
+            />
+          ))}
+        </>
+      )}
 
       <SectionTitle>Итоги недели</SectionTitle>
       <WeekSummaryCards />

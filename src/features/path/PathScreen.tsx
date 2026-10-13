@@ -1,21 +1,30 @@
 import { router } from 'expo-router';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { getCourse } from '@/core/content';
+import { LEVEL_LABEL, LEVELS } from '@/core/content/schema';
+import { useDbQuery } from '@/lib/useDbQuery';
 import { AppText } from '@/ui/components/AppText';
 import { Button } from '@/ui/components/Button';
-import { Card } from '@/ui/components/Card';
+import { Card, ListRow } from '@/ui/components/Card';
 import { Icon } from '@/ui/components/Icon';
 import { PressableScale } from '@/ui/components/PressableScale';
 import { ProgressBar } from '@/ui/components/ProgressBar';
 import { Screen } from '@/ui/components/Screen';
 import { useTheme } from '@/ui/theme/ThemeProvider';
 
+import { loadCertificates, type Certificate } from '../certificates/service';
 import { StreakXp } from '../progress/Badges';
+import {
+  estimateWeeks,
+  lessonsInLastTwoWeeks,
+  remainingInLevel,
+  weeksPhrase,
+} from '../progress/eta';
 import { useProgress } from '../progress/store';
 import { KIND_ICON, KIND_LABEL } from './kinds';
-import { pathState, type PathNode, type PathUnit } from './state';
+import { pathState, type ExamNode, type PathLevel, type PathNode, type PathUnit } from './state';
 
 /** Horizontal offsets of nodes: a gentle winding road. */
 const WIND = [0, 1, 2, 1, 0, -1, -2, -1];
@@ -116,10 +125,128 @@ function UnitBlock({ unit }: { unit: PathUnit }) {
   );
 }
 
+function ExamRow({ exam, title }: { exam: ExamNode; title: string }) {
+  const subtitle = {
+    done: 'Сдан. Можно пересдать.',
+    open:
+      exam.kind === 'level'
+        ? 'Около 50 заданий, нужно 75%. Можно сдать, не проходя уроки.'
+        : 'Около 20 заданий по темам модуля, нужно 70%.',
+    soon:
+      exam.kind === 'level'
+        ? 'Появится, когда будут готовы все юниты уровня.'
+        : 'Появится, когда будут готовы все юниты модуля.',
+  }[exam.status];
+  return (
+    <ListRow
+      icon={exam.kind === 'level' ? 'trophy' : 'star'}
+      title={title}
+      subtitle={subtitle}
+      done={exam.status === 'done'}
+      onPress={exam.status === 'soon' ? undefined : () => router.push(`/lesson/${exam.id}`)}
+    />
+  );
+}
+
+function SoonUnit({ order, title }: { order: number; title: { en: string; ru: string } }) {
+  return (
+    <Card tone="surface">
+      <View style={styles.unitHead} accessible aria-label={`Юнит ${order}: ${title.ru}. Скоро.`}>
+        <View style={styles.flex}>
+          <AppText variant="caption" color="textMuted">
+            Юнит {order} · {title.en}
+          </AppText>
+          <AppText variant="bodyStrong" color="textMuted">
+            {title.ru}
+          </AppText>
+        </View>
+        <AppText variant="smallStrong" color="textMuted">
+          Скоро
+        </AppText>
+      </View>
+    </Card>
+  );
+}
+
+function LevelBlock({ level, certificate }: { level: PathLevel; certificate?: Certificate }) {
+  const [open, setOpen] = useState(false);
+  const examTitle = `Экзамен уровня ${LEVEL_LABEL[level.level]}`;
+  return (
+    <View style={styles.level}>
+      <View style={styles.unitHead}>
+        <AppText variant="heading" role="heading" style={styles.flex}>
+          {LEVEL_LABEL[level.level]} · {level.title}
+        </AppText>
+        {certificate ? (
+          <Button
+            label={certificate.source === 'exam' ? 'Сертификат' : 'Засчитан тестом'}
+            icon="trophy"
+            variant="ghost"
+            compact
+            onPress={() => router.push(`/certificate/${level.level.toLowerCase()}`)}
+          />
+        ) : (
+          <AppText variant="small" color="textMuted">
+            {level.done}/{level.total}
+          </AppText>
+        )}
+      </View>
+      <Button
+        label={open ? 'Скрыть цели уровня' : 'Цели уровня'}
+        icon="target"
+        variant="ghost"
+        compact
+        onPress={() => setOpen((v) => !v)}
+      />
+      {open && (
+        <Card tone="primarySoft">
+          <AppText variant="small">{level.info.description}</AppText>
+          <AppText variant="smallStrong">После уровня я смогу:</AppText>
+          {level.info.canDo.map((c) => (
+            <AppText key={c} variant="small">
+              • {c}
+            </AppText>
+          ))}
+          <AppText variant="caption" color="textMuted">
+            Около {level.info.vocabTarget} новых слов. Грамматика:{' '}
+            {level.info.grammarScope.join('; ')}.
+          </AppText>
+        </Card>
+      )}
+
+      {level.modules.map((m) => (
+        <View key={m.id} style={styles.module}>
+          <AppText variant="smallStrong" color="textMuted" role="heading">
+            Модуль {m.order} · {m.title.ru}
+          </AppText>
+          {m.units.map((u) => (
+            <UnitBlock key={u.id} unit={u} />
+          ))}
+          {m.planned.map((p) => (
+            <SoonUnit key={p.id} order={Number(p.id.split('.u')[1])} title={p.title} />
+          ))}
+          <ExamRow exam={m.test} title={`Контрольная: ${m.title.ru}`} />
+        </View>
+      ))}
+      <ExamRow exam={level.exam} title={examTitle} />
+    </View>
+  );
+}
+
 export function PathScreen() {
   const completed = useProgress((s) => s.snapshot?.completedLessons);
   const state = useMemo(() => pathState(getCourse(), completed ?? new Set()), [completed]);
   const next = state.next;
+  const certificates = useDbQuery((db) => loadCertificates(db), []);
+  const byLevel = new Map((certificates ?? []).map((c) => [c.level, c]));
+
+  // Time left in the current level at the learner's own pace (nothing is shown without history).
+  const nextLevel = next ? LEVELS.find((l) => l.toLowerCase() === next.unitId.split('.')[0]) : null;
+  const pace = useDbQuery((db) => lessonsInLastTwoWeeks(db), [completed]);
+  const weeks =
+    nextLevel && pace !== undefined
+      ? estimateWeeks(remainingInLevel(nextLevel, completed ?? new Set()), pace)
+      : null;
 
   return (
     <Screen title="Путь" right={<StreakXp />}>
@@ -129,6 +256,11 @@ export function PathScreen() {
             {next.node.isTest ? 'Следующий шаг' : 'Продолжить'}
           </AppText>
           <AppText variant="title">{next.node.title}</AppText>
+          {weeks !== null && nextLevel && (
+            <AppText variant="small" color="textMuted">
+              Оставшиеся уроки уровня {LEVEL_LABEL[nextLevel]} — {weeksPhrase(weeks)} в вашем темпе.
+            </AppText>
+          )}
           <Button
             label="Начать"
             icon="arrow-right"
@@ -145,19 +277,7 @@ export function PathScreen() {
       )}
 
       {state.levels.map((l) => (
-        <View key={l.level} style={styles.level}>
-          <View style={styles.unitHead}>
-            <AppText variant="heading" role="heading" style={styles.flex}>
-              {l.level} · {l.title}
-            </AppText>
-            <AppText variant="small" color="textMuted">
-              {l.done}/{l.total}
-            </AppText>
-          </View>
-          {l.units.map((u) => (
-            <UnitBlock key={u.id} unit={u} />
-          ))}
-        </View>
+        <LevelBlock key={l.level} level={l} certificate={byLevel.get(l.level)} />
       ))}
     </Screen>
   );
@@ -166,6 +286,7 @@ export function PathScreen() {
 const styles = StyleSheet.create({
   flex: { flex: 1 },
   level: { gap: 12 },
+  module: { gap: 12 },
   unit: { gap: 16 },
   unitHead: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   road: { alignItems: 'center', gap: 18, paddingVertical: 8 },

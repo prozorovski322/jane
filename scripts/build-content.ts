@@ -112,12 +112,28 @@ function main() {
 
   const outline: CourseOutline = {
     version: content.course.version,
-    levels: content.course.levels.map((l) => ({
-      level: l.level,
-      title: l.title,
-      description: l.description,
-      units: l.units.map((id) => outlines.get(id)!),
-    })),
+    levels: content.course.levels.map((l) => {
+      const modules = l.modules.map((m) => ({
+        id: m.id,
+        order: m.order,
+        title: m.title,
+        goals: m.goals,
+        units: m.units.map((id) => outlines.get(id)!),
+        planned: m.planned,
+      }));
+      return {
+        level: l.level,
+        title: l.title,
+        description: l.description,
+        canDo: l.canDo,
+        vocabTarget: l.vocabTarget,
+        grammarScope: l.grammarScope,
+        functions: l.functions,
+        modules,
+        units: modules.flatMap((m) => m.units),
+      };
+    }),
+    tracks: content.course.tracks,
   };
 
   writeJson(join(OUT, 'course.json'), outline);

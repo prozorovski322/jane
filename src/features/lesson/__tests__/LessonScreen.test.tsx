@@ -25,6 +25,7 @@ const info: CompletionInfo = {
   freezeEarned: false,
   passed: true,
   cardsUpdated: 1,
+  certificate: null,
   bonusXp: 0,
   questsCompleted: [],
   allQuestsDone: false,

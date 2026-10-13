@@ -31,10 +31,12 @@ import { PLACEMENT_FILE, type Issue, type LoadedContent } from './load';
 
 /** Reading passage length (words) by level. */
 const READING_WORDS: Record<Level, [number, number]> = {
+  PA1: [8, 80],
   A1: [40, 160],
   A2: [80, 260],
   B1: [150, 420],
   B2: [250, 650],
+  C1: [350, 900],
 };
 const LESSON_EXERCISES: [number, number] = [8, 20];
 const TEST_EXERCISES_MIN = 12;
@@ -333,24 +335,55 @@ export function checkContent(content: LoadedContent): Issue[] {
   };
 
   if (content.course) {
-    const listed = content.course.levels.flatMap((l) => l.units);
-    for (const id of listed) {
-      if (!content.files.has(id)) {
-        issues.push({
-          severity: 'error',
-          file: 'content/course.json',
-          path: 'levels',
-          message: `unit "${id}" is listed but has no file`,
-        });
+    const courseIssue = (path: string, message: string) =>
+      issues.push({ severity: 'error', file: 'content/course.json', path, message });
+    const unitIdOk = (level: string, id: string) => new RegExp(`^${level}\\.u\\d{2}$`).test(id);
+
+    for (const d of dupes(content.course.levels.map((l) => l.level)))
+      courseIssue('levels', `level ${d} listed twice`);
+
+    // Levels must follow the CEFR order so the path and the unlocking logic can rely on it.
+    const order = content.course.levels.map((l) => LEVELS.indexOf(l.level));
+    if (order.some((o, i) => i > 0 && o < order[i - 1]!))
+      courseIssue('levels', 'levels must be listed in CEFR order (PA1, A1, A2, B1, B2, C1)');
+
+    const everyUnit: string[] = [];
+    for (const [li, level] of content.course.levels.entries()) {
+      const code = level.level.toLowerCase();
+      for (const [mi, m] of level.modules.entries()) {
+        const at = `levels[${li}].modules[${mi}]`;
+        if (m.id !== `${code}.m${m.order}`)
+          courseIssue(`${at}.id`, `module id must be "${code}.m${m.order}"`);
+        if (m.order !== mi + 1) courseIssue(`${at}.order`, `modules must be numbered 1, 2, 3…`);
+        if (m.units.length + m.planned.length === 0)
+          courseIssue(`${at}.units`, `module ${m.id} has no units`);
+        for (const id of m.units) {
+          everyUnit.push(id);
+          if (!unitIdOk(code, id)) courseIssue(`${at}.units`, `"${id}" is not a ${code} unit id`);
+          if (!content.files.has(id))
+            courseIssue(`${at}.units`, `unit "${id}" is listed but has no file`);
+        }
+        for (const p of m.planned) {
+          everyUnit.push(p.id);
+          if (!unitIdOk(code, p.id))
+            courseIssue(`${at}.planned`, `"${p.id}" is not a ${code} unit id`);
+          if (content.files.has(p.id))
+            courseIssue(
+              `${at}.planned`,
+              `unit "${p.id}" is written: move it from "planned" to "units"`,
+            );
+        }
       }
     }
-    for (const d of dupes(content.course.levels.map((l) => l.level))) {
-      issues.push({
-        severity: 'error',
-        file: 'content/course.json',
-        path: 'levels',
-        message: `level ${d} listed twice`,
-      });
+    for (const d of dupes(everyUnit)) courseIssue('levels', `unit ${d} appears twice`);
+
+    // Unit numbers within a level run 1…n in course order, written and planned alike.
+    for (const level of content.course.levels) {
+      const nums = level.modules
+        .flatMap((m) => [...m.units, ...m.planned.map((p) => p.id)])
+        .map((id) => Number(id.split('.u')[1]));
+      if (nums.some((n, i) => n !== i + 1))
+        courseIssue('levels', `${level.level} units must be numbered u01, u02, … in order`);
     }
   }
 

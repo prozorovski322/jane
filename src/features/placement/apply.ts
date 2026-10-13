@@ -8,6 +8,7 @@ import { LEVELS } from '@/core/content/schema';
 import type { Db } from '@/core/storage/db';
 import { kvGet, kvSet } from '@/core/storage/kv';
 
+import { creditLevelsBelow } from '../certificates/service';
 import type { PlacementResult } from './engine';
 
 /** Share of the current level's units credited at the very top of the level. */
@@ -84,6 +85,8 @@ export async function applyPlacement(
       credited,
     };
     await kvSet(db, KEY, [...history, entry].slice(-10));
+    // Levels below the result count as passed (this opens optional tracks); no exam is implied.
+    await creditLevelsBelow(db, r.level, now);
   });
   return credited;
 }

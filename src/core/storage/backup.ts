@@ -22,6 +22,7 @@ export const BACKUP_TABLES = [
   'user_words',
   'achievements',
   'quest_log',
+  'certificates',
 ] as const;
 
 const Row = z.record(z.string(), z.union([z.string(), z.number(), z.null()]));

@@ -4,6 +4,7 @@ import type { Db } from '@/core/storage/db';
 import { allCards } from '@/core/storage/srs-repo';
 
 import { loadOwnLexicon } from '../dictionary/load';
+import { loadMistakes } from '../mistakes/service';
 import type { LessonSession } from '../lesson/session';
 import { textsFor } from '../lesson/session';
 import { loadWeakSpots } from '../progress/insights';
@@ -20,10 +21,11 @@ export async function loadPracticeSources(
   db: Db,
   completed: ReadonlySet<string>,
 ): Promise<PracticeSources> {
-  const [cards, own, weak] = await Promise.all([
+  const [cards, own, weak, mistakes] = await Promise.all([
     allCards(db, 'word'),
     loadOwnLexicon(db),
     loadWeakSpots(db),
+    loadMistakes(db),
   ]);
   const lexicon = getLexicon();
   const ownById = new Map(own.map((w) => [w.id, w]));
@@ -34,6 +36,7 @@ export async function loadPracticeSources(
     word: (id) => lexicon.get(id) ?? ownById.get(id),
     words: [...lexicon.values()],
     weak,
+    mistakes: mistakes.map((m) => m.exercise),
   };
 }
 

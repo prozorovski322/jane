@@ -22,11 +22,12 @@ const GRID = Array.from({ length: 161 }, (_, i) => -4 + i * 0.05);
 
 /** Self-assessment shown in onboarding, and where the test starts for each answer. */
 export const SELF_LEVELS = {
-  zero: { label: 'Начинаю с нуля', prior: -2.8 },
+  zero: { label: 'Начинаю с нуля', prior: -3.2 },
   basics: { label: 'Знаю основы', prior: -1.8 },
   a2: { label: 'Могу объясниться в простых ситуациях', prior: -0.6 },
   b1: { label: 'Свободно говорю на бытовые темы', prior: 0.4 },
   b2: { label: 'Уверенно, но хочу подтянуть', prior: 1.4 },
+  c1: { label: 'Почти свободно, нужны тонкости', prior: 2.6 },
   unknown: { label: 'Не знаю — определите тестом', prior: -1.0 },
 } as const;
 export type SelfLevel = keyof typeof SELF_LEVELS;
@@ -137,20 +138,30 @@ export function answer(
 
 /** Level thresholds on the ability scale (upper bound of each level). */
 const UPPER: [Level, number][] = [
+  ['PA1', -2.6],
   ['A1', -1.2],
   ['A2', -0.1],
   ['B1', 0.9],
-  ['B2', Infinity],
+  ['B2', 2.4],
+  ['C1', Infinity],
 ];
 /** Where each level starts on the ability scale. */
-export const LEVEL_FLOOR: Record<Level, number> = { A1: -3, A2: -1.2, B1: -0.1, B2: 0.9 };
+export const LEVEL_FLOOR: Record<Level, number> = {
+  PA1: -4,
+  A1: -2.6,
+  A2: -1.2,
+  B1: -0.1,
+  B2: 0.9,
+  C1: 2.4,
+};
 const LOWER = LEVEL_FLOOR;
-export const SCALE_TOP = 2.5;
+export const SCALE_TOP = 3.6;
 const TOP = SCALE_TOP;
 
 /** [floor, ceiling] of a level on the ability scale. */
 export function levelRange(level: Level): [number, number] {
-  return [LEVEL_FLOOR[level], level === 'B2' ? SCALE_TOP : UPPER.find(([l]) => l === level)![1]];
+  const hi = UPPER.find(([l]) => l === level)![1];
+  return [LEVEL_FLOOR[level], Number.isFinite(hi) ? hi : SCALE_TOP];
 }
 
 export interface PlacementResult {
@@ -174,7 +185,8 @@ export function levelOf(theta: number): Level {
 export function placementResult(s: PlacementState): PlacementResult {
   const level = levelOf(s.theta);
   const lo = LOWER[level];
-  const hi = level === 'B2' ? TOP : UPPER.find(([l]) => l === level)![1];
+  const upper = UPPER.find(([l]) => l === level)![1];
+  const hi = Number.isFinite(upper) ? upper : TOP;
   return {
     theta: s.theta,
     sd: s.sd,

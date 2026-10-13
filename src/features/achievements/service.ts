@@ -19,20 +19,19 @@ import {
 const count = async (db: Db, sql: string, params: (string | number)[] = []) =>
   (await db.get<{ n: number }>(sql, params))?.n ?? 0;
 
-/** Counts of a unit's passed lessons, by unit and level, for the "course" achievements. */
-function courseCompletion(passed: ReadonlySet<string>) {
+/** A lesson id ("a1.u01.l03"); unit tests, module tests and exams are not lessons. */
+const LESSON_ID = /\.u\d+\.l\d+$/;
+const UNIT_TEST_ID = /\.u\d+\.test$/;
+
+/** Units with every lesson and the unit test passed, for the "course" achievements. */
+function completedUnits(passed: ReadonlySet<string>): number {
   let units = 0;
-  let levels = 0;
   for (const level of getCourse().levels) {
-    let levelDone = level.units.length > 0;
     for (const u of level.units) {
-      const done = [...u.lessons.map((l) => l.id), `${u.id}.test`].every((id) => passed.has(id));
-      if (done) units++;
-      else levelDone = false;
+      if ([...u.lessons.map((l) => l.id), `${u.id}.test`].every((id) => passed.has(id))) units++;
     }
-    if (levelDone) levels++;
   }
-  return { units, levels };
+  return units;
 }
 
 export async function loadAchievementStats(db: Db, now = new Date()): Promise<AchievementStats> {
@@ -49,7 +48,7 @@ export async function loadAchievementStats(db: Db, now = new Date()): Promise<Ac
     "SELECT lesson_id FROM lesson_progress WHERE passed = 1 AND source = 'lesson'",
   );
   const passed = new Set(progress.map((p) => p.lesson_id));
-  const { units, levels } = courseCompletion(passed);
+  const units = completedUnits(passed);
 
   const skillCounts = new Map(
     (
@@ -79,14 +78,14 @@ export async function loadAchievementStats(db: Db, now = new Date()): Promise<Ac
       longestStreak(activeSet, frozen),
       currentStreak(activeSet, frozen, dayOf(now)),
     ),
-    lessons: [...passed].filter((id) => !id.endsWith('.test')).length,
-    tests: [...passed].filter((id) => id.endsWith('.test')).length,
+    lessons: [...passed].filter((id) => LESSON_ID.test(id)).length,
+    tests: [...passed].filter((id) => UNIT_TEST_ID.test(id)).length,
     perfect: await count(
       db,
       "SELECT COUNT(*) AS n FROM lesson_results WHERE kind IN ('lesson', 'test') AND accuracy = 1 AND answered >= 5",
     ),
     units,
-    levels,
+    levels: await count(db, "SELECT COUNT(*) AS n FROM certificates WHERE source = 'exam'"),
     reviews: await count(db, 'SELECT COALESCE(SUM(reviews), 0) AS n FROM daily_activity'),
     wordsMastered: words.filter(isMastered).length,
     wordsLearning: words.length,

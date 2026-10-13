@@ -11,9 +11,20 @@ import { z } from 'zod';
 // Primitives
 // ---------------------------------------------------------------------------
 
-export const LEVELS = ['A1', 'A2', 'B1', 'B2'] as const;
+/** CEFR levels in course order; PA1 is the pre-A1 level for complete beginners. */
+export const LEVELS = ['PA1', 'A1', 'A2', 'B1', 'B2', 'C1'] as const;
 export const Level = z.enum(LEVELS);
 export type Level = z.infer<typeof Level>;
+
+/** How a level is written for the learner. */
+export const LEVEL_LABEL: Record<Level, string> = {
+  PA1: 'Pre-A1',
+  A1: 'A1',
+  A2: 'A2',
+  B1: 'B1',
+  B2: 'B2',
+  C1: 'C1',
+};
 
 export const SKILLS = [
   'vocabulary',
@@ -480,25 +491,69 @@ export type PlacementBank = z.infer<typeof PlacementBank>;
 
 /** Difficulty band of each level on the placement scale. */
 export const LEVEL_BANDS: Record<Level, [number, number]> = {
+  PA1: [-3.6, -2.6],
   A1: [-2.6, -1.2],
   A2: [-1.2, -0.1],
   B1: [-0.1, 0.9],
   B2: [0.9, 2.4],
+  C1: [2.4, 3.6],
 };
+
+/** A unit that is part of the plan but not written yet; shown as "soon" on the path. */
+export const PlannedUnit = z.strictObject({ id: Id, title: Bilingual });
+
+/** A group of units on one theme, closed by a module test. */
+export const CourseModule = z.strictObject({
+  /** "a1.m1": level code, "m", order within the level. */
+  id: Id,
+  order: z.number().int().min(1),
+  title: Bilingual,
+  /** Can-do statements in Russian: "Могу …". */
+  goals: z.array(Ru).min(1),
+  /** Written units, in order. */
+  units: z.array(Id),
+  /** Units still to be written, after the written ones. */
+  planned: z.array(PlannedUnit).default([]),
+});
+export type CourseModule = z.infer<typeof CourseModule>;
+
+export const LevelInfo = z.strictObject({
+  level: Level,
+  title: Ru,
+  description: Ru,
+  /** "After this level the learner can…" (CEFR can-do statements, in Russian). */
+  canDo: z.array(Ru).min(3),
+  /** Approximate number of new words of the level. */
+  vocabTarget: z.number().int().min(1),
+  /** Main grammar of the level, short Russian phrases. */
+  grammarScope: z.array(Ru).min(1),
+  /** Language functions of the level: what the learner can do with the language. */
+  functions: z.array(Ru).min(1),
+  modules: z.array(CourseModule).min(1),
+});
+export type LevelInfo = z.infer<typeof LevelInfo>;
+
+/** Written units of a level, in course order. */
+export const levelUnitIds = (l: Pick<LevelInfo, 'modules'>): string[] =>
+  l.modules.flatMap((m) => m.units);
+
+/** An optional branch of the course after B1 (business, travel, exam preparation). */
+export const Track = z.strictObject({
+  id: Id,
+  title: Bilingual,
+  description: Ru,
+  /** The level whose certificate (or placement credit) opens the track. */
+  requires: Level,
+  units: z.array(Id),
+  planned: z.array(PlannedUnit).default([]),
+});
+export type Track = z.infer<typeof Track>;
 
 export const Course = z.strictObject({
   /** Content version, bumped on every content release: YYYY.MM.patch. */
   version: z.string().regex(/^\d{4}\.\d{1,2}\.\d+$/),
-  levels: z
-    .array(
-      z.strictObject({
-        level: Level,
-        title: Ru,
-        description: Ru,
-        units: z.array(Id).min(1),
-      }),
-    )
-    .min(1),
+  levels: z.array(LevelInfo).min(1),
+  tracks: z.array(Track).default([]),
 });
 export type Course = z.infer<typeof Course>;
 

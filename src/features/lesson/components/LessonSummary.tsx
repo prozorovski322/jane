@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
 import { feedback } from '@/core/feedback/feedback';
+import { LEVEL_LABEL, type Level } from '@/core/content/schema';
 import type { SessionKind } from '@/core/progress/xp';
 import { Appear } from '@/ui/components/Appear';
 import { AppText } from '@/ui/components/AppText';
@@ -59,6 +60,7 @@ export function LessonSummary({
   save,
   onRetrySave,
   onDone,
+  onOpenCertificate,
 }: {
   summary: Summary;
   kind: SessionKind;
@@ -67,6 +69,7 @@ export function LessonSummary({
   save: SaveState | null;
   onRetrySave: () => void;
   onDone: () => void;
+  onOpenCertificate?: (level: Level) => void;
 }) {
   const { colors } = useTheme();
   const info = save?.status === 'saved' ? save.info : null;
@@ -165,6 +168,22 @@ export function LessonSummary({
             Не удалось сохранить результат: {save.message}
           </AppText>
           <Button label="Попробовать ещё раз" variant="secondary" onPress={onRetrySave} />
+        </View>
+      )}
+
+      {info?.certificate && (
+        <View style={styles.block}>
+          <AppText variant="bodyStrong" color="success" align="center" aria-live="polite">
+            Сертификат уровня {LEVEL_LABEL[info.certificate]} получен!
+          </AppText>
+          {onOpenCertificate && (
+            <Button
+              label="Открыть сертификат"
+              icon="arrow-right"
+              variant="secondary"
+              onPress={() => onOpenCertificate(info.certificate!)}
+            />
+          )}
         </View>
       )}
 

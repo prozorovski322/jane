@@ -1,7 +1,9 @@
 import { router } from 'expo-router';
-import { Fragment, useMemo } from 'react';
+import { Fragment, useMemo, useState } from 'react';
 
 import { getCourse, getGrammarNote } from '@/core/content';
+import { LEVEL_LABEL } from '@/core/content/schema';
+import { TextField } from '@/ui/components/TextField';
 import { AppText } from '@/ui/components/AppText';
 import { Button } from '@/ui/components/Button';
 import { ListRow } from '@/ui/components/Card';
@@ -9,22 +11,21 @@ import { SectionTitle } from '@/ui/components/Screen';
 import { SubScreen } from '@/ui/components/SubScreen';
 
 import { NoteView } from './NoteView';
+import { searchGrammar } from './search';
 
 /** Grammar notes in course order, grouped by level; optionally only those of one unit. */
 export function GrammarListScreen({ unitId }: { unitId?: string }) {
+  const [query, setQuery] = useState('');
   const groups = useMemo(() => {
     const course = getCourse();
     return course.levels
       .map((l) => {
         const ids = l.units.filter((u) => !unitId || u.id === unitId).flatMap((u) => u.grammar);
-        return {
-          level: l.level,
-          title: l.title,
-          notes: [...new Set(ids)].map((id) => getGrammarNote(id)).filter((n) => !!n),
-        };
+        const notes = [...new Set(ids)].map((id) => getGrammarNote(id)).filter((n) => !!n);
+        return { level: l.level, title: l.title, notes: searchGrammar(notes, query) };
       })
       .filter((g) => g.notes.length);
-  }, [unitId]);
+  }, [unitId, query]);
 
   const unitTitle = unitId
     ? getCourse()
@@ -34,9 +35,21 @@ export function GrammarListScreen({ unitId }: { unitId?: string }) {
 
   return (
     <SubScreen title={unitTitle ? `Правила: ${unitTitle}` : 'Справочник'}>
+      <TextField
+        label="Поиск по правилам"
+        placeholder="Например: артикль, to be, вопрос"
+        value={query}
+        onChangeText={setQuery}
+        returnKeyType="search"
+      />
+      {query.trim() !== '' && groups.length === 0 && (
+        <AppText variant="body" color="textMuted" aria-live="polite">
+          Ничего не нашлось. Попробуйте другое слово: название правила, пример или перевод.
+        </AppText>
+      )}
       {groups.map((g) => (
         <Fragment key={g.level}>
-          <SectionTitle>{`${g.level} · ${g.title}`}</SectionTitle>
+          <SectionTitle>{`${LEVEL_LABEL[g.level]} · ${g.title}`}</SectionTitle>
           {g.notes.map((n) => (
             <ListRow
               key={n.id}

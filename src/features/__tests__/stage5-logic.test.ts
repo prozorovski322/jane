@@ -25,7 +25,7 @@ const now = new Date('2026-10-13T10:00:00');
 describe('pathState', () => {
   it('marks done lessons and points to the first unfinished one', () => {
     const s = pathState(getCourse(), new Set(['a1.u01.l01', 'a1.u01.l02', 'a1.u01.l04']));
-    const unit = s.levels[0]!.units[0]!;
+    const unit = s.levels.find((l) => l.level === 'A1')!.units[0]!;
     expect(unit.nodes.map((n) => n.status)).toEqual([
       'done',
       'done',

@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 import type { Exercise } from '@/core/content/schema';
 import { getDb } from '@/core/storage';
+import { isExamId, sessionForExam } from '@/features/exams/exam';
 import { LessonScreen } from '@/features/lesson/LessonScreen';
 import { sessionForLesson } from '@/features/lesson/session';
 import { useProgress } from '@/features/progress/store';
@@ -12,8 +13,15 @@ export default function LessonRoute() {
   const { id, start } = useLocalSearchParams<{ id: string; start?: string }>();
   // `?start=N` opens a lesson at exercise N; a development aid for reviewing content.
   const startAt = __DEV__ && start ? Math.max(0, Number(start) || 0) : 0;
-  const session = useMemo(() => sessionForLesson(id), [id]);
-  const repeat = useProgress((s) => s.snapshot?.completedLessons.has(id) ?? false);
+  // A module test or level exam is assembled from the course's exercises; each attempt differs.
+  const [seed] = useState(() => String(Date.now()));
+  const session = useMemo(
+    () => (isExamId(id) ? sessionForExam(id, seed) : sessionForLesson(id)),
+    [id, seed],
+  );
+  const repeat = useProgress(
+    (s) => (!isExamId(id) && s.snapshot?.completedLessons.has(id)) ?? false,
+  );
   // A repeated lesson leaves out what the learner already knows well; a first pass shows all.
   const [skip, setSkip] = useState<((ex: Exercise) => boolean) | null | undefined>(
     repeat ? undefined : null,
@@ -51,6 +59,7 @@ export default function LessonRoute() {
                 summary,
               )
       }
+      onOpenCertificate={(level) => router.replace(`/certificate/${level.toLowerCase()}`)}
       onExit={() => (router.canGoBack() ? router.back() : router.replace('/'))}
     />
   );

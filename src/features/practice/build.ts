@@ -20,6 +20,8 @@ export const PRACTICE_KINDS = [
   'pronunciation',
   'weak',
   'trouble',
+  'mistakes',
+  'grammar-mix',
 ] as const;
 export type PracticeKind = (typeof PRACTICE_KINDS)[number];
 
@@ -43,6 +45,11 @@ export const PRACTICE_INFO: Record<PracticeKind, { title: string; subtitle: stri
   pronunciation: { title: 'Произношение', subtitle: 'Звуки, ударение, минимальные пары' },
   weak: { title: 'Слабые места', subtitle: 'То, в чём чаще всего ошибки' },
   trouble: { title: 'Трудность', subtitle: 'Целевая серия упражнений' },
+  mistakes: { title: 'Ошибки', subtitle: 'Задания, в которых вы недавно ошиблись' },
+  'grammar-mix': {
+    title: 'Смешанная грамматика',
+    subtitle: 'Разные правила вперемешку, чтобы не забыть пройденное',
+  },
 };
 
 export interface PracticeSources {
@@ -54,6 +61,8 @@ export interface PracticeSources {
   word: (id: string) => LexiconEntry | undefined;
   words: readonly LexiconEntry[];
   weak: readonly WeakSpot[];
+  /** Exercises whose latest answer was wrong (the Mistakes section). */
+  mistakes?: readonly Exercise[];
 }
 
 const LISTENING = new Set<Exercise['type']>(['listen_choice', 'listen_dictation', 'minimal_pair']);
@@ -70,6 +79,8 @@ const LIMIT: Record<PracticeKind, number> = {
   pronunciation: 10,
   weak: 12,
   trouble: 10,
+  mistakes: 12,
+  'grammar-mix': 12,
 };
 
 function uniqueById(list: readonly Exercise[]): Exercise[] {
@@ -100,6 +111,26 @@ function hardestWords(src: PracticeSources, limit: number, seed: string): Exerci
   });
 }
 
+/**
+ * Grammar from many rules at once: at most two exercises per rule, so one rule cannot crowd
+ * out the rest. Only rules the learner has met are used.
+ */
+function mixedGrammar(src: PracticeSources, limit: number, seed: string): Exercise[] {
+  const perRule = new Map<string, number>();
+  const out: Exercise[] = [];
+  for (const ex of shuffle(
+    src.seen.filter((e) => e.grammar.length > 0),
+    seed,
+  )) {
+    const rule = ex.grammar[0]!;
+    if ((perRule.get(rule) ?? 0) >= 2) continue;
+    perRule.set(rule, (perRule.get(rule) ?? 0) + 1);
+    out.push(ex);
+    if (out.length >= limit) break;
+  }
+  return out;
+}
+
 export function buildPractice(spec: PracticeSpec, src: PracticeSources, seed: string): Exercise[] {
   const limit = LIMIT[spec.kind];
   let list: Exercise[];
@@ -109,6 +140,12 @@ export function buildPractice(spec: PracticeSpec, src: PracticeSources, seed: st
       break;
     case 'grammar':
       list = pick(src, (e) => !!spec.ref && e.grammar.includes(spec.ref), limit, seed);
+      break;
+    case 'mistakes':
+      list = shuffle(src.mistakes ?? [], seed).slice(0, limit);
+      break;
+    case 'grammar-mix':
+      list = mixedGrammar(src, limit, seed);
       break;
     case 'trouble':
       list = pick(src, (e) => !!spec.ref && e.troubles.includes(spec.ref as Trouble), limit, seed);

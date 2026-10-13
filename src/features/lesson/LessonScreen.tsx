@@ -3,7 +3,7 @@ import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet, View } from 're
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { getLexicon, isCourseWord } from '@/core/content';
-import type { Exercise } from '@/core/content/schema';
+import type { Exercise, Level } from '@/core/content/schema';
 import { feedback } from '@/core/feedback/feedback';
 import type { Response } from '@/core/scoring/check';
 import { tts } from '@/core/speech/tts';
@@ -38,6 +38,8 @@ export interface LessonScreenProps {
   onComplete?: (summary: Summary) => Promise<CompletionInfo>;
   /** Leaves the screen (after the summary, or when the learner quits). */
   onExit: () => void;
+  /** Opens the certificate screen after a passed level exam. */
+  onOpenCertificate?: (level: Level) => void;
   /** Leaves out exercises the learner has mastered (repeated lessons). */
   skip?: (ex: Exercise) => boolean;
   /** Skip the first exercises (development aid). */
@@ -62,6 +64,7 @@ function LessonRunner({
   session,
   onComplete,
   onExit,
+  onOpenCertificate,
   skip,
   startAt = 0,
 }: LessonScreenProps & { session: LessonSession }) {
@@ -162,6 +165,7 @@ function LessonRunner({
             void persist(summary);
           }}
           onDone={onExit}
+          onOpenCertificate={onOpenCertificate}
         />
       </SafeAreaView>
     );

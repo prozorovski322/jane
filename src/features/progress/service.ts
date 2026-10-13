@@ -5,6 +5,7 @@
  */
 import type { FSRS, Grade } from 'ts-fsrs';
 
+import type { Level } from '@/core/content/schema';
 import { addDays, dayOf, type Day } from '@/core/progress/dates';
 import { currentStreak, freezesEarned, freezesNeeded, START_FREEZES } from '@/core/progress/streak';
 import { dailyGoalXp, sessionXp, type SessionKind } from '@/core/progress/xp';
@@ -22,6 +23,8 @@ import { kvGet, kvSet } from '@/core/storage/kv';
 import { getCards, logReview, saveCard } from '@/core/storage/srs-repo';
 
 import { evaluateAchievements } from '../achievements/service';
+import { awardExamCertificate } from '../certificates/service';
+import { parseExamId } from '../exams/exam';
 import type { LessonSummary } from '../lesson/engine';
 import { settleQuests } from '../quests/service';
 import { dailyMinutes, setDailyMinutes } from './goal';
@@ -48,6 +51,8 @@ export interface CompletionInfo {
   passed: boolean;
   /** Cards created or rescheduled by this session. */
   cardsUpdated: number;
+  /** The level whose certificate this session earned (a passed level exam), if any. */
+  certificate: Level | null;
   /** Extra XP from quests completed by this session (not included in `xp`). */
   bonusXp: number;
   /** Titles of the daily quests this session completed. */
@@ -152,6 +157,7 @@ export async function recordSession(
     (await db.get<{ xp: number }>('SELECT xp FROM daily_activity WHERE day = ?', [today]))?.xp ?? 0;
 
   const passed = meta.kind === 'test' ? summary.score >= (meta.passScore ?? 0) : true;
+  const exam = meta.kind === 'test' ? parseExamId(meta.id) : null;
   const xp = sessionXp({
     kind: meta.kind,
     answered: summary.answered,
@@ -201,6 +207,11 @@ export async function recordSession(
           now.getTime(),
         ],
       );
+    }
+
+    // Passing a level exam earns the level's certificate.
+    if (exam?.kind === 'level' && passed && summary.answered > 0) {
+      await awardExamCertificate(db, exam.level, summary.score, now);
     }
 
     if ((meta.kind === 'lesson' || meta.kind === 'test') && meta.unitId && summary.answered > 0) {
@@ -267,6 +278,7 @@ export async function recordSession(
     freezeEarned: earned > 0,
     passed,
     cardsUpdated: ratings.size,
+    certificate: exam?.kind === 'level' && passed && summary.answered > 0 ? exam.level : null,
     bonusXp: reward.bonusXp,
     questsCompleted: reward.completed.map((q) => q.title),
     allQuestsDone: reward.allDone,

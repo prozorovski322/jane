@@ -10,6 +10,7 @@ import { parseGrammarMarkdown } from '../../src/core/content/grammar-md';
 import {
   Course,
   GrammarNote,
+  levelUnitIds,
   LevelTest,
   PlacementBank,
   Unit,
@@ -219,7 +220,7 @@ export function loadContent(): LoadedContent {
 
   const units: UnitT[] = [];
   for (const level of course?.levels ?? []) {
-    for (const id of level.units) {
+    for (const id of levelUnitIds(level)) {
       const unit = byId.get(id);
       if (!unit) {
         // Units listed in course.json but not written yet are reported by the checker.

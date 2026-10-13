@@ -81,12 +81,19 @@ describe('adaptive placement', () => {
     let s = startPlacement('zero');
     while (!isFinished(s)) s = answer(s, nextItem(s, bank, 'z')!, 'unknown');
     const r = placementResult(s);
-    expect(r).toMatchObject({ level: 'A1', fromZero: true, correct: 0 });
+    expect(r).toMatchObject({ level: 'PA1', fromZero: true, correct: 0 });
     expect(r.answered).toBe(MIN_ITEMS);
   });
 
   it('maps ability to levels', () => {
-    expect([-2.5, -1.0, 0.0, 1.0].map(levelOf)).toEqual(['A1', 'A2', 'B1', 'B2']);
+    expect([-3.5, -2.5, -1.0, 0.0, 1.0, 3.0].map(levelOf)).toEqual([
+      'PA1',
+      'A1',
+      'A2',
+      'B1',
+      'B2',
+      'C1',
+    ]);
   });
 });
 

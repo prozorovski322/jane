@@ -35,10 +35,12 @@ export function PracticeScreen() {
       const src = await loadPracticeSources(db, completed ?? new Set());
       const count = (spec: PracticeSpec) => buildPractice(spec, src, 'count').length;
       return {
-        counts: Object.fromEntries(SKILLS.map((s) => [s.kind, count({ kind: s.kind })])) as Record<
-          PracticeKind,
-          number
-        >,
+        counts: Object.fromEntries(
+          [...SKILLS.map((s) => s.kind), 'mistakes', 'grammar-mix'].map((k) => [
+            k,
+            count({ kind: k as PracticeKind }),
+          ]),
+        ) as Record<PracticeKind, number>,
         weak: src.weak,
         // A "series" of one or two exercises is not worth a session.
         troubles: TROUBLES.map((t) => ({ t, n: count({ kind: 'trouble', ref: t }) })).filter(
@@ -78,6 +80,29 @@ export function PracticeScreen() {
           />
         );
       })}
+
+      <SectionTitle>Ошибки и повторение</SectionTitle>
+      <ListRow
+        icon="cross"
+        iconColor="accent"
+        title="Ошибки"
+        subtitle={
+          counts?.mistakes
+            ? `Задания, в которых вы недавно ошиблись · ${counts.mistakes}`
+            : 'Пока неверных ответов нет'
+        }
+        onPress={() => router.push('/mistakes')}
+      />
+      <ListRow
+        icon="refresh"
+        title={PRACTICE_INFO['grammar-mix'].title}
+        subtitle={
+          counts?.['grammar-mix']
+            ? PRACTICE_INFO['grammar-mix'].subtitle
+            : 'Появится после первых уроков с грамматикой'
+        }
+        onPress={counts?.['grammar-mix'] ? () => open({ kind: 'grammar-mix' }) : undefined}
+      />
 
       <SectionTitle>Слабые места</SectionTitle>
       {weak.length ? (
