@@ -1,0 +1,308 @@
+{
+  "id": "a1.u07",
+  "level": "A1",
+  "order": 7,
+  "title": { "en": "Town", "ru": "Город" },
+  "description": "Ориентируемся в городе: места, транспорт, вопросы о дороге и объяснение пути. Просьбы и команды, left и right, by bus и on foot.",
+  "goals": [
+    "Могу назвать места в городе: bank, station, park, museum.",
+    "Могу спросить дорогу: Excuse me, where is the station?",
+    "Могу объяснить, как пройти: Go straight, then turn left.",
+    "Могу спросить, далеко ли: Is it far? — и сказать, сколько идти.",
+    "Могу сказать, на чём езжу: I go to work by train. I go on foot.",
+    "Могу написать короткий текст о своём городе."
+  ],
+  "grammar": ["a1.imperatives", "a1.directions", "a1.transport"],
+  "troubles": ["prepositions", "word-order"],
+  "words": [
+    { "id": "town", "en": "town", "ipa": "taʊn", "pos": "noun", "ru": ["город (небольшой)"], "example": { "en": "I live in a small town.", "ru": "Я живу в небольшом городе." }, "topics": ["places"] },
+    { "id": "city", "en": "city", "ipa": "ˈsɪti", "pos": "noun", "ru": ["город (большой)"], "example": { "en": "Moscow is a big city.", "ru": "Москва — большой город." }, "topics": ["places"] },
+    { "id": "street", "en": "street", "ipa": "striːt", "pos": "noun", "ru": ["улица"], "example": { "en": "My house is on this street.", "ru": "Мой дом на этой улице." }, "note": "С улицей говорят on: on this street.", "topics": ["places"] },
+    { "id": "road", "en": "road", "ipa": "roʊd", "pos": "noun", "ru": ["дорога"], "example": { "en": "There is a car on the road.", "ru": "На дороге есть машина." }, "topics": ["places"] },
+    { "id": "corner", "en": "corner", "ipa": "ˈkɔːrnɚ", "pos": "noun", "ru": ["угол"], "example": { "en": "The bank is at the corner.", "ru": "Банк на углу." }, "topics": ["places"] },
+    { "id": "bank", "en": "bank", "ipa": "bæŋk", "pos": "noun", "ru": ["банк"], "example": { "en": "The bank is open on Monday.", "ru": "Банк открыт в понедельник." }, "picture": { "emoji": "🏦" }, "topics": ["places"] },
+    { "id": "supermarket", "en": "supermarket", "ipa": "ˈsuːpɚˌmɑːrkɪt", "pos": "noun", "ru": ["супермаркет"], "example": { "en": "The supermarket is near my house.", "ru": "Супермаркет рядом с моим домом." }, "picture": { "emoji": "🛒" }, "topics": ["places"] },
+    { "id": "market", "en": "market", "ipa": "ˈmɑːrkɪt", "pos": "noun", "ru": ["рынок"], "example": { "en": "There is a market on Sunday.", "ru": "В воскресенье бывает рынок." }, "topics": ["places"] },
+    { "id": "hospital", "en": "hospital", "ipa": "ˈhɑːspɪtəl", "pos": "noun", "ru": ["больница"], "example": { "en": "My mother works in a hospital.", "ru": "Моя мама работает в больнице." }, "picture": { "emoji": "🏥" }, "topics": ["places"] },
+    { "id": "pharmacy", "en": "pharmacy", "ipa": "ˈfɑːrməsi", "pos": "noun", "ru": ["аптека"], "example": { "en": "The pharmacy is next to the bank.", "ru": "Аптека рядом с банком." }, "picture": { "emoji": "💊" }, "topics": ["places"] },
+    { "id": "park", "en": "park", "ipa": "pɑːrk", "pos": "noun", "ru": ["парк"], "example": { "en": "We walk in the park.", "ru": "Мы гуляем в парке." }, "picture": { "emoji": "🌳" }, "topics": ["places"] },
+    { "id": "station", "en": "station", "ipa": "ˈsteɪʃən", "pos": "noun", "ru": ["вокзал", "станция"], "example": { "en": "The station is near the hotel.", "ru": "Вокзал рядом с отелем." }, "picture": { "emoji": "🚉" }, "topics": ["places"] },
+    { "id": "museum", "en": "museum", "ipa": "mjuˈziːəm", "pos": "noun", "ru": ["музей"], "example": { "en": "The museum is closed on Monday.", "ru": "Музей закрыт в понедельник." }, "picture": { "emoji": "🏛️" }, "topics": ["places"] },
+    { "id": "cinema", "en": "cinema", "ipa": "ˈsɪnəmə", "pos": "noun", "ru": ["кинотеатр"], "example": { "en": "We meet at the cinema.", "ru": "Мы встречаемся у кинотеатра." }, "picture": { "emoji": "🎬" }, "topics": ["places"] },
+    { "id": "hotel", "en": "hotel", "ipa": "hoʊˈtel", "pos": "noun", "ru": ["отель"], "example": { "en": "The hotel is on the left.", "ru": "Отель слева." }, "picture": { "emoji": "🏨" }, "topics": ["places"] },
+    { "id": "library", "en": "library", "ipa": "ˈlaɪbreri", "pos": "noun", "ru": ["библиотека"], "example": { "en": "I read a book in the library.", "ru": "Я читаю книгу в библиотеке." }, "note": "Library — это не «либерти». Книги берут в library, а продают в bookshop.", "picture": { "emoji": "📚" }, "topics": ["places"] },
+    { "id": "post-office", "en": "post office", "ipa": "poʊst ˈɑːfɪs", "pos": "noun", "ru": ["почта"], "example": { "en": "The post office is closed on Sunday.", "ru": "Почта закрыта в воскресенье." }, "topics": ["places"] },
+    { "id": "bus-stop", "en": "bus stop", "ipa": "bʌs stɑːp", "pos": "noun", "ru": ["автобусная остановка"], "example": { "en": "The bus stop is near the school.", "ru": "Автобусная остановка рядом со школой." }, "topics": ["places"] },
+    { "id": "train", "en": "train", "ipa": "treɪn", "pos": "noun", "ru": ["поезд"], "example": { "en": "I go to work by train.", "ru": "Я езжу на работу на поезде." }, "picture": { "emoji": "🚆" }, "topics": ["transport"] },
+    { "id": "taxi", "en": "taxi", "ipa": "ˈtæksi", "pos": "noun", "ru": ["такси"], "example": { "en": "We take a taxi to the hotel.", "ru": "Мы едем в отель на такси." }, "picture": { "emoji": "🚕" }, "topics": ["transport"] },
+    { "id": "metro", "en": "metro", "ipa": "ˈmetroʊ", "pos": "noun", "ru": ["метро"], "example": { "en": "I go to the office by metro.", "ru": "Я езжу в офис на метро." }, "picture": { "emoji": "🚇" }, "topics": ["transport"] },
+    { "id": "by", "en": "by", "ipa": "baɪ", "pos": "prep", "ru": ["на (транспорте)"], "example": { "en": "I go to school by bus.", "ru": "Я езжу в школу на автобусе." }, "note": "By + транспорт — без артикля: by bus, by train, by taxi.", "topics": ["transport"] },
+    { "id": "on-foot", "en": "on foot", "ipa": "ɑːn fʊt", "pos": "phrase", "ru": ["пешком"], "example": { "en": "I go to school on foot.", "ru": "Я хожу в школу пешком." }, "note": "Пешком — on foot, а не by foot.", "topics": ["transport"] },
+    { "id": "left", "en": "left", "ipa": "left", "pos": "adv", "ru": ["налево", "слева"], "example": { "en": "Turn left at the corner.", "ru": "Поверните налево на углу." }, "topics": ["directions"] },
+    { "id": "right", "en": "right", "ipa": "raɪt", "pos": "adv", "ru": ["направо", "справа"], "example": { "en": "Turn right at the bank.", "ru": "Поверните направо у банка." }, "note": "Right значит ещё «правильно», но в этом юните — только «направо, справа».", "topics": ["directions"] },
+    { "id": "straight", "en": "straight", "ipa": "streɪt", "pos": "adv", "ru": ["прямо"], "example": { "en": "Go straight.", "ru": "Идите прямо." }, "topics": ["directions"] },
+    { "id": "turn", "en": "turn", "ipa": "tɝːn", "pos": "verb", "ru": ["поворачивать"], "example": { "en": "Turn left.", "ru": "Поверните налево." }, "topics": ["directions"] },
+    { "id": "cross", "en": "cross", "ipa": "krɔːs", "pos": "verb", "ru": ["переходить", "пересекать"], "example": { "en": "Cross the street.", "ru": "Перейдите улицу." }, "topics": ["directions"] },
+    { "id": "stop", "en": "stop", "ipa": "stɑːp", "pos": "verb", "ru": ["останавливаться"], "example": { "en": "Stop here, please.", "ru": "Остановитесь здесь, пожалуйста." }, "topics": ["directions"] },
+    { "id": "far", "en": "far", "ipa": "fɑːr", "pos": "adv", "ru": ["далеко"], "example": { "en": "Is the station far?", "ru": "Вокзал далеко?" }, "topics": ["directions"] },
+    { "id": "minute", "en": "minute", "ipa": "ˈmɪnɪt", "pos": "noun", "ru": ["минута"], "example": { "en": "It is five minutes on foot.", "ru": "Пять минут пешком." }, "topics": ["time"] },
+    { "id": "open", "en": "open", "ipa": "ˈoʊpən", "pos": "adj", "ru": ["открытый"], "example": { "en": "The bank is open today.", "ru": "Банк сегодня открыт." }, "topics": ["places"] },
+    { "id": "open#verb", "en": "open", "ipa": "ˈoʊpən", "pos": "verb", "ru": ["открывать"], "example": { "en": "Open the book.", "ru": "Откройте книгу." }, "topics": ["directions"] },
+    { "id": "closed", "en": "closed", "ipa": "kloʊzd", "pos": "adj", "ru": ["закрытый"], "example": { "en": "The bank is closed on Sunday.", "ru": "Банк закрыт в воскресенье." }, "topics": ["places"] },
+    { "id": "map", "en": "map", "ipa": "mæp", "pos": "noun", "ru": ["карта (местности)"], "example": { "en": "Here is a map of the town.", "ru": "Вот карта города." }, "topics": ["directions"] }
+  ],
+  "texts": [
+    {
+      "id": "a1.u07.station",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Where is the station?", "ru": "Где вокзал?" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Excuse me, where is the station?", "ru": "Извините, где вокзал?" },
+        { "speaker": "tom", "en": "Go straight, then turn left at the corner.", "ru": "Идите прямо, потом поверните налево на углу." },
+        { "speaker": "anna", "en": "Is it far?", "ru": "Это далеко?" },
+        { "speaker": "tom", "en": "No. It is five minutes on foot.", "ru": "Нет. Пять минут пешком." },
+        { "speaker": "anna", "en": "And where is the bank?", "ru": "А где банк?" },
+        { "speaker": "tom", "en": "The bank is next to the station, on the right.", "ru": "Банк рядом с вокзалом, справа." },
+        { "speaker": "anna", "en": "Is the bank open today?", "ru": "Банк сегодня открыт?" },
+        { "speaker": "tom", "en": "Yes, it is open every day. Don't cross the road here.", "ru": "Да, он открыт каждый день. Не переходите дорогу здесь." }
+      ]
+    },
+    {
+      "id": "a1.u07.my-town",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "My town", "ru": "Мой город" },
+      "lines": [
+        { "en": "I am Max. I live in a small town. There is a park near my house, and there is a library next to the park.", "ru": "Я Макс. Я живу в небольшом городе. Рядом с моим домом есть парк, а рядом с парком — библиотека." },
+        { "en": "The station is far from my house. I go to work by bus. My sister goes to school on foot.", "ru": "Вокзал далеко от моего дома. Я езжу на работу на автобусе. Моя сестра ходит в школу пешком." },
+        { "en": "There is a cinema, a museum and a good restaurant in the town. The shops are open every day, but the bank is closed on Sunday.", "ru": "В городе есть кинотеатр, музей и хороший ресторан. Магазины открыты каждый день, но банк закрыт в воскресенье." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "a1.u07.l01",
+      "kind": "vocabulary",
+      "title": "Места в городе",
+      "exercises": [
+        { "id": "a1.u07.l01.e01", "type": "match_pairs", "pairs": [{ "en": "town", "ru": "небольшой город" }, { "en": "city", "ru": "большой город" }, { "en": "street", "ru": "улица" }, { "en": "road", "ru": "дорога" }, { "en": "corner", "ru": "угол" }], "hint": "Town и city — разные по размеру.", "explanation": "Town — небольшой город, city — большой, street — улица, road — дорога, corner — угол." },
+        { "id": "a1.u07.l01.e02", "type": "match_pairs", "pairs": [{ "en": "bank", "ru": "банк" }, { "en": "hospital", "ru": "больница" }, { "en": "pharmacy", "ru": "аптека" }, { "en": "post office", "ru": "почта" }, { "en": "market", "ru": "рынок" }], "hint": "Pharmacy — место, где продают лекарства.", "explanation": "Bank — банк, hospital — больница, pharmacy — аптека, post office — почта, market — рынок." },
+        { "id": "a1.u07.l01.e03", "type": "match_pairs", "pairs": [{ "en": "park", "ru": "парк" }, { "en": "station", "ru": "вокзал" }, { "en": "museum", "ru": "музей" }, { "en": "cinema", "ru": "кинотеатр" }, { "en": "hotel", "ru": "отель" }], "hint": "Часть слов похожа на русские.", "explanation": "Park — парк, station — вокзал, museum — музей, cinema — кинотеатр, hotel — отель." },
+        { "id": "a1.u07.l01.e04", "type": "picture_choice", "mode": "picture-to-word", "word": "hospital", "distractors": ["hotel", "bank"], "hint": "Здесь лечат людей.", "explanation": "Hospital — «больница»: [ˈhɑːspɪtəl]." },
+        { "id": "a1.u07.l01.e05", "type": "picture_choice", "mode": "picture-to-word", "word": "museum", "distractors": ["library", "cinema"], "hint": "Здесь смотрят на старые вещи.", "explanation": "Museum — «музей»: [mjuˈziːəm]." },
+        { "id": "a1.u07.l01.e06", "type": "picture_choice", "mode": "word-to-picture", "word": "library", "distractors": ["pharmacy", "supermarket"], "hint": "Здесь берут книги.", "explanation": "Library — «библиотека»: [ˈlaɪbreri]." },
+        { "id": "a1.u07.l01.e07", "type": "picture_choice", "mode": "word-to-picture", "word": "supermarket", "distractors": ["bank", "hotel"], "hint": "Здесь много полок и тележек.", "explanation": "Supermarket — «супермаркет»: [ˈsuːpɚˌmɑːrkɪt]." },
+        { "id": "a1.u07.l01.e08", "type": "translate_choice", "from": "ru", "text": "больница", "options": ["hospital", "hotel", "station"], "answer": 0, "hint": "Начинается на h, как и отель.", "explanation": "Hospital — «больница», hotel — «отель». Слова начинаются одинаково, но читаются по-разному." },
+        { "id": "a1.u07.l01.e09", "type": "translate_choice", "from": "en", "text": "bus stop", "options": ["автобусная остановка", "вокзал", "метро"], "answer": 0, "hint": "Здесь ждут автобус.", "explanation": "Bus stop — «автобусная остановка»." },
+        { "id": "a1.u07.l01.e10", "type": "listen_choice", "audio": "hospital", "question": "Что вы слышите?", "options": ["hospital", "hotel", "market"], "answer": 0, "hint": "Первый слог ударный: [ˈhɑː].", "explanation": "Hospital [ˈhɑːspɪtəl] — «больница». Hotel [hoʊˈtel] — ударение на втором слоге.", "troubles": ["pron-vowels"] },
+        { "id": "a1.u07.l01.e11", "type": "listen_dictation", "text": "The bank is closed on Sunday.", "hint": "Шесть слов.", "explanation": "The bank is closed on Sunday — «банк закрыт в воскресенье»." },
+        { "id": "a1.u07.l01.e12", "type": "type_translation", "from": "ru", "text": "музей", "answers": ["museum"], "hint": "Шесть букв.", "explanation": "Museum [mjuˈziːəm] — «музей»." },
+        { "id": "a1.u07.l01.e13", "type": "word_stress", "word": "museum", "syllables": ["mu", "se", "um"], "stress": 1, "hint": "Ударение в середине слова.", "explanation": "mu-SE-um — ударение на второй слог." },
+        { "id": "a1.u07.l01.e14", "type": "word_stress", "word": "hotel", "syllables": ["ho", "tel"], "stress": 1, "hint": "Ударение на конце.", "explanation": "ho-TEL — ударение на второй слог. В русском отель — тоже на конце." }
+      ]
+    },
+    {
+      "id": "a1.u07.l02",
+      "kind": "vocabulary",
+      "title": "Направления и транспорт",
+      "exercises": [
+        { "id": "a1.u07.l02.e01", "type": "match_pairs", "pairs": [{ "en": "left", "ru": "налево" }, { "en": "right", "ru": "направо" }, { "en": "straight", "ru": "прямо" }, { "en": "turn", "ru": "поворачивать" }, { "en": "cross", "ru": "переходить" }], "hint": "Три слова про направление, два — про действие.", "explanation": "Left — налево, right — направо, straight — прямо, turn — поворачивать, cross — переходить." },
+        { "id": "a1.u07.l02.e02", "type": "match_pairs", "pairs": [{ "en": "train", "ru": "поезд" }, { "en": "taxi", "ru": "такси" }, { "en": "metro", "ru": "метро" }, { "en": "bus", "ru": "автобус" }, { "en": "on foot", "ru": "пешком" }], "hint": "On foot — без транспорта.", "explanation": "Train — поезд, taxi — такси, metro — метро, bus — автобус, on foot — пешком." },
+        { "id": "a1.u07.l02.e03", "type": "match_pairs", "pairs": [{ "en": "far", "ru": "далеко" }, { "en": "open", "ru": "открытый" }, { "en": "closed", "ru": "закрытый" }, { "en": "minute", "ru": "минута" }, { "en": "map", "ru": "карта" }], "hint": "Open и closed — противоположные слова.", "explanation": "Far — далеко, open — открытый, closed — закрытый, minute — минута, map — карта." },
+        { "id": "a1.u07.l02.e04", "type": "picture_choice", "mode": "picture-to-word", "word": "train", "distractors": ["taxi", "metro"], "hint": "Едет по рельсам над землёй.", "explanation": "Train — «поезд»: [treɪn]." },
+        { "id": "a1.u07.l02.e05", "type": "picture_choice", "mode": "word-to-picture", "word": "taxi", "distractors": ["train", "metro"], "hint": "Его вызывают для одного-двух пассажиров.", "explanation": "Taxi — «такси»: [ˈtæksi]." },
+        { "id": "a1.u07.l02.e06", "type": "translate_choice", "from": "ru", "text": "Поверните налево.", "options": ["Turn left.", "Turn right.", "Go straight."], "answer": 0, "hint": "Налево — это не прямо и не направо.", "explanation": "Turn left — «поверните налево». Turn right — «направо», go straight — «идите прямо»." },
+        { "id": "a1.u07.l02.e07", "type": "translate_choice", "from": "en", "text": "It is five minutes on foot.", "options": ["Пять минут пешком.", "Пять минут на автобусе.", "Через пять минут."], "answer": 0, "hint": "On foot — пешком.", "explanation": "Five minutes on foot — «пять минут пешком»." },
+        { "id": "a1.u07.l02.e08", "type": "fill_gap", "text": "I go to work ___ train.", "translation": "Я езжу на работу на поезде.", "answers": [["by"]], "options": ["by", "on", "in"], "hint": "Предлог для транспорта.", "explanation": "I go to work by train. С транспортом — by.", "grammar": ["a1.transport"], "troubles": ["prepositions"] },
+        { "id": "a1.u07.l02.e09", "type": "fill_gap", "text": "I go to school ___ foot.", "translation": "Я хожу в школу пешком.", "answers": [["on"]], "options": ["on", "by", "in"], "hint": "Пешком — исключение.", "explanation": "I go to school on foot. Пешком — on foot.", "grammar": ["a1.transport"], "troubles": ["prepositions"] },
+        { "id": "a1.u07.l02.e10", "type": "fill_gap", "text": "The bank is ___ today.", "translation": "Банк сегодня открыт.", "answers": [["open"]], "options": ["open", "closed", "far"], "hint": "Сегодня рабочий день.", "explanation": "The bank is open today. Open — «открытый»." },
+        { "id": "a1.u07.l02.e11", "type": "listen_choice", "audio": "Turn right at the corner.", "question": "Что вы слышите?", "options": ["Turn right at the corner.", "Turn left at the corner.", "Go straight at the corner."], "answer": 0, "hint": "Слово после turn звучит как «райт».", "explanation": "Turn right at the corner — «поверните направо на углу»." },
+        { "id": "a1.u07.l02.e12", "type": "listen_dictation", "text": "Go straight.", "hint": "Два слова.", "explanation": "Go straight — «идите прямо»." },
+        { "id": "a1.u07.l02.e13", "type": "type_translation", "from": "ru", "text": "налево", "answers": ["left"], "hint": "Четыре буквы.", "explanation": "Left — «налево, слева»." },
+        { "id": "a1.u07.l02.e14", "type": "minimal_pair", "pair": [{ "en": "walk", "ipa": "wɔːk" }, { "en": "work", "ipa": "wɝːk" }], "say": 0, "hint": "В одном слове звук как в слове «ворк».", "explanation": "Walk [wɔːk] — «гулять», work [wɝːk] — «работать». Звуки разные.", "troubles": ["pron-vowels"] }
+      ]
+    },
+    {
+      "id": "a1.u07.l03",
+      "kind": "grammar",
+      "title": "Просьбы и команды",
+      "grammar": "a1.imperatives",
+      "exercises": [
+        { "id": "a1.u07.l03.e01", "type": "fill_gap", "text": "___ left at the corner.", "translation": "Поверните налево на углу.", "answers": [["Turn"]], "options": ["Turn", "Turns", "Turning"], "hint": "Команда начинается с глагола.", "explanation": "Turn left at the corner. В команде глагол стоит в начальной форме.", "grammar": ["a1.imperatives"] },
+        { "id": "a1.u07.l03.e02", "type": "fill_gap", "text": "___ straight, please.", "translation": "Идите прямо, пожалуйста.", "answers": [["Go"]], "options": ["Go", "Goes", "Going"], "hint": "Команда без окончания.", "explanation": "Go straight, please. Please делает просьбу вежливой.", "grammar": ["a1.imperatives"] },
+        { "id": "a1.u07.l03.e03", "type": "fill_gap", "text": "___ the street here.", "translation": "Перейдите улицу здесь.", "answers": [["Cross"]], "options": ["Cross", "Crosses", "To cross"], "hint": "Глагол в начале.", "explanation": "Cross the street here. Cross — «переходить».", "grammar": ["a1.imperatives"] },
+        { "id": "a1.u07.l03.e04", "type": "fill_gap", "text": "Please ___ the door.", "translation": "Пожалуйста, откройте дверь.", "answers": [["open"]], "options": ["open", "opens", "to open"], "hint": "Глагол без изменений.", "explanation": "Please open the door. После please — тот же глагол без -s.", "grammar": ["a1.imperatives"] },
+        { "id": "a1.u07.l03.e05", "type": "fill_gap", "text": "___ turn right.", "translation": "Не поворачивайте направо.", "answers": [["Don't", "Do not"]], "options": ["Don't", "Doesn't", "Not"], "hint": "Запрет — перед глаголом.", "explanation": "Don't turn right. Для запрета ставят don't.", "grammar": ["a1.imperatives"] },
+        { "id": "a1.u07.l03.e06", "type": "fill_gap", "text": "Don't ___ here.", "translation": "Не останавливайтесь здесь.", "answers": [["stop"]], "options": ["stop", "stops", "to stop"], "hint": "После don't — без окончания.", "explanation": "Don't stop here. После don't — начальная форма.", "grammar": ["a1.imperatives"] },
+        { "id": "a1.u07.l03.e07", "type": "error_correction", "text": "You turn left.", "wrong": "You turn left.", "correction": "Turn left.", "options": ["Turn left.", "Turns left.", "You are turn left."], "hint": "Команде не нужно подлежащее.", "explanation": "Turn left. В команде слово you не нужно.", "grammar": ["a1.imperatives"], "troubles": ["word-order"] },
+        { "id": "a1.u07.l03.e08", "type": "error_correction", "text": "Don't to turn right.", "wrong": "to turn", "correction": "turn", "options": ["turn", "turns", "turning"], "hint": "Лишнее слово.", "explanation": "Don't turn right. После don't — глагол без to.", "grammar": ["a1.imperatives"], "troubles": ["word-order"] },
+        { "id": "a1.u07.l03.e09", "type": "error_correction", "text": "Please go to straight.", "wrong": "to straight", "correction": "straight", "options": ["straight", "at straight", "on straight"], "hint": "Предлог лишний.", "explanation": "Please go straight. Straight — «прямо», предлог не нужен.", "grammar": ["a1.imperatives"], "troubles": ["prepositions"] },
+        { "id": "a1.u07.l03.e10", "type": "tiles", "from": "ru", "text": "Идите прямо, потом поверните налево.", "answer": "Go straight, then turn left.", "distractors": ["goes", "right"], "hint": "Две команды подряд.", "explanation": "Go straight, then turn left. Слово then — «потом».", "grammar": ["a1.imperatives"] },
+        { "id": "a1.u07.l03.e11", "type": "tiles", "from": "ru", "text": "Не открывайте дверь.", "answer": "Don't open the door.", "distractors": ["doesn't", "to"], "hint": "Don't + глагол.", "explanation": "Don't open the door. Это запрет.", "grammar": ["a1.imperatives"] },
+        { "id": "a1.u07.l03.e12", "type": "type_translation", "from": "ru", "text": "Откройте книгу, пожалуйста.", "answers": ["Open the book, please.", "Please open the book."], "difficulty": 2, "hint": "Please можно поставить в начало или в конец.", "explanation": "Open the book, please. Или: Please open the book.", "grammar": ["a1.imperatives"] },
+        { "id": "a1.u07.l03.e13", "type": "type_translation", "from": "ru", "text": "Не переходите дорогу здесь.", "answers": ["Don't cross the road here.", "Do not cross the road here."], "difficulty": 2, "hint": "Образец: Don't + cross.", "explanation": "Don't cross the road here. Запрет начинается с don't.", "grammar": ["a1.imperatives"] },
+        { "id": "a1.u07.l03.e14", "type": "speak_repeat", "text": "Go straight, then turn right at the bank.", "hint": "Паузы между командами.", "explanation": "Две команды произносите отдельно: Go straight — then turn right." }
+      ]
+    },
+    {
+      "id": "a1.u07.l04",
+      "kind": "grammar",
+      "title": "Как пройти и далеко ли",
+      "grammar": "a1.directions",
+      "exercises": [
+        { "id": "a1.u07.l04.e01", "type": "fill_gap", "text": "The bank is ___ the left.", "translation": "Банк слева.", "answers": [["on"]], "options": ["on", "in", "at"], "hint": "Слева и справа — с одним предлогом.", "explanation": "The bank is on the left. Слева — on the left.", "grammar": ["a1.directions"], "troubles": ["prepositions"] },
+        { "id": "a1.u07.l04.e02", "type": "fill_gap", "text": "The park is ___ the corner.", "translation": "Парк на углу.", "answers": [["at"]], "options": ["at", "on", "by"], "hint": "Угол — как точка.", "explanation": "The park is at the corner. Угол — at the corner.", "grammar": ["a1.directions"], "troubles": ["prepositions"] },
+        { "id": "a1.u07.l04.e03", "type": "fill_gap", "text": "The hotel is ___ the bank and the museum.", "translation": "Отель между банком и музеем.", "answers": [["between"]], "options": ["between", "behind", "under"], "hint": "Между двумя местами.", "explanation": "Правильно: The hotel is between the bank and the museum.", "grammar": ["a1.directions"] },
+        { "id": "a1.u07.l04.e04", "type": "fill_gap", "text": "Is the station ___?", "translation": "Вокзал далеко?", "answers": [["far"]], "options": ["far", "open", "left"], "hint": "Спрашиваем о расстоянии.", "explanation": "Is the station far? Far — «далеко».", "grammar": ["a1.directions"] },
+        { "id": "a1.u07.l04.e05", "type": "fill_gap", "text": "It is ten minutes ___ foot.", "translation": "Это десять минут пешком.", "answers": [["on"]], "options": ["on", "by", "in"], "hint": "Пешком — особая фраза.", "explanation": "It is ten minutes on foot. Пешком — on foot.", "grammar": ["a1.directions", "a1.transport"], "troubles": ["prepositions"] },
+        { "id": "a1.u07.l04.e06", "type": "error_correction", "text": "The bank is in the left.", "wrong": "in", "correction": "on", "options": ["on", "at", "to"], "hint": "Для сторон — другой предлог.", "explanation": "The bank is on the left. Слева — on.", "grammar": ["a1.directions"], "troubles": ["prepositions"] },
+        { "id": "a1.u07.l04.e07", "type": "error_correction", "text": "It is ten minutes by foot.", "wrong": "by", "correction": "on", "options": ["on", "in", "at"], "hint": "Пешком — не с транспортом.", "explanation": "It is ten minutes on foot. Пешком — on foot.", "grammar": ["a1.directions", "a1.transport"], "troubles": ["prepositions"] },
+        { "id": "a1.u07.l04.e08", "type": "error_correction", "text": "Turn to left.", "wrong": "to left", "correction": "left", "options": ["left", "at left", "on left"], "hint": "Предлог лишний.", "explanation": "Turn left. Слова left и right стоят без предлога.", "grammar": ["a1.directions"], "troubles": ["prepositions"] },
+        { "id": "a1.u07.l04.e09", "type": "tiles", "from": "ru", "text": "Банк рядом с вокзалом.", "answer": "The bank is next to the station.", "distractors": ["on", "in"], "hint": "Next to — «рядом с».", "explanation": "The bank is next to the station. Next to — «рядом с».", "grammar": ["a1.directions"] },
+        { "id": "a1.u07.l04.e10", "type": "tiles", "from": "ru", "text": "Это далеко?", "answer": "Is it far?", "distractors": ["are", "open"], "hint": "Начните с Is.", "explanation": "Is it far? Это обычный вопрос про расстояние.", "grammar": ["a1.directions"] },
+        { "id": "a1.u07.l04.e11", "type": "type_translation", "from": "ru", "text": "Где музей?", "answers": ["Where is the museum?"], "hint": "Where is + the + место.", "explanation": "Where is the museum? Так спрашивают, где находится место.", "grammar": ["a1.directions", "a1.be-questions"] },
+        { "id": "a1.u07.l04.e12", "type": "type_translation", "from": "ru", "text": "Отель справа.", "answers": ["The hotel is on the right."], "difficulty": 2, "hint": "Справа — on the right.", "explanation": "Правильно: The hotel is on the right.", "grammar": ["a1.directions"] },
+        { "id": "a1.u07.l04.e13", "type": "type_translation", "from": "ru", "text": "Это пять минут пешком.", "answers": ["It is five minutes on foot."], "difficulty": 2, "hint": "Пять минут — five minutes.", "explanation": "It is five minutes on foot. Минуты — во множественном числе.", "grammar": ["a1.directions"] },
+        { "id": "a1.u07.l04.e14", "type": "speak_answer", "question": "Where is the station?", "questionRu": "Где вокзал? Придумайте ответ: The station is on the left. или Go straight.", "keywords": [["\\b(station|it|go|turn)\\b"], ["\\b(left|right|straight|corner|next to|near|between)\\b"]], "minKeywords": 2, "samples": ["The station is on the left.", "Go straight, then turn right."], "difficulty": 3, "hint": "Образец: The station is on…", "explanation": "Отвечаем: The station is on the left. Или командой: Go straight, then turn right.", "grammar": ["a1.directions"] },
+        { "id": "a1.u07.l04.e15", "type": "speak_repeat", "text": "The hotel is between the bank and the museum.", "hint": "Слово between ударное.", "explanation": "Between [bɪˈtwiːn]: ударение на втором слоге." }
+      ]
+    },
+    {
+      "id": "a1.u07.l05",
+      "kind": "grammar",
+      "title": "На чём вы едете?",
+      "grammar": "a1.transport",
+      "exercises": [
+        { "id": "a1.u07.l05.e01", "type": "fill_gap", "text": "She goes to school ___ bus.", "translation": "Она ездит в школу на автобусе.", "answers": [["by"]], "options": ["by", "on", "with"], "hint": "Предлог для транспорта.", "explanation": "She goes to school by bus. С транспортом — by.", "grammar": ["a1.transport"], "troubles": ["prepositions"] },
+        { "id": "a1.u07.l05.e02", "type": "fill_gap", "text": "We go to the hotel ___ taxi.", "translation": "Мы едем в отель на такси.", "answers": [["by"]], "options": ["by", "on", "in"], "hint": "Тот же предлог, что для автобуса.", "explanation": "Правильно: We go to the hotel by taxi.", "grammar": ["a1.transport"] },
+        { "id": "a1.u07.l05.e03", "type": "fill_gap", "text": "How ___ you go to work?", "translation": "Как вы добираетесь на работу?", "answers": [["do"]], "options": ["do", "does", "are"], "hint": "Вопрос про you.", "explanation": "How do you go to work? С you — do.", "grammar": ["a1.transport", "a1.present-simple-questions"] },
+        { "id": "a1.u07.l05.e04", "type": "fill_gap", "text": "How ___ he go to school?", "translation": "Как он добирается до школы?", "answers": [["does"]], "options": ["does", "do", "is"], "hint": "Речь о другом человеке.", "explanation": "How does he go to school? С he — does.", "grammar": ["a1.transport", "a1.present-simple-questions"], "troubles": ["tenses"] },
+        { "id": "a1.u07.l05.e05", "type": "fill_gap", "text": "I go to the office ___ metro.", "translation": "Я езжу в офис на метро.", "answers": [["by"]], "options": ["by", "on", "at"], "hint": "Без артикля.", "explanation": "I go to the office by metro. После by артикль не нужен.", "grammar": ["a1.transport"] },
+        { "id": "a1.u07.l05.e06", "type": "error_correction", "text": "I go by the bus.", "wrong": "by the bus", "correction": "by bus", "options": ["by bus", "on the bus", "at bus"], "hint": "Артикль не нужен.", "explanation": "I go by bus. После by артикль не ставят.", "grammar": ["a1.transport"], "troubles": ["articles"] },
+        { "id": "a1.u07.l05.e07", "type": "error_correction", "text": "I go on bus.", "wrong": "on", "correction": "by", "options": ["by", "in", "at"], "hint": "Предлог для транспорта.", "explanation": "I go by bus. Транспорт называют с by.", "grammar": ["a1.transport"], "troubles": ["prepositions"] },
+        { "id": "a1.u07.l05.e08", "type": "error_correction", "text": "I go by foot.", "wrong": "by foot", "correction": "on foot", "options": ["on foot", "in foot", "at foot"], "hint": "Пешком — исключение.", "explanation": "I go on foot. Пешком — on foot.", "grammar": ["a1.transport"], "troubles": ["prepositions"] },
+        { "id": "a1.u07.l05.e09", "type": "tiles", "from": "ru", "text": "Я езжу на работу на метро.", "answer": "I go to work by metro.", "distractors": ["on", "goes"], "hint": "Транспорт — с by.", "explanation": "Правильно: I go to work by metro.", "grammar": ["a1.transport"] },
+        { "id": "a1.u07.l05.e10", "type": "tiles", "from": "ru", "text": "Как вы едете на работу?", "answer": "How do you go to work?", "distractors": ["does", "by"], "hint": "Образец: How + do + you.", "explanation": "How do you go to work? Вопрос про привычку.", "grammar": ["a1.transport"] },
+        { "id": "a1.u07.l05.e11", "type": "type_translation", "from": "ru", "text": "Она ходит в школу пешком.", "answers": ["She goes to school on foot."], "difficulty": 2, "hint": "С she — окончание.", "explanation": "Правильно: She goes to school on foot. Go → goes.", "grammar": ["a1.transport", "a1.present-simple"] },
+        { "id": "a1.u07.l05.e12", "type": "type_translation", "from": "ru", "text": "Мы едем на такси.", "answers": ["We go by taxi."], "hint": "Транспорт без артикля.", "explanation": "We go by taxi. С by — без артикля.", "grammar": ["a1.transport"] },
+        { "id": "a1.u07.l05.e13", "type": "speak_answer", "question": "How do you go to work?", "questionRu": "Как вы добираетесь на работу или в школу? Ответьте: I go by bus. или I go on foot.", "keywords": [["\\bI go\\b"], ["\\b(by (bus|train|taxi|metro|car|bike)|on foot)\\b"]], "minKeywords": 2, "samples": ["I go by bus.", "I go on foot."], "difficulty": 3, "hint": "I go by… или I go on…", "explanation": "Отвечаем: I go by bus. или I go on foot.", "grammar": ["a1.transport"] },
+        { "id": "a1.u07.l05.e14", "type": "speak_repeat", "text": "I go to work by train and my sister goes on foot.", "hint": "Две части, соединённые and.", "explanation": "Goes [ɡoʊz] — слово с окончанием -es." }
+      ]
+    },
+    {
+      "id": "a1.u07.l06",
+      "kind": "listening",
+      "title": "Где вокзал?",
+      "textId": "a1.u07.station",
+      "exercises": [
+        {
+          "id": "a1.u07.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "a1.u07.station",
+          "hint": "Слушайте направление и расстояние.",
+          "explanation": "Анна ищет вокзал и банк. Том объясняет дорогу: прямо, потом налево, пять минут пешком.",
+          "questions": [
+            { "kind": "mcq", "question": "Куда нужно повернуть?", "options": ["left", "right", "straight"], "answer": 0, "explanation": "Том говорит: turn left at the corner." },
+            { "kind": "mcq", "question": "Как далеко вокзал?", "options": ["five minutes on foot", "ten minutes on foot", "five minutes by bus"], "answer": 0, "explanation": "Том говорит: It is five minutes on foot." },
+            { "kind": "mcq", "question": "Где банк?", "options": ["next to the station", "near the park", "behind the hotel"], "answer": 0, "explanation": "Том говорит: The bank is next to the station, on the right." },
+            { "kind": "tfn", "statement": "The bank is open today.", "answer": "true", "explanation": "Том говорит: it is open every day." },
+            { "kind": "tfn", "statement": "The station is far.", "answer": "false", "explanation": "Это пять минут пешком, значит рядом." },
+            { "kind": "tfn", "statement": "Tom is a taxi driver.", "answer": "not_given", "explanation": "Кем работает Том, в диалоге не сказано." }
+          ]
+        },
+        { "id": "a1.u07.l06.e02", "type": "listen_choice", "audio": "Excuse me, where is the station?", "question": "Что вы слышите?", "options": ["Excuse me, where is the station?", "Excuse me, where is the bank?", "Excuse me, is it far?"], "answer": 0, "hint": "Вопрос про вокзал.", "explanation": "Excuse me, where is the station? — «Извините, где вокзал?»" },
+        { "id": "a1.u07.l06.e03", "type": "listen_dictation", "text": "It is five minutes on foot.", "hint": "Шесть слов.", "explanation": "It is five minutes on foot — «пять минут пешком»." },
+        { "id": "a1.u07.l06.e04", "type": "listen_dictation", "text": "Go straight, then turn left.", "hint": "Пять слов.", "explanation": "Go straight, then turn left — «идите прямо, потом поверните налево»." },
+        { "id": "a1.u07.l06.e05", "type": "fill_gap", "text": "The bank is open ___ day.", "translation": "Банк открыт каждый день.", "answers": [["every"]], "options": ["every", "on", "at"], "hint": "Слово «каждый».", "explanation": "The bank is open every day. Every — «каждый».", "grammar": ["a1.time-prepositions"] },
+        { "id": "a1.u07.l06.e06", "type": "tiles", "from": "ru", "text": "Извините, где банк?", "answer": "Excuse me, where is the bank?", "distractors": ["are", "a"], "hint": "Начните с Excuse me.", "explanation": "Excuse me, where is the bank? Так вежливо обращаются к незнакомому человеку.", "grammar": ["a1.directions"] },
+        { "id": "a1.u07.l06.e07", "type": "type_translation", "from": "ru", "text": "Не переходите дорогу здесь.", "answers": ["Don't cross the road here.", "Do not cross the road here."], "hint": "Запрет.", "explanation": "Don't cross the road here. Запрет начинается с don't.", "grammar": ["a1.imperatives"] },
+        { "id": "a1.u07.l06.e08", "type": "speak_answer", "question": "Is the bank open today?", "questionRu": "Банк сегодня открыт? Ответьте: Yes, it is. или No, it isn't.", "keywords": [["\\b(yes|no)\\b"], ["\\bit (is|isn't|is not)\\b"]], "minKeywords": 2, "samples": ["Yes, it is.", "No, it isn't."], "difficulty": 3, "hint": "Yes, it… или No, it…", "explanation": "Отвечаем коротко: Yes, it is. или No, it isn't." },
+        { "id": "a1.u07.l06.e09", "type": "speak_repeat", "text": "Excuse me, where is the bank?", "hint": "Вежливый вопрос.", "explanation": "В вопросе с where интонация идёт вниз на конце." }
+      ]
+    },
+    {
+      "id": "a1.u07.l07",
+      "kind": "writing",
+      "title": "Мой город",
+      "textId": "a1.u07.my-town",
+      "exercises": [
+        {
+          "id": "a1.u07.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "a1.u07.my-town",
+          "hint": "Найдите, как человек едет на работу и как ходит сестра.",
+          "explanation": "Автор живёт в небольшом городе. Вокзал далеко, поэтому на работу он ездит на автобусе, а сестра ходит в школу пешком.",
+          "questions": [
+            { "kind": "mcq", "question": "How does Max go to work?", "options": ["by bus", "by train", "on foot"], "answer": 0, "explanation": "В тексте: I go to work by bus." },
+            { "kind": "mcq", "question": "Что есть рядом с парком?", "options": ["a library", "a museum", "a cinema"], "answer": 0, "explanation": "В тексте: there is a library next to the park." },
+            { "kind": "tfn", "statement": "The bank is closed on Sunday.", "answer": "true", "explanation": "В тексте: the bank is closed on Sunday." },
+            { "kind": "tfn", "statement": "The station is near the house.", "answer": "false", "explanation": "В тексте: The station is far from my house." },
+            { "kind": "tfn", "statement": "Max works in a bank.", "answer": "not_given", "explanation": "Где работает автор, в тексте не сказано." }
+          ]
+        },
+        { "id": "a1.u07.l07.e02", "type": "translate_choice", "from": "en", "text": "The shops are open every day.", "options": ["Магазины открыты каждый день.", "Магазины закрыты каждый день.", "Магазины открыты по воскресеньям."], "answer": 0, "hint": "Every day — «каждый день».", "explanation": "The shops are open every day — «магазины открыты каждый день»." },
+        { "id": "a1.u07.l07.e03", "type": "fill_gap", "text": "My sister goes to school ___ foot.", "translation": "Моя сестра ходит в школу пешком.", "answers": [["on"]], "options": ["on", "by", "in"], "hint": "Пешком — особая фраза.", "explanation": "Правильно: My sister goes to school on foot.", "grammar": ["a1.transport"] },
+        { "id": "a1.u07.l07.e04", "type": "fill_gap", "text": "There ___ a cinema in the town.", "translation": "В городе есть кинотеатр.", "answers": [["is"]], "options": ["is", "are", "am"], "hint": "Один предмет.", "explanation": "There is a cinema in the town. Один предмет — there is.", "grammar": ["a1.there-is"] },
+        { "id": "a1.u07.l07.e05", "type": "type_translation", "from": "ru", "text": "Вокзал далеко от моего дома.", "answers": ["The station is far from my house."], "difficulty": 3, "hint": "Far from — «далеко от».", "explanation": "The station is far from my house. Far from — «далеко от».", "grammar": ["a1.directions"] },
+        { "id": "a1.u07.l07.e06", "type": "speak_describe", "picture": { "emoji": "🏙️" }, "situation": "Расскажите, что есть в вашем городе: назовите два-три места и скажите, где они.", "keywords": [["\\bthere (is|are)\\b", "\\bit is\\b"], ["\\b(park|bank|station|museum|cinema|hotel|library|market|supermarket|hospital|pharmacy|school|shop|restaurant)\\b"]], "minKeywords": 2, "samples": ["There is a park near my house. The bank is next to the station."], "difficulty": 3, "hint": "Образец: There is a… near my house.", "explanation": "Начните с There is a… и назовите, где это место.", "grammar": ["a1.there-is"] },
+        { "id": "a1.u07.l07.e07", "type": "speak_answer", "question": "How do you go to work?", "questionRu": "Как вы добираетесь на работу или в школу? Ответьте: I go by… или I go on foot.", "keywords": [["\\bI go\\b"], ["\\b(by (bus|train|taxi|metro|car|bike)|on foot)\\b"]], "minKeywords": 2, "samples": ["I go by metro.", "I go on foot."], "difficulty": 3, "hint": "I go by… или I go on…", "explanation": "Отвечаем полным предложением: I go by metro.", "grammar": ["a1.transport"] },
+        {
+          "id": "a1.u07.l07.e08",
+          "type": "write",
+          "task": "Расскажите о своём городе или районе: что там есть, где находятся банк, парк или станция и как вы ездите на работу или в школу. Например: There is a park near my house. I go to work by bus.",
+          "minWords": 30,
+          "maxWords": 90,
+          "criteria": [
+            { "id": "there", "label": "Есть there is или there are", "patterns": ["\\bthere (is|are)\\b", "\\bthere's\\b"] },
+            { "id": "place", "label": "Названы места", "patterns": ["\\b(park|bank|station|museum|cinema|hotel|library|market|supermarket|hospital|pharmacy|school|shop|restaurant|post office|bus stop)\\b"] },
+            { "id": "where", "label": "Сказано, где это: next to, near, on the left…", "patterns": ["\\b(next to|near|between|behind|on the left|on the right|at the corner|far from)\\b"] },
+            { "id": "transport", "label": "Есть by bus, by train или on foot", "patterns": ["\\b(by (bus|train|taxi|metro|car|bike)|on foot)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\bby the (bus|train|taxi|metro)\\b", "message": "После by артикль не нужен: by bus, а не by the bus." },
+            { "pattern": "\\bby foot\\b", "message": "Пешком — on foot, а не by foot." },
+            { "pattern": "\\bin the (left|right)\\b", "message": "Слева и справа — on the left, on the right." },
+            { "pattern": "\\bthere (are) (a|an)\\b", "message": "Один предмет — there is a, а не there are a." },
+            { "pattern": "\\bthere (is) [a-z]+s\\b", "message": "Несколько предметов — there are: there are two parks." }
+          ],
+          "samples": [
+            "I live in a small town. There is a park near my house and a library next to the park. The station is far from my house. I go to work by bus. My sister goes to school on foot. The bank is closed on Sunday.",
+            "There is a big museum in my city. The hotel is between the bank and the museum. The cinema is on the left. I don't go to work by taxi. I go by metro and on foot."
+          ],
+          "difficulty": 3,
+          "hint": "План: где живу → что рядом → как езжу.",
+          "explanation": "Рассказывая о городе, используйте There is/are, next to, near, on the left. Для транспорта — by + слово без артикля, пешком — on foot.",
+          "grammar": ["a1.there-is", "a1.directions", "a1.transport"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "a1.u07.test.e01", "type": "match_pairs", "pairs": [{ "en": "bank", "ru": "банк" }, { "en": "hospital", "ru": "больница" }, { "en": "museum", "ru": "музей" }, { "en": "station", "ru": "вокзал" }, { "en": "corner", "ru": "угол" }], "hint": "Все слова из первых уроков.", "explanation": "Bank — банк, hospital — больница, museum — музей, station — вокзал, corner — угол." },
+      { "id": "a1.u07.test.e02", "type": "translate_choice", "from": "ru", "text": "прямо", "options": ["straight", "right", "left"], "answer": 0, "hint": "Не направо и не налево.", "explanation": "Straight — «прямо»." },
+      { "id": "a1.u07.test.e03", "type": "picture_choice", "mode": "picture-to-word", "word": "library", "distractors": ["pharmacy", "bank"], "hint": "Здесь читают и берут книги.", "explanation": "Library — «библиотека»: [ˈlaɪbreri]." },
+      { "id": "a1.u07.test.e04", "type": "fill_gap", "text": "___ left at the corner.", "translation": "Поверните налево на углу.", "answers": [["Turn"]], "options": ["Turn", "Turns", "To turn"], "hint": "Команда.", "explanation": "Правильно: Turn left at the corner.", "grammar": ["a1.imperatives"] },
+      { "id": "a1.u07.test.e05", "type": "fill_gap", "text": "___ cross the road here.", "translation": "Не переходите дорогу здесь.", "answers": [["Don't", "Do not"]], "options": ["Don't", "Doesn't", "Not"], "hint": "Запрет.", "explanation": "Правильно: Don't cross the road here.", "grammar": ["a1.imperatives"] },
+      { "id": "a1.u07.test.e06", "type": "fill_gap", "text": "The bank is ___ the right.", "translation": "Банк справа.", "answers": [["on"]], "options": ["on", "in", "at"], "hint": "Стороны — с одним предлогом.", "explanation": "Правильно: The bank is on the right.", "grammar": ["a1.directions"] },
+      { "id": "a1.u07.test.e07", "type": "fill_gap", "text": "I go to work ___ metro.", "translation": "Я езжу на работу на метро.", "answers": [["by"]], "options": ["by", "on", "in"], "hint": "Транспорт.", "explanation": "Правильно: I go to work by metro.", "grammar": ["a1.transport"] },
+      { "id": "a1.u07.test.e08", "type": "fill_gap", "text": "I go to school ___ foot.", "translation": "Я хожу в школу пешком.", "answers": [["on"]], "options": ["on", "by", "at"], "hint": "Особая фраза.", "explanation": "Правильно: I go to school on foot.", "grammar": ["a1.transport"] },
+      { "id": "a1.u07.test.e09", "type": "error_correction", "text": "I go by the train.", "wrong": "by the train", "correction": "by train", "options": ["by train", "on the train", "at train"], "hint": "Артикль не нужен.", "explanation": "Правильно: I go by train.", "grammar": ["a1.transport"], "troubles": ["articles"] },
+      { "id": "a1.u07.test.e10", "type": "error_correction", "text": "The hotel is in the left.", "wrong": "in", "correction": "on", "options": ["on", "at", "to"], "hint": "Для сторон — другой предлог.", "explanation": "Правильно: The hotel is on the left.", "grammar": ["a1.directions"], "troubles": ["prepositions"] },
+      { "id": "a1.u07.test.e11", "type": "error_correction", "text": "Don't to stop here.", "wrong": "to stop", "correction": "stop", "options": ["stop", "stops", "stopping"], "hint": "Лишнее слово.", "explanation": "Правильно: Don't stop here.", "grammar": ["a1.imperatives"], "troubles": ["word-order"] },
+      { "id": "a1.u07.test.e12", "type": "listen_choice", "audio": "Go straight, then turn right.", "question": "Что вы слышите?", "options": ["Go straight, then turn right.", "Go straight, then turn left.", "Turn right, then go straight."], "answer": 0, "hint": "Сначала прямо.", "explanation": "Go straight, then turn right — «идите прямо, потом поверните направо».", "grammar": ["a1.imperatives"] },
+      { "id": "a1.u07.test.e13", "type": "listen_dictation", "text": "Is it far?", "hint": "Три слова.", "explanation": "Is it far? — «Это далеко?»" },
+      { "id": "a1.u07.test.e14", "type": "tiles", "from": "ru", "text": "Вокзал рядом с отелем.", "answer": "The station is near the hotel.", "distractors": ["on", "are"], "difficulty": 2, "hint": "Near — «рядом».", "explanation": "Правильно: The station is near the hotel.", "grammar": ["a1.directions"] },
+      { "id": "a1.u07.test.e15", "type": "type_translation", "from": "ru", "text": "Это десять минут пешком.", "answers": ["It is ten minutes on foot."], "difficulty": 2, "hint": "Минуты во множественном числе.", "explanation": "Правильно: It is ten minutes on foot.", "grammar": ["a1.directions"] },
+      { "id": "a1.u07.test.e16", "type": "speak_repeat", "text": "Excuse me, where is the station?", "hint": "Вежливый вопрос.", "explanation": "Excuse me — вежливое начало вопроса к незнакомому человеку." }
+    ]
+  }
+}
