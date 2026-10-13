@@ -1,0 +1,306 @@
+{
+  "id": "a2.u04",
+  "level": "A2",
+  "order": 4,
+  "title": { "en": "Plans for the week", "ru": "Планы на неделю" },
+  "description": "Говорим о планах: что собираемся делать сегодня вечером, завтра и на следующей неделе. Конструкция going to, Present Continuous для договорённостей, слова next, tonight, in two days.",
+  "goals": [
+    "Могу рассказать о планах: I am going to visit my friend next week.",
+    "Могу спросить о планах: What are you going to do tonight?",
+    "Могу сказать о договорённости: I am meeting my friend at six.",
+    "Могу назвать время в будущем: tomorrow, next month, in two days.",
+    "Могу назвать события недели: meeting, appointment, interview, wedding.",
+    "Могу написать короткий текст о планах на неделю."
+  ],
+  "grammar": ["a2.going-to", "a2.present-continuous-future", "a2.future-time"],
+  "troubles": ["tenses"],
+  "words": [
+    { "id": "plan", "en": "plan", "ipa": "plæn", "pos": "noun", "ru": ["план"], "example": { "en": "I have a plan for the weekend.", "ru": "У меня есть план на выходные." }, "topics": ["plans"] },
+    { "id": "plan#verb", "en": "plan", "ipa": "plæn", "pos": "verb", "ru": ["планировать"], "example": { "en": "We plan to travel in summer.", "ru": "Летом мы планируем поехать в путешествие." }, "forms": { "third": "plans", "ing": "planning" }, "topics": ["plans"] },
+    { "id": "calendar", "en": "calendar", "ipa": "ˈkæləndɚ", "pos": "noun", "ru": ["календарь"], "example": { "en": "I write my plans in the calendar.", "ru": "Я записываю планы в календарь." }, "topics": ["plans"] },
+    { "id": "meeting", "en": "meeting", "ipa": "ˈmiːtɪŋ", "pos": "noun", "ru": ["встреча", "совещание"], "example": { "en": "I have a meeting on Monday.", "ru": "В понедельник у меня встреча." }, "topics": ["plans"] },
+    { "id": "appointment", "en": "appointment", "ipa": "əˈpɔɪntmənt", "pos": "noun", "ru": ["приём", "запись на время"], "example": { "en": "I have an appointment at ten.", "ru": "Я записан на десять." }, "note": "Appointment — запись к врачу, парикмахеру, в офис. Встреча с другом — не appointment, а просто meeting.", "topics": ["plans"] },
+    { "id": "interview", "en": "interview", "ipa": "ˈɪntɚvjuː", "pos": "noun", "ru": ["собеседование", "интервью"], "example": { "en": "I have an interview on Friday.", "ru": "В пятницу у меня собеседование." }, "topics": ["plans"] },
+    { "id": "wedding", "en": "wedding", "ipa": "ˈwedɪŋ", "pos": "noun", "ru": ["свадьба"], "example": { "en": "We are going to a wedding on Saturday.", "ru": "В субботу мы идём на свадьбу." }, "topics": ["plans"] },
+    { "id": "dentist", "en": "dentist", "ipa": "ˈdentɪst", "pos": "noun", "ru": ["стоматолог"], "example": { "en": "I have an appointment with the dentist.", "ru": "Я записан к стоматологу." }, "topics": ["plans"] },
+    { "id": "month", "en": "month", "ipa": "mʌnθ", "pos": "noun", "ru": ["месяц"], "example": { "en": "We are going to move next month.", "ru": "В следующем месяце мы собираемся переехать." }, "troubles": ["pron-th"], "topics": ["time"] },
+    { "id": "gym", "en": "gym", "ipa": "dʒɪm", "pos": "noun", "ru": ["спортзал"], "example": { "en": "I go to the gym on Tuesday.", "ru": "Я хожу в спортзал по вторникам." }, "topics": ["plans"] },
+    { "id": "class", "en": "class", "ipa": "klæs", "pos": "noun", "ru": ["занятие", "класс"], "example": { "en": "I have an English class on Friday.", "ru": "В пятницу у меня урок английского." }, "topics": ["school"] },
+    { "id": "course", "en": "course", "ipa": "kɔːrs", "pos": "noun", "ru": ["курс"], "example": { "en": "I am going to take an English course.", "ru": "Я собираюсь пойти на курс английского." }, "topics": ["school"] },
+    { "id": "message", "en": "message", "ipa": "ˈmesɪdʒ", "pos": "noun", "ru": ["сообщение"], "example": { "en": "I sent you a message.", "ru": "Я отправил вам сообщение." }, "topics": ["things"] },
+    { "id": "tonight", "en": "tonight", "ipa": "təˈnaɪt", "pos": "adv", "ru": ["сегодня вечером", "сегодня ночью"], "example": { "en": "What are you going to do tonight?", "ru": "Что вы собираетесь делать сегодня вечером?" }, "topics": ["time"] },
+    { "id": "next", "en": "next", "ipa": "nekst", "pos": "det", "ru": ["следующий"], "example": { "en": "We are going to travel next week.", "ru": "На следующей неделе мы собираемся поехать." }, "note": "Next week, next month, next Monday — без предлога перед next.", "topics": ["time"] },
+    { "id": "soon", "en": "soon", "ipa": "suːn", "pos": "adv", "ru": ["скоро"], "example": { "en": "I am going to call you soon.", "ru": "Скоро я вам позвоню." }, "topics": ["time"] },
+    { "id": "maybe", "en": "maybe", "ipa": "ˈmeɪbi", "pos": "adv", "ru": ["может быть"], "example": { "en": "Maybe I am going to stay at home.", "ru": "Может быть, я останусь дома." }, "topics": ["adverbs"] },
+    { "id": "probably", "en": "probably", "ipa": "ˈprɑːbəbli", "pos": "adv", "ru": ["вероятно", "скорее всего"], "example": { "en": "We are probably going to rent a car.", "ru": "Мы, скорее всего, возьмём машину в аренду." }, "topics": ["adverbs"] },
+    { "id": "decide", "en": "decide", "ipa": "dɪˈsaɪd", "pos": "verb", "ru": ["решать"], "example": { "en": "I decided to learn English.", "ru": "Я решил выучить английский." }, "forms": { "third": "decides" }, "topics": ["verbs"] },
+    { "id": "hope", "en": "hope", "ipa": "hoʊp", "pos": "verb", "ru": ["надеяться"], "example": { "en": "I hope to see you soon.", "ru": "Надеюсь скоро вас увидеть." }, "forms": { "third": "hopes" }, "topics": ["verbs"] },
+    { "id": "prepare", "en": "prepare", "ipa": "prɪˈper", "pos": "verb", "ru": ["готовиться", "готовить"], "example": { "en": "I am going to prepare for the interview.", "ru": "Я собираюсь подготовиться к собеседованию." }, "forms": { "third": "prepares" }, "topics": ["verbs"] },
+    { "id": "learn", "en": "learn", "ipa": "lɝːn", "pos": "verb", "ru": ["учить", "учиться"], "example": { "en": "She is going to learn English.", "ru": "Она собирается учить английский." }, "forms": { "third": "learns" }, "topics": ["verbs"] },
+    { "id": "wash", "en": "wash", "ipa": "wɑːʃ", "pos": "verb", "ru": ["мыть", "стирать"], "example": { "en": "I am going to wash the car.", "ru": "Я собираюсь помыть машину." }, "forms": { "third": "washes" }, "topics": ["verbs"] },
+    { "id": "send", "en": "send", "ipa": "send", "pos": "verb", "ru": ["отправлять"], "example": { "en": "I am going to send a message.", "ru": "Я собираюсь отправить сообщение." }, "forms": { "third": "sends" }, "topics": ["verbs"] },
+    { "id": "rent", "en": "rent", "ipa": "rent", "pos": "verb", "ru": ["арендовать", "снимать"], "example": { "en": "We are going to rent a car.", "ru": "Мы собираемся взять машину в аренду." }, "forms": { "third": "rents" }, "topics": ["verbs"] },
+    { "id": "repair", "en": "repair", "ipa": "rɪˈper", "pos": "verb", "ru": ["чинить"], "example": { "en": "He is going to repair the door.", "ru": "Он собирается починить дверь." }, "forms": { "third": "repairs" }, "topics": ["verbs"] },
+    { "id": "excited", "en": "excited", "ipa": "ɪkˈsaɪtɪd", "pos": "adj", "ru": ["взволнованный (от радости)"], "example": { "en": "We are going to the sea tomorrow. I am excited.", "ru": "Завтра мы едем к морю. Я в предвкушении." }, "topics": ["adjectives"] },
+    { "id": "nervous", "en": "nervous", "ipa": "ˈnɝːvəs", "pos": "adj", "ru": ["нервничающий"], "example": { "en": "I have an interview and I am nervous.", "ru": "У меня собеседование, и я волнуюсь." }, "topics": ["adjectives"] },
+    { "id": "ready", "en": "ready", "ipa": "ˈredi", "pos": "adj", "ru": ["готовый"], "example": { "en": "I am ready.", "ru": "Я готов." }, "topics": ["adjectives"] },
+    { "id": "free", "en": "free", "ipa": "friː", "pos": "adj", "ru": ["свободный"], "example": { "en": "I am free on Saturday.", "ru": "В субботу я свободен." }, "note": "Free значит и «свободный (не занятый)», и «бесплатный».", "topics": ["adjectives"] },
+    { "id": "important", "en": "important", "ipa": "ɪmˈpɔːrtənt", "pos": "adj", "ru": ["важный"], "example": { "en": "The meeting is important.", "ru": "Встреча важная." }, "topics": ["adjectives"] },
+    { "id": "going-to", "en": "going to", "ipa": "ˈɡoʊɪŋ tuː", "pos": "phrase", "ru": ["собираться (делать)"], "example": { "en": "I am going to visit my friend.", "ru": "Я собираюсь навестить друга." }, "note": "В речи going to часто звучит как [ˈɡɑːnə], но писать нужно going to.", "topics": ["grammar"] }
+  ],
+  "texts": [
+    {
+      "id": "a2.u04.weekend-plans",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Plans for the weekend", "ru": "Планы на выходные" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Tom, what are you going to do this weekend?", "ru": "Том, что ты собираешься делать в эти выходные?" },
+        { "speaker": "tom", "en": "I am going to stay at home. I have a meeting on Monday and I am going to prepare for it.", "ru": "Я собираюсь остаться дома. В понедельник у меня встреча, и я буду к ней готовиться." },
+        { "speaker": "anna", "en": "Are you free on Saturday evening?", "ru": "Ты свободен в субботу вечером?" },
+        { "speaker": "tom", "en": "Yes, I am. What is the plan?", "ru": "Да. А какой план?" },
+        { "speaker": "anna", "en": "We are having a party on Saturday. Do you want to come?", "ru": "В субботу у нас вечеринка. Хочешь прийти?" },
+        { "speaker": "tom", "en": "Sure! What time?", "ru": "Конечно! Во сколько?" },
+        { "speaker": "anna", "en": "At seven. We are going to cook pizza.", "ru": "В семь. Мы собираемся готовить пиццу." },
+        { "speaker": "tom", "en": "Great! I am going to buy some juice. See you on Saturday!", "ru": "Здорово! Я куплю сок. Увидимся в субботу!" }
+      ]
+    },
+    {
+      "id": "a2.u04.max-week",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "Max's busy week", "ru": "Занятая неделя Макса" },
+      "lines": [
+        { "en": "Max has a busy week. On Monday he has a meeting with his manager at ten. On Tuesday he is going to go to the gym.", "ru": "У Макса занятая неделя. В понедельник в десять у него встреча с менеджером. Во вторник он собирается пойти в спортзал." },
+        { "en": "On Thursday he has an appointment with the dentist. He is nervous, but he is ready. On Friday he is going to prepare for an interview.", "ru": "В четверг он записан к стоматологу. Он нервничает, но готов. В пятницу он собирается готовиться к собеседованию." },
+        { "en": "On Saturday Max and his sister are going to a wedding. They are excited. Next month Max is going to learn English on a course, and he hopes to travel abroad soon.", "ru": "В субботу Макс и его сестра идут на свадьбу. Они взволнованы. В следующем месяце Макс собирается учить английский на курсах и надеется скоро поехать за границу." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "a2.u04.l01",
+      "kind": "vocabulary",
+      "title": "События недели",
+      "exercises": [
+        { "id": "a2.u04.l01.e01", "type": "match_pairs", "pairs": [{ "en": "plan", "ru": "план" }, { "en": "calendar", "ru": "календарь" }, { "en": "meeting", "ru": "встреча" }, { "en": "appointment", "ru": "приём" }, { "en": "interview", "ru": "собеседование" }], "hint": "Все слова из календаря.", "explanation": "Plan — план, calendar — календарь, meeting — встреча, appointment — приём, interview — собеседование." },
+        { "id": "a2.u04.l01.e02", "type": "match_pairs", "pairs": [{ "en": "wedding", "ru": "свадьба" }, { "en": "dentist", "ru": "стоматолог" }, { "en": "month", "ru": "месяц" }, { "en": "gym", "ru": "спортзал" }, { "en": "class", "ru": "занятие" }], "hint": "Gym и class — места и события.", "explanation": "Wedding — свадьба, dentist — стоматолог, month — месяц, gym — спортзал, class — занятие." },
+        { "id": "a2.u04.l01.e03", "type": "match_pairs", "pairs": [{ "en": "course", "ru": "курс" }, { "en": "message", "ru": "сообщение" }, { "en": "tonight", "ru": "сегодня вечером" }, { "en": "next", "ru": "следующий" }, { "en": "soon", "ru": "скоро" }], "hint": "Три слова про время.", "explanation": "Course — курс, message — сообщение, tonight — сегодня вечером, next — следующий, soon — скоро." },
+        { "id": "a2.u04.l01.e04", "type": "translate_choice", "from": "ru", "text": "собеседование", "options": ["interview", "meeting", "appointment"], "answer": 0, "hint": "Встреча с работодателем.", "explanation": "Interview [ˈɪntɚvjuː] — «собеседование»." },
+        { "id": "a2.u04.l01.e05", "type": "translate_choice", "from": "en", "text": "appointment", "options": ["приём, запись", "приглашение", "встреча друзей"], "answer": 0, "hint": "К врачу или в офис.", "explanation": "Appointment — запись на приём к врачу или в организацию." },
+        { "id": "a2.u04.l01.e06", "type": "fill_gap", "text": "I have a ___ on Monday at ten.", "translation": "В понедельник в десять у меня встреча.", "answers": [["meeting"]], "options": ["meeting", "wedding", "month"], "hint": "Деловое событие.", "explanation": "Правильно: I have a meeting on Monday." },
+        { "id": "a2.u04.l01.e07", "type": "fill_gap", "text": "I have an ___ with the dentist.", "translation": "Я записан к стоматологу.", "answers": [["appointment"]], "options": ["appointment", "interview", "course"], "hint": "Запись на время.", "explanation": "Правильно: I have an appointment with the dentist." },
+        { "id": "a2.u04.l01.e08", "type": "fill_gap", "text": "We are going to a ___ on Saturday.", "translation": "В субботу мы идём на свадьбу.", "answers": [["wedding"]], "options": ["wedding", "message", "calendar"], "hint": "Праздник пары.", "explanation": "Правильно: We are going to a wedding on Saturday." },
+        { "id": "a2.u04.l01.e09", "type": "fill_gap", "text": "I am going to take an English ___.", "translation": "Я собираюсь пойти на курс английского.", "answers": [["course"]], "options": ["course", "month", "gym"], "hint": "Занятия несколько недель.", "explanation": "Правильно: I am going to take an English course." },
+        { "id": "a2.u04.l01.e10", "type": "listen_choice", "audio": "I have an interview on Friday.", "question": "Что вы слышите?", "options": ["I have an interview on Friday.", "I have a meeting on Friday.", "I have an appointment on Friday."], "answer": 0, "hint": "Первое слово после have an.", "explanation": "I have an interview on Friday — «в пятницу у меня собеседование»." },
+        { "id": "a2.u04.l01.e11", "type": "listen_dictation", "text": "We are going to a wedding on Saturday.", "hint": "Восемь слов.", "explanation": "We are going to a wedding on Saturday — «в субботу мы идём на свадьбу»." },
+        { "id": "a2.u04.l01.e12", "type": "type_translation", "from": "ru", "text": "календарь", "answers": ["calendar"], "hint": "Восемь букв.", "explanation": "Calendar [ˈkæləndɚ] — «календарь»." },
+        { "id": "a2.u04.l01.e13", "type": "word_stress", "word": "appointment", "syllables": ["ap", "point", "ment"], "stress": 1, "hint": "Ударение на втором слоге.", "explanation": "ap-POINT-ment — ударение на второй слог." },
+        { "id": "a2.u04.l01.e14", "type": "word_stress", "word": "calendar", "syllables": ["cal", "en", "dar"], "stress": 0, "hint": "Первый слог.", "explanation": "CAL-en-dar — ударение на первый слог." }
+      ]
+    },
+    {
+      "id": "a2.u04.l02",
+      "kind": "vocabulary",
+      "title": "Что собираемся сделать",
+      "exercises": [
+        { "id": "a2.u04.l02.e01", "type": "match_pairs", "pairs": [{ "en": "decide", "ru": "решать" }, { "en": "hope", "ru": "надеяться" }, { "en": "prepare", "ru": "готовиться" }, { "en": "learn", "ru": "учить" }, { "en": "wash", "ru": "мыть" }], "hint": "Все глаголы про планы.", "explanation": "Decide — решать, hope — надеяться, prepare — готовиться, learn — учить, wash — мыть." },
+        { "id": "a2.u04.l02.e02", "type": "match_pairs", "pairs": [{ "en": "send", "ru": "отправлять" }, { "en": "rent", "ru": "арендовать" }, { "en": "repair", "ru": "чинить" }, { "en": "plan", "ru": "планировать" }, { "en": "maybe", "ru": "может быть" }], "hint": "Plan как глагол — «планировать».", "explanation": "Send — отправлять, rent — арендовать, repair — чинить, plan — планировать, maybe — может быть." },
+        { "id": "a2.u04.l02.e03", "type": "match_pairs", "pairs": [{ "en": "probably", "ru": "скорее всего" }, { "en": "excited", "ru": "взволнованный" }, { "en": "nervous", "ru": "нервничающий" }, { "en": "ready", "ru": "готовый" }, { "en": "free", "ru": "свободный" }], "hint": "Excited — от радости, nervous — от тревоги.", "explanation": "Probably — скорее всего, excited — взволнованный, nervous — нервничающий, ready — готовый, free — свободный." },
+        { "id": "a2.u04.l02.e04", "type": "match_pairs", "pairs": [{ "en": "important", "ru": "важный" }, { "en": "going to", "ru": "собираться" }, { "en": "tonight", "ru": "сегодня вечером" }, { "en": "next week", "ru": "на следующей неделе" }, { "en": "soon", "ru": "скоро" }], "hint": "Слова про будущее.", "explanation": "Important — важный, going to — собираться, tonight — сегодня вечером, next week — на следующей неделе, soon — скоро." },
+        { "id": "a2.u04.l02.e05", "type": "translate_choice", "from": "ru", "text": "Я надеюсь скоро вас увидеть.", "options": ["I hope to see you soon.", "I decide to see you soon.", "I plan to see you ago."], "answer": 0, "hint": "Надеяться — hope.", "explanation": "Правильно: I hope to see you soon." },
+        { "id": "a2.u04.l02.e06", "type": "translate_choice", "from": "en", "text": "I have an interview and I am nervous.", "options": ["У меня собеседование, и я волнуюсь.", "У меня собеседование, и я рад.", "У меня собеседование завтра."], "answer": 0, "hint": "Nervous — тревожный.", "explanation": "I have an interview and I am nervous — «у меня собеседование, и я волнуюсь»." },
+        { "id": "a2.u04.l02.e07", "type": "fill_gap", "text": "I am going to ___ the car.", "translation": "Я собираюсь помыть машину.", "answers": [["wash"]], "options": ["wash", "send", "rent"], "hint": "Машину делают чистой.", "explanation": "Правильно: I am going to wash the car.", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l02.e08", "type": "fill_gap", "text": "We are going to ___ a car.", "translation": "Мы собираемся взять машину в аренду.", "answers": [["rent"]], "options": ["rent", "wash", "learn"], "hint": "Берут на время за деньги.", "explanation": "Правильно: We are going to rent a car.", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l02.e09", "type": "fill_gap", "text": "I decided to ___ English.", "translation": "Я решил выучить английский.", "answers": [["learn"]], "options": ["learn", "repair", "send"], "hint": "Учат язык.", "explanation": "Правильно: I decided to learn English." },
+        { "id": "a2.u04.l02.e10", "type": "fill_gap", "text": "I am ___ on Saturday. Let's meet.", "translation": "В субботу я свободен. Давайте встретимся.", "answers": [["free"]], "options": ["free", "nervous", "excited"], "hint": "Не занят.", "explanation": "Правильно: I am free on Saturday." },
+        { "id": "a2.u04.l02.e11", "type": "listen_choice", "audio": "We are going to the sea. I am excited.", "question": "Что вы слышите?", "options": ["We are going to the sea. I am excited.", "We are going to the sea. I am nervous.", "We are going to the sea. I am ready."], "answer": 0, "hint": "Радостное ожидание.", "explanation": "We are going to the sea. I am excited — «мы едем к морю, я в предвкушении»." },
+        { "id": "a2.u04.l02.e12", "type": "listen_dictation", "text": "I am going to send a message.", "hint": "Шесть слов.", "explanation": "I am going to send a message — «я собираюсь отправить сообщение»." },
+        { "id": "a2.u04.l02.e13", "type": "type_translation", "from": "ru", "text": "готовый", "answers": ["ready"], "hint": "Пять букв.", "explanation": "Ready [ˈredi] — «готовый»." },
+        { "id": "a2.u04.l02.e14", "type": "minimal_pair", "pair": [{ "en": "hope", "ipa": "hoʊp" }, { "en": "hop", "ipa": "hɑːp" }], "say": 0, "hint": "Двойной звук в слове.", "explanation": "Hope [hoʊp] — «надеяться», hop [hɑːp] — «прыгать».", "troubles": ["pron-vowels"] }
+      ]
+    },
+    {
+      "id": "a2.u04.l03",
+      "kind": "grammar",
+      "title": "Going to: что я собираюсь сделать",
+      "grammar": "a2.going-to",
+      "exercises": [
+        { "id": "a2.u04.l03.e01", "type": "fill_gap", "text": "I ___ going to visit my friend.", "translation": "Я собираюсь навестить друга.", "answers": [["am"]], "options": ["am", "is", "are"], "hint": "С I.", "explanation": "Правильно: I am going to visit my friend.", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l03.e02", "type": "fill_gap", "text": "She ___ going to learn English.", "translation": "Она собирается учить английский.", "answers": [["is"]], "options": ["is", "am", "are"], "hint": "С she.", "explanation": "Правильно: She is going to learn English.", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l03.e03", "type": "fill_gap", "text": "They ___ going to rent a car.", "translation": "Они собираются взять машину в аренду.", "answers": [["are"]], "options": ["are", "is", "am"], "hint": "С they.", "explanation": "Правильно: They are going to rent a car.", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l03.e04", "type": "fill_gap", "text": "I am going to ___ the door.", "translation": "Я собираюсь починить дверь.", "answers": [["repair"]], "options": ["repair", "repairs", "repairing"], "hint": "После going to — начальная форма.", "explanation": "Правильно: I am going to repair the door.", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l03.e05", "type": "fill_gap", "text": "We are ___ going to rent a car.", "translation": "Мы не собираемся брать машину в аренду.", "answers": [["not"]], "options": ["not", "no", "don't"], "hint": "Отрицание после be.", "explanation": "Правильно: We are not going to rent a car.", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l03.e06", "type": "fill_gap", "text": "___ you going to book a hotel?", "translation": "Вы собираетесь бронировать отель?", "answers": [["Are"]], "options": ["Are", "Do", "Is"], "hint": "Вопрос с you.", "explanation": "Правильно: Are you going to book a hotel?", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l03.e07", "type": "fill_gap", "text": "What are you going to ___ tonight?", "translation": "Что вы собираетесь делать сегодня вечером?", "answers": [["do"]], "options": ["do", "does", "doing"], "hint": "Начальная форма.", "explanation": "Правильно: What are you going to do tonight?", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l03.e08", "type": "error_correction", "text": "I going to visit my friend.", "wrong": "I going", "correction": "I am going", "options": ["I am going", "I is going", "I do going"], "hint": "Пропущен глагол be.", "explanation": "Правильно: I am going to visit my friend.", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l03.e09", "type": "error_correction", "text": "She is going to visits her sister.", "wrong": "visits", "correction": "visit", "options": ["visit", "visiting", "visited"], "hint": "После going to — без окончания.", "explanation": "Правильно: She is going to visit her sister.", "grammar": ["a2.going-to"], "troubles": ["tenses"] },
+        { "id": "a2.u04.l03.e10", "type": "error_correction", "text": "Are you going visit your friend?", "wrong": "going visit", "correction": "going to visit", "options": ["going to visit", "going visiting", "go to visit"], "hint": "Пропущено слово.", "explanation": "Правильно: Are you going to visit your friend?", "grammar": ["a2.going-to"], "troubles": ["word-order"] },
+        { "id": "a2.u04.l03.e11", "type": "tiles", "from": "ru", "text": "Завтра я собираюсь помыть машину.", "answer": "Tomorrow I am going to wash the car.", "distractors": ["is", "washing"], "difficulty": 2, "hint": "Образец: Am going to + wash.", "explanation": "Правильно: Tomorrow I am going to wash the car.", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l03.e12", "type": "tiles", "from": "ru", "text": "Что ты собираешься делать?", "answer": "What are you going to do?", "distractors": ["does", "doing"], "hint": "Образец: What + are + you.", "explanation": "Правильно: What are you going to do?", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l03.e13", "type": "type_translation", "from": "ru", "text": "Мы собираемся пойти на курс английского.", "answers": ["We are going to take an English course."], "difficulty": 2, "hint": "Take a course — «пойти на курс».", "explanation": "Правильно: We are going to take an English course.", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l03.e14", "type": "type_translation", "from": "ru", "text": "Вы собираетесь отправить сообщение?", "answers": ["Are you going to send a message?"], "difficulty": 2, "hint": "Образец: Are you going to + send.", "explanation": "Правильно: Are you going to send a message?", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l03.e15", "type": "speak_answer", "question": "What are you going to do tomorrow?", "questionRu": "Что вы собираетесь делать завтра? Ответьте: I am going to…", "keywords": [["\\bI am going to\\b", "\\bI'm going to\\b"], ["\\b(work|study|visit|learn|clean|cook|wash|buy|meet|stay|go|read|watch|play|travel|call|send)\\b"]], "minKeywords": 2, "samples": ["I am going to work.", "I am going to visit my friend."], "difficulty": 3, "hint": "Образец: I am going to…", "explanation": "Ответ: I am going to visit my friend.", "grammar": ["a2.going-to"] }
+      ]
+    },
+    {
+      "id": "a2.u04.l04",
+      "kind": "grammar",
+      "title": "Договорённости: I am meeting…",
+      "grammar": "a2.present-continuous-future",
+      "exercises": [
+        { "id": "a2.u04.l04.e01", "type": "fill_gap", "text": "I am ___ my friend tomorrow.", "translation": "Завтра я встречаюсь с другом.", "answers": [["meeting"]], "options": ["meeting", "meet", "meets"], "hint": "После am — форма на -ing.", "explanation": "Правильно: I am meeting my friend tomorrow.", "grammar": ["a2.present-continuous-future"] },
+        { "id": "a2.u04.l04.e02", "type": "fill_gap", "text": "We are ___ to Rome on Friday.", "translation": "В пятницу мы летим в Рим.", "answers": [["flying"]], "options": ["flying", "fly", "flies"], "hint": "Форма на -ing.", "explanation": "Правильно: We are flying to Rome on Friday.", "grammar": ["a2.present-continuous-future"] },
+        { "id": "a2.u04.l04.e03", "type": "fill_gap", "text": "She ___ having a meeting at ten.", "translation": "В десять у неё встреча.", "answers": [["is"]], "options": ["is", "are", "am"], "hint": "С she.", "explanation": "Правильно: She is having a meeting at ten.", "grammar": ["a2.present-continuous-future"] },
+        { "id": "a2.u04.l04.e04", "type": "fill_gap", "text": "They ___ having a party on Saturday.", "translation": "В субботу у них вечеринка.", "answers": [["are"]], "options": ["are", "is", "am"], "hint": "С they.", "explanation": "Правильно: They are having a party on Saturday.", "grammar": ["a2.present-continuous-future"] },
+        { "id": "a2.u04.l04.e05", "type": "fill_gap", "text": "I am ___ the dentist on Thursday.", "translation": "В четверг я иду к стоматологу.", "answers": [["seeing"]], "options": ["seeing", "see", "saw"], "hint": "See the dentist — «идти к врачу».", "explanation": "Правильно: I am seeing the dentist on Thursday.", "grammar": ["a2.present-continuous-future"] },
+        { "id": "a2.u04.l04.e06", "type": "error_correction", "text": "I am visit my friend tomorrow.", "wrong": "visit", "correction": "visiting", "options": ["visiting", "visits", "visited"], "hint": "Форма на -ing.", "explanation": "Правильно: I am visiting my friend tomorrow.", "grammar": ["a2.present-continuous-future"], "troubles": ["tenses"] },
+        { "id": "a2.u04.l04.e07", "type": "error_correction", "text": "We are fly to Rome on Friday.", "wrong": "fly", "correction": "flying", "options": ["flying", "flew", "flies"], "hint": "Форма на -ing.", "explanation": "Правильно: We are flying to Rome on Friday.", "grammar": ["a2.present-continuous-future"], "troubles": ["tenses"] },
+        { "id": "a2.u04.l04.e08", "type": "error_correction", "text": "She having a meeting at ten.", "wrong": "She having", "correction": "She is having", "options": ["She is having", "She are having", "She does having"], "hint": "Пропущено слово.", "explanation": "Правильно: She is having a meeting at ten.", "grammar": ["a2.present-continuous-future"] },
+        { "id": "a2.u04.l04.e09", "type": "tiles", "from": "ru", "text": "В пятницу мы идём на свадьбу.", "answer": "We are going to a wedding on Friday.", "distractors": ["go", "in"], "hint": "Are going to + место.", "explanation": "Правильно: We are going to a wedding on Friday.", "grammar": ["a2.present-continuous-future"] },
+        { "id": "a2.u04.l04.e10", "type": "tiles", "from": "ru", "text": "Завтра я встречаюсь с другом.", "answer": "I am meeting my friend tomorrow.", "distractors": ["meet", "is"], "hint": "Образец: Am + meeting.", "explanation": "Правильно: I am meeting my friend tomorrow.", "grammar": ["a2.present-continuous-future"] },
+        { "id": "a2.u04.l04.e11", "type": "type_translation", "from": "ru", "text": "В субботу у нас вечеринка.", "answers": ["We are having a party on Saturday."], "hint": "Образец: Having a party.", "explanation": "Правильно: We are having a party on Saturday.", "grammar": ["a2.present-continuous-future"] },
+        { "id": "a2.u04.l04.e12", "type": "type_translation", "from": "ru", "text": "Что вы делаете в субботу?", "answers": ["What are you doing on Saturday?"], "hint": "Образец: Are you doing.", "explanation": "Правильно: What are you doing on Saturday?", "grammar": ["a2.present-continuous-future"] },
+        { "id": "a2.u04.l04.e13", "type": "listen_choice", "audio": "I am meeting my friend at six.", "question": "Что вы слышите?", "options": ["I am meeting my friend at six.", "I met my friend at six.", "I meet my friend at six."], "answer": 0, "hint": "Am + глагол на -ing.", "explanation": "I am meeting my friend at six — «я встречаюсь с другом в шесть».", "grammar": ["a2.present-continuous-future"] },
+        { "id": "a2.u04.l04.e14", "type": "speak_answer", "question": "What are you doing on Saturday?", "questionRu": "Что вы делаете в субботу? Ответьте: I am meeting… I am going to…", "keywords": [["\\bI am\\b", "\\bI'm\\b"], ["\\b[a-z]+ing\\b"]], "minKeywords": 2, "samples": ["I am meeting my friend.", "I am working on Saturday."], "difficulty": 3, "hint": "I am + глагол с -ing.", "explanation": "Ответ: I am meeting my friend.", "grammar": ["a2.present-continuous-future"] }
+      ]
+    },
+    {
+      "id": "a2.u04.l05",
+      "kind": "grammar",
+      "title": "Next, tonight, in two days",
+      "grammar": "a2.future-time",
+      "exercises": [
+        { "id": "a2.u04.l05.e01", "type": "fill_gap", "text": "We are going to move ___ month.", "translation": "В следующем месяце мы собираемся переехать.", "answers": [["next"]], "options": ["next", "last", "ago"], "hint": "Слово «следующий».", "explanation": "Правильно: We are going to move next month.", "grammar": ["a2.future-time"] },
+        { "id": "a2.u04.l05.e02", "type": "fill_gap", "text": "The flight is ___ two days.", "translation": "Рейс через два дня.", "answers": [["in"]], "options": ["in", "after", "at"], "hint": "«Через» — особый предлог.", "explanation": "Правильно: The flight is in two days.", "grammar": ["a2.future-time"], "troubles": ["prepositions"] },
+        { "id": "a2.u04.l05.e03", "type": "fill_gap", "text": "I am going to call you ___.", "translation": "Скоро я вам позвоню.", "answers": [["soon"]], "options": ["soon", "ago", "last"], "hint": "Слово «скоро».", "explanation": "Правильно: I am going to call you soon.", "grammar": ["a2.future-time"] },
+        { "id": "a2.u04.l05.e04", "type": "fill_gap", "text": "___ I am going to stay at home.", "translation": "Может быть, я останусь дома.", "answers": [["Maybe"]], "options": ["Maybe", "Probably", "Soon"], "hint": "В начале предложения.", "explanation": "Правильно: Maybe I am going to stay at home.", "grammar": ["a2.future-time"] },
+        { "id": "a2.u04.l05.e05", "type": "fill_gap", "text": "We are ___ going to rent a car.", "translation": "Мы, скорее всего, возьмём машину в аренду.", "answers": [["probably"]], "options": ["probably", "maybe", "next"], "hint": "Между be и going to.", "explanation": "Правильно: We are probably going to rent a car.", "grammar": ["a2.future-time"] },
+        { "id": "a2.u04.l05.e06", "type": "fill_gap", "text": "What are you going to do ___?", "translation": "Что вы собираетесь делать сегодня вечером?", "answers": [["tonight"]], "options": ["tonight", "ago", "yesterday"], "hint": "О вечере сегодня.", "explanation": "Правильно: What are you going to do tonight?", "grammar": ["a2.future-time"] },
+        { "id": "a2.u04.l05.e07", "type": "error_correction", "text": "I am going to visit him in next week.", "wrong": "in next week", "correction": "next week", "options": ["next week", "on next week", "at next week"], "hint": "Предлог лишний.", "explanation": "Правильно: I am going to visit him next week.", "grammar": ["a2.future-time"], "troubles": ["prepositions"] },
+        { "id": "a2.u04.l05.e08", "type": "error_correction", "text": "We are going to travel after two days.", "wrong": "after", "correction": "in", "options": ["in", "at", "on"], "hint": "«Через» — другой предлог.", "explanation": "Правильно: We are going to travel in two days.", "grammar": ["a2.future-time"], "troubles": ["prepositions"] },
+        { "id": "a2.u04.l05.e09", "type": "error_correction", "text": "I am going to start on next Monday.", "wrong": "on next Monday", "correction": "next Monday", "options": ["next Monday", "in next Monday", "at next Monday"], "hint": "Предлог лишний.", "explanation": "Правильно: I am going to start next Monday.", "grammar": ["a2.future-time"], "troubles": ["prepositions"] },
+        { "id": "a2.u04.l05.e10", "type": "tiles", "from": "ru", "text": "Рейс через три дня.", "answer": "The flight is in three days.", "distractors": ["after", "are"], "hint": "In + срок.", "explanation": "Правильно: The flight is in three days.", "grammar": ["a2.future-time"] },
+        { "id": "a2.u04.l05.e11", "type": "type_translation", "from": "ru", "text": "На следующей неделе я собираюсь поехать в Рим.", "answers": ["Next week I am going to travel to Rome.", "I am going to travel to Rome next week."], "difficulty": 3, "hint": "Next week без предлога.", "explanation": "Правильно: Next week I am going to travel to Rome.", "grammar": ["a2.future-time"] },
+        { "id": "a2.u04.l05.e12", "type": "listen_choice", "audio": "We are going to travel next month.", "question": "Что вы слышите?", "options": ["We are going to travel next month.", "We travelled last month.", "We are going to travel in a month."], "answer": 0, "hint": "Будущее и слово next.", "explanation": "We are going to travel next month — «в следующем месяце мы собираемся поехать».", "grammar": ["a2.future-time"] },
+        { "id": "a2.u04.l05.e13", "type": "listen_dictation", "text": "I am going to start soon.", "hint": "Шесть слов.", "explanation": "I am going to start soon — «я скоро начну»." },
+        { "id": "a2.u04.l05.e14", "type": "speak_answer", "question": "What are you going to do next weekend?", "questionRu": "Что вы собираетесь делать в следующие выходные? Ответьте: I am going to… Maybe I am going to…", "keywords": [["\\b(I am going to|I'm going to|maybe)\\b"], ["\\b(stay|visit|meet|go|work|travel|clean|cook|learn|study|play|rest|read|watch|buy)\\b"]], "minKeywords": 2, "samples": ["Maybe I am going to visit my friend.", "I am going to stay at home."], "difficulty": 3, "hint": "Образец: Maybe I am going to…", "explanation": "Ответ: Maybe I am going to stay at home.", "grammar": ["a2.future-time"] }
+      ]
+    },
+    {
+      "id": "a2.u04.l06",
+      "kind": "listening",
+      "title": "Планы на выходные",
+      "textId": "a2.u04.weekend-plans",
+      "exercises": [
+        {
+          "id": "a2.u04.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "a2.u04.weekend-plans",
+          "hint": "Слушайте, что Том собирается делать и куда его зовут.",
+          "explanation": "Том собирается остаться дома и готовиться к встрече в понедельник. Анна зовёт его на вечеринку в субботу в семь.",
+          "questions": [
+            { "kind": "mcq", "question": "Когда у Тома встреча?", "options": ["on Monday", "on Friday", "on Saturday"], "answer": 0, "explanation": "Том говорит: I have a meeting on Monday." },
+            { "kind": "mcq", "question": "Во сколько вечеринка?", "options": ["at seven", "at six", "at ten"], "answer": 0, "explanation": "Анна говорит: At seven." },
+            { "kind": "mcq", "question": "Что Том собирается купить?", "options": ["some juice", "some pizza", "a gift"], "answer": 0, "explanation": "Том говорит: I am going to buy some juice." },
+            { "kind": "tfn", "statement": "Tom is free on Saturday evening.", "answer": "true", "explanation": "Том говорит: Yes, I am." },
+            { "kind": "tfn", "statement": "They are going to cook chicken.", "answer": "false", "explanation": "Анна говорит: We are going to cook pizza." },
+            { "kind": "tfn", "statement": "Anna's party is at her house.", "answer": "not_given", "explanation": "Где проходит вечеринка, не сказано." }
+          ]
+        },
+        { "id": "a2.u04.l06.e02", "type": "listen_choice", "audio": "What are you going to do this weekend?", "question": "Что вы слышите?", "options": ["What are you going to do this weekend?", "What did you do last weekend?", "What do you do at the weekend?"], "answer": 0, "hint": "Вопрос о планах.", "explanation": "What are you going to do this weekend? — «Что вы собираетесь делать в эти выходные?»", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l06.e03", "type": "listen_dictation", "text": "We are having a party on Saturday.", "hint": "Семь слов.", "explanation": "We are having a party on Saturday — «в субботу у нас вечеринка»." },
+        { "id": "a2.u04.l06.e04", "type": "listen_dictation", "text": "I am going to buy some juice.", "hint": "Семь слов.", "explanation": "I am going to buy some juice — «я куплю немного сока»." },
+        { "id": "a2.u04.l06.e05", "type": "fill_gap", "text": "Tom is going to ___ for the meeting.", "translation": "Том собирается готовиться к встрече.", "answers": [["prepare"]], "options": ["prepare", "prepares", "preparing"], "hint": "После going to — начальная форма.", "explanation": "Правильно: Tom is going to prepare for the meeting.", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l06.e06", "type": "fill_gap", "text": "Are you ___ on Saturday evening?", "translation": "Вы свободны в субботу вечером?", "answers": [["free"]], "options": ["free", "next", "ready"], "hint": "Не заняты.", "explanation": "Правильно: Are you free on Saturday evening?" },
+        { "id": "a2.u04.l06.e07", "type": "tiles", "from": "ru", "text": "Хотите прийти на вечеринку?", "answer": "Do you want to come to the party?", "distractors": ["are", "going"], "hint": "Образец: Do you want to + come.", "explanation": "Правильно: Do you want to come to the party?", "grammar": ["a1.invitations"] },
+        { "id": "a2.u04.l06.e08", "type": "type_translation", "from": "ru", "text": "Что ты собираешься делать в эти выходные?", "answers": ["What are you going to do this weekend?"], "difficulty": 2, "hint": "Образец: What + are + you + going to.", "explanation": "Правильно: What are you going to do this weekend?", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l06.e09", "type": "speak_answer", "question": "Are you free on Saturday?", "questionRu": "Вы свободны в субботу? Ответьте: Yes, I am. или No, I am busy.", "keywords": [["\\b(yes|no)\\b"], ["\\b(I am|I'm|busy|free)\\b"]], "minKeywords": 2, "samples": ["Yes, I am.", "No, I am busy."], "difficulty": 3, "hint": "Образец: Yes, I am. / No, I am busy.", "explanation": "Короткий ответ: Yes, I am. или No, I am busy." },
+        { "id": "a2.u04.l06.e10", "type": "speak_repeat", "text": "I am going to stay at home and prepare for the meeting.", "hint": "Говорите плавно.", "explanation": "Prepare [prɪˈper]: ударение на втором слоге." }
+      ]
+    },
+    {
+      "id": "a2.u04.l07",
+      "kind": "writing",
+      "title": "Занятая неделя Макса",
+      "textId": "a2.u04.max-week",
+      "exercises": [
+        {
+          "id": "a2.u04.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "a2.u04.max-week",
+          "hint": "Следите за днями недели.",
+          "explanation": "У Макса на неделе встреча, спортзал, стоматолог, собеседование и свадьба. В следующем месяце он собирается учить английский.",
+          "questions": [
+            { "kind": "mcq", "question": "Когда у Макса встреча с менеджером?", "options": ["on Monday", "on Tuesday", "on Friday"], "answer": 0, "explanation": "В тексте: On Monday he has a meeting with his manager." },
+            { "kind": "mcq", "question": "Куда он идёт в четверг?", "options": ["to the dentist", "to the gym", "to a wedding"], "answer": 0, "explanation": "В тексте: On Thursday he has an appointment with the dentist." },
+            { "kind": "mcq", "question": "Что Макс собирается делать в следующем месяце?", "options": ["learn English on a course", "go to a wedding", "repair the car"], "answer": 0, "explanation": "В тексте: Next month Max is going to learn English on a course." },
+            { "kind": "tfn", "statement": "Max is nervous.", "answer": "true", "explanation": "В тексте: He is nervous, but he is ready." },
+            { "kind": "tfn", "statement": "Max is going to a wedding with his manager.", "answer": "false", "explanation": "В тексте: Max and his sister are going to a wedding." },
+            { "kind": "tfn", "statement": "Max has an interview on Wednesday.", "answer": "not_given", "explanation": "Собеседование в пятницу, а в среду планов не названо." }
+          ]
+        },
+        { "id": "a2.u04.l07.e02", "type": "translate_choice", "from": "en", "text": "He hopes to travel abroad soon.", "options": ["Он надеется скоро поехать за границу.", "Он решил поехать за границу.", "Он вернулся из-за границы."], "answer": 0, "hint": "Hope — «надеяться».", "explanation": "Правильно: He hopes to travel abroad soon." },
+        { "id": "a2.u04.l07.e03", "type": "fill_gap", "text": "On Tuesday he is going to ___ to the gym.", "translation": "Во вторник он собирается пойти в спортзал.", "answers": [["go"]], "options": ["go", "goes", "going"], "hint": "После going to — начальная форма.", "explanation": "Правильно: He is going to go to the gym.", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l07.e04", "type": "fill_gap", "text": "The wedding is on Saturday. They are ___.", "translation": "Свадьба в субботу. Они взволнованы.", "answers": [["excited"]], "options": ["excited", "nervous", "tired"], "hint": "Радостное ожидание.", "explanation": "Правильно: The wedding is on Saturday. They are excited." },
+        { "id": "a2.u04.l07.e05", "type": "type_translation", "from": "ru", "text": "В пятницу он собирается готовиться к собеседованию.", "answers": ["On Friday he is going to prepare for an interview."], "difficulty": 3, "hint": "Образец: Going to + prepare.", "explanation": "Правильно: On Friday he is going to prepare for an interview.", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l07.e06", "type": "speak_describe", "picture": { "emoji": "📅" }, "situation": "Расскажите о своих планах на эту неделю: два-три события и когда они.", "keywords": [["\\b(I am going to|I'm going to|I am|I have)\\b"], ["\\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|tomorrow|tonight|next)\\b"]], "minKeywords": 2, "samples": ["On Monday I have a meeting. On Friday I am going to meet my friend. I am going to stay at home on Sunday."], "difficulty": 3, "hint": "Образец: On Monday I have… I am going to…", "explanation": "Назовите день и событие: On Monday I have a meeting.", "grammar": ["a2.going-to"] },
+        { "id": "a2.u04.l07.e07", "type": "speak_answer", "question": "What are you going to do next month?", "questionRu": "Что вы собираетесь делать в следующем месяце? Ответьте: I am going to…", "keywords": [["\\b(I am going to|I'm going to|maybe|probably)\\b"], ["\\b(learn|travel|visit|move|work|study|buy|start|rent|take|go|repair|see)\\b"]], "minKeywords": 2, "samples": ["I am going to learn English.", "Maybe I am going to travel."], "difficulty": 3, "hint": "Образец: I am going to…", "explanation": "Ответ: I am going to learn English.", "grammar": ["a2.going-to"] },
+        {
+          "id": "a2.u04.l07.e08",
+          "type": "write",
+          "task": "Напишите о своих планах на неделю или на следующий месяц: что у вас уже запланировано и что вы собираетесь сделать. Например: On Monday I have a meeting. I am going to learn English next month. I hope to travel soon.",
+          "minWords": 40,
+          "maxWords": 110,
+          "criteria": [
+            { "id": "going", "label": "Есть going to", "patterns": ["\\b(am|is|are|'m|'s|'re) going to\\b"] },
+            { "id": "time", "label": "Есть слова времени: tomorrow, next, tonight, in two days", "patterns": ["\\b(tomorrow|tonight|next (week|month|year|monday|friday|saturday|sunday)|soon|in (two|three|four|five|ten) (days|weeks|months)|on (monday|tuesday|wednesday|thursday|friday|saturday|sunday))\\b"] },
+            { "id": "event", "label": "Названа встреча, поездка или другое событие", "patterns": ["\\b(meeting|appointment|interview|wedding|party|trip|course|class|gym|dentist|flight)\\b"] },
+            { "id": "attitude", "label": "Есть hope, maybe, probably или чувства", "patterns": ["\\b(hope|maybe|probably|excited|nervous|ready|important)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\bI going to\\b", "message": "Перед going to нужен am: I am going to." },
+            { "pattern": "\\bgoing to [a-z]+s\\b", "message": "После going to глагол без -s: going to visit." },
+            { "pattern": "\\bin next (week|month|year)\\b", "message": "Перед next предлог не нужен: next week." },
+            { "pattern": "\\bafter (two|three|four|five|ten) (days|weeks|months)\\b", "message": "«Через два дня» — in two days." }
+          ],
+          "samples": [
+            "This week I have many plans. On Monday I have a meeting at ten. On Wednesday I am going to the gym. On Friday I am going to meet my friend. Next month I am going to learn English on a course. I am excited and I hope to travel soon.",
+            "Tomorrow I have an appointment with the dentist. I am nervous. On Saturday we are going to a wedding. Maybe I am going to buy a gift. Next week I am going to prepare for an interview. It is important for me."
+          ],
+          "difficulty": 3,
+          "hint": "План: ближайшие дни → следующая неделя → чувства и надежды.",
+          "explanation": "Для планов используйте I am going to + глагол, для договорённостей — Present Continuous. Слова next, tonight, soon показывают время.",
+          "grammar": ["a2.going-to", "a2.present-continuous-future", "a2.future-time"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "a2.u04.test.e01", "type": "match_pairs", "pairs": [{ "en": "meeting", "ru": "встреча" }, { "en": "wedding", "ru": "свадьба" }, { "en": "dentist", "ru": "стоматолог" }, { "en": "interview", "ru": "собеседование" }, { "en": "course", "ru": "курс" }], "hint": "События недели.", "explanation": "Meeting — встреча, wedding — свадьба, dentist — стоматолог, interview — собеседование, course — курс." },
+      { "id": "a2.u04.test.e02", "type": "translate_choice", "from": "ru", "text": "нервничающий", "options": ["nervous", "ready", "free"], "answer": 0, "hint": "Волнение перед важным событием.", "explanation": "Nervous [ˈnɝːvəs] — «нервничающий»." },
+      { "id": "a2.u04.test.e03", "type": "fill_gap", "text": "I ___ going to learn English.", "translation": "Я собираюсь учить английский.", "answers": [["am"]], "options": ["am", "is", "are"], "hint": "С I.", "explanation": "Правильно: I am going to learn English.", "grammar": ["a2.going-to"] },
+      { "id": "a2.u04.test.e04", "type": "fill_gap", "text": "She is going to ___ her sister.", "translation": "Она собирается навестить сестру.", "answers": [["visit"]], "options": ["visit", "visits", "visiting"], "hint": "Без окончания.", "explanation": "Правильно: She is going to visit her sister.", "grammar": ["a2.going-to"] },
+      { "id": "a2.u04.test.e05", "type": "fill_gap", "text": "___ you going to book a hotel?", "translation": "Вы собираетесь бронировать отель?", "answers": [["Are"]], "options": ["Are", "Do", "Is"], "hint": "Вопрос с you.", "explanation": "Правильно: Are you going to book a hotel?", "grammar": ["a2.going-to"] },
+      { "id": "a2.u04.test.e06", "type": "fill_gap", "text": "We are ___ to Rome on Friday.", "translation": "В пятницу мы летим в Рим.", "answers": [["flying"]], "options": ["flying", "fly", "flew"], "hint": "Форма на -ing.", "explanation": "Правильно: We are flying to Rome on Friday.", "grammar": ["a2.present-continuous-future"] },
+      { "id": "a2.u04.test.e07", "type": "fill_gap", "text": "The flight is ___ two days.", "translation": "Рейс через два дня.", "answers": [["in"]], "options": ["in", "after", "at"], "hint": "«Через».", "explanation": "Правильно: The flight is in two days.", "grammar": ["a2.future-time"] },
+      { "id": "a2.u04.test.e08", "type": "fill_gap", "text": "We are going to move ___ month.", "translation": "В следующем месяце мы переезжаем.", "answers": [["next"]], "options": ["next", "last", "ago"], "hint": "Слово «следующий».", "explanation": "Правильно: We are going to move next month.", "grammar": ["a2.future-time"] },
+      { "id": "a2.u04.test.e09", "type": "error_correction", "text": "I going to visit my friend.", "wrong": "I going", "correction": "I am going", "options": ["I am going", "I is going", "I do going"], "hint": "Пропущено слово.", "explanation": "Правильно: I am going to visit my friend.", "grammar": ["a2.going-to"] },
+      { "id": "a2.u04.test.e10", "type": "error_correction", "text": "I am going to visit him in next week.", "wrong": "in next week", "correction": "next week", "options": ["next week", "on next week", "at next week"], "hint": "Предлог лишний.", "explanation": "Правильно: I am going to visit him next week.", "grammar": ["a2.future-time"] },
+      { "id": "a2.u04.test.e11", "type": "error_correction", "text": "She is going to visits her sister.", "wrong": "visits", "correction": "visit", "options": ["visit", "visiting", "visited"], "hint": "Без окончания.", "explanation": "Правильно: She is going to visit her sister.", "grammar": ["a2.going-to"] },
+      { "id": "a2.u04.test.e12", "type": "listen_choice", "audio": "We are going to rent a car next week.", "question": "Что вы слышите?", "options": ["We are going to rent a car next week.", "We rented a car last week.", "We are going to buy a car."], "answer": 0, "hint": "Будущее и аренда.", "explanation": "Правильно: We are going to rent a car next week.", "grammar": ["a2.going-to"] },
+      { "id": "a2.u04.test.e13", "type": "listen_dictation", "text": "I have a meeting on Monday.", "hint": "Шесть слов.", "explanation": "I have a meeting on Monday — «в понедельник у меня встреча»." },
+      { "id": "a2.u04.test.e14", "type": "tiles", "from": "ru", "text": "Что вы собираетесь делать сегодня вечером?", "answer": "What are you going to do tonight?", "distractors": ["does", "doing"], "difficulty": 2, "hint": "Образец: What + are + you.", "explanation": "Правильно: What are you going to do tonight?", "grammar": ["a2.going-to"] },
+      { "id": "a2.u04.test.e15", "type": "type_translation", "from": "ru", "text": "Завтра я встречаюсь с другом.", "answers": ["I am meeting my friend tomorrow."], "difficulty": 2, "hint": "Образец: Am + meeting.", "explanation": "Правильно: I am meeting my friend tomorrow.", "grammar": ["a2.present-continuous-future"] },
+      { "id": "a2.u04.test.e16", "type": "speak_repeat", "text": "I am going to prepare for the interview tonight.", "hint": "Говорите плавно.", "explanation": "Interview [ˈɪntɚvjuː]: ударение на первый слог." }
+    ]
+  }
+}
