@@ -1,5 +1,6 @@
 import { render, screen, userEvent } from '@testing-library/react-native';
 
+import { getLexicon } from '@/core/content';
 import { setDb } from '@/core/storage';
 import type { Db } from '@/core/storage/db';
 import { migrate } from '@/core/storage/migrations';
@@ -69,15 +70,15 @@ async function completeLesson(id: string) {
 
 describe('Path', () => {
   it('points to the next unfinished lesson and marks done ones', async () => {
-    await completeLesson('a1.u01.l01');
+    await completeLesson('pa1.u01.l01');
     await render(<PathScreen />);
-    expect(screen.getByText('Я, ты, он: am, is, are', { exact: false })).toBeOnTheScreen();
+    expect(screen.getByText('Слова на буквы N–Z', { exact: false })).toBeOnTheScreen();
     expect(
-      screen.getByRole('button', { name: /Урок 1: Привет и пока\. Слова, пройден/ }),
+      screen.getByRole('button', { name: /Урок 1: Слова на буквы A–M\. Слова, пройден/ }),
     ).toBeOnTheScreen();
     expect(screen.getByRole('button', { name: /Урок 2: .* следующий/ })).toBeOnTheScreen();
     await userEvent.setup().press(screen.getByRole('button', { name: 'Начать' }));
-    expect(mockRouter.push).toHaveBeenCalledWith('/lesson/a1.u01.l02');
+    expect(mockRouter.push).toHaveBeenCalledWith('/lesson/pa1.u01.l02');
   });
 });
 
@@ -93,10 +94,10 @@ describe('Today', () => {
   it('ticks a lesson done today', async () => {
     await render(<TodayScreen />);
     await screen.findByText('План дня · 0 из 2');
-    await completeLesson('a1.u01.l01');
+    await completeLesson('pa1.u01.l01');
     expect(await screen.findByText('План дня · 1 из 2')).toBeOnTheScreen();
     expect(
-      screen.getByRole('button', { name: /Привет и пока\. Новый урок · 5 мин\. Сделано\./ }),
+      screen.getByRole('button', { name: /Слова на буквы A–M\. Новый урок · \d+ мин\. Сделано\./ }),
     ).toBeOnTheScreen();
   });
 });
@@ -105,7 +106,7 @@ describe('Dictionary', () => {
   it('searches in Russian and filters by status', async () => {
     const user = userEvent.setup();
     await render(<DictionaryScreen />);
-    expect(await screen.findByText('Найдено: 84')).toBeOnTheScreen();
+    expect(await screen.findByText(`Найдено: ${getLexicon().size}`)).toBeOnTheScreen();
     await user.type(screen.getByLabelText('Поиск по словарю'), 'врач');
     expect(await screen.findByText('Найдено: 1')).toBeOnTheScreen();
     expect(screen.getByRole('button', { name: /^doctor — врач/ })).toBeOnTheScreen();

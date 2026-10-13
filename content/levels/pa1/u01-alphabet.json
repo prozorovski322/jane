@@ -1,0 +1,240 @@
+{
+  "id": "pa1.u01",
+  "level": "PA1",
+  "order": 1,
+  "title": { "en": "The alphabet", "ru": "Алфавит" },
+  "description": "Знакомимся с английским алфавитом: 26 букв, их названия и по одному слову на каждую букву. Учимся диктовать слова по буквам.",
+  "goals": [
+    "Могу назвать буквы английского алфавита и отличить гласные от согласных.",
+    "Могу назвать слово на каждую букву и узнать его по картинке.",
+    "Могу продиктовать короткое слово по буквам.",
+    "Могу написать несколько английских слов."
+  ],
+  "grammar": ["pa1.alphabet"],
+  "troubles": ["pron-vowels"],
+  "words": [
+    { "id": "letter", "en": "letter", "ipa": "ˈletɚ", "pos": "noun", "ru": ["буква", "письмо"], "example": { "en": "A, B, C, D: letters.", "ru": "A, B, C, D — буквы." }, "note": "Letter — и «буква», и «письмо»." },
+    { "id": "alphabet", "en": "alphabet", "ipa": "ˈælfəbet", "pos": "noun", "ru": ["алфавит"], "example": { "en": "A, B, C, D … Z: alphabet.", "ru": "A, B, C, D … Z — алфавит." }, "note": "Ударение на первый слог: AL-pha-bet." },
+    { "id": "vowel", "en": "vowel", "ipa": "ˈvaʊəl", "pos": "noun", "ru": ["гласная"], "example": { "en": "A, E, I, O, U: vowels.", "ru": "A, E, I, O, U: гласные." } },
+    { "id": "consonant", "en": "consonant", "ipa": "ˈkɑːnsənənt", "pos": "noun", "ru": ["согласная"], "example": { "en": "B, C, D: consonants.", "ru": "B, C, D: согласные." } },
+    { "id": "apple", "en": "apple", "ipa": "ˈæpəl", "pos": "noun", "ru": ["яблоко"], "example": { "en": "A: apple.", "ru": "A — яблоко." }, "picture": { "emoji": "🍎" }, "topics": ["alphabet"] },
+    { "id": "ball", "en": "ball", "ipa": "bɔːl", "pos": "noun", "ru": ["мяч"], "example": { "en": "B: ball.", "ru": "B — мяч." }, "picture": { "emoji": "⚽" }, "topics": ["alphabet"] },
+    { "id": "cat", "en": "cat", "ipa": "kæt", "pos": "noun", "ru": ["кошка", "кот"], "example": { "en": "C: cat.", "ru": "C — кошка." }, "picture": { "emoji": "🐱" }, "topics": ["alphabet", "animals"] },
+    { "id": "dog", "en": "dog", "ipa": "dɔːɡ", "pos": "noun", "ru": ["собака"], "example": { "en": "D: dog.", "ru": "D — собака." }, "picture": { "emoji": "🐶" }, "topics": ["alphabet", "animals"] },
+    { "id": "egg", "en": "egg", "ipa": "eɡ", "pos": "noun", "ru": ["яйцо"], "example": { "en": "E: egg.", "ru": "E — яйцо." }, "picture": { "emoji": "🥚" }, "topics": ["alphabet"] },
+    { "id": "fish", "en": "fish", "ipa": "fɪʃ", "pos": "noun", "ru": ["рыба"], "example": { "en": "F: fish.", "ru": "F — рыба." }, "picture": { "emoji": "🐟" }, "topics": ["alphabet", "animals"] },
+    { "id": "goat", "en": "goat", "ipa": "ɡoʊt", "pos": "noun", "ru": ["коза", "козёл"], "example": { "en": "G: goat.", "ru": "G — коза." }, "picture": { "emoji": "🐐" }, "topics": ["alphabet", "animals"] },
+    { "id": "hat", "en": "hat", "ipa": "hæt", "pos": "noun", "ru": ["шляпа"], "example": { "en": "H: hat.", "ru": "H — шляпа." }, "picture": { "emoji": "🎩" }, "topics": ["alphabet"] },
+    { "id": "ice", "en": "ice", "ipa": "aɪs", "pos": "noun", "ru": ["лёд"], "example": { "en": "I: ice.", "ru": "I — лёд." }, "picture": { "emoji": "🧊" }, "topics": ["alphabet"] },
+    { "id": "jacket", "en": "jacket", "ipa": "ˈdʒækɪt", "pos": "noun", "ru": ["куртка", "пиджак"], "example": { "en": "J: jacket.", "ru": "J — куртка." }, "picture": { "emoji": "🧥" }, "topics": ["alphabet"] },
+    { "id": "key", "en": "key", "ipa": "kiː", "pos": "noun", "ru": ["ключ"], "example": { "en": "K: key.", "ru": "K — ключ." }, "note": "Слово пишется key, а читается «ки:». Буква K здесь читается как «к».", "picture": { "emoji": "🔑" }, "topics": ["alphabet"] },
+    { "id": "lemon", "en": "lemon", "ipa": "ˈlemən", "pos": "noun", "ru": ["лимон"], "example": { "en": "L: lemon.", "ru": "L — лимон." }, "picture": { "emoji": "🍋" }, "topics": ["alphabet"] },
+    { "id": "milk", "en": "milk", "ipa": "mɪlk", "pos": "noun", "ru": ["молоко"], "example": { "en": "M: milk.", "ru": "M — молоко." }, "picture": { "emoji": "🥛" }, "topics": ["alphabet"] },
+    { "id": "nose", "en": "nose", "ipa": "noʊz", "pos": "noun", "ru": ["нос"], "example": { "en": "N: nose.", "ru": "N — нос." }, "note": "Конечная e не читается, но делает гласную долгой: «ноуз».", "picture": { "emoji": "👃" }, "topics": ["alphabet"] },
+    { "id": "orange", "en": "orange", "ipa": "ˈɔːrɪndʒ", "pos": "noun", "ru": ["апельсин"], "example": { "en": "O: orange.", "ru": "O — апельсин." }, "note": "Orange — ещё и «оранжевый» (цвет).", "picture": { "emoji": "🍊" }, "topics": ["alphabet"] },
+    { "id": "pen", "en": "pen", "ipa": "pen", "pos": "noun", "ru": ["ручка"], "example": { "en": "P: pen.", "ru": "P — ручка." }, "picture": { "emoji": "🖊️" }, "topics": ["alphabet"] },
+    { "id": "queen", "en": "queen", "ipa": "kwiːn", "pos": "noun", "ru": ["королева"], "example": { "en": "Q: queen.", "ru": "Q — королева." }, "note": "После Q почти всегда идёт U: queen — «квин».", "picture": { "emoji": "👑" }, "topics": ["alphabet"] },
+    { "id": "rain", "en": "rain", "ipa": "reɪn", "pos": "noun", "ru": ["дождь"], "example": { "en": "R: rain.", "ru": "R — дождь." }, "picture": { "emoji": "🌧️" }, "topics": ["alphabet"] },
+    { "id": "sun", "en": "sun", "ipa": "sʌn", "pos": "noun", "ru": ["солнце"], "example": { "en": "S: sun.", "ru": "S — солнце." }, "picture": { "emoji": "☀️" }, "topics": ["alphabet"] },
+    { "id": "tree", "en": "tree", "ipa": "triː", "pos": "noun", "ru": ["дерево"], "example": { "en": "T: tree.", "ru": "T — дерево." }, "picture": { "emoji": "🌳" }, "topics": ["alphabet"] },
+    { "id": "umbrella", "en": "umbrella", "ipa": "ʌmˈbrelə", "pos": "noun", "ru": ["зонт"], "example": { "en": "U: umbrella.", "ru": "U — зонт." }, "note": "Ударение на второй слог: um-BREL-la.", "picture": { "emoji": "☂️" }, "topics": ["alphabet"] },
+    { "id": "van", "en": "van", "ipa": "væn", "pos": "noun", "ru": ["фургон"], "example": { "en": "V: van.", "ru": "V — фургон." }, "picture": { "emoji": "🚐" }, "topics": ["alphabet"] },
+    { "id": "water", "en": "water", "ipa": "ˈwɑːtɚ", "pos": "noun", "ru": ["вода"], "example": { "en": "W: water.", "ru": "W — вода." }, "picture": { "emoji": "💧" }, "topics": ["alphabet"] },
+    { "id": "box", "en": "box", "ipa": "bɑːks", "pos": "noun", "ru": ["коробка"], "example": { "en": "X: box.", "ru": "X — коробка." }, "note": "Слов на X мало, в конце слова X читается «кс»: box.", "picture": { "emoji": "📦" }, "topics": ["alphabet"] },
+    { "id": "yellow", "en": "yellow", "ipa": "ˈjeloʊ", "pos": "adj", "ru": ["жёлтый"], "example": { "en": "Y: yellow.", "ru": "Y — жёлтый." }, "picture": { "emoji": "🟡" }, "topics": ["alphabet", "colors"] },
+    { "id": "zebra", "en": "zebra", "ipa": "ˈziːbrə", "pos": "noun", "ru": ["зебра"], "example": { "en": "Z: zebra.", "ru": "Z — зебра." }, "picture": { "emoji": "🦓" }, "topics": ["alphabet", "animals"] }
+  ],
+  "texts": [
+    {
+      "id": "pa1.u01.spell",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Spell and say", "ru": "Назови по буквам и скажи слово" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "C, A, T.", "ru": "Си, эй, ти." },
+        { "speaker": "tom", "en": "Cat!", "ru": "Cat — кошка!" },
+        { "speaker": "anna", "en": "D, O, G.", "ru": "Ди, оу, джи." },
+        { "speaker": "tom", "en": "Dog!", "ru": "Dog — собака!" },
+        { "speaker": "anna", "en": "F, I, S, H.", "ru": "Эф, ай, эс, эйч." },
+        { "speaker": "tom", "en": "Fish!", "ru": "Fish — рыба!" },
+        { "speaker": "anna", "en": "Z, E, B, R, A.", "ru": "Зи, и:, би, а:р, эй." },
+        { "speaker": "tom", "en": "Zebra!", "ru": "Zebra — зебра!" }
+      ]
+    },
+    {
+      "id": "pa1.u01.chart",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "Alphabet chart", "ru": "Азбука в картинках" },
+      "lines": [
+        { "en": "A: apple. B: ball. C: cat. D: dog. E: egg.", "ru": "A — яблоко. B — мяч. C — кошка. D — собака. E — яйцо." },
+        { "en": "F: fish. G: goat. H: hat. I: ice. J: jacket.", "ru": "F — рыба. G — коза. H — шляпа. I — лёд. J — куртка." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "pa1.u01.l01",
+      "kind": "vocabulary",
+      "title": "Слова на буквы A–M",
+      "grammar": "pa1.alphabet",
+      "exercises": [
+        { "id": "pa1.u01.l01.e01", "type": "picture_choice", "mode": "picture-to-word", "word": "apple", "distractors": ["egg", "ball"], "hint": "Этот фрукт можно съесть.", "explanation": "Apple — «яблоко». Слово начинается с буквы A, которая называется «эй»." },
+        { "id": "pa1.u01.l01.e02", "type": "picture_choice", "mode": "word-to-picture", "word": "cat", "distractors": ["dog", "fish"], "hint": "Это домашнее животное мяукает.", "explanation": "Cat — «кошка». Буква C здесь читается как «к»." },
+        { "id": "pa1.u01.l01.e03", "type": "translate_choice", "from": "en", "text": "dog", "options": ["собака", "кошка", "рыба"], "answer": 0, "hint": "Это лает.", "explanation": "Dog — «собака». Звук в начале — [d], как в русском «дом»." },
+        { "id": "pa1.u01.l01.e04", "type": "match_pairs", "pairs": [{ "en": "apple", "ru": "яблоко" }, { "en": "ball", "ru": "мяч" }, { "en": "egg", "ru": "яйцо" }, { "en": "hat", "ru": "шляпа" }, { "en": "key", "ru": "ключ" }], "hint": "Начните со слов, которые знаете по картинкам.", "explanation": "Слова запоминаются вместе с буквой: A — apple, B — ball, E — egg, H — hat, K — key.", "grammar": ["pa1.alphabet"] },
+        { "id": "pa1.u01.l01.e05", "type": "listen_choice", "audio": "goat", "question": "Какое слово вы слышите?", "options": ["goat", "hat", "cat"], "answer": 0, "hint": "Начинается со звука [ɡ], как в русском «гол».", "explanation": "Goat — «коза». В начале слышно [ɡ], потом долгое «оу»." },
+        { "id": "pa1.u01.l01.e06", "type": "listen_choice", "audio": "ball", "question": "С какой буквы начинается слово?", "options": ["B", "D", "P"], "answer": 0, "hint": "Слово начинается со звука [b].", "explanation": "Ball начинается с B [biː]. Слово-пример к букве B.", "grammar": ["pa1.alphabet"] },
+        { "id": "pa1.u01.l01.e07", "type": "translate_choice", "from": "ru", "text": "яйцо", "options": ["egg", "ice", "key"], "answer": 0, "hint": "Первая буква — E.", "explanation": "Egg — «яйцо». Egg и ice начинаются с гласных букв E и I." },
+        { "id": "pa1.u01.l01.e08", "type": "type_translation", "from": "ru", "text": "рыба", "answers": ["fish"], "hint": "Четыре буквы: f, i, s, h.", "explanation": "Fish — «рыба». Буквы sh вместе читаются как «ш»." },
+        { "id": "pa1.u01.l01.e09", "type": "fill_gap", "text": "C, A, ___: cat.", "translation": "Си, эй, ти: cat.", "answers": [["T"]], "options": ["T", "D", "P"], "hint": "Последний звук в слове cat — [t].", "explanation": "Слово cat пишется C, A, T. Звук [t] в конце — буква T.", "grammar": ["pa1.alphabet"] },
+        { "id": "pa1.u01.l01.e10", "type": "listen_dictation", "text": "fish", "hint": "Слово из четырёх букв.", "explanation": "Fish — «рыба». Пишется f-i-s-h: sh читается как «ш»." },
+        { "id": "pa1.u01.l01.e11", "type": "match_pairs", "pairs": [{ "en": "jacket", "ru": "куртка" }, { "en": "lemon", "ru": "лимон" }, { "en": "milk", "ru": "молоко" }, { "en": "goat", "ru": "коза" }, { "en": "ice", "ru": "лёд" }], "hint": "Jacket и lemon похожи на русские слова.", "explanation": "Буквы и слова: J — jacket, L — lemon, M — milk, G — goat, I — ice." },
+        { "id": "pa1.u01.l01.e12", "type": "speak_repeat", "text": "apple", "hint": "Ударение на первый слог: AP-ple.", "explanation": "Apple — «эпл». Первый звук [æ] — между «а» и «э»." }
+      ]
+    },
+    {
+      "id": "pa1.u01.l02",
+      "kind": "vocabulary",
+      "title": "Слова на буквы N–Z",
+      "grammar": "pa1.alphabet",
+      "exercises": [
+        { "id": "pa1.u01.l02.e01", "type": "picture_choice", "mode": "picture-to-word", "word": "sun", "distractors": ["rain", "tree"], "hint": "Оно светит днём.", "explanation": "Sun — «солнце». Звук [ʌ] короткий, как неясное «а»." },
+        { "id": "pa1.u01.l02.e02", "type": "picture_choice", "mode": "word-to-picture", "word": "umbrella", "distractors": ["rain", "water"], "hint": "Берут с собой в дождь.", "explanation": "Umbrella — «зонт». Ударение на второй слог: um-BREL-la." },
+        { "id": "pa1.u01.l02.e03", "type": "translate_choice", "from": "en", "text": "orange", "options": ["апельсин", "лимон", "яблоко"], "answer": 0, "hint": "Этот фрукт оранжевый.", "explanation": "Orange — «апельсин» и «оранжевый». Читается «орэндж».", "troubles": ["false-friends"] },
+        { "id": "pa1.u01.l02.e04", "type": "match_pairs", "pairs": [{ "en": "nose", "ru": "нос" }, { "en": "pen", "ru": "ручка" }, { "en": "queen", "ru": "королева" }, { "en": "tree", "ru": "дерево" }, { "en": "water", "ru": "вода" }], "hint": "Tree и water — слова из природы.", "explanation": "Буквы и слова: N — nose, P — pen, Q — queen, T — tree, W — water." },
+        { "id": "pa1.u01.l02.e05", "type": "listen_choice", "audio": "van", "question": "Какое слово вы слышите?", "options": ["van", "cat", "pen"], "answer": 0, "hint": "Начинается со звука [v], верхние зубы касаются нижней губы.", "explanation": "Van — «фургон». Звук [v] — как русское «в»." },
+        { "id": "pa1.u01.l02.e06", "type": "listen_choice", "audio": "zebra", "question": "С какой буквы начинается слово?", "options": ["Z", "S", "X"], "answer": 0, "hint": "Это звонкий звук, как «з».", "explanation": "Zebra начинается с Z [ziː] — звонкого «з».", "grammar": ["pa1.alphabet"] },
+        { "id": "pa1.u01.l02.e07", "type": "translate_choice", "from": "ru", "text": "жёлтый", "options": ["yellow", "orange", "umbrella"], "answer": 0, "hint": "Слово начинается с Y.", "explanation": "Yellow — «жёлтый». Y в начале слова читается как «й»." },
+        { "id": "pa1.u01.l02.e08", "type": "type_translation", "from": "ru", "text": "дождь", "answers": ["rain"], "hint": "Четыре буквы, первая — R.", "explanation": "Rain — «дождь». Буквы ai вместе читаются как «эй»." },
+        { "id": "pa1.u01.l02.e09", "type": "fill_gap", "text": "S, U, ___: sun.", "translation": "Эс, ю:, эн: sun.", "answers": [["N"]], "options": ["N", "M", "V"], "hint": "Последний звук в слове sun — [n].", "explanation": "Слово sun пишется S, U, N.", "grammar": ["pa1.alphabet"] },
+        { "id": "pa1.u01.l02.e10", "type": "listen_dictation", "text": "queen", "hint": "Пять букв, вторая — U.", "explanation": "Queen — «королева». После Q всегда идёт U: qu читается «кв»." },
+        { "id": "pa1.u01.l02.e11", "type": "match_pairs", "pairs": [{ "en": "box", "ru": "коробка" }, { "en": "van", "ru": "фургон" }, { "en": "zebra", "ru": "зебра" }, { "en": "yellow", "ru": "жёлтый" }, { "en": "umbrella", "ru": "зонт" }], "hint": "X, V, Z, Y, U — последние буквы алфавита.", "explanation": "Буквы и слова: X — box, V — van, Z — zebra, Y — yellow, U — umbrella." },
+        { "id": "pa1.u01.l02.e12", "type": "speak_repeat", "text": "umbrella", "hint": "Ударение на втором слоге.", "explanation": "Um-BREL-la: гласный первого слога короткий, ударный второй — громче и длиннее." }
+      ]
+    },
+    {
+      "id": "pa1.u01.l03",
+      "kind": "pronunciation",
+      "title": "Названия букв и гласные",
+      "grammar": "pa1.alphabet",
+      "exercises": [
+        { "id": "pa1.u01.l03.e01", "type": "match_pairs", "pairs": [{ "en": "A", "ru": "эй" }, { "en": "E", "ru": "и:" }, { "en": "I", "ru": "ай" }, { "en": "O", "ru": "оу" }, { "en": "U", "ru": "ю:" }], "hint": "Названия английских гласных не совпадают с русскими.", "explanation": "A — «эй», E — «и:», I — «ай», O — «оу», U — «ю:». Это все пять гласных.", "grammar": ["pa1.alphabet"], "troubles": ["pron-vowels"] },
+        { "id": "pa1.u01.l03.e02", "type": "translate_choice", "from": "en", "text": "vowel", "options": ["гласная", "согласная", "буква"], "answer": 0, "hint": "A, E, I, O, U — это они.", "explanation": "Vowel — «гласная». Таких букв в английском пять: A, E, I, O, U." },
+        { "id": "pa1.u01.l03.e03", "type": "translate_choice", "from": "en", "text": "consonant", "options": ["согласная", "гласная", "алфавит"], "answer": 0, "hint": "Слово похоже на русское «консонанс».", "explanation": "Consonant — «согласная». Согласных букв в английском 21." },
+        { "id": "pa1.u01.l03.e04", "type": "fill_gap", "text": "A, E, I, O, U: ___.", "translation": "A, E, I, O, U: гласные.", "answers": [["vowels"]], "options": ["vowels", "consonants", "letters"], "hint": "Эти пять букв — особые.", "explanation": "A, E, I, O, U — vowels, гласные. Остальные буквы — consonants.", "grammar": ["pa1.alphabet"] },
+        { "id": "pa1.u01.l03.e05", "type": "fill_gap", "text": "B, C, D: ___.", "translation": "B, C, D: согласные.", "answers": [["consonants"]], "options": ["vowels", "consonants", "letters"], "hint": "Это не гласные.", "explanation": "B, C, D — consonants, согласные.", "grammar": ["pa1.alphabet"] },
+        { "id": "pa1.u01.l03.e06", "type": "listen_choice", "audio": "E", "question": "Какую букву вы слышите?", "options": ["E", "I", "A"], "answer": 0, "hint": "Звучит как долгое «и:».", "explanation": "E называется [iː] «и:». Буква I — это «ай», A — «эй».", "grammar": ["pa1.alphabet"], "troubles": ["pron-vowels"] },
+        { "id": "pa1.u01.l03.e07", "type": "listen_choice", "audio": "I", "question": "Какую букву вы слышите?", "options": ["I", "E", "O"], "answer": 0, "hint": "Звучит как «ай».", "explanation": "I называется [aɪ] «ай». Не путайте с E [iː] «и:».", "grammar": ["pa1.alphabet"], "troubles": ["pron-vowels"] },
+        { "id": "pa1.u01.l03.e08", "type": "minimal_pair", "pair": [{ "en": "cat", "ipa": "kæt" }, { "en": "cut", "ipa": "kʌt" }], "say": 0, "hint": "Один гласный открытый, другой — короткое неясное «а».", "explanation": "[æ] в cat — между «а» и «э». [ʌ] в cut — короткое «а». В русском такой пары нет.", "troubles": ["pron-vowels"] },
+        { "id": "pa1.u01.l03.e09", "type": "minimal_pair", "pair": [{ "en": "sit", "ipa": "sɪt" }, { "en": "seat", "ipa": "siːt" }], "say": 1, "hint": "Один гласный короткий, другой долгий.", "explanation": "[ɪ] в sit — короткий, [iː] в seat — долгий. Долготу в русском не различают, поэтому слова легко спутать.", "troubles": ["pron-vowels"] },
+        { "id": "pa1.u01.l03.e10", "type": "word_stress", "word": "umbrella", "syllables": ["um", "brel", "la"], "stress": 1, "hint": "Ударный слог — второй.", "explanation": "um-BREL-la — ударение на второй слог." },
+        { "id": "pa1.u01.l03.e11", "type": "word_stress", "word": "alphabet", "syllables": ["al", "pha", "bet"], "stress": 0, "hint": "Ударный слог — первый.", "explanation": "AL-pha-bet — ударение на первый слог. По-русски «алфавИт», по-английски иначе." },
+        { "id": "pa1.u01.l03.e12", "type": "word_stress", "word": "zebra", "syllables": ["ze", "bra"], "stress": 0, "hint": "В двусложных названиях животных ударение чаще на первом слоге.", "explanation": "ZE-bra — ударение на первый слог. Первый звук — [z], как «з»." },
+        { "id": "pa1.u01.l03.e13", "type": "speak_repeat", "text": "A, B, C, D, E.", "hint": "Называйте каждую букву отдельно, с короткой паузой.", "explanation": "A — «эй», B — «би», C — «си», D — «ди», E — «и:». Гласные A и E звучат иначе, чем в русском.", "grammar": ["pa1.alphabet"] }
+      ]
+    },
+    {
+      "id": "pa1.u01.l04",
+      "kind": "listening",
+      "title": "Диктуем по буквам",
+      "textId": "pa1.u01.spell",
+      "exercises": [
+        {
+          "id": "pa1.u01.l04.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "pa1.u01.spell",
+          "hint": "Анна называет буквы, а Том отвечает словом.",
+          "explanation": "Анна диктует слова cat, dog, fish и zebra по буквам, а Том каждый раз называет слово целиком.",
+          "questions": [
+            { "kind": "mcq", "question": "Какое слово Анна диктует первым?", "options": ["cat", "dog", "fish"], "answer": 0, "explanation": "Анна говорит: C, A, T. Том отвечает: Cat!" },
+            { "kind": "mcq", "question": "Какое слово Анна диктует последним?", "options": ["zebra", "fish", "dog"], "answer": 0, "explanation": "Последнее слово — Z, E, B, R, A: zebra." },
+            { "kind": "tfn", "statement": "D, O, G: dog.", "answer": "true", "explanation": "Анна говорит D, O, G, а Том отвечает: Dog!" },
+            { "kind": "tfn", "statement": "F, I, S, H: egg.", "answer": "false", "explanation": "F, I, S, H — это fish, «рыба», а не egg." },
+            { "kind": "tfn", "statement": "H, A, T: hat.", "answer": "not_given", "explanation": "Слова hat в диалоге нет." }
+          ]
+        },
+        { "id": "pa1.u01.l04.e02", "type": "listen_dictation", "text": "C, A, T.", "answers": ["cat", "C A T", "CAT"], "hint": "Запишите буквы подряд или слово целиком.", "explanation": "C, A, T — это cat. Диктанты по буквам — полезный навык: так называют имена и адреса." },
+        { "id": "pa1.u01.l04.e03", "type": "listen_dictation", "text": "D, O, G.", "answers": ["dog", "D O G", "DOG"], "hint": "Три буквы — одно слово.", "explanation": "D, O, G — dog, «собака». Буква O называется «оу»." },
+        { "id": "pa1.u01.l04.e04", "type": "listen_dictation", "text": "key", "hint": "Слово из трёх букв.", "explanation": "Key — «ключ». Читается «ки:», хотя пишется k-e-y." },
+        { "id": "pa1.u01.l04.e05", "type": "listen_choice", "audio": "H, A, T.", "question": "Какое слово продиктовали?", "options": ["hat", "cat", "ball"], "answer": 0, "hint": "Первая буква — H, «эйч».", "explanation": "H, A, T — hat, «шляпа». Hat и cat отличаются только первой буквой." },
+        { "id": "pa1.u01.l04.e06", "type": "listen_choice", "audio": "P, E, N.", "question": "Какое слово продиктовали?", "options": ["pen", "egg", "ball"], "answer": 0, "hint": "Три буквы: P, E, N.", "explanation": "P, E, N — pen, «ручка». Буква E внутри слова читается коротко: [e]." },
+        { "id": "pa1.u01.l04.e07", "type": "fill_gap", "text": "Z, E, B, R, A: ___.", "translation": "Зи, и:, би, а:р, эй: зебра.", "answers": [["zebra"]], "options": ["zebra", "goat", "fish"], "hint": "Первая буква — Z.", "explanation": "Z, E, B, R, A — zebra. Слово начинается с Z [ziː].", "grammar": ["pa1.alphabet"] },
+        { "id": "pa1.u01.l04.e08", "type": "type_translation", "from": "ru", "text": "кошка", "answers": ["cat"], "hint": "Три буквы: c, a, t.", "explanation": "Cat — «кошка». Диктуется: C, A, T." },
+        { "id": "pa1.u01.l04.e09", "type": "speak_repeat", "text": "F, I, S, H.", "hint": "Говорите буквы по очереди: эф, ай, эс, эйч.", "explanation": "F, I, S, H — fish. Буква I называется «ай», H — «эйч».", "grammar": ["pa1.alphabet"] },
+        { "id": "pa1.u01.l04.e10", "type": "speak_repeat", "text": "Cat! Dog! Fish!", "hint": "Три коротких слова, каждое отдельно.", "explanation": "Cat, dog, fish — слова из первой диктовки. Гласные короткие: [æ], [ɔː], [ɪ].", "troubles": ["pron-vowels"] }
+      ]
+    },
+    {
+      "id": "pa1.u01.l05",
+      "kind": "reading",
+      "title": "Азбука в картинках",
+      "textId": "pa1.u01.chart",
+      "exercises": [
+        {
+          "id": "pa1.u01.l05.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "pa1.u01.chart",
+          "hint": "Каждая запись — буква и слово на неё.",
+          "explanation": "В таблице десять букв: от A до J, к каждой — по слову.",
+          "questions": [
+            { "kind": "mcq", "question": "Какое слово на букву D?", "options": ["dog", "egg", "ball"], "answer": 0, "explanation": "В таблице написано: D: dog." },
+            { "kind": "mcq", "question": "Какое слово на букву J?", "options": ["jacket", "hat", "ice"], "answer": 0, "explanation": "В таблице написано: J: jacket." },
+            { "kind": "tfn", "statement": "C: cat.", "answer": "true", "explanation": "В таблице: C: cat." },
+            { "kind": "tfn", "statement": "G: fish.", "answer": "false", "explanation": "Fish — это F. На букву G — goat." },
+            { "kind": "tfn", "statement": "K: key.", "answer": "not_given", "explanation": "Таблица заканчивается буквой J. Буквы K в ней нет." }
+          ]
+        },
+        { "id": "pa1.u01.l05.e02", "type": "match_pairs", "pairs": [{ "en": "apple", "ru": "буква A" }, { "en": "ball", "ru": "буква B" }, { "en": "cat", "ru": "буква C" }, { "en": "dog", "ru": "буква D" }, { "en": "egg", "ru": "буква E" }], "hint": "Первая буква слова — это его буква в таблице.", "explanation": "В таблице: A — apple, B — ball, C — cat, D — dog, E — egg." },
+        { "id": "pa1.u01.l05.e03", "type": "fill_gap", "text": "I: ___.", "translation": "I — лёд.", "answers": [["ice"]], "options": ["ice", "egg", "key"], "hint": "Слово начинается с I.", "explanation": "I: ice — «лёд». Буква I в слове ice называется «ай».", "grammar": ["pa1.alphabet"] },
+        { "id": "pa1.u01.l05.e04", "type": "fill_gap", "text": "H: ___.", "translation": "H — шляпа.", "answers": [["hat"]], "options": ["hat", "cat", "ball"], "hint": "Слово начинается со звука [h], как лёгкий выдох.", "explanation": "H: hat. Звук [h] — просто выдох, не русское «х».", "grammar": ["pa1.alphabet"] },
+        { "id": "pa1.u01.l05.e05", "type": "translate_choice", "from": "en", "text": "alphabet", "options": ["алфавит", "буква", "слово"], "answer": 0, "hint": "Первые две буквы — A и B.", "explanation": "Alphabet — «алфавит». Letter — «буква»." },
+        { "id": "pa1.u01.l05.e06", "type": "translate_choice", "from": "ru", "text": "буква", "options": ["letter", "vowel", "alphabet"], "answer": 0, "hint": "Это слово есть и в слове «алфавит» — нет, оно проще.", "explanation": "Letter — «буква». Vowel — «гласная», alphabet — «алфавит»." },
+        { "id": "pa1.u01.l05.e07", "type": "listen_choice", "audio": "A: apple.", "question": "Что вы слышите?", "options": ["A: apple.", "B: ball.", "E: egg."], "answer": 0, "hint": "Первая буква — A, «эй».", "explanation": "A: apple — буква и слово на неё. Так устроена азбука в картинках." },
+        { "id": "pa1.u01.l05.e08", "type": "speak_repeat", "text": "G: goat. H: hat.", "hint": "Скажите букву, потом слово.", "explanation": "G — «джи», слово goat читается [ɡoʊt]. H — «эйч», hat — [hæt]." },
+        {
+          "id": "pa1.u01.l05.e09",
+          "type": "write",
+          "task": "Напишите по-английски пять слов из этого юнита: любые предметы, животных или цвета. Слова можно писать через запятую.",
+          "minWords": 5,
+          "maxWords": 30,
+          "criteria": [
+            { "id": "known", "label": "Слова из юнита", "patterns": ["\\b(apple|ball|cat|dog|egg|fish|goat|hat|ice|jacket|key|lemon|milk|nose|orange|pen|queen|rain|sun|tree|umbrella|van|water|box|yellow|zebra)\\b"] },
+            { "id": "five", "label": "Не меньше пяти слов", "patterns": ["(\\b[a-z]+\\b[^a-z]+){4}\\b[a-z]+\\b"] }
+          ],
+          "commonErrors": [],
+          "samples": ["apple, ball, cat, dog, egg", "sun, rain, tree, water, fish"],
+          "difficulty": 2,
+          "hint": "Выберите пять слов с картинок: apple, cat, dog, sun…",
+          "explanation": "Пять слов из юнита — хорошее начало словаря. Проверьте буквы: в слове fish — sh, в слове queen — qu.",
+          "grammar": ["pa1.alphabet"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "pa1.u01.test.e01", "type": "picture_choice", "mode": "picture-to-word", "word": "dog", "distractors": ["cat", "goat"], "hint": "Он лает.", "explanation": "Dog — «собака». Буква D — «ди»." },
+      { "id": "pa1.u01.test.e02", "type": "picture_choice", "mode": "word-to-picture", "word": "lemon", "distractors": ["orange", "apple"], "hint": "Этот фрукт кислый.", "explanation": "Lemon — «лимон». Ударение на первый слог: LE-mon." },
+      { "id": "pa1.u01.test.e03", "type": "translate_choice", "from": "en", "text": "water", "options": ["вода", "молоко", "лёд"], "answer": 0, "hint": "Это пьют, когда хотят пить.", "explanation": "Water — «вода». Milk — «молоко», ice — «лёд»." },
+      { "id": "pa1.u01.test.e04", "type": "translate_choice", "from": "ru", "text": "ключ", "options": ["key", "pen", "hat"], "answer": 0, "hint": "Три буквы, первая — K.", "explanation": "Key — «ключ»." },
+      { "id": "pa1.u01.test.e05", "type": "match_pairs", "pairs": [{ "en": "sun", "ru": "солнце" }, { "en": "rain", "ru": "дождь" }, { "en": "tree", "ru": "дерево" }, { "en": "nose", "ru": "нос" }, { "en": "box", "ru": "коробка" }], "hint": "Sun и rain — погода.", "explanation": "Sun — «солнце», rain — «дождь», tree — «дерево», nose — «нос», box — «коробка»." },
+      { "id": "pa1.u01.test.e06", "type": "fill_gap", "text": "A, E, I, O, U: ___.", "translation": "A, E, I, O, U: гласные.", "answers": [["vowels"]], "options": ["vowels", "consonants", "letters"], "hint": "Эти пять букв особенные.", "explanation": "A, E, I, O, U — vowels, гласные.", "grammar": ["pa1.alphabet"] },
+      { "id": "pa1.u01.test.e07", "type": "fill_gap", "text": "D, O, ___: dog.", "translation": "Ди, оу, джи: dog.", "answers": [["G"]], "options": ["G", "J", "K"], "hint": "Последний звук слова dog — [ɡ].", "explanation": "Dog пишется D, O, G. Буква G называется «джи».", "grammar": ["pa1.alphabet"] },
+      { "id": "pa1.u01.test.e08", "type": "listen_choice", "audio": "ice", "question": "Какое слово вы слышите?", "options": ["ice", "egg", "key"], "answer": 0, "hint": "Слышно «айс».", "explanation": "Ice — «лёд», [aɪs]. Буква I называется так же, как и звук в начале: «ай»." },
+      { "id": "pa1.u01.test.e09", "type": "listen_choice", "audio": "queen", "question": "С какой буквы начинается слово?", "options": ["Q", "K", "C"], "answer": 0, "hint": "Слышно «кв».", "explanation": "Queen начинается с Q [kjuː]. После Q идёт U: qu — «кв».", "grammar": ["pa1.alphabet"] },
+      { "id": "pa1.u01.test.e10", "type": "listen_dictation", "text": "zebra", "hint": "Пять букв, первая — Z.", "explanation": "Zebra — «зебра»: z-e-b-r-a." },
+      { "id": "pa1.u01.test.e11", "type": "type_translation", "from": "ru", "text": "яблоко", "answers": ["apple"], "hint": "Пять букв, слово начинается с A.", "explanation": "Apple — «яблоко»: a-p-p-l-e. Две буквы p подряд." },
+      { "id": "pa1.u01.test.e12", "type": "word_stress", "word": "umbrella", "syllables": ["um", "brel", "la"], "stress": 1, "hint": "Ударение не на первом слоге.", "explanation": "um-BREL-la — ударение на второй слог." },
+      { "id": "pa1.u01.test.e13", "type": "minimal_pair", "pair": [{ "en": "sit", "ipa": "sɪt" }, { "en": "seat", "ipa": "siːt" }], "say": 0, "hint": "Здесь слышен короткий гласный.", "explanation": "В sit гласный [ɪ] короткий, в seat — долгий [iː].", "troubles": ["pron-vowels"] },
+      { "id": "pa1.u01.test.e14", "type": "speak_repeat", "text": "Cat, dog, fish, zebra.", "hint": "Четыре слова, между ними пауза.", "explanation": "Cat [kæt], dog [dɔːɡ], fish [fɪʃ], zebra [ˈziːbrə] — слова из юнита." }
+    ]
+  }
+}

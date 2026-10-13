@@ -216,7 +216,8 @@ describe('time to the next level', () => {
   it('counts what is left in the written units of a level', () => {
     expect(remainingInLevel('A1', new Set())).toBe(8);
     expect(remainingInLevel('A1', new Set(['a1.u01.l01', 'a1.u01.test']))).toBe(6);
-    expect(remainingInLevel('PA1', new Set())).toBe(0);
+    expect(remainingInLevel('B2', new Set())).toBe(0);
+    expect(remainingInLevel('PA1', new Set())).toBeGreaterThan(20);
   });
 
   it('phrases weeks in Russian', () => {

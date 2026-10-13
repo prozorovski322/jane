@@ -24,7 +24,14 @@ const now = new Date('2026-10-13T10:00:00');
 
 describe('pathState', () => {
   it('marks done lessons and points to the first unfinished one', () => {
-    const s = pathState(getCourse(), new Set(['a1.u01.l01', 'a1.u01.l02', 'a1.u01.l04']));
+    // Everything before A1 is done, so the next lesson is in the A1 unit.
+    const before = getCourse()
+      .levels.filter((l) => l.level === 'PA1')
+      .flatMap((l) => l.units.flatMap((u) => [...u.lessons.map((x) => x.id), `${u.id}.test`]));
+    const s = pathState(
+      getCourse(),
+      new Set([...before, 'a1.u01.l01', 'a1.u01.l02', 'a1.u01.l04']),
+    );
     const unit = s.levels.find((l) => l.level === 'A1')!.units[0]!;
     expect(unit.nodes.map((n) => n.status)).toEqual([
       'done',

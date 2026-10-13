@@ -10,7 +10,8 @@ const original = loadContent();
 
 function errorsAfter(mutate: (unit: Unit) => void): string[] {
   const copy: LoadedContent = { ...original, issues: [], units: structuredClone(original.units) };
-  mutate(copy.units[0]!);
+  // The tests break the reference A1 unit; the pre-A1 units before it supply its early words.
+  mutate(copy.units.find((u) => u.id === 'a1.u01')!);
   return checkContent(copy)
     .filter((i) => i.severity === 'error')
     .map((i) => `${i.path}: ${i.message}`);
@@ -81,7 +82,7 @@ describe('content check', () => {
 
   it('catches a wrong stress mark', () => {
     const errors = errorsAfter((u) => {
-      u.words.find((w) => w.id === 'hello')!.ipa = 'ˈhəloʊ';
+      u.words.find((w) => w.id === 'teacher')!.ipa = 'tiːˈtʃɚ';
     });
     expect(errors.join('\n')).toMatch(/stress differs from CMUdict/);
   });

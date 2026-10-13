@@ -148,14 +148,49 @@ describe('path with modules and exams', () => {
     const a1 = s.levels.find((l) => l.level === 'A1')!;
     expect(a1.modules[0]!.test.status).toBe('done');
     expect(a1.exam.status).toBe('done');
-    expect(s.next?.node.id).toBe('a1.u01.l01');
+    expect(s.next?.node.id).toBe('pa1.u01.l01');
   });
 
-  it('knows the pre-A1 level, which has no written units yet', () => {
+  it('knows the pre-A1 level: three modules, six units, all tests and the exam available', () => {
     const pa1 = pathState(getCourse(), new Set()).levels[0]!;
     expect(pa1.level).toBe('PA1');
     expect(pa1.modules).toHaveLength(3);
-    expect(pa1.units).toEqual([]);
+    expect(pa1.units.map((u) => u.id)).toEqual([
+      'pa1.u01',
+      'pa1.u02',
+      'pa1.u03',
+      'pa1.u04',
+      'pa1.u05',
+      'pa1.u06',
+    ]);
+    expect(pa1.modules.map((m) => m.test.status)).toEqual(['open', 'open', 'open']);
+    expect(pa1.exam).toEqual({ id: 'pa1.exam', kind: 'level', status: 'open' });
+  });
+});
+
+describe('pre-A1 module tests and exam', () => {
+  it('build a module test from its two units', () => {
+    const session = sessionForExam('pa1.m2.test', 's')!;
+    expect(session.exercises).toHaveLength(MODULE_TEST.size);
+    expect(session.unitId).toBe('pa1.m2');
+    // Only exercises of the module's units (pa1.u03 and pa1.u04) appear.
+    for (const ex of session.exercises) expect(ex.id).toMatch(/^pa1\.u0[34]\./);
+  });
+
+  it('build the level exam from all six units, with texts for reading and listening', () => {
+    const session = sessionForExam('pa1.exam', 's')!;
+    expect(session.exercises).toHaveLength(LEVEL_EXAM.size);
+    expect(session.title).toBe('Экзамен уровня Pre-A1');
+    const units = new Set(session.exercises.map((e) => e.id.split('.').slice(0, 2).join('.')));
+    expect(units.size).toBeGreaterThanOrEqual(5);
+    expect(session.texts.length).toBe(12);
+    expect(session.passScore).toBe(LEVEL_EXAM.passScore);
+  });
+
+  it('differ between attempts', () => {
+    const a = sessionForExam('pa1.exam', 'one')!.exercises.map((e) => e.id);
+    const b = sessionForExam('pa1.exam', 'two')!.exercises.map((e) => e.id);
+    expect(a).not.toEqual(b);
   });
 });
 

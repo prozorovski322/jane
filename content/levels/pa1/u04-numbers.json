@@ -1,0 +1,220 @@
+{
+  "id": "pa1.u04",
+  "level": "PA1",
+  "order": 4,
+  "title": { "en": "Numbers", "ru": "Числа до 20" },
+  "description": "Считаем от нуля до двадцати, различаем числа на слух и спрашиваем, сколько лет: How old are you? I am twenty.",
+  "goals": [
+    "Могу назвать числа от 0 до 20 и узнать их на слух.",
+    "Могу отличить числа на -teen (thirteen) по ударению.",
+    "Могу спросить и сказать, сколько лет: How old are you? I am twenty.",
+    "Могу сказать, сколько предметов: two cats, three eggs.",
+    "Могу написать, как зовут человека и сколько ему лет."
+  ],
+  "grammar": ["pa1.numbers"],
+  "troubles": ["pron-th", "pron-vowels"],
+  "words": [
+    { "id": "zero", "en": "zero", "ipa": "ˈzɪroʊ", "pos": "num", "ru": ["ноль"], "example": { "en": "Zero: 0.", "ru": "Zero — это 0." }, "picture": { "emoji": "0️⃣" }, "topics": ["numbers"] },
+    { "id": "one", "en": "one", "ipa": "wʌn", "pos": "num", "ru": ["один"], "example": { "en": "One egg.", "ru": "Одно яйцо." }, "note": "One читается «уан»: сначала слышен звук [w].", "picture": { "emoji": "1️⃣" }, "topics": ["numbers"] },
+    { "id": "two", "en": "two", "ipa": "tuː", "pos": "num", "ru": ["два"], "example": { "en": "Two dogs.", "ru": "Две собаки." }, "note": "Буква w в этом слове не читается: «ту:».", "picture": { "emoji": "2️⃣" }, "topics": ["numbers"] },
+    { "id": "three", "en": "three", "ipa": "θriː", "pos": "num", "ru": ["три"], "example": { "en": "Three cats.", "ru": "Три кошки." }, "picture": { "emoji": "3️⃣" }, "troubles": ["pron-th"], "topics": ["numbers"] },
+    { "id": "four", "en": "four", "ipa": "fɔːr", "pos": "num", "ru": ["четыре"], "example": { "en": "Four eggs.", "ru": "Четыре яйца." }, "picture": { "emoji": "4️⃣" }, "topics": ["numbers"] },
+    { "id": "five", "en": "five", "ipa": "faɪv", "pos": "num", "ru": ["пять"], "example": { "en": "Five fish.", "ru": "Пять рыб." }, "picture": { "emoji": "5️⃣" }, "topics": ["numbers"] },
+    { "id": "six", "en": "six", "ipa": "sɪks", "pos": "num", "ru": ["шесть"], "example": { "en": "Six pens.", "ru": "Шесть ручек." }, "picture": { "emoji": "6️⃣" }, "topics": ["numbers"] },
+    { "id": "seven", "en": "seven", "ipa": "ˈsevən", "pos": "num", "ru": ["семь"], "example": { "en": "Seven apples.", "ru": "Семь яблок." }, "picture": { "emoji": "7️⃣" }, "topics": ["numbers"] },
+    { "id": "eight", "en": "eight", "ipa": "eɪt", "pos": "num", "ru": ["восемь"], "example": { "en": "Eight balls.", "ru": "Восемь мячей." }, "picture": { "emoji": "8️⃣" }, "topics": ["numbers"] },
+    { "id": "nine", "en": "nine", "ipa": "naɪn", "pos": "num", "ru": ["девять"], "example": { "en": "Nine keys.", "ru": "Девять ключей." }, "picture": { "emoji": "9️⃣" }, "topics": ["numbers"] },
+    { "id": "ten", "en": "ten", "ipa": "ten", "pos": "num", "ru": ["десять"], "example": { "en": "Ten books.", "ru": "Десять книг." }, "picture": { "emoji": "🔟" }, "topics": ["numbers"] },
+    { "id": "eleven", "en": "eleven", "ipa": "ɪˈlevən", "pos": "num", "ru": ["одиннадцать"], "example": { "en": "Eleven pens.", "ru": "Одиннадцать ручек." }, "note": "Ударение на второй слог: e-LE-ven.", "topics": ["numbers"] },
+    { "id": "twelve", "en": "twelve", "ipa": "twelv", "pos": "num", "ru": ["двенадцать"], "example": { "en": "Twelve eggs.", "ru": "Двенадцать яиц." }, "topics": ["numbers"] },
+    { "id": "thirteen", "en": "thirteen", "ipa": "ˌθɝːˈtiːn", "pos": "num", "ru": ["тринадцать"], "example": { "en": "Thirteen cats.", "ru": "Тринадцать кошек." }, "note": "Ударение на -teen: thir-TEEN.", "troubles": ["pron-th"], "topics": ["numbers"] },
+    { "id": "fourteen", "en": "fourteen", "ipa": "ˌfɔːrˈtiːn", "pos": "num", "ru": ["четырнадцать"], "example": { "en": "Fourteen dogs.", "ru": "Четырнадцать собак." }, "topics": ["numbers"] },
+    { "id": "fifteen", "en": "fifteen", "ipa": "ˌfɪfˈtiːn", "pos": "num", "ru": ["пятнадцать"], "example": { "en": "Fifteen fish.", "ru": "Пятнадцать рыб." }, "topics": ["numbers"] },
+    { "id": "sixteen", "en": "sixteen", "ipa": "ˌsɪksˈtiːn", "pos": "num", "ru": ["шестнадцать"], "example": { "en": "Sixteen balls.", "ru": "Шестнадцать мячей." }, "topics": ["numbers"] },
+    { "id": "seventeen", "en": "seventeen", "ipa": "ˌsevənˈtiːn", "pos": "num", "ru": ["семнадцать"], "example": { "en": "Seventeen apples.", "ru": "Семнадцать яблок." }, "topics": ["numbers"] },
+    { "id": "eighteen", "en": "eighteen", "ipa": "ˌeɪˈtiːn", "pos": "num", "ru": ["восемнадцать"], "example": { "en": "Eighteen keys.", "ru": "Восемнадцать ключей." }, "topics": ["numbers"] },
+    { "id": "nineteen", "en": "nineteen", "ipa": "ˌnaɪnˈtiːn", "pos": "num", "ru": ["девятнадцать"], "example": { "en": "Nineteen books.", "ru": "Девятнадцать книг." }, "topics": ["numbers"] },
+    { "id": "twenty", "en": "twenty", "ipa": "ˈtwenti", "pos": "num", "ru": ["двадцать"], "example": { "en": "Twenty eggs.", "ru": "Двадцать яиц." }, "note": "Ударение на первый слог: TWEN-ty.", "topics": ["numbers"] },
+    { "id": "number", "en": "number", "ipa": "ˈnʌmbɚ", "pos": "noun", "ru": ["число", "номер"], "example": { "en": "A number: ten.", "ru": "Число: десять." }, "topics": ["numbers"] },
+    { "id": "how", "en": "how", "ipa": "haʊ", "pos": "adv", "ru": ["как"], "example": { "en": "How old are you?", "ru": "Сколько тебе лет?" } },
+    { "id": "old", "en": "old", "ipa": "oʊld", "pos": "adj", "ru": ["старый"], "example": { "en": "How old are you?", "ru": "Сколько тебе лет?" }, "note": "How old are you? — дословно «как стар ты?», но так спрашивают о возрасте." },
+    { "id": "year", "en": "year", "ipa": "jɪr", "pos": "noun", "ru": ["год"], "example": { "en": "I am twenty years old.", "ru": "Мне двадцать лет." }, "note": "После чисел годы называются years: twenty years. Лет, годов — всегда years.", "topics": ["time"] },
+    { "id": "many", "en": "many", "ipa": "ˈmeni", "pos": "adj", "ru": ["много", "сколько (о предметах)"], "example": { "en": "How many cats?", "ru": "Сколько кошек?" }, "note": "How many…? — «сколько…?» о том, что можно посчитать." }
+  ],
+  "texts": [
+    {
+      "id": "pa1.u04.ages",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "How old are you?", "ru": "Сколько вам лет?" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Tom, how old are you?", "ru": "Том, сколько тебе лет?" },
+        { "speaker": "tom", "en": "I am twenty. How old are you, Anna?", "ru": "Мне двадцать. А сколько лет тебе, Анна?" },
+        { "speaker": "anna", "en": "I am nineteen.", "ru": "Мне девятнадцать." },
+        { "speaker": "tom", "en": "Nineteen! And Max? How old is Max?", "ru": "Девятнадцать! А Макс? Сколько лет Максу?" },
+        { "speaker": "anna", "en": "Max is twelve.", "ru": "Максу двенадцать." },
+        { "speaker": "tom", "en": "Twelve years old! Hello, Max!", "ru": "Двенадцать лет! Привет, Макс!" }
+      ]
+    },
+    {
+      "id": "pa1.u04.poster",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "Numbers poster", "ru": "Плакат с числами" },
+      "lines": [
+        { "en": "One, two, three, four, five. Six, seven, eight, nine, ten.", "ru": "Один, два, три, четыре, пять. Шесть, семь, восемь, девять, десять." },
+        { "en": "Eleven, twelve, thirteen, fourteen, fifteen. Sixteen, seventeen, eighteen, nineteen, twenty.", "ru": "Одиннадцать, двенадцать, тринадцать, четырнадцать, пятнадцать. Шестнадцать, семнадцать, восемнадцать, девятнадцать, двадцать." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "pa1.u04.l01",
+      "kind": "vocabulary",
+      "title": "Числа 0–10",
+      "exercises": [
+        { "id": "pa1.u04.l01.e01", "type": "picture_choice", "mode": "picture-to-word", "word": "five", "distractors": ["four", "nine"], "hint": "Столько пальцев на одной руке.", "explanation": "Five — «пять». Звук в середине — «ай»: [faɪv]." },
+        { "id": "pa1.u04.l01.e02", "type": "picture_choice", "mode": "word-to-picture", "word": "seven", "distractors": ["six", "eight"], "hint": "Это число между шестью и восемью.", "explanation": "Seven — «семь». Ударение на первый слог: SE-ven." },
+        { "id": "pa1.u04.l01.e03", "type": "translate_choice", "from": "en", "text": "three", "options": ["три", "два", "десять"], "answer": 0, "hint": "Слово начинается со звука th: язык между зубами.", "explanation": "Three — «три». Th [θ] — язык между зубами.", "troubles": ["pron-th"] },
+        { "id": "pa1.u04.l01.e04", "type": "translate_choice", "from": "ru", "text": "восемь", "options": ["eight", "nine", "ten"], "answer": 0, "hint": "Слово читается «эйт».", "explanation": "Eight — «восемь»: [eɪt]. Буквы gh не читаются." },
+        { "id": "pa1.u04.l01.e05", "type": "match_pairs", "pairs": [{ "en": "one", "ru": "один" }, { "en": "two", "ru": "два" }, { "en": "four", "ru": "четыре" }, { "en": "six", "ru": "шесть" }, { "en": "ten", "ru": "десять" }], "hint": "Ten и six похожи по звучанию на русские «тэн» и «сикс».", "explanation": "One — «один», two — «два», four — «четыре», six — «шесть», ten — «десять»." },
+        { "id": "pa1.u04.l01.e06", "type": "listen_choice", "audio": "nine", "question": "Какое число вы слышите?", "options": ["nine", "five", "one"], "answer": 0, "hint": "Слово начинается и заканчивается на «н».", "explanation": "Nine — «девять»: [naɪn]." },
+        { "id": "pa1.u04.l01.e07", "type": "listen_choice", "audio": "two", "question": "Какое число вы слышите?", "options": ["two", "three", "ten"], "answer": 0, "hint": "Слышно только «т» и «у:».", "explanation": "Two — «два»: [tuː]. Буква w не читается." },
+        { "id": "pa1.u04.l01.e08", "type": "listen_dictation", "text": "six", "hint": "Три буквы.", "explanation": "Six — «шесть»: s-i-x. Буква x читается как «кс»." },
+        { "id": "pa1.u04.l01.e09", "type": "type_translation", "from": "ru", "text": "один", "answers": ["one"], "hint": "Три буквы, читается «уан».", "explanation": "One — «один». Читается не по буквам: [wʌn]." },
+        { "id": "pa1.u04.l01.e10", "type": "fill_gap", "text": "One, two, ___, four.", "translation": "Один, два, три, четыре.", "answers": [["three"]], "options": ["three", "five", "ten"], "hint": "Число после two.", "explanation": "One, two, three, four — счёт по порядку." },
+        { "id": "pa1.u04.l01.e11", "type": "fill_gap", "text": "Seven, eight, ___, ten.", "translation": "Семь, восемь, девять, десять.", "answers": [["nine"]], "options": ["nine", "four", "zero"], "hint": "Число между eight и ten.", "explanation": "Seven, eight, nine, ten — по порядку." },
+        { "id": "pa1.u04.l01.e12", "type": "translate_choice", "from": "en", "text": "zero", "options": ["ноль", "один", "много"], "answer": 0, "hint": "Это число — ничего.", "explanation": "Zero — «ноль». Читается [ˈzɪroʊ]." },
+        { "id": "pa1.u04.l01.e13", "type": "speak_repeat", "text": "One, two, three, four, five.", "hint": "Считайте ровно, без пауз.", "explanation": "Следите за звуками: one [wʌn], two [tuː], three [θriː] — язык между зубами." }
+      ]
+    },
+    {
+      "id": "pa1.u04.l02",
+      "kind": "pronunciation",
+      "title": "Числа 11–20 и ударение",
+      "grammar": "pa1.numbers",
+      "exercises": [
+        { "id": "pa1.u04.l02.e01", "type": "translate_choice", "from": "en", "text": "eleven", "options": ["одиннадцать", "семь", "десять"], "answer": 0, "hint": "Слово длиннее, чем seven.", "explanation": "Eleven — «одиннадцать». Ударение на втором слоге: e-LE-ven.", "grammar": ["pa1.numbers"] },
+        { "id": "pa1.u04.l02.e02", "type": "translate_choice", "from": "ru", "text": "двенадцать", "options": ["twelve", "eleven", "twenty"], "answer": 0, "hint": "Заканчивается на -lve.", "explanation": "Twelve — «двенадцать». Пишется twelve, а читается [twelv].", "grammar": ["pa1.numbers"] },
+        { "id": "pa1.u04.l02.e03", "type": "match_pairs", "pairs": [{ "en": "thirteen", "ru": "тринадцать" }, { "en": "fourteen", "ru": "четырнадцать" }, { "en": "fifteen", "ru": "пятнадцать" }, { "en": "sixteen", "ru": "шестнадцать" }, { "en": "seventeen", "ru": "семнадцать" }], "hint": "У всех этих чисел окончание -teen.", "explanation": "Числа 13–19 оканчиваются на -teen: thirteen, fourteen, fifteen, sixteen, seventeen. Окончание ударное.", "grammar": ["pa1.numbers"] },
+        { "id": "pa1.u04.l02.e04", "type": "match_pairs", "pairs": [{ "en": "eighteen", "ru": "восемнадцать" }, { "en": "nineteen", "ru": "девятнадцать" }, { "en": "twenty", "ru": "двадцать" }, { "en": "twelve", "ru": "двенадцать" }, { "en": "eleven", "ru": "одиннадцать" }], "hint": "Twenty и twelve начинаются одинаково.", "explanation": "Числа: eighteen — 18, nineteen — 19, twenty — 20, twelve — 12, eleven — 11.", "grammar": ["pa1.numbers"] },
+        { "id": "pa1.u04.l02.e05", "type": "listen_choice", "audio": "fifteen", "question": "Какое число вы слышите?", "options": ["fifteen", "five", "fourteen"], "answer": 0, "hint": "Слово длинное, заканчивается на «и:н».", "explanation": "Fifteen [ˌfɪfˈtiːn] — «пятнадцать». Five [faɪv] — «пять».", "grammar": ["pa1.numbers"] },
+        { "id": "pa1.u04.l02.e06", "type": "listen_choice", "audio": "seventeen", "question": "Какое число вы слышите?", "options": ["seventeen", "seven", "sixteen"], "answer": 0, "hint": "Слышно «сэвэн-ти:н».", "explanation": "Seventeen — «семнадцать». У seven окончания -teen нет.", "grammar": ["pa1.numbers"] },
+        { "id": "pa1.u04.l02.e07", "type": "listen_dictation", "text": "nineteen", "hint": "Девять букв: nine и teen.", "explanation": "Nineteen — «девятнадцать»: nine + teen." },
+        { "id": "pa1.u04.l02.e08", "type": "minimal_pair", "pair": [{ "en": "thirteen", "ipa": "ˌθɝːˈtiːn" }, { "en": "thirty", "ipa": "ˈθɝːti" }], "say": 0, "hint": "В одном слове ударение на конце.", "explanation": "Thirteen — [thir-TEEN], ударение на последнем слоге. Thirty — [THIR-ty], ударение на первом. Так отличают 13 и 30.", "troubles": ["pron-th"] },
+        { "id": "pa1.u04.l02.e09", "type": "minimal_pair", "pair": [{ "en": "three", "ipa": "θriː" }, { "en": "free", "ipa": "friː" }], "say": 0, "hint": "Первый звук — язык между зубами.", "explanation": "[θ] в three — язык между зубами. [f] в free — верхние зубы касаются нижней губы.", "troubles": ["pron-th"] },
+        { "id": "pa1.u04.l02.e10", "type": "word_stress", "word": "thirteen", "syllables": ["thir", "teen"], "stress": 1, "hint": "Ударение на втором слоге.", "explanation": "thir-TEEN — ударение на -teen." },
+        { "id": "pa1.u04.l02.e11", "type": "word_stress", "word": "twenty", "syllables": ["twen", "ty"], "stress": 0, "hint": "Громче и дольше первый слог.", "explanation": "TWEN-ty — ударение на первый слог." },
+        { "id": "pa1.u04.l02.e12", "type": "word_stress", "word": "eleven", "syllables": ["e", "lev", "en"], "stress": 1, "hint": "Ударный слог — средний.", "explanation": "e-LE-ven — ударение на второй слог." },
+        { "id": "pa1.u04.l02.e13", "type": "speak_repeat", "text": "Thirteen, fourteen, fifteen.", "hint": "В каждом слове ударение на -teen: thir-TEEN.", "explanation": "Thir-TEEN, four-TEEN, fif-TEEN: окончание -teen долгое и ударное.", "troubles": ["pron-th"] },
+        { "id": "pa1.u04.l02.e14", "type": "speak_repeat", "text": "Eighteen, nineteen, twenty.", "hint": "Ударение: eigh-TEEN, nine-TEEN, TWEN-ty.", "explanation": "В -teen ударение на конце, в twenty — на начале." }
+      ]
+    },
+    {
+      "id": "pa1.u04.l03",
+      "kind": "listening",
+      "title": "Сколько вам лет?",
+      "textId": "pa1.u04.ages",
+      "grammar": "pa1.numbers",
+      "exercises": [
+        {
+          "id": "pa1.u04.l03.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "pa1.u04.ages",
+          "hint": "Слушайте числа: они называют возраст.",
+          "explanation": "Тому двадцать лет, Анне девятнадцать, а Максу двенадцать.",
+          "questions": [
+            { "kind": "mcq", "question": "Сколько лет Анне?", "options": ["nineteen", "twenty", "twelve"], "answer": 0, "explanation": "Анна говорит: I am nineteen." },
+            { "kind": "mcq", "question": "Сколько лет Тому?", "options": ["twenty", "nineteen", "twelve"], "answer": 0, "explanation": "Том говорит: I am twenty." },
+            { "kind": "mcq", "question": "Сколько лет Максу?", "options": ["twelve", "twenty", "nine"], "answer": 0, "explanation": "Анна говорит: Max is twelve." },
+            { "kind": "tfn", "statement": "Anna is twenty.", "answer": "false", "explanation": "Анне девятнадцать: I am nineteen." },
+            { "kind": "tfn", "statement": "Max is ten.", "answer": "false", "explanation": "Максу двенадцать: Max is twelve, а не ten." }
+          ]
+        },
+        { "id": "pa1.u04.l03.e02", "type": "listen_choice", "audio": "How old are you?", "question": "Что вы слышите?", "options": ["How old are you?", "What is your name?", "How many cats?"], "answer": 0, "hint": "Первое слово — how, второе — old.", "explanation": "How old are you? — «Сколько тебе лет?».", "grammar": ["pa1.numbers"] },
+        { "id": "pa1.u04.l03.e03", "type": "listen_dictation", "text": "I am twelve.", "answers": ["I'm twelve."], "hint": "Три слова, последнее — число.", "explanation": "I am twelve — «мне двенадцать». Короткая форма: I'm twelve.", "grammar": ["pa1.numbers"] },
+        { "id": "pa1.u04.l03.e04", "type": "fill_gap", "text": "How ___ are you?", "translation": "Сколько тебе лет?", "answers": [["old"]], "options": ["old", "many", "number"], "hint": "О возрасте спрашивают со словом «старый».", "explanation": "How old are you? — «Сколько тебе лет?». Old — «старый».", "grammar": ["pa1.numbers"] },
+        { "id": "pa1.u04.l03.e05", "type": "fill_gap", "text": "I ___ twenty.", "translation": "Мне двадцать.", "answers": [["am"]], "options": ["am", "is", "are"], "hint": "О себе — I am.", "explanation": "I am twenty. Возраст называют с глаголом be: «я есть двадцать».", "grammar": ["pa1.numbers", "pa1.i-am"] },
+        { "id": "pa1.u04.l03.e06", "type": "fill_gap", "text": "Max ___ twelve.", "translation": "Максу двенадцать.", "answers": [["is"]], "options": ["am", "is", "are"], "hint": "Макс — одно имя.", "explanation": "Max is twelve. Об одном человеке — is.", "grammar": ["pa1.numbers", "pa1.i-am"] },
+        { "id": "pa1.u04.l03.e07", "type": "fill_gap", "text": "Two ___.", "translation": "Две кошки.", "answers": [["cats"]], "options": ["cats", "cat", "cates"], "hint": "После two слово получает -s.", "explanation": "Two cats. После числа больше единицы к слову добавляется -s.", "grammar": ["pa1.numbers"] },
+        { "id": "pa1.u04.l03.e08", "type": "error_correction", "text": "Three dog.", "wrong": "dog", "correction": "dogs", "options": ["dogs", "dog", "doges"], "hint": "Сколько собак — три или одна?", "explanation": "Three dogs. После three, four и других чисел больше единицы нужно -s.", "grammar": ["pa1.numbers"] },
+        { "id": "pa1.u04.l03.e09", "type": "tiles", "from": "ru", "text": "Сколько тебе лет?", "answer": "How old are you?", "distractors": ["many", "am"], "hint": "How — «как», old — «старый».", "explanation": "How old are you? — «Сколько тебе лет?». Дословно «как стар ты?».", "grammar": ["pa1.numbers"] },
+        { "id": "pa1.u04.l03.e10", "type": "type_translation", "from": "ru", "text": "Мне двадцать.", "answers": ["I am twenty.", "I'm twenty."], "hint": "Нужен глагол am.", "explanation": "I am twenty. Не говорят «I have twenty»: по-английски возраст называют с глаголом be.", "grammar": ["pa1.numbers", "pa1.i-am"], "troubles": ["word-order"] },
+        { "id": "pa1.u04.l03.e11", "type": "speak_answer", "question": "How old are you?", "questionRu": "Сколько вам лет? Ответьте. Если вам больше двадцати, можно назвать любое число до двадцати.", "keywords": [["\\bI'?m\\b", "\\bI am\\b"], ["\\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty)\\b"]], "minKeywords": 2, "samples": ["I am twenty.", "I'm ten."], "difficulty": 3, "hint": "I am… и число.", "explanation": "Отвечаем так: I am + число. Например: I am twelve.", "grammar": ["pa1.numbers"] }
+      ]
+    },
+    {
+      "id": "pa1.u04.l04",
+      "kind": "reading",
+      "title": "Плакат с числами",
+      "textId": "pa1.u04.poster",
+      "exercises": [
+        {
+          "id": "pa1.u04.l04.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "pa1.u04.poster",
+          "hint": "Числа на плакате идут по порядку.",
+          "explanation": "На плакате числа от one до twenty по порядку.",
+          "questions": [
+            { "kind": "mcq", "question": "Какое число идёт после six?", "options": ["seven", "five", "eight"], "answer": 0, "explanation": "В тексте: Six, seven, eight — после six идёт seven." },
+            { "kind": "mcq", "question": "Какое число идёт последним?", "options": ["twenty", "nineteen", "ten"], "answer": 0, "explanation": "Последнее число на плакате — twenty." },
+            { "kind": "mcq", "question": "Какое число идёт перед twelve?", "options": ["eleven", "thirteen", "ten"], "answer": 0, "explanation": "В тексте: Eleven, twelve — перед twelve стоит eleven." },
+            { "kind": "tfn", "statement": "Fifteen.", "answer": "true", "explanation": "Fifteen есть на плакате: Eleven, twelve, thirteen, fourteen, fifteen." },
+            { "kind": "tfn", "statement": "Zero.", "answer": "not_given", "explanation": "Числа zero на плакате нет: счёт начинается с one." }
+          ]
+        },
+        { "id": "pa1.u04.l04.e02", "type": "fill_gap", "text": "Eleven, twelve, ___, fourteen.", "translation": "Одиннадцать, двенадцать, тринадцать, четырнадцать.", "answers": [["thirteen"]], "options": ["thirteen", "three", "twelve"], "hint": "Число между twelve и fourteen.", "explanation": "Thirteen — «тринадцать»: three + teen." },
+        { "id": "pa1.u04.l04.e03", "type": "fill_gap", "text": "Sixteen, seventeen, ___, nineteen.", "translation": "Шестнадцать, семнадцать, восемнадцать, девятнадцать.", "answers": [["eighteen"]], "options": ["eighteen", "eight", "twenty"], "hint": "После seventeen.", "explanation": "Eighteen — «восемнадцать»: eight + een." },
+        { "id": "pa1.u04.l04.e04", "type": "translate_choice", "from": "en", "text": "Twenty eggs.", "options": ["Двадцать яиц.", "Двенадцать яиц.", "Две яйца."], "answer": 0, "hint": "Числа: twenty — 20, twelve — 12.", "explanation": "Twenty eggs — «двадцать яиц». Не путайте twenty (20) и twelve (12)." },
+        { "id": "pa1.u04.l04.e05", "type": "tiles", "from": "ru", "text": "Три кошки.", "answer": "Three cats.", "distractors": ["cat", "tree"], "hint": "Числительное и слово с -s.", "explanation": "Three cats — «три кошки»: после числа к слову добавляется -s." },
+        { "id": "pa1.u04.l04.e06", "type": "type_translation", "from": "ru", "text": "Пять рыб.", "answers": ["Five fish."], "difficulty": 2, "hint": "Слово fish не меняется.", "explanation": "Five fish — «пять рыб». У слова fish форма не меняется.", "grammar": ["pa1.numbers"] },
+        { "id": "pa1.u04.l04.e07", "type": "speak_repeat", "text": "Six, seven, eight, nine, ten.", "hint": "Считайте ровно, ударение на каждом числе.", "explanation": "Произношение: six [sɪks], seven [ˈsevən], eight [eɪt], nine [naɪn], ten [ten]." },
+        {
+          "id": "pa1.u04.l04.e08",
+          "type": "write",
+          "task": "Напишите, как зовут человека и сколько ему лет. Это можете быть вы или знакомый. Числа — до двадцати словами. Например: My name is Max. I am twelve.",
+          "minWords": 6,
+          "maxWords": 30,
+          "criteria": [
+            { "id": "name", "label": "Есть имя", "patterns": ["\\bmy name('s| is)\\b", "\\bI'?m [A-Z][a-z]+", "\\bI am [A-Z][a-z]+", "\\b[A-Z][a-z]+ is (one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty)\\b"] },
+            { "id": "age", "label": "Есть возраст словами", "patterns": ["\\b(I am|I'm|is) (one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\bI (have|has) (one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty)\\b", "message": "Возраст называют с глаголом be: I am twenty, а не I have twenty." },
+            { "pattern": "\\bI (is|are) \\b", "message": "С I — только am: I am, I'm." }
+          ],
+          "samples": ["My name is Max. I am twelve.", "Hello! My name is Olga. I am nineteen years old."],
+          "difficulty": 2,
+          "hint": "План: My name is… → I am… + число.",
+          "explanation": "Две фразы: имя и возраст. После I — am, а число записывается словом.",
+          "grammar": ["pa1.numbers", "pa1.i-am"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "pa1.u04.test.e01", "type": "picture_choice", "mode": "picture-to-word", "word": "nine", "distractors": ["five", "six"], "hint": "Число между восемью и десятью.", "explanation": "Nine — «девять»: [naɪn]." },
+      { "id": "pa1.u04.test.e02", "type": "translate_choice", "from": "en", "text": "fourteen", "options": ["четырнадцать", "сорок", "четыре"], "answer": 0, "hint": "В слове есть -teen.", "explanation": "Fourteen — «четырнадцать»: four + teen." },
+      { "id": "pa1.u04.test.e03", "type": "translate_choice", "from": "ru", "text": "двадцать", "options": ["twenty", "twelve", "two"], "answer": 0, "hint": "Начинается с tw, заканчивается на -ty.", "explanation": "Twenty — «двадцать», twelve — «двенадцать», two — «два»." },
+      { "id": "pa1.u04.test.e04", "type": "match_pairs", "pairs": [{ "en": "three", "ru": "три" }, { "en": "seven", "ru": "семь" }, { "en": "eleven", "ru": "одиннадцать" }, { "en": "sixteen", "ru": "шестнадцать" }, { "en": "twenty", "ru": "двадцать" }], "hint": "Sixteen — six и teen.", "explanation": "Числа: three — 3, seven — 7, eleven — 11, sixteen — 16, twenty — 20." },
+      { "id": "pa1.u04.test.e05", "type": "fill_gap", "text": "How ___ are you?", "translation": "Сколько тебе лет?", "answers": [["old"]], "options": ["old", "many", "year"], "hint": "О возрасте спрашивают словом «старый».", "explanation": "How old are you? — «Сколько тебе лет?».", "grammar": ["pa1.numbers"] },
+      { "id": "pa1.u04.test.e06", "type": "fill_gap", "text": "I ___ nineteen.", "translation": "Мне девятнадцать.", "answers": [["am"]], "options": ["am", "is", "are"], "hint": "О себе: I am.", "explanation": "I am nineteen. Возраст называют с глаголом be.", "grammar": ["pa1.numbers"] },
+      { "id": "pa1.u04.test.e07", "type": "error_correction", "text": "Two cat.", "wrong": "cat", "correction": "cats", "options": ["cats", "cat", "cates"], "hint": "Кошек две.", "explanation": "Two cats. После two к слову добавляется -s.", "grammar": ["pa1.numbers"] },
+      { "id": "pa1.u04.test.e08", "type": "listen_choice", "audio": "thirteen", "question": "Какое число вы слышите?", "options": ["thirteen", "three", "fourteen"], "answer": 0, "hint": "Окончание ударное: thir-TEEN.", "explanation": "Thirteen — «тринадцать», ударение на последнем слоге. Thirty — другое число.", "troubles": ["pron-th"] },
+      { "id": "pa1.u04.test.e09", "type": "listen_dictation", "text": "eighteen", "hint": "Слово из восьми букв.", "explanation": "Eighteen — «восемнадцать»: eight + een." },
+      { "id": "pa1.u04.test.e10", "type": "word_stress", "word": "thirteen", "syllables": ["thir", "teen"], "stress": 1, "hint": "Ударение на конце.", "explanation": "thir-TEEN — ударение на втором слоге." },
+      { "id": "pa1.u04.test.e11", "type": "minimal_pair", "pair": [{ "en": "three", "ipa": "θriː" }, { "en": "tree", "ipa": "triː" }], "say": 0, "hint": "Первый звук — язык между зубами.", "explanation": "Three начинается с [θ], tree — с [t].", "troubles": ["pron-th"] },
+      { "id": "pa1.u04.test.e12", "type": "tiles", "from": "ru", "text": "Мне двенадцать.", "answer": "I am twelve.", "distractors": ["is", "twenty"], "difficulty": 2, "hint": "Нужен глагол am.", "explanation": "I am twelve — «мне двенадцать».", "grammar": ["pa1.numbers"] },
+      { "id": "pa1.u04.test.e13", "type": "type_translation", "from": "ru", "text": "Сколько лет Максу?", "answers": ["How old is Max?"], "difficulty": 2, "hint": "Макс — одно имя, поэтому is.", "explanation": "How old is Max? О другом человеке — is, а не are.", "grammar": ["pa1.numbers"] },
+      { "id": "pa1.u04.test.e14", "type": "speak_answer", "question": "How old are you?", "questionRu": "Сколько вам лет? Назовите число до двадцати.", "keywords": [["\\bI'?m\\b", "\\bI am\\b"], ["\\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty)\\b"]], "minKeywords": 2, "samples": ["I am twelve.", "I'm twenty."], "difficulty": 3, "hint": "I am… и число.", "explanation": "I am + число: I am twenty.", "grammar": ["pa1.numbers"] }
+    ]
+  }
+}

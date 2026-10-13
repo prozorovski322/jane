@@ -9,4 +9,10 @@ export const loadPlacement = () => require('./placement.json') as PlacementBank;
 
 export const unitLoaders: Record<string, () => UnitBundle> = {
   'a1.u01': () => require('./units/a1.u01.json') as UnitBundle,
+  'pa1.u01': () => require('./units/pa1.u01.json') as UnitBundle,
+  'pa1.u02': () => require('./units/pa1.u02.json') as UnitBundle,
+  'pa1.u03': () => require('./units/pa1.u03.json') as UnitBundle,
+  'pa1.u04': () => require('./units/pa1.u04.json') as UnitBundle,
+  'pa1.u05': () => require('./units/pa1.u05.json') as UnitBundle,
+  'pa1.u06': () => require('./units/pa1.u06.json') as UnitBundle,
 };

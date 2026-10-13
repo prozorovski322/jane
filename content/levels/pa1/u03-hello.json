@@ -1,0 +1,214 @@
+{
+  "id": "pa1.u03",
+  "level": "PA1",
+  "order": 3,
+  "title": { "en": "Hello and please", "ru": "Приветствия и вежливость" },
+  "description": "Здороваемся и прощаемся, благодарим и извиняемся. Говорим, как нас зовут, и спрашиваем имя: I am…, My name is…, What is your name?",
+  "goals": [
+    "Могу поздороваться и попрощаться в разное время дня.",
+    "Могу поблагодарить, попросить и извиниться.",
+    "Могу сказать, как меня зовут, и спросить имя собеседника.",
+    "Могу ответить «да» и «нет» и понять простой диалог при знакомстве.",
+    "Могу написать короткое приветствие со своим именем."
+  ],
+  "grammar": ["pa1.i-am"],
+  "troubles": ["word-order", "pron-th"],
+  "words": [
+{ "id": "hello", "en": "hello", "ipa": "həˈloʊ", "pos": "interj", "ru": ["привет", "здравствуйте"], "example": { "en": "Hello! I'm Anna.", "ru": "Здравствуйте! Я Анна." }, "picture": { "emoji": "👋" }, "topics": ["greetings"] },
+    { "id": "hi", "en": "hi", "ipa": "haɪ", "pos": "interj", "ru": ["привет"], "example": { "en": "Hi, Tom!", "ru": "Привет, Том!" }, "note": "Hi — неформальное приветствие, hello подходит для любой ситуации.", "topics": ["greetings"] },
+    { "id": "goodbye", "en": "goodbye", "ipa": "ɡʊdˈbaɪ", "pos": "interj", "ru": ["до свидания"], "example": { "en": "Goodbye, Anna!", "ru": "До свидания, Анна!" }, "topics": ["greetings"] },
+    { "id": "bye", "en": "bye", "ipa": "baɪ", "pos": "interj", "ru": ["пока"], "example": { "en": "Bye, Tom!", "ru": "Пока, Том!" }, "topics": ["greetings"] },
+    { "id": "good-morning", "en": "good morning", "ipa": "ɡʊd ˈmɔːrnɪŋ", "pos": "phrase", "ru": ["доброе утро"], "example": { "en": "Good morning, Anna!", "ru": "Доброе утро, Анна!" }, "picture": { "emoji": "🌅" }, "topics": ["greetings"] },
+    { "id": "good-evening", "en": "good evening", "ipa": "ɡʊd ˈiːvnɪŋ", "pos": "phrase", "ru": ["добрый вечер"], "example": { "en": "Good evening! I'm Ivan.", "ru": "Добрый вечер! Я Иван." }, "topics": ["greetings"] },
+    { "id": "good-night", "en": "good night", "ipa": "ɡʊd naɪt", "pos": "phrase", "ru": ["спокойной ночи"], "example": { "en": "Good night, Kate!", "ru": "Спокойной ночи, Кейт!" }, "note": "Это прощание, а не приветствие. Вечером при встрече говорят good evening.", "picture": { "emoji": "🌙" }, "topics": ["greetings"] },
+    { "id": "thanks", "en": "thanks", "ipa": "θæŋks", "pos": "interj", "ru": ["спасибо"], "example": { "en": "Thanks, Anna!", "ru": "Спасибо, Анна!" }, "troubles": ["pron-th"], "topics": ["greetings"] },
+    { "id": "thank-you", "en": "thank you", "ipa": "θæŋk juː", "pos": "phrase", "ru": ["спасибо"], "example": { "en": "Thank you, Max!", "ru": "Спасибо, Макс!" }, "note": "Thank you звучит чуть вежливее, чем thanks.", "troubles": ["pron-th"], "topics": ["greetings"] },
+    { "id": "please", "en": "please", "ipa": "pliːz", "pos": "adv", "ru": ["пожалуйста (при просьбе)"], "example": { "en": "Your name, please?", "ru": "Ваше имя, пожалуйста?" }, "note": "Только для просьбы. В ответ на «спасибо» please не говорят." },
+    { "id": "sorry", "en": "sorry", "ipa": "ˈsɑːri", "pos": "adj", "ru": ["извините", "простите"], "example": { "en": "Sorry, Tom!", "ru": "Извините, Том!" }, "note": "Sorry — когда извиняетесь. Чтобы обратиться к незнакомому человеку, говорят excuse me." },
+    { "id": "yes", "en": "yes", "ipa": "jes", "pos": "adv", "ru": ["да"], "example": { "en": "Yes, I'm Max.", "ru": "Да, я Макс." } },
+    { "id": "no", "en": "no", "ipa": "noʊ", "pos": "adv", "ru": ["нет"], "example": { "en": "No, I'm Tom.", "ru": "Нет, я Том." } },
+    { "id": "i", "en": "I", "ipa": "aɪ", "pos": "pron", "ru": ["я"], "example": { "en": "I'm Anna.", "ru": "Я Анна." }, "note": "Всегда пишется с большой буквы." },
+    { "id": "you", "en": "you", "ipa": "juː", "pos": "pron", "ru": ["ты", "вы"], "example": { "en": "You are Tom.", "ru": "Ты Том." } },
+    { "id": "my", "en": "my", "ipa": "maɪ", "pos": "det", "ru": ["мой", "моя", "моё", "мои"], "example": { "en": "My name is Olga.", "ru": "Меня зовут Ольга." } },
+    { "id": "your", "en": "your", "ipa": "jʊr", "pos": "det", "ru": ["твой", "ваш"], "example": { "en": "What's your name?", "ru": "Как тебя зовут?" } },
+    { "id": "name", "en": "name", "ipa": "neɪm", "pos": "noun", "ru": ["имя"], "example": { "en": "My name is Max.", "ru": "Меня зовут Макс." }, "note": "My name is… — дословно «моё имя…», по-русски «меня зовут…»." },
+    { "id": "what", "en": "what", "ipa": "wʌt", "pos": "pron", "ru": ["что", "какой"], "example": { "en": "What's your name?", "ru": "Как вас зовут?" } },
+    { "id": "be", "en": "be", "ipa": "biː", "pos": "verb", "ru": ["быть", "являться"], "example": { "en": "I am Tom. You are Anna.", "ru": "Я Том. Ты Анна." }, "note": "Формы в настоящем: I am, he/she/it is, you/we/they are." },
+    { "id": "and", "en": "and", "ipa": "ænd", "pos": "conj", "ru": ["и", "а"], "example": { "en": "Tom and Anna.", "ru": "Том и Анна." } }
+  ],
+  "texts": [
+    {
+      "id": "pa1.u03.hello-anna",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Hello, Anna!", "ru": "Здравствуйте, Анна!" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Good morning! I am Anna.", "ru": "Доброе утро! Я Анна." },
+        { "speaker": "tom", "en": "Hello, Anna! My name is Tom.", "ru": "Здравствуйте, Анна! Меня зовут Том." },
+        { "speaker": "anna", "en": "Hi, Tom! Are you Max?", "ru": "Привет, Том! Вы Макс?" },
+        { "speaker": "tom", "en": "No, I am Tom.", "ru": "Нет, я Том." },
+        { "speaker": "anna", "en": "Sorry, Tom! Thank you.", "ru": "Извините, Том! Спасибо." },
+        { "speaker": "tom", "en": "Goodbye, Anna!", "ru": "До свидания, Анна!" },
+        { "speaker": "anna", "en": "Bye, Tom!", "ru": "Пока, Том!" }
+      ]
+    },
+    {
+      "id": "pa1.u03.names",
+      "kind": "reading",
+      "genre": "profile",
+      "title": { "en": "Name cards", "ru": "Карточки с именами" },
+      "lines": [
+        { "en": "Hello! I am Max. My name is Max.", "ru": "Здравствуйте! Я Макс. Меня зовут Макс." },
+        { "en": "Hi! I am Olga. My name is Olga. And you? What is your name?", "ru": "Привет! Я Ольга. Меня зовут Ольга. А вы? Как вас зовут?" },
+        { "en": "Good night, Olga! Bye!", "ru": "Спокойной ночи, Ольга! Пока!" }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "pa1.u03.l01",
+      "kind": "vocabulary",
+      "title": "Здравствуйте и до свидания",
+      "exercises": [
+        { "id": "pa1.u03.l01.e01", "type": "picture_choice", "mode": "picture-to-word", "word": "hello", "distractors": ["good-night", "good-morning"], "hint": "Этим жестом машут при встрече.", "explanation": "Hello — «привет, здравствуйте». Подходит для любого времени дня." },
+        { "id": "pa1.u03.l01.e02", "type": "picture_choice", "mode": "word-to-picture", "word": "good-night", "distractors": ["hello", "good-morning"], "hint": "Так желают перед сном.", "explanation": "Good night — «спокойной ночи». Так прощаются вечером, а не здороваются." },
+        { "id": "pa1.u03.l01.e03", "type": "translate_choice", "from": "en", "text": "Good morning!", "options": ["Доброе утро!", "Добрый вечер!", "Спокойной ночи!"], "answer": 0, "hint": "Morning — утро.", "explanation": "Good morning — приветствие утром. Good evening — вечером, good night — перед сном." },
+        { "id": "pa1.u03.l01.e04", "type": "translate_choice", "from": "ru", "text": "Пока!", "options": ["Bye!", "Hi!", "Please!"], "answer": 0, "hint": "Так прощаются с друзьями.", "explanation": "Bye — «пока». Hi — «привет» при встрече." },
+        { "id": "pa1.u03.l01.e05", "type": "match_pairs", "pairs": [{ "en": "hello", "ru": "здравствуйте" }, { "en": "goodbye", "ru": "до свидания" }, { "en": "thanks", "ru": "спасибо" }, { "en": "sorry", "ru": "извините" }, { "en": "please", "ru": "пожалуйста" }], "hint": "Начните с самых знакомых слов.", "explanation": "Please — «пожалуйста», когда о чём-то просите. Sorry — «извините», когда извиняетесь." },
+        { "id": "pa1.u03.l01.e06", "type": "match_pairs", "pairs": [{ "en": "yes", "ru": "да" }, { "en": "no", "ru": "нет" }, { "en": "hi", "ru": "привет" }, { "en": "bye", "ru": "пока" }, { "en": "thank you", "ru": "спасибо" }], "hint": "Yes и no — самые короткие ответы.", "explanation": "Yes — «да», no — «нет». Hi и bye — разговорные приветствие и прощание." },
+        { "id": "pa1.u03.l01.e07", "type": "listen_choice", "audio": "Good evening!", "question": "Что вы слышите?", "options": ["Good evening!", "Good morning!", "Good night!"], "answer": 0, "hint": "Слышно слово evening.", "explanation": "Good evening — «добрый вечер». Так здороваются вечером." },
+        { "id": "pa1.u03.l01.e08", "type": "listen_choice", "audio": "Thank you!", "question": "Что вы слышите?", "options": ["Thank you!", "Sorry!", "Please!"], "answer": 0, "hint": "Начинается со звука th: язык между зубами.", "explanation": "Thank you — «спасибо». В слове thank язык кладут между зубами: [θ].", "troubles": ["pron-th"] },
+        { "id": "pa1.u03.l01.e09", "type": "tiles", "from": "ru", "text": "Спокойной ночи!", "answer": "Good night!", "distractors": ["morning", "bye"], "hint": "Два слова: хороший и ночь.", "explanation": "Good night — «спокойной ночи». Так говорят, когда прощаются на ночь." },
+        { "id": "pa1.u03.l01.e10", "type": "type_translation", "from": "ru", "text": "Спасибо!", "answers": ["Thank you!", "Thanks!"], "hint": "Короткий или полный вариант.", "explanation": "Thanks и thank you — оба «спасибо». Thank you звучит чуть вежливее.", "troubles": ["pron-th"] },
+        { "id": "pa1.u03.l01.e11", "type": "fill_gap", "text": "Good ___, Anna!", "translation": "Добрый вечер, Анна!", "answers": [["evening"]], "options": ["evening", "bye", "yes"], "hint": "Так здороваются вечером.", "explanation": "Good evening — «добрый вечер». После good стоит время суток." },
+        { "id": "pa1.u03.l01.e12", "type": "type_translation", "from": "ru", "text": "Извините!", "answers": ["Sorry!"], "hint": "Пять букв, начинается с s.", "explanation": "Sorry — «извините»: когда вы извиняетесь." },
+        { "id": "pa1.u03.l01.e13", "type": "speak_repeat", "text": "Good morning! Hello!", "hint": "Говорите слитно: good-MORN-ing.", "explanation": "В good morning ударение на morn: good-MORN-ing. Hello — he-LLO, ударение на втором слоге." }
+      ]
+    },
+    {
+      "id": "pa1.u03.l02",
+      "kind": "grammar",
+      "title": "Я — I am, ты — you are",
+      "grammar": "pa1.i-am",
+      "exercises": [
+        { "id": "pa1.u03.l02.e01", "type": "translate_choice", "from": "en", "text": "I am Anna.", "options": ["Я Анна.", "Ты Анна.", "Это Анна."], "answer": 0, "hint": "I — это «я».", "explanation": "I am Anna — «я Анна». I am — сокращённо I'm.", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l02.e02", "type": "translate_choice", "from": "en", "text": "You are Tom.", "options": ["Ты Том.", "Я Том.", "Он Том."], "answer": 0, "hint": "You — «ты» или «вы».", "explanation": "You are Tom — «ты Том». You are — сокращённо you're.", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l02.e03", "type": "fill_gap", "text": "I ___ Anna.", "translation": "Я Анна.", "answers": [["am"]], "options": ["am", "is", "are"], "hint": "С I всегда одна и та же форма.", "explanation": "I am Anna. Am бывает только с I.", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l02.e04", "type": "fill_gap", "text": "You ___ Tom.", "translation": "Ты Том.", "answers": [["are"]], "options": ["am", "is", "are"], "hint": "С you — особая форма.", "explanation": "You are Tom. С you всегда are.", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l02.e05", "type": "fill_gap", "text": "My name ___ Max.", "translation": "Меня зовут Макс.", "answers": [["is"]], "options": ["am", "is", "are"], "hint": "Name — одно имя, как «это».", "explanation": "My name is Max. Для одного имени — is.", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l02.e06", "type": "error_correction", "text": "I Anna.", "wrong": "I", "correction": "I am", "options": ["I am", "I is", "I are"], "hint": "В предложении не хватает глагола.", "explanation": "По-русски «Я Анна» — без глагола. По-английски нужен am: I am Anna.", "grammar": ["pa1.i-am"], "troubles": ["word-order"] },
+        { "id": "pa1.u03.l02.e07", "type": "error_correction", "text": "My name am Tom.", "wrong": "am", "correction": "is", "options": ["is", "are", "be"], "hint": "Для одного имени используется другая форма.", "explanation": "My name is Tom. Am бывает только с I.", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l02.e08", "type": "error_correction", "text": "You is Max.", "wrong": "is", "correction": "are", "options": ["are", "am", "be"], "hint": "С you всегда одна и та же форма.", "explanation": "You are Max. С you — are.", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l02.e09", "type": "tiles", "from": "ru", "text": "Меня зовут Ольга.", "answer": "My name is Olga.", "distractors": ["am", "your"], "hint": "Дословно: «моё имя есть Ольга».", "explanation": "My name is Olga — так по-английски говорят «меня зовут Ольга».", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l02.e10", "type": "tiles", "from": "ru", "text": "Как тебя зовут?", "answer": "What is your name?", "distractors": ["my", "am"], "hint": "Дословно: «что есть твоё имя?»", "explanation": "What is your name? — «Как тебя зовут?». Your стоит перед name.", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l02.e11", "type": "type_translation", "from": "ru", "text": "Я Том.", "answers": ["I am Tom.", "I'm Tom."], "hint": "Нужен глагол am.", "explanation": "I am Tom (I'm Tom). Глагол обязателен, хотя по-русски его нет.", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l02.e12", "type": "type_translation", "from": "ru", "text": "Вы Анна?", "answers": ["Are you Anna?"], "difficulty": 2, "hint": "В вопросе глагол стоит перед you.", "explanation": "Are you Anna? В вопросе are идёт первым, а потом you.", "grammar": ["pa1.i-am"], "troubles": ["word-order"] }
+      ]
+    },
+    {
+      "id": "pa1.u03.l03",
+      "kind": "listening",
+      "title": "Знакомство",
+      "textId": "pa1.u03.hello-anna",
+      "exercises": [
+        {
+          "id": "pa1.u03.l03.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "pa1.u03.hello-anna",
+          "hint": "Послушайте диалог целиком. Если нужно, включите его ещё раз.",
+          "explanation": "Анна и Том здороваются утром и знакомятся. Анна думает, что Том — это Макс, и извиняется.",
+          "questions": [
+            { "kind": "mcq", "question": "Как зовут Анну?", "options": ["Anna", "Max", "Olga"], "answer": 0, "explanation": "Анна говорит: I am Anna." },
+            { "kind": "mcq", "question": "Как зовут второго человека?", "options": ["Tom", "Max", "Li"], "answer": 0, "explanation": "Второй человек говорит: My name is Tom." },
+            { "kind": "tfn", "statement": "Tom: yes.", "answer": "false", "explanation": "Анна спрашивает: Are you Max? Том отвечает: No, I am Tom." },
+            { "kind": "tfn", "statement": "Anna: sorry.", "answer": "true", "explanation": "Анна говорит: Sorry, Tom!" },
+            { "kind": "tfn", "statement": "Tom: good night.", "answer": "not_given", "explanation": "Слов good night в диалоге нет: Том говорит goodbye." }
+          ]
+        },
+        { "id": "pa1.u03.l03.e02", "type": "listen_choice", "audio": "My name is Tom.", "question": "Что вы слышите?", "options": ["My name is Tom.", "I am Tom.", "Your name is Tom."], "answer": 0, "hint": "Первое слово — my, «мой».", "explanation": "My name is Tom — «меня зовут Том». I am Tom — тоже правильно, но это другая фраза." },
+        { "id": "pa1.u03.l03.e03", "type": "listen_dictation", "text": "What is your name?", "answers": ["What's your name?"], "hint": "Четыре слова.", "explanation": "What is your name? — «Как вас зовут?». Короткая форма: What's your name?" },
+        { "id": "pa1.u03.l03.e04", "type": "listen_dictation", "text": "I am Anna.", "answers": ["I'm Anna."], "hint": "Три слова, последнее — имя.", "explanation": "I am Anna — «я Анна». Короткая форма: I'm Anna." },
+        { "id": "pa1.u03.l03.e05", "type": "fill_gap", "text": "Hello, Anna! ___ name is Tom.", "translation": "Здравствуйте, Анна! Меня зовут Том.", "answers": [["My"]], "options": ["My", "Your", "You"], "hint": "Том говорит о себе.", "explanation": "My name is Tom: my — «мой». Your name — «ваше имя».", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l03.e06", "type": "fill_gap", "text": "Are you Max? — No, I ___ Tom.", "translation": "Вы Макс? — Нет, я Том.", "answers": [["am"]], "options": ["am", "are", "is"], "hint": "Том говорит о себе.", "explanation": "No, I am Tom — «нет, я Том». С I — am.", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l03.e07", "type": "minimal_pair", "pair": [{ "en": "thank", "ipa": "θæŋk" }, { "en": "tank", "ipa": "tæŋk" }], "say": 0, "hint": "В слове thank язык между зубами.", "explanation": "[θ] в thank — язык между зубами, воздух проходит мягко. [t] в tank — язык за зубами. Заменять th на «с» или «т» — самая частая ошибка русскоговорящих.", "troubles": ["pron-th"] },
+        { "id": "pa1.u03.l03.e08", "type": "speak_repeat", "text": "Thank you, Anna!", "hint": "В thank язык между зубами, не «сэнк».", "explanation": "Th [θ] — глухой звук: кончик языка между зубами, выдыхайте воздух.", "troubles": ["pron-th"] },
+        { "id": "pa1.u03.l03.e09", "type": "speak_answer", "question": "What is your name?", "questionRu": "Как вас зовут? Ответьте полным предложением.", "keywords": [["\\bmy name('s| is)\\b", "\\bI'?m\\b", "\\bI am\\b"]], "minKeywords": 1, "samples": ["My name is Olga.", "I am Max."], "difficulty": 3, "hint": "My name is… или I am…", "explanation": "Оба варианта правильные: My name is Olga и I am Olga. Второй звучит проще.", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l03.e10", "type": "type_translation", "from": "ru", "text": "Да, я Том.", "answers": ["Yes, I am Tom.", "Yes, I'm Tom."], "hint": "Yes — да.", "explanation": "Yes, I am Tom. Yes — «да», потом I am и имя.", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l03.e11", "type": "type_translation", "from": "ru", "text": "Нет, я Макс.", "answers": ["No, I am Max.", "No, I'm Max."], "hint": "No — нет.", "explanation": "No, I am Max. No — «нет».", "grammar": ["pa1.i-am"] }
+      ]
+    },
+    {
+      "id": "pa1.u03.l04",
+      "kind": "reading",
+      "title": "Карточки с именами",
+      "textId": "pa1.u03.names",
+      "exercises": [
+        {
+          "id": "pa1.u03.l04.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "pa1.u03.names",
+          "hint": "Читайте карточки по очереди: в каждой имя.",
+          "explanation": "На карточках Макс и Ольга называют свои имена, а Ольга ещё спрашивает «А вы?».",
+          "questions": [
+            { "kind": "mcq", "question": "Как зовут первого человека?", "options": ["Max", "Olga", "Tom"], "answer": 0, "explanation": "В первой карточке: My name is Max." },
+            { "kind": "mcq", "question": "Кому говорят Good night?", "options": ["Olga", "Max", "Anna"], "answer": 0, "explanation": "В третьей карточке: Good night, Olga! Bye!" },
+            { "kind": "tfn", "statement": "I am Max.", "answer": "true", "explanation": "Макс пишет: I am Max." },
+            { "kind": "tfn", "statement": "My name is Tom.", "answer": "false", "explanation": "В карточках нет Тома: Макс и Ольга." },
+            { "kind": "tfn", "statement": "Hello, Olga!", "answer": "not_given", "explanation": "Слов Hello, Olga! в тексте нет. Ольга сама пишет: Hi!" }
+          ]
+        },
+        { "id": "pa1.u03.l04.e02", "type": "translate_choice", "from": "en", "text": "And you? What is your name?", "options": ["А вы? Как вас зовут?", "А я? Как меня зовут?", "А вы? Как у вас дела?"], "answer": 0, "hint": "And — «а, и».", "explanation": "And you? — «А вы?». Это короткий вопрос в ответ." },
+        { "id": "pa1.u03.l04.e03", "type": "fill_gap", "text": "Hi! I ___ Olga.", "translation": "Привет! Я Ольга.", "answers": [["am"]], "options": ["am", "are", "is"], "hint": "Ольга говорит о себе.", "explanation": "I am Olga. С I — am.", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l04.e04", "type": "fill_gap", "text": "I am Tom. ___ you?", "translation": "Я Том. А вы?", "answers": [["And"]], "options": ["And", "No", "Sorry"], "hint": "«А вы?» — продолжение разговора.", "explanation": "And you? — «А вы?». Так продолжают разговор после своих слов." },
+        { "id": "pa1.u03.l04.e05", "type": "tiles", "from": "ru", "text": "Спокойной ночи, Ольга!", "answer": "Good night, Olga!", "distractors": ["bye", "hello"], "hint": "Good night, и потом имя.", "explanation": "Good night, Olga! — «Спокойной ночи, Ольга!». Имя называют после запятой." },
+        { "id": "pa1.u03.l04.e06", "type": "type_translation", "from": "ru", "text": "Здравствуйте! Я Макс.", "answers": ["Hello! I am Max.", "Hello! I'm Max.", "Hi! I am Max.", "Hi! I'm Max."], "difficulty": 2, "hint": "Hello — здравствуйте.", "explanation": "Hello! I am Max. После приветствия — I am и имя.", "grammar": ["pa1.i-am"] },
+        { "id": "pa1.u03.l04.e07", "type": "speak_repeat", "text": "Hello! I am Max. My name is Max.", "hint": "Три короткие фразы подряд.", "explanation": "Hello — he-LLO. I am и my name is звучат слитно: ай эм, май нейм из." },
+        {
+          "id": "pa1.u03.l04.e08",
+          "type": "write",
+          "task": "Напишите короткое приветствие: поздоровайтесь и скажите, как вас зовут. Например: Hello! My name is Olga.",
+          "minWords": 4,
+          "maxWords": 25,
+          "criteria": [
+            { "id": "greeting", "label": "Есть приветствие", "patterns": ["\\b(hi|hello|good (morning|evening|night))\\b"] },
+            { "id": "name", "label": "Вы назвали своё имя", "patterns": ["\\bmy name('s| is)\\b", "\\bI'?m [a-z]+", "\\bI am [a-z]+"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\bI (is|are)\\b", "message": "С I — только am: I am, I'm." },
+            { "pattern": "\\bmy name (am|are)\\b", "message": "С my name — is: My name is…" }
+          ],
+          "samples": ["Hello! My name is Olga.", "Hi! I am Max. Bye!"],
+          "difficulty": 2,
+          "hint": "План: приветствие → My name is… или I am…",
+          "explanation": "Короткое приветствие: поздоровались и назвали имя. Проверьте am/is и слово my перед name.",
+          "grammar": ["pa1.i-am"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "pa1.u03.test.e01", "type": "translate_choice", "from": "ru", "text": "Добрый вечер!", "options": ["Good evening!", "Good night!", "Good morning!"], "answer": 0, "hint": "Вечер — evening.", "explanation": "Good evening — при встрече вечером. Good night — при прощании перед сном." },
+      { "id": "pa1.u03.test.e02", "type": "translate_choice", "from": "en", "text": "Thank you!", "options": ["Спасибо!", "Извините!", "Пожалуйста!"], "answer": 0, "hint": "Так благодарят.", "explanation": "Thank you — «спасибо». Sorry — «извините», please — «пожалуйста», когда просят." },
+      { "id": "pa1.u03.test.e03", "type": "fill_gap", "text": "I ___ Tom.", "translation": "Я Том.", "answers": [["am"]], "options": ["am", "is", "are"], "hint": "С I — одна форма.", "explanation": "I am Tom. Am — только с I.", "grammar": ["pa1.i-am"] },
+      { "id": "pa1.u03.test.e04", "type": "fill_gap", "text": "You ___ Anna.", "translation": "Ты Анна.", "answers": [["are"]], "options": ["am", "is", "are"], "hint": "С you — особая форма.", "explanation": "You are Anna. С you — are.", "grammar": ["pa1.i-am"] },
+      { "id": "pa1.u03.test.e05", "type": "error_correction", "text": "My name are Max.", "wrong": "are", "correction": "is", "options": ["is", "am", "be"], "hint": "Для одного имени — другая форма.", "explanation": "My name is Max. Для одного имени — is.", "grammar": ["pa1.i-am"] },
+      { "id": "pa1.u03.test.e06", "type": "tiles", "from": "ru", "text": "Как вас зовут?", "answer": "What is your name?", "distractors": ["my", "am"], "difficulty": 2, "hint": "Сначала what.", "explanation": "What is your name? — «Как вас зовут?». Your стоит перед name.", "grammar": ["pa1.i-am"] },
+      { "id": "pa1.u03.test.e07", "type": "type_translation", "from": "ru", "text": "Меня зовут Анна.", "answers": ["My name is Anna.", "I am Anna.", "I'm Anna."], "difficulty": 2, "hint": "Три слова перед именем.", "explanation": "My name is Anna или I am Anna — оба «меня зовут Анна».", "grammar": ["pa1.i-am"] },
+      { "id": "pa1.u03.test.e08", "type": "listen_choice", "audio": "Goodbye!", "question": "Что вы слышите?", "options": ["Goodbye!", "Good night!", "Hello!"], "answer": 0, "hint": "Так прощаются.", "explanation": "Goodbye — «до свидания». Hello — «здравствуйте», good night — «спокойной ночи»." },
+      { "id": "pa1.u03.test.e09", "type": "listen_dictation", "text": "My name is Max.", "hint": "Четыре слова.", "explanation": "My name is Max — «меня зовут Макс»." },
+      { "id": "pa1.u03.test.e10", "type": "match_pairs", "pairs": [{ "en": "yes", "ru": "да" }, { "en": "no", "ru": "нет" }, { "en": "sorry", "ru": "извините" }, { "en": "please", "ru": "пожалуйста" }, { "en": "hi", "ru": "привет" }], "hint": "Yes и no — самые короткие.", "explanation": "Yes — «да», no — «нет», sorry — «извините», please — «пожалуйста», hi — «привет»." },
+      { "id": "pa1.u03.test.e11", "type": "minimal_pair", "pair": [{ "en": "three", "ipa": "θriː" }, { "en": "tree", "ipa": "triː" }], "say": 1, "hint": "Слушайте первый звук.", "explanation": "Tree начинается с [t], three — с [θ], язык между зубами.", "troubles": ["pron-th"] },
+      { "id": "pa1.u03.test.e12", "type": "fill_gap", "text": "Hello! I am Max. ___ you?", "translation": "Здравствуйте! Я Макс. А вы?", "answers": [["And"]], "options": ["And", "No", "Bye"], "difficulty": 2, "hint": "«А вы?» — продолжить разговор.", "explanation": "And you? — «А вы?»." },
+      { "id": "pa1.u03.test.e13", "type": "speak_answer", "question": "What is your name?", "questionRu": "Как вас зовут? Ответьте о себе.", "keywords": [["\\bmy name('s| is)\\b", "\\bI'?m\\b", "\\bI am\\b"]], "minKeywords": 1, "samples": ["My name is Anna.", "I am Tom."], "difficulty": 3, "hint": "My name is… или I am…", "explanation": "Скажите My name is… или I am… и своё имя.", "grammar": ["pa1.i-am"] },
+      { "id": "pa1.u03.test.e14", "type": "speak_repeat", "text": "Good morning! Thank you!", "hint": "Следите за звуком th в thank.", "explanation": "Good MORN-ing, THANK you: в thank язык между зубами.", "troubles": ["pron-th"] }
+    ]
+  }
+}

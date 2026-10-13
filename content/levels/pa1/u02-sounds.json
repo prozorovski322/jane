@@ -1,0 +1,220 @@
+{
+  "id": "pa1.u02",
+  "level": "PA1",
+  "order": 2,
+  "title": { "en": "Sounds and syllables", "ru": "Звуки и слоги" },
+  "description": "Учимся читать: короткие гласные, немая e на конце слова, буквосочетания sh и ch, ударение в словах из нескольких слогов.",
+  "goals": [
+    "Могу прочитать короткое слово с одной гласной: cat, bed, big, hot, cup.",
+    "Могу отличить слова вроде hat и hate по немой e на конце.",
+    "Могу прочитать буквосочетания sh и ch и различить ship и sheep на слух.",
+    "Могу поставить ударение в словах banana, window, table.",
+    "Могу прочитать вслух короткую фразу из знакомых слов."
+  ],
+  "grammar": ["pa1.sounds"],
+  "troubles": ["pron-vowels"],
+  "words": [
+    { "id": "sound", "en": "sound", "ipa": "saʊnd", "pos": "noun", "ru": ["звук"], "example": { "en": "A big sound.", "ru": "Громкий звук." } },
+    { "id": "word", "en": "word", "ipa": "wɝːd", "pos": "noun", "ru": ["слово"], "example": { "en": "A word: cat.", "ru": "Слово: cat." } },
+    { "id": "syllable", "en": "syllable", "ipa": "ˈsɪləbəl", "pos": "noun", "ru": ["слог"], "example": { "en": "Banana: syllables.", "ru": "Banana: слоги." }, "note": "В слове banana три слога, ударный — второй." },
+    { "id": "bed", "en": "bed", "ipa": "bed", "pos": "noun", "ru": ["кровать"], "example": { "en": "A big bed.", "ru": "Большая кровать." }, "picture": { "emoji": "🛏️" } },
+    { "id": "red", "en": "red", "ipa": "red", "pos": "adj", "ru": ["красный"], "example": { "en": "A red cup.", "ru": "Красная чашка." }, "picture": { "emoji": "🔴" }, "topics": ["colors"] },
+    { "id": "big", "en": "big", "ipa": "bɪɡ", "pos": "adj", "ru": ["большой"], "example": { "en": "A big bus.", "ru": "Большой автобус." } },
+    { "id": "pig", "en": "pig", "ipa": "pɪɡ", "pos": "noun", "ru": ["свинья"], "example": { "en": "A big pig.", "ru": "Большая свинья." }, "picture": { "emoji": "🐷" }, "topics": ["animals"] },
+    { "id": "hot", "en": "hot", "ipa": "hɑːt", "pos": "adj", "ru": ["горячий", "жаркий"], "example": { "en": "A hot cup.", "ru": "Горячая чашка." }, "picture": { "emoji": "🔥" } },
+    { "id": "cup", "en": "cup", "ipa": "kʌp", "pos": "noun", "ru": ["чашка"], "example": { "en": "A hot cup.", "ru": "Горячая чашка." }, "picture": { "emoji": "☕" } },
+    { "id": "bus", "en": "bus", "ipa": "bʌs", "pos": "noun", "ru": ["автобус"], "example": { "en": "A red bus.", "ru": "Красный автобус." }, "picture": { "emoji": "🚌" } },
+    { "id": "cake", "en": "cake", "ipa": "keɪk", "pos": "noun", "ru": ["торт", "пирожное"], "example": { "en": "A big cake.", "ru": "Большой торт." }, "note": "Конечная e не читается, а a называется «эй»: [keɪk].", "picture": { "emoji": "🍰" } },
+    { "id": "bike", "en": "bike", "ipa": "baɪk", "pos": "noun", "ru": ["велосипед"], "example": { "en": "A red bike.", "ru": "Красный велосипед." }, "note": "Конечная e не читается, а i называется «ай»: [baɪk].", "picture": { "emoji": "🚲" } },
+    { "id": "home", "en": "home", "ipa": "hoʊm", "pos": "noun", "ru": ["дом (место, где живут)"], "example": { "en": "A big home.", "ru": "Большой дом." }, "picture": { "emoji": "🏠" } },
+    { "id": "ship", "en": "ship", "ipa": "ʃɪp", "pos": "noun", "ru": ["корабль"], "example": { "en": "A big ship.", "ru": "Большой корабль." }, "note": "Sh читается как «ш», а i — коротко: [ʃɪp].", "picture": { "emoji": "🚢" } },
+    { "id": "sheep", "en": "sheep", "ipa": "ʃiːp", "pos": "noun", "ru": ["овца", "овцы"], "example": { "en": "A big sheep.", "ru": "Большая овца." }, "note": "Ee читается как долгое «и:». Слово sheep звучит так же в единственном и во множественном числе.", "picture": { "emoji": "🐑" }, "topics": ["animals"] },
+    { "id": "shop", "en": "shop", "ipa": "ʃɑːp", "pos": "noun", "ru": ["магазин"], "example": { "en": "A red shop.", "ru": "Красный магазин." }, "picture": { "emoji": "🏪" } },
+    { "id": "chair", "en": "chair", "ipa": "tʃer", "pos": "noun", "ru": ["стул"], "example": { "en": "A red chair.", "ru": "Красный стул." }, "picture": { "emoji": "🪑" } },
+    { "id": "cheese", "en": "cheese", "ipa": "tʃiːz", "pos": "noun", "ru": ["сыр"], "example": { "en": "A big cheese.", "ru": "Большой сыр." }, "picture": { "emoji": "🧀" } },
+    { "id": "banana", "en": "banana", "ipa": "bəˈnænə", "pos": "noun", "ru": ["банан"], "example": { "en": "A yellow banana.", "ru": "Жёлтый банан." }, "note": "Ударение на второй слог: ba-NA-na.", "picture": { "emoji": "🍌" } },
+    { "id": "window", "en": "window", "ipa": "ˈwɪndoʊ", "pos": "noun", "ru": ["окно"], "example": { "en": "A big window.", "ru": "Большое окно." }, "picture": { "emoji": "🪟" } },
+    { "id": "table", "en": "table", "ipa": "ˈteɪbəl", "pos": "noun", "ru": ["стол"], "example": { "en": "A big table.", "ru": "Большой стол." } },
+    { "id": "book", "en": "book", "ipa": "bʊk", "pos": "noun", "ru": ["книга"], "example": { "en": "A red book.", "ru": "Красная книга." }, "note": "Oo в этом слове читается коротко: [bʊk].", "picture": { "emoji": "📕" } }
+  ],
+  "texts": [
+    {
+      "id": "pa1.u02.listen-say",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Listen and say", "ru": "Слушай и повторяй" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Ship.", "ru": "Корабль." },
+        { "speaker": "tom", "en": "Ship.", "ru": "Корабль." },
+        { "speaker": "anna", "en": "Sheep.", "ru": "Овца." },
+        { "speaker": "tom", "en": "Sheep!", "ru": "Овца!" },
+        { "speaker": "anna", "en": "Cheese.", "ru": "Сыр." },
+        { "speaker": "tom", "en": "Cheese.", "ru": "Сыр." },
+        { "speaker": "anna", "en": "Chair.", "ru": "Стул." },
+        { "speaker": "tom", "en": "Chair!", "ru": "Стул!" }
+      ]
+    },
+    {
+      "id": "pa1.u02.things",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "Big and red", "ru": "Большое и красное" },
+      "lines": [
+        { "en": "A big red bus. A hot cup. A big red book.", "ru": "Большой красный автобус. Горячая чашка. Большая красная книга." },
+        { "en": "A red bike. A big cake. A yellow banana.", "ru": "Красный велосипед. Большой торт. Жёлтый банан." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "pa1.u02.l01",
+      "kind": "vocabulary",
+      "title": "Что вокруг",
+      "exercises": [
+        { "id": "pa1.u02.l01.e01", "type": "picture_choice", "mode": "picture-to-word", "word": "bus", "distractors": ["bike", "ship"], "hint": "На нём ездят по городу.", "explanation": "Bus — «автобус». Буква u читается как короткое «а»: [bʌs]." },
+        { "id": "pa1.u02.l01.e02", "type": "picture_choice", "mode": "word-to-picture", "word": "cake", "distractors": ["cheese", "banana"], "hint": "Это сладкое, его едят на праздник.", "explanation": "Cake — «торт». Конечная e не читается, а a называется «эй»: [keɪk]." },
+        { "id": "pa1.u02.l01.e03", "type": "picture_choice", "mode": "picture-to-word", "word": "home", "distractors": ["shop", "window"], "hint": "Здесь живут.", "explanation": "Home — «дом, где живёшь». Конечная e не читается: [hoʊm]." },
+        { "id": "pa1.u02.l01.e04", "type": "translate_choice", "from": "en", "text": "chair", "options": ["стул", "стол", "кровать"], "answer": 0, "hint": "На нём сидят.", "explanation": "Chair — «стул». Буквы ch читаются как «ч»: [tʃer]." },
+        { "id": "pa1.u02.l01.e05", "type": "match_pairs", "pairs": [{ "en": "bed", "ru": "кровать" }, { "en": "chair", "ru": "стул" }, { "en": "table", "ru": "стол" }, { "en": "window", "ru": "окно" }, { "en": "book", "ru": "книга" }], "hint": "Это то, что есть в комнате.", "explanation": "Bed — «кровать», chair — «стул», table — «стол», window — «окно», book — «книга»." },
+        { "id": "pa1.u02.l01.e06", "type": "match_pairs", "pairs": [{ "en": "cup", "ru": "чашка" }, { "en": "cheese", "ru": "сыр" }, { "en": "banana", "ru": "банан" }, { "en": "bike", "ru": "велосипед" }, { "en": "ship", "ru": "корабль" }], "hint": "Banana и cheese — еда.", "explanation": "Cup — «чашка», cheese — «сыр», banana — «банан», bike — «велосипед», ship — «корабль»." },
+        { "id": "pa1.u02.l01.e07", "type": "fill_gap", "text": "A ___ cup.", "translation": "Горячая чашка.", "answers": [["hot"]], "options": ["hot", "red", "big"], "hint": "Чашка горячая, а не красная и не большая.", "explanation": "Hot — «горячий». A hot cup — «горячая чашка». Прилагательное стоит перед существительным." },
+        { "id": "pa1.u02.l01.e08", "type": "translate_choice", "from": "ru", "text": "большой", "options": ["big", "bed", "bus"], "answer": 0, "hint": "Три буквы, слово начинается с b.", "explanation": "Big — «большой». Буква i в этом слове читается коротко: [bɪɡ]." },
+        { "id": "pa1.u02.l01.e09", "type": "type_translation", "from": "ru", "text": "кровать", "answers": ["bed"], "hint": "Три буквы: b, e, d.", "explanation": "Bed — «кровать». Буква e читается коротко: [bed]." },
+        { "id": "pa1.u02.l01.e10", "type": "tiles", "from": "ru", "text": "Красная книга.", "answer": "A red book.", "distractors": ["big", "bed"], "hint": "Сначала a, потом цвет, потом предмет.", "explanation": "A red book — «красная книга». Прилагательное red стоит перед существительным book." },
+        { "id": "pa1.u02.l01.e11", "type": "tiles", "from": "ru", "text": "Большой красный автобус.", "answer": "A big red bus.", "distractors": ["cup", "bike"], "difficulty": 2, "hint": "Сначала размер, потом цвет.", "explanation": "A big red bus: сначала размер (big), потом цвет (red), потом предмет (bus)." },
+        { "id": "pa1.u02.l01.e12", "type": "listen_dictation", "text": "bike", "hint": "Слово из четырёх букв, на конце e.", "explanation": "Bike — «велосипед». Пишется b-i-k-e: конечная e не читается, а i называется «ай»." },
+        { "id": "pa1.u02.l01.e13", "type": "picture_choice", "mode": "picture-to-word", "word": "pig", "distractors": ["sheep", "cat"], "hint": "Розовое животное с хвостиком-пружинкой.", "explanation": "Pig — «свинья». Буква i читается коротко: [pɪɡ]." }
+      ]
+    },
+    {
+      "id": "pa1.u02.l02",
+      "kind": "pronunciation",
+      "title": "Короткие гласные и немая e",
+      "grammar": "pa1.sounds",
+      "exercises": [
+        { "id": "pa1.u02.l02.e01", "type": "listen_choice", "audio": "bike", "question": "Какое слово вы слышите?", "options": ["bike", "big", "bed"], "answer": 0, "hint": "В слове слышно «ай».", "explanation": "Bike [baɪk] — гласная называется своим именем. В big [bɪɡ] и bed [bed] гласные короткие.", "grammar": ["pa1.sounds"], "troubles": ["pron-vowels"] },
+        { "id": "pa1.u02.l02.e02", "type": "listen_choice", "audio": "cake", "question": "Какое слово вы слышите?", "options": ["cake", "cup", "cat"], "answer": 0, "hint": "В слове слышно «эй».", "explanation": "Cake [keɪk] — с немой e. Cat [kæt] и cup [kʌp] — с короткими гласными.", "grammar": ["pa1.sounds"], "troubles": ["pron-vowels"] },
+        { "id": "pa1.u02.l02.e03", "type": "listen_choice", "audio": "hot", "question": "Какое слово вы слышите?", "options": ["hot", "home", "hat"], "answer": 0, "hint": "Гласный короткий, на конце звук [t].", "explanation": "Hot [hɑːt] — короткая o. Home [hoʊm] — o называется «оу». Hat [hæt] — с буквой a.", "grammar": ["pa1.sounds"] },
+        { "id": "pa1.u02.l02.e04", "type": "minimal_pair", "pair": [{ "en": "hat", "ipa": "hæt" }, { "en": "hate", "ipa": "heɪt" }], "say": 1, "hint": "Одна гласная короткая, другая называется «эй».", "explanation": "Hat [hæt] — короткая a. Hate [heɪt] — с немой e a называется «эй».", "troubles": ["pron-vowels"] },
+        { "id": "pa1.u02.l02.e05", "type": "minimal_pair", "pair": [{ "en": "not", "ipa": "nɑːt" }, { "en": "note", "ipa": "noʊt" }], "say": 1, "hint": "В одном слове звучит «оу».", "explanation": "Not [nɑːt] — короткая o. Note [noʊt] — с немой e o называется «оу».", "troubles": ["pron-vowels"] },
+        { "id": "pa1.u02.l02.e06", "type": "minimal_pair", "pair": [{ "en": "ship", "ipa": "ʃɪp" }, { "en": "sheep", "ipa": "ʃiːp" }], "say": 0, "hint": "Первый звук одинаковый, различается длина гласной.", "explanation": "Ship [ʃɪp] — короткий гласный, sheep [ʃiːp] — долгий. Разницу лучше тренировать на слух.", "troubles": ["pron-vowels"] },
+        { "id": "pa1.u02.l02.e07", "type": "minimal_pair", "pair": [{ "en": "chair", "ipa": "tʃer" }, { "en": "share", "ipa": "ʃer" }], "say": 0, "hint": "В одном слове первый звук — «ч», в другом — «ш».", "explanation": "Ch читается [tʃ] как «ч», sh — [ʃ] как «ш». Chair начинается с «ч»." },
+        { "id": "pa1.u02.l02.e08", "type": "listen_dictation", "text": "cheese", "hint": "Шесть букв, в середине ee.", "explanation": "Cheese — «сыр»: ch читается как «ч», ee — как долгое «и:»." },
+        { "id": "pa1.u02.l02.e09", "type": "listen_dictation", "text": "ship", "hint": "Четыре буквы, начинается с sh.", "explanation": "Ship — «корабль»: sh читается «ш», i — коротко." },
+        { "id": "pa1.u02.l02.e10", "type": "word_stress", "word": "banana", "syllables": ["ba", "na", "na"], "stress": 1, "hint": "Ударение не на первом слоге.", "explanation": "ba-NA-na — ударение на второй слог. Первый и последний слоги звучат коротко." },
+        { "id": "pa1.u02.l02.e11", "type": "word_stress", "word": "window", "syllables": ["win", "dow"], "stress": 0, "hint": "В двух слогах ударение на первом.", "explanation": "WIN-dow — ударение на первый слог. Второй слог звучит коротко: [doʊ]." },
+        { "id": "pa1.u02.l02.e12", "type": "word_stress", "word": "table", "syllables": ["ta", "ble"], "stress": 0, "hint": "Громче и дольше первый слог.", "explanation": "TA-ble — ударение на первый слог: [ˈteɪbəl]." },
+        { "id": "pa1.u02.l02.e15", "type": "translate_choice", "from": "en", "text": "syllable", "options": ["слог", "звук", "слово"], "answer": 0, "hint": "Из таких частей состоит слово banana.", "explanation": "Syllable — «слог». В слове banana три слога, ударный — второй." },
+        { "id": "pa1.u02.l02.e16", "type": "translate_choice", "from": "en", "text": "sound", "options": ["звук", "слог", "буква"], "answer": 0, "hint": "Его слышат, когда произносят букву или слово.", "explanation": "Sound — «звук». Буквы sh вместе дают один звук [ʃ]." },
+        { "id": "pa1.u02.l02.e13", "type": "speak_repeat", "text": "banana", "hint": "Скажите ba-NA-na: средний слог громче.", "explanation": "Banana [bəˈnænə]: первый слог неясный, ударение на втором." },
+        { "id": "pa1.u02.l02.e14", "type": "speak_repeat", "text": "A big red bus.", "hint": "Каждое слово короткое, гласные тоже.", "explanation": "Big [bɪɡ], red [red], bus [bʌs] — короткие гласные, как в правиле для закрытого слога." }
+      ]
+    },
+    {
+      "id": "pa1.u02.l03",
+      "kind": "listening",
+      "title": "Слушай и повторяй",
+      "textId": "pa1.u02.listen-say",
+      "exercises": [
+        {
+          "id": "pa1.u02.l03.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "pa1.u02.listen-say",
+          "hint": "Анна говорит слово, Том повторяет.",
+          "explanation": "Анна называет слова ship, sheep, cheese и chair, а Том повторяет их за ней.",
+          "questions": [
+            { "kind": "mcq", "question": "Какое слово Анна говорит первым?", "options": ["ship", "sheep", "shop"], "answer": 0, "explanation": "Первое слово — ship, «корабль». Том повторяет: Ship." },
+            { "kind": "mcq", "question": "Какое слово Анна говорит последним?", "options": ["chair", "cheese", "ship"], "answer": 0, "explanation": "Последнее слово — chair, «стул»." },
+            { "kind": "tfn", "statement": "Tom: sheep.", "answer": "true", "explanation": "Том повторяет за Анной: Sheep!" },
+            { "kind": "mcq", "question": "Какое слово идёт после sheep?", "options": ["cheese", "chair", "ship"], "answer": 0, "explanation": "После sheep Анна говорит cheese, «сыр»." },
+            { "kind": "tfn", "statement": "Anna: shop.", "answer": "not_given", "explanation": "Слова shop в диалоге нет." }
+          ]
+        },
+        { "id": "pa1.u02.l03.e02", "type": "listen_choice", "audio": "sheep", "question": "Какое слово вы слышите?", "options": ["sheep", "ship", "shop"], "answer": 0, "hint": "Слышен долгий звук «и:».", "explanation": "Sheep [ʃiːp] — долгий гласный. Ship [ʃɪp] — короткий, shop [ʃɑːp] — «о»." },
+        { "id": "pa1.u02.l03.e03", "type": "listen_choice", "audio": "shop", "question": "Какое слово вы слышите?", "options": ["shop", "ship", "chair"], "answer": 0, "hint": "Слышен звук «о».", "explanation": "Shop [ʃɑːp] — «магазин»: sh — «ш», o — открытое «о»." },
+        { "id": "pa1.u02.l03.e04", "type": "listen_dictation", "text": "Sheep.", "answers": ["sheep"], "hint": "Пять букв, в середине ee.", "explanation": "Sheep — «овца». Ee читается как долгое «и:»." },
+        { "id": "pa1.u02.l03.e05", "type": "listen_dictation", "text": "Chair.", "answers": ["chair"], "hint": "Пять букв, начинается с ch.", "explanation": "Chair — «стул». Ch читается как «ч»." },
+        { "id": "pa1.u02.l03.e06", "type": "fill_gap", "text": "S, H, I, ___: ship.", "translation": "Эс, эйч, ай, пи: ship.", "answers": [["P"]], "options": ["P", "B", "D"], "hint": "Последний звук слова ship — [p].", "explanation": "Ship пишется S, H, I, P. Буквы sh вместе дают звук «ш».", "grammar": ["pa1.sounds"] },
+        { "id": "pa1.u02.l03.e07", "type": "fill_gap", "text": "C, H, A, I, ___: chair.", "translation": "Си, эйч, эй, ай, а:р: chair.", "answers": [["R"]], "options": ["R", "L", "N"], "hint": "Последняя буква слова chair.", "explanation": "Chair пишется C, H, A, I, R. Буквы ch дают «ч», ai — «эй»." },
+        { "id": "pa1.u02.l03.e12", "type": "match_pairs", "pairs": [{ "en": "word", "ru": "слово" }, { "en": "sound", "ru": "звук" }, { "en": "syllable", "ru": "слог" }, { "en": "letter", "ru": "буква" }], "hint": "Letter вы знаете из первого юнита.", "explanation": "Word — «слово», sound — «звук», syllable — «слог», letter — «буква». Слово состоит из слогов, слог — из звуков." },
+        { "id": "pa1.u02.l03.e08", "type": "translate_choice", "from": "en", "text": "sheep", "options": ["овца", "корабль", "магазин"], "answer": 0, "hint": "Это животное с шерстью.", "explanation": "Sheep — «овца». Ship — «корабль», shop — «магазин». Три похожих слова." },
+        { "id": "pa1.u02.l03.e09", "type": "translate_choice", "from": "ru", "text": "корабль", "options": ["ship", "sheep", "shop"], "answer": 0, "hint": "Короткая гласная в середине.", "explanation": "Ship — «корабль». Sheep — «овца», shop — «магазин»." },
+        { "id": "pa1.u02.l03.e10", "type": "speak_repeat", "text": "Ship. Sheep.", "hint": "Следите за длиной гласной: короткая — долгая.", "explanation": "Ship [ʃɪp] и sheep [ʃiːp]. Во втором слове гласную нужно тянуть дольше.", "troubles": ["pron-vowels"] },
+        { "id": "pa1.u02.l03.e11", "type": "speak_repeat", "text": "Cheese. Chair.", "hint": "В обоих словах начало как «ч».", "explanation": "Cheese [tʃiːz] и chair [tʃer]. В cheese последний звук — [z], звонкий." }
+      ]
+    },
+    {
+      "id": "pa1.u02.l04",
+      "kind": "reading",
+      "title": "Большое и красное",
+      "textId": "pa1.u02.things",
+      "exercises": [
+        {
+          "id": "pa1.u02.l04.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "pa1.u02.things",
+          "hint": "Читайте по словосочетаниям: каждое заканчивается точкой.",
+          "explanation": "В тексте шесть словосочетаний: автобус, чашка, книга, велосипед, торт и банан.",
+          "questions": [
+            { "kind": "mcq", "question": "Какого цвета автобус?", "options": ["red", "yellow", "big"], "answer": 0, "explanation": "В тексте написано: A big red bus — красный автобус." },
+            { "kind": "mcq", "question": "Какой банан?", "options": ["yellow", "red", "hot"], "answer": 0, "explanation": "В тексте: A yellow banana — жёлтый банан." },
+            { "kind": "tfn", "statement": "A hot cup.", "answer": "true", "explanation": "В тексте есть словосочетание A hot cup — «горячая чашка»." },
+            { "kind": "tfn", "statement": "A big bike.", "answer": "false", "explanation": "В тексте велосипед красный: A red bike, а не большой." },
+            { "kind": "tfn", "statement": "A big bed.", "answer": "not_given", "explanation": "Кровати (bed) в тексте нет." }
+          ]
+        },
+        { "id": "pa1.u02.l04.e02", "type": "translate_choice", "from": "en", "text": "A big red book.", "options": ["Большая красная книга.", "Большая красная кровать.", "Маленькая красная книга."], "answer": 0, "hint": "Book — книга, не bed.", "explanation": "A big red book — «большая красная книга». Сначала размер, потом цвет." },
+        { "id": "pa1.u02.l04.e03", "type": "translate_choice", "from": "en", "text": "A yellow banana.", "options": ["Жёлтый банан.", "Жёлтый торт.", "Красный банан."], "answer": 0, "hint": "Yellow — жёлтый (слово из первого юнита).", "explanation": "A yellow banana — «жёлтый банан»." },
+        { "id": "pa1.u02.l04.e04", "type": "tiles", "from": "ru", "text": "Большой торт.", "answer": "A big cake.", "distractors": ["hot", "red"], "hint": "Сначала a, потом размер.", "explanation": "A big cake — «большой торт». Прилагательное стоит перед существительным." },
+        { "id": "pa1.u02.l04.e05", "type": "tiles", "from": "ru", "text": "Горячая чашка.", "answer": "A hot cup.", "distractors": ["big", "red"], "hint": "Hot — горячий.", "explanation": "A hot cup — «горячая чашка»." },
+        { "id": "pa1.u02.l04.e06", "type": "type_translation", "from": "ru", "text": "Красный велосипед.", "answers": ["A red bike."], "hint": "Три слова: a, красный, велосипед.", "explanation": "A red bike — «красный велосипед». Перед существительным в единственном числе нужен a." },
+        { "id": "pa1.u02.l04.e07", "type": "error_correction", "text": "Red a bus.", "wrong": "Red a", "correction": "A red", "options": ["A red", "A big", "Red big"], "hint": "Сначала a, потом цвет.", "explanation": "A стоит перед прилагательным: A red bus, а не Red a bus.", "troubles": ["word-order", "articles"] },
+        { "id": "pa1.u02.l04.e08", "type": "speak_repeat", "text": "A big red bus. A hot cup.", "hint": "Читайте с паузой между словосочетаниями.", "explanation": "Каждое словосочетание — отдельная короткая фраза: A big red bus. A hot cup." },
+        {
+          "id": "pa1.u02.l04.e09",
+          "type": "write",
+          "task": "Напишите три словосочетания по образцу «a big red bus»: слово a, потом большой, красный или горячий, потом предмет.",
+          "minWords": 6,
+          "maxWords": 30,
+          "criteria": [
+            { "id": "a-adj-noun", "label": "Есть словосочетания вида a + прилагательное + предмет", "patterns": ["\\ba (big|red|hot|yellow) [a-z]+"] },
+            { "id": "three", "label": "Не меньше трёх словосочетаний с a", "patterns": ["\\ba [a-z]+ [a-z]+.*\\ba [a-z]+ [a-z]+.*\\ba [a-z]+ [a-z]+"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\b(big|red|hot|yellow) a [a-z]+", "message": "Слово a стоит перед прилагательным: a big bus, а не big a bus." }
+          ],
+          "samples": ["A big bus. A red cup. A hot cake.", "A big red bed. A yellow banana. A hot cup."],
+          "difficulty": 2,
+          "hint": "Образец: A red bike. Слово a пишется первым.",
+          "explanation": "Каждое словосочетание: a + прилагательное + предмет. Хорошо, если вы проверили гласные в словах: big, red, bus — короткие.",
+          "grammar": ["pa1.sounds"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "pa1.u02.test.e01", "type": "picture_choice", "mode": "picture-to-word", "word": "banana", "distractors": ["cheese", "cake"], "hint": "Жёлтый фрукт.", "explanation": "Banana — «банан». Ударение на втором слоге: ba-NA-na." },
+      { "id": "pa1.u02.test.e02", "type": "picture_choice", "mode": "word-to-picture", "word": "chair", "distractors": ["bed", "shop"], "hint": "На нём сидят.", "explanation": "Chair — «стул». Ch читается как «ч»." },
+      { "id": "pa1.u02.test.e03", "type": "translate_choice", "from": "en", "text": "window", "options": ["окно", "стол", "дом"], "answer": 0, "hint": "Через него смотрят на улицу.", "explanation": "Window — «окно»: [ˈwɪndoʊ]." },
+      { "id": "pa1.u02.test.e04", "type": "translate_choice", "from": "ru", "text": "магазин", "options": ["shop", "ship", "sheep"], "answer": 0, "hint": "Гласная в нём — «о», а первые звуки — «ш».", "explanation": "Shop — «магазин». Ship — «корабль», sheep — «овца»." },
+      { "id": "pa1.u02.test.e05", "type": "match_pairs", "pairs": [{ "en": "red", "ru": "красный" }, { "en": "big", "ru": "большой" }, { "en": "hot", "ru": "горячий" }, { "en": "yellow", "ru": "жёлтый" }], "hint": "Yellow вы знаете из первого юнита.", "explanation": "Red — «красный», big — «большой», hot — «горячий», yellow — «жёлтый»." },
+      { "id": "pa1.u02.test.e06", "type": "fill_gap", "text": "A ___ ship.", "translation": "Большой корабль.", "answers": [["big"]], "options": ["big", "hot", "yellow"], "hint": "Корабль большой.", "explanation": "A big ship — «большой корабль». Big — «большой»." },
+      { "id": "pa1.u02.test.e07", "type": "listen_choice", "audio": "cheese", "question": "Какое слово вы слышите?", "options": ["cheese", "chair", "sheep"], "answer": 0, "hint": "Слово начинается на «ч», заканчивается на [z].", "explanation": "Cheese [tʃiːz]: «ч» в начале, долгое «и:», звонкий [z] в конце." },
+      { "id": "pa1.u02.test.e08", "type": "listen_dictation", "text": "cake", "hint": "Четыре буквы, на конце e.", "explanation": "Cake — «торт»: c-a-k-e. Конечная e не читается, а a называется «эй»." },
+      { "id": "pa1.u02.test.e09", "type": "minimal_pair", "pair": [{ "en": "bit", "ipa": "bɪt" }, { "en": "bite", "ipa": "baɪt" }], "say": 1, "hint": "В одном слове слышно «ай».", "explanation": "Bit [bɪt] — короткая i. Bite [baɪt] — с немой e i называется «ай».", "troubles": ["pron-vowels"] },
+      { "id": "pa1.u02.test.e10", "type": "minimal_pair", "pair": [{ "en": "ship", "ipa": "ʃɪp" }, { "en": "sheep", "ipa": "ʃiːp" }], "say": 1, "hint": "Здесь долгий гласный.", "explanation": "В sheep гласный [iː] долгий, в ship [ɪ] — короткий.", "troubles": ["pron-vowels"] },
+      { "id": "pa1.u02.test.e11", "type": "word_stress", "word": "banana", "syllables": ["ba", "na", "na"], "stress": 1, "hint": "Ударный слог — средний.", "explanation": "ba-NA-na — ударение на второй слог." },
+      { "id": "pa1.u02.test.e12", "type": "tiles", "from": "ru", "text": "Большой красный стул.", "answer": "A big red chair.", "distractors": ["hot", "bed"], "difficulty": 2, "hint": "Размер, потом цвет.", "explanation": "A big red chair — «большой красный стул»: размер перед цветом." },
+      { "id": "pa1.u02.test.e13", "type": "type_translation", "from": "ru", "text": "Горячий сыр.", "answers": ["A hot cheese.", "Hot cheese."], "difficulty": 2, "hint": "Hot — горячий, cheese — сыр.", "explanation": "Hot cheese или a hot cheese — «горячий сыр»." },
+      { "id": "pa1.u02.test.e14", "type": "speak_repeat", "text": "A big red ship.", "hint": "Три коротких гласных подряд.", "explanation": "Big [bɪɡ], red [red], ship [ʃɪp] — короткие гласные." }
+    ]
+  }
+}
