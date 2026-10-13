@@ -147,7 +147,7 @@ describe('dictionary search', () => {
   it('ranks exact and prefix matches first, in English and Russian', () => {
     expect(searchDictionary(entries, f({ query: 'he' }), ctx)[0]!.en).toBe('he');
     expect(searchDictionary(entries, f({ query: 'Учитель' }), ctx)[0]!.en).toBe('teacher');
-    expect(searchDictionary(entries, f({ query: 'morn' }), ctx)[0]!.en).toBe('good morning');
+    expect(searchDictionary(entries, f({ query: 'morn' }), ctx)[0]!.en).toBe('morning');
   });
 
   it('ignores ё', () => {

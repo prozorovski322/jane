@@ -1,0 +1,327 @@
+{
+  "id": "a1.u05",
+  "level": "A1",
+  "order": 5,
+  "title": { "en": "My day", "ru": "Мой день" },
+  "description": "Рассказываем о том, что мы делаем каждый день: встаём, завтракаем, идём на работу. Present Simple, время на часах, дни недели и предлоги времени.",
+  "goals": [
+    "Могу рассказать о своём обычном дне: I get up at seven.",
+    "Могу сказать, что делает другой человек: He works in an office.",
+    "Могу сказать «не»: I don't work on Sunday. She doesn't work on Saturday.",
+    "Могу спросить и назвать время: What time is it? It is half past seven.",
+    "Могу назвать дни недели и использовать at, on, in.",
+    "Могу написать короткий текст о своём дне."
+  ],
+  "grammar": ["a1.present-simple", "a1.telling-time", "a1.time-prepositions"],
+  "troubles": ["tenses", "prepositions"],
+  "words": [
+    { "id": "wake-up", "en": "wake up", "ipa": "weɪk ʌp", "pos": "phrasal", "ru": ["просыпаться"], "example": { "en": "I wake up at six.", "ru": "Я просыпаюсь в шесть." }, "forms": { "third": "wakes up" }, "topics": ["daily"] },
+    { "id": "get-up", "en": "get up", "ipa": "ɡet ʌp", "pos": "phrasal", "ru": ["вставать"], "example": { "en": "I get up at seven.", "ru": "Я встаю в семь." }, "forms": { "third": "gets up" }, "topics": ["daily"] },
+    { "id": "have", "en": "have", "ipa": "hæv", "pos": "verb", "ru": ["иметь", "есть (о еде)"], "example": { "en": "I have breakfast at eight.", "ru": "Я завтракаю в восемь." }, "forms": { "third": "has" }, "note": "Have breakfast — «завтракать»: с едой используется have, а не eat.", "topics": ["daily"] },
+    { "id": "go", "en": "go", "ipa": "ɡoʊ", "pos": "verb", "ru": ["идти", "ехать"], "example": { "en": "I go to school.", "ru": "Я иду в школу." }, "forms": { "third": "goes" }, "topics": ["daily"] },
+    { "id": "come", "en": "come", "ipa": "kʌm", "pos": "verb", "ru": ["приходить", "приезжать"], "example": { "en": "He comes home at six.", "ru": "Он приходит домой в шесть." }, "topics": ["daily"] },
+    { "id": "work", "en": "work", "ipa": "wɝːk", "pos": "verb", "ru": ["работать"], "example": { "en": "I work in an office.", "ru": "Я работаю в офисе." }, "topics": ["daily"] },
+    { "id": "work#noun", "en": "work", "ipa": "wɝːk", "pos": "noun", "ru": ["работа"], "example": { "en": "I go to work at eight.", "ru": "Я иду на работу в восемь." }, "note": "Go to work — «идти на работу»: перед work артикль не нужен.", "topics": ["daily"] },
+    { "id": "study", "en": "study", "ipa": "ˈstʌdi", "pos": "verb", "ru": ["учиться", "изучать"], "example": { "en": "She studies English.", "ru": "Она изучает английский." }, "forms": { "third": "studies" }, "topics": ["daily"] },
+    { "id": "start", "en": "start", "ipa": "stɑːrt", "pos": "verb", "ru": ["начинать", "начинаться"], "example": { "en": "I start work at nine.", "ru": "Я начинаю работу в девять." }, "topics": ["daily"] },
+    { "id": "finish", "en": "finish", "ipa": "ˈfɪnɪʃ", "pos": "verb", "ru": ["заканчивать"], "example": { "en": "I finish work at six.", "ru": "Я заканчиваю работу в шесть." }, "topics": ["daily"] },
+    { "id": "read", "en": "read", "ipa": "riːd", "pos": "verb", "ru": ["читать"], "example": { "en": "I read a book.", "ru": "Я читаю книгу." }, "note": "В Present Simple read читается [riːd]. В прошедшем времени пишется так же, но читается [red].", "topics": ["daily"] },
+    { "id": "watch#verb", "en": "watch", "ipa": "wɑːtʃ", "pos": "verb", "ru": ["смотреть (кино, матч)"], "example": { "en": "I watch my sister play.", "ru": "Я смотрю, как играет моя сестра." }, "topics": ["daily"] },
+    { "id": "cook#verb", "en": "cook", "ipa": "kʊk", "pos": "verb", "ru": ["готовить"], "example": { "en": "I cook dinner.", "ru": "Я готовлю ужин." }, "topics": ["daily"] },
+    { "id": "clean", "en": "clean", "ipa": "kliːn", "pos": "verb", "ru": ["убирать", "чистить"], "example": { "en": "She cleans the kitchen.", "ru": "Она убирает кухню." }, "topics": ["daily"] },
+    { "id": "play", "en": "play", "ipa": "pleɪ", "pos": "verb", "ru": ["играть"], "example": { "en": "We play in the garden.", "ru": "Мы играем в саду." }, "topics": ["daily"] },
+    { "id": "walk", "en": "walk", "ipa": "wɔːk", "pos": "verb", "ru": ["ходить пешком", "гулять"], "example": { "en": "I walk to school.", "ru": "Я хожу в школу пешком." }, "topics": ["daily"] },
+    { "id": "sleep", "en": "sleep", "ipa": "sliːp", "pos": "verb", "ru": ["спать"], "example": { "en": "I sleep at night.", "ru": "Я сплю ночью." }, "topics": ["daily"] },
+    { "id": "meet", "en": "meet", "ipa": "miːt", "pos": "verb", "ru": ["встречать", "встречаться"], "example": { "en": "I meet my friends on Saturday.", "ru": "Я встречаюсь с друзьями в субботу." }, "topics": ["daily"] },
+    { "id": "live", "en": "live", "ipa": "lɪv", "pos": "verb", "ru": ["жить"], "example": { "en": "I live in a flat.", "ru": "Я живу в квартире." }, "topics": ["daily"] },
+    { "id": "leave", "en": "leave", "ipa": "liːv", "pos": "verb", "ru": ["уходить", "уезжать"], "example": { "en": "I leave home at eight.", "ru": "Я выхожу из дома в восемь." }, "topics": ["daily"] },
+    { "id": "take", "en": "take", "ipa": "teɪk", "pos": "verb", "ru": ["брать", "принимать"], "example": { "en": "I take a shower.", "ru": "Я принимаю душ." }, "topics": ["daily"] },
+    { "id": "do", "en": "do", "ipa": "duː", "pos": "verb", "ru": ["делать"], "example": { "en": "I do not work on Sunday.", "ru": "Я не работаю в воскресенье." }, "forms": { "third": "does" }, "note": "Do и does нужны в отрицании: I don't work, he doesn't work.", "topics": ["daily"] },
+    { "id": "time", "en": "time", "ipa": "taɪm", "pos": "noun", "ru": ["время", "час (на часах)"], "example": { "en": "What time is it?", "ru": "Который час?" }, "topics": ["time"] },
+    { "id": "o-clock", "en": "o'clock", "ipa": "əˈklɑːk", "pos": "adv", "ru": ["час (ровно)"], "example": { "en": "It is seven o'clock.", "ru": "Сейчас семь часов." }, "note": "O'clock добавляют только к целым часам: seven o'clock, но не half past seven o'clock.", "topics": ["time"] },
+    { "id": "half", "en": "half", "ipa": "hæf", "pos": "noun", "ru": ["половина"], "example": { "en": "It is half past seven.", "ru": "Сейчас половина восьмого." }, "note": "L в half не читается: [hæf].", "topics": ["time"] },
+    { "id": "quarter", "en": "quarter", "ipa": "ˈkwɔːrtɚ", "pos": "noun", "ru": ["четверть"], "example": { "en": "It is quarter to eight.", "ru": "Без четверти восемь." }, "topics": ["time"] },
+    { "id": "past", "en": "past", "ipa": "pæst", "pos": "prep", "ru": ["после (о времени)"], "example": { "en": "It is ten past seven.", "ru": "Десять минут восьмого." }, "topics": ["time"] },
+    { "id": "day", "en": "day", "ipa": "deɪ", "pos": "noun", "ru": ["день"], "example": { "en": "I work every day.", "ru": "Я работаю каждый день." }, "topics": ["time"] },
+    { "id": "week", "en": "week", "ipa": "wiːk", "pos": "noun", "ru": ["неделя"], "example": { "en": "There are seven days in a week.", "ru": "В неделе семь дней." }, "topics": ["time"] },
+    { "id": "weekend", "en": "weekend", "ipa": "ˈwiːkend", "pos": "noun", "ru": ["выходные"], "example": { "en": "I sleep late at the weekend.", "ru": "В выходные я долго сплю." }, "note": "Weekend — «суббота и воскресенье». Говорят at the weekend (в британском) или on the weekend (в американском).", "topics": ["time"] },
+    { "id": "today", "en": "today", "ipa": "təˈdeɪ", "pos": "adv", "ru": ["сегодня"], "example": { "en": "I work today.", "ru": "Я работаю сегодня." }, "topics": ["time"] },
+    { "id": "every", "en": "every", "ipa": "ˈevri", "pos": "det", "ru": ["каждый"], "example": { "en": "I get up at seven every day.", "ru": "Я встаю в семь каждый день." }, "topics": ["time"] },
+    { "id": "early", "en": "early", "ipa": "ˈɝːli", "pos": "adv", "ru": ["рано"], "example": { "en": "I get up early.", "ru": "Я встаю рано." }, "topics": ["time"] },
+    { "id": "late", "en": "late", "ipa": "leɪt", "pos": "adv", "ru": ["поздно"], "example": { "en": "I sleep late on Sunday.", "ru": "Я долго сплю в воскресенье." }, "topics": ["time"] },
+    { "id": "then", "en": "then", "ipa": "ðen", "pos": "adv", "ru": ["потом", "тогда"], "example": { "en": "I take a shower, then I have breakfast.", "ru": "Я принимаю душ, потом завтракаю." }, "troubles": ["pron-th"], "topics": ["time"] },
+    { "id": "morning", "en": "morning", "ipa": "ˈmɔːrnɪŋ", "pos": "noun", "ru": ["утро"], "example": { "en": "I work in the morning.", "ru": "Я работаю по утрам." }, "topics": ["time"] },
+    { "id": "afternoon", "en": "afternoon", "ipa": "ˌæftɚˈnuːn", "pos": "noun", "ru": ["время после полудня"], "example": { "en": "I read in the afternoon.", "ru": "Днём я читаю." }, "topics": ["time"] },
+    { "id": "evening", "en": "evening", "ipa": "ˈiːvnɪŋ", "pos": "noun", "ru": ["вечер"], "example": { "en": "We have dinner in the evening.", "ru": "Мы ужинаем вечером." }, "topics": ["time"] },
+    { "id": "night", "en": "night", "ipa": "naɪt", "pos": "noun", "ru": ["ночь"], "example": { "en": "I sleep at night.", "ru": "Я сплю ночью." }, "topics": ["time"] },
+    { "id": "breakfast", "en": "breakfast", "ipa": "ˈbrekfəst", "pos": "noun", "ru": ["завтрак"], "example": { "en": "I have breakfast at eight.", "ru": "Я завтракаю в восемь." }, "picture": { "emoji": "🍳" }, "topics": ["meals"] },
+    { "id": "lunch", "en": "lunch", "ipa": "lʌntʃ", "pos": "noun", "ru": ["обед"], "example": { "en": "We have lunch at one.", "ru": "Мы обедаем в час." }, "picture": { "emoji": "🥗" }, "topics": ["meals"] },
+    { "id": "dinner", "en": "dinner", "ipa": "ˈdɪnɚ", "pos": "noun", "ru": ["ужин", "обед (главный приём пищи)"], "example": { "en": "I cook dinner at six.", "ru": "Я готовлю ужин в шесть." }, "note": "Dinner — основной приём пищи, чаще вечером. Ужин при этом может называться и supper.", "picture": { "emoji": "🍽️" }, "topics": ["meals"] },
+    { "id": "school", "en": "school", "ipa": "skuːl", "pos": "noun", "ru": ["школа"], "example": { "en": "I go to school.", "ru": "Я иду в школу." }, "picture": { "emoji": "🏫" }, "topics": ["places"] },
+    { "id": "office", "en": "office", "ipa": "ˈɑːfɪs", "pos": "noun", "ru": ["офис"], "example": { "en": "I work in an office.", "ru": "Я работаю в офисе." }, "picture": { "emoji": "🏢" }, "topics": ["places"] },
+    { "id": "monday", "en": "Monday", "ipa": "ˈmʌndeɪ", "pos": "noun", "ru": ["понедельник"], "example": { "en": "I work on Monday.", "ru": "Я работаю в понедельник." }, "note": "Дни недели всегда пишутся с большой буквы.", "topics": ["days"] },
+    { "id": "tuesday", "en": "Tuesday", "ipa": "ˈtuːzdeɪ", "pos": "noun", "ru": ["вторник"], "example": { "en": "I study on Tuesday.", "ru": "Я учусь во вторник." }, "topics": ["days"] },
+    { "id": "wednesday", "en": "Wednesday", "ipa": "ˈwenzdeɪ", "pos": "noun", "ru": ["среда"], "example": { "en": "I meet my friends on Wednesday.", "ru": "Я встречаюсь с друзьями в среду." }, "note": "Первое d не читается: [ˈwenzdeɪ].", "topics": ["days"] },
+    { "id": "thursday", "en": "Thursday", "ipa": "ˈθɝːzdeɪ", "pos": "noun", "ru": ["четверг"], "example": { "en": "I read on Thursday.", "ru": "В четверг я читаю." }, "troubles": ["pron-th"], "topics": ["days"] },
+    { "id": "friday", "en": "Friday", "ipa": "ˈfraɪdeɪ", "pos": "noun", "ru": ["пятница"], "example": { "en": "I finish work early on Friday.", "ru": "В пятницу я заканчиваю работу рано." }, "topics": ["days"] },
+    { "id": "saturday", "en": "Saturday", "ipa": "ˈsætɚdeɪ", "pos": "noun", "ru": ["суббота"], "example": { "en": "I sleep late on Saturday.", "ru": "В субботу я долго сплю." }, "topics": ["days"] },
+    { "id": "sunday", "en": "Sunday", "ipa": "ˈsʌndeɪ", "pos": "noun", "ru": ["воскресенье"], "example": { "en": "I do not work on Sunday.", "ru": "В воскресенье я не работаю." }, "topics": ["days"] }
+  ],
+  "texts": [
+    {
+      "id": "a1.u05.work-day",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Six o'clock", "ru": "Шесть часов" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Tom, it is six o'clock.", "ru": "Том, уже шесть часов." },
+        { "speaker": "tom", "en": "Yes. I finish work at six.", "ru": "Да. Я заканчиваю работу в шесть." },
+        { "speaker": "anna", "en": "I start work at nine and finish at five.", "ru": "Я начинаю работу в девять, а заканчиваю в пять." },
+        { "speaker": "tom", "en": "And on Saturday?", "ru": "А в субботу?" },
+        { "speaker": "anna", "en": "On Saturday I do not work. I sleep late.", "ru": "В субботу я не работаю. Я долго сплю." },
+        { "speaker": "tom", "en": "I also sleep late on Saturday. And I read a book.", "ru": "Я тоже долго сплю в субботу. И читаю книгу." }
+      ]
+    },
+    {
+      "id": "a1.u05.max-day",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "Max's day", "ru": "День Макса" },
+      "lines": [
+        { "en": "Max is a designer. He gets up at seven and takes a shower. Then he has breakfast at half past seven.", "ru": "Макс — дизайнер. Он встаёт в семь и принимает душ. Потом в половине восьмого завтракает." },
+        { "en": "He leaves home at eight and walks to the office. He works from nine to six.", "ru": "В восемь он выходит из дома и идёт в офис пешком. Он работает с девяти до шести." },
+        { "en": "In the evening he cooks dinner and reads a book. He sleeps at eleven.", "ru": "Вечером он готовит ужин и читает книгу. Он спит с одиннадцати." },
+        { "en": "On Saturday and Sunday he does not work. He sleeps late and meets his friends.", "ru": "В субботу и воскресенье он не работает. Он долго спит и встречается с друзьями." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "a1.u05.l01",
+      "kind": "vocabulary",
+      "title": "Что я делаю каждый день",
+      "exercises": [
+        { "id": "a1.u05.l01.e01", "type": "match_pairs", "pairs": [{ "en": "get up", "ru": "вставать" }, { "en": "wake up", "ru": "просыпаться" }, { "en": "sleep", "ru": "спать" }, { "en": "go", "ru": "идти" }, { "en": "come", "ru": "приходить" }], "hint": "Get up и wake up — разные вещи: сначала проснуться, потом встать.", "explanation": "Get up — «вставать», wake up — «просыпаться», sleep — «спать», go — «идти», come — «приходить»." },
+        { "id": "a1.u05.l01.e02", "type": "match_pairs", "pairs": [{ "en": "work", "ru": "работать" }, { "en": "study", "ru": "учиться" }, { "en": "start", "ru": "начинать" }, { "en": "finish", "ru": "заканчивать" }, { "en": "leave", "ru": "уходить" }], "hint": "Start и finish — противоположные слова.", "explanation": "Work — «работать», study — «учиться», start — «начинать», finish — «заканчивать», leave — «уходить»." },
+        { "id": "a1.u05.l01.e03", "type": "match_pairs", "pairs": [{ "en": "read", "ru": "читать" }, { "en": "cook", "ru": "готовить" }, { "en": "clean", "ru": "убирать" }, { "en": "play", "ru": "играть" }, { "en": "walk", "ru": "гулять" }], "hint": "Cook вы уже знаете как «повар».", "explanation": "Read — «читать», cook — «готовить», clean — «убирать», play — «играть», walk — «гулять, ходить пешком».", "troubles": ["false-friends"] },
+        { "id": "a1.u05.l01.e04", "type": "translate_choice", "from": "en", "text": "have breakfast", "options": ["завтракать", "обедать", "ужинать"], "answer": 0, "hint": "Breakfast — первый приём пищи.", "explanation": "Have breakfast — «завтракать». Have lunch — «обедать», have dinner — «ужинать». С едой говорят have." },
+        { "id": "a1.u05.l01.e05", "type": "translate_choice", "from": "ru", "text": "жить", "options": ["live", "work", "sleep"], "answer": 0, "hint": "Начинается с l, гласная короткая.", "explanation": "Live [lɪv] — «жить». Leave [liːv] — «уходить»: гласная долгая.", "troubles": ["pron-vowels"] },
+        { "id": "a1.u05.l01.e06", "type": "translate_choice", "from": "en", "text": "take a shower", "options": ["принимать душ", "брать зонт", "делать уборку"], "answer": 0, "hint": "Shower — душ.", "explanation": "Take a shower — «принимать душ». Take — «брать, принимать»." },
+        { "id": "a1.u05.l01.e07", "type": "picture_choice", "mode": "picture-to-word", "word": "breakfast", "distractors": ["lunch", "dinner"], "hint": "Яичница — типичное утреннее блюдо.", "explanation": "Breakfast — «завтрак»: [ˈbrekfəst]." },
+        { "id": "a1.u05.l01.e08", "type": "picture_choice", "mode": "word-to-picture", "word": "school", "distractors": ["office", "house"], "hint": "Туда ходят дети.", "explanation": "School — «школа»: [skuːl]. Office — «офис»." },
+        { "id": "a1.u05.l01.e09", "type": "listen_choice", "audio": "wake up", "question": "Что вы слышите?", "options": ["wake up", "get up", "go to work"], "answer": 0, "hint": "Первое слово — wake, как «вэйк».", "explanation": "Wake up [weɪk ʌp] — «просыпаться». Get up [ɡet ʌp] — «вставать»." },
+        { "id": "a1.u05.l01.e10", "type": "listen_dictation", "text": "I get up at seven.", "hint": "Пять слов.", "explanation": "I get up at seven — «я встаю в семь»." },
+        { "id": "a1.u05.l01.e11", "type": "type_translation", "from": "ru", "text": "читать", "answers": ["read"], "hint": "Четыре буквы.", "explanation": "Read [riːd] — «читать»." },
+        { "id": "a1.u05.l01.e12", "type": "fill_gap", "text": "I ___ breakfast at eight.", "translation": "Я завтракаю в восемь.", "answers": [["have"]], "options": ["have", "sleep", "go"], "hint": "С едой — особый глагол.", "explanation": "I have breakfast at eight. Завтракать — have breakfast." },
+        { "id": "a1.u05.l01.e13", "type": "tiles", "from": "ru", "text": "Я иду в школу.", "answer": "I go to school.", "distractors": ["am", "at"], "hint": "К глаголу go нужно to.", "explanation": "I go to school — «я иду в школу». После go — to + место.", "alternatives": [] },
+        { "id": "a1.u05.l01.e15", "type": "fill_gap", "text": "I take a shower, ___ I have breakfast.", "translation": "Я принимаю душ, потом завтракаю.", "answers": [["then"]], "options": ["then", "past", "day"], "hint": "Слово «потом».", "explanation": "I take a shower, then I have breakfast. Then — «потом»: [ðen]." },
+        { "id": "a1.u05.l01.e16", "type": "translate_choice", "from": "ru", "text": "смотреть фильм или матч", "options": ["watch", "walk", "work"], "answer": 0, "hint": "Не путайте с walk и work.", "explanation": "Watch [wɑːtʃ] — «смотреть»; walk [wɔːk] — «гулять»; work [wɝːk] — «работать»." },
+        { "id": "a1.u05.l01.e14", "type": "speak_repeat", "text": "I get up, take a shower and have breakfast.", "hint": "Три действия подряд.", "explanation": "Get up, take a shower, have breakfast — обычное утро. Следите за ударением в breakfast: BREAK-fast." }
+      ]
+    },
+    {
+      "id": "a1.u05.l02",
+      "kind": "grammar",
+      "title": "Present Simple: I work, she works",
+      "grammar": "a1.present-simple",
+      "exercises": [
+        { "id": "a1.u05.l02.e01", "type": "fill_gap", "text": "I ___ in an office.", "translation": "Я работаю в офисе.", "answers": [["work"]], "options": ["work", "works", "am work"], "hint": "С I глагол не меняется.", "explanation": "I work in an office. С I — начальная форма глагола.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l02.e02", "type": "fill_gap", "text": "She ___ in a school.", "translation": "Она работает в школе.", "answers": [["works"]], "options": ["works", "work", "is work"], "hint": "С she — окончание -s.", "explanation": "She works in a school. С she, he, it — глагол с -s.", "grammar": ["a1.present-simple"], "troubles": ["tenses"] },
+        { "id": "a1.u05.l02.e03", "type": "fill_gap", "text": "He ___ up at seven.", "translation": "Он встаёт в семь.", "answers": [["gets"]], "options": ["gets", "get", "getting"], "hint": "С he — окончание -s.", "explanation": "He gets up at seven. Глагол get получает -s.", "grammar": ["a1.present-simple"], "troubles": ["tenses"] },
+        { "id": "a1.u05.l02.e04", "type": "fill_gap", "text": "She ___ English.", "translation": "Она изучает английский.", "answers": [["studies"]], "options": ["studies", "studys", "study"], "hint": "Согласная + y меняется на -ies.", "explanation": "She studies English. Study → studies: y меняется на ies.", "grammar": ["a1.present-simple"], "troubles": ["tenses"] },
+        { "id": "a1.u05.l02.e05", "type": "fill_gap", "text": "He ___ a shower every morning.", "translation": "Он принимает душ каждое утро.", "answers": [["takes"]], "options": ["takes", "take", "is take"], "hint": "С he — глагол с -s.", "explanation": "Правильно: He takes a shower every morning.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l02.e06", "type": "fill_gap", "text": "She ___ breakfast at eight.", "translation": "Она завтракает в восемь.", "answers": [["has"]], "options": ["has", "haves", "have"], "hint": "Have — особый глагол.", "explanation": "She has breakfast at eight. Have → has, а не haves.", "grammar": ["a1.present-simple"], "troubles": ["tenses"] },
+        { "id": "a1.u05.l02.e07", "type": "fill_gap", "text": "My sister ___ to school.", "translation": "Моя сестра ходит в школу.", "answers": [["goes"]], "options": ["goes", "go", "gos"], "hint": "После o — окончание -es.", "explanation": "Правильно: My sister goes to school. Go → goes.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l02.e08", "type": "error_correction", "text": "She work in an office.", "wrong": "work", "correction": "works", "options": ["works", "working", "is work"], "hint": "С she — окончание -s.", "explanation": "She works in an office. Забыть -s — самая частая ошибка.", "grammar": ["a1.present-simple"], "troubles": ["tenses"] },
+        { "id": "a1.u05.l02.e09", "type": "error_correction", "text": "I am work in a school.", "wrong": "am work", "correction": "work", "options": ["work", "am working", "works"], "hint": "В Present Simple be не нужен.", "explanation": "I work in a school. Глагол be и обычный глагол вместе не ставят.", "grammar": ["a1.present-simple"], "troubles": ["tenses"] },
+        { "id": "a1.u05.l02.e10", "type": "error_correction", "text": "He gos to school.", "wrong": "gos", "correction": "goes", "options": ["goes", "go", "going"], "hint": "После o — -es.", "explanation": "Правильно: He goes to school. Go → goes.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l02.e11", "type": "tiles", "from": "ru", "text": "Он работает в офисе.", "answer": "He works in an office.", "distractors": ["work", "a"], "hint": "Работает — works.", "explanation": "He works in an office. С he — works; перед office — an.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l02.e12", "type": "type_translation", "from": "ru", "text": "Я встаю в семь.", "answers": ["I get up at seven."], "hint": "Get up — вставать.", "explanation": "I get up at seven. Перед временем — at.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l02.e13", "type": "type_translation", "from": "ru", "text": "Она читает книгу.", "answers": ["She reads a book."], "difficulty": 2, "hint": "С she нужен -s.", "explanation": "She reads a book. Глагол read получает -s.", "grammar": ["a1.present-simple"], "troubles": ["tenses"] },
+        { "id": "a1.u05.l02.e15", "type": "fill_gap", "text": "I ___ my friends on Saturday.", "translation": "Я встречаюсь с друзьями в субботу.", "answers": [["meet"]], "options": ["meet", "meets", "meeting"], "hint": "С I глагол не меняется.", "explanation": "Правильно: I meet my friends on Saturday. С I глагол без -s.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l02.e14", "type": "minimal_pair", "pair": [{ "en": "live", "ipa": "lɪv" }, { "en": "leave", "ipa": "liːv" }], "say": 1, "hint": "В одном слове долгий гласный.", "explanation": "Live [lɪv] — короткий гласный, leave [liːv] — долгий. Слова легко спутать.", "troubles": ["pron-vowels"] }
+      ]
+    },
+    {
+      "id": "a1.u05.l03",
+      "kind": "grammar",
+      "title": "Не делаю: don't и doesn't",
+      "grammar": "a1.present-simple",
+      "exercises": [
+        { "id": "a1.u05.l03.e01", "type": "fill_gap", "text": "I ___ work on Sunday.", "translation": "Я не работаю в воскресенье.", "answers": [["don't", "do not"]], "options": ["don't", "doesn't", "am not"], "hint": "Отрицание с I.", "explanation": "I don't (do not) work on Sunday. С I, you, we, they — don't.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l03.e02", "type": "fill_gap", "text": "She ___ work on Saturday.", "translation": "Она не работает в субботу.", "answers": [["doesn't", "does not"]], "options": ["doesn't", "don't", "isn't"], "hint": "Отрицание с she.", "explanation": "She doesn't (does not) work on Saturday. С he, she, it — doesn't.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l03.e03", "type": "fill_gap", "text": "We ___ have a car.", "translation": "У нас нет машины.", "answers": [["don't", "do not"]], "options": ["don't", "doesn't", "aren't"], "hint": "Отрицание с we.", "explanation": "Правильно: We don't (do not) have a car.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l03.e04", "type": "fill_gap", "text": "He doesn't ___ up early.", "translation": "Он не встаёт рано.", "answers": [["get"]], "options": ["get", "gets", "getting"], "hint": "После doesn't глагол без -s.", "explanation": "He doesn't get up early. После doesn't — начальная форма.", "grammar": ["a1.present-simple"], "troubles": ["tenses"] },
+        { "id": "a1.u05.l03.e05", "type": "error_correction", "text": "She doesn't works on Sunday.", "wrong": "works", "correction": "work", "options": ["work", "working", "worked"], "hint": "Окончание -s уже в doesn't.", "explanation": "She doesn't work on Sunday. После doesn't — глагол без -s.", "grammar": ["a1.present-simple"], "troubles": ["tenses"] },
+        { "id": "a1.u05.l03.e06", "type": "error_correction", "text": "He don't read in the evening.", "wrong": "don't", "correction": "doesn't", "options": ["doesn't", "isn't", "not"], "hint": "С he — другая форма.", "explanation": "He doesn't read in the evening. С he — doesn't.", "grammar": ["a1.present-simple"], "troubles": ["tenses"] },
+        { "id": "a1.u05.l03.e07", "type": "error_correction", "text": "I no work on Sunday.", "wrong": "no work", "correction": "don't work", "options": ["don't work", "not work", "am not work"], "hint": "Для «не» перед глаголом нужен don't.", "explanation": "I don't work on Sunday. Слово no перед глаголом не ставят.", "grammar": ["a1.present-simple"], "troubles": ["word-order"] },
+        { "id": "a1.u05.l03.e08", "type": "tiles", "from": "ru", "text": "Он не работает в воскресенье.", "answer": "He doesn't work on Sunday.", "alternatives": [], "distractors": ["don't", "works"], "hint": "Doesn't + глагол без -s.", "explanation": "He doesn't work on Sunday. С he — doesn't, потом work.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l03.e09", "type": "tiles", "from": "ru", "text": "Я не завтракаю.", "answer": "I don't have breakfast.", "distractors": ["doesn't", "am"], "hint": "Образец: Don't + have.", "explanation": "I don't have breakfast. Have стоит без изменений.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l03.e10", "type": "type_translation", "from": "ru", "text": "Она не живёт в Москве.", "answers": ["She doesn't live in Moscow.", "She does not live in Moscow."], "difficulty": 2, "hint": "Образец: Doesn't + live.", "explanation": "She doesn't live in Moscow. После doesn't — live без -s.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l03.e11", "type": "type_translation", "from": "ru", "text": "Мы не работаем в субботу.", "answers": ["We don't work on Saturday.", "We do not work on Saturday."], "difficulty": 2, "hint": "С we — don't.", "explanation": "We don't work on Saturday. Перед днём недели — on.", "grammar": ["a1.present-simple", "a1.time-prepositions"] },
+        { "id": "a1.u05.l03.e12", "type": "listen_choice", "audio": "She doesn't work on Sunday.", "question": "Что вы слышите?", "options": ["She doesn't work on Sunday.", "She works on Sunday.", "I don't work on Sunday."], "answer": 0, "hint": "Слышно doesn't.", "explanation": "She doesn't work on Sunday — «она не работает в воскресенье».", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l03.e13", "type": "listen_dictation", "text": "I don't work on Sunday.", "hint": "Пять слов.", "explanation": "I don't work on Sunday — «я не работаю в воскресенье»." },
+        { "id": "a1.u05.l03.e14", "type": "speak_answer", "question": "Do you work on Sunday?", "questionRu": "Вы работаете в воскресенье? Ответьте: I work on Sunday или I don't work on Sunday.", "keywords": [["\\bI (do not|don't|work)\\b"], ["\\bSunday\\b"]], "minKeywords": 2, "samples": ["I don't work on Sunday.", "I work on Sunday."], "difficulty": 3, "hint": "I work… или I don't work…", "explanation": "Отвечаем полным предложением: I work on Sunday. I don't work on Sunday.", "grammar": ["a1.present-simple"] }
+      ]
+    },
+    {
+      "id": "a1.u05.l04",
+      "kind": "vocabulary",
+      "title": "Который час?",
+      "grammar": "a1.telling-time",
+      "exercises": [
+        { "id": "a1.u05.l04.e01", "type": "match_pairs", "pairs": [{ "en": "seven o'clock", "ru": "ровно семь (7:00)" }, { "en": "half past seven", "ru": "половина (7:30)" }, { "en": "quarter past seven", "ru": "четверть после (7:15)" }, { "en": "quarter to eight", "ru": "без четверти (7:45)" }, { "en": "ten past seven", "ru": "десять минут после (7:10)" }], "hint": "Half — половина, quarter — четверть.", "explanation": "Seven o'clock — 7:00, half past seven — 7:30, quarter past seven — 7:15, quarter to eight — 7:45, ten past seven — 7:10. Время записано цифрами.", "grammar": ["a1.telling-time"] },
+        { "id": "a1.u05.l04.e02", "type": "fill_gap", "text": "It is ___ o'clock.", "translation": "Сейчас девять часов.", "answers": [["nine"]], "options": ["nine", "half", "quarter"], "hint": "Целый час — просто число.", "explanation": "It is nine o'clock. К целому часу добавляют o'clock.", "grammar": ["a1.telling-time"] },
+        { "id": "a1.u05.l04.e03", "type": "fill_gap", "text": "It is half ___ six.", "translation": "Сейчас половина седьмого (6:30).", "answers": [["past"]], "options": ["past", "to", "at"], "hint": "Первая половина часа.", "explanation": "It is half past six — 6:30. Half past + предыдущий час.", "grammar": ["a1.telling-time"] },
+        { "id": "a1.u05.l04.e04", "type": "fill_gap", "text": "It is quarter ___ eight.", "translation": "Без четверти восемь (7:45).", "answers": [["to"]], "options": ["to", "past", "at"], "hint": "До восьми — to.", "explanation": "It is quarter to eight — 7:45. Quarter to — «без четверти».", "grammar": ["a1.telling-time"] },
+        { "id": "a1.u05.l04.e05", "type": "fill_gap", "text": "I get up ___ seven.", "translation": "Я встаю в семь.", "answers": [["at"]], "options": ["at", "in", "on"], "hint": "Перед точным временем.", "explanation": "I get up at seven. Перед временем всегда at.", "grammar": ["a1.telling-time", "a1.time-prepositions"], "troubles": ["prepositions"] },
+        { "id": "a1.u05.l04.e06", "type": "translate_choice", "from": "en", "text": "It is half past eight.", "options": ["Сейчас 8:30.", "Сейчас 9:30.", "Сейчас 7:30."], "answer": 0, "hint": "Half past eight — не «половина девятого».", "explanation": "Half past eight — 8:30. Здесь называется тот час, который уже прошёл, а в русском — следующий.", "grammar": ["a1.telling-time"], "troubles": ["prepositions"] },
+        { "id": "a1.u05.l04.e07", "type": "translate_choice", "from": "ru", "text": "Который час?", "options": ["What time is it?", "How old is it?", "Where is it?"], "answer": 0, "hint": "Time — «время».", "explanation": "What time is it? — «Который час?».", "grammar": ["a1.telling-time"] },
+        { "id": "a1.u05.l04.e08", "type": "listen_choice", "audio": "It is quarter to eight.", "question": "Какое время вы слышите?", "options": ["7:45", "8:15", "7:15"], "answer": 0, "hint": "Quarter to — «без четверти».", "explanation": "Quarter to eight — 7:45, без четверти восемь.", "grammar": ["a1.telling-time"] },
+        { "id": "a1.u05.l04.e09", "type": "listen_choice", "audio": "It is half past six.", "question": "Какое время вы слышите?", "options": ["6:30", "7:30", "5:30"], "answer": 0, "hint": "Половина часа.", "explanation": "Правильно: Half past six — 6:30.", "grammar": ["a1.telling-time"] },
+        { "id": "a1.u05.l04.e10", "type": "listen_dictation", "text": "It is ten past seven.", "hint": "Пять слов.", "explanation": "It is ten past seven — «десять минут восьмого» (7:10).", "grammar": ["a1.telling-time"] },
+        { "id": "a1.u05.l04.e11", "type": "tiles", "from": "ru", "text": "Сейчас половина девятого.", "answer": "It is half past eight.", "distractors": ["nine", "to"], "difficulty": 2, "hint": "Назовите предыдущий час.", "explanation": "Правильно: It is half past eight — 8:30.", "grammar": ["a1.telling-time"] },
+        { "id": "a1.u05.l04.e12", "type": "type_translation", "from": "ru", "text": "Сейчас без четверти шесть.", "answers": ["It is quarter to six."], "difficulty": 2, "hint": "Без четверти — quarter to.", "explanation": "Правильно: It is quarter to six — 5:45.", "grammar": ["a1.telling-time"] },
+        { "id": "a1.u05.l04.e13", "type": "speak_answer", "question": "What time is it?", "questionRu": "Который сейчас час? Назовите время: It is … o'clock или half past…", "keywords": [["\\bit is\\b", "\\bit'?s\\b"], ["\\b(o'clock|half past|quarter past|quarter to|past|to)\\b"]], "minKeywords": 2, "samples": ["It is seven o'clock.", "It is half past eight."], "difficulty": 3, "hint": "Образец: It is … o'clock.", "explanation": "Скажите: It is + время. Например: It is half past six.", "grammar": ["a1.telling-time"] },
+        { "id": "a1.u05.l04.e14", "type": "word_stress", "word": "afternoon", "syllables": ["af", "ter", "noon"], "stress": 2, "hint": "Ударный слог — noon.", "explanation": "af-ter-NOON — ударение на последний слог." }
+      ]
+    },
+    {
+      "id": "a1.u05.l05",
+      "kind": "vocabulary",
+      "title": "Дни недели и предлоги времени",
+      "grammar": "a1.time-prepositions",
+      "exercises": [
+        { "id": "a1.u05.l05.e01", "type": "match_pairs", "pairs": [{ "en": "Monday", "ru": "понедельник" }, { "en": "Tuesday", "ru": "вторник" }, { "en": "Wednesday", "ru": "среда" }, { "en": "Thursday", "ru": "четверг" }, { "en": "Friday", "ru": "пятница" }], "hint": "Все дни заканчиваются на -day.", "explanation": "Monday — понедельник, Tuesday — вторник, Wednesday — среда, Thursday — четверг, Friday — пятница." },
+        { "id": "a1.u05.l05.e02", "type": "match_pairs", "pairs": [{ "en": "Saturday", "ru": "суббота" }, { "en": "Sunday", "ru": "воскресенье" }, { "en": "weekend", "ru": "выходные" }, { "en": "week", "ru": "неделя" }, { "en": "today", "ru": "сегодня" }], "hint": "Weekend — это Saturday и Sunday.", "explanation": "Saturday — суббота, Sunday — воскресенье, weekend — выходные, week — неделя, today — сегодня." },
+        { "id": "a1.u05.l05.e03", "type": "fill_gap", "text": "I work ___ Monday.", "translation": "Я работаю в понедельник.", "answers": [["on"]], "options": ["on", "at", "in"], "hint": "С днями недели.", "explanation": "I work on Monday. С днями недели — on.", "grammar": ["a1.time-prepositions"], "troubles": ["prepositions"] },
+        { "id": "a1.u05.l05.e04", "type": "fill_gap", "text": "We have dinner ___ the evening.", "translation": "Мы ужинаем вечером.", "answers": [["in"]], "options": ["in", "at", "on"], "hint": "С частями суток.", "explanation": "We have dinner in the evening. С частями суток — in.", "grammar": ["a1.time-prepositions"], "troubles": ["prepositions"] },
+        { "id": "a1.u05.l05.e05", "type": "fill_gap", "text": "I sleep ___ night.", "translation": "Я сплю ночью.", "answers": [["at"]], "options": ["at", "in", "on"], "hint": "Ночь — исключение.", "explanation": "I sleep at night. Ночью — at night, а не in the night.", "grammar": ["a1.time-prepositions"], "troubles": ["prepositions"] },
+        { "id": "a1.u05.l05.e06", "type": "fill_gap", "text": "I get up at seven ___ day.", "translation": "Я встаю в семь каждый день.", "answers": [["every"]], "options": ["every", "at", "on"], "hint": "Слово «каждый».", "explanation": "Every day — «каждый день». Перед every предлог не нужен.", "grammar": ["a1.time-prepositions"] },
+        { "id": "a1.u05.l05.e07", "type": "error_correction", "text": "I work in Monday.", "wrong": "in", "correction": "on", "options": ["on", "at", "to"], "hint": "Дни недели — с on.", "explanation": "I work on Monday. С днями недели — on.", "grammar": ["a1.time-prepositions"], "troubles": ["prepositions"] },
+        { "id": "a1.u05.l05.e08", "type": "error_correction", "text": "I get up on seven.", "wrong": "on", "correction": "at", "options": ["at", "in", "to"], "hint": "Время — с at.", "explanation": "I get up at seven. Перед временем — at.", "grammar": ["a1.time-prepositions"], "troubles": ["prepositions"] },
+        { "id": "a1.u05.l05.e09", "type": "error_correction", "text": "I read in the night.", "wrong": "in the night", "correction": "at night", "options": ["at night", "on night", "in night"], "hint": "Ночью — особая фраза.", "explanation": "I read at night. Ночью — at night.", "grammar": ["a1.time-prepositions"], "troubles": ["prepositions"] },
+        { "id": "a1.u05.l05.e10", "type": "tiles", "from": "ru", "text": "Я работаю в понедельник и вторник.", "answer": "I work on Monday and Tuesday.", "distractors": ["in", "at"], "difficulty": 2, "hint": "Перед днями — on, один раз.", "explanation": "I work on Monday and Tuesday. Предлог on ставится один раз перед обоими днями.", "grammar": ["a1.time-prepositions"] },
+        { "id": "a1.u05.l05.e11", "type": "type_translation", "from": "ru", "text": "Утром я читаю.", "answers": ["I read in the morning.", "In the morning I read."], "difficulty": 2, "hint": "Утром — in the morning.", "explanation": "I read in the morning. С частью суток — in the.", "grammar": ["a1.time-prepositions"] },
+        { "id": "a1.u05.l05.e12", "type": "type_translation", "from": "ru", "text": "В субботу я долго сплю.", "answers": ["I sleep late on Saturday.", "On Saturday I sleep late."], "difficulty": 2, "hint": "Late — поздно, долго.", "explanation": "I sleep late on Saturday. Суббота — с on.", "grammar": ["a1.time-prepositions"] },
+        { "id": "a1.u05.l05.e13", "type": "listen_dictation", "text": "Wednesday", "hint": "Девять букв, первое d не читается.", "explanation": "Wednesday — «среда»: [ˈwenzdeɪ]. Первое d не читается." },
+        { "id": "a1.u05.l05.e14", "type": "word_stress", "word": "Saturday", "syllables": ["Sat", "ur", "day"], "stress": 0, "hint": "Первый слог.", "explanation": "SAT-ur-day — ударение на первый слог." }
+      ]
+    },
+    {
+      "id": "a1.u05.l06",
+      "kind": "listening",
+      "title": "Шесть часов",
+      "textId": "a1.u05.work-day",
+      "exercises": [
+        {
+          "id": "a1.u05.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "a1.u05.work-day",
+          "hint": "Слушайте время и дни недели.",
+          "explanation": "Анна и Том говорят о рабочем дне: когда начинают и заканчивают работу и что делают в субботу.",
+          "questions": [
+            { "kind": "mcq", "question": "Во сколько Том заканчивает работу?", "options": ["at six", "at five", "at nine"], "answer": 0, "explanation": "Том говорит: I finish work at six." },
+            { "kind": "mcq", "question": "Во сколько Анна начинает работу?", "options": ["at nine", "at five", "at six"], "answer": 0, "explanation": "Анна говорит: I start work at nine." },
+            { "kind": "tfn", "statement": "Anna works on Saturday.", "answer": "false", "explanation": "Анна говорит: On Saturday I do not work." },
+            { "kind": "tfn", "statement": "Tom sleeps late on Saturday.", "answer": "true", "explanation": "Том говорит: I also sleep late on Saturday." },
+            { "kind": "tfn", "statement": "Anna works in an office.", "answer": "not_given", "explanation": "Где работает Анна, в диалоге не сказано." }
+          ]
+        },
+        { "id": "a1.u05.l06.e02", "type": "listen_choice", "audio": "I finish work at five.", "question": "Что вы слышите?", "options": ["I finish work at five.", "I start work at five.", "I finish work at nine."], "answer": 0, "hint": "Finish — «заканчивать».", "explanation": "I finish work at five — «я заканчиваю работу в пять»." },
+        { "id": "a1.u05.l06.e03", "type": "listen_dictation", "text": "On Saturday I do not work.", "answers": ["On Saturday I don't work."], "hint": "Шесть слов.", "explanation": "On Saturday I do not work — «в субботу я не работаю»." },
+        { "id": "a1.u05.l06.e04", "type": "listen_dictation", "text": "I sleep late.", "hint": "Три слова.", "explanation": "I sleep late — «я долго сплю»." },
+        { "id": "a1.u05.l06.e05", "type": "fill_gap", "text": "Anna ___ work at nine.", "translation": "Анна начинает работу в девять.", "answers": [["starts"]], "options": ["starts", "start", "starting"], "hint": "О Анне — с -s.", "explanation": "Anna starts work at nine. О другом человеке — глагол с -s.", "grammar": ["a1.present-simple"], "troubles": ["tenses"] },
+        { "id": "a1.u05.l06.e06", "type": "fill_gap", "text": "Tom ___ work at six.", "translation": "Том заканчивает работу в шесть.", "answers": [["finishes"]], "options": ["finishes", "finish", "finishs"], "hint": "После sh — окончание -es.", "explanation": "Правильно: Tom finishes work at six. Finish → finishes.", "grammar": ["a1.present-simple"], "troubles": ["tenses"] },
+        { "id": "a1.u05.l06.e07", "type": "tiles", "from": "ru", "text": "Я начинаю работу в девять.", "answer": "I start work at nine.", "distractors": ["starts", "on"], "hint": "Перед временем — at.", "explanation": "I start work at nine. С I — start без -s.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l06.e08", "type": "type_translation", "from": "ru", "text": "А что вы делаете в субботу?", "answers": ["And on Saturday?", "What do you do on Saturday?"], "difficulty": 2, "hint": "Можно коротко, без глагола.", "explanation": "And on Saturday? — короткий вопрос в разговоре. Полный: What do you do on Saturday?" },
+        { "id": "a1.u05.l06.e09", "type": "speak_answer", "question": "What time do you get up?", "questionRu": "Во сколько вы встаёте? Ответьте: I get up at … Назовите время.", "keywords": [["\\bI get up\\b", "\\bI wake up\\b"], ["\\bat\\b"]], "minKeywords": 2, "samples": ["I get up at seven.", "I get up at half past six."], "difficulty": 3, "hint": "Образец: I get up at…", "explanation": "Отвечаем: I get up at + время. Например: I get up at seven.", "grammar": ["a1.telling-time"] },
+        { "id": "a1.u05.l06.e10", "type": "speak_repeat", "text": "I start work at nine and finish at five.", "hint": "Между частями — маленькая пауза.", "explanation": "Start [stɑːrt] и finish [ˈfɪnɪʃ]: в finish ударение на первом слоге." }
+      ]
+    },
+    {
+      "id": "a1.u05.l07",
+      "kind": "writing",
+      "title": "Мой день",
+      "textId": "a1.u05.max-day",
+      "exercises": [
+        {
+          "id": "a1.u05.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "a1.u05.max-day",
+          "hint": "Читайте по порядку: утро, день, вечер, выходные.",
+          "explanation": "Текст описывает день Макса: утром он встаёт и завтракает, в девять начинает работу, вечером готовит ужин и читает.",
+          "questions": [
+            { "kind": "mcq", "question": "Во сколько Макс встаёт?", "options": ["at seven", "at eight", "at nine"], "answer": 0, "explanation": "В тексте: He gets up at seven." },
+            { "kind": "mcq", "question": "Как Макс идёт на работу?", "options": ["He walks", "He sleeps", "He plays"], "answer": 0, "explanation": "В тексте: He leaves home at eight and walks to the office." },
+            { "kind": "mcq", "question": "Что он делает вечером?", "options": ["He cooks dinner and reads a book", "He plays in the garden", "He cleans the office"], "answer": 0, "explanation": "В тексте: In the evening he cooks dinner and reads a book." },
+            { "kind": "tfn", "statement": "Max works on Sunday.", "answer": "false", "explanation": "В тексте: On Saturday and Sunday he does not work." },
+            { "kind": "tfn", "statement": "Max has breakfast at half past seven.", "answer": "true", "explanation": "В тексте: Then he has breakfast at half past seven." },
+            { "kind": "tfn", "statement": "Max lives in Kazan.", "answer": "not_given", "explanation": "Где живёт Макс, в тексте не сказано." }
+          ]
+        },
+        { "id": "a1.u05.l07.e02", "type": "translate_choice", "from": "en", "text": "He works from nine to six.", "options": ["Он работает с девяти до шести.", "Он работает в девять и шесть.", "Он работает в шесть утра."], "answer": 0, "hint": "From … to — «с … до».", "explanation": "From nine to six — «с девяти до шести». From … to показывают начало и конец." },
+        { "id": "a1.u05.l07.e03", "type": "fill_gap", "text": "He ___ not work on Sunday.", "translation": "Он не работает в воскресенье.", "answers": [["does"]], "options": ["does", "do", "is"], "hint": "Форма для he.", "explanation": "He does not work on Sunday. Does not — полная форма doesn't.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l07.e04", "type": "type_translation", "from": "ru", "text": "Он выходит из дома в восемь и идёт в офис пешком.", "answers": ["He leaves home at eight and walks to the office."], "difficulty": 3, "hint": "Два глагола с -s.", "explanation": "He leaves home at eight and walks to the office. У обоих глаголов — -s.", "grammar": ["a1.present-simple"], "troubles": ["tenses"] },
+        { "id": "a1.u05.l07.e05", "type": "speak_describe", "picture": { "emoji": "🏢" }, "situation": "Расскажите, как Макс идёт на работу: во сколько выходит, куда идёт и во сколько начинает работу.", "keywords": [["\\b(he|Max)\\b"], ["\\b(leaves|goes|walks|starts|works)\\b"], ["\\b(eight|nine|office)\\b"]], "minKeywords": 2, "samples": ["Max leaves home at eight. He walks to the office. He starts work at nine."], "difficulty": 3, "hint": "Образец: Max leaves home at eight…", "explanation": "О Максе — he и глагол с -s: leaves, walks, starts.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u05.l07.e06", "type": "speak_answer", "question": "What do you do in the evening?", "questionRu": "Что вы делаете вечером? Назовите два дела: I cook dinner. I read a book.", "keywords": [["\\bI [a-z]+\\b"], ["\\b(cook|read|watch|walk|play|clean|have dinner|sleep|meet)\\b"]], "minKeywords": 2, "samples": ["I cook dinner and read a book.", "I have dinner and walk."], "difficulty": 3, "hint": "Образец: I cook dinner. I read a book.", "explanation": "Расскажите о привычных вечерних делах: I cook dinner. I read a book.", "grammar": ["a1.present-simple"] },
+        {
+          "id": "a1.u05.l07.e07",
+          "type": "write",
+          "task": "Расскажите о своём обычном дне: во сколько вы встаёте, что делаете утром, где работаете или учитесь, что делаете вечером и что не делаете в воскресенье. Например: I get up at seven. I have breakfast at eight. I work in an office.",
+          "minWords": 30,
+          "maxWords": 90,
+          "criteria": [
+            { "id": "time", "label": "Названо время с at", "patterns": ["\\bat (one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|half past|quarter)\\b"] },
+            { "id": "verbs", "label": "Есть глаголы повседневных дел", "patterns": ["\\b(get up|wake up|have|go|work|study|start|finish|read|cook|clean|sleep|walk|meet|leave|take)\\b"] },
+            { "id": "parts", "label": "Есть утро, день или вечер", "patterns": ["\\b(morning|afternoon|evening|night|breakfast|lunch|dinner)\\b"] },
+            { "id": "negative", "label": "Есть отрицание: don't или doesn't", "patterns": ["\\b(don't|do not|doesn't|does not)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\b(I|we|you|they) (works|gets|goes|has|starts|finishes|reads|cooks|sleeps|studies|walks|takes|leaves)\\b", "message": "С I, we, you, they глагол без -s: I work, we get up." },
+            { "pattern": "\\b(he|she) (work|get|go|have|start|finish|read|cook|sleep|study|walk|take|leave|live|play|clean|meet)\\b", "message": "С he и she глагол получает -s: he works, she gets up." },
+            { "pattern": "\\b(he|she) doesn't [a-z]+(s|es)\\b", "message": "После doesn't глагол без -s: she doesn't work." },
+            { "pattern": "\\b(in|on) (seven|eight|nine|ten|six|five|four|three|two|one)\\b", "message": "Перед точным временем — at: at seven." },
+            { "pattern": "\\bI am (work|get|go|have|start|finish|read|cook|sleep|study|walk)\\b", "message": "В Present Simple глагол be не нужен: I work, а не I am work." }
+          ],
+          "samples": [
+            "I get up at seven. I take a shower and have breakfast at half past seven. I go to work at eight. I work in an office. I finish work at six. In the evening I cook dinner and read a book. I don't work on Sunday.",
+            "My day: I wake up at six. I get up at half past six. My sister does not get up early. She sleeps late. I go to school at eight and study English. I come home at four. I do not work in the evening."
+          ],
+          "difficulty": 3,
+          "hint": "План: утро → работа или учёба → вечер → «в воскресенье я не…».",
+          "explanation": "Рассказывая о себе, используйте I и глагол без -s. Если упоминаете другого человека, ставьте -s. Отрицание — don't или doesn't.",
+          "grammar": ["a1.present-simple", "a1.telling-time", "a1.time-prepositions"]
+        },
+        { "id": "a1.u05.l07.e08", "type": "tiles", "from": "ru", "text": "По воскресеньям я не работаю.", "answer": "I don't work on Sunday.", "distractors": ["doesn't", "in"], "hint": "С I — don't, перед днём — on.", "explanation": "I don't work on Sunday. С днями недели — on.", "grammar": ["a1.present-simple", "a1.time-prepositions"] }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "a1.u05.test.e01", "type": "match_pairs", "pairs": [{ "en": "wake up", "ru": "просыпаться" }, { "en": "finish", "ru": "заканчивать" }, { "en": "leave", "ru": "уходить" }, { "en": "walk", "ru": "гулять" }, { "en": "clean", "ru": "убирать" }], "hint": "Wake up — первое действие утром.", "explanation": "Wake up — «просыпаться», finish — «заканчивать», leave — «уходить», walk — «гулять», clean — «убирать»." },
+      { "id": "a1.u05.test.e02", "type": "translate_choice", "from": "ru", "text": "ужин", "options": ["dinner", "lunch", "breakfast"], "answer": 0, "hint": "Вечерняя еда.", "explanation": "Dinner — «ужин», lunch — «обед», breakfast — «завтрак»." },
+      { "id": "a1.u05.test.e03", "type": "fill_gap", "text": "She ___ in a school.", "translation": "Она работает в школе.", "answers": [["works"]], "options": ["works", "work", "is work"], "hint": "С she — -s.", "explanation": "Правильно: She works in a school.", "grammar": ["a1.present-simple"] },
+      { "id": "a1.u05.test.e04", "type": "fill_gap", "text": "He ___ English.", "translation": "Он изучает английский.", "answers": [["studies"]], "options": ["studies", "studys", "study"], "hint": "Согласная + y.", "explanation": "Правильно: He studies English. Study → studies.", "grammar": ["a1.present-simple"] },
+      { "id": "a1.u05.test.e05", "type": "fill_gap", "text": "They ___ work on Sunday.", "translation": "Они не работают в воскресенье.", "answers": [["don't", "do not"]], "options": ["don't", "doesn't", "aren't"], "hint": "Отрицание с they.", "explanation": "Правильно: They don't work on Sunday.", "grammar": ["a1.present-simple"] },
+      { "id": "a1.u05.test.e06", "type": "fill_gap", "text": "It is half ___ seven.", "translation": "Сейчас 7:30.", "answers": [["past"]], "options": ["past", "to", "at"], "hint": "7:30 — после семи.", "explanation": "Правильно: It is half past seven — 7:30.", "grammar": ["a1.telling-time"] },
+      { "id": "a1.u05.test.e07", "type": "fill_gap", "text": "I work ___ Monday and I sleep late ___ the weekend.", "translation": "Я работаю в понедельник и долго сплю в выходные.", "answers": [["on"], ["at", "on"]], "difficulty": 2, "hint": "День недели — on; выходные — at (британский) или on.", "explanation": "On Monday — день недели. At the weekend (британский) или on the weekend (американский).", "grammar": ["a1.time-prepositions"] },
+      { "id": "a1.u05.test.e08", "type": "error_correction", "text": "He go to school every day.", "wrong": "go", "correction": "goes", "options": ["goes", "going", "gos"], "hint": "С he — особая форма.", "explanation": "Правильно: He goes to school every day. Go → goes.", "grammar": ["a1.present-simple"], "troubles": ["tenses"] },
+      { "id": "a1.u05.test.e09", "type": "error_correction", "text": "She doesn't works in an office.", "wrong": "works", "correction": "work", "options": ["work", "working", "is work"], "hint": "После doesn't — без -s.", "explanation": "Правильно: She doesn't work in an office. После doesn't — глагол без -s.", "grammar": ["a1.present-simple"], "troubles": ["tenses"] },
+      { "id": "a1.u05.test.e10", "type": "error_correction", "text": "I get up in seven.", "wrong": "in", "correction": "at", "options": ["at", "on", "to"], "hint": "Точное время.", "explanation": "Правильно: I get up at seven.", "grammar": ["a1.time-prepositions"], "troubles": ["prepositions"] },
+      { "id": "a1.u05.test.e11", "type": "listen_choice", "audio": "It is quarter past nine.", "question": "Какое время вы слышите?", "options": ["9:15", "8:45", "9:45"], "answer": 0, "hint": "Quarter past — «четверть после».", "explanation": "Правильно: Quarter past nine — 9:15.", "grammar": ["a1.telling-time"] },
+      { "id": "a1.u05.test.e12", "type": "listen_dictation", "text": "He gets up at seven every day.", "hint": "Семь слов.", "explanation": "He gets up at seven every day — «он встаёт в семь каждый день»." },
+      { "id": "a1.u05.test.e13", "type": "tiles", "from": "ru", "text": "Она не работает в субботу.", "answer": "She doesn't work on Saturday.", "distractors": ["don't", "works"], "difficulty": 2, "hint": "Образец: Doesn't + work.", "explanation": "Правильно: She doesn't work on Saturday.", "grammar": ["a1.present-simple"] },
+      { "id": "a1.u05.test.e14", "type": "type_translation", "from": "ru", "text": "Я завтракаю в половине восьмого.", "answers": ["I have breakfast at half past seven."], "difficulty": 2, "hint": "Образец: Have breakfast.", "explanation": "I have breakfast at half past seven. Половина восьмого — half past seven (7:30).", "grammar": ["a1.telling-time"] },
+      { "id": "a1.u05.test.e15", "type": "minimal_pair", "pair": [{ "en": "live", "ipa": "lɪv" }, { "en": "leave", "ipa": "liːv" }], "say": 0, "hint": "Здесь слышен короткий гласный.", "explanation": "Live [lɪv] — короткая гласная, leave [liːv] — долгая.", "troubles": ["pron-vowels"] },
+      { "id": "a1.u05.test.e16", "type": "speak_repeat", "text": "I get up at seven and go to work at eight.", "hint": "Три коротких части.", "explanation": "Get up, go to work: слитно, ударение на глаголах и числах." }
+    ]
+  }
+}

@@ -77,7 +77,7 @@ describe('Path', () => {
     expect(screen.getByText('Pre-A1 · С нуля')).toBeOnTheScreen();
     expect(screen.getByText('A1 · Начальный')).toBeOnTheScreen();
     expect(screen.getByText('Модуль 1 · Я и другие')).toBeOnTheScreen();
-    expect(screen.getByLabelText('Юнит 4: Дом. Скоро.')).toBeOnTheScreen();
+    expect(screen.getByLabelText('Юнит 6: Еда. Скоро.')).toBeOnTheScreen();
     expect(
       screen.getAllByText(/Появится, когда будут готовы все юниты модуля/).length,
     ).toBeGreaterThan(3);

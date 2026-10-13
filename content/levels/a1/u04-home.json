@@ -1,0 +1,294 @@
+{
+  "id": "a1.u04",
+  "level": "A1",
+  "order": 4,
+  "title": { "en": "Home", "ru": "Дом" },
+  "description": "Рассказываем о доме: комнаты, мебель и где что стоит. There is и there are, предлоги места in, on, under, next to, between.",
+  "goals": [
+    "Могу назвать комнаты и мебель.",
+    "Могу сказать, что есть в комнате: There is a sofa. There are two chairs.",
+    "Могу спросить и ответить: Is there a bathroom? — Yes, there is.",
+    "Могу сказать, где что находится: on the desk, under the window, next to the door.",
+    "Могу описать свою квартиру или дом коротким текстом."
+  ],
+  "grammar": ["a1.there-is", "a1.prepositions-place"],
+  "troubles": ["prepositions", "word-order"],
+  "words": [
+    { "id": "apartment", "en": "apartment", "ipa": "əˈpɑːrtmənt", "pos": "noun", "ru": ["квартира"], "example": { "en": "My apartment is small.", "ru": "Моя квартира маленькая." }, "note": "Apartment — американский вариант. В Британии говорят flat.", "topics": ["home"] },
+    { "id": "flat", "en": "flat", "ipa": "flæt", "pos": "noun", "ru": ["квартира (брит.)"], "example": { "en": "My flat is big.", "ru": "Моя квартира большая." }, "topics": ["home"] },
+    { "id": "room", "en": "room", "ipa": "ruːm", "pos": "noun", "ru": ["комната"], "example": { "en": "A big room.", "ru": "Большая комната." }, "topics": ["home"] },
+    { "id": "kitchen", "en": "kitchen", "ipa": "ˈkɪtʃɪn", "pos": "noun", "ru": ["кухня"], "example": { "en": "The kitchen is small.", "ru": "Кухня маленькая." }, "topics": ["home"] },
+    { "id": "bedroom", "en": "bedroom", "ipa": "ˈbedruːm", "pos": "noun", "ru": ["спальня"], "example": { "en": "My bedroom is blue.", "ru": "Моя спальня синяя." }, "topics": ["home"] },
+    { "id": "bathroom", "en": "bathroom", "ipa": "ˈbæθruːm", "pos": "noun", "ru": ["ванная комната"], "example": { "en": "The bathroom is white.", "ru": "Ванная белая." }, "topics": ["home"] },
+    { "id": "living-room", "en": "living room", "ipa": "ˈlɪvɪŋ ruːm", "pos": "noun", "ru": ["гостиная"], "example": { "en": "The living room is big.", "ru": "Гостиная большая." }, "topics": ["home"] },
+    { "id": "garden", "en": "garden", "ipa": "ˈɡɑːrdən", "pos": "noun", "ru": ["сад"], "example": { "en": "A big garden.", "ru": "Большой сад." }, "topics": ["home"] },
+    { "id": "floor", "en": "floor", "ipa": "flɔːr", "pos": "noun", "ru": ["пол", "этаж"], "example": { "en": "The key is on the floor.", "ru": "Ключ лежит на полу." }, "topics": ["home"] },
+    { "id": "wall", "en": "wall", "ipa": "wɔːl", "pos": "noun", "ru": ["стена"], "example": { "en": "The picture is on the wall.", "ru": "Картина на стене." }, "topics": ["home"] },
+    { "id": "sofa", "en": "sofa", "ipa": "ˈsoʊfə", "pos": "noun", "ru": ["диван"], "example": { "en": "A green sofa.", "ru": "Зелёный диван." }, "picture": { "emoji": "🛋️" }, "topics": ["home"] },
+    { "id": "shelf", "en": "shelf", "ipa": "ʃelf", "pos": "noun", "ru": ["полка"], "example": { "en": "The book is on the shelf.", "ru": "Книга лежит на полке." }, "forms": { "plural": "shelves" }, "topics": ["home"] },
+    { "id": "wardrobe", "en": "wardrobe", "ipa": "ˈwɔːrdroʊb", "pos": "noun", "ru": ["шкаф для одежды"], "example": { "en": "A big wardrobe.", "ru": "Большой шкаф." }, "topics": ["home"] },
+    { "id": "fridge", "en": "fridge", "ipa": "frɪdʒ", "pos": "noun", "ru": ["холодильник"], "example": { "en": "The fridge is white.", "ru": "Холодильник белый." }, "topics": ["home"] },
+    { "id": "bath", "en": "bath", "ipa": "bæθ", "pos": "noun", "ru": ["ванна"], "example": { "en": "A white bath.", "ru": "Белая ванна." }, "picture": { "emoji": "🛁" }, "topics": ["home"], "troubles": ["pron-th"] },
+    { "id": "shower", "en": "shower", "ipa": "ˈʃaʊɚ", "pos": "noun", "ru": ["душ"], "example": { "en": "A small shower.", "ru": "Маленький душ." }, "picture": { "emoji": "🚿" }, "topics": ["home"] },
+    { "id": "plant", "en": "plant", "ipa": "plænt", "pos": "noun", "ru": ["растение"], "example": { "en": "A green plant.", "ru": "Зелёное растение." }, "picture": { "emoji": "🪴" }, "topics": ["home"] },
+    { "id": "curtain", "en": "curtain", "ipa": "ˈkɝːtən", "pos": "noun", "ru": ["штора"], "example": { "en": "Blue curtains.", "ru": "Синие шторы." }, "topics": ["home"] },
+    { "id": "carpet", "en": "carpet", "ipa": "ˈkɑːrpɪt", "pos": "noun", "ru": ["ковёр"], "example": { "en": "A red carpet.", "ru": "Красный ковёр." }, "topics": ["home"] },
+    { "id": "stove", "en": "stove", "ipa": "stoʊv", "pos": "noun", "ru": ["плита"], "example": { "en": "A white stove.", "ru": "Белая плита." }, "topics": ["home"] },
+    { "id": "there", "en": "there", "ipa": "ðer", "pos": "adv", "ru": ["там", "(в there is) есть"], "example": { "en": "There is a lamp.", "ru": "Здесь есть лампа." }, "note": "В there is слово there не переводится как «там»: оно просто вводит предложение «есть».", "troubles": ["pron-th"] },
+    { "id": "in", "en": "in", "ipa": "ɪn", "pos": "prep", "ru": ["в", "внутри"], "example": { "en": "The book is in the bag.", "ru": "Книга в сумке." }, "topics": ["places"] },
+    { "id": "on", "en": "on", "ipa": "ɑːn", "pos": "prep", "ru": ["на"], "example": { "en": "The book is on the desk.", "ru": "Книга на столе." }, "topics": ["places"] },
+    { "id": "under", "en": "under", "ipa": "ˈʌndɚ", "pos": "prep", "ru": ["под"], "example": { "en": "The cat is under the table.", "ru": "Кошка под столом." }, "topics": ["places"] },
+    { "id": "next-to", "en": "next to", "ipa": "ˈnekst tuː", "pos": "prep", "ru": ["рядом с"], "example": { "en": "The sofa is next to the window.", "ru": "Диван рядом с окном." }, "topics": ["places"] },
+    { "id": "near", "en": "near", "ipa": "nɪr", "pos": "prep", "ru": ["возле", "около"], "example": { "en": "The chairs are near the table.", "ru": "Стулья возле стола." }, "topics": ["places"] },
+    { "id": "behind", "en": "behind", "ipa": "bɪˈhaɪnd", "pos": "prep", "ru": ["за", "позади"], "example": { "en": "The cat is behind the door.", "ru": "Кошка за дверью." }, "topics": ["places"] },
+    { "id": "between", "en": "between", "ipa": "bɪˈtwiːn", "pos": "prep", "ru": ["между"], "example": { "en": "The bed is between two windows.", "ru": "Кровать между двумя окнами." }, "topics": ["places"] },
+    { "id": "in-front-of", "en": "in front of", "ipa": "ɪn ˈfrʌnt əv", "pos": "prep", "ru": ["перед", "напротив"], "example": { "en": "The chair is in front of the desk.", "ru": "Стул перед столом." }, "topics": ["places"] },
+    { "id": "at", "en": "at", "ipa": "æt", "pos": "prep", "ru": ["у", "в (о месте, как точке)"], "example": { "en": "I am at home.", "ru": "Я дома." }, "note": "At home — «дома», без артикля.", "topics": ["places"] }
+  ],
+  "texts": [
+    {
+      "id": "a1.u04.tour",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Max's flat", "ru": "Квартира Макса" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "max", "name": "Max", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Max, is your flat big?", "ru": "Макс, твоя квартира большая?" },
+        { "speaker": "max", "en": "No, it is small. There are two rooms and a kitchen.", "ru": "Нет, маленькая. Там две комнаты и кухня." },
+        { "speaker": "anna", "en": "Is there a bathroom?", "ru": "А ванная есть?" },
+        { "speaker": "max", "en": "Yes, there is. It is next to the bedroom.", "ru": "Да. Она рядом со спальней." },
+        { "speaker": "anna", "en": "And where is your desk?", "ru": "А где твой стол?" },
+        { "speaker": "max", "en": "It is in the bedroom, between the bed and the window.", "ru": "В спальне, между кроватью и окном." },
+        { "speaker": "anna", "en": "Nice! Is there a sofa?", "ru": "Здорово! Диван есть?" },
+        { "speaker": "max", "en": "Yes, there is. It is in the living room.", "ru": "Да. Он в гостиной." }
+      ]
+    },
+    {
+      "id": "a1.u04.my-apartment",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "My apartment", "ru": "Моя квартира" },
+      "lines": [
+        { "en": "This is my apartment. It is small, but it is nice.", "ru": "Это моя квартира. Она маленькая, но хорошая." },
+        { "en": "There is a bedroom, a living room, a kitchen and a bathroom.", "ru": "Здесь есть спальня, гостиная, кухня и ванная." },
+        { "en": "In the living room there is a green sofa and a big table. There are two chairs near the table.", "ru": "В гостиной есть зелёный диван и большой стол. Возле стола два стула." },
+        { "en": "In the kitchen there is a fridge and a stove.", "ru": "На кухне есть холодильник и плита." },
+        { "en": "My desk is in the bedroom, next to the window. There is a lamp on the desk, and there is a plant under the window.", "ru": "Мой письменный стол в спальне, рядом с окном. На столе лампа, а под окном растение." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "a1.u04.l01",
+      "kind": "vocabulary",
+      "title": "Комнаты",
+      "exercises": [
+        { "id": "a1.u04.l01.e01", "type": "picture_choice", "mode": "picture-to-word", "word": "sofa", "distractors": ["plant", "bath"], "hint": "На нём сидят в гостиной.", "explanation": "Sofa — «диван»: [ˈsoʊfə], ударение на первый слог." },
+        { "id": "a1.u04.l01.e02", "type": "picture_choice", "mode": "word-to-picture", "word": "shower", "distractors": ["bath", "plant"], "hint": "Под ним моются стоя.", "explanation": "Shower — «душ»: [ˈʃaʊɚ]. Bath — «ванна»." },
+        { "id": "a1.u04.l01.e03", "type": "picture_choice", "mode": "picture-to-word", "word": "plant", "distractors": ["sofa", "shower"], "hint": "Оно зелёное и растёт в горшке.", "explanation": "Plant — «растение». Читается [plænt]." },
+        { "id": "a1.u04.l01.e04", "type": "translate_choice", "from": "en", "text": "kitchen", "options": ["кухня", "спальня", "ванная"], "answer": 0, "hint": "Там готовят еду.", "explanation": "Kitchen — «кухня»: [ˈkɪtʃɪn]. Буквы tch читаются как «ч»." },
+        { "id": "a1.u04.l01.e05", "type": "translate_choice", "from": "ru", "text": "спальня", "options": ["bedroom", "bathroom", "living room"], "answer": 0, "hint": "В ней стоит кровать (bed).", "explanation": "Bedroom — «спальня»: bed + room. Bathroom — «ванная»." },
+        { "id": "a1.u04.l01.e06", "type": "match_pairs", "pairs": [{ "en": "apartment", "ru": "квартира" }, { "en": "room", "ru": "комната" }, { "en": "garden", "ru": "сад" }, { "en": "floor", "ru": "пол" }, { "en": "wall", "ru": "стена" }], "hint": "Apartment и flat — одно и то же.", "explanation": "Apartment — «квартира», room — «комната», garden — «сад», floor — «пол», wall — «стена»." },
+        { "id": "a1.u04.l01.e07", "type": "match_pairs", "pairs": [{ "en": "shelf", "ru": "полка" }, { "en": "wardrobe", "ru": "шкаф" }, { "en": "fridge", "ru": "холодильник" }, { "en": "curtain", "ru": "штора" }, { "en": "carpet", "ru": "ковёр" }], "hint": "Fridge — сокращение от слова refrigerator.", "explanation": "Shelf — «полка», wardrobe — «шкаф для одежды», fridge — «холодильник», curtain — «штора», carpet — «ковёр»." },
+        { "id": "a1.u04.l01.e08", "type": "translate_choice", "from": "en", "text": "flat", "options": ["квартира", "плоский", "этаж"], "answer": 0, "hint": "Так говорят в Британии.", "explanation": "Flat — «квартира» в британском английском. В американском — apartment. Flat ещё значит «плоский».", "troubles": ["false-friends"] },
+        { "id": "a1.u04.l01.e09", "type": "listen_choice", "audio": "bathroom", "question": "Какое слово вы слышите?", "options": ["bathroom", "bedroom", "kitchen"], "answer": 0, "hint": "В начале слышно звук [b], потом th.", "explanation": "Bathroom [ˈbæθruːm]: bath + room. Бывает со звуком th [θ] посередине.", "troubles": ["pron-th"] },
+        { "id": "a1.u04.l01.e10", "type": "listen_dictation", "text": "kitchen", "hint": "Семь букв.", "explanation": "Kitchen — «кухня»: k-i-t-c-h-e-n." },
+        { "id": "a1.u04.l01.e11", "type": "type_translation", "from": "ru", "text": "гостиная", "answers": ["living room"], "hint": "Два слова.", "explanation": "Living room — «гостиная»: комната, где живут и отдыхают." },
+        { "id": "a1.u04.l01.e12", "type": "fill_gap", "text": "My ___ is next to the kitchen.", "translation": "Моя гостиная рядом с кухней.", "answers": [["living room"]], "options": ["living room", "wardrobe", "stove"], "hint": "Комната рядом с кухней.", "explanation": "Living room — «гостиная». Wardrobe — шкаф, а не комната." },
+        { "id": "a1.u04.l01.e13", "type": "word_stress", "word": "apartment", "syllables": ["a", "part", "ment"], "stress": 1, "hint": "Ударный слог — part.", "explanation": "a-PART-ment — ударение на второй слог." },
+        { "id": "a1.u04.l01.e14", "type": "speak_repeat", "text": "My bedroom is blue.", "hint": "В bedroom ударение на первый слог.", "explanation": "BED-room: ударение на первом слоге, room звучит коротко: [ˈbedruːm]." }
+      ]
+    },
+    {
+      "id": "a1.u04.l02",
+      "kind": "grammar",
+      "title": "There is и there are",
+      "grammar": "a1.there-is",
+      "exercises": [
+        { "id": "a1.u04.l02.e01", "type": "fill_gap", "text": "There ___ a sofa in the living room.", "translation": "В гостиной есть диван.", "answers": [["is"]], "options": ["is", "are", "am"], "hint": "Диван — один.", "explanation": "There is a sofa. Один предмет — there is.", "grammar": ["a1.there-is"] },
+        { "id": "a1.u04.l02.e02", "type": "fill_gap", "text": "There ___ two chairs near the table.", "translation": "Возле стола два стула.", "answers": [["are"]], "options": ["are", "is", "am"], "hint": "Стульев несколько.", "explanation": "There are two chairs. Несколько предметов — there are.", "grammar": ["a1.there-is"] },
+        { "id": "a1.u04.l02.e03", "type": "fill_gap", "text": "___ there a bathroom?", "translation": "Ванная есть?", "answers": [["Is"]], "options": ["Is", "Are", "Am"], "hint": "Ванная — одна.", "explanation": "Is there a bathroom? В вопросе is идёт перед there.", "grammar": ["a1.there-is"] },
+        { "id": "a1.u04.l02.e04", "type": "fill_gap", "text": "Are there two bedrooms? — No, there ___.", "translation": "Две спальни? — Нет.", "answers": [["aren't", "are not"]], "options": ["aren't", "isn't", "not"], "hint": "В коротком ответе повторяется are.", "explanation": "No, there aren't. Короткий ответ повторяет are.", "grammar": ["a1.there-is"] },
+        { "id": "a1.u04.l02.e05", "type": "fill_gap", "text": "How ___ rooms are there?", "translation": "Сколько там комнат?", "answers": [["many"]], "options": ["many", "old", "big"], "hint": "Вопрос о количестве предметов.", "explanation": "How many rooms are there? Many — «сколько» для предметов, которые можно посчитать.", "grammar": ["a1.there-is"] },
+        { "id": "a1.u04.l02.e06", "type": "error_correction", "text": "There are a sofa in the room.", "wrong": "are", "correction": "is", "options": ["is", "am", "be"], "hint": "Диван — один.", "explanation": "There is a sofa. После there ставят is, если предмет один.", "grammar": ["a1.there-is"] },
+        { "id": "a1.u04.l02.e07", "type": "error_correction", "text": "There is two chairs in the kitchen.", "wrong": "is", "correction": "are", "options": ["are", "am", "be"], "hint": "Стульев два.", "explanation": "There are two chairs. Несколько — are.", "grammar": ["a1.there-is"] },
+        { "id": "a1.u04.l02.e08", "type": "error_correction", "text": "Is a lamp in the room?", "wrong": "Is a lamp", "correction": "Is there a lamp", "options": ["Is there a lamp", "Are a lamp", "There is a lamp"], "hint": "Нужно слово there.", "explanation": "Is there a lamp in the room? Вопрос начинается с is there.", "grammar": ["a1.there-is"], "troubles": ["word-order"] },
+        { "id": "a1.u04.l02.e09", "type": "tiles", "from": "ru", "text": "В комнате есть стол.", "answer": "There is a table in the room.", "distractors": ["are", "on"], "hint": "Сначала there is.", "explanation": "There is a table in the room. Место называют в конце.", "grammar": ["a1.there-is"] },
+        { "id": "a1.u04.l02.e10", "type": "tiles", "from": "ru", "text": "На кухне нет окна.", "answer": "There is not a window in the kitchen.", "alternatives": ["There is not a window in the kitchen."], "distractors": ["are", "two"], "difficulty": 2, "hint": "Not — после is.", "explanation": "There is not a window in the kitchen. Можно и короче: There isn't a window.", "grammar": ["a1.there-is"] },
+        { "id": "a1.u04.l02.e11", "type": "type_translation", "from": "ru", "text": "В гостиной есть диван?", "answers": ["Is there a sofa in the living room?"], "difficulty": 2, "hint": "Вопрос начинается с is there.", "explanation": "Is there a sofa in the living room? Вопрос — is there + предмет + место.", "grammar": ["a1.there-is"], "troubles": ["word-order"] },
+        { "id": "a1.u04.l02.e12", "type": "type_translation", "from": "ru", "text": "В спальне две лампы.", "answers": ["There are two lamps in the bedroom."], "difficulty": 2, "hint": "Ламп две — there are.", "explanation": "There are two lamps in the bedroom. Две лампы — множественное число.", "grammar": ["a1.there-is", "a1.plurals"] },
+        { "id": "a1.u04.l02.e13", "type": "listen_choice", "audio": "There are two chairs.", "question": "Что вы слышите?", "options": ["There are two chairs.", "There is a chair.", "These are two chairs."], "answer": 0, "hint": "Слышно are и two.", "explanation": "There are two chairs — «там два стула». There читается [ðer].", "grammar": ["a1.there-is"] },
+        { "id": "a1.u04.l02.e14", "type": "speak_answer", "question": "Is there a sofa in your living room?", "questionRu": "Есть ли диван в вашей гостиной? Ответьте коротко: Yes, there is или No, there isn't.", "keywords": [["\\byes\\b", "\\bno\\b"], ["\\bthere (is|isn't|is not)\\b"]], "minKeywords": 2, "samples": ["Yes, there is.", "No, there isn't."], "difficulty": 3, "hint": "Yes, there is. или No, there isn't.", "explanation": "Короткий ответ на вопрос с there is: Yes, there is. No, there isn't.", "grammar": ["a1.there-is"] }
+      ]
+    },
+    {
+      "id": "a1.u04.l03",
+      "kind": "grammar",
+      "title": "Где это? in, on, under, next to",
+      "grammar": "a1.prepositions-place",
+      "exercises": [
+        { "id": "a1.u04.l03.e01", "type": "match_pairs", "pairs": [{ "en": "in", "ru": "в, внутри" }, { "en": "on", "ru": "на" }, { "en": "under", "ru": "под" }, { "en": "behind", "ru": "за" }, { "en": "between", "ru": "между" }], "hint": "On — это на поверхности.", "explanation": "In — «в», on — «на», under — «под», behind — «за», between — «между».", "grammar": ["a1.prepositions-place"] },
+        { "id": "a1.u04.l03.e02", "type": "match_pairs", "pairs": [{ "en": "next to", "ru": "рядом с" }, { "en": "near", "ru": "возле" }, { "en": "in front of", "ru": "перед" }, { "en": "at", "ru": "у, в точке" }, { "en": "there", "ru": "вводит «есть»" }], "hint": "Next to и near очень близки по смыслу.", "explanation": "Next to — «рядом с», near — «возле», in front of — «перед», at — «у», there — слово в there is.", "grammar": ["a1.prepositions-place"] },
+        { "id": "a1.u04.l03.e03", "type": "fill_gap", "text": "The lamp is ___ the desk.", "translation": "Лампа на столе.", "answers": [["on"]], "options": ["on", "in", "under"], "hint": "Лампа стоит на поверхности.", "explanation": "The lamp is on the desk. On — на поверхности.", "grammar": ["a1.prepositions-place"], "troubles": ["prepositions"] },
+        { "id": "a1.u04.l03.e04", "type": "fill_gap", "text": "The book is ___ the bag.", "translation": "Книга в сумке.", "answers": [["in"]], "options": ["in", "on", "at"], "hint": "Книга внутри.", "explanation": "The book is in the bag. In — внутри.", "grammar": ["a1.prepositions-place"], "troubles": ["prepositions"] },
+        { "id": "a1.u04.l03.e05", "type": "fill_gap", "text": "The cat is ___ the table.", "translation": "Кошка под столом.", "answers": [["under"]], "options": ["under", "on", "between"], "hint": "Ниже стола.", "explanation": "The cat is under the table. Under — «под».", "grammar": ["a1.prepositions-place"], "troubles": ["prepositions"] },
+        { "id": "a1.u04.l03.e06", "type": "fill_gap", "text": "The desk is ___ the bed and the window.", "translation": "Стол между кроватью и окном.", "answers": [["between"]], "options": ["between", "behind", "near"], "hint": "Два предмета — по одному с каждой стороны.", "explanation": "Правильно: The desk is between the bed and the window.", "grammar": ["a1.prepositions-place"] },
+        { "id": "a1.u04.l03.e07", "type": "fill_gap", "text": "I am ___ home.", "translation": "Я дома.", "answers": [["at"]], "options": ["at", "in", "on"], "hint": "«Дома» — устойчивая фраза.", "explanation": "I am at home. Фраза at home — «дома».", "grammar": ["a1.prepositions-place"], "troubles": ["prepositions"] },
+        { "id": "a1.u04.l03.e08", "type": "error_correction", "text": "The picture is in the wall.", "wrong": "in", "correction": "on", "options": ["on", "at", "under"], "hint": "Картина висит на поверхности.", "explanation": "The picture is on the wall. Стена — поверхность, поэтому on.", "grammar": ["a1.prepositions-place"], "troubles": ["prepositions"] },
+        { "id": "a1.u04.l03.e09", "type": "error_correction", "text": "I am in home.", "wrong": "in", "correction": "at", "options": ["at", "on", "to"], "hint": "«Дома» — особая фраза.", "explanation": "I am at home. «Дома» — at home, не in home.", "grammar": ["a1.prepositions-place"], "troubles": ["prepositions"] },
+        { "id": "a1.u04.l03.e10", "type": "tiles", "from": "ru", "text": "Ключ на полу.", "answer": "The key is on the floor.", "distractors": ["in", "are"], "hint": "On — на поверхности.", "explanation": "The key is on the floor. На полу — on the floor.", "grammar": ["a1.prepositions-place"] },
+        { "id": "a1.u04.l03.e11", "type": "tiles", "from": "ru", "text": "Кошка за диваном.", "answer": "The cat is behind the sofa.", "distractors": ["under", "next"], "hint": "За — behind.", "explanation": "The cat is behind the sofa. Behind — «за, позади».", "grammar": ["a1.prepositions-place"] },
+        { "id": "a1.u04.l03.e12", "type": "type_translation", "from": "ru", "text": "Стул перед столом.", "answers": ["The chair is in front of the desk.", "The chair is in front of the table."], "difficulty": 2, "hint": "Перед — in front of.", "explanation": "The chair is in front of the desk. In front of — три слова, значат «перед».", "grammar": ["a1.prepositions-place"] },
+        { "id": "a1.u04.l03.e13", "type": "type_translation", "from": "ru", "text": "Растение под окном.", "answers": ["The plant is under the window."], "difficulty": 2, "hint": "Под — under.", "explanation": "Правильно: The plant is under the window.", "grammar": ["a1.prepositions-place"] },
+        { "id": "a1.u04.l03.e14", "type": "speak_answer", "question": "Where is your phone?", "questionRu": "Где сейчас ваш телефон? Ответьте: It is on… / in… / next to…", "keywords": [["\\bit is\\b", "\\bit'?s\\b", "\\bmy phone is\\b"], ["\\b(on|in|under|next to|near|behind|between|in front of)\\b"]], "minKeywords": 2, "samples": ["It is on the table.", "It is in my bag."], "difficulty": 3, "hint": "Образец: It is on / in…", "explanation": "Отвечаем: It is + предлог + место. Например: It is on the desk.", "grammar": ["a1.prepositions-place"] }
+      ]
+    },
+    {
+      "id": "a1.u04.l04",
+      "kind": "pronunciation",
+      "title": "Звук th в there, bath, the",
+      "exercises": [
+        { "id": "a1.u04.l04.e01", "type": "minimal_pair", "pair": [{ "en": "there", "ipa": "ðer" }, { "en": "dare", "ipa": "der" }], "say": 0, "hint": "В одном слове язык между зубами.", "explanation": "[ð] в there — звонкий, язык между зубами. [d] в dare — язык за зубами.", "troubles": ["pron-th"] },
+        { "id": "a1.u04.l04.e02", "type": "minimal_pair", "pair": [{ "en": "bath", "ipa": "bæθ" }, { "en": "bat", "ipa": "bæt" }], "say": 0, "hint": "В конце слова — th.", "explanation": "[θ] в bath — глухой, язык между зубами. [t] в bat — обычный «т».", "troubles": ["pron-th"] },
+        { "id": "a1.u04.l04.e03", "type": "minimal_pair", "pair": [{ "en": "bath", "ipa": "bæθ" }, { "en": "bass", "ipa": "bæs" }], "say": 0, "hint": "Не «с»: язык между зубами.", "explanation": "[θ] — не «с». В bath язык виден между зубами, воздух проходит мягко.", "troubles": ["pron-th"] },
+        { "id": "a1.u04.l04.e04", "type": "listen_choice", "audio": "bath", "question": "Какое слово вы слышите?", "options": ["bath", "bed", "bag"], "answer": 0, "hint": "В конце слышно th.", "explanation": "Bath — «ванна». В конце — глухой звук [θ].", "troubles": ["pron-th"] },
+        { "id": "a1.u04.l04.e05", "type": "listen_choice", "audio": "There is a plant.", "question": "Что вы слышите?", "options": ["There is a plant.", "There is a lamp.", "That is a plant."], "answer": 0, "hint": "Растение — plant.", "explanation": "There is a plant — «там есть растение»." },
+        { "id": "a1.u04.l04.e06", "type": "word_stress", "word": "bathroom", "syllables": ["bath", "room"], "stress": 0, "hint": "Первый слог — bath.", "explanation": "BATH-room — ударение на первый слог." },
+        { "id": "a1.u04.l04.e07", "type": "word_stress", "word": "wardrobe", "syllables": ["ward", "robe"], "stress": 0, "hint": "Первый слог — ward.", "explanation": "WARD-robe — ударение на первый слог." },
+        { "id": "a1.u04.l04.e08", "type": "word_stress", "word": "between", "syllables": ["be", "tween"], "stress": 1, "hint": "В предлогах ударение часто на втором слоге.", "explanation": "be-TWEEN — ударение на второй слог." },
+        { "id": "a1.u04.l04.e09", "type": "word_stress", "word": "behind", "syllables": ["be", "hind"], "stress": 1, "hint": "Как в between.", "explanation": "be-HIND — ударение на второй слог." },
+        { "id": "a1.u04.l04.e10", "type": "speak_repeat", "text": "There is a bath in the bathroom.", "hint": "Три слова с th: there, bath, bathroom.", "explanation": "There [ðer], bath [bæθ], bathroom [ˈbæθruːm]: язык между зубами.", "troubles": ["pron-th"] },
+        { "id": "a1.u04.l04.e11", "type": "speak_repeat", "text": "The cat is under the table.", "hint": "The — слабое, ðə.", "explanation": "The читается [ðə]: коротко, с языком между зубами.", "troubles": ["pron-th"] },
+        { "id": "a1.u04.l04.e12", "type": "listen_dictation", "text": "The key is under the carpet.", "hint": "Шесть слов.", "explanation": "The key is under the carpet — «ключ под ковром»." },
+        { "id": "a1.u04.l04.e13", "type": "fill_gap", "text": "There is a ___ in the bathroom.", "translation": "В ванной есть душ.", "answers": [["shower", "bath"]], "options": ["shower", "sofa", "wardrobe"], "hint": "Это есть в ванной.", "explanation": "There is a shower (или a bath) in the bathroom." }
+      ]
+    },
+    {
+      "id": "a1.u04.l05",
+      "kind": "listening",
+      "title": "Квартира Макса",
+      "textId": "a1.u04.tour",
+      "exercises": [
+        {
+          "id": "a1.u04.l05.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "a1.u04.tour",
+          "hint": "Слушайте, что есть в квартире и где стоит.",
+          "explanation": "Макс рассказывает Анне о маленькой квартире: две комнаты, кухня, ванная.",
+          "questions": [
+            { "kind": "mcq", "question": "Какая квартира у Макса?", "options": ["small", "big", "new"], "answer": 0, "explanation": "Макс говорит: No, it is small." },
+            { "kind": "mcq", "question": "Где стол Макса?", "options": ["in the bedroom", "in the kitchen", "in the living room"], "answer": 0, "explanation": "Макс говорит: It is in the bedroom." },
+            { "kind": "mcq", "question": "Где диван?", "options": ["in the living room", "in the bedroom", "in the kitchen"], "answer": 0, "explanation": "Макс говорит: It is in the living room." },
+            { "kind": "tfn", "statement": "There is a bathroom next to the bedroom.", "answer": "true", "explanation": "Макс говорит: It is next to the bedroom." },
+            { "kind": "tfn", "statement": "The flat is big.", "answer": "false", "explanation": "Квартира маленькая: No, it is small." },
+            { "kind": "tfn", "statement": "There is a garden.", "answer": "not_given", "explanation": "О саде в диалоге ничего не сказано." }
+          ]
+        },
+        { "id": "a1.u04.l05.e02", "type": "listen_choice", "audio": "Is there a bathroom?", "question": "Что вы слышите?", "options": ["Is there a bathroom?", "Is there a bedroom?", "Are there two rooms?"], "answer": 0, "hint": "Слово bathroom — с th.", "explanation": "Is there a bathroom? — «Есть ли ванная?».", "grammar": ["a1.there-is"] },
+        { "id": "a1.u04.l05.e03", "type": "listen_dictation", "text": "It is next to the bedroom.", "answers": ["It's next to the bedroom."], "hint": "Шесть слов.", "explanation": "It is next to the bedroom — «она рядом со спальней»." },
+        { "id": "a1.u04.l05.e04", "type": "listen_dictation", "text": "There are two rooms and a kitchen.", "hint": "Семь слов.", "explanation": "There are two rooms and a kitchen — «там две комнаты и кухня»." },
+        { "id": "a1.u04.l05.e05", "type": "fill_gap", "text": "Is there a sofa? — Yes, there ___.", "translation": "Диван есть? — Да.", "answers": [["is"]], "options": ["is", "are", "isn't"], "hint": "В коротком да-ответе повторяется is.", "explanation": "Yes, there is. Короткий утвердительный ответ.", "grammar": ["a1.there-is"] },
+        { "id": "a1.u04.l05.e06", "type": "fill_gap", "text": "Where is your desk? — It is ___ the bedroom.", "translation": "Где твой стол? — В спальне.", "answers": [["in"]], "options": ["in", "on", "at"], "hint": "Стол внутри комнаты.", "explanation": "It is in the bedroom. Комната — «внутри», поэтому in.", "grammar": ["a1.prepositions-place"] },
+        { "id": "a1.u04.l05.e07", "type": "tiles", "from": "ru", "text": "Стол между кроватью и окном.", "answer": "The desk is between the bed and the window.", "distractors": ["on", "are"], "difficulty": 2, "hint": "Между — between.", "explanation": "Правильно: The desk is between the bed and the window.", "grammar": ["a1.prepositions-place"] },
+        { "id": "a1.u04.l05.e08", "type": "speak_answer", "question": "Is your home big?", "questionRu": "Ваш дом или квартира большие? Ответьте: Yes, it is или No, it isn't, и добавьте ещё одну фразу.", "keywords": [["\\byes\\b", "\\bno\\b"], ["\\b(it is|it isn't|it's|there (is|are))\\b"]], "minKeywords": 2, "samples": ["Yes, it is. There are three rooms.", "No, it isn't. It is small."], "difficulty": 3, "hint": "Образец: Yes, it is. / No, it isn't.", "explanation": "Отвечаем коротко и добавляем деталь: There are two rooms.", "grammar": ["a1.there-is"] }
+      ]
+    },
+    {
+      "id": "a1.u04.l06",
+      "kind": "reading",
+      "title": "Моя квартира",
+      "textId": "a1.u04.my-apartment",
+      "exercises": [
+        {
+          "id": "a1.u04.l06.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "a1.u04.my-apartment",
+          "hint": "Ищите предлоги и there is / there are.",
+          "explanation": "Автор рассказывает о своей небольшой квартире: комнаты, мебель и где что стоит.",
+          "questions": [
+            { "kind": "mcq", "question": "Какого цвета диван?", "options": ["green", "red", "blue"], "answer": 0, "explanation": "В тексте: a green sofa." },
+            { "kind": "mcq", "question": "Что стоит возле стола?", "options": ["two chairs", "a plant", "a lamp"], "answer": 0, "explanation": "В тексте: There are two chairs near the table." },
+            { "kind": "mcq", "question": "Где растение?", "options": ["under the window", "on the desk", "in the kitchen"], "answer": 0, "explanation": "В тексте: there is a plant under the window." },
+            { "kind": "tfn", "statement": "There is a fridge in the kitchen.", "answer": "true", "explanation": "В тексте: In the kitchen there is a fridge and a stove." },
+            { "kind": "tfn", "statement": "The apartment is big.", "answer": "false", "explanation": "Квартира маленькая: It is small." },
+            { "kind": "tfn", "statement": "There is a garden.", "answer": "not_given", "explanation": "О саде в тексте ничего не сказано." }
+          ]
+        },
+        { "id": "a1.u04.l06.e02", "type": "translate_choice", "from": "en", "text": "There is a lamp on the desk.", "options": ["На столе лампа.", "Под столом лампа.", "Возле стола лампа."], "answer": 0, "hint": "On — «на».", "explanation": "There is a lamp on the desk — «на столе лампа»." },
+        { "id": "a1.u04.l06.e03", "type": "fill_gap", "text": "In the kitchen there ___ a fridge and a stove.", "translation": "На кухне есть холодильник и плита.", "answers": [["is"]], "options": ["is", "are"], "hint": "Первое названное — один предмет.", "explanation": "In the kitchen there is a fridge and a stove. С перечислением из двух предметов обычно говорят there is, если первый предмет один." },
+        { "id": "a1.u04.l06.e04", "type": "fill_gap", "text": "My desk is next ___ the window.", "translation": "Мой стол рядом с окном.", "answers": [["to"]], "options": ["to", "of", "in"], "hint": "Next … — рядом с.", "explanation": "Next to the window — «рядом с окном». Next to — устойчивое сочетание из двух слов." },
+        { "id": "a1.u04.l06.e05", "type": "type_translation", "from": "ru", "text": "Это моя квартира. Она маленькая, но хорошая.", "answers": ["This is my apartment. It is small, but it is nice.", "This is my flat. It is small, but it is nice.", "This is my apartment. It's small, but it's nice."], "difficulty": 2, "hint": "But — «но».", "explanation": "Правильно: This is my apartment. It is small, but it is nice.", "grammar": ["a1.possessives"] },
+        { "id": "a1.u04.l06.e06", "type": "type_translation", "from": "ru", "text": "На кухне есть холодильник.", "answers": ["There is a fridge in the kitchen.", "In the kitchen there is a fridge."], "difficulty": 2, "hint": "Начните с there is.", "explanation": "There is a fridge in the kitchen. Или с места: In the kitchen there is a fridge.", "grammar": ["a1.there-is"] },
+        { "id": "a1.u04.l06.e07", "type": "speak_repeat", "text": "There is a lamp on the desk, and there is a plant under the window.", "hint": "Следите за th в there и the.", "explanation": "There [ðer], the [ðə]: язык между зубами. Плавно и без пауз внутри каждой части.", "troubles": ["pron-th"] },
+        { "id": "a1.u04.l06.e08", "type": "word_stress", "word": "kitchen", "syllables": ["kit", "chen"], "stress": 0, "hint": "Первый слог — kit.", "explanation": "KIT-chen — ударение на первый слог." }
+      ]
+    },
+    {
+      "id": "a1.u04.l07",
+      "kind": "writing",
+      "title": "Опишите свою квартиру",
+      "exercises": [
+        { "id": "a1.u04.l07.e01", "type": "speak_describe", "picture": { "emoji": "🛋️" }, "situation": "Опишите гостиную: что в ней есть и где это стоит. Например: There is a sofa. There is a lamp next to the sofa.", "keywords": [["\\bthere (is|are)\\b"], ["\\b(sofa|lamp|table|chair|carpet|window|plant)\\b"], ["\\b(next to|near|on|under|in|between|in front of|behind)\\b"]], "minKeywords": 2, "samples": ["There is a sofa in the living room. There is a lamp next to the sofa."], "difficulty": 3, "hint": "Образец: There is a sofa in the living room.", "explanation": "Опишите по порядку: There is… Затем место: next to…, on…, under…", "grammar": ["a1.there-is", "a1.prepositions-place"] },
+        { "id": "a1.u04.l07.e02", "type": "fill_gap", "text": "There ___ a bed and two chairs ___ my bedroom.", "translation": "В моей спальне есть кровать и два стула.", "answers": [["is"], ["in"]], "difficulty": 2, "hint": "Первое название — кровать (один предмет); комната — «внутри».", "explanation": "There is a bed and two chairs in my bedroom. Is — по первому предмету, in — «в комнате».", "grammar": ["a1.there-is", "a1.prepositions-place"] },
+        { "id": "a1.u04.l07.e03", "type": "error_correction", "text": "The plant is on the window.", "wrong": "on", "correction": "under", "options": ["under", "at", "in front"], "hint": "Растение стоит ниже окна.", "explanation": "The plant is under the window. Under — «под».", "grammar": ["a1.prepositions-place"] },
+        { "id": "a1.u04.l07.e04", "type": "tiles", "from": "ru", "text": "Рядом с диваном стоит лампа.", "answer": "There is a lamp next to the sofa.", "distractors": ["are", "under"], "difficulty": 2, "hint": "Сначала there is.", "explanation": "There is a lamp next to the sofa. Место называют в конце.", "grammar": ["a1.there-is", "a1.prepositions-place"] },
+        { "id": "a1.u04.l07.e05", "type": "type_translation", "from": "ru", "text": "Где мои ключи? — Они на полке.", "answers": ["Where are my keys? — They are on the shelf.", "Where are my keys? They are on the shelf."], "difficulty": 3, "hint": "Ключи — несколько, значит are и they.", "explanation": "Where are my keys? They are on the shelf. Ключи — множественное число.", "grammar": ["a1.prepositions-place"] },
+        { "id": "a1.u04.l07.e06", "type": "speak_answer", "question": "What is in your bedroom?", "questionRu": "Что есть в вашей спальне? Назовите два или три предмета: There is… There are…", "keywords": [["\\bthere (is|are)\\b"], ["\\b(bed|desk|lamp|chair|wardrobe|window|sofa|plant|carpet|shelf|table|curtains?)\\b"]], "minKeywords": 2, "samples": ["There is a bed and a desk.", "There are two windows. There is a lamp."], "difficulty": 3, "hint": "Образец: There is a bed…", "explanation": "Называем предметы после there is / there are.", "grammar": ["a1.there-is"] },
+        {
+          "id": "a1.u04.l07.e07",
+          "type": "write",
+          "task": "Опишите свою квартиру или дом: какая она, какие комнаты есть и где что стоит. Используйте there is, there are и предлоги. Например: My flat is small. There is a kitchen and a bedroom. There is a lamp on the desk.",
+          "minWords": 25,
+          "maxWords": 80,
+          "criteria": [
+            { "id": "there", "label": "Есть there is или there are", "patterns": ["\\bthere (is|are|isn't|aren't)\\b"] },
+            { "id": "rooms", "label": "Названы комнаты или мебель", "patterns": ["\\b(room|kitchen|bedroom|bathroom|living room|sofa|bed|table|chair|desk|lamp|wardrobe|fridge|stove|window|door|carpet|plant|shelf)\\b"] },
+            { "id": "preposition", "label": "Есть предлоги места", "patterns": ["\\b(in|on|under|next to|near|between|behind|in front of)\\b"] },
+            { "id": "adjective", "label": "Есть описание: big, small, new, nice…", "patterns": ["\\b(big|small|new|old|nice|beautiful|red|blue|green|white|black|brown|grey|yellow)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\bthere (is|am) (two|three|four|five|six|seven|eight|nine|ten)\\b", "message": "С числом больше одного — there are: There are two chairs." },
+            { "pattern": "\\bthere are an? [a-z]+\\b", "message": "С a/an — there is: There is a sofa." },
+            { "pattern": "\\bin home\\b", "message": "«Дома» — at home, а не in home." },
+            { "pattern": "\\bon the (window|room|kitchen|bag|fridge)\\b", "message": "Окно, комната, кухня, сумка — «внутри»: in the room. On — только поверхность." }
+          ],
+          "samples": [
+            "My flat is small. There is a bedroom, a living room and a kitchen. In the living room there is a green sofa. There are two chairs near the table. There is a lamp on the desk.",
+            "This is my apartment. It is nice. There is a big kitchen. In the bedroom there is a bed and a wardrobe. There is a plant under the window, and there are two pictures on the wall."
+          ],
+          "difficulty": 3,
+          "hint": "План: My flat is… → There is/are… → место (in, on, next to).",
+          "explanation": "Сначала общее впечатление, потом что есть в комнатах и где что стоит. Проверьте there is / there are и предлоги.",
+          "grammar": ["a1.there-is", "a1.prepositions-place"]
+        },
+        { "id": "a1.u04.l07.e08", "type": "translate_choice", "from": "en", "text": "I am at home. My cat is on the sofa.", "options": ["Я дома. Моя кошка на диване.", "Я в доме. Моя кошка под диваном.", "Я дома. Моя кошка за диваном."], "answer": 0, "hint": "At home — «дома».", "explanation": "I am at home — «я дома». The cat is on the sofa — «кошка на диване»." }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "a1.u04.test.e01", "type": "picture_choice", "mode": "picture-to-word", "word": "shower", "distractors": ["bath", "plant"], "hint": "Под ним моются стоя.", "explanation": "Shower — «душ»." },
+      { "id": "a1.u04.test.e02", "type": "translate_choice", "from": "en", "text": "wardrobe", "options": ["шкаф для одежды", "полка", "холодильник"], "answer": 0, "hint": "В нём висит одежда.", "explanation": "Wardrobe — «шкаф для одежды»." },
+      { "id": "a1.u04.test.e03", "type": "translate_choice", "from": "ru", "text": "ванная комната", "options": ["bathroom", "bedroom", "kitchen"], "answer": 0, "hint": "Bath — «ванна».", "explanation": "Bathroom — «ванная комната»: bath + room." },
+      { "id": "a1.u04.test.e04", "type": "match_pairs", "pairs": [{ "en": "sofa", "ru": "диван" }, { "en": "curtain", "ru": "штора" }, { "en": "carpet", "ru": "ковёр" }, { "en": "stove", "ru": "плита" }, { "en": "shelf", "ru": "полка" }], "hint": "Curtain и carpet — похожие слова, но разные.", "explanation": "Sofa — «диван», curtain — «штора», carpet — «ковёр», stove — «плита», shelf — «полка»." },
+      { "id": "a1.u04.test.e05", "type": "fill_gap", "text": "There ___ a sofa in the living room.", "translation": "В гостиной есть диван.", "answers": [["is"]], "options": ["is", "are", "am"], "hint": "Диван — один.", "explanation": "There is a sofa. Один предмет — there is.", "grammar": ["a1.there-is"] },
+      { "id": "a1.u04.test.e06", "type": "fill_gap", "text": "___ there two bedrooms?", "translation": "Там две спальни?", "answers": [["Are"]], "options": ["Are", "Is", "Am"], "hint": "Спален две.", "explanation": "Are there two bedrooms? Несколько предметов — are there.", "grammar": ["a1.there-is"] },
+      { "id": "a1.u04.test.e07", "type": "fill_gap", "text": "The lamp is ___ the desk.", "translation": "Лампа на столе.", "answers": [["on"]], "options": ["on", "in", "under"], "hint": "На поверхности.", "explanation": "Правильно: The lamp is on the desk.", "grammar": ["a1.prepositions-place"] },
+      { "id": "a1.u04.test.e08", "type": "fill_gap", "text": "The cat is ___ the table.", "translation": "Кошка под столом.", "answers": [["under"]], "options": ["under", "on", "behind"], "hint": "Ниже стола.", "explanation": "Правильно: The cat is under the table.", "grammar": ["a1.prepositions-place"] },
+      { "id": "a1.u04.test.e09", "type": "error_correction", "text": "There is two chairs near the table.", "wrong": "is", "correction": "are", "options": ["are", "am", "be"], "hint": "Стульев два.", "explanation": "There are two chairs. Несколько — are.", "grammar": ["a1.there-is"] },
+      { "id": "a1.u04.test.e10", "type": "error_correction", "text": "I am in home.", "wrong": "in", "correction": "at", "options": ["at", "on", "to"], "hint": "«Дома» — устойчивая фраза.", "explanation": "I am at home. At home — «дома».", "grammar": ["a1.prepositions-place"], "troubles": ["prepositions"] },
+      { "id": "a1.u04.test.e11", "type": "listen_choice", "audio": "The key is on the floor.", "question": "Что вы слышите?", "options": ["The key is on the floor.", "The key is in the floor.", "The keys are on the floor."], "answer": 0, "hint": "Ключ один, лежит на полу.", "explanation": "The key is on the floor — «ключ на полу»." },
+      { "id": "a1.u04.test.e12", "type": "listen_dictation", "text": "There is a plant under the window.", "hint": "Семь слов.", "explanation": "There is a plant under the window — «под окном растение»." },
+      { "id": "a1.u04.test.e13", "type": "tiles", "from": "ru", "text": "В комнате есть кровать.", "answer": "There is a bed in the room.", "distractors": ["are", "on"], "hint": "There is… и место.", "explanation": "Правильно: There is a bed in the room.", "grammar": ["a1.there-is"] },
+      { "id": "a1.u04.test.e14", "type": "type_translation", "from": "ru", "text": "Стол между кроватью и окном.", "answers": ["The desk is between the bed and the window.", "The table is between the bed and the window."], "difficulty": 2, "hint": "Между — between.", "explanation": "Правильно: The desk is between the bed and the window.", "grammar": ["a1.prepositions-place"] },
+      { "id": "a1.u04.test.e15", "type": "minimal_pair", "pair": [{ "en": "bath", "ipa": "bæθ" }, { "en": "bat", "ipa": "bæt" }], "say": 0, "hint": "В конце слышно th.", "explanation": "В bath — [θ], язык между зубами; в bat — [t].", "troubles": ["pron-th"] },
+      { "id": "a1.u04.test.e16", "type": "speak_repeat", "text": "There is a bath in the bathroom.", "hint": "Три слова с th.", "explanation": "Правильно: There [ðer], bath [bæθ], bathroom [ˈbæθruːm].", "troubles": ["pron-th"] }
+    ]
+  }
+}
