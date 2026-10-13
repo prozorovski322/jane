@@ -8,7 +8,7 @@ import { countKeywordGroups } from '../checker/patterns';
 import { fillGaps, replaceFragment } from '../content/extract';
 import type { Exercise, ExerciseOf } from '../content/schema';
 import { normalizeAnswer, canonicalTokens } from './normalize';
-import { speechSimilarity } from './speech';
+import { missingWords, speechSimilarity } from './speech';
 import { splitTiles } from './tiles';
 import { matchTyped, type Typo, type TypedOptions } from './typed';
 
@@ -48,7 +48,7 @@ export interface Verdict {
   parts?: boolean[];
   writing?: WritingResult;
   /** Speaking: share of the target heard, or keyword groups found. */
-  speech?: { similarity?: number; keywords?: number; needed?: number };
+  speech?: { similarity?: number; missing?: string[]; keywords?: number; needed?: number };
 }
 
 export interface CheckOptions {
@@ -148,7 +148,7 @@ function checkSpeaking(
       quality,
       score: similarity,
       expected,
-      speech: { similarity },
+      speech: { similarity, missing: similarity < 1 ? missingWords(said, ex.text) : [] },
     };
   }
   const keywords = countKeywordGroups(said, ex.keywords);

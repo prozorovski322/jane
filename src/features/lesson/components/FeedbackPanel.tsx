@@ -111,6 +111,11 @@ export function FeedbackPanel({
                 «{m.fragment}»: {m.message}
               </AppText>
             ))}
+            {verdict.writing.advice.map((m, i) => (
+              <AppText key={`a${i}`} variant="small" color="textMuted">
+                Обратите внимание — «{m.fragment}»: {m.message}
+              </AppText>
+            ))}
             {verdict.correct && (
               <AppText variant="small" color="textMuted">
                 Пример: {verdict.expected}
@@ -118,6 +123,10 @@ export function FeedbackPanel({
             )}
           </View>
         )}
+
+        {verdict.speech?.missing?.length ? (
+          <AppText variant="small">Не прозвучало: {verdict.speech.missing.join(', ')}.</AppText>
+        ) : null}
 
         {verdict.speech?.keywords !== undefined && !verdict.correct && (
           <AppText variant="small">

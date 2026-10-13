@@ -4,6 +4,7 @@
  */
 import { countWords } from '../content/lexical';
 import type { ExerciseOf } from '../content/schema';
+import { findCommonMistakes } from './common-errors';
 import { compilePattern, matchesAny, normalizeFreeText } from './patterns';
 
 export interface WritingResult {
@@ -12,6 +13,11 @@ export interface WritingResult {
   tooLong: boolean;
   criteria: { id: string; label: string; required: boolean; met: boolean }[];
   mistakes: { message: string; fragment: string }[];
+  /**
+   * Typical mistakes of Russian speakers found anywhere in the text. Advice only: it never
+   * fails the task or lowers the score.
+   */
+  advice: { message: string; fragment: string }[];
   /** 0..1: share of required criteria met, minus a penalty for length and mistakes. */
   score: number;
   passed: boolean;
@@ -47,6 +53,10 @@ export function checkWriting(text: string, ex: ExerciseOf<'write'>): WritingResu
     tooLong,
     criteria,
     mistakes,
+    // Anything the task's own error list already reported is not repeated as advice.
+    advice: findCommonMistakes(text).filter(
+      (a) => !mistakes.some((m) => m.fragment.toLowerCase().includes(a.fragment.toLowerCase())),
+    ),
     score,
     passed: !tooShort && required.every((c) => c.met) && mistakes.length === 0,
   };

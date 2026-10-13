@@ -11,6 +11,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
+import { registerNativeRecognizer } from '@/core/speech/native-stt';
 import { initDatabase } from '@/core/storage';
 import { useOnboarding } from '@/features/onboarding/store';
 import { useProgress } from '@/features/progress/store';
@@ -33,6 +34,8 @@ function useBoot() {
     let alive = true;
     (async () => {
       try {
+        // Speech recognition exists only in a development/store build; elsewhere this is a no-op.
+        registerNativeRecognizer();
         const db = await initDatabase();
         unbind = await bindSettings(db);
         await useOnboarding.getState().load(db);

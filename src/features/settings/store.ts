@@ -16,6 +16,8 @@ export interface Settings {
   speechRate: number;
   /** Preferred TTS voice identifier, or null for the automatic choice. */
   voice: string | null;
+  /** Allow speech recognition through the Apple/Google server when the device cannot do it offline. */
+  cloudSpeech: boolean;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -24,6 +26,7 @@ export const DEFAULT_SETTINGS: Settings = {
   sounds: true,
   speechRate: 0.9,
   voice: null,
+  cloudSpeech: false,
 };
 
 const KEY = 'settings';
@@ -38,8 +41,8 @@ export const useSettings = create<SettingsStore>((set) => ({
 }));
 
 function current(): Settings {
-  const { theme, haptics, sounds, speechRate, voice } = useSettings.getState();
-  return { theme, haptics, sounds, speechRate, voice };
+  const { theme, haptics, sounds, speechRate, voice, cloudSpeech } = useSettings.getState();
+  return { theme, haptics, sounds, speechRate, voice, cloudSpeech };
 }
 
 /** Loads saved settings and keeps saving every change. Returns an unsubscribe function. */

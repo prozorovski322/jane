@@ -214,13 +214,18 @@ const TFN: { value: TfnAnswer; label: string }[] = [
 
 async function playDialogue(
   text: NonNullable<ReturnType<ExerciseViewProps['ctx']['text']>>,
-  cancelled: () => boolean,
+  opts: { cancelled: () => boolean; slow: boolean; onLine: (index: number | null) => void },
 ) {
   const voices = new Map(text.speakers.map((s) => [s.id, s.voice]));
-  for (const line of text.lines) {
-    if (cancelled()) return;
-    await tts.speak(line.en, { voice: line.speaker ? voices.get(line.speaker) : undefined });
+  for (const [i, line] of text.lines.entries()) {
+    if (opts.cancelled()) break;
+    opts.onLine(i);
+    await tts.speak(line.en, {
+      voice: line.speaker ? voices.get(line.speaker) : undefined,
+      slow: opts.slow,
+    });
   }
+  opts.onLine(null);
 }
 
 export function ComprehensionView({
@@ -235,6 +240,8 @@ export function ComprehensionView({
   const listening = ex.mode === 'listening';
   const [showText, setShowText] = useState(!listening || ctx.cantListen);
   const [playing, setPlaying] = useState(false);
+  const [slow, setSlow] = useState(false);
+  const [current, setCurrent] = useState<number | null>(null);
   const [answers, setAnswers] = useState<(number | TfnAnswer | null)[]>(() =>
     ex.questions.map(() => null),
   );
@@ -248,13 +255,27 @@ export function ComprehensionView({
     [],
   );
 
-  const play = async () => {
+  const play = async (slowly: boolean) => {
     if (!text) return;
     cancel.current = false;
     setPlaying(true);
-    await playDialogue(text, () => cancel.current);
+    await playDialogue(text, {
+      cancelled: () => cancel.current,
+      slow: slowly,
+      onLine: setCurrent,
+    });
     setPlaying(false);
   };
+
+  const stopPlaying = () => {
+    cancel.current = true;
+    void tts.stop();
+    setPlaying(false);
+    setCurrent(null);
+  };
+
+  // Once the answers are checked the learner sees what was said, so mistakes can be understood.
+  const textVisible = showText || !!verdict;
 
   const answer = (qi: number, value: number | TfnAnswer) => {
     const next = answers.map((a, i) => (i === qi ? value : a));
@@ -277,12 +298,21 @@ export function ComprehensionView({
             label={playing ? 'Остановить' : 'Слушать диалог'}
             icon="speaker"
             compact
+            onPress={() => (playing ? stopPlaying() : void play(slow))}
+          />
+          <Button
+            label={slow ? 'Обычно' : 'Медленнее'}
+            icon="speaker-slow"
+            variant="secondary"
+            compact
             onPress={() => {
+              // Restart at the new speed so the change is heard right away.
+              const next = !slow;
+              setSlow(next);
               if (playing) {
-                cancel.current = true;
-                void tts.stop();
-                setPlaying(false);
-              } else void play();
+                stopPlaying();
+                void play(next);
+              }
             }}
           />
           <Button
@@ -294,7 +324,7 @@ export function ComprehensionView({
           />
         </View>
       )}
-      {showText && text && (
+      {textVisible && text && (
         <View
           style={[
             local.text,
@@ -306,7 +336,11 @@ export function ComprehensionView({
           ]}
         >
           {text.lines.map((l, i) => (
-            <AppText key={i} variant="body">
+            <AppText
+              key={i}
+              variant="body"
+              style={i === current ? { backgroundColor: colors.primarySoft } : undefined}
+            >
               {l.speaker ? <AppText variant="bodyStrong">{names.get(l.speaker)}: </AppText> : null}
               {l.en}
             </AppText>

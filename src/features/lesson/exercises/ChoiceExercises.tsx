@@ -99,6 +99,11 @@ export function ListenChoiceView({
         checked={!!verdict}
         onSelect={(index) => onChange({ kind: 'choice', index })}
       />
+      {verdict && (
+        <AppText variant="small" color="textMuted" aria-live="polite">
+          Звучало: «{ex.audio}»
+        </AppText>
+      )}
     </View>
   );
 }

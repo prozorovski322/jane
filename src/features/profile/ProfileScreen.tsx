@@ -7,7 +7,7 @@ import { isMastered } from '@/core/srs/scheduler';
 import { allCards } from '@/core/storage/srs-repo';
 import { useDbQuery } from '@/lib/useDbQuery';
 import { AppText } from '@/ui/components/AppText';
-import { Card } from '@/ui/components/Card';
+import { Card, ListRow } from '@/ui/components/Card';
 import { Screen, SectionTitle } from '@/ui/components/Screen';
 import { useTheme } from '@/ui/theme/ThemeProvider';
 
@@ -150,6 +150,13 @@ export function ProfileScreen() {
           onPress={() => router.push('/placement')}
         />
       </Card>
+
+      <ListRow
+        icon="star"
+        title="Проверка письма нейросетью"
+        subtitle="Необязательно: свой ключ API, выключено по умолчанию"
+        onPress={() => router.push('/ai-review')}
+      />
 
       <SectionTitle>Навыки</SectionTitle>
       {data && (

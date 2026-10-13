@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { countWords } from '@/core/content/lexical';
-import { recognizer } from '@/core/speech/stt';
+import { recognizer, speechErrorMessage } from '@/core/speech/stt';
 import { AppText } from '@/ui/components/AppText';
 import { Button } from '@/ui/components/Button';
 import { Choice } from '@/ui/components/Choice';
@@ -16,7 +16,9 @@ import { SpeakButtons } from '@/ui/components/SpeakButtons';
 import { TextField } from '@/ui/components/TextField';
 import { useTheme } from '@/ui/theme/ThemeProvider';
 
+import { AiReviewCard } from './AiReviewCard';
 import { Instruction, Prompt, styles as common } from './common';
+import { SelfRecorder } from './SelfRecorder';
 import type { ExerciseViewProps } from './types';
 
 type SpeakMode = 'choose' | 'listening' | 'self' | 'typed';
@@ -33,6 +35,8 @@ export function SpeakView({
   const [revealed, setRevealed] = useState(false);
   const [self, setSelf] = useState<boolean | null>(null);
   const [typed, setTyped] = useState('');
+  const [notice, setNotice] = useState<string | null>(null);
+  const [interim, setInterim] = useState('');
 
   useEffect(() => {
     let alive = true;
@@ -47,12 +51,21 @@ export function SpeakView({
 
   const listen = async () => {
     setMode('listening');
+    setHeard(null);
+    setNotice(null);
     try {
-      const transcript = await recognizer.listen({ lang: 'en-US', contextualStrings: [sample] });
+      const transcript = await recognizer.listen({
+        lang: 'en-US',
+        contextualStrings: [sample],
+        onInterim: setInterim,
+      });
       setHeard(transcript);
       onChange({ kind: 'speech', transcript });
-    } catch {
-      setMode('self');
+    } catch (e) {
+      // Not heard or no microphone: say why and let the learner try again or check themselves.
+      setNotice(speechErrorMessage(e));
+      setInterim('');
+      setMode('choose');
     }
   };
 
@@ -89,6 +102,11 @@ export function SpeakView({
 
       {!verdict && mode === 'choose' && (
         <View style={common.stack}>
+          {notice && (
+            <AppText variant="small" color="textMuted" aria-live="polite">
+              {notice}
+            </AppText>
+          )}
           {canRecognize && <Button label="Говорить" icon="mic" onPress={() => void listen()} />}
           <Button
             label={canRecognize ? 'Проверю себя сам' : 'Сказать и проверить себя'}
@@ -106,9 +124,12 @@ export function SpeakView({
       )}
 
       {mode === 'listening' && heard === null && (
-        <AppText variant="body" color="textMuted" align="center" aria-live="polite">
-          Слушаю…
-        </AppText>
+        <View style={common.stack}>
+          <AppText variant="body" color="textMuted" align="center" aria-live="polite">
+            {interim ? `Слышу: «${interim}»` : 'Слушаю…'}
+          </AppText>
+          <Button label="Хватит" variant="secondary" compact onPress={() => recognizer.stop()} />
+        </View>
       )}
       {heard !== null && (
         <AppText variant="body" aria-live="polite">
@@ -123,6 +144,7 @@ export function SpeakView({
               ? 'Скажите фразу вслух, потом послушайте образец ещё раз.'
               : 'Скажите ответ вслух, потом откройте пример и сравните.'}
           </AppText>
+          <SelfRecorder />
           {!revealed ? (
             <Button
               label="Я сказал(а), показать образец"
@@ -209,6 +231,7 @@ export function WriteView({ exercise: ex, onChange, verdict }: ExerciseViewProps
       <AppText variant="caption" color={inRange ? 'success' : 'textMuted'} aria-live="polite">
         Слов: {words} (нужно {ex.minWords}–{ex.maxWords})
       </AppText>
+      {verdict && <AiReviewCard task={ex.task} text={text} />}
     </View>
   );
 }
