@@ -1,0 +1,307 @@
+{
+  "id": "a2.u08",
+  "level": "A2",
+  "order": 8,
+  "title": { "en": "Clothes and comparisons", "ru": "Одежда и сравнения" },
+  "description": "Выбираем одежду и сравниваем вещи: что дешевле, удобнее и лучше. Степени сравнения прилагательных, as…as и prefer, слова об одежде и тканях.",
+  "goals": [
+    "Могу назвать одежду и ткани: sweater, boots, cotton, wool.",
+    "Могу сравнить две вещи: This coat is cheaper than that one.",
+    "Могу назвать самую-самую: It is the most expensive hotel in the city.",
+    "Могу сказать, что вещи равны или нет: as warm as, not as warm as.",
+    "Могу сказать, что предпочитаю: I prefer tea to coffee.",
+    "Могу написать короткий текст о покупках и сравнить вещи."
+  ],
+  "grammar": ["a2.comparatives", "a2.superlatives", "a2.as-as"],
+  "troubles": ["word-order"],
+  "words": [
+    { "id": "clothes", "en": "clothes", "ipa": "kloʊðz", "pos": "noun", "ru": ["одежда"], "example": { "en": "I buy new clothes in autumn.", "ru": "Осенью я покупаю новую одежду." }, "note": "Clothes — всегда во множественном числе, без единственного: these clothes are new.", "topics": ["clothes"] },
+    { "id": "sweater", "en": "sweater", "ipa": "ˈswetɚ", "pos": "noun", "ru": ["свитер"], "example": { "en": "My sweater is warm.", "ru": "Мой свитер тёплый." }, "picture": { "emoji": "🧶" }, "topics": ["clothes"] },
+    { "id": "skirt", "en": "skirt", "ipa": "skɝːt", "pos": "noun", "ru": ["юбка"], "example": { "en": "She wears a long skirt.", "ru": "Она носит длинную юбку." }, "topics": ["clothes"] },
+    { "id": "trousers", "en": "trousers", "ipa": "ˈtraʊzɚz", "pos": "noun", "ru": ["брюки"], "example": { "en": "These trousers are too short.", "ru": "Эти брюки слишком короткие." }, "note": "Trousers, как jeans и shorts, — всегда множественное число. Одни брюки — a pair of trousers.", "topics": ["clothes"] },
+    { "id": "shorts", "en": "shorts", "ipa": "ʃɔːrts", "pos": "noun", "ru": ["шорты"], "example": { "en": "I wear shorts in summer.", "ru": "Летом я ношу шорты." }, "topics": ["clothes"] },
+    { "id": "socks", "en": "socks", "ipa": "sɑːks", "pos": "noun", "ru": ["носки"], "example": { "en": "I need new socks.", "ru": "Мне нужны новые носки." }, "topics": ["clothes"] },
+    { "id": "scarf", "en": "scarf", "ipa": "skɑːrf", "pos": "noun", "ru": ["шарф"], "example": { "en": "I wear a warm scarf in winter.", "ru": "Зимой я ношу тёплый шарф." }, "topics": ["clothes"] },
+    { "id": "gloves", "en": "gloves", "ipa": "ɡlʌvz", "pos": "noun", "ru": ["перчатки"], "example": { "en": "Her gloves are black.", "ru": "Её перчатки чёрные." }, "topics": ["clothes"] },
+    { "id": "boots", "en": "boots", "ipa": "buːts", "pos": "noun", "ru": ["ботинки", "сапоги"], "example": { "en": "My boots are warm.", "ru": "Мои ботинки тёплые." }, "picture": { "emoji": "🥾" }, "topics": ["clothes"] },
+    { "id": "pair", "en": "pair", "ipa": "per", "pos": "noun", "ru": ["пара"], "example": { "en": "I bought a pair of socks.", "ru": "Я купил пару носков." }, "topics": ["clothes"] },
+    { "id": "cotton", "en": "cotton", "ipa": "ˈkɑːtən", "pos": "noun", "ru": ["хлопок"], "example": { "en": "This shirt is cotton.", "ru": "Эта рубашка хлопковая." }, "topics": ["clothes"] },
+    { "id": "wool", "en": "wool", "ipa": "wʊl", "pos": "noun", "ru": ["шерсть"], "example": { "en": "My sweater is wool.", "ru": "Мой свитер шерстяной." }, "topics": ["clothes"] },
+    { "id": "leather", "en": "leather", "ipa": "ˈleðɚ", "pos": "noun", "ru": ["кожа (материал)"], "example": { "en": "These boots are leather.", "ru": "Эти ботинки кожаные." }, "topics": ["clothes"] },
+    { "id": "comfortable", "en": "comfortable", "ipa": "ˈkʌmftɚbəl", "pos": "adj", "ru": ["удобный"], "example": { "en": "These boots are comfortable.", "ru": "Эти ботинки удобные." }, "topics": ["adjectives"] },
+    { "id": "fashionable", "en": "fashionable", "ipa": "ˈfæʃənəbəl", "pos": "adj", "ru": ["модный"], "example": { "en": "The black coat is fashionable.", "ru": "Чёрное пальто модное." }, "topics": ["adjectives"] },
+    { "id": "modern", "en": "modern", "ipa": "ˈmɑːdɚn", "pos": "adj", "ru": ["современный"], "example": { "en": "She has a modern flat.", "ru": "У неё современная квартира." }, "topics": ["adjectives"] },
+    { "id": "thin", "en": "thin", "ipa": "θɪn", "pos": "adj", "ru": ["тонкий"], "example": { "en": "This scarf is thin.", "ru": "Этот шарф тонкий." }, "troubles": ["pron-th"], "topics": ["adjectives"] },
+    { "id": "light", "en": "light", "ipa": "laɪt", "pos": "adj", "ru": ["лёгкий", "светлый"], "example": { "en": "I bought a light scarf.", "ru": "Я купил лёгкий шарф." }, "topics": ["adjectives"] },
+    { "id": "sale", "en": "sale", "ipa": "seɪl", "pos": "noun", "ru": ["распродажа"], "example": { "en": "There is a sale in the shop.", "ru": "В магазине распродажа." }, "topics": ["shopping"] },
+    { "id": "discount", "en": "discount", "ipa": "ˈdɪskaʊnt", "pos": "noun", "ru": ["скидка"], "example": { "en": "There is a discount on coats.", "ru": "На пальто есть скидка." }, "topics": ["shopping"] },
+    { "id": "shopping", "en": "shopping", "ipa": "ˈʃɑːpɪŋ", "pos": "noun", "ru": ["покупки", "шопинг"], "example": { "en": "I went shopping on Saturday.", "ru": "В субботу я ходил по магазинам." }, "note": "Go shopping — «ходить по магазинам».", "topics": ["shopping"] },
+    { "id": "style", "en": "style", "ipa": "staɪl", "pos": "noun", "ru": ["стиль"], "example": { "en": "I like her style.", "ru": "Мне нравится её стиль." }, "topics": ["clothes"] },
+    { "id": "fit", "en": "fit", "ipa": "fɪt", "pos": "verb", "ru": ["подходить по размеру"], "example": { "en": "The coat fits me.", "ru": "Пальто мне как раз." }, "forms": { "third": "fits" }, "topics": ["verbs"] },
+    { "id": "suit", "en": "suit", "ipa": "suːt", "pos": "verb", "ru": ["идти (к лицу)"], "example": { "en": "The blue shirt suits you.", "ru": "Синяя рубашка вам идёт." }, "forms": { "third": "suits" }, "topics": ["verbs"] },
+    { "id": "choose", "en": "choose", "ipa": "tʃuːz", "pos": "verb", "ru": ["выбирать"], "example": { "en": "I chose a black coat.", "ru": "Я выбрал чёрное пальто." }, "forms": { "third": "chooses" }, "topics": ["verbs"] },
+    { "id": "prefer", "en": "prefer", "ipa": "prɪˈfɝː", "pos": "verb", "ru": ["предпочитать"], "example": { "en": "I prefer tea to coffee.", "ru": "Я предпочитаю чай кофе." }, "forms": { "third": "prefers", "ing": "preferring" }, "topics": ["verbs"] },
+    { "id": "than", "en": "than", "ipa": "ðæn", "pos": "conj", "ru": ["чем"], "example": { "en": "My sister is taller than me.", "ru": "Моя сестра выше меня." }, "troubles": ["pron-th"], "topics": ["grammar"] },
+    { "id": "as", "en": "as", "ipa": "æz", "pos": "conj", "ru": ["как", "так же, как"], "example": { "en": "This coat is as warm as that one.", "ru": "Это пальто такое же тёплое, как то." }, "topics": ["grammar"] },
+    { "id": "more", "en": "more", "ipa": "mɔːr", "pos": "adv", "ru": ["более", "больше"], "example": { "en": "This coat is more expensive.", "ru": "Это пальто дороже." }, "topics": ["grammar"] },
+    { "id": "most", "en": "most", "ipa": "moʊst", "pos": "adv", "ru": ["самый", "больше всего"], "example": { "en": "This is the most expensive hotel.", "ru": "Это самый дорогой отель." }, "topics": ["grammar"] }
+  ],
+  "texts": [
+    {
+      "id": "a2.u08.shop",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Choosing a coat", "ru": "Выбираем пальто" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "I want a warm coat. This coat is cheaper, but that coat is warmer.", "ru": "Я хочу тёплое пальто. Это пальто дешевле, но то теплее." },
+        { "speaker": "tom", "en": "The black one is the most fashionable coat in the shop.", "ru": "Чёрное — самое модное пальто в магазине." },
+        { "speaker": "anna", "en": "How much is it?", "ru": "Сколько оно стоит?" },
+        { "speaker": "tom", "en": "A hundred and fifty euros. It is more expensive than the grey coat, but it is better.", "ru": "Сто пятьдесят евро. Оно дороже серого, но лучше." },
+        { "speaker": "anna", "en": "Is it as warm as the grey one?", "ru": "Оно такое же тёплое, как серое?" },
+        { "speaker": "tom", "en": "It is wool, and it is warmer. There is also a discount today.", "ru": "Оно шерстяное, и оно теплее. Ещё сегодня есть скидка." },
+        { "speaker": "anna", "en": "I prefer wool to cotton. Can I try it on?", "ru": "Я предпочитаю шерсть хлопку. Можно примерить?" },
+        { "speaker": "tom", "en": "Of course. It fits you, and it suits you too.", "ru": "Конечно. Оно вам как раз и вам идёт." }
+      ]
+    },
+    {
+      "id": "a2.u08.shopping-day",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "A day of shopping", "ru": "День за покупками" },
+      "lines": [
+        { "en": "Last Saturday I went shopping with my sister. There was a sale, and many things were cheap.", "ru": "В прошлую субботу я ходил за покупками с сестрой. Была распродажа, и многие вещи были дешёвыми." },
+        { "en": "My sister bought a modern wool sweater. It was the nicest sweater in the shop, and it was not as expensive as the black one.", "ru": "Моя сестра купила современный шерстяной свитер. Это был самый красивый свитер в магазине, и он стоил не так дорого, как чёрный." },
+        { "en": "I prefer boots to shoes. I tried on leather boots. They were more comfortable than my old boots, but they were more expensive. I did not buy them.", "ru": "Я предпочитаю ботинки туфлям. Я примерил кожаные ботинки. Они были удобнее моих старых, но дороже. Я их не купил." },
+        { "en": "I bought a pair of cotton socks and a light scarf. It was a good day.", "ru": "Я купил пару хлопковых носков и лёгкий шарф. Это был хороший день." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "a2.u08.l01",
+      "kind": "vocabulary",
+      "title": "Одежда и материалы",
+      "exercises": [
+        { "id": "a2.u08.l01.e01", "type": "match_pairs", "pairs": [{ "en": "sweater", "ru": "свитер" }, { "en": "skirt", "ru": "юбка" }, { "en": "trousers", "ru": "брюки" }, { "en": "shorts", "ru": "шорты" }, { "en": "socks", "ru": "носки" }], "hint": "Все слова про одежду.", "explanation": "Sweater — свитер, skirt — юбка, trousers — брюки, shorts — шорты, socks — носки." },
+        { "id": "a2.u08.l01.e02", "type": "match_pairs", "pairs": [{ "en": "scarf", "ru": "шарф" }, { "en": "gloves", "ru": "перчатки" }, { "en": "boots", "ru": "ботинки" }, { "en": "clothes", "ru": "одежда" }, { "en": "pair", "ru": "пара" }], "hint": "Зимние вещи.", "explanation": "Scarf — шарф, gloves — перчатки, boots — ботинки, clothes — одежда, pair — пара." },
+        { "id": "a2.u08.l01.e03", "type": "match_pairs", "pairs": [{ "en": "cotton", "ru": "хлопок" }, { "en": "wool", "ru": "шерсть" }, { "en": "leather", "ru": "кожа" }, { "en": "style", "ru": "стиль" }, { "en": "shopping", "ru": "покупки" }], "hint": "Cotton, wool и leather — материалы.", "explanation": "Cotton — хлопок, wool — шерсть, leather — кожа, style — стиль, shopping — покупки." },
+        { "id": "a2.u08.l01.e04", "type": "match_pairs", "pairs": [{ "en": "comfortable", "ru": "удобный" }, { "en": "fashionable", "ru": "модный" }, { "en": "modern", "ru": "современный" }, { "en": "thin", "ru": "тонкий" }, { "en": "light", "ru": "лёгкий" }], "hint": "Свойства вещей.", "explanation": "Comfortable — удобный, fashionable — модный, modern — современный, thin — тонкий, light — лёгкий." },
+        { "id": "a2.u08.l01.e05", "type": "picture_choice", "mode": "picture-to-word", "word": "boots", "distractors": ["sweater", "coat"], "hint": "Их носят на ногах зимой.", "explanation": "Boots — «ботинки»: [buːts]." },
+        { "id": "a2.u08.l01.e06", "type": "picture_choice", "mode": "word-to-picture", "word": "sweater", "distractors": ["boots", "dress"], "hint": "Тёплая вязаная вещь.", "explanation": "Sweater — «свитер»: [ˈswetɚ]." },
+        { "id": "a2.u08.l01.e07", "type": "translate_choice", "from": "ru", "text": "Одежда лежит в шкафу.", "options": ["The clothes are in the wardrobe.", "The clothes be in the wardrobe.", "The clothes is in the wardrobe."], "answer": 0, "hint": "Clothes — множественное число.", "explanation": "The clothes are in the wardrobe. Clothes — всегда во множественном числе." },
+        { "id": "a2.u08.l01.e08", "type": "fill_gap", "text": "I bought a ___ of socks.", "translation": "Я купил пару носков.", "answers": [["pair"]], "options": ["pair", "gloves", "scarf"], "hint": "Два одинаковых предмета.", "explanation": "Правильно: I bought a pair of socks." },
+        { "id": "a2.u08.l01.e09", "type": "fill_gap", "text": "My sweater is ___. It is warm.", "translation": "Мой свитер шерстяной. Он тёплый.", "answers": [["wool"]], "options": ["wool", "leather", "cotton"], "hint": "Овечий материал.", "explanation": "Правильно: My sweater is wool." },
+        { "id": "a2.u08.l01.e10", "type": "fill_gap", "text": "There is a ___ in the shop today.", "translation": "Сегодня в магазине распродажа.", "answers": [["sale"]], "options": ["sale", "pair", "style"], "hint": "Цены ниже.", "explanation": "Правильно: There is a sale in the shop today." },
+        { "id": "a2.u08.l01.e11", "type": "listen_choice", "audio": "These trousers are too short.", "question": "Что вы слышите?", "options": ["These trousers are too short.", "These trousers are too long.", "These shorts are too short."], "answer": 0, "hint": "Брюки.", "explanation": "These trousers are too short — «эти брюки слишком короткие»." },
+        { "id": "a2.u08.l01.e12", "type": "listen_dictation", "text": "I went shopping on Saturday.", "hint": "Пять слов.", "explanation": "I went shopping on Saturday — «в субботу я ходил по магазинам»." },
+        { "id": "a2.u08.l01.e13", "type": "type_translation", "from": "ru", "text": "шарф", "answers": ["scarf"], "hint": "Пять букв.", "explanation": "Scarf [skɑːrf] — «шарф»." },
+        { "id": "a2.u08.l01.e14", "type": "word_stress", "word": "comfortable", "syllables": ["com", "for", "ta", "ble"], "stress": 0, "hint": "Первый слог.", "explanation": "COM-for-ta-ble — ударение на первый слог." }
+      ]
+    },
+    {
+      "id": "a2.u08.l02",
+      "kind": "vocabulary",
+      "title": "Выбираем и сравниваем",
+      "exercises": [
+        { "id": "a2.u08.l02.e01", "type": "match_pairs", "pairs": [{ "en": "discount", "ru": "скидка" }, { "en": "fit", "ru": "подходить по размеру" }, { "en": "suit", "ru": "идти к лицу" }, { "en": "choose", "ru": "выбирать" }, { "en": "prefer", "ru": "предпочитать" }], "hint": "Fit и suit — про одежду на человеке.", "explanation": "Discount — скидка, fit — подходить по размеру, suit — идти к лицу, choose — выбирать, prefer — предпочитать." },
+        { "id": "a2.u08.l02.e02", "type": "match_pairs", "pairs": [{ "en": "than", "ru": "чем" }, { "en": "as", "ru": "как" }, { "en": "more", "ru": "более" }, { "en": "most", "ru": "самый" }, { "en": "better", "ru": "лучше" }], "hint": "Слова для сравнений.", "explanation": "Than — чем, as — как, more — более, most — самый, better — лучше." },
+        { "id": "a2.u08.l02.e03", "type": "translate_choice", "from": "ru", "text": "Пальто мне как раз.", "options": ["The coat fits me.", "The coat suits me.", "The coat prefers me."], "answer": 0, "hint": "По размеру.", "explanation": "The coat fits me. Fit — «подходить по размеру»." },
+        { "id": "a2.u08.l02.e04", "type": "translate_choice", "from": "ru", "text": "Синяя рубашка вам идёт.", "options": ["The blue shirt suits you.", "The blue shirt fits you.", "The blue shirt chooses you."], "answer": 0, "hint": "К лицу.", "explanation": "The blue shirt suits you. Suit — «идти к лицу»." },
+        { "id": "a2.u08.l02.e05", "type": "fill_gap", "text": "I ___ a black coat.", "translation": "Я выбрал чёрное пальто.", "answers": [["chose"]], "options": ["chose", "choosed", "choose"], "hint": "Особая форма.", "explanation": "Правильно: I chose a black coat. Choose — chose.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u08.l02.e06", "type": "fill_gap", "text": "I ___ tea to coffee.", "translation": "Я предпочитаю чай кофе.", "answers": [["prefer"]], "options": ["prefer", "choose", "suit"], "hint": "Больше нравится.", "explanation": "Правильно: I prefer tea to coffee." },
+        { "id": "a2.u08.l02.e07", "type": "fill_gap", "text": "There is a ___ on coats today.", "translation": "Сегодня на пальто скидка.", "answers": [["discount"]], "options": ["discount", "style", "pair"], "hint": "Дешевле, чем обычно.", "explanation": "Правильно: There is a discount on coats today." },
+        { "id": "a2.u08.l02.e08", "type": "fill_gap", "text": "My sister is taller ___ me.", "translation": "Моя сестра выше меня.", "answers": [["than"]], "options": ["than", "as", "more"], "hint": "Слово «чем».", "explanation": "Правильно: My sister is taller than me.", "grammar": ["a2.comparatives"] },
+        { "id": "a2.u08.l02.e09", "type": "fill_gap", "text": "This is the ___ expensive hotel.", "translation": "Это самый дорогой отель.", "answers": [["most"]], "options": ["most", "more", "as"], "hint": "Самый-самый.", "explanation": "Правильно: This is the most expensive hotel.", "grammar": ["a2.superlatives"] },
+        { "id": "a2.u08.l02.e10", "type": "listen_choice", "audio": "The blue shirt suits you.", "question": "Что вы слышите?", "options": ["The blue shirt suits you.", "The blue shirt fits you.", "The black shirt suits you."], "answer": 0, "hint": "К лицу.", "explanation": "Правильно: The blue shirt suits you." },
+        { "id": "a2.u08.l02.e11", "type": "listen_dictation", "text": "I prefer tea to coffee.", "hint": "Пять слов.", "explanation": "I prefer tea to coffee — «я предпочитаю чай кофе»." },
+        { "id": "a2.u08.l02.e12", "type": "type_translation", "from": "ru", "text": "выбирать", "answers": ["choose"], "hint": "Шесть букв.", "explanation": "Choose [tʃuːz] — «выбирать»." },
+        { "id": "a2.u08.l02.e13", "type": "word_stress", "word": "fashionable", "syllables": ["fash", "ion", "a", "ble"], "stress": 0, "hint": "Первый слог.", "explanation": "FASH-ion-a-ble — ударение на первый слог." },
+        { "id": "a2.u08.l02.e14", "type": "minimal_pair", "pair": [{ "en": "sheep", "ipa": "ʃiːp" }, { "en": "ship", "ipa": "ʃɪp" }], "say": 1, "hint": "Короткий гласный.", "explanation": "Ship [ʃɪp] — короткий гласный, sheep [ʃiːp] — долгий.", "troubles": ["pron-vowels"] }
+      ]
+    },
+    {
+      "id": "a2.u08.l03",
+      "kind": "grammar",
+      "title": "Сравнение: cheaper, more expensive",
+      "grammar": "a2.comparatives",
+      "exercises": [
+        { "id": "a2.u08.l03.e01", "type": "fill_gap", "text": "This coat is ___ than that coat.", "translation": "Это пальто дешевле, чем то.", "answers": [["cheaper"]], "options": ["cheaper", "more cheap", "cheapest"], "hint": "Короткое слово + -er.", "explanation": "Правильно: This coat is cheaper than that coat.", "grammar": ["a2.comparatives"] },
+        { "id": "a2.u08.l03.e02", "type": "fill_gap", "text": "The shoes are ___ comfortable than the boots.", "translation": "Туфли удобнее, чем ботинки.", "answers": [["more"]], "options": ["more", "most", "much"], "hint": "Длинное слово.", "explanation": "Правильно: The shoes are more comfortable than the boots.", "grammar": ["a2.comparatives"] },
+        { "id": "a2.u08.l03.e03", "type": "fill_gap", "text": "My sister is ___ than me.", "translation": "Моя сестра выше меня.", "answers": [["taller"]], "options": ["taller", "more tall", "tallest"], "hint": "Короткое слово + -er.", "explanation": "Правильно: My sister is taller than me.", "grammar": ["a2.comparatives"] },
+        { "id": "a2.u08.l03.e04", "type": "fill_gap", "text": "The blue coat is ___ than the black one.", "translation": "Синее пальто лучше, чем чёрное.", "answers": [["better"]], "options": ["better", "gooder", "more good"], "hint": "Особая форма.", "explanation": "Правильно: The blue coat is better than the black one.", "grammar": ["a2.comparatives"] },
+        { "id": "a2.u08.l03.e05", "type": "fill_gap", "text": "It is ___ today than yesterday.", "translation": "Сегодня теплее, чем вчера.", "answers": [["warmer"]], "options": ["warmer", "more warm", "warmest"], "hint": "Короткое слово + -er.", "explanation": "Правильно: It is warmer today than yesterday.", "grammar": ["a2.comparatives"] },
+        { "id": "a2.u08.l03.e06", "type": "fill_gap", "text": "My new flat is ___ than my old flat.", "translation": "Моя новая квартира больше старой.", "answers": [["bigger"]], "options": ["bigger", "biger", "more big"], "hint": "Удваивается согласная.", "explanation": "Правильно: My new flat is bigger than my old flat.", "grammar": ["a2.comparatives"] },
+        { "id": "a2.u08.l03.e07", "type": "error_correction", "text": "This coat is more cheap than that one.", "wrong": "more cheap", "correction": "cheaper", "options": ["cheaper", "cheapest", "much cheap"], "hint": "Короткое слово.", "explanation": "Правильно: This coat is cheaper than that one.", "grammar": ["a2.comparatives"], "troubles": ["word-order"] },
+        { "id": "a2.u08.l03.e08", "type": "error_correction", "text": "The shoes are comfortabler.", "wrong": "comfortabler", "correction": "more comfortable", "options": ["more comfortable", "most comfortable", "comfortable"], "hint": "Длинное слово.", "explanation": "Правильно: The shoes are more comfortable.", "grammar": ["a2.comparatives"], "troubles": ["word-order"] },
+        { "id": "a2.u08.l03.e09", "type": "error_correction", "text": "He is taller that me.", "wrong": "that", "correction": "than", "options": ["than", "then", "as"], "hint": "Слово «чем».", "explanation": "Правильно: He is taller than me.", "grammar": ["a2.comparatives"], "troubles": ["word-order"] },
+        { "id": "a2.u08.l03.e10", "type": "error_correction", "text": "This is more good.", "wrong": "more good", "correction": "better", "options": ["better", "gooder", "most good"], "hint": "Особая форма.", "explanation": "Правильно: This is better.", "grammar": ["a2.comparatives"], "troubles": ["word-order"] },
+        { "id": "a2.u08.l03.e11", "type": "tiles", "from": "ru", "text": "Это пальто дороже, чем то.", "answer": "This coat is more expensive than that one.", "distractors": ["expensiver", "most"], "difficulty": 2, "hint": "Образец: More + expensive.", "explanation": "Правильно: This coat is more expensive than that one.", "grammar": ["a2.comparatives"] },
+        { "id": "a2.u08.l03.e12", "type": "tiles", "from": "ru", "text": "Моя сестра моложе меня.", "answer": "My sister is younger than me.", "distractors": ["more young", "that"], "hint": "Образец: Young + -er.", "explanation": "Правильно: My sister is younger than me.", "grammar": ["a2.comparatives"] },
+        { "id": "a2.u08.l03.e13", "type": "type_translation", "from": "ru", "text": "Эти ботинки удобнее старых.", "answers": ["These boots are more comfortable than the old ones.", "These boots are more comfortable than my old ones."], "difficulty": 3, "hint": "Образец: More comfortable than.", "explanation": "Правильно: These boots are more comfortable than the old ones.", "grammar": ["a2.comparatives"] },
+        { "id": "a2.u08.l03.e14", "type": "listen_choice", "audio": "The red coat is more expensive than the grey coat.", "question": "Что вы слышите?", "options": ["The red coat is more expensive than the grey coat.", "The red coat is cheaper than the grey coat.", "The grey coat is more expensive than the red coat."], "answer": 0, "hint": "Красное дороже.", "explanation": "Правильно: The red coat is more expensive than the grey coat.", "grammar": ["a2.comparatives"] },
+        { "id": "a2.u08.l03.e15", "type": "speak_answer", "question": "What is better, tea or coffee?", "questionRu": "Что лучше: чай или кофе? Ответьте: Tea is better than coffee. Coffee is better than tea.", "keywords": [["\\b(tea|coffee)\\b"], ["\\b(better|worse|more|cheaper|than)\\b"]], "minKeywords": 2, "samples": ["Tea is better than coffee.", "Coffee is more expensive than tea."], "difficulty": 3, "hint": "Образец: Tea is better than…", "explanation": "Ответ: Tea is better than coffee.", "grammar": ["a2.comparatives"] }
+      ]
+    },
+    {
+      "id": "a2.u08.l04",
+      "kind": "grammar",
+      "title": "Самый-самый",
+      "grammar": "a2.superlatives",
+      "exercises": [
+        { "id": "a2.u08.l04.e01", "type": "fill_gap", "text": "This is the ___ coat in the shop.", "translation": "Это самое дешёвое пальто в магазине.", "answers": [["cheapest"]], "options": ["cheapest", "most cheap", "cheaper"], "hint": "Образец: The + -est.", "explanation": "Правильно: This is the cheapest coat in the shop.", "grammar": ["a2.superlatives"] },
+        { "id": "a2.u08.l04.e02", "type": "fill_gap", "text": "She is the ___ girl in my class.", "translation": "Она самая высокая девочка в моём классе.", "answers": [["tallest"]], "options": ["tallest", "most tall", "taller"], "hint": "Образец: The + -est.", "explanation": "Правильно: She is the tallest girl in my class.", "grammar": ["a2.superlatives"] },
+        { "id": "a2.u08.l04.e03", "type": "fill_gap", "text": "It is the ___ expensive hotel in the city.", "translation": "Это самый дорогой отель в городе.", "answers": [["most"]], "options": ["most", "more", "much"], "hint": "Длинное слово.", "explanation": "Правильно: It is the most expensive hotel in the city.", "grammar": ["a2.superlatives"] },
+        { "id": "a2.u08.l04.e04", "type": "fill_gap", "text": "This is the ___ restaurant in the city.", "translation": "Это лучший ресторан в городе.", "answers": [["best"]], "options": ["best", "most good", "goodest"], "hint": "Особая форма.", "explanation": "Правильно: This is the best restaurant in the city.", "grammar": ["a2.superlatives"] },
+        { "id": "a2.u08.l04.e05", "type": "fill_gap", "text": "He is the youngest ___ the team.", "translation": "Он самый молодой в команде.", "answers": [["in"]], "options": ["in", "of", "at"], "hint": "Группа или место.", "explanation": "Правильно: He is the youngest in the team.", "grammar": ["a2.superlatives"] },
+      { "id": "a2.u08.l04.e06", "type": "fill_gap", "text": "This is the ___ shop in the city.", "translation": "Это самый большой магазин в городе.", "answers": [["biggest"]], "options": ["biggest", "most big", "bigger"], "hint": "Удваивается согласная.", "explanation": "Правильно: This is the biggest shop in the city.", "grammar": ["a2.superlatives"] },
+        { "id": "a2.u08.l04.e07", "type": "error_correction", "text": "This is the most cheap coat.", "wrong": "most cheap", "correction": "cheapest", "options": ["cheapest", "more cheap", "cheaper"], "hint": "Короткое слово.", "explanation": "Правильно: This is the cheapest coat.", "grammar": ["a2.superlatives"], "troubles": ["word-order"] },
+        { "id": "a2.u08.l04.e08", "type": "error_correction", "text": "It is the more expensive hotel in the city.", "wrong": "more", "correction": "most", "options": ["most", "much", "many"], "hint": "Самый-самый.", "explanation": "Правильно: It is the most expensive hotel in the city.", "grammar": ["a2.superlatives"], "troubles": ["word-order"] },
+        { "id": "a2.u08.l04.e09", "type": "error_correction", "text": "She is the tallest of the class.", "wrong": "of", "correction": "in", "options": ["in", "at", "to"], "hint": "Группа — другой предлог.", "explanation": "Правильно: She is the tallest in the class.", "grammar": ["a2.superlatives"], "troubles": ["prepositions"] },
+        { "id": "a2.u08.l04.e10", "type": "tiles", "from": "ru", "text": "Это самый удобный стул в комнате.", "answer": "This is the most comfortable chair in the room.", "distractors": ["more", "of"], "difficulty": 2, "hint": "Образец: The most + comfortable.", "explanation": "Правильно: This is the most comfortable chair in the room.", "grammar": ["a2.superlatives"] },
+        { "id": "a2.u08.l04.e11", "type": "tiles", "from": "ru", "text": "Он самый высокий в нашей команде.", "answer": "He is the tallest in our team.", "distractors": ["taller", "of"], "hint": "Образец: The tallest in.", "explanation": "Правильно: He is the tallest in our team.", "grammar": ["a2.superlatives"] },
+        { "id": "a2.u08.l04.e12", "type": "type_translation", "from": "ru", "text": "Это самое тёплое пальто в магазине.", "answers": ["This is the warmest coat in the shop."], "hint": "Образец: The warmest.", "explanation": "Правильно: This is the warmest coat in the shop.", "grammar": ["a2.superlatives"] },
+        { "id": "a2.u08.l04.e13", "type": "type_translation", "from": "ru", "text": "Это самый модный свитер.", "answers": ["This is the most fashionable sweater."], "hint": "Образец: The most fashionable.", "explanation": "Правильно: This is the most fashionable sweater.", "grammar": ["a2.superlatives"] },
+        { "id": "a2.u08.l04.e14", "type": "listen_choice", "audio": "It is the most expensive coat in the shop.", "question": "Что вы слышите?", "options": ["It is the most expensive coat in the shop.", "It is the cheapest coat in the shop.", "It is more expensive than the coat."], "answer": 0, "hint": "Самое дорогое.", "explanation": "Правильно: It is the most expensive coat in the shop.", "grammar": ["a2.superlatives"] },
+        { "id": "a2.u08.l04.e15", "type": "speak_answer", "question": "What is the best restaurant in your city?", "questionRu": "Какой самый лучший ресторан в вашем городе? Ответьте: The best restaurant in my city is… или I don't know.", "keywords": [["\\b(the best|the most|the cheapest|the biggest|I don't know)\\b"], ["\\b(restaurant|city|town|hotel|shop)\\b", "\\bknow\\b"]], "minKeywords": 2, "samples": ["The best restaurant in my city is near the park.", "I don't know."], "difficulty": 3, "hint": "Образец: The best restaurant in…", "explanation": "Ответ: The best restaurant in my city is near the park.", "grammar": ["a2.superlatives"] }
+      ]
+    },
+    {
+      "id": "a2.u08.l05",
+      "kind": "grammar",
+      "title": "As…as и prefer",
+      "grammar": "a2.as-as",
+      "exercises": [
+        { "id": "a2.u08.l05.e01", "type": "fill_gap", "text": "This coat is as expensive ___ that one.", "translation": "Это пальто стоит столько же, сколько то.", "answers": [["as"]], "options": ["as", "than", "that"], "hint": "Нужно второе такое же слово.", "explanation": "Правильно: This coat is as expensive as that one.", "grammar": ["a2.as-as"] },
+        { "id": "a2.u08.l05.e02", "type": "fill_gap", "text": "My boots are not ___ warm as yours.", "translation": "Мои ботинки не такие тёплые, как ваши.", "answers": [["as"]], "options": ["as", "like", "than"], "hint": "Первое as.", "explanation": "Правильно: My boots are not as warm as yours.", "grammar": ["a2.as-as"] },
+        { "id": "a2.u08.l05.e03", "type": "fill_gap", "text": "I prefer tea ___ coffee.", "translation": "Я предпочитаю чай кофе.", "answers": [["to"]], "options": ["to", "than", "as"], "hint": "После prefer.", "explanation": "Правильно: I prefer tea to coffee.", "grammar": ["a2.as-as"] },
+        { "id": "a2.u08.l05.e04", "type": "fill_gap", "text": "She ___ jeans to a dress.", "translation": "Она предпочитает джинсы платью.", "answers": [["prefers"]], "options": ["prefers", "prefer", "preferring"], "hint": "С she — окончание.", "explanation": "Правильно: She prefers jeans to a dress.", "grammar": ["a2.as-as"] },
+        { "id": "a2.u08.l05.e05", "type": "fill_gap", "text": "This shirt is not as cheap ___ that one.", "translation": "Эта рубашка не такая дешёвая, как та.", "answers": [["as"]], "options": ["as", "than", "like"], "hint": "Второе as.", "explanation": "Правильно: This shirt is not as cheap as that one.", "grammar": ["a2.as-as"] },
+        { "id": "a2.u08.l05.e06", "type": "error_correction", "text": "This coat is as expensive that one.", "wrong": "expensive that", "correction": "expensive as that", "options": ["expensive as that", "expensive than that", "expensive like that"], "hint": "Пропущено слово.", "explanation": "Правильно: This coat is as expensive as that one.", "grammar": ["a2.as-as"], "troubles": ["word-order"] },
+        { "id": "a2.u08.l05.e07", "type": "error_correction", "text": "I prefer tea than coffee.", "wrong": "than", "correction": "to", "options": ["to", "as", "from"], "hint": "После prefer — другое слово.", "explanation": "Правильно: I prefer tea to coffee.", "grammar": ["a2.as-as"], "troubles": ["word-order"] },
+        { "id": "a2.u08.l05.e08", "type": "error_correction", "text": "It is not as warm like yours.", "wrong": "like", "correction": "as", "options": ["as", "than", "to"], "hint": "Конструкция из двух слов.", "explanation": "Правильно: It is not as warm as yours.", "grammar": ["a2.as-as"], "troubles": ["word-order"] },
+        { "id": "a2.u08.l05.e09", "type": "tiles", "from": "ru", "text": "Я предпочитаю ботинки туфлям.", "answer": "I prefer boots to shoes.", "distractors": ["than", "as"], "hint": "Образец: Prefer A to B.", "explanation": "Правильно: I prefer boots to shoes.", "grammar": ["a2.as-as"] },
+        { "id": "a2.u08.l05.e10", "type": "tiles", "from": "ru", "text": "Моя сумка такая же большая, как твоя.", "answer": "My bag is as big as yours.", "distractors": ["than", "bigger"], "hint": "Образец: As big as.", "explanation": "Правильно: My bag is as big as yours.", "grammar": ["a2.as-as"] },
+        { "id": "a2.u08.l05.e11", "type": "type_translation", "from": "ru", "text": "Эти туфли не такие удобные, как ботинки.", "answers": ["These shoes are not as comfortable as the boots."], "difficulty": 3, "hint": "Образец: Not as … as.", "explanation": "Правильно: These shoes are not as comfortable as the boots.", "grammar": ["a2.as-as"] },
+        { "id": "a2.u08.l05.e12", "type": "type_translation", "from": "ru", "text": "Я предпочитаю шерсть хлопку.", "answers": ["I prefer wool to cotton."], "hint": "Образец: Prefer + to.", "explanation": "Правильно: I prefer wool to cotton.", "grammar": ["a2.as-as"] },
+        { "id": "a2.u08.l05.e13", "type": "listen_choice", "audio": "My boots are as warm as yours.", "question": "Что вы слышите?", "options": ["My boots are as warm as yours.", "My boots are warmer than yours.", "My boots are not as warm as yours."], "answer": 0, "hint": "Одинаковые.", "explanation": "Правильно: My boots are as warm as yours.", "grammar": ["a2.as-as"] },
+        { "id": "a2.u08.l05.e14", "type": "speak_answer", "question": "Do you prefer tea or coffee?", "questionRu": "Что вы предпочитаете: чай или кофе? Ответьте: I prefer tea to coffee. I prefer coffee to tea.", "keywords": [["\\bI prefer\\b"], ["\\b(tea|coffee|juice|water)\\b"]], "minKeywords": 2, "samples": ["I prefer tea to coffee.", "I prefer coffee to tea."], "difficulty": 3, "hint": "Образец: I prefer … to …", "explanation": "Ответ: I prefer tea to coffee.", "grammar": ["a2.as-as"] }
+      ]
+    },
+    {
+      "id": "a2.u08.l06",
+      "kind": "listening",
+      "title": "Выбираем пальто",
+      "textId": "a2.u08.shop",
+      "exercises": [
+        {
+          "id": "a2.u08.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "a2.u08.shop",
+          "hint": "Слушайте, чем отличаются два пальто.",
+          "explanation": "Чёрное пальто дороже серого, но лучше и теплее. Оно шерстяное, на него есть скидка. Анна примеряет его, и оно подходит.",
+          "questions": [
+            { "kind": "mcq", "question": "Какое пальто самое модное?", "options": ["the black one", "the grey one", "the blue one"], "answer": 0, "explanation": "Том говорит: The black one is the most fashionable coat." },
+            { "kind": "mcq", "question": "Сколько стоит чёрное пальто?", "options": ["a hundred and fifty euros", "fifty euros", "two hundred euros"], "answer": 0, "explanation": "Том говорит: A hundred and fifty euros." },
+            { "kind": "mcq", "question": "Что предпочитает Анна?", "options": ["wool", "cotton", "leather"], "answer": 0, "explanation": "Анна говорит: I prefer wool to cotton." },
+            { "kind": "tfn", "statement": "The black coat is cheaper than the grey coat.", "answer": "false", "explanation": "Том говорит: It is more expensive than the grey coat." },
+            { "kind": "tfn", "statement": "There is a discount today.", "answer": "true", "explanation": "Том говорит: There is also a discount today." },
+            { "kind": "tfn", "statement": "Anna buys the grey coat.", "answer": "not_given", "explanation": "Какое пальто она купит, не сказано." }
+          ]
+        },
+        { "id": "a2.u08.l06.e02", "type": "listen_choice", "audio": "It fits you, and it suits you too.", "question": "Что вы слышите?", "options": ["It fits you, and it suits you too.", "It fits me, and it suits me too.", "It is too big for you."], "answer": 0, "hint": "Два комплимента.", "explanation": "It fits you, and it suits you too — «оно вам как раз и вам идёт»." },
+        { "id": "a2.u08.l06.e03", "type": "listen_dictation", "text": "I prefer wool to cotton.", "hint": "Пять слов.", "explanation": "I prefer wool to cotton — «я предпочитаю шерсть хлопку»." },
+        { "id": "a2.u08.l06.e04", "type": "listen_dictation", "text": "It is more expensive than the grey coat.", "hint": "Восемь слов.", "explanation": "It is more expensive than the grey coat — «оно дороже серого пальто»." },
+        { "id": "a2.u08.l06.e05", "type": "fill_gap", "text": "This coat is ___, but that coat is warmer.", "translation": "Это пальто дешевле, но то теплее.", "answers": [["cheaper"]], "options": ["cheaper", "cheapest", "more cheap"], "hint": "Сравнение.", "explanation": "Правильно: This coat is cheaper, but that coat is warmer.", "grammar": ["a2.comparatives"] },
+        { "id": "a2.u08.l06.e06", "type": "fill_gap", "text": "Is it as warm ___ the grey one?", "translation": "Оно такое же тёплое, как серое?", "answers": [["as"]], "options": ["as", "than", "like"], "hint": "Равенство.", "explanation": "Правильно: Is it as warm as the grey one?", "grammar": ["a2.as-as"] },
+        { "id": "a2.u08.l06.e07", "type": "tiles", "from": "ru", "text": "Можно примерить это пальто?", "answer": "Can I try on this coat?", "distractors": ["it", "tries"], "hint": "Образец: Can I try on.", "explanation": "Правильно: Can I try on this coat?", "grammar": ["a1.can-requests"] },
+        { "id": "a2.u08.l06.e08", "type": "type_translation", "from": "ru", "text": "Это самое модное пальто в магазине.", "answers": ["It is the most fashionable coat in the shop.", "This is the most fashionable coat in the shop."], "difficulty": 2, "hint": "Образец: The most fashionable.", "explanation": "Правильно: It is the most fashionable coat in the shop.", "grammar": ["a2.superlatives"] },
+        { "id": "a2.u08.l06.e09", "type": "speak_answer", "question": "What coat do you prefer, the black one or the grey one?", "questionRu": "Какое пальто вы предпочитаете: чёрное или серое? Ответьте: I prefer the black one.", "keywords": [["\\bI prefer\\b"], ["\\b(black|grey|gray|one|coat)\\b"]], "minKeywords": 2, "samples": ["I prefer the black one.", "I prefer the grey coat."], "difficulty": 3, "hint": "Образец: I prefer the…", "explanation": "Ответ: I prefer the black one.", "grammar": ["a2.as-as"] },
+        { "id": "a2.u08.l06.e10", "type": "speak_repeat", "text": "It is more expensive than the grey coat, but it is better.", "hint": "Две части с but.", "explanation": "Expensive [ɪkˈspensɪv]: ударение на второй слог." }
+      ]
+    },
+    {
+      "id": "a2.u08.l07",
+      "kind": "writing",
+      "title": "День за покупками",
+      "textId": "a2.u08.shopping-day",
+      "exercises": [
+        {
+          "id": "a2.u08.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "a2.u08.shopping-day",
+          "hint": "Сравните, что купили сестра и автор.",
+          "explanation": "Сестра купила шерстяной свитер. Автор примерил кожаные ботинки: удобные, но дорогие, и не купил их. Купил носки и шарф.",
+          "questions": [
+            { "kind": "mcq", "question": "Что купила сестра?", "options": ["a wool sweater", "leather boots", "cotton socks"], "answer": 0, "explanation": "В тексте: My sister bought a modern wool sweater." },
+            { "kind": "mcq", "question": "Почему автор не купил ботинки?", "options": ["They were more expensive.", "They were too small.", "They were old."], "answer": 0, "explanation": "В тексте: they were more expensive." },
+            { "kind": "mcq", "question": "Что автор купил?", "options": ["socks and a scarf", "a sweater", "boots"], "answer": 0, "explanation": "В тексте: I bought a pair of cotton socks and a light scarf." },
+            { "kind": "tfn", "statement": "There was a sale.", "answer": "true", "explanation": "В тексте: There was a sale." },
+            { "kind": "tfn", "statement": "The writer prefers shoes to boots.", "answer": "false", "explanation": "В тексте: I prefer boots to shoes." },
+            { "kind": "tfn", "statement": "The sweater was the cheapest in the shop.", "answer": "not_given", "explanation": "В тексте сказано, что он самый красивый, а не самый дешёвый." }
+          ]
+        },
+        { "id": "a2.u08.l07.e02", "type": "translate_choice", "from": "en", "text": "They were more comfortable than my old boots.", "options": ["Они были удобнее моих старых ботинок.", "Они были такими же, как мои старые ботинки.", "Они были дороже моих старых ботинок."], "answer": 0, "hint": "Образец: More comfortable than.", "explanation": "Правильно: They were more comfortable than my old boots." },
+        { "id": "a2.u08.l07.e03", "type": "fill_gap", "text": "It was the ___ sweater in the shop.", "translation": "Это был самый красивый свитер в магазине.", "answers": [["nicest"]], "options": ["nicest", "most nice", "nicer"], "hint": "Образец: The + -est.", "explanation": "Правильно: It was the nicest sweater in the shop.", "grammar": ["a2.superlatives"] },
+        { "id": "a2.u08.l07.e04", "type": "fill_gap", "text": "I ___ boots to shoes.", "translation": "Я предпочитаю ботинки туфлям.", "answers": [["prefer"]], "options": ["prefer", "prefers", "choose"], "hint": "С I.", "explanation": "Правильно: I prefer boots to shoes.", "grammar": ["a2.as-as"] },
+        { "id": "a2.u08.l07.e05", "type": "type_translation", "from": "ru", "text": "Свитер был не таким дорогим, как чёрный.", "answers": ["The sweater was not as expensive as the black one."], "difficulty": 3, "hint": "Образец: Not as … as.", "explanation": "Правильно: The sweater was not as expensive as the black one.", "grammar": ["a2.as-as"] },
+        { "id": "a2.u08.l07.e06", "type": "speak_describe", "picture": { "emoji": "🛍️" }, "situation": "Расскажите, что вы покупали в последний раз: что выбрали и чем это лучше или дешевле другой вещи.", "keywords": [["\\b(I bought|I chose|I prefer|I tried)\\b"], ["\\b(cheaper|better|more|than|as|best|most)\\b"]], "minKeywords": 2, "samples": ["I bought a coat. It was cheaper than my old coat and it was warmer."], "difficulty": 3, "hint": "Образец: I bought… It was cheaper than…", "explanation": "Сравните вещи: It was cheaper than the other coat.", "grammar": ["a2.comparatives"] },
+        { "id": "a2.u08.l07.e07", "type": "speak_answer", "question": "What do you prefer: summer or winter?", "questionRu": "Что вы предпочитаете: лето или зиму? Ответьте: I prefer summer to winter.", "keywords": [["\\bI prefer\\b"], ["\\b(summer|winter|spring|autumn)\\b"]], "minKeywords": 2, "samples": ["I prefer summer to winter.", "I prefer winter to summer."], "difficulty": 3, "hint": "Образец: I prefer … to …", "explanation": "Ответ: I prefer summer to winter.", "grammar": ["a2.as-as"] },
+        {
+          "id": "a2.u08.l07.e08",
+          "type": "write",
+          "task": "Расскажите о покупке: что вы выбрали, что сравнили, что вам больше нравится и почему. Используйте сравнения и prefer. Например: I bought a coat. It was cheaper than my old coat, but it was not as warm. I prefer wool to cotton.",
+          "minWords": 40,
+          "maxWords": 110,
+          "criteria": [
+            { "id": "comp", "label": "Есть сравнение: -er, more … than или better", "patterns": ["\\b([a-z]+er|more [a-z]+|better|worse) than\\b"] },
+            { "id": "super", "label": "Есть the + superlative", "patterns": ["\\bthe (most [a-z]+|[a-z]+est|best|worst)\\b"] },
+            { "id": "prefer", "label": "Есть prefer или as…as", "patterns": ["\\b(prefer|prefers|as [a-z]+ as)\\b"] },
+            { "id": "item", "label": "Названа вещь", "patterns": ["\\b(coat|sweater|boots|shoes|jacket|dress|skirt|trousers|jeans|scarf|socks|shirt|gloves|shorts)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\bmore (cheap|big|tall|warm|small|old|young|long|short|nice)\\b", "message": "С короткими прилагательными — -er: cheaper, bigger, warmer." },
+            { "pattern": "\\bmost (cheap|big|tall|warm|small|old|young|long|short|nice)\\b", "message": "С короткими прилагательными — the -est: the cheapest, the biggest." },
+            { "pattern": "\\b(taller|cheaper|bigger|warmer|better|worse|more [a-z]+) that\\b", "message": "После сравнения — than, а не that." },
+            { "pattern": "\\bprefer [a-z ]+ than\\b", "message": "После prefer — to: I prefer tea to coffee." },
+            { "pattern": "\\bthe (tallest|cheapest|biggest|best|most [a-z]+) of the\\b", "message": "После superlative — in: the tallest in the class." }
+          ],
+          "samples": [
+            "On Saturday I went shopping and bought a coat. The black coat was more expensive than the grey coat, but it was warmer and more fashionable. It was the best coat in the shop. I prefer wool to cotton, I chose the black one. It was not as cheap as the grey coat, but I like it.",
+            "I like boots. My new boots are more comfortable than my old boots and they are as warm as my sister's boots. They are leather and they are not cheap. I prefer boots to shoes in winter. These are the most comfortable boots in my life."
+          ],
+          "difficulty": 3,
+          "hint": "План: что выбрал → с чем сравнил → почему именно это.",
+          "explanation": "Для двух вещей — сравнительная степень и than. Для самой лучшей — the -est или the most. Для равенства — as…as, для предпочтения — prefer … to.",
+          "grammar": ["a2.comparatives", "a2.superlatives", "a2.as-as"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "a2.u08.test.e01", "type": "match_pairs", "pairs": [{ "en": "sweater", "ru": "свитер" }, { "en": "scarf", "ru": "шарф" }, { "en": "wool", "ru": "шерсть" }, { "en": "sale", "ru": "распродажа" }, { "en": "prefer", "ru": "предпочитать" }], "hint": "Слова про покупки.", "explanation": "Sweater — свитер, scarf — шарф, wool — шерсть, sale — распродажа, prefer — предпочитать." },
+      { "id": "a2.u08.test.e02", "type": "translate_choice", "from": "ru", "text": "удобный", "options": ["comfortable", "fashionable", "light"], "answer": 0, "hint": "Хорошо сидит.", "explanation": "Comfortable — «удобный»." },
+      { "id": "a2.u08.test.e03", "type": "fill_gap", "text": "This coat is ___ than that coat.", "translation": "Это пальто дешевле, чем то.", "answers": [["cheaper"]], "options": ["cheaper", "more cheap", "cheapest"], "hint": "Короткое слово.", "explanation": "Правильно: This coat is cheaper than that coat.", "grammar": ["a2.comparatives"] },
+      { "id": "a2.u08.test.e04", "type": "fill_gap", "text": "The shoes are ___ comfortable than the boots.", "translation": "Туфли удобнее, чем ботинки.", "answers": [["more"]], "options": ["more", "most", "much"], "hint": "Длинное слово.", "explanation": "Правильно: The shoes are more comfortable than the boots.", "grammar": ["a2.comparatives"] },
+      { "id": "a2.u08.test.e05", "type": "fill_gap", "text": "This is the ___ coat in the shop.", "translation": "Это самое дешёвое пальто в магазине.", "answers": [["cheapest"]], "options": ["cheapest", "most cheap", "cheaper"], "hint": "Образец: The + -est.", "explanation": "Правильно: This is the cheapest coat.", "grammar": ["a2.superlatives"] },
+      { "id": "a2.u08.test.e06", "type": "fill_gap", "text": "It is the ___ expensive hotel.", "translation": "Это самый дорогой отель.", "answers": [["most"]], "options": ["most", "more", "much"], "hint": "Длинное слово.", "explanation": "Правильно: It is the most expensive hotel.", "grammar": ["a2.superlatives"] },
+      { "id": "a2.u08.test.e07", "type": "fill_gap", "text": "My boots are as warm ___ yours.", "translation": "Мои ботинки такие же тёплые, как ваши.", "answers": [["as"]], "options": ["as", "than", "like"], "hint": "Второе as.", "explanation": "Правильно: My boots are as warm as yours.", "grammar": ["a2.as-as"] },
+      { "id": "a2.u08.test.e08", "type": "fill_gap", "text": "I prefer tea ___ coffee.", "translation": "Я предпочитаю чай кофе.", "answers": [["to"]], "options": ["to", "than", "as"], "hint": "После prefer.", "explanation": "Правильно: I prefer tea to coffee.", "grammar": ["a2.as-as"] },
+      { "id": "a2.u08.test.e09", "type": "error_correction", "text": "This coat is more cheap than that one.", "wrong": "more cheap", "correction": "cheaper", "options": ["cheaper", "cheapest", "much cheap"], "hint": "Короткое слово.", "explanation": "Правильно: This coat is cheaper than that one.", "grammar": ["a2.comparatives"] },
+      { "id": "a2.u08.test.e10", "type": "error_correction", "text": "He is taller that me.", "wrong": "that", "correction": "than", "options": ["than", "then", "as"], "hint": "Слово «чем».", "explanation": "Правильно: He is taller than me.", "grammar": ["a2.comparatives"] },
+      { "id": "a2.u08.test.e11", "type": "error_correction", "text": "She is the tallest of the class.", "wrong": "of", "correction": "in", "options": ["in", "at", "to"], "hint": "Другой предлог.", "explanation": "Правильно: She is the tallest in the class.", "grammar": ["a2.superlatives"] },
+      { "id": "a2.u08.test.e12", "type": "listen_choice", "audio": "The black coat is more expensive than the grey coat.", "question": "Что вы слышите?", "options": ["The black coat is more expensive than the grey coat.", "The black coat is cheaper than the grey coat.", "The grey coat is more expensive."], "answer": 0, "hint": "Чёрное дороже.", "explanation": "Правильно: The black coat is more expensive than the grey coat.", "grammar": ["a2.comparatives"] },
+      { "id": "a2.u08.test.e13", "type": "listen_dictation", "text": "I prefer boots to shoes.", "hint": "Пять слов.", "explanation": "I prefer boots to shoes — «я предпочитаю ботинки туфлям»." },
+      { "id": "a2.u08.test.e14", "type": "tiles", "from": "ru", "text": "Моя сестра моложе меня.", "answer": "My sister is younger than me.", "distractors": ["more young", "that"], "difficulty": 2, "hint": "Образец: Young + -er.", "explanation": "Правильно: My sister is younger than me.", "grammar": ["a2.comparatives"] },
+      { "id": "a2.u08.test.e15", "type": "type_translation", "from": "ru", "text": "Это самый модный свитер в магазине.", "answers": ["This is the most fashionable sweater in the shop."], "difficulty": 2, "hint": "Образец: The most fashionable.", "explanation": "Правильно: This is the most fashionable sweater in the shop.", "grammar": ["a2.superlatives"] },
+      { "id": "a2.u08.test.e16", "type": "speak_repeat", "text": "This coat is cheaper than that one, but that one is better.", "hint": "Две части с but.", "explanation": "Правильно: Cheaper [ˈtʃiːpɚ], better [ˈbetɚ]." }
+    ]
+  }
+}
