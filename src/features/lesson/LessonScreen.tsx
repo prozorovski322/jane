@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useMemo, useReducer, useState } from 'react';
+import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { getLesson, getLexicon, getUnit, isCourseWord } from '@/core/content';
+import { getLexicon, isCourseWord } from '@/core/content';
+import type { Exercise } from '@/core/content/schema';
 import { feedback } from '@/core/feedback/feedback';
 import type { Response } from '@/core/scoring/check';
 import { tts } from '@/core/speech/tts';
@@ -13,8 +14,9 @@ import { IconButton } from '@/ui/components/IconButton';
 import { ProgressBar } from '@/ui/components/ProgressBar';
 import { useTheme } from '@/ui/theme/ThemeProvider';
 
+import type { CompletionInfo } from '../progress/service';
 import { FeedbackPanel } from './components/FeedbackPanel';
-import { LessonSummary } from './components/LessonSummary';
+import { LessonSummary, type SaveState } from './components/LessonSummary';
 import {
   canSkip,
   createLesson,
@@ -26,44 +28,48 @@ import {
 } from './engine';
 import { ExerciseView } from './exercises/ExerciseView';
 import type { ExerciseContext } from './exercises/types';
+import type { LessonSession } from './session';
 
 const reducer = makeReducer({ isWord: isCourseWord, wordLabel: (id) => getLexicon().get(id)?.en });
 
-export function LessonScreen({
-  lessonId,
-  startAt = 0,
-  onExit,
-}: {
-  lessonId: string;
+export interface LessonScreenProps {
+  session: LessonSession | null;
+  /** Saves the result; resolves with what the learner earned. */
+  onComplete?: (summary: Summary) => Promise<CompletionInfo>;
+  /** Leaves the screen (after the summary, or when the learner quits). */
+  onExit: () => void;
+  /** Leaves out exercises the learner has mastered (repeated lessons). */
+  skip?: (ex: Exercise) => boolean;
   /** Skip the first exercises (development aid). */
   startAt?: number;
-  onExit: (summary: Summary | null) => void;
-}) {
-  const lesson = useMemo(() => getLesson(lessonId), [lessonId]);
-  if (!lesson) {
+}
+
+export function LessonScreen({ session, ...rest }: LessonScreenProps) {
+  if (!session || !session.exercises.length) {
     return (
       <SafeAreaView style={styles.center}>
-        <AppText variant="heading">Урок не найден</AppText>
-        <Button label="Назад" onPress={() => onExit(null)} />
+        <AppText variant="heading">
+          {session ? 'Здесь пока нечего повторять' : 'Урок не найден'}
+        </AppText>
+        <Button label="Назад" onPress={rest.onExit} />
       </SafeAreaView>
     );
   }
-  return <LessonRunner lesson={lesson} startAt={startAt} onExit={onExit} />;
+  return <LessonRunner session={session} {...rest} />;
 }
 
 function LessonRunner({
-  lesson,
-  startAt,
+  session,
+  onComplete,
   onExit,
-}: {
-  lesson: NonNullable<ReturnType<typeof getLesson>>;
-  startAt: number;
-  onExit: (summary: Summary | null) => void;
-}) {
+  skip,
+  startAt = 0,
+}: LessonScreenProps & { session: LessonSession }) {
   const { colors, space } = useTheme();
   const [state, dispatch] = useReducer(reducer, null, () =>
-    createLesson(lesson.id, lesson.exercises.slice(startAt)),
+    createLesson(session.id, session.exercises.slice(startAt), { skip }),
   );
+  const [save, setSave] = useState<SaveState>({ status: 'idle' });
   const [confirmExit, setConfirmExit] = useState(false);
   const [cantListen, setCantListen] = useState(false);
   const [cantSpeak, setCantSpeak] = useState(false);
@@ -83,13 +89,36 @@ function LessonRunner({
 
   const ctx: ExerciseContext = useMemo(() => {
     const lexicon = getLexicon();
-    const unit = getUnit(lesson.unit.id);
     return {
       word: (id) => lexicon.get(id),
-      text: (id) => unit.texts.find((t) => t.id === id),
+      text: (id) => session.texts.find((t) => t.id === id),
       cantListen,
     };
-  }, [lesson.unit.id, cantListen]);
+  }, [session.texts, cantListen]);
+
+  const summary = useMemo(() => (state.phase === 'done' ? summarize(state) : null), [state]);
+
+  // State changes only after the await: "idle" with a summary already reads as "saving".
+  const persist = useCallback(
+    async (s: Summary) => {
+      if (!onComplete) return;
+      try {
+        const info = await onComplete(s);
+        setSave({ status: 'saved', info });
+      } catch (e) {
+        setSave({ status: 'error', message: e instanceof Error ? e.message : String(e) });
+      }
+    },
+    [onComplete],
+  );
+
+  // Save once, as soon as the session is over.
+  const saveStarted = useRef(false);
+  useEffect(() => {
+    if (!summary || saveStarted.current) return;
+    saveStarted.current = true;
+    void persist(summary);
+  }, [summary, persist]);
 
   // Leaving an exercise stops its audio.
   useEffect(() => () => void tts.stop(), [key]);
@@ -120,15 +149,19 @@ function LessonRunner({
     [key],
   );
 
-  if (state.phase === 'done') {
-    const summary = summarize(state);
+  if (summary) {
     return (
       <SafeAreaView style={[styles.safe, { backgroundColor: colors.background }]}>
         <LessonSummary
           summary={summary}
-          isTest={lesson.isTest}
-          passScore={lesson.unit.test.passScore}
-          onDone={() => onExit(summary)}
+          kind={session.kind}
+          passScore={session.passScore}
+          save={onComplete ? (save.status === 'idle' ? { status: 'saving' } : save) : null}
+          onRetrySave={() => {
+            setSave({ status: 'saving' });
+            void persist(summary);
+          }}
+          onDone={onExit}
         />
       </SafeAreaView>
     );
@@ -207,7 +240,7 @@ function LessonRunner({
               Результат этого урока не сохранится. Можно вернуться к нему в любой момент.
             </AppText>
             <Button label="Продолжить урок" onPress={() => setConfirmExit(false)} />
-            <Button label="Выйти" variant="ghost" onPress={() => onExit(null)} />
+            <Button label="Выйти" variant="ghost" onPress={onExit} />
           </View>
         ) : state.phase === 'feedback' && state.verdict && exercise ? (
           <FeedbackPanel

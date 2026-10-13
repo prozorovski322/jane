@@ -7,13 +7,67 @@ import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import { StyleSheet, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-import { useSettings } from '@/features/settings/store';
+import { initDatabase } from '@/core/storage';
+import { useProgress } from '@/features/progress/store';
+import { bindSettings, useSettings } from '@/features/settings/store';
+import { AppText } from '@/ui/components/AppText';
+import { Button } from '@/ui/components/Button';
 import { ThemeProvider, useTheme } from '@/ui/theme/ThemeProvider';
 
 void SplashScreen.preventAutoHideAsync();
+
+type Boot = { status: 'loading' } | { status: 'ready' } | { status: 'error'; message: string };
+
+/** Opens and migrates the database, then loads settings and progress. */
+function useBoot() {
+  const [boot, setBoot] = useState<Boot>({ status: 'loading' });
+  const [attempt, setAttempt] = useState(0);
+
+  useEffect(() => {
+    let unbind: (() => void) | undefined;
+    let alive = true;
+    (async () => {
+      try {
+        const db = await initDatabase();
+        unbind = await bindSettings(db);
+        await useProgress.getState().refresh(db);
+        if (alive) setBoot({ status: 'ready' });
+      } catch (e) {
+        if (alive)
+          setBoot({ status: 'error', message: e instanceof Error ? e.message : String(e) });
+      }
+    })();
+    return () => {
+      alive = false;
+      unbind?.();
+    };
+  }, [attempt]);
+
+  const retry = useCallback(() => {
+    setBoot({ status: 'loading' });
+    setAttempt((n) => n + 1);
+  }, []);
+  return { boot, retry };
+}
+
+function BootError({ message, onRetry }: { message: string; onRetry: () => void }) {
+  const { colors } = useTheme();
+  return (
+    <View style={[styles.center, { backgroundColor: colors.background }]}>
+      <AppText variant="title" align="center">
+        Не удалось открыть данные приложения
+      </AppText>
+      <AppText variant="small" color="textMuted" align="center">
+        {message}
+      </AppText>
+      <Button label="Попробовать ещё раз" onPress={onRetry} />
+    </View>
+  );
+}
 
 function ThemedStack() {
   const { colors, scheme } = useTheme();
@@ -26,6 +80,10 @@ function ThemedStack() {
           name="lesson/[id]"
           options={{ presentation: 'fullScreenModal', gestureEnabled: false }}
         />
+        <Stack.Screen
+          name="review"
+          options={{ presentation: 'fullScreenModal', gestureEnabled: false }}
+        />
       </Stack>
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
     </>
@@ -34,26 +92,38 @@ function ThemedStack() {
 
 export default function RootLayout() {
   const theme = useSettings((s) => s.theme);
-  const [loaded, error] = useFonts({
+  const { boot, retry } = useBoot();
+  const [fontsLoaded, fontError] = useFonts({
     Unbounded_600SemiBold,
     GolosText_400Regular,
     GolosText_500Medium,
     GolosText_600SemiBold,
     GolosText_700Bold,
   });
+  // If fonts fail to load the app still works with system fonts.
+  const fontsDone = fontsLoaded || !!fontError;
+  const ready = fontsDone && boot.status !== 'loading';
 
   useEffect(() => {
-    if (loaded || error) void SplashScreen.hideAsync();
-  }, [loaded, error]);
+    if (ready) void SplashScreen.hideAsync();
+  }, [ready]);
 
-  // If fonts fail to load the app still works with system fonts.
-  if (!loaded && !error) return null;
+  if (!ready) return null;
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    <GestureHandlerRootView style={styles.flex}>
       <ThemeProvider preference={theme}>
-        <ThemedStack />
+        {boot.status === 'error' ? (
+          <BootError message={boot.message} onRetry={retry} />
+        ) : (
+          <ThemedStack />
+        )}
       </ThemeProvider>
     </GestureHandlerRootView>
   );
 }
+
+const styles = StyleSheet.create({
+  flex: { flex: 1 },
+  center: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 16, padding: 24 },
+});
