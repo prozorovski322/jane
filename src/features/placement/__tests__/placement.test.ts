@@ -112,9 +112,9 @@ const result = (patch: Partial<PlacementResult>): PlacementResult => ({
 describe('applying the result', () => {
   it('credits every lesson of lower levels and none of the current one at its start', () => {
     const course = getCourse();
-    const all = course.levels.flatMap((l) =>
-      l.units.flatMap((u) => [...u.lessons.map((x) => x.id), `${u.id}.test`]),
-    );
+    const all = course.levels
+      .filter((l) => l.level === 'PA1' || l.level === 'A1')
+      .flatMap((l) => l.units.flatMap((u) => [...u.lessons.map((x) => x.id), `${u.id}.test`]));
     expect(
       lessonsToCredit(course, result({ level: 'A2', position: 0.1 })).map((l) => l.lessonId),
     ).toEqual(all);
