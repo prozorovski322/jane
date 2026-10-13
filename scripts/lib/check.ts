@@ -15,11 +15,19 @@ import {
   tokenize,
   type Token,
 } from '../../src/core/content/lexical';
-import type { Exercise, Level, Text, Unit, Word } from '../../src/core/content/schema';
+import {
+  LEVEL_BANDS,
+  LEVELS,
+  type Exercise,
+  type Level,
+  type Text,
+  type Unit,
+  type Word,
+} from '../../src/core/content/schema';
 import { normalizeAnswer } from '../../src/core/scoring/normalize';
 import { splitTiles, tileMultisetKey } from '../../src/core/scoring/tiles';
 import { compareWithCmu, ipaIssues } from './ipa';
-import type { Issue, LoadedContent } from './load';
+import { PLACEMENT_FILE, type Issue, type LoadedContent } from './load';
 
 /** Reading passage length (words) by level. */
 const READING_WORDS: Record<Level, [number, number]> = {
@@ -115,7 +123,8 @@ function checkOptions(report: Report, options: readonly string[], answer: number
 function checkExercise(
   ex: Exercise,
   report: Report,
-  ctx: { unit: Unit; wordsById: ReadonlyMap<string, Word>; grammarIds: ReadonlySet<string> },
+  /** `unit` is absent for exercises outside units (placement test). */
+  ctx: { unit?: Unit; wordsById: ReadonlyMap<string, Word>; grammarIds: ReadonlySet<string> },
 ) {
   if (normalizeAnswer(ex.hint) === normalizeAnswer(ex.explanation)) {
     report('error', 'hint', 'hint and explanation are identical');
@@ -214,7 +223,7 @@ function checkExercise(
       break;
     }
     case 'comprehension': {
-      const text = ctx.unit.texts.find((t) => t.id === ex.textId);
+      const text = ctx.unit?.texts.find((t) => t.id === ex.textId);
       if (!text) report('error', 'textId', `unknown text "${ex.textId}"`);
       ex.questions.forEach((q, i) => {
         if (q.kind === 'mcq') {
@@ -651,5 +660,70 @@ export function checkContent(content: LoadedContent): Issue[] {
     }
   }
 
+  checkPlacement(content, issues, { wordsById, grammarIds, claimId });
   return issues;
+}
+
+/**
+ * Placement bank: the same exercise integrity and language checks as lessons. Vocabulary level
+ * is not checked here: the bank covers A1–B2 while the course lexicon grows unit by unit.
+ */
+function checkPlacement(
+  content: LoadedContent,
+  issues: Issue[],
+  ctx: {
+    wordsById: ReadonlyMap<string, Word>;
+    grammarIds: ReadonlySet<string>;
+    claimId: (id: string, file: string, path: string) => void;
+  },
+) {
+  const bank = content.placement;
+  if (!bank) {
+    issues.push({
+      severity: 'error',
+      file: PLACEMENT_FILE,
+      path: '',
+      message: 'placement bank is missing',
+    });
+    return;
+  }
+  const perLevel = new Map<Level, number>();
+  bank.items.forEach((item, i) => {
+    const ex = item.exercise;
+    const path = `items[${i}]`;
+    const report: Report = (severity, p, message) =>
+      issues.push({ severity, file: PLACEMENT_FILE, path: p ? `${path}.${p}` : path, message });
+
+    ctx.claimId(ex.id, PLACEMENT_FILE, `${path}.exercise.id`);
+    const prefix = `placement.${item.level.toLowerCase()}.`;
+    if (!ex.id.startsWith(prefix)) report('error', 'exercise.id', `id must start with "${prefix}"`);
+    const [lo, hi] = LEVEL_BANDS[item.level];
+    if (item.b < lo - 0.05 || item.b > hi + 0.05)
+      report('error', 'b', `b=${item.b} is outside the ${item.level} band ${lo}…${hi}`);
+    if (ex.type === 'fill_gap' && !ex.options)
+      report('error', 'exercise.options', 'placement items must be multiple choice');
+    perLevel.set(item.level, (perLevel.get(item.level) ?? 0) + 1);
+
+    checkExercise(ex, (s, p, m) => report(s, `exercise.${p}`.replace(/\.$/, ''), m), ctx);
+    const strings = exerciseStrings(ex);
+    for (const s of strings.en)
+      if (hasCyrillic(s)) report('error', 'exercise', `Cyrillic letters in English text "${s}"`);
+    for (const s of strings.ru) {
+      if (!hasCyrillic(s))
+        report('error', 'exercise', `Russian text has no Cyrillic letters: "${s}"`);
+      if (MIXED_SCRIPT.test(s))
+        report('error', 'exercise', `mixed Latin/Cyrillic letters in "${s}"`);
+    }
+  });
+  for (const level of LEVELS) {
+    const n = perLevel.get(level) ?? 0;
+    if (n < 10) {
+      issues.push({
+        severity: 'error',
+        file: PLACEMENT_FILE,
+        path: 'items',
+        message: `only ${n} items for ${level}; at least 10 needed`,
+      });
+    }
+  }
 }

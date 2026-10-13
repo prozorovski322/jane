@@ -208,7 +208,8 @@ export async function recordSession(
            last_completed_at = excluded.last_completed_at,
            best_score = MAX(best_score, excluded.best_score),
            passed = MAX(passed, excluded.passed),
-           times = times + 1`,
+           times = times + 1,
+           source = 'lesson'`,
         [meta.id, meta.unitId, now.getTime(), now.getTime(), summary.score, passed ? 1 : 0],
       );
     }

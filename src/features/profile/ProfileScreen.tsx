@@ -1,3 +1,4 @@
+import { router } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 
 import { getLesson } from '@/core/content';
@@ -12,7 +13,12 @@ import { useTheme } from '@/ui/theme/ThemeProvider';
 
 import { PRACTICE_INFO, type PracticeKind } from '../practice/build';
 import { loadHistory, loadSkillStats, SKILL_LABEL, type HistoryItem } from '../progress/insights';
+import { GOALS, useOnboarding } from '../onboarding/store';
+import { lastPlacement } from '../placement/apply';
+import { FORECAST_TARGETS, loadForecast } from '../progress/forecast';
 import { useProgress } from '../progress/store';
+import { Button } from '@/ui/components/Button';
+import { ProgressBar } from '@/ui/components/ProgressBar';
 import { SkillRadar } from './SkillRadar';
 
 function Stat({
@@ -77,17 +83,33 @@ function Calendar() {
 
 export function ProfileScreen() {
   const snap = useProgress((s) => s.snapshot);
-  const data = useDbQuery(async (db) => {
-    const [skills, history, cards] = await Promise.all([
-      loadSkillStats(db),
-      loadHistory(db, 15),
-      allCards(db, 'word'),
-    ]);
-    return { skills, history, learned: cards.filter(isMastered).length, learning: cards.length };
-  }, []);
+  const completed = snap?.completedLessons;
+  const goal = useOnboarding((s) => s.data?.goal);
+  const data = useDbQuery(
+    async (db) => {
+      const [skills, history, cards, forecast, placement] = await Promise.all([
+        loadSkillStats(db),
+        loadHistory(db, 15),
+        allCards(db, 'word'),
+        loadForecast(db, completed ?? new Set()),
+        lastPlacement(db),
+      ]);
+      return {
+        skills,
+        history,
+        forecast,
+        placement,
+        learned: cards.filter(isMastered).length,
+        learning: cards.length,
+      };
+    },
+    [completed],
+  );
+  const forecast = data ? data.forecast : null;
+  const placement = data ? data.placement : null;
 
   return (
-    <Screen title="Профиль">
+    <Screen title="Профиль" subtitle={goal ? `Цель: ${GOALS[goal].toLowerCase()}` : undefined}>
       {snap && (
         <View style={styles.stats}>
           <Stat value={snap.totalXp} label="опыт" color="xp" />
@@ -96,6 +118,38 @@ export function ProfileScreen() {
           <Stat value={snap.completedLessons.size} label="уроков" />
         </View>
       )}
+
+      <SectionTitle>Прогноз уровня</SectionTitle>
+      <Card>
+        {forecast &&
+          FORECAST_TARGETS.map((t) => (
+            <View key={t} style={styles.forecastRow}>
+              <AppText variant="bodyStrong" style={styles.level}>
+                {t}
+              </AppText>
+              <View style={styles.flex}>
+                <ProgressBar value={forecast[t]} label={`Готовность к ${t}`} />
+              </View>
+              <AppText variant="small" color="textMuted" style={styles.percent}>
+                {Math.round(forecast[t] * 20) * 5}%
+              </AppText>
+            </View>
+          ))}
+        <AppText variant="caption" color="textMuted">
+          Оценка готовности по тесту уровня, пройденным урокам и точности ответов. Это не
+          экзаменационный балл.
+          {placement
+            ? ` Последний тест: ${placement.level}, ${new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'long' }).format(new Date(placement.at))}.`
+            : ''}
+        </AppText>
+        <Button
+          label={placement ? 'Пройти тест уровня ещё раз' : 'Пройти тест уровня'}
+          icon="target"
+          variant="secondary"
+          compact
+          onPress={() => router.push('/placement')}
+        />
+      </Card>
 
       <SectionTitle>Навыки</SectionTitle>
       {data && (
@@ -175,4 +229,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   cell: { width: 28, height: 28, borderRadius: 6 },
+  forecastRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
+  level: { width: 28 },
+  percent: { width: 40, textAlign: 'right' },
 });

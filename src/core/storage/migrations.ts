@@ -128,6 +128,13 @@ export const MIGRATIONS: readonly Migration[] = [
       );
     `,
   },
+  {
+    version: 3,
+    sql: `
+      -- Lessons credited by the placement test rather than completed: 'lesson' | 'placement'.
+      ALTER TABLE lesson_progress ADD COLUMN source TEXT NOT NULL DEFAULT 'lesson';
+    `,
+  },
 ];
 
 export const SCHEMA_VERSION = MIGRATIONS[MIGRATIONS.length - 1]!.version;

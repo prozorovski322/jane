@@ -459,6 +459,33 @@ export const LevelTest = z.strictObject({
 });
 export type LevelTest = z.infer<typeof LevelTest>;
 
+/**
+ * A placement test item. `b` is the item difficulty on the ability scale (logits), set by the
+ * author for its level band: A1 −2.6…−1.2, A2 −1.2…−0.1, B1 −0.1…0.9, B2 0.9…2.4. These are
+ * expert estimates until answer data allows re-calibration.
+ */
+export const PlacementItem = z.strictObject({
+  level: Level,
+  b: z.number().min(-4).max(4),
+  skill: Skill,
+  exercise: z.discriminatedUnion('type', [TranslateChoice, FillGap, ListenChoice]),
+});
+export type PlacementItem = z.infer<typeof PlacementItem>;
+
+export const PlacementBank = z.strictObject({
+  version: z.string().regex(/^\d{4}\.\d{1,2}\.\d+$/),
+  items: z.array(PlacementItem).min(40),
+});
+export type PlacementBank = z.infer<typeof PlacementBank>;
+
+/** Difficulty band of each level on the placement scale. */
+export const LEVEL_BANDS: Record<Level, [number, number]> = {
+  A1: [-2.6, -1.2],
+  A2: [-1.2, -0.1],
+  B1: [-0.1, 0.9],
+  B2: [0.9, 2.4],
+};
+
 export const Course = z.strictObject({
   /** Content version, bumped on every content release: YYYY.MM.patch. */
   version: z.string().regex(/^\d{4}\.\d{1,2}\.\d+$/),

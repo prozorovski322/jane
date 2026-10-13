@@ -2,8 +2,8 @@
  * Runtime access to the compiled course content. Units are loaded lazily and cached.
  */
 import type { CourseOutline, GrammarBundle, LexiconEntry, UnitBundle } from './bundle-types';
-import { loadCourse, loadGrammar, loadLexicon, unitLoaders } from './generated';
-import type { Exercise } from './schema';
+import { loadCourse, loadGrammar, loadLexicon, loadPlacement, unitLoaders } from './generated';
+import type { Exercise, PlacementBank } from './schema';
 
 let course: CourseOutline | null = null;
 let lexicon: Map<string, LexiconEntry> | null = null;
@@ -67,6 +67,13 @@ export function isCourseWord(w: string): boolean {
     [...getLexicon().values()].filter((e) => !e.en.includes(' ')).map((e) => e.en.toLowerCase()),
   );
   return words.has(w.toLowerCase());
+}
+
+let placement: PlacementBank | null = null;
+
+export function getPlacementBank(): PlacementBank {
+  placement ??= loadPlacement();
+  return placement;
 }
 
 export function getGrammarNote(id: string): GrammarBundle[number] | undefined {

@@ -12,6 +12,7 @@ import { StyleSheet, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { initDatabase } from '@/core/storage';
+import { useOnboarding } from '@/features/onboarding/store';
 import { useProgress } from '@/features/progress/store';
 import { bindSettings, useSettings } from '@/features/settings/store';
 import { AppText } from '@/ui/components/AppText';
@@ -34,6 +35,7 @@ function useBoot() {
       try {
         const db = await initDatabase();
         unbind = await bindSettings(db);
+        await useOnboarding.getState().load(db);
         await useProgress.getState().refresh(db);
         if (alive) setBoot({ status: 'ready' });
       } catch (e) {
@@ -88,6 +90,11 @@ function ThemedStack() {
           name="practice/[kind]"
           options={{ presentation: 'fullScreenModal', gestureEnabled: false }}
         />
+        <Stack.Screen
+          name="placement"
+          options={{ presentation: 'fullScreenModal', gestureEnabled: false }}
+        />
+        <Stack.Screen name="onboarding" options={{ gestureEnabled: false }} />
       </Stack>
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
     </>

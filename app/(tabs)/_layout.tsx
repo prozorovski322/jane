@@ -1,4 +1,7 @@
+import { Redirect } from 'expo-router';
 import { Tabs } from 'expo-router/js-tabs';
+
+import { useOnboarding } from '@/features/onboarding/store';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Icon, type IconName } from '@/ui/components/Icon';
@@ -16,6 +19,9 @@ const TABS: { name: string; title: string; icon: IconName }[] = [
 export default function TabsLayout() {
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
+  const onboarded = useOnboarding((s) => s.data?.done);
+  // First run: onboarding before anything else.
+  if (onboarded === false) return <Redirect href="/onboarding" />;
   return (
     <Tabs
       screenOptions={{

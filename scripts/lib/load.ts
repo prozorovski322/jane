@@ -11,12 +11,16 @@ import {
   Course,
   GrammarNote,
   LevelTest,
+  PlacementBank,
   Unit,
   type Course as CourseT,
   type GrammarNote as GrammarNoteT,
   type LevelTest as LevelTestT,
+  type PlacementBank as PlacementBankT,
   type Unit as UnitT,
 } from '../../src/core/content/schema';
+
+export const PLACEMENT_FILE = 'content/placement/bank.json';
 
 export const ROOT = join(__dirname, '..', '..');
 export const CONTENT_DIR = join(ROOT, 'content');
@@ -44,6 +48,7 @@ export interface LoadedContent {
   units: UnitT[];
   levelTests: LevelTestT[];
   grammar: Map<string, GrammarNoteT>;
+  placement: PlacementBankT | null;
   extras: LexiconExtras;
   /** Source file of every unit / grammar note / level test, keyed by id. */
   files: Map<string, string>;
@@ -234,5 +239,19 @@ export function loadContent(): LoadedContent {
     units.push(unit);
   }
 
-  return { course, units, levelTests, grammar, extras: loadExtras(issues), files, issues };
+  const placementFile = join(ROOT, PLACEMENT_FILE);
+  const placement = existsSync(placementFile)
+    ? parseFile(placementFile, PlacementBank, readJson(placementFile, issues), issues)
+    : null;
+
+  return {
+    course,
+    units,
+    levelTests,
+    grammar,
+    placement,
+    extras: loadExtras(issues),
+    files,
+    issues,
+  };
 }
