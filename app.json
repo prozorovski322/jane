@@ -27,7 +27,6 @@
       "expo-speech-recognition"
     ],
     "experiments": {
-      "typedRoutes": true,
       "reactCompiler": true
     }
   }

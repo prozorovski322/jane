@@ -33,7 +33,7 @@ export function checkWriting(text: string, ex: ExerciseOf<'write'>): WritingResu
   const mistakes: WritingResult['mistakes'] = [];
   for (const e of ex.commonErrors) {
     const m = compilePattern(e.pattern).exec(normalized);
-    if (m) mistakes.push({ message: e.message, fragment: m[0] });
+    if (m) mistakes.push({ message: e.message, fragment: m[0].trim() });
   }
 
   const required = criteria.filter((c) => c.required);
