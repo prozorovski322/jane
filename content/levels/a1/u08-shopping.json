@@ -1,0 +1,306 @@
+{
+  "id": "a1.u08",
+  "level": "A1",
+  "order": 8,
+  "title": { "en": "Shopping", "ru": "Покупки" },
+  "description": "Ходим по магазинам: одежда, цены, просьбы и оплата. How much, can для просьб, местоимения me, him, her, them.",
+  "goals": [
+    "Могу назвать одежду и деньги: shirt, coat, euro, cash.",
+    "Могу спросить цену: How much is this shirt?",
+    "Могу попросить в магазине: Can I try it on? Can I pay by card?",
+    "Могу сказать, что вещь дорогая или дешёвая.",
+    "Могу использовать me, him, her, them: Give me the bag. I like them.",
+    "Могу написать короткий текст о покупках."
+  ],
+  "grammar": ["a1.how-much", "a1.can-requests", "a1.object-pronouns"],
+  "troubles": ["word-order", "tenses"],
+  "words": [
+    { "id": "buy", "en": "buy", "ipa": "baɪ", "pos": "verb", "ru": ["покупать"], "example": { "en": "I buy bread every day.", "ru": "Я покупаю хлеб каждый день." }, "forms": { "third": "buys" }, "topics": ["shopping"] },
+    { "id": "pay", "en": "pay", "ipa": "peɪ", "pos": "verb", "ru": ["платить"], "example": { "en": "I pay by card.", "ru": "Я плачу картой." }, "forms": { "third": "pays" }, "topics": ["shopping"] },
+    { "id": "cost", "en": "cost", "ipa": "kɔːst", "pos": "verb", "ru": ["стоить"], "example": { "en": "The coat costs two hundred euros.", "ru": "Пальто стоит двести евро." }, "forms": { "third": "costs" }, "topics": ["shopping"] },
+    { "id": "price", "en": "price", "ipa": "praɪs", "pos": "noun", "ru": ["цена"], "example": { "en": "The price is fifty euros.", "ru": "Цена — пятьдесят евро." }, "topics": ["shopping"] },
+    { "id": "money", "en": "money", "ipa": "ˈmʌni", "pos": "noun", "ru": ["деньги"], "example": { "en": "I don't have any money.", "ru": "У меня нет денег." }, "note": "Money — несчитаемое слово: нельзя сказать a money или moneys.", "topics": ["shopping"] },
+    { "id": "cash", "en": "cash", "ipa": "kæʃ", "pos": "noun", "ru": ["наличные"], "example": { "en": "I pay with cash.", "ru": "Я плачу наличными." }, "topics": ["shopping"] },
+    { "id": "euro", "en": "euro", "ipa": "ˈjʊroʊ", "pos": "noun", "ru": ["евро"], "example": { "en": "The shirt costs twenty euros.", "ru": "Рубашка стоит двадцать евро." }, "topics": ["shopping"] },
+    { "id": "dollar", "en": "dollar", "ipa": "ˈdɑːlɚ", "pos": "noun", "ru": ["доллар"], "example": { "en": "The coffee is three dollars.", "ru": "Кофе стоит три доллара." }, "topics": ["shopping"] },
+    { "id": "ruble", "en": "ruble", "ipa": "ˈruːbəl", "pos": "noun", "ru": ["рубль"], "example": { "en": "The bread costs fifty rubles.", "ru": "Хлеб стоит пятьдесят рублей." }, "topics": ["shopping"] },
+    { "id": "thousand", "en": "thousand", "ipa": "ˈθaʊzənd", "pos": "noun", "ru": ["тысяча"], "example": { "en": "The bag costs a thousand rubles.", "ru": "Сумка стоит тысячу рублей." }, "troubles": ["pron-th"], "topics": ["numbers"] },
+    { "id": "cheap", "en": "cheap", "ipa": "tʃiːp", "pos": "adj", "ru": ["дешёвый"], "example": { "en": "The bread is cheap.", "ru": "Хлеб дешёвый." }, "topics": ["shopping"] },
+    { "id": "expensive", "en": "expensive", "ipa": "ɪkˈspensɪv", "pos": "adj", "ru": ["дорогой"], "example": { "en": "The coat is expensive.", "ru": "Пальто дорогое." }, "topics": ["shopping"] },
+    { "id": "customer", "en": "customer", "ipa": "ˈkʌstəmɚ", "pos": "noun", "ru": ["покупатель"], "example": { "en": "The customer wants a small size.", "ru": "Покупатель хочет маленький размер." }, "topics": ["shopping"] },
+    { "id": "shirt", "en": "shirt", "ipa": "ʃɝːt", "pos": "noun", "ru": ["рубашка"], "example": { "en": "I want a white shirt.", "ru": "Я хочу белую рубашку." }, "picture": { "emoji": "👔" }, "topics": ["clothes"] },
+    { "id": "jeans", "en": "jeans", "ipa": "dʒiːnz", "pos": "noun", "ru": ["джинсы"], "example": { "en": "These jeans are blue.", "ru": "Эти джинсы синие." }, "note": "Jeans всегда во множественном числе: these jeans, they are.", "picture": { "emoji": "👖" }, "topics": ["clothes"] },
+    { "id": "shoes", "en": "shoes", "ipa": "ʃuːz", "pos": "noun", "ru": ["обувь", "туфли"], "example": { "en": "My shoes are black.", "ru": "Мои туфли чёрные." }, "note": "Shoes — всегда во множественном числе. Один башмак — a shoe.", "picture": { "emoji": "👟" }, "topics": ["clothes"] },
+    { "id": "coat", "en": "coat", "ipa": "koʊt", "pos": "noun", "ru": ["пальто"], "example": { "en": "I need a new coat.", "ru": "Мне нужно новое пальто." }, "picture": { "emoji": "🧥" }, "topics": ["clothes"] },
+    { "id": "dress", "en": "dress", "ipa": "dres", "pos": "noun", "ru": ["платье"], "example": { "en": "She has a nice dress.", "ru": "У неё красивое платье." }, "picture": { "emoji": "👗" }, "topics": ["clothes"] },
+    { "id": "size", "en": "size", "ipa": "saɪz", "pos": "noun", "ru": ["размер"], "example": { "en": "I need a small size.", "ru": "Мне нужен маленький размер." }, "topics": ["clothes"] },
+    { "id": "wear", "en": "wear", "ipa": "wer", "pos": "verb", "ru": ["носить (одежду)"], "example": { "en": "I wear a coat every day.", "ru": "Я ношу пальто каждый день." }, "forms": { "third": "wears" }, "topics": ["clothes"] },
+    { "id": "try-on", "en": "try on", "ipa": "traɪ ɑːn", "pos": "phrasal", "ru": ["примерять"], "example": { "en": "Can I try on this coat?", "ru": "Можно примерить это пальто?" }, "forms": { "third": "tries on" }, "topics": ["clothes"] },
+    { "id": "need", "en": "need", "ipa": "niːd", "pos": "verb", "ru": ["нуждаться", "нужно"], "example": { "en": "I need a new shirt.", "ru": "Мне нужна новая рубашка." }, "forms": { "third": "needs" }, "note": "Need — это «нужно» в форме «я нуждаюсь»: I need a bag — «мне нужна сумка».", "topics": ["shopping"] },
+    { "id": "give", "en": "give", "ipa": "ɡɪv", "pos": "verb", "ru": ["давать"], "example": { "en": "Give me the bag, please.", "ru": "Дайте мне сумку, пожалуйста." }, "forms": { "third": "gives" }, "topics": ["shopping"] },
+    { "id": "how-much", "en": "how much", "ipa": "haʊ mʌtʃ", "pos": "phrase", "ru": ["сколько (стоит)"], "example": { "en": "How much is this shirt?", "ru": "Сколько стоит эта рубашка?" }, "topics": ["shopping"] },
+    { "id": "can", "en": "can", "ipa": "kæn", "pos": "modal", "ru": ["мочь", "можно"], "example": { "en": "Can I pay by card?", "ru": "Можно заплатить картой?" }, "note": "Can не получает -s: he can, she can. После can глагол без to.", "topics": ["shopping"] },
+    { "id": "me", "en": "me", "ipa": "miː", "pos": "pron", "ru": ["мне", "меня"], "example": { "en": "Give me the bag.", "ru": "Дайте мне сумку." }, "topics": ["pronouns"] },
+    { "id": "him", "en": "him", "ipa": "hɪm", "pos": "pron", "ru": ["ему", "его"], "example": { "en": "The coat is for him.", "ru": "Пальто для него." }, "topics": ["pronouns"] },
+    { "id": "her#pron", "en": "her", "ipa": "hɝː", "pos": "pron", "ru": ["ей", "её"], "example": { "en": "I like her.", "ru": "Она мне нравится." }, "topics": ["pronouns"] },
+    { "id": "us", "en": "us", "ipa": "ʌs", "pos": "pron", "ru": ["нам", "нас"], "example": { "en": "Give us the menu, please.", "ru": "Дайте нам меню, пожалуйста." }, "topics": ["pronouns"] },
+    { "id": "them", "en": "them", "ipa": "ðem", "pos": "pron", "ru": ["им", "их"], "example": { "en": "I like them.", "ru": "Они мне нравятся." }, "troubles": ["pron-th"], "topics": ["pronouns"] }
+  ],
+  "texts": [
+    {
+      "id": "a1.u08.shop",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "In the shop", "ru": "В магазине" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Excuse me, how much is this shirt?", "ru": "Извините, сколько стоит эта рубашка?" },
+        { "speaker": "tom", "en": "It is twenty euros.", "ru": "Двадцать евро." },
+        { "speaker": "anna", "en": "And how much are these jeans?", "ru": "А сколько стоят эти джинсы?" },
+        { "speaker": "tom", "en": "They are forty euros. They are cheap.", "ru": "Сорок евро. Они недорогие." },
+        { "speaker": "anna", "en": "Can I try them on?", "ru": "Можно их примерить?" },
+        { "speaker": "tom", "en": "Yes, you can. What size do you need?", "ru": "Да, можно. Какой размер вам нужен?" },
+        { "speaker": "anna", "en": "I need a small size. I like them. Can I pay by card?", "ru": "Мне нужен маленький размер. Они мне нравятся. Можно заплатить картой?" },
+        { "speaker": "tom", "en": "Yes, you can. Or you can pay with cash.", "ru": "Да, можно. Или можно заплатить наличными." }
+      ]
+    },
+    {
+      "id": "a1.u08.max-coat",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "Max needs a coat", "ru": "Максу нужно пальто" },
+      "lines": [
+        { "en": "Max needs a new coat. In the shop the coat costs two hundred euros. It is expensive, and he doesn't buy it.", "ru": "Максу нужно новое пальто. В магазине пальто стоит двести евро. Оно дорогое, и он его не покупает." },
+        { "en": "On Saturday he goes to the market. There is a nice coat there. It costs fifty euros, and he buys it.", "ru": "В субботу он идёт на рынок. Там есть хорошее пальто. Оно стоит пятьдесят евро, и он его покупает." },
+        { "en": "He wears the coat every day. His sister likes it, and she wants a coat too. She goes to the market with him.", "ru": "Он носит пальто каждый день. Его сестре оно нравится, и она тоже хочет пальто. Она идёт на рынок вместе с ним." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "a1.u08.l01",
+      "kind": "vocabulary",
+      "title": "Одежда и деньги",
+      "exercises": [
+        { "id": "a1.u08.l01.e01", "type": "match_pairs", "pairs": [{ "en": "shirt", "ru": "рубашка" }, { "en": "jeans", "ru": "джинсы" }, { "en": "shoes", "ru": "туфли" }, { "en": "coat", "ru": "пальто" }, { "en": "dress", "ru": "платье" }], "hint": "Jeans и shoes — всегда во множественном числе.", "explanation": "Shirt — рубашка, jeans — джинсы, shoes — туфли, coat — пальто, dress — платье." },
+        { "id": "a1.u08.l01.e02", "type": "match_pairs", "pairs": [{ "en": "money", "ru": "деньги" }, { "en": "cash", "ru": "наличные" }, { "en": "euro", "ru": "евро" }, { "en": "dollar", "ru": "доллар" }, { "en": "price", "ru": "цена" }], "hint": "Euro и dollar — виды денег.", "explanation": "Money — деньги, cash — наличные, euro — евро, dollar — доллар, price — цена." },
+        { "id": "a1.u08.l01.e03", "type": "match_pairs", "pairs": [{ "en": "buy", "ru": "покупать" }, { "en": "pay", "ru": "платить" }, { "en": "cost", "ru": "стоить" }, { "en": "wear", "ru": "носить" }, { "en": "need", "ru": "нуждаться" }], "hint": "Три глагола — про деньги.", "explanation": "Buy — покупать, pay — платить, cost — стоить, wear — носить, need — нуждаться." },
+        { "id": "a1.u08.l01.e04", "type": "picture_choice", "mode": "picture-to-word", "word": "coat", "distractors": ["shirt", "dress"], "hint": "Её носят зимой.", "explanation": "Coat — «пальто»: [koʊt]." },
+        { "id": "a1.u08.l01.e05", "type": "picture_choice", "mode": "picture-to-word", "word": "jeans", "distractors": ["shirt", "shoes"], "hint": "Их носят на ногах и они обычно синие.", "explanation": "Jeans — «джинсы»: [dʒiːnz]." },
+        { "id": "a1.u08.l01.e06", "type": "picture_choice", "mode": "word-to-picture", "word": "dress", "distractors": ["coat", "shirt"], "hint": "Женская одежда.", "explanation": "Dress — «платье»: [dres]." },
+        { "id": "a1.u08.l01.e07", "type": "translate_choice", "from": "ru", "text": "дорогой", "options": ["expensive", "cheap", "small"], "answer": 0, "hint": "Цена высокая.", "explanation": "Expensive — «дорогой», cheap — «дешёвый»." },
+        { "id": "a1.u08.l01.e08", "type": "translate_choice", "from": "en", "text": "cheap", "options": ["дешёвый", "дорогой", "красивый"], "answer": 0, "hint": "Цена низкая.", "explanation": "Cheap [tʃiːp] — «дешёвый»." },
+        { "id": "a1.u08.l01.e09", "type": "listen_choice", "audio": "shirt", "question": "Что вы слышите?", "options": ["shirt", "shoes", "dress"], "answer": 0, "hint": "Гласный как в work.", "explanation": "Shirt [ʃɝːt] — «рубашка».", "troubles": ["pron-vowels"] },
+        { "id": "a1.u08.l01.e10", "type": "listen_dictation", "text": "The coat is expensive.", "hint": "Четыре слова.", "explanation": "The coat is expensive — «пальто дорогое»." },
+        { "id": "a1.u08.l01.e11", "type": "type_translation", "from": "ru", "text": "деньги", "answers": ["money"], "hint": "Пять букв.", "explanation": "Money [ˈmʌni] — «деньги». Несчитаемое слово." },
+        { "id": "a1.u08.l01.e12", "type": "type_translation", "from": "ru", "text": "размер", "answers": ["size"], "hint": "Четыре буквы.", "explanation": "Size [saɪz] — «размер»." },
+        { "id": "a1.u08.l01.e13", "type": "fill_gap", "text": "I ___ a coat every day.", "translation": "Я ношу пальто каждый день.", "answers": [["wear"]], "options": ["wear", "buy", "cost"], "hint": "Одежду носят.", "explanation": "I wear a coat every day. Wear — «носить»." },
+        { "id": "a1.u08.l01.e14", "type": "word_stress", "word": "expensive", "syllables": ["ex", "pen", "sive"], "stress": 1, "hint": "Ударение в середине.", "explanation": "ex-PEN-sive — ударение на второй слог." }
+      ]
+    },
+    {
+      "id": "a1.u08.l02",
+      "kind": "grammar",
+      "title": "Сколько стоит?",
+      "grammar": "a1.how-much",
+      "exercises": [
+        { "id": "a1.u08.l02.e01", "type": "fill_gap", "text": "How ___ is this shirt?", "translation": "Сколько стоит эта рубашка?", "answers": [["much"]], "options": ["much", "many", "old"], "hint": "Для цены.", "explanation": "How much is this shirt? Цену спрашивают с How much.", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l02.e02", "type": "fill_gap", "text": "How much ___ these jeans?", "translation": "Сколько стоят эти джинсы?", "answers": [["are"]], "options": ["are", "is", "does"], "hint": "Jeans — множественное число.", "explanation": "How much are these jeans? Jeans — как «они».", "grammar": ["a1.how-much"], "troubles": ["word-order"] },
+        { "id": "a1.u08.l02.e03", "type": "fill_gap", "text": "How ___ shirts do you have?", "translation": "Сколько у вас рубашек?", "answers": [["many"]], "options": ["many", "much", "old"], "hint": "Считаем штуки.", "explanation": "How many shirts do you have? Для количества штук — How many.", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l02.e04", "type": "fill_gap", "text": "The coat ___ two hundred euros.", "translation": "Пальто стоит двести евро.", "answers": [["costs"]], "options": ["costs", "cost", "is cost"], "hint": "О вещи — с -s.", "explanation": "The coat costs two hundred euros. С it — cost с -s.", "grammar": ["a1.how-much", "a1.present-simple"], "troubles": ["tenses"] },
+        { "id": "a1.u08.l02.e05", "type": "fill_gap", "text": "How much does the bag ___?", "translation": "Сколько стоит сумка?", "answers": [["cost"]], "options": ["cost", "costs", "costing"], "hint": "После does глагол без окончания.", "explanation": "How much does the bag cost? После does — cost без -s.", "grammar": ["a1.how-much", "a1.present-simple-questions"] },
+        { "id": "a1.u08.l02.e06", "type": "error_correction", "text": "How many is this shirt?", "wrong": "many", "correction": "much", "options": ["much", "old", "far"], "hint": "Цена — не количество.", "explanation": "How much is this shirt? Цену спрашивают с How much.", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l02.e07", "type": "error_correction", "text": "How much costs the bag?", "wrong": "costs the bag", "correction": "does the bag cost", "options": ["does the bag cost", "is the bag cost", "do the bag costs"], "hint": "Нужен вспомогательный глагол.", "explanation": "How much does the bag cost? В вопросе с cost нужен does.", "grammar": ["a1.how-much"], "troubles": ["word-order"] },
+        { "id": "a1.u08.l02.e08", "type": "error_correction", "text": "It cost ten euros.", "wrong": "cost", "correction": "costs", "options": ["costs", "costing", "is cost"], "hint": "С it — окончание.", "explanation": "Правильно: It costs ten euros.", "grammar": ["a1.how-much"], "troubles": ["tenses"] },
+        { "id": "a1.u08.l02.e09", "type": "tiles", "from": "ru", "text": "Сколько стоит это пальто?", "answer": "How much is this coat?", "distractors": ["many", "are"], "hint": "Образец: How much + is.", "explanation": "Правильно: How much is this coat?", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l02.e10", "type": "tiles", "from": "ru", "text": "Сколько стоят эти туфли?", "answer": "How much are these shoes?", "distractors": ["is", "many"], "hint": "Туфли — они.", "explanation": "How much are these shoes? Shoes — множественное число.", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l02.e11", "type": "type_translation", "from": "ru", "text": "Это двадцать евро.", "answers": ["It is twenty euros."], "hint": "It is + цена.", "explanation": "It is twenty euros. Euro получает -s.", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l02.e12", "type": "type_translation", "from": "ru", "text": "Сколько у вас сумок?", "answers": ["How many bags do you have?"], "difficulty": 2, "hint": "How many + множественное число.", "explanation": "Правильно: How many bags do you have?", "grammar": ["a1.how-much", "a1.present-simple-questions"] },
+        { "id": "a1.u08.l02.e13", "type": "listen_choice", "audio": "How much is the coat?", "question": "Что вы слышите?", "options": ["How much is the coat?", "How many coats are there?", "How old is the coat?"], "answer": 0, "hint": "Вопрос о цене.", "explanation": "How much is the coat? — «Сколько стоит пальто?»", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l02.e14", "type": "listen_dictation", "text": "It is forty euros.", "hint": "Четыре слова.", "explanation": "It is forty euros — «сорок евро»." },
+        { "id": "a1.u08.l02.e15", "type": "speak_repeat", "text": "How much are these jeans?", "hint": "Интонация идёт вниз.", "explanation": "How much — [haʊ mʌtʃ]: два слова произносятся слитно." }
+      ]
+    },
+    {
+      "id": "a1.u08.l03",
+      "kind": "grammar",
+      "title": "Can I…? Can you…?",
+      "grammar": "a1.can-requests",
+      "exercises": [
+        { "id": "a1.u08.l03.e01", "type": "fill_gap", "text": "___ I pay by card?", "translation": "Можно заплатить картой?", "answers": [["Can"]], "options": ["Can", "Do", "Am"], "hint": "Просим разрешения.", "explanation": "Can I pay by card? Can — «можно».", "grammar": ["a1.can-requests"] },
+        { "id": "a1.u08.l03.e02", "type": "fill_gap", "text": "Can you ___ me the bag?", "translation": "Вы можете дать мне сумку?", "answers": [["give"]], "options": ["give", "gives", "to give"], "hint": "После can глагол без окончания.", "explanation": "Can you give me the bag? После can — give без -s и без to.", "grammar": ["a1.can-requests"] },
+        { "id": "a1.u08.l03.e03", "type": "fill_gap", "text": "Can I ___ on this coat?", "translation": "Можно примерить это пальто?", "answers": [["try"]], "options": ["try", "tries", "trying"], "hint": "После can — без окончания.", "explanation": "Can I try on this coat? Try on — «примерять».", "grammar": ["a1.can-requests"] },
+        { "id": "a1.u08.l03.e04", "type": "fill_gap", "text": "Can I pay by card? — Yes, you ___.", "translation": "Можно заплатить картой? — Да.", "answers": [["can"]], "options": ["can", "do", "are"], "hint": "Короткий ответ.", "explanation": "Yes, you can. Короткий ответ повторяет can.", "grammar": ["a1.can-requests"] },
+        { "id": "a1.u08.l03.e05", "type": "fill_gap", "text": "Can I pay with cash? — No, you ___.", "translation": "Можно заплатить наличными? — Нет.", "answers": [["can't"]], "options": ["can't", "don't", "isn't"], "hint": "Отрицание с can.", "explanation": "No, you can't. Can't — «нельзя».", "grammar": ["a1.can-requests"] },
+        { "id": "a1.u08.l03.e06", "type": "fill_gap", "text": "She ___ pay by card.", "translation": "Она может заплатить картой.", "answers": [["can"]], "options": ["can", "cans", "is can"], "hint": "У can нет окончания.", "explanation": "She can pay by card. Can не получает -s.", "grammar": ["a1.can-requests"], "troubles": ["tenses"] },
+        { "id": "a1.u08.l03.e07", "type": "error_correction", "text": "Can I to pay by card?", "wrong": "to pay", "correction": "pay", "options": ["pay", "pays", "paying"], "hint": "Лишнее слово.", "explanation": "Can I pay by card? После can — глагол без to.", "grammar": ["a1.can-requests"], "troubles": ["word-order"] },
+        { "id": "a1.u08.l03.e08", "type": "error_correction", "text": "He cans pay by card.", "wrong": "cans", "correction": "can", "options": ["can", "can't", "is can"], "hint": "Окончание лишнее.", "explanation": "He can pay by card. У can нет -s.", "grammar": ["a1.can-requests"], "troubles": ["tenses"] },
+        { "id": "a1.u08.l03.e09", "type": "error_correction", "text": "Can you gives me the bag?", "wrong": "gives", "correction": "give", "options": ["give", "giving", "to give"], "hint": "После can окончание не нужно.", "explanation": "Can you give me the bag? После can — give.", "grammar": ["a1.can-requests"], "troubles": ["tenses"] },
+        { "id": "a1.u08.l03.e10", "type": "tiles", "from": "ru", "text": "Можно мне кофе?", "answer": "Can I have a coffee?", "distractors": ["do", "to"], "hint": "Вы это уже говорили в кафе.", "explanation": "Can I have a coffee? Это вежливая просьба.", "grammar": ["a1.can-requests"] },
+        { "id": "a1.u08.l03.e11", "type": "tiles", "from": "ru", "text": "Вы можете открыть дверь?", "answer": "Can you open the door?", "distractors": ["opens", "to"], "hint": "Can + you + глагол.", "explanation": "Правильно: Can you open the door?", "grammar": ["a1.can-requests"] },
+        { "id": "a1.u08.l03.e12", "type": "type_translation", "from": "ru", "text": "Можно мне это примерить?", "answers": ["Can I try it on?"], "difficulty": 2, "hint": "Try on — «примерять».", "explanation": "Can I try it on? Местоимение it стоит между try и on.", "grammar": ["a1.can-requests"] },
+        { "id": "a1.u08.l03.e13", "type": "type_translation", "from": "ru", "text": "Можно заплатить наличными?", "answers": ["Can I pay with cash?", "Can I pay by cash?"], "difficulty": 2, "hint": "С наличными — with.", "explanation": "Can I pay with cash? Обычно говорят with cash.", "grammar": ["a1.can-requests"] },
+        { "id": "a1.u08.l03.e14", "type": "speak_answer", "question": "Can I pay by card?", "questionRu": "Продавец спрашивает: можно ли заплатить картой? Ответьте: Yes, you can. или No, you can't.", "keywords": [["\\b(yes|no)\\b"], ["\\byou (can|can't|cannot)\\b"]], "minKeywords": 2, "samples": ["Yes, you can.", "No, you can't."], "difficulty": 3, "hint": "Yes, you… или No, you…", "explanation": "Короткий ответ: Yes, you can. или No, you can't.", "grammar": ["a1.can-requests"] },
+        { "id": "a1.u08.l03.e15", "type": "speak_repeat", "text": "Can I try on this coat, please?", "hint": "Вежливая просьба.", "explanation": "Can I — [kæn aɪ]. В вопросе can звучит почти как [kən]." }
+      ]
+    },
+    {
+      "id": "a1.u08.l04",
+      "kind": "grammar",
+      "title": "Me, him, her, them",
+      "grammar": "a1.object-pronouns",
+      "exercises": [
+        { "id": "a1.u08.l04.e01", "type": "match_pairs", "pairs": [{ "en": "me", "ru": "мне, меня" }, { "en": "him", "ru": "ему, его" }, { "en": "her", "ru": "ей, её" }, { "en": "us", "ru": "нам, нас" }, { "en": "them", "ru": "им, их" }], "hint": "Все формы стоят после глагола.", "explanation": "Me — мне, him — ему, her — ей, us — нам, them — им." },
+        { "id": "a1.u08.l04.e02", "type": "fill_gap", "text": "Give ___ the bag, please.", "translation": "Дайте мне сумку, пожалуйста.", "answers": [["me"]], "options": ["me", "I", "my"], "hint": "После глагола.", "explanation": "Give me the bag. После глагола — me, а не I.", "grammar": ["a1.object-pronouns"] },
+        { "id": "a1.u08.l04.e03", "type": "fill_gap", "text": "I like ___.", "translation": "Она мне нравится.", "answers": [["her"]], "options": ["her", "she", "hers"], "hint": "Речь о женщине.", "explanation": "I like her. После глагола — her.", "grammar": ["a1.object-pronouns"] },
+        { "id": "a1.u08.l04.e04", "type": "fill_gap", "text": "The coat is for ___.", "translation": "Пальто для него.", "answers": [["him"]], "options": ["him", "he", "his"], "hint": "О мужчине, после предлога.", "explanation": "The coat is for him. После предлога — him.", "grammar": ["a1.object-pronouns"] },
+        { "id": "a1.u08.l04.e05", "type": "fill_gap", "text": "I like ___. (the jeans)", "translation": "Они мне нравятся. (джинсы)", "answers": [["them"]], "options": ["them", "they", "it"], "hint": "О нескольких вещах.", "explanation": "I like them. Jeans — множественное число, поэтому them.", "grammar": ["a1.object-pronouns"] },
+        { "id": "a1.u08.l04.e06", "type": "fill_gap", "text": "Give ___ the menu, please.", "translation": "Дайте нам меню, пожалуйста.", "answers": [["us"]], "options": ["us", "we", "our"], "hint": "О нескольких людях, включая вас.", "explanation": "Give us the menu. После глагола — us.", "grammar": ["a1.object-pronouns"] },
+        { "id": "a1.u08.l04.e07", "type": "error_correction", "text": "I like she.", "wrong": "she", "correction": "her", "options": ["her", "hers", "he"], "hint": "После глагола другая форма.", "explanation": "Правильно: I like her.", "grammar": ["a1.object-pronouns"], "troubles": ["word-order"] },
+        { "id": "a1.u08.l04.e08", "type": "error_correction", "text": "Give I the bag.", "wrong": "I", "correction": "me", "options": ["me", "my", "mine"], "hint": "После глагола другая форма.", "explanation": "Правильно: Give me the bag.", "grammar": ["a1.object-pronouns"], "troubles": ["word-order"] },
+        { "id": "a1.u08.l04.e09", "type": "error_correction", "text": "We like they.", "wrong": "they", "correction": "them", "options": ["them", "their", "theirs"], "hint": "После глагола другая форма.", "explanation": "Правильно: We like them.", "grammar": ["a1.object-pronouns"], "troubles": ["word-order"] },
+        { "id": "a1.u08.l04.e10", "type": "tiles", "from": "ru", "text": "Они мне нравятся.", "answer": "I like them.", "distractors": ["they", "me"], "hint": "I + like + местоимение.", "explanation": "Правильно: I like them.", "grammar": ["a1.object-pronouns"] },
+        { "id": "a1.u08.l04.e11", "type": "tiles", "from": "ru", "text": "Дайте мне это, пожалуйста.", "answer": "Give me it, please.", "distractors": ["I", "my"], "hint": "Образец: Give + me.", "explanation": "Правильно: Give me it, please.", "grammar": ["a1.object-pronouns"] },
+        { "id": "a1.u08.l04.e12", "type": "type_translation", "from": "ru", "text": "Дайте мне пальто.", "answers": ["Give me the coat."], "hint": "Give + me + предмет.", "explanation": "Правильно: Give me the coat.", "grammar": ["a1.object-pronouns", "a1.imperatives"] },
+        { "id": "a1.u08.l04.e13", "type": "type_translation", "from": "ru", "text": "Пальто для неё.", "answers": ["The coat is for her."], "hint": "Для неё — for her.", "explanation": "The coat is for her. После предлога — her.", "grammar": ["a1.object-pronouns"] },
+        { "id": "a1.u08.l04.e14", "type": "listen_choice", "audio": "I like them.", "question": "Что вы слышите?", "options": ["I like them.", "I like him.", "I like her."], "answer": 0, "hint": "Начинается со звука [ð].", "explanation": "I like them — «они мне нравятся». Them начинается со звука [ð].", "troubles": ["pron-th"] },
+        { "id": "a1.u08.l04.e15", "type": "listen_dictation", "text": "Give me the bag.", "hint": "Четыре слова.", "explanation": "Give me the bag — «дайте мне сумку»." }
+      ]
+    },
+    {
+      "id": "a1.u08.l05",
+      "kind": "vocabulary",
+      "title": "Цены и числа",
+      "grammar": "a1.how-much",
+      "exercises": [
+        { "id": "a1.u08.l05.e01", "type": "match_pairs", "pairs": [{ "en": "cheap", "ru": "дешёвый" }, { "en": "expensive", "ru": "дорогой" }, { "en": "ruble", "ru": "рубль" }, { "en": "thousand", "ru": "тысяча" }, { "en": "customer", "ru": "покупатель" }], "hint": "Cheap и expensive — противоположные.", "explanation": "Cheap — дешёвый, expensive — дорогой, ruble — рубль, thousand — тысяча, customer — покупатель." },
+        { "id": "a1.u08.l05.e02", "type": "translate_choice", "from": "en", "text": "two hundred euros", "options": ["двести евро", "двадцать евро", "две тысячи евро"], "answer": 0, "hint": "Hundred — «сто».", "explanation": "Two hundred euros — 200 евро. Twenty — 20, two thousand — 2000." },
+        { "id": "a1.u08.l05.e03", "type": "translate_choice", "from": "en", "text": "three thousand rubles", "options": ["три тысячи рублей", "тридцать рублей", "триста рублей"], "answer": 0, "hint": "Thousand — «тысяча».", "explanation": "Three thousand rubles — 3000 рублей." },
+        { "id": "a1.u08.l05.e04", "type": "fill_gap", "text": "The coat is ___. It costs two hundred euros.", "translation": "Пальто дорогое. Оно стоит двести евро.", "answers": [["expensive"]], "options": ["expensive", "cheap", "small"], "hint": "Цена высокая.", "explanation": "The coat is expensive. Two hundred euros — высокая цена.", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l05.e05", "type": "fill_gap", "text": "The bread is ___. It costs fifty rubles.", "translation": "Хлеб дешёвый. Он стоит пятьдесят рублей.", "answers": [["cheap"]], "options": ["cheap", "expensive", "closed"], "hint": "Цена низкая.", "explanation": "The bread is cheap. Fifty rubles — низкая цена.", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l05.e06", "type": "fill_gap", "text": "I pay ___ cash.", "translation": "Я плачу наличными.", "answers": [["with", "in"]], "options": ["with", "by", "on"], "hint": "Предлог «с».", "explanation": "I pay with cash. С наличными — with. С картой можно сказать by card.", "grammar": ["a1.can-requests"] },
+        { "id": "a1.u08.l05.e07", "type": "tiles", "from": "ru", "text": "Рубашка стоит двадцать евро.", "answer": "The shirt costs twenty euros.", "distractors": ["cost", "dollar"], "hint": "Cost с -s.", "explanation": "Правильно: The shirt costs twenty euros.", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l05.e08", "type": "type_translation", "from": "ru", "text": "Сумка стоит сто долларов.", "answers": ["The bag costs a hundred dollars.", "The bag costs one hundred dollars."], "difficulty": 2, "hint": "Сто — a hundred или one hundred.", "explanation": "The bag costs a hundred dollars. Dollar во множественном числе получает -s.", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l05.e09", "type": "type_translation", "from": "ru", "text": "Мне нужен маленький размер.", "answers": ["I need a small size."], "hint": "Need — «нужно».", "explanation": "Правильно: I need a small size.", "grammar": ["a1.object-pronouns"] },
+        { "id": "a1.u08.l05.e10", "type": "listen_choice", "audio": "The jeans cost forty euros.", "question": "Что вы слышите?", "options": ["The jeans cost forty euros.", "The jeans cost fourteen euros.", "The shirt costs forty euros."], "answer": 0, "hint": "Число — 40.", "explanation": "The jeans cost forty euros — «джинсы стоят сорок евро».", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l05.e11", "type": "listen_dictation", "text": "I need a new coat.", "hint": "Пять слов.", "explanation": "I need a new coat — «мне нужно новое пальто»." },
+        { "id": "a1.u08.l05.e12", "type": "speak_repeat", "text": "The coat costs two hundred euros.", "hint": "Hundred — один слог с ударением.", "explanation": "Two hundred euros [ˈjʊroʊz]: в euros ударение на первый слог." },
+        { "id": "a1.u08.l05.e13", "type": "minimal_pair", "pair": [{ "en": "ship", "ipa": "ʃɪp" }, { "en": "sheep", "ipa": "ʃiːp" }], "say": 1, "hint": "Один гласный долгий.", "explanation": "Ship [ʃɪp] — короткий гласный, sheep [ʃiːp] — долгий.", "troubles": ["pron-vowels"] }
+      ]
+    },
+    {
+      "id": "a1.u08.l06",
+      "kind": "listening",
+      "title": "В магазине",
+      "textId": "a1.u08.shop",
+      "exercises": [
+        {
+          "id": "a1.u08.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "a1.u08.shop",
+          "hint": "Слушайте цены и размер.",
+          "explanation": "Анна спрашивает цену рубашки и джинсов, хочет примерить джинсы и платит картой.",
+          "questions": [
+            { "kind": "mcq", "question": "Сколько стоит рубашка?", "options": ["twenty euros", "forty euros", "fifty euros"], "answer": 0, "explanation": "Том говорит: It is twenty euros." },
+            { "kind": "mcq", "question": "Сколько стоят джинсы?", "options": ["forty euros", "twenty euros", "fourteen euros"], "answer": 0, "explanation": "Том говорит: They are forty euros." },
+            { "kind": "mcq", "question": "Какой размер нужен Анне?", "options": ["small", "big", "new"], "answer": 0, "explanation": "Анна говорит: I need a small size." },
+            { "kind": "tfn", "statement": "Anna wants to try on the jeans.", "answer": "true", "explanation": "Анна говорит: Can I try them on?" },
+            { "kind": "tfn", "statement": "Anna can pay by card.", "answer": "true", "explanation": "Том говорит: Yes, you can." },
+            { "kind": "tfn", "statement": "Anna buys a coat.", "answer": "not_given", "explanation": "Про пальто в диалоге ничего не сказано." }
+          ]
+        },
+        { "id": "a1.u08.l06.e02", "type": "listen_choice", "audio": "Can I pay by card?", "question": "Что вы слышите?", "options": ["Can I pay by card?", "Can I pay with cash?", "Can you pay by card?"], "answer": 0, "hint": "Вопрос про карту.", "explanation": "Can I pay by card? — «Можно заплатить картой?»", "grammar": ["a1.can-requests"] },
+        { "id": "a1.u08.l06.e03", "type": "listen_dictation", "text": "How much are these jeans?", "hint": "Пять слов.", "explanation": "How much are these jeans? — «Сколько стоят эти джинсы?»" },
+        { "id": "a1.u08.l06.e04", "type": "listen_dictation", "text": "Can I try them on?", "hint": "Пять слов.", "explanation": "Can I try them on? — «Можно их примерить?»" },
+        { "id": "a1.u08.l06.e05", "type": "fill_gap", "text": "Can I try ___ on?", "translation": "Можно их примерить?", "answers": [["them"]], "options": ["them", "they", "their"], "hint": "О джинсах.", "explanation": "Can I try them on? Jeans — множественное число, поэтому them.", "grammar": ["a1.object-pronouns"] },
+        { "id": "a1.u08.l06.e06", "type": "fill_gap", "text": "Yes, you ___. Or you can pay with cash.", "translation": "Да, можно. Или можно заплатить наличными.", "answers": [["can"]], "options": ["can", "do", "are"], "hint": "Короткий ответ.", "explanation": "Правильно: Yes, you can.", "grammar": ["a1.can-requests"] },
+        { "id": "a1.u08.l06.e07", "type": "tiles", "from": "ru", "text": "Сколько стоит эта рубашка?", "answer": "How much is this shirt?", "distractors": ["are", "many"], "hint": "Образец: How much + is.", "explanation": "Правильно: How much is this shirt?", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l06.e08", "type": "type_translation", "from": "ru", "text": "Они недорогие.", "answers": ["They are cheap."], "hint": "Три слова.", "explanation": "They are cheap — «они недорогие».", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l06.e09", "type": "speak_answer", "question": "How much is this shirt?", "questionRu": "Вы продавец. Назовите цену рубашки: It is twenty euros.", "keywords": [["\\bit is\\b", "\\bit's\\b"], ["\\b(five|ten|twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety|hundred)\\b"]], "minKeywords": 2, "samples": ["It is twenty euros.", "It is fifty euros."], "difficulty": 3, "hint": "It is + число + euros.", "explanation": "Назовите цену: It is twenty euros.", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l06.e10", "type": "speak_repeat", "text": "I need a small size. Can I pay by card?", "hint": "Два коротких предложения.", "explanation": "Каждое предложение произносится отдельно." }
+      ]
+    },
+    {
+      "id": "a1.u08.l07",
+      "kind": "writing",
+      "title": "Мои покупки",
+      "textId": "a1.u08.max-coat",
+      "exercises": [
+        {
+          "id": "a1.u08.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "a1.u08.max-coat",
+          "hint": "Сравните цену в магазине и на рынке.",
+          "explanation": "Макс не покупает дорогое пальто в магазине, а покупает дешёвое на рынке за пятьдесят евро.",
+          "questions": [
+            { "kind": "mcq", "question": "Сколько стоит пальто в магазине?", "options": ["two hundred euros", "fifty euros", "twenty euros"], "answer": 0, "explanation": "В тексте: In the shop the coat costs two hundred euros." },
+            { "kind": "mcq", "question": "Где Макс покупает пальто?", "options": ["at the market", "in the shop", "at the station"], "answer": 0, "explanation": "В тексте: he goes to the market… and he buys it." },
+            { "kind": "tfn", "statement": "Max buys the expensive coat.", "answer": "false", "explanation": "В тексте: It is expensive, and he doesn't buy it." },
+            { "kind": "tfn", "statement": "The market coat costs fifty euros.", "answer": "true", "explanation": "В тексте: It costs fifty euros." },
+            { "kind": "tfn", "statement": "Max's sister buys a coat too.", "answer": "not_given", "explanation": "Покупает ли сестра пальто, в тексте не сказано. Она только хочет его." }
+          ]
+        },
+        { "id": "a1.u08.l07.e02", "type": "translate_choice", "from": "en", "text": "He doesn't buy it.", "options": ["Он его не покупает.", "Он не покупает.", "Он его покупает."], "answer": 0, "hint": "Не — отрицание, it — «его».", "explanation": "He doesn't buy it — «он его не покупает»." },
+        { "id": "a1.u08.l07.e03", "type": "fill_gap", "text": "Max ___ a new coat.", "translation": "Максу нужно новое пальто.", "answers": [["needs"]], "options": ["needs", "need", "is need"], "hint": "О Максе — с окончанием.", "explanation": "Max needs a new coat. С he — needs.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u08.l07.e04", "type": "fill_gap", "text": "His sister likes ___.", "translation": "Его сестре оно нравится.", "answers": [["it"]], "options": ["it", "they", "them"], "hint": "О пальто.", "explanation": "His sister likes it. Coat — одно пальто, значит it.", "grammar": ["a1.object-pronouns"] },
+        { "id": "a1.u08.l07.e05", "type": "type_translation", "from": "ru", "text": "Он носит пальто каждый день.", "answers": ["He wears the coat every day."], "difficulty": 3, "hint": "С he — wears.", "explanation": "Правильно: Now he wears the coat every day.", "grammar": ["a1.present-simple"] },
+        { "id": "a1.u08.l07.e06", "type": "speak_describe", "picture": { "emoji": "🧥" }, "situation": "Расскажите, что вам нужно купить и сколько это стоит.", "keywords": [["\\bI (need|want|buy)\\b"], ["\\b(euros?|dollars?|rubles?|costs?|price)\\b"]], "minKeywords": 2, "samples": ["I need a new coat. It costs fifty euros."], "difficulty": 3, "hint": "Образец: I need a… It costs…", "explanation": "Начните с I need a…, потом назовите цену: It costs fifty euros.", "grammar": ["a1.how-much"] },
+        { "id": "a1.u08.l07.e07", "type": "speak_answer", "question": "How do you pay?", "questionRu": "Как вы платите в магазине? Ответьте: I pay by card. или I pay with cash.", "keywords": [["\\bI pay\\b"], ["\\b(by card|with cash|cash|card)\\b"]], "minKeywords": 2, "samples": ["I pay by card.", "I pay with cash."], "difficulty": 3, "hint": "Образец: I pay…", "explanation": "Ответ: I pay by card. или I pay with cash.", "grammar": ["a1.can-requests"] },
+        {
+          "id": "a1.u08.l07.e08",
+          "type": "write",
+          "task": "Напишите о покупке: что вам нужно, сколько это стоит, где вы это покупаете и как платите. Например: I need a new coat. It costs fifty euros. I pay by card.",
+          "minWords": 30,
+          "maxWords": 90,
+          "criteria": [
+            { "id": "need", "label": "Есть I need или I want", "patterns": ["\\bI (need|want)\\b"] },
+            { "id": "price", "label": "Названа цена", "patterns": ["\\b(costs?|price|euros?|dollars?|rubles?)\\b"] },
+            { "id": "clothes", "label": "Названа вещь", "patterns": ["\\b(shirt|jeans|shoes|coat|dress|bag|hat|jacket|phone|laptop|book|bread|coffee)\\b"] },
+            { "id": "pay", "label": "Есть оплата: pay, buy", "patterns": ["\\b(pay|buy|buys|pays)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\bit cost\\b", "message": "С it глагол cost получает -s: it costs." },
+            { "pattern": "\\bhow many (is|are) \\b", "message": "Для цены нужно How much, а не How many." },
+            { "pattern": "\\bcan (to) [a-z]+\\b", "message": "После can нет to: can pay." },
+            { "pattern": "\\b(give|like|need) (I|he|she|we|they)\\b", "message": "После глагола ставят me, him, her, us, them." },
+            { "pattern": "\\b(he|she) (buy|need|pay|wear)\\b", "message": "С he и she глагол получает -s: he buys, she needs." }
+          ],
+          "samples": [
+            "I need a new coat. In the shop it costs two hundred euros. It is expensive. On Saturday I go to the market and I buy a coat for fifty euros. I pay with cash. I like it.",
+            "My sister needs a dress. It costs forty dollars and she can pay by card. I give her the money. We like the shop. I need new shoes too. They cost thirty dollars and they are cheap. I pay with cash."
+          ],
+          "difficulty": 3,
+          "hint": "План: что нужно → где → цена → оплата.",
+          "explanation": "Рассказывая о покупках, используйте need, cost, pay и buy. С he и she глагол получает -s. После глагола ставьте me, him, her, them.",
+          "grammar": ["a1.how-much", "a1.can-requests", "a1.object-pronouns"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "a1.u08.test.e01", "type": "match_pairs", "pairs": [{ "en": "shirt", "ru": "рубашка" }, { "en": "coat", "ru": "пальто" }, { "en": "money", "ru": "деньги" }, { "en": "price", "ru": "цена" }, { "en": "buy", "ru": "покупать" }], "hint": "Три слова про вещи, два про деньги.", "explanation": "Shirt — рубашка, coat — пальто, money — деньги, price — цена, buy — покупать." },
+      { "id": "a1.u08.test.e02", "type": "translate_choice", "from": "ru", "text": "дешёвый", "options": ["cheap", "expensive", "closed"], "answer": 0, "hint": "Цена низкая.", "explanation": "Cheap — «дешёвый»." },
+      { "id": "a1.u08.test.e03", "type": "picture_choice", "mode": "picture-to-word", "word": "dress", "distractors": ["shirt", "coat"], "hint": "Женская одежда.", "explanation": "Dress — «платье»." },
+      { "id": "a1.u08.test.e04", "type": "fill_gap", "text": "How ___ is this bag?", "translation": "Сколько стоит эта сумка?", "answers": [["much"]], "options": ["much", "many", "old"], "hint": "Цена.", "explanation": "Правильно: How much is this bag?", "grammar": ["a1.how-much"] },
+      { "id": "a1.u08.test.e05", "type": "fill_gap", "text": "The coat ___ fifty euros.", "translation": "Пальто стоит пятьдесят евро.", "answers": [["costs"]], "options": ["costs", "cost", "is cost"], "hint": "О вещи — с -s.", "explanation": "Правильно: The coat costs fifty euros.", "grammar": ["a1.how-much"] },
+      { "id": "a1.u08.test.e06", "type": "fill_gap", "text": "___ I try on this coat?", "translation": "Можно примерить это пальто?", "answers": [["Can"]], "options": ["Can", "Do", "Am"], "hint": "Просим разрешения.", "explanation": "Правильно: Can I try on this coat?", "grammar": ["a1.can-requests"] },
+      { "id": "a1.u08.test.e07", "type": "fill_gap", "text": "Can you ___ me the bag?", "translation": "Вы можете дать мне сумку?", "answers": [["give"]], "options": ["give", "gives", "to give"], "hint": "Без окончания.", "explanation": "Правильно: Can you give me the bag?", "grammar": ["a1.can-requests"] },
+      { "id": "a1.u08.test.e08", "type": "fill_gap", "text": "I like ___.", "translation": "Она мне нравится.", "answers": [["her"]], "options": ["her", "she", "hers"], "hint": "После глагола.", "explanation": "Правильно: I like her.", "grammar": ["a1.object-pronouns"] },
+      { "id": "a1.u08.test.e09", "type": "error_correction", "text": "Can I to pay by card?", "wrong": "to pay", "correction": "pay", "options": ["pay", "pays", "paying"], "hint": "Лишнее слово.", "explanation": "Правильно: Can I pay by card?", "grammar": ["a1.can-requests"], "troubles": ["word-order"] },
+      { "id": "a1.u08.test.e10", "type": "error_correction", "text": "Give I the bag.", "wrong": "I", "correction": "me", "options": ["me", "my", "mine"], "hint": "После глагола другая форма.", "explanation": "Правильно: Give me the bag.", "grammar": ["a1.object-pronouns"], "troubles": ["word-order"] },
+      { "id": "a1.u08.test.e11", "type": "error_correction", "text": "How many is this shirt?", "wrong": "many", "correction": "much", "options": ["much", "old", "far"], "hint": "Цена.", "explanation": "Правильно: How much is this shirt?", "grammar": ["a1.how-much"] },
+      { "id": "a1.u08.test.e12", "type": "listen_choice", "audio": "How much are the shoes?", "question": "Что вы слышите?", "options": ["How much are the shoes?", "How much is the shirt?", "How many shoes are there?"], "answer": 0, "hint": "Спрашивают про туфли.", "explanation": "How much are the shoes? — «Сколько стоят туфли?»", "grammar": ["a1.how-much"] },
+      { "id": "a1.u08.test.e13", "type": "listen_dictation", "text": "I pay by card.", "hint": "Четыре слова.", "explanation": "I pay by card — «я плачу картой»." },
+      { "id": "a1.u08.test.e14", "type": "tiles", "from": "ru", "text": "Можно заплатить картой?", "answer": "Can I pay by card?", "distractors": ["to", "do"], "difficulty": 2, "hint": "Can + I + глагол.", "explanation": "Правильно: Can I pay by card?", "grammar": ["a1.can-requests"] },
+      { "id": "a1.u08.test.e15", "type": "type_translation", "from": "ru", "text": "Они мне нравятся.", "answers": ["I like them."], "difficulty": 2, "hint": "После like — them.", "explanation": "Правильно: I like them.", "grammar": ["a1.object-pronouns"] },
+      { "id": "a1.u08.test.e16", "type": "speak_repeat", "text": "How much is this shirt?", "hint": "Интонация вниз.", "explanation": "Вопрос с How much заканчивается падающей интонацией." }
+    ]
+  }
+}
