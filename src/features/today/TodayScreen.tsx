@@ -16,6 +16,8 @@ import { useTheme } from '@/ui/theme/ThemeProvider';
 import { KIND_ICON } from '../path/kinds';
 import { pathState } from '../path/state';
 import { StreakXp } from '../progress/Badges';
+import { WeekGoal } from '../progress/WeekGoal';
+import { QuestsCard } from '../quests/QuestsCard';
 import { loadToday, loadWeakSpots } from '../progress/insights';
 import { dailyMinutes, setDailyMinutes } from '../progress/service';
 import { useProgress } from '../progress/store';
@@ -159,8 +161,11 @@ export function TodayScreen() {
                   : 'Один урок — и серия начнётся.'}
           </AppText>
           <WeekStrip />
+          <WeekGoal />
         </Card>
       )}
+
+      <QuestsCard />
 
       <SectionTitle>Сколько времени сегодня</SectionTitle>
       <View style={styles.chips} role="radiogroup">

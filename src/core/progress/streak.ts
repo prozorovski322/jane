@@ -26,6 +26,21 @@ export function currentStreak(
   return n;
 }
 
+/** Longest streak ever: the longest run of consecutive active or frozen days, counting active days. */
+export function longestStreak(active: ReadonlySet<Day>, frozen: ReadonlySet<Day>): number {
+  const days = [...new Set([...active, ...frozen])].sort();
+  let best = 0;
+  let run = 0;
+  let prev: Day | null = null;
+  for (const d of days) {
+    run = prev && daysBetween(prev, d) === 1 ? run : 0;
+    if (active.has(d)) run++;
+    best = Math.max(best, run);
+    prev = d;
+  }
+  return best;
+}
+
 /**
  * Days to cover with freezes when the learner comes back: the days strictly between the last
  * counted day and yesterday that were missed. Returns [] when nothing was missed or when there are

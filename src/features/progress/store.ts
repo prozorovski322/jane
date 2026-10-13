@@ -4,6 +4,7 @@
  */
 import { create } from 'zustand';
 
+import { syncReminders } from '@/core/notifications/reminders';
 import { countDue } from '@/core/storage/srs-repo';
 import type { Db } from '@/core/storage/db';
 
@@ -39,6 +40,8 @@ export const useProgress = create<ProgressStore>((set, get) => ({
   record: async (db, meta, summary) => {
     const info = await recordSession(db, meta, summary);
     await get().refresh(db);
+    // Studying today means today's reminder is no longer needed.
+    void syncReminders(db);
     return info;
   },
 }));

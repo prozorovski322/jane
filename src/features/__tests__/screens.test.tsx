@@ -14,6 +14,8 @@ import { PracticeScreen } from '../practice/PracticeScreen';
 import { recordSession } from '../progress/service';
 import { useProgress } from '../progress/store';
 import { TodayScreen } from '../today/TodayScreen';
+import { ProfileScreen } from '../profile/ProfileScreen';
+import { LessonSummary } from '../lesson/components/LessonSummary';
 
 jest.mock('expo-router', () => ({
   router: { push: jest.fn(), replace: jest.fn(), back: jest.fn(), canGoBack: jest.fn(() => true) },
@@ -164,5 +166,87 @@ describe('Practice', () => {
     expect(await screen.findByText(/Пройдите первый урок/)).toBeOnTheScreen();
     await completeLesson('a1.u01.l05');
     expect(await screen.findByRole('button', { name: /Аудирование\. Диктанты/ })).toBeOnTheScreen();
+  });
+});
+
+describe('Today: quests and weekly goal', () => {
+  it('shows three optional quests and the weekly goal', async () => {
+    await render(<TodayScreen />);
+    expect(await screen.findByText('Задания дня')).toBeOnTheScreen();
+    expect(screen.getByText('0 из 3')).toBeOnTheScreen();
+    expect(screen.getByText(/Необязательно\. За все три/)).toBeOnTheScreen();
+    expect(screen.getByText(/Неделя: 0 из 4 дней/)).toBeOnTheScreen();
+  });
+
+  it('counts a finished lesson in the weekly goal and the quests', async () => {
+    await render(<TodayScreen />);
+    await screen.findByText('Задания дня');
+    await completeLesson('a1.u01.l01');
+    expect(await screen.findByText(/Неделя: 1 из 4 дней/)).toBeOnTheScreen();
+  });
+});
+
+describe('Profile: achievements and weekly summary', () => {
+  it('lists achievements with progress and unlocks the first one after a lesson', async () => {
+    await completeLesson('a1.u01.l01');
+    await render(<ProfileScreen />);
+    expect(await screen.findByText(/Получено \d+ из \d+/)).toBeOnTheScreen();
+    expect(screen.getByLabelText(/^Первый урок\. Получено\./)).toBeOnTheScreen();
+    expect(screen.getByLabelText(/^Разгон\..*Прогресс: 1 из 5\./)).toBeOnTheScreen();
+    expect(await screen.findByText('Эта неделя')).toBeOnTheScreen();
+    expect(screen.getByLabelText(/^Дней с занятиями: 1$/)).toBeOnTheScreen();
+  });
+
+  it('opens the settings', async () => {
+    await render(<ProfileScreen />);
+    await userEvent.setup().press(screen.getByRole('button', { name: 'Настройки' }));
+    expect(mockRouter.push).toHaveBeenCalledWith('/settings');
+  });
+});
+
+describe('Lesson summary: rewards', () => {
+  const summary = {
+    lessonId: 'a1.u01.l01',
+    total: 5,
+    answered: 5,
+    skipped: 0,
+    correctFirstTry: 5,
+    accuracy: 1,
+    score: 1,
+    durationMs: 60_000,
+    outcomes: [],
+  };
+  const info = {
+    xp: 20,
+    totalXp: 30,
+    todayXp: 30,
+    goalXp: 20,
+    goalJustReached: true,
+    streak: 1,
+    streakExtended: true,
+    freezes: 2,
+    freezeEarned: false,
+    passed: true,
+    cardsUpdated: 0,
+    bonusXp: 15,
+    questsCompleted: ['Пройдите урок'],
+    allQuestsDone: true,
+    achievements: [{ id: 'first-lesson', title: 'Первый урок' }],
+  };
+
+  it('announces completed quests and new achievements', async () => {
+    await render(
+      <LessonSummary
+        summary={summary}
+        kind="lesson"
+        save={{ status: 'saved', info }}
+        onRetrySave={() => {}}
+        onDone={() => {}}
+      />,
+    );
+    expect(screen.getByText(/Задание дня выполнено: Пройдите урок\./)).toBeOnTheScreen();
+    expect(screen.getByText(/Все задания дня сделаны!/)).toBeOnTheScreen();
+    expect(screen.getByText(/Бонус \+15 XP/)).toBeOnTheScreen();
+    expect(screen.getByText('Новое достижение: Первый урок')).toBeOnTheScreen();
   });
 });

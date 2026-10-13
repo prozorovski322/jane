@@ -30,7 +30,10 @@ export type IconName =
   | 'back'
   | 'trash'
   | 'flame'
-  | 'snow';
+  | 'snow'
+  | 'sliders'
+  | 'lock'
+  | 'trophy';
 
 const paths: Record<IconName, React.ReactNode> = {
   close: <Path d="M6 6l12 12M18 6L6 18" />,
@@ -140,6 +143,25 @@ const paths: Record<IconName, React.ReactNode> = {
     <Path d="M12 21c-4 0-7-2.7-7-6.5 0-3.4 2.6-5.2 3.6-8.5.4 2 1.6 3.2 2.9 3.6C11.8 6.6 13 4.2 15 3c-.4 2.6.6 4.5 2 6.3 1.3 1.6 2 3.3 2 5.2C19 18.3 16 21 12 21z" />
   ),
   snow: <Path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7M9 4l3 2 3-2M9 20l3-2 3 2" />,
+  sliders: (
+    <>
+      <Path d="M4 7h8M18 7h2M4 12h2M12 12h8M4 17h10M20 17h0" />
+      <Circle cx={15} cy={7} r={2.2} />
+      <Circle cx={9} cy={12} r={2.2} />
+      <Circle cx={17} cy={17} r={2.2} />
+    </>
+  ),
+  lock: (
+    <>
+      <Rect x={5} y={11} width={14} height={10} rx={2.5} />
+      <Path d="M8 11V8a4 4 0 018 0v3" />
+    </>
+  ),
+  trophy: (
+    <>
+      <Path d="M8 4h8v6a4 4 0 01-8 0zM8 6H5a3 3 0 003 4M16 6h3a3 3 0 01-3 4M12 14v4M8.5 21h7M9.5 18h5" />
+    </>
+  ),
 };
 
 export function Icon({ name, size = 24, color }: { name: IconName; size?: number; color: string }) {

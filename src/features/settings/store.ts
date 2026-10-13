@@ -18,6 +18,10 @@ export interface Settings {
   voice: string | null;
   /** Allow speech recognition through the Apple/Google server when the device cannot do it offline. */
   cloudSpeech: boolean;
+  /** Text size multiplier chosen in the settings, on top of the system font size. */
+  fontScale: number;
+  /** Days of study a week the learner aims for. */
+  weeklyGoalDays: number;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -27,6 +31,8 @@ export const DEFAULT_SETTINGS: Settings = {
   speechRate: 0.9,
   voice: null,
   cloudSpeech: false,
+  fontScale: 1,
+  weeklyGoalDays: 4,
 };
 
 const KEY = 'settings';
@@ -41,12 +47,14 @@ export const useSettings = create<SettingsStore>((set) => ({
 }));
 
 function current(): Settings {
-  const { theme, haptics, sounds, speechRate, voice, cloudSpeech } = useSettings.getState();
-  return { theme, haptics, sounds, speechRate, voice, cloudSpeech };
+  const s = useSettings.getState();
+  return Object.fromEntries(
+    (Object.keys(DEFAULT_SETTINGS) as (keyof Settings)[]).map((k) => [k, s[k]]),
+  ) as unknown as Settings;
 }
 
-/** Loads saved settings and keeps saving every change. Returns an unsubscribe function. */
-export async function bindSettings(db: Db): Promise<() => void> {
+/** Reads the saved settings into the store (also after an import or a data wipe). */
+export async function loadSettings(db: Db): Promise<void> {
   const saved = await kvGet<Partial<Settings>>(db, KEY, {});
   // Unknown or missing keys fall back to defaults, so old saves keep working after updates.
   const merged = { ...DEFAULT_SETTINGS };
@@ -56,6 +64,11 @@ export async function bindSettings(db: Db): Promise<() => void> {
     if (k === 'voice' && typeof saved.voice === 'string') merged.voice = saved.voice;
   }
   useSettings.setState(merged);
+}
+
+/** Loads saved settings and keeps saving every change. Returns an unsubscribe function. */
+export async function bindSettings(db: Db): Promise<() => void> {
+  await loadSettings(db);
   return useSettings.subscribe(() => {
     void kvSet(db, KEY, current());
   });

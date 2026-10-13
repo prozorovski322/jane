@@ -21,7 +21,10 @@ import type { Db } from '@/core/storage/db';
 import { kvGet, kvSet } from '@/core/storage/kv';
 import { getCards, logReview, saveCard } from '@/core/storage/srs-repo';
 
+import { evaluateAchievements } from '../achievements/service';
 import type { LessonSummary } from '../lesson/engine';
+import { settleQuests } from '../quests/service';
+import { dailyMinutes, setDailyMinutes } from './goal';
 
 export interface SessionMeta {
   /** Lesson id, unit test id ("a1.u01.test") or a session id for reviews ("review"). */
@@ -45,10 +48,18 @@ export interface CompletionInfo {
   passed: boolean;
   /** Cards created or rescheduled by this session. */
   cardsUpdated: number;
+  /** Extra XP from quests completed by this session (not included in `xp`). */
+  bonusXp: number;
+  /** Titles of the daily quests this session completed. */
+  questsCompleted: string[];
+  allQuestsDone: boolean;
+  /** Achievements unlocked by this session. */
+  achievements: { id: string; title: string }[];
 }
 
 const KEY_FREEZES = 'streak.freezes';
-const KEY_DAILY_MINUTES = 'goal.dailyMinutes';
+
+export { dailyMinutes, setDailyMinutes };
 
 export interface StreakState {
   streak: number;
@@ -97,14 +108,6 @@ export async function prepareDay(db: Db, now: Date): Promise<StreakState> {
     });
   }
   return { streak: currentStreak(active, frozen, today), freezes, todayActive: active.has(today) };
-}
-
-export async function dailyMinutes(db: Db): Promise<number> {
-  return kvGet(db, KEY_DAILY_MINUTES, 10);
-}
-
-export async function setDailyMinutes(db: Db, minutes: number): Promise<void> {
-  await kvSet(db, KEY_DAILY_MINUTES, minutes);
 }
 
 /** Groups first-attempt outcomes by card and picks the weakest rating per card. */
@@ -243,10 +246,14 @@ export async function recordSession(
   const earned = freezesEarned(before.streak, streak, before.freezes);
   if (earned) await kvSet(db, KEY_FREEZES, before.freezes + earned);
 
+  // Quests pay a little extra XP; achievements unlock from the finished session's totals.
+  const reward = await settleQuests(db, now);
+  const unlocked = await evaluateAchievements(db, now);
+
   const totalXp =
     (await db.get<{ xp: number }>('SELECT COALESCE(SUM(xp), 0) AS xp FROM daily_activity'))?.xp ??
     0;
-  const todayXp = todayBefore + xp;
+  const todayXp = todayBefore + xp + reward.bonusXp;
 
   return {
     xp,
@@ -260,6 +267,10 @@ export async function recordSession(
     freezeEarned: earned > 0,
     passed,
     cardsUpdated: ratings.size,
+    bonusXp: reward.bonusXp,
+    questsCompleted: reward.completed.map((q) => q.title),
+    allQuestsDone: reward.allDone,
+    achievements: unlocked.map((a) => ({ id: a.id, title: a.title })),
   };
 }
 

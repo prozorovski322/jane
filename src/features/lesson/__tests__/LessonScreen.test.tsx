@@ -25,6 +25,10 @@ const info: CompletionInfo = {
   freezeEarned: false,
   passed: true,
   cardsUpdated: 1,
+  bonusXp: 0,
+  questsCompleted: [],
+  allQuestsDone: false,
+  achievements: [],
 };
 
 describe('LessonScreen', () => {

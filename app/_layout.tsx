@@ -11,6 +11,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
+import { configureNotifications, syncReminders } from '@/core/notifications/reminders';
 import { registerNativeRecognizer } from '@/core/speech/native-stt';
 import { initDatabase } from '@/core/storage';
 import { useOnboarding } from '@/features/onboarding/store';
@@ -40,6 +41,8 @@ function useBoot() {
         unbind = await bindSettings(db);
         await useOnboarding.getState().load(db);
         await useProgress.getState().refresh(db);
+        configureNotifications();
+        void syncReminders(db);
         if (alive) setBoot({ status: 'ready' });
       } catch (e) {
         if (alive)
@@ -106,6 +109,7 @@ function ThemedStack() {
 
 export default function RootLayout() {
   const theme = useSettings((s) => s.theme);
+  const fontScale = useSettings((s) => s.fontScale);
   const { boot, retry } = useBoot();
   const [fontsLoaded, fontError] = useFonts({
     Unbounded_600SemiBold,
@@ -126,7 +130,7 @@ export default function RootLayout() {
 
   return (
     <GestureHandlerRootView style={styles.flex}>
-      <ThemeProvider preference={theme}>
+      <ThemeProvider preference={theme} fontScale={fontScale}>
         {boot.status === 'error' ? (
           <BootError message={boot.message} onRetry={retry} />
         ) : (

@@ -137,7 +137,7 @@ describe('recordSession', () => {
     expect(first.goalJustReached).toBe(true);
     const second = await recordSession(db, lesson, s, { now: at('2026-10-13', 11), scheduler });
     expect(second.goalJustReached).toBe(false);
-    expect(second.todayXp).toBe(first.todayXp + second.xp);
+    expect(second.todayXp).toBe(first.todayXp + second.xp + second.bonusXp);
   });
 
   it('creates cards and schedules them by how well the learner answered', async () => {

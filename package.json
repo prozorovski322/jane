@@ -13,6 +13,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "jest",
+    "sounds:build": "tsx scripts/gen-sounds.ts",
     "content:build": "tsx scripts/build-content.ts",
     "content:check": "tsx scripts/content-check.ts",
     "check": "npm run typecheck && npm run lint && npm run content:check && npm test -- --ci"

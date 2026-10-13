@@ -17,6 +17,8 @@ import { AppText } from '@/ui/components/AppText';
 import { Button } from '@/ui/components/Button';
 import { Card } from '@/ui/components/Card';
 import { Choice } from '@/ui/components/Choice';
+import { Mascot } from '@/ui/components/Mascot';
+import { syncReminders } from '@/core/notifications/reminders';
 import { IconButton } from '@/ui/components/IconButton';
 import { ProgressBar } from '@/ui/components/ProgressBar';
 import { useTheme } from '@/ui/theme/ThemeProvider';
@@ -106,6 +108,7 @@ export function OnboardingScreen() {
     const db = getDb();
     await setDailyMinutes(db, minutes);
     await saveReminderPrefs(db, { enabled: notif === 'granted' });
+    void syncReminders(db);
     await useOnboarding
       .getState()
       .save(db, { done: true, goal, selfLevel: self, completedAt: Date.now() });
@@ -122,6 +125,9 @@ export function OnboardingScreen() {
           subtitle="Помогу выучить английский с нуля до уверенного B2: слова, грамматика, аудирование, чтение, говорение и письмо. Без подписок и рекламы, всё работает без интернета."
           footer={<Button label="Начать" icon="arrow-right" onPress={() => setStep('goal')} />}
         >
+          <View style={{ alignItems: 'center' }}>
+            <Mascot emotion="joy" size={128} />
+          </View>
           <Card tone="primarySoft">
             <AppText variant="body">
               Пара вопросов — и составлю план под вас. Это займёт минуту.

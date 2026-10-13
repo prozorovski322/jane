@@ -7,6 +7,7 @@ import { Appear } from '@/ui/components/Appear';
 import { AppText } from '@/ui/components/AppText';
 import { Button } from '@/ui/components/Button';
 import { Icon } from '@/ui/components/Icon';
+import { Mascot, type MascotEmotion } from '@/ui/components/Mascot';
 import { ProgressBar } from '@/ui/components/ProgressBar';
 import { useTheme } from '@/ui/theme/ThemeProvider';
 
@@ -76,6 +77,15 @@ export function LessonSummary({
     feedback.celebrate();
   }, []);
 
+  const newAchievements = info ? info.achievements : [];
+  useEffect(() => {
+    if (newAchievements.length) feedback.achievement();
+  }, [newAchievements.length]);
+
+  // The mascot cheers for good work and stays kind when the session was hard.
+  const mood: MascotEmotion =
+    passed && summary.accuracy >= 0.9 ? 'celebrate' : summary.accuracy >= 0.6 ? 'joy' : 'support';
+
   const mistakes = summary.answered - summary.correctFirstTry;
   const title = isTest
     ? passed
@@ -87,12 +97,8 @@ export function LessonSummary({
 
   return (
     <View style={styles.wrap}>
-      <Appear
-        variant="zoom"
-        duration={300}
-        style={[styles.badge, { backgroundColor: colors.primarySoft }]}
-      >
-        <Icon name="check" size={56} color={colors.primary} />
+      <Appear variant="zoom" duration={300} style={styles.mascot}>
+        <Mascot emotion={mood} size={120} />
       </Appear>
       <AppText variant="display" align="center" role="heading">
         {title}
@@ -134,6 +140,21 @@ export function LessonSummary({
               ? ' Вы заработали заморозку серии — она сохранит серию, если пропустите день.'
               : ''}
           </AppText>
+          {info.questsCompleted.length > 0 && (
+            <AppText variant="small" color="xp" aria-live="polite">
+              {`Задание дня выполнено: ${info.questsCompleted.join('; ')}. `}
+              {info.allQuestsDone ? 'Все задания дня сделаны! ' : ''}
+              {`Бонус +${info.bonusXp} XP.`}
+            </AppText>
+          )}
+          {info.achievements.map((a) => (
+            <View key={a.id} style={styles.achievement} accessible aria-live="polite">
+              <Icon name="trophy" size={18} color={colors.xp} />
+              <AppText variant="smallStrong" color="xp">
+                Новое достижение: {a.title}
+              </AppText>
+            </View>
+          ))}
         </View>
       )}
 
@@ -167,14 +188,8 @@ const styles = StyleSheet.create({
     maxWidth: 560,
     alignSelf: 'center',
   },
-  badge: {
-    alignSelf: 'center',
-    width: 112,
-    height: 112,
-    borderRadius: 56,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  mascot: { alignSelf: 'center' },
+  achievement: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   stats: { flexDirection: 'row', gap: 10 },
   stat: { flex: 1, borderWidth: 2, padding: 12, alignItems: 'center', gap: 2 },
   block: { gap: 8 },

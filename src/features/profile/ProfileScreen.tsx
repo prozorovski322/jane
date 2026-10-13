@@ -7,7 +7,10 @@ import { isMastered } from '@/core/srs/scheduler';
 import { allCards } from '@/core/storage/srs-repo';
 import { useDbQuery } from '@/lib/useDbQuery';
 import { AppText } from '@/ui/components/AppText';
-import { Card, ListRow } from '@/ui/components/Card';
+import { Card } from '@/ui/components/Card';
+import { IconButton } from '@/ui/components/IconButton';
+import { AchievementsSection } from '../achievements/AchievementsSection';
+import { WeekSummaryCards } from '../progress/WeekSummaryCard';
 import { Screen, SectionTitle } from '@/ui/components/Screen';
 import { useTheme } from '@/ui/theme/ThemeProvider';
 
@@ -109,7 +112,18 @@ export function ProfileScreen() {
   const placement = data ? data.placement : null;
 
   return (
-    <Screen title="Профиль" subtitle={goal ? `Цель: ${GOALS[goal].toLowerCase()}` : undefined}>
+    <Screen
+      title="Профиль"
+      subtitle={goal ? `Цель: ${GOALS[goal].toLowerCase()}` : undefined}
+      right={
+        <IconButton
+          icon="sliders"
+          label="Настройки"
+          color="text"
+          onPress={() => router.push('/settings')}
+        />
+      }
+    >
       {snap && (
         <View style={styles.stats}>
           <Stat value={snap.totalXp} label="опыт" color="xp" />
@@ -151,12 +165,11 @@ export function ProfileScreen() {
         />
       </Card>
 
-      <ListRow
-        icon="star"
-        title="Проверка письма нейросетью"
-        subtitle="Необязательно: свой ключ API, выключено по умолчанию"
-        onPress={() => router.push('/ai-review')}
-      />
+      <SectionTitle>Итоги недели</SectionTitle>
+      <WeekSummaryCards />
+
+      <SectionTitle>Достижения</SectionTitle>
+      <AchievementsSection />
 
       <SectionTitle>Навыки</SectionTitle>
       {data && (

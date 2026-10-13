@@ -135,6 +135,24 @@ export const MIGRATIONS: readonly Migration[] = [
       ALTER TABLE lesson_progress ADD COLUMN source TEXT NOT NULL DEFAULT 'lesson';
     `,
   },
+  {
+    version: 4,
+    sql: `
+      -- Unlocked achievements, and the daily quests the learner has completed.
+      CREATE TABLE achievements (
+        id TEXT PRIMARY KEY NOT NULL,
+        unlocked_at INTEGER NOT NULL
+      );
+
+      CREATE TABLE quest_log (
+        day TEXT NOT NULL,
+        quest_id TEXT NOT NULL,
+        completed_at INTEGER NOT NULL,
+        xp INTEGER NOT NULL,
+        PRIMARY KEY (day, quest_id)
+      );
+    `,
+  },
 ];
 
 export const SCHEMA_VERSION = MIGRATIONS[MIGRATIONS.length - 1]!.version;

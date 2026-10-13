@@ -20,6 +20,8 @@ export const BACKUP_TABLES = [
   'srs_log',
   'favorites',
   'user_words',
+  'achievements',
+  'quest_log',
 ] as const;
 
 const Row = z.record(z.string(), z.union([z.string(), z.number(), z.null()]));
