@@ -1,0 +1,311 @@
+{
+  "id": "a2.u02",
+  "level": "A2",
+  "order": 2,
+  "title": { "en": "Childhood and stories", "ru": "Детство и истории" },
+  "description": "Рассказываем о детстве и пересказываем истории: где жили, что любили, что умели раньше. Слова-связки first, then, finally, конструкция used to и could.",
+  "goals": [
+    "Могу рассказать о детстве: When I was a child, I lived in a village.",
+    "Могу сказать, что делал раньше: I used to ride a horse.",
+    "Могу сказать, что умел раньше: I could swim when I was five.",
+    "Могу рассказать короткую историю: First… Then… Suddenly… Finally…",
+    "Могу назвать времена года и слова про деревню и природу.",
+    "Могу написать короткий рассказ о детстве."
+  ],
+  "grammar": ["a2.narrative-linkers", "a2.used-to", "a2.could-past"],
+  "troubles": ["tenses"],
+  "words": [
+    { "id": "childhood", "en": "childhood", "ipa": "ˈtʃaɪldhʊd", "pos": "noun", "ru": ["детство"], "example": { "en": "I had a happy childhood.", "ru": "У меня было счастливое детство." }, "topics": ["life"] },
+    { "id": "toy", "en": "toy", "ipa": "tɔɪ", "pos": "noun", "ru": ["игрушка"], "example": { "en": "I had a toy horse.", "ru": "У меня была игрушечная лошадка." }, "picture": { "emoji": "🧸" }, "topics": ["life"] },
+    { "id": "village", "en": "village", "ipa": "ˈvɪlɪdʒ", "pos": "noun", "ru": ["деревня"], "example": { "en": "I grew up in a small village.", "ru": "Я вырос в небольшой деревне." }, "picture": { "emoji": "🏘️" }, "topics": ["places"] },
+    { "id": "farm", "en": "farm", "ipa": "fɑːrm", "pos": "noun", "ru": ["ферма"], "example": { "en": "My grandparents had a farm.", "ru": "У моих бабушки и дедушки была ферма." }, "picture": { "emoji": "🚜" }, "topics": ["places"] },
+    { "id": "animal", "en": "animal", "ipa": "ˈænəməl", "pos": "noun", "ru": ["животное"], "example": { "en": "We had many animals on the farm.", "ru": "На ферме у нас было много животных." }, "picture": { "emoji": "🐄" }, "topics": ["nature"] },
+    { "id": "grandparents", "en": "grandparents", "ipa": "ˈɡrændˌperənts", "pos": "noun", "ru": ["бабушка и дедушка"], "example": { "en": "I visited my grandparents every summer.", "ru": "Каждое лето я навещал бабушку и дедушку." }, "note": "Grandparents — это бабушка и дедушка вместе. Отдельно: grandmother, grandfather.", "topics": ["family"] },
+    { "id": "story", "en": "story", "ipa": "ˈstɔːri", "pos": "noun", "ru": ["история", "рассказ"], "example": { "en": "My grandfather told me a story.", "ru": "Дедушка рассказал мне историю." }, "forms": { "plural": "stories" }, "topics": ["life"] },
+    { "id": "forest", "en": "forest", "ipa": "ˈfɔːrɪst", "pos": "noun", "ru": ["лес"], "example": { "en": "We walked in the forest.", "ru": "Мы гуляли по лесу." }, "picture": { "emoji": "🌲" }, "topics": ["nature"] },
+    { "id": "lake", "en": "lake", "ipa": "leɪk", "pos": "noun", "ru": ["озеро"], "example": { "en": "We swam in the lake.", "ru": "Мы купались в озере." }, "picture": { "emoji": "🏞️" }, "topics": ["nature"] },
+    { "id": "season", "en": "season", "ipa": "ˈsiːzən", "pos": "noun", "ru": ["время года"], "example": { "en": "Summer is my favorite season.", "ru": "Лето — моё любимое время года." }, "topics": ["time"] },
+    { "id": "summer", "en": "summer", "ipa": "ˈsʌmɚ", "pos": "noun", "ru": ["лето"], "example": { "en": "In summer we swam in the lake.", "ru": "Летом мы купались в озере." }, "topics": ["time"] },
+    { "id": "winter", "en": "winter", "ipa": "ˈwɪntɚ", "pos": "noun", "ru": ["зима"], "example": { "en": "In winter it snowed every day.", "ru": "Зимой каждый день шёл снег." }, "topics": ["time"] },
+    { "id": "spring", "en": "spring", "ipa": "sprɪŋ", "pos": "noun", "ru": ["весна"], "example": { "en": "Spring is warm and sunny.", "ru": "Весна тёплая и солнечная." }, "topics": ["time"] },
+    { "id": "autumn", "en": "autumn", "ipa": "ˈɔːtəm", "pos": "noun", "ru": ["осень"], "example": { "en": "In autumn it was cloudy and windy.", "ru": "Осенью было облачно и ветрено." }, "note": "В американском английском осень чаще называют fall.", "topics": ["time"] },
+    { "id": "grow-up", "en": "grow up", "ipa": "ɡroʊ ʌp", "pos": "phrasal", "ru": ["вырасти", "расти"], "example": { "en": "I grew up in a village.", "ru": "Я вырос в деревне." }, "forms": { "third": "grows up" }, "topics": ["verbs"] },
+    { "id": "ride", "en": "ride", "ipa": "raɪd", "pos": "verb", "ru": ["ездить верхом", "кататься"], "example": { "en": "I rode a horse every day.", "ru": "Каждый день я ездил верхом." }, "forms": { "third": "rides" }, "note": "Ride a bike — «ездить на велосипеде», ride a horse — «ездить верхом».", "topics": ["verbs"] },
+    { "id": "fall", "en": "fall", "ipa": "fɔːl", "pos": "verb", "ru": ["падать"], "example": { "en": "I fell and cried.", "ru": "Я упал и заплакал." }, "forms": { "third": "falls" }, "topics": ["verbs"] },
+    { "id": "break", "en": "break", "ipa": "breɪk", "pos": "verb", "ru": ["ломать"], "example": { "en": "I broke my toy.", "ru": "Я сломал свою игрушку." }, "forms": { "third": "breaks" }, "topics": ["verbs"] },
+    { "id": "cry", "en": "cry", "ipa": "kraɪ", "pos": "verb", "ru": ["плакать"], "example": { "en": "The baby cried.", "ru": "Малыш плакал." }, "forms": { "third": "cries" }, "topics": ["verbs"] },
+    { "id": "laugh", "en": "laugh", "ipa": "læf", "pos": "verb", "ru": ["смеяться"], "example": { "en": "We laughed and sang.", "ru": "Мы смеялись и пели." }, "forms": { "third": "laughs" }, "note": "Gh в слове laugh читается как [f].", "topics": ["verbs"] },
+    { "id": "smile", "en": "smile", "ipa": "smaɪl", "pos": "verb", "ru": ["улыбаться"], "example": { "en": "My grandfather smiled.", "ru": "Дедушка улыбнулся." }, "forms": { "third": "smiles" }, "topics": ["verbs"] },
+    { "id": "remember", "en": "remember", "ipa": "rɪˈmembɚ", "pos": "verb", "ru": ["помнить", "вспоминать"], "example": { "en": "I remember my first bike.", "ru": "Я помню свой первый велосипед." }, "forms": { "third": "remembers" }, "topics": ["verbs"] },
+    { "id": "forget", "en": "forget", "ipa": "fɚˈɡet", "pos": "verb", "ru": ["забывать"], "example": { "en": "I forgot my phone.", "ru": "Я забыл свой телефон." }, "forms": { "third": "forgets" }, "topics": ["verbs"] },
+    { "id": "move", "en": "move", "ipa": "muːv", "pos": "verb", "ru": ["переезжать", "двигаться"], "example": { "en": "We moved to a big city.", "ru": "Мы переехали в большой город." }, "forms": { "third": "moves" }, "topics": ["verbs"] },
+    { "id": "lose", "en": "lose", "ipa": "luːz", "pos": "verb", "ru": ["терять", "проигрывать"], "example": { "en": "I lost my bag.", "ru": "Я потерял сумку." }, "forms": { "third": "loses" }, "topics": ["verbs"] },
+    { "id": "win", "en": "win", "ipa": "wɪn", "pos": "verb", "ru": ["выигрывать"], "example": { "en": "We won the game.", "ru": "Мы выиграли игру." }, "forms": { "third": "wins", "ing": "winning" }, "topics": ["verbs"] },
+    { "id": "climb", "en": "climb", "ipa": "klaɪm", "pos": "verb", "ru": ["лазать", "забираться"], "example": { "en": "I climbed a tree.", "ru": "Я залез на дерево." }, "forms": { "third": "climbs" }, "note": "Буква b в слове climb не читается.", "topics": ["verbs"] },
+    { "id": "suddenly", "en": "suddenly", "ipa": "ˈsʌdənli", "pos": "adv", "ru": ["вдруг"], "example": { "en": "Suddenly, it started to rain.", "ru": "Вдруг пошёл дождь." }, "topics": ["connectors"] },
+    { "id": "finally", "en": "finally", "ipa": "ˈfaɪnəli", "pos": "adv", "ru": ["наконец"], "example": { "en": "Finally, we came home.", "ru": "Наконец мы вернулись домой." }, "topics": ["connectors"] },
+    { "id": "after-that", "en": "after that", "ipa": "ˈæftɚ ðæt", "pos": "phrase", "ru": ["после этого"], "example": { "en": "After that, we went to the park.", "ru": "После этого мы пошли в парк." }, "topics": ["connectors"] },
+    { "id": "used-to", "en": "used to", "ipa": "juːst tuː", "pos": "phrase", "ru": ["раньше (делал)"], "example": { "en": "I used to live in a village.", "ru": "Раньше я жил в деревне." }, "note": "Used to произносится [juːst tuː]. После него глагол в начальной форме.", "topics": ["grammar"] },
+    { "id": "could", "en": "could", "ipa": "kʊd", "pos": "modal", "ru": ["мог", "умел"], "example": { "en": "I could swim when I was five.", "ru": "Я умел плавать в пять лет." }, "note": "Could — прошедшее время от can. L в слове не читается.", "topics": ["grammar"] },
+    { "id": "afraid", "en": "afraid", "ipa": "əˈfreɪd", "pos": "adj", "ru": ["испуганный", "боящийся"], "example": { "en": "I was afraid of the dog.", "ru": "Я боялся собаки." }, "topics": ["adjectives"] },
+    { "id": "lucky", "en": "lucky", "ipa": "ˈlʌki", "pos": "adj", "ru": ["везучий"], "example": { "en": "I was lucky.", "ru": "Мне повезло." }, "topics": ["adjectives"] },
+    { "id": "funny", "en": "funny", "ipa": "ˈfʌni", "pos": "adj", "ru": ["смешной"], "example": { "en": "The story was funny.", "ru": "История была смешной." }, "topics": ["adjectives"] }
+  ],
+  "texts": [
+    {
+      "id": "a2.u02.grew-up",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Where did you grow up?", "ru": "Где вы выросли?" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Tom, where did you grow up?", "ru": "Том, где ты вырос?" },
+        { "speaker": "tom", "en": "I grew up in a small village. My grandparents had a farm and many animals.", "ru": "Я вырос в небольшой деревне. У моих бабушки и дедушки была ферма и много животных." },
+        { "speaker": "anna", "en": "Did you like it?", "ru": "Тебе нравилось?" },
+        { "speaker": "tom", "en": "Yes, I loved it. I used to ride a horse every day.", "ru": "Да, я это обожал. Раньше я каждый день ездил верхом." },
+        { "speaker": "anna", "en": "I lived in a big city. I used to play in the park with my sister.", "ru": "Я жила в большом городе. Раньше я играла в парке с сестрой." },
+        { "speaker": "tom", "en": "Could you swim?", "ru": "Ты умела плавать?" },
+        { "speaker": "anna", "en": "Yes, I could. But I couldn't ride a bike. I fell and cried.", "ru": "Да. Но ездить на велосипеде не умела. Я упала и заплакала." },
+        { "speaker": "tom", "en": "That was sad. But now you can ride, right?", "ru": "Это грустно. Но теперь ты умеешь, да?" }
+      ]
+    },
+    {
+      "id": "a2.u02.first-bike",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "My first bike", "ru": "Мой первый велосипед" },
+      "lines": [
+        { "en": "When I was seven, I got a bike for my birthday. It was red and I loved it.", "ru": "Когда мне было семь, на день рождения мне подарили велосипед. Он был красным, и я его обожал." },
+        { "en": "First, I tried to ride it in the garden, but I fell and cried. My grandfather helped me and said, \"Try again.\"", "ru": "Сначала я попробовал поехать в саду, но упал и заплакал. Дедушка помог мне и сказал: «Попробуй ещё раз»." },
+        { "en": "After that, I rode it every day. Suddenly, one summer morning, I could ride well. I laughed and my grandfather smiled.", "ru": "После этого я катался каждый день. Вдруг одним летним утром я стал хорошо ездить. Я смеялся, а дедушка улыбался." },
+        { "en": "Finally, I rode to the lake with my friends. It was a great day, and I remember it now.", "ru": "Наконец я поехал к озеру с друзьями. Это был отличный день, и я помню его до сих пор." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "a2.u02.l01",
+      "kind": "vocabulary",
+      "title": "Детство, деревня и времена года",
+      "exercises": [
+        { "id": "a2.u02.l01.e01", "type": "match_pairs", "pairs": [{ "en": "childhood", "ru": "детство" }, { "en": "toy", "ru": "игрушка" }, { "en": "village", "ru": "деревня" }, { "en": "farm", "ru": "ферма" }, { "en": "animal", "ru": "животное" }], "hint": "Все слова про детство в деревне.", "explanation": "Childhood — детство, toy — игрушка, village — деревня, farm — ферма, animal — животное." },
+        { "id": "a2.u02.l01.e02", "type": "match_pairs", "pairs": [{ "en": "grandparents", "ru": "бабушка и дедушка" }, { "en": "story", "ru": "история" }, { "en": "forest", "ru": "лес" }, { "en": "lake", "ru": "озеро" }, { "en": "season", "ru": "время года" }], "hint": "Forest и lake — природа.", "explanation": "Grandparents — бабушка и дедушка, story — история, forest — лес, lake — озеро, season — время года." },
+        { "id": "a2.u02.l01.e03", "type": "match_pairs", "pairs": [{ "en": "summer", "ru": "лето" }, { "en": "winter", "ru": "зима" }, { "en": "spring", "ru": "весна" }, { "en": "autumn", "ru": "осень" }, { "en": "season", "ru": "время года" }], "hint": "Четыре времени года и слово season.", "explanation": "Summer — лето, winter — зима, spring — весна, autumn — осень, season — время года." },
+        { "id": "a2.u02.l01.e04", "type": "picture_choice", "mode": "picture-to-word", "word": "village", "distractors": ["forest", "lake"], "hint": "Небольшие дома и дороги.", "explanation": "Village — «деревня»: [ˈvɪlɪdʒ]." },
+        { "id": "a2.u02.l01.e05", "type": "picture_choice", "mode": "picture-to-word", "word": "lake", "distractors": ["farm", "forest"], "hint": "Там купаются летом.", "explanation": "Lake — «озеро»: [leɪk]." },
+        { "id": "a2.u02.l01.e06", "type": "picture_choice", "mode": "word-to-picture", "word": "toy", "distractors": ["farm", "forest"], "hint": "С ней играют дети.", "explanation": "Toy — «игрушка»: [tɔɪ]." },
+        { "id": "a2.u02.l01.e07", "type": "picture_choice", "mode": "word-to-picture", "word": "forest", "distractors": ["lake", "village"], "hint": "Много деревьев.", "explanation": "Forest — «лес»: [ˈfɔːrɪst]." },
+        { "id": "a2.u02.l01.e08", "type": "translate_choice", "from": "ru", "text": "лето", "options": ["summer", "winter", "spring"], "answer": 0, "hint": "Тёплое время года.", "explanation": "Summer — «лето», winter — «зима», spring — «весна»." },
+        { "id": "a2.u02.l01.e09", "type": "translate_choice", "from": "en", "text": "grandparents", "options": ["бабушка и дедушка", "родители", "дядя и тётя"], "answer": 0, "hint": "Grand — «большой, старший».", "explanation": "Grandparents — «бабушка и дедушка»." },
+        { "id": "a2.u02.l01.e10", "type": "fill_gap", "text": "In ___ it snowed every day.", "translation": "Зимой каждый день шёл снег.", "answers": [["winter"]], "options": ["winter", "summer", "spring"], "hint": "Снег идёт зимой.", "explanation": "Правильно: In winter it snowed every day." },
+        { "id": "a2.u02.l01.e11", "type": "fill_gap", "text": "I grew up in a small ___.", "translation": "Я вырос в небольшой деревне.", "answers": [["village"]], "options": ["village", "season", "story"], "hint": "Небольшое место, где живут люди.", "explanation": "Правильно: I grew up in a small village." },
+        { "id": "a2.u02.l01.e12", "type": "listen_choice", "audio": "autumn", "question": "Что вы слышите?", "options": ["autumn", "summer", "winter"], "answer": 0, "hint": "Начинается с [ɔː].", "explanation": "Autumn [ˈɔːtəm] — «осень». Буква n в конце не читается." },
+        { "id": "a2.u02.l01.e13", "type": "listen_dictation", "text": "My grandparents had a farm.", "hint": "Пять слов.", "explanation": "My grandparents had a farm — «у моих бабушки и дедушки была ферма»." },
+        { "id": "a2.u02.l01.e14", "type": "type_translation", "from": "ru", "text": "детство", "answers": ["childhood"], "hint": "Десять букв.", "explanation": "Childhood [ˈtʃaɪldhʊd] — «детство»." },
+        { "id": "a2.u02.l01.e15", "type": "word_stress", "word": "animal", "syllables": ["an", "i", "mal"], "stress": 0, "hint": "Первый слог.", "explanation": "AN-i-mal — ударение на первый слог." }
+      ]
+    },
+    {
+      "id": "a2.u02.l02",
+      "kind": "vocabulary",
+      "title": "Глаголы и чувства",
+      "exercises": [
+        { "id": "a2.u02.l02.e01", "type": "match_pairs", "pairs": [{ "en": "grow up", "ru": "вырасти" }, { "en": "ride", "ru": "ездить верхом" }, { "en": "fall", "ru": "падать" }, { "en": "break", "ru": "ломать" }, { "en": "cry", "ru": "плакать" }], "hint": "Fall и break — неприятные события.", "explanation": "Grow up — вырасти, ride — ездить верхом, fall — падать, break — ломать, cry — плакать." },
+        { "id": "a2.u02.l02.e02", "type": "match_pairs", "pairs": [{ "en": "laugh", "ru": "смеяться" }, { "en": "smile", "ru": "улыбаться" }, { "en": "remember", "ru": "помнить" }, { "en": "forget", "ru": "забывать" }, { "en": "move", "ru": "переезжать" }], "hint": "Remember и forget — противоположные.", "explanation": "Laugh — смеяться, smile — улыбаться, remember — помнить, forget — забывать, move — переезжать." },
+        { "id": "a2.u02.l02.e03", "type": "match_pairs", "pairs": [{ "en": "lose", "ru": "терять" }, { "en": "win", "ru": "выигрывать" }, { "en": "climb", "ru": "лазать" }, { "en": "afraid", "ru": "испуганный" }, { "en": "lucky", "ru": "везучий" }], "hint": "Lose и win — противоположные.", "explanation": "Lose — терять, win — выигрывать, climb — лазать, afraid — испуганный, lucky — везучий." },
+        { "id": "a2.u02.l02.e04", "type": "match_pairs", "pairs": [{ "en": "funny", "ru": "смешной" }, { "en": "suddenly", "ru": "вдруг" }, { "en": "finally", "ru": "наконец" }, { "en": "after that", "ru": "после этого" }, { "en": "story", "ru": "история" }], "hint": "Три слова из рассказа.", "explanation": "Funny — смешной, suddenly — вдруг, finally — наконец, after that — после этого, story — история." },
+        { "id": "a2.u02.l02.e05", "type": "fill_gap", "text": "I ___ my bag on the bus.", "translation": "Я потерял сумку в автобусе.", "answers": [["lost"]], "options": ["lost", "lose", "losed"], "hint": "Особая форма.", "explanation": "Правильно: I lost my bag. Lose — lost.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u02.l02.e06", "type": "fill_gap", "text": "We ___ the game and we were happy.", "translation": "Мы выиграли игру и были счастливы.", "answers": [["won"]], "options": ["won", "wined", "win"], "hint": "Особая форма.", "explanation": "Правильно: We won the game. Win — won.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u02.l02.e07", "type": "fill_gap", "text": "I ___ and cried.", "translation": "Я упал и заплакал.", "answers": [["fell"]], "options": ["fell", "falled", "fall"], "hint": "Особая форма.", "explanation": "Правильно: I fell and cried. Fall — fell.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u02.l02.e08", "type": "fill_gap", "text": "I ___ my toy.", "translation": "Я сломал свою игрушку.", "answers": [["broke"]], "options": ["broke", "breaked", "break"], "hint": "Особая форма.", "explanation": "Правильно: I broke my toy. Break — broke.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u02.l02.e09", "type": "fill_gap", "text": "We ___ to a big city.", "translation": "Мы переехали в большой город.", "answers": [["moved"]], "options": ["moved", "move", "moves"], "hint": "Правильный глагол.", "explanation": "Правильно: We moved to a big city.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u02.l02.e10", "type": "translate_choice", "from": "en", "text": "I remember my first bike.", "options": ["Я помню свой первый велосипед.", "Я забыл свой первый велосипед.", "Я купил первый велосипед."], "answer": 0, "hint": "Remember — «помнить».", "explanation": "I remember my first bike — «я помню свой первый велосипед»." },
+        { "id": "a2.u02.l02.e11", "type": "listen_choice", "audio": "We laughed and sang.", "question": "Что вы слышите?", "options": ["We laughed and sang.", "We laughed and cried.", "We smiled and sang."], "answer": 0, "hint": "Первое слово — смех.", "explanation": "We laughed and sang — «мы смеялись и пели».", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u02.l02.e12", "type": "listen_dictation", "text": "I climbed a tree.", "hint": "Четыре слова.", "explanation": "I climbed a tree — «я залез на дерево»." },
+        { "id": "a2.u02.l02.e13", "type": "type_translation", "from": "ru", "text": "смеяться", "answers": ["laugh"], "hint": "Пять букв.", "explanation": "Laugh [læf] — «смеяться»." },
+        { "id": "a2.u02.l02.e14", "type": "minimal_pair", "pair": [{ "en": "fell", "ipa": "fel" }, { "en": "feel", "ipa": "fiːl" }], "say": 0, "hint": "В одном слове гласный короткий.", "explanation": "Fell [fel] — «упал», feel [fiːl] — «чувствовать».", "troubles": ["pron-vowels"] }
+      ]
+    },
+    {
+      "id": "a2.u02.l03",
+      "kind": "grammar",
+      "title": "Рассказываем историю",
+      "grammar": "a2.narrative-linkers",
+      "exercises": [
+        { "id": "a2.u02.l03.e01", "type": "fill_gap", "text": "___, I got up. Then I had breakfast.", "translation": "Сначала я встал. Потом позавтракал.", "answers": [["First"]], "options": ["First", "Finally", "Suddenly"], "hint": "Начало истории.", "explanation": "Правильно: First, I got up. Then I had breakfast.", "grammar": ["a2.narrative-linkers"] },
+        { "id": "a2.u02.l03.e02", "type": "fill_gap", "text": "___, it started to rain.", "translation": "Вдруг пошёл дождь.", "answers": [["Suddenly"]], "options": ["Suddenly", "Finally", "First"], "hint": "Неожиданное событие.", "explanation": "Правильно: Suddenly, it started to rain.", "grammar": ["a2.narrative-linkers"] },
+        { "id": "a2.u02.l03.e03", "type": "fill_gap", "text": "___, we came home.", "translation": "Наконец мы вернулись домой.", "answers": [["Finally"]], "options": ["Finally", "First", "Suddenly"], "hint": "Конец истории.", "explanation": "Правильно: Finally, we came home.", "grammar": ["a2.narrative-linkers"] },
+        { "id": "a2.u02.l03.e04", "type": "fill_gap", "text": "First I got up, ___ I had breakfast.", "translation": "Сначала я встал, потом позавтракал.", "answers": [["then"]], "options": ["then", "after", "when"], "hint": "Слово «потом».", "explanation": "Правильно: First I got up, then I had breakfast.", "grammar": ["a2.narrative-linkers"] },
+        { "id": "a2.u02.l03.e05", "type": "fill_gap", "text": "___ I was a child, I lived in a village.", "translation": "Когда я был ребёнком, я жил в деревне.", "answers": [["When"]], "options": ["When", "Then", "After"], "hint": "Слово «когда».", "explanation": "Правильно: When I was a child, I lived in a village.", "grammar": ["a2.narrative-linkers"] },
+        { "id": "a2.u02.l03.e06", "type": "fill_gap", "text": "After that, we ___ to the park.", "translation": "После этого мы пошли в парк.", "answers": [["went"]], "options": ["went", "go", "goes"], "hint": "Рассказ в прошлом.", "explanation": "Правильно: After that, we went to the park.", "grammar": ["a2.narrative-linkers"] },
+        { "id": "a2.u02.l03.e07", "type": "error_correction", "text": "When I was a child, I live in a village.", "wrong": "live", "correction": "lived", "options": ["lived", "living", "lives"], "hint": "Рассказ о прошлом.", "explanation": "Правильно: When I was a child, I lived in a village.", "grammar": ["a2.narrative-linkers"], "troubles": ["tenses"] },
+        { "id": "a2.u02.l03.e08", "type": "error_correction", "text": "First I got up, after I had breakfast.", "wrong": "after", "correction": "then", "options": ["then", "when", "ago"], "hint": "Нужно слово «потом».", "explanation": "Правильно: First I got up, then I had breakfast.", "grammar": ["a2.narrative-linkers"] },
+        { "id": "a2.u02.l03.e09", "type": "error_correction", "text": "Suddenly it start to rain.", "wrong": "start", "correction": "started", "options": ["started", "starts", "starting"], "hint": "Прошедшее время.", "explanation": "Правильно: Suddenly it started to rain.", "grammar": ["a2.narrative-linkers"], "troubles": ["tenses"] },
+        { "id": "a2.u02.l03.e10", "type": "tiles", "from": "ru", "text": "Наконец я поехал к озеру.", "answer": "Finally, I rode to the lake.", "distractors": ["ride", "first"], "hint": "Образец: Ride — rode.", "explanation": "Правильно: Finally, I rode to the lake.", "grammar": ["a2.narrative-linkers"] },
+        { "id": "a2.u02.l03.e11", "type": "tiles", "from": "ru", "text": "Сначала я упал и заплакал.", "answer": "First, I fell and cried.", "distractors": ["fall", "finally"], "hint": "Образец: Fall — fell.", "explanation": "Правильно: First, I fell and cried.", "grammar": ["a2.narrative-linkers"] },
+        { "id": "a2.u02.l03.e12", "type": "type_translation", "from": "ru", "text": "После этого я катался каждый день.", "answers": ["After that, I rode it every day.", "After that I rode every day."], "difficulty": 2, "hint": "Образец: After that.", "explanation": "Правильно: After that, I rode every day.", "grammar": ["a2.narrative-linkers"] },
+        { "id": "a2.u02.l03.e13", "type": "type_translation", "from": "ru", "text": "Когда мне было семь, я получил велосипед.", "answers": ["When I was seven, I got a bike."], "difficulty": 2, "hint": "Образец: When I was seven.", "explanation": "Правильно: When I was seven, I got a bike.", "grammar": ["a2.narrative-linkers"] },
+        { "id": "a2.u02.l03.e14", "type": "speak_repeat", "text": "First, I fell and cried. Then my grandfather helped me.", "hint": "Две короткие части.", "explanation": "Fell [fel], cried [kraɪd]: окончание -ed читается как [d]." }
+      ]
+    },
+    {
+      "id": "a2.u02.l04",
+      "kind": "grammar",
+      "title": "Used to: раньше было так",
+      "grammar": "a2.used-to",
+      "exercises": [
+        { "id": "a2.u02.l04.e01", "type": "fill_gap", "text": "I ___ to live in a village.", "translation": "Раньше я жил в деревне.", "answers": [["used"]], "options": ["used", "use", "using"], "hint": "Прошедшая форма.", "explanation": "Правильно: I used to live in a village.", "grammar": ["a2.used-to"] },
+        { "id": "a2.u02.l04.e02", "type": "fill_gap", "text": "We used to ___ in the garden.", "translation": "Мы раньше играли в саду.", "answers": [["play"]], "options": ["play", "played", "playing"], "hint": "После used to — начальная форма.", "explanation": "Правильно: We used to play in the garden.", "grammar": ["a2.used-to"] },
+        { "id": "a2.u02.l04.e03", "type": "fill_gap", "text": "She didn't ___ to like soup.", "translation": "Раньше она не любила суп.", "answers": [["use"]], "options": ["use", "used", "using"], "hint": "После didn't — без -d.", "explanation": "Правильно: She didn't use to like soup.", "grammar": ["a2.used-to"] },
+        { "id": "a2.u02.l04.e04", "type": "fill_gap", "text": "Did you ___ to ride a bike?", "translation": "Вы раньше ездили на велосипеде?", "answers": [["use"]], "options": ["use", "used", "using"], "hint": "После did — без -d.", "explanation": "Правильно: Did you use to ride a bike?", "grammar": ["a2.used-to"] },
+        { "id": "a2.u02.l04.e05", "type": "fill_gap", "text": "I used to ___ a horse every day.", "translation": "Раньше я каждый день ездил верхом.", "answers": [["ride"]], "options": ["ride", "rode", "riding"], "hint": "Начальная форма.", "explanation": "Правильно: I used to ride a horse every day.", "grammar": ["a2.used-to"] },
+        { "id": "a2.u02.l04.e06", "type": "error_correction", "text": "I use to live in a village.", "wrong": "use to", "correction": "used to", "options": ["used to", "using to", "uses to"], "hint": "Для прошлого.", "explanation": "Правильно: I used to live in a village.", "grammar": ["a2.used-to"], "troubles": ["tenses"] },
+        { "id": "a2.u02.l04.e07", "type": "error_correction", "text": "She didn't used to like soup.", "wrong": "used", "correction": "use", "options": ["use", "uses", "using"], "hint": "Прошлое уже в didn't.", "explanation": "Правильно: She didn't use to like soup.", "grammar": ["a2.used-to"], "troubles": ["tenses"] },
+        { "id": "a2.u02.l04.e08", "type": "error_correction", "text": "I used to living in a village.", "wrong": "living", "correction": "live", "options": ["live", "lived", "lives"], "hint": "После used to — без -ing.", "explanation": "Правильно: I used to live in a village.", "grammar": ["a2.used-to"], "troubles": ["tenses"] },
+        { "id": "a2.u02.l04.e09", "type": "tiles", "from": "ru", "text": "Раньше мы жили на ферме.", "answer": "We used to live on a farm.", "distractors": ["lived", "in"], "hint": "Образец: Used to + live.", "explanation": "Правильно: We used to live on a farm.", "grammar": ["a2.used-to"] },
+        { "id": "a2.u02.l04.e10", "type": "tiles", "from": "ru", "text": "Она раньше не любила суп.", "answer": "She didn't use to like soup.", "distractors": ["used", "likes"], "hint": "Образец: Didn't use to.", "explanation": "Правильно: She didn't use to like soup.", "grammar": ["a2.used-to"] },
+        { "id": "a2.u02.l04.e11", "type": "type_translation", "from": "ru", "text": "Раньше я играл в парке.", "answers": ["I used to play in the park."], "hint": "Образец: Used to + play.", "explanation": "Правильно: I used to play in the park.", "grammar": ["a2.used-to"] },
+        { "id": "a2.u02.l04.e12", "type": "type_translation", "from": "ru", "text": "Вы раньше жили в деревне?", "answers": ["Did you use to live in a village?"], "difficulty": 2, "hint": "Образец: Did you use to + live.", "explanation": "Правильно: Did you use to live in a village?", "grammar": ["a2.used-to"] },
+        { "id": "a2.u02.l04.e13", "type": "listen_choice", "audio": "We used to swim in the lake.", "question": "Что вы слышите?", "options": ["We used to swim in the lake.", "We swim in the lake.", "We swam in the lake."], "answer": 0, "hint": "Два слова перед глаголом.", "explanation": "We used to swim in the lake — «раньше мы купались в озере».", "grammar": ["a2.used-to"] },
+        { "id": "a2.u02.l04.e14", "type": "speak_answer", "question": "Where did you use to live?", "questionRu": "Где вы раньше жили? Ответьте: I used to live in a village. I used to live in…", "keywords": [["\\bI (used to|lived)\\b"], ["\\b(village|city|town|farm|house|flat|Moscow|Kazan)\\b"]], "minKeywords": 2, "samples": ["I used to live in a village.", "I lived in a small town."], "difficulty": 3, "hint": "Образец: I used to live in…", "explanation": "Ответ: I used to live in a village.", "grammar": ["a2.used-to"] }
+      ]
+    },
+    {
+      "id": "a2.u02.l05",
+      "kind": "grammar",
+      "title": "Could: что я умел",
+      "grammar": "a2.could-past",
+      "exercises": [
+        { "id": "a2.u02.l05.e01", "type": "fill_gap", "text": "I ___ swim when I was five.", "translation": "Я умел плавать в пять лет.", "answers": [["could"]], "options": ["could", "can", "am"], "hint": "Прошлое от can.", "explanation": "Правильно: I could swim when I was five.", "grammar": ["a2.could-past"] },
+        { "id": "a2.u02.l05.e02", "type": "fill_gap", "text": "She ___ ride a bike.", "translation": "Она не умела ездить на велосипеде.", "answers": [["couldn't", "could not"]], "options": ["couldn't", "can't", "didn't"], "hint": "Отрицание в прошлом.", "explanation": "Правильно: She couldn't ride a bike.", "grammar": ["a2.could-past"] },
+        { "id": "a2.u02.l05.e03", "type": "fill_gap", "text": "___ you read when you were six?", "translation": "Вы умели читать в шесть лет?", "answers": [["Could"]], "options": ["Could", "Can", "Did"], "hint": "Вопрос про прошлое умение.", "explanation": "Правильно: Could you read when you were six?", "grammar": ["a2.could-past"] },
+        { "id": "a2.u02.l05.e04", "type": "fill_gap", "text": "Could he swim? — No, he ___.", "translation": "Он умел плавать? — Нет.", "answers": [["couldn't", "could not"]], "options": ["couldn't", "can't", "wasn't"], "hint": "Короткий ответ.", "explanation": "Правильно: No, he couldn't.", "grammar": ["a2.could-past"] },
+        { "id": "a2.u02.l05.e05", "type": "fill_gap", "text": "I could ___ well when I was seven.", "translation": "Я хорошо умел плавать в семь лет.", "answers": [["swim"]], "options": ["swim", "swam", "swimming"], "hint": "После could — без изменений.", "explanation": "I could swim well. После could — начальная форма.", "grammar": ["a2.could-past"] },
+        { "id": "a2.u02.l05.e06", "type": "error_correction", "text": "I can swim when I was five.", "wrong": "can", "correction": "could", "options": ["could", "cans", "was"], "hint": "Прошлое.", "explanation": "Правильно: I could swim when I was five.", "grammar": ["a2.could-past"], "troubles": ["tenses"] },
+        { "id": "a2.u02.l05.e07", "type": "error_correction", "text": "I couldn't to read.", "wrong": "to read", "correction": "read", "options": ["read", "reads", "reading"], "hint": "Лишнее слово.", "explanation": "Правильно: I couldn't read.", "grammar": ["a2.could-past"], "troubles": ["word-order"] },
+        { "id": "a2.u02.l05.e08", "type": "error_correction", "text": "She could swam.", "wrong": "swam", "correction": "swim", "options": ["swim", "swims", "swimming"], "hint": "После could — без изменений.", "explanation": "Правильно: She could swim.", "grammar": ["a2.could-past"], "troubles": ["tenses"] },
+        { "id": "a2.u02.l05.e09", "type": "tiles", "from": "ru", "text": "Я умел плавать в пять лет.", "answer": "I could swim when I was five.", "distractors": ["can", "am"], "hint": "Образец: Could + swim.", "explanation": "Правильно: I could swim when I was five.", "grammar": ["a2.could-past"] },
+        { "id": "a2.u02.l05.e10", "type": "tiles", "from": "ru", "text": "Он не умел ездить на велосипеде.", "answer": "He couldn't ride a bike.", "distractors": ["can't", "rode"], "hint": "Образец: Couldn't + ride.", "explanation": "Правильно: He couldn't ride a bike.", "grammar": ["a2.could-past"] },
+        { "id": "a2.u02.l05.e11", "type": "type_translation", "from": "ru", "text": "Я умел плавать, но не умел кататься на велосипеде.", "answers": ["I could swim, but I couldn't ride a bike."], "difficulty": 3, "hint": "Две части с but.", "explanation": "Правильно: I could swim, but I couldn't ride a bike.", "grammar": ["a2.could-past"] },
+        { "id": "a2.u02.l05.e12", "type": "type_translation", "from": "ru", "text": "Ты умел читать в шесть лет?", "answers": ["Could you read when you were six?"], "difficulty": 2, "hint": "Образец: Could + you + read.", "explanation": "Правильно: Could you read when you were six?", "grammar": ["a2.could-past"] },
+        { "id": "a2.u02.l05.e13", "type": "listen_choice", "audio": "I couldn't ride a bike.", "question": "Что вы слышите?", "options": ["I couldn't ride a bike.", "I can't ride a bike.", "I didn't ride a bike."], "answer": 0, "hint": "Прошлое умение.", "explanation": "I couldn't ride a bike — «я не умел ездить на велосипеде».", "grammar": ["a2.could-past"] },
+        { "id": "a2.u02.l05.e14", "type": "speak_answer", "question": "What could you do when you were a child?", "questionRu": "Что вы умели в детстве? Ответьте: I could swim. I could ride a bike.", "keywords": [["\\bI could\\b"], ["\\b(swim|ride|read|write|draw|sing|dance|run|climb|play|speak)\\b"]], "minKeywords": 2, "samples": ["I could swim and draw.", "I could ride a bike."], "difficulty": 3, "hint": "I could + глагол.", "explanation": "Ответ: I could swim and draw.", "grammar": ["a2.could-past"] }
+      ]
+    },
+    {
+      "id": "a2.u02.l06",
+      "kind": "listening",
+      "title": "Где вы выросли?",
+      "textId": "a2.u02.grew-up",
+      "exercises": [
+        {
+          "id": "a2.u02.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "a2.u02.grew-up",
+          "hint": "Слушайте, где выросли Том и Анна.",
+          "explanation": "Том вырос в деревне на ферме и ездил верхом. Анна выросла в большом городе, играла в парке и не умела кататься на велосипеде.",
+          "questions": [
+            { "kind": "mcq", "question": "Где вырос Том?", "options": ["in a village", "in a big city", "in a forest"], "answer": 0, "explanation": "Том говорит: I grew up in a small village." },
+            { "kind": "mcq", "question": "Что Том делал каждый день?", "options": ["He rode a horse.", "He swam.", "He played football."], "answer": 0, "explanation": "Том говорит: I used to ride a horse every day." },
+            { "kind": "mcq", "question": "Что Анна не умела?", "options": ["ride a bike", "swim", "read"], "answer": 0, "explanation": "Анна говорит: I couldn't ride a bike." },
+            { "kind": "tfn", "statement": "Tom's grandparents had a farm.", "answer": "true", "explanation": "Том говорит: My grandparents had a farm." },
+            { "kind": "tfn", "statement": "Anna could swim.", "answer": "true", "explanation": "Анна говорит: Yes, I could." },
+            { "kind": "tfn", "statement": "Anna lived in a village.", "answer": "false", "explanation": "Анна говорит: I lived in a big city." }
+          ]
+        },
+        { "id": "a2.u02.l06.e02", "type": "listen_choice", "audio": "Where did you grow up?", "question": "Что вы слышите?", "options": ["Where did you grow up?", "Where do you live?", "Where did you go?"], "answer": 0, "hint": "Вопрос о детстве.", "explanation": "Where did you grow up? — «Где вы выросли?»", "grammar": ["a2.past-simple-questions"] },
+        { "id": "a2.u02.l06.e03", "type": "listen_dictation", "text": "I used to ride a horse every day.", "hint": "Восемь слов.", "explanation": "I used to ride a horse every day — «раньше я каждый день ездил верхом»." },
+        { "id": "a2.u02.l06.e04", "type": "listen_dictation", "text": "I fell and cried.", "hint": "Четыре слова.", "explanation": "I fell and cried — «я упал и заплакал»." },
+        { "id": "a2.u02.l06.e05", "type": "fill_gap", "text": "I ___ up in a small village.", "translation": "Я вырос в небольшой деревне.", "answers": [["grew"]], "options": ["grew", "grow", "growed"], "hint": "Особая форма.", "explanation": "Правильно: I grew up in a small village. Grow — grew.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u02.l06.e06", "type": "fill_gap", "text": "Anna ___ ride a bike.", "translation": "Анна не умела ездить на велосипеде.", "answers": [["couldn't", "could not"]], "options": ["couldn't", "can't", "didn't"], "hint": "Прошлое умение.", "explanation": "Правильно: Anna couldn't ride a bike.", "grammar": ["a2.could-past"] },
+        { "id": "a2.u02.l06.e07", "type": "tiles", "from": "ru", "text": "Раньше мы играли в парке.", "answer": "We used to play in the park.", "distractors": ["played", "at"], "hint": "Образец: Used to + play.", "explanation": "Правильно: We used to play in the park.", "grammar": ["a2.used-to"] },
+        { "id": "a2.u02.l06.e08", "type": "type_translation", "from": "ru", "text": "Где ты вырос?", "answers": ["Where did you grow up?"], "hint": "Образец: Where + did + you.", "explanation": "Правильно: Where did you grow up?", "grammar": ["a2.past-simple-questions"] },
+        { "id": "a2.u02.l06.e09", "type": "speak_answer", "question": "Where did you grow up?", "questionRu": "Где вы выросли? Ответьте: I grew up in a village. I grew up in…", "keywords": [["\\bI (grew up|lived|was born)\\b"], ["\\b(village|city|town|Moscow|Kazan|farm|house|flat)\\b"]], "minKeywords": 2, "samples": ["I grew up in a small town.", "I grew up in Moscow."], "difficulty": 3, "hint": "Образец: I grew up in…", "explanation": "Ответ: I grew up in a small town.", "grammar": ["a2.narrative-linkers"] },
+        { "id": "a2.u02.l06.e10", "type": "speak_repeat", "text": "I could swim, but I couldn't ride a bike.", "hint": "Две части с but.", "explanation": "Could [kʊd] — буква l не читается." }
+      ]
+    },
+    {
+      "id": "a2.u02.l07",
+      "kind": "writing",
+      "title": "Мой первый велосипед",
+      "textId": "a2.u02.first-bike",
+      "exercises": [
+        {
+          "id": "a2.u02.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "a2.u02.first-bike",
+          "hint": "Следите за порядком событий.",
+          "explanation": "Автору подарили велосипед в семь лет. Сначала он упал, потом дедушка помог, а летом он научился ездить.",
+          "questions": [
+            { "kind": "mcq", "question": "Сколько лет было автору?", "options": ["seven", "five", "nine"], "answer": 0, "explanation": "В тексте: When I was seven." },
+            { "kind": "mcq", "question": "Какого цвета был велосипед?", "options": ["red", "blue", "black"], "answer": 0, "explanation": "В тексте: It was red." },
+            { "kind": "mcq", "question": "Куда автор поехал в конце?", "options": ["to the lake", "to the forest", "to school"], "answer": 0, "explanation": "В тексте: I rode to the lake with my friends." },
+            { "kind": "tfn", "statement": "The writer fell the first time.", "answer": "true", "explanation": "В тексте: I fell and cried." },
+            { "kind": "tfn", "statement": "The grandfather laughed.", "answer": "false", "explanation": "В тексте: my grandfather smiled." },
+            { "kind": "tfn", "statement": "The writer's sister helped him.", "answer": "not_given", "explanation": "Про сестру в тексте не сказано." }
+          ]
+        },
+        { "id": "a2.u02.l07.e02", "type": "translate_choice", "from": "en", "text": "I remember it now.", "options": ["Я помню это до сих пор.", "Я забыл это.", "Я видел это вчера."], "answer": 0, "hint": "Remember — «помнить».", "explanation": "I remember it now — «я помню это до сих пор»." },
+        { "id": "a2.u02.l07.e03", "type": "fill_gap", "text": "Suddenly, one summer morning, I ___ ride well.", "translation": "Вдруг одним летним утром я стал хорошо ездить.", "answers": [["could"]], "options": ["could", "can", "used"], "hint": "Прошлое умение.", "explanation": "Правильно: I could ride well.", "grammar": ["a2.could-past"] },
+        { "id": "a2.u02.l07.e04", "type": "fill_gap", "text": "My grandfather ___ me.", "translation": "Дедушка помог мне.", "answers": [["helped"]], "options": ["helped", "help", "helps"], "hint": "Прошлое.", "explanation": "Правильно: My grandfather helped me.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u02.l07.e05", "type": "type_translation", "from": "ru", "text": "Сначала я упал и заплакал, но дедушка мне помог.", "answers": ["First, I fell and cried, but my grandfather helped me."], "difficulty": 3, "hint": "Три глагола в прошедшем.", "explanation": "Правильно: First, I fell and cried, but my grandfather helped me.", "grammar": ["a2.narrative-linkers"] },
+        { "id": "a2.u02.l07.e06", "type": "speak_describe", "picture": { "emoji": "🧸" }, "situation": "Расскажите о своём детстве: где вы жили, что любили делать, что умели.", "keywords": [["\\b(I used to|I could|I lived|I grew up|I loved|I played|I was)\\b"], ["\\b(village|city|town|farm|toy|bike|garden|park|swim|ride|play|read|draw|sing)\\b"]], "minKeywords": 2, "samples": ["I grew up in a village. I used to play in the garden. I could swim."], "difficulty": 3, "hint": "Образец: I grew up in… I used to…", "explanation": "Начните с I grew up in…, потом добавьте I used to… и I could…", "grammar": ["a2.used-to"] },
+        { "id": "a2.u02.l07.e07", "type": "speak_repeat", "text": "Finally, I rode to the lake with my friends.", "hint": "Рассказ плавной интонацией.", "explanation": "Правильно: Finally [ˈfaɪnəli], rode [roʊd]." },
+        {
+          "id": "a2.u02.l07.e08",
+          "type": "write",
+          "task": "Напишите о своём детстве: где вы выросли, что любили делать, что умели и не умели, какое событие запомнили. Например: I grew up in a village. I used to ride a bike. I could swim. One day I fell and cried.",
+          "minWords": 40,
+          "maxWords": 110,
+          "criteria": [
+            { "id": "used", "label": "Есть used to", "patterns": ["\\bused to\\b"] },
+            { "id": "could", "label": "Есть could или couldn't", "patterns": ["\\b(could|couldn't|could not)\\b"] },
+            { "id": "link", "label": "Есть first, then, after that, suddenly или finally", "patterns": ["\\b(first|then|after that|suddenly|finally|when)\\b"] },
+            { "id": "past", "label": "Есть глаголы в прошедшем времени", "patterns": ["\\b(grew|lived|was|were|went|played|rode|fell|loved|had|saw|made|moved|visited|laughed|cried|smiled|won|lost|remembered)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\buse to [a-z]+\\b", "message": "В утверждении нужно used to: I used to live, а не I use to live." },
+            { "pattern": "\\bdidn't used to\\b", "message": "После didn't — use без -d: didn't use to." },
+            { "pattern": "\\bused to [a-z]+ing\\b", "message": "После used to — глагол без -ing: used to live." },
+            { "pattern": "\\bI can [a-z]+ when I was\\b", "message": "Для прошлого нужно could: I could swim when I was five." },
+            { "pattern": "\\bcouldn't to\\b", "message": "После couldn't — глагол без to." }
+          ],
+          "samples": [
+            "I grew up in a small village. My grandparents had a farm and I used to ride a horse every day. I could swim well, but I couldn't ride a bike. One day I fell and cried. After that, my grandfather helped me. Finally, I could ride, and I was happy.",
+            "When I was a child, I lived in a big city. I used to play in the park with my sister. In summer we swam in the lake. I could draw, but I couldn't sing. I remember my first toy. It was funny and I loved it."
+          ],
+          "difficulty": 3,
+          "hint": "План: где вырос → что любил → что умел → случай.",
+          "explanation": "В рассказе о детстве используйте used to для привычек и could для умений. Для событий — Past Simple и слова first, then, finally.",
+          "grammar": ["a2.narrative-linkers", "a2.used-to", "a2.could-past"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "a2.u02.test.e01", "type": "match_pairs", "pairs": [{ "en": "village", "ru": "деревня" }, { "en": "farm", "ru": "ферма" }, { "en": "forest", "ru": "лес" }, { "en": "lake", "ru": "озеро" }, { "en": "summer", "ru": "лето" }], "hint": "Слова про природу и деревню.", "explanation": "Village — деревня, farm — ферма, forest — лес, lake — озеро, summer — лето." },
+      { "id": "a2.u02.test.e02", "type": "translate_choice", "from": "ru", "text": "вдруг", "options": ["suddenly", "finally", "later"], "answer": 0, "hint": "Неожиданно.", "explanation": "Suddenly — «вдруг», finally — «наконец»." },
+      { "id": "a2.u02.test.e03", "type": "fill_gap", "text": "I ___ to live in a village.", "translation": "Раньше я жил в деревне.", "answers": [["used"]], "options": ["used", "use", "using"], "hint": "Прошлое.", "explanation": "Правильно: I used to live in a village.", "grammar": ["a2.used-to"] },
+      { "id": "a2.u02.test.e04", "type": "fill_gap", "text": "She didn't ___ to like soup.", "translation": "Раньше она не любила суп.", "answers": [["use"]], "options": ["use", "used", "using"], "hint": "Прошлое уже в didn't.", "explanation": "Правильно: She didn't use to like soup.", "grammar": ["a2.used-to"] },
+      { "id": "a2.u02.test.e05", "type": "fill_gap", "text": "I ___ swim when I was five.", "translation": "Я умел плавать в пять лет.", "answers": [["could"]], "options": ["could", "can", "am"], "hint": "Прошлое умение.", "explanation": "Правильно: I could swim when I was five.", "grammar": ["a2.could-past"] },
+      { "id": "a2.u02.test.e06", "type": "fill_gap", "text": "He ___ ride a bike.", "translation": "Он не умел ездить на велосипеде.", "answers": [["couldn't", "could not"]], "options": ["couldn't", "can't", "didn't"], "hint": "Отрицание в прошлом.", "explanation": "Правильно: He couldn't ride a bike.", "grammar": ["a2.could-past"] },
+      { "id": "a2.u02.test.e07", "type": "fill_gap", "text": "First, I got up. ___, I had breakfast.", "translation": "Сначала я встал. Потом позавтракал.", "answers": [["Then"]], "options": ["Then", "Finally", "First"], "hint": "Слово «потом».", "explanation": "Правильно: First, I got up. Then, I had breakfast.", "grammar": ["a2.narrative-linkers"] },
+      { "id": "a2.u02.test.e08", "type": "fill_gap", "text": "I ___ my bag on the bus.", "translation": "Я потерял сумку в автобусе.", "answers": [["lost"]], "options": ["lost", "lose", "losed"], "hint": "Особая форма.", "explanation": "Правильно: I lost my bag on the bus.", "grammar": ["a2.past-simple-irregular"] },
+      { "id": "a2.u02.test.e09", "type": "error_correction", "text": "I use to live in a village.", "wrong": "use to", "correction": "used to", "options": ["used to", "using to", "uses to"], "hint": "Для прошлого.", "explanation": "Правильно: I used to live in a village.", "grammar": ["a2.used-to"] },
+      { "id": "a2.u02.test.e10", "type": "error_correction", "text": "I can swim when I was five.", "wrong": "can", "correction": "could", "options": ["could", "cans", "was"], "hint": "Прошлое.", "explanation": "Правильно: I could swim when I was five.", "grammar": ["a2.could-past"] },
+      { "id": "a2.u02.test.e11", "type": "error_correction", "text": "She could swam.", "wrong": "swam", "correction": "swim", "options": ["swim", "swims", "swimming"], "hint": "После could — без изменений.", "explanation": "Правильно: She could swim.", "grammar": ["a2.could-past"] },
+      { "id": "a2.u02.test.e12", "type": "listen_choice", "audio": "I grew up in a small village.", "question": "Что вы слышите?", "options": ["I grew up in a small village.", "I live in a small village.", "I grew up in a big city."], "answer": 0, "hint": "Рассказ о детстве.", "explanation": "I grew up in a small village — «я вырос в небольшой деревне».", "grammar": ["a2.past-simple-irregular"] },
+      { "id": "a2.u02.test.e13", "type": "listen_dictation", "text": "We swam in the lake.", "hint": "Пять слов.", "explanation": "We swam in the lake — «мы купались в озере»." },
+      { "id": "a2.u02.test.e14", "type": "tiles", "from": "ru", "text": "Раньше мы жили на ферме.", "answer": "We used to live on a farm.", "distractors": ["lived", "in"], "difficulty": 2, "hint": "Образец: Used to + live.", "explanation": "Правильно: We used to live on a farm.", "grammar": ["a2.used-to"] },
+      { "id": "a2.u02.test.e15", "type": "type_translation", "from": "ru", "text": "Ты умел читать в шесть лет?", "answers": ["Could you read when you were six?"], "difficulty": 2, "hint": "Образец: Could + you.", "explanation": "Правильно: Could you read when you were six?", "grammar": ["a2.could-past"] },
+      { "id": "a2.u02.test.e16", "type": "speak_repeat", "text": "I used to ride a bike, but I couldn't swim.", "hint": "Две части с but.", "explanation": "Правильно: Used to — [juːst tuː]; couldn't — [ˈkʊdnt]." }
+    ]
+  }
+}

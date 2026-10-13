@@ -1,0 +1,321 @@
+{
+  "id": "a2.u03",
+  "level": "A2",
+  "order": 3,
+  "title": { "en": "Trips in the past", "ru": "Путешествия в прошлом" },
+  "description": "Рассказываем о поездках: куда ездили, как добирались, где остановились, сколько пробыли. Месяцы и даты, вопросы о прошлом с how long и who, предлоги arrive in, on the beach.",
+  "goals": [
+    "Могу назвать месяцы и дату: on the fifth of June, in July.",
+    "Могу рассказать о поездке: We flew to Rome and stayed at a small hotel.",
+    "Могу спросить о поездке друга: How long did you stay? Who did you go with?",
+    "Могу правильно сказать arrive in, arrive at, on the beach, in the sea.",
+    "Могу назвать вещи и места для путешествия: airport, suitcase, island, mountain.",
+    "Могу написать короткий рассказ о поездке."
+  ],
+  "grammar": ["a2.dates-months", "a2.travel-questions", "a2.travel-prepositions"],
+  "troubles": ["prepositions"],
+  "words": [
+    { "id": "trip", "en": "trip", "ipa": "trɪp", "pos": "noun", "ru": ["поездка"], "example": { "en": "We went on a trip to the mountains.", "ru": "Мы ездили в горы." }, "topics": ["travel"] },
+    { "id": "holiday", "en": "holiday", "ipa": "ˈhɑːlɪdeɪ", "pos": "noun", "ru": ["отпуск", "каникулы", "праздник"], "example": { "en": "My holiday was wonderful.", "ru": "Мой отпуск был замечательным." }, "note": "В британском английском holiday — «отпуск». В американском чаще vacation.", "topics": ["travel"] },
+    { "id": "beach", "en": "beach", "ipa": "biːtʃ", "pos": "noun", "ru": ["пляж"], "example": { "en": "We walked on the beach.", "ru": "Мы гуляли по пляжу." }, "picture": { "emoji": "🏖️" }, "topics": ["travel"] },
+    { "id": "sea", "en": "sea", "ipa": "siː", "pos": "noun", "ru": ["море"], "example": { "en": "We swam in the sea.", "ru": "Мы плавали в море." }, "picture": { "emoji": "🌊" }, "topics": ["nature"] },
+    { "id": "mountain", "en": "mountain", "ipa": "ˈmaʊntən", "pos": "noun", "ru": ["гора"], "example": { "en": "We climbed a mountain.", "ru": "Мы поднялись на гору." }, "picture": { "emoji": "⛰️" }, "topics": ["nature"] },
+    { "id": "island", "en": "island", "ipa": "ˈaɪlənd", "pos": "noun", "ru": ["остров"], "example": { "en": "We went to an island in July.", "ru": "В июле мы поехали на остров." }, "note": "Буква s в слове island не читается: [ˈaɪlənd].", "picture": { "emoji": "🏝️" }, "topics": ["nature"] },
+    { "id": "airport", "en": "airport", "ipa": "ˈerpɔːrt", "pos": "noun", "ru": ["аэропорт"], "example": { "en": "We arrived at the airport at ten.", "ru": "Мы приехали в аэропорт в десять." }, "topics": ["travel"] },
+    { "id": "plane", "en": "plane", "ipa": "pleɪn", "pos": "noun", "ru": ["самолёт"], "example": { "en": "We went by plane.", "ru": "Мы ехали на самолёте." }, "picture": { "emoji": "✈️" }, "topics": ["travel"] },
+    { "id": "flight", "en": "flight", "ipa": "flaɪt", "pos": "noun", "ru": ["рейс", "перелёт"], "example": { "en": "The flight was on the second of August.", "ru": "Рейс был второго августа." }, "topics": ["travel"] },
+    { "id": "suitcase", "en": "suitcase", "ipa": "ˈsuːtkeɪs", "pos": "noun", "ru": ["чемодан"], "example": { "en": "I packed my suitcase.", "ru": "Я собрал чемодан." }, "picture": { "emoji": "🧳" }, "topics": ["travel"] },
+    { "id": "camera", "en": "camera", "ipa": "ˈkæmrə", "pos": "noun", "ru": ["фотоаппарат", "камера"], "example": { "en": "I took many photos with my camera.", "ru": "Я сделал много фото на фотоаппарат." }, "picture": { "emoji": "📷" }, "topics": ["travel"] },
+    { "id": "tourist", "en": "tourist", "ipa": "ˈtʊrɪst", "pos": "noun", "ru": ["турист"], "example": { "en": "There were many tourists in the town.", "ru": "В городе было много туристов." }, "topics": ["travel"] },
+    { "id": "guide", "en": "guide", "ipa": "ɡaɪd", "pos": "noun", "ru": ["гид"], "example": { "en": "The guide told us a story.", "ru": "Гид рассказал нам историю." }, "topics": ["travel"] },
+    { "id": "souvenir", "en": "souvenir", "ipa": "ˌsuːvəˈnɪr", "pos": "noun", "ru": ["сувенир"], "example": { "en": "I bought a souvenir for my sister.", "ru": "Я купил сестре сувенир." }, "topics": ["travel"] },
+    { "id": "country", "en": "country", "ipa": "ˈkʌntri", "pos": "noun", "ru": ["страна"], "example": { "en": "Spain is a beautiful country.", "ru": "Испания — красивая страна." }, "forms": { "plural": "countries" }, "topics": ["travel"] },
+    { "id": "abroad", "en": "abroad", "ipa": "əˈbrɔːd", "pos": "adv", "ru": ["за границей", "за границу"], "example": { "en": "We went abroad in summer.", "ru": "Летом мы ездили за границу." }, "note": "Abroad — без предлога: go abroad, а не go to abroad.", "topics": ["travel"] },
+    { "id": "travel", "en": "travel", "ipa": "ˈtrævəl", "pos": "verb", "ru": ["путешествовать"], "example": { "en": "We travelled to Rome.", "ru": "Мы путешествовали в Рим." }, "forms": { "third": "travels" }, "note": "В британском английском в прошедшем времени пишут travelled, в американском — traveled.", "topics": ["travel"] },
+    { "id": "fly", "en": "fly", "ipa": "flaɪ", "pos": "verb", "ru": ["лететь"], "example": { "en": "We flew to Rome.", "ru": "Мы летали в Рим." }, "forms": { "third": "flies" }, "topics": ["travel"] },
+    { "id": "drive", "en": "drive", "ipa": "draɪv", "pos": "verb", "ru": ["ехать (на машине)", "водить"], "example": { "en": "We drove to the mountains.", "ru": "Мы ехали в горы на машине." }, "forms": { "third": "drives" }, "topics": ["travel"] },
+    { "id": "arrive", "en": "arrive", "ipa": "əˈraɪv", "pos": "verb", "ru": ["приезжать", "прибывать"], "example": { "en": "We arrived at the hotel at six.", "ru": "Мы приехали в отель в шесть." }, "forms": { "third": "arrives" }, "topics": ["travel"] },
+    { "id": "book#verb", "en": "book", "ipa": "bʊk", "pos": "verb", "ru": ["бронировать"], "example": { "en": "I booked a hotel.", "ru": "Я забронировал отель." }, "forms": { "third": "books" }, "topics": ["travel"] },
+    { "id": "pack", "en": "pack", "ipa": "pæk", "pos": "verb", "ru": ["собирать (вещи)"], "example": { "en": "I packed my suitcase.", "ru": "Я собрал чемодан." }, "forms": { "third": "packs" }, "topics": ["travel"] },
+    { "id": "miss", "en": "miss", "ipa": "mɪs", "pos": "verb", "ru": ["опоздать (на рейс)", "скучать", "пропустить"], "example": { "en": "We missed the train.", "ru": "Мы опоздали на поезд." }, "forms": { "third": "misses" }, "topics": ["travel"] },
+    { "id": "wonderful", "en": "wonderful", "ipa": "ˈwʌndɚfəl", "pos": "adj", "ru": ["замечательный"], "example": { "en": "The trip was wonderful.", "ru": "Поездка была замечательной." }, "topics": ["adjectives"] },
+    { "id": "crowded", "en": "crowded", "ipa": "ˈkraʊdɪd", "pos": "adj", "ru": ["многолюдный"], "example": { "en": "The beach was crowded.", "ru": "Пляж был многолюдным." }, "topics": ["adjectives"] },
+    { "id": "terrible", "en": "terrible", "ipa": "ˈterəbəl", "pos": "adj", "ru": ["ужасный"], "example": { "en": "The weather was terrible.", "ru": "Погода была ужасной." }, "topics": ["adjectives"] },
+    { "id": "amazing", "en": "amazing", "ipa": "əˈmeɪzɪŋ", "pos": "adj", "ru": ["потрясающий"], "example": { "en": "The mountains were amazing.", "ru": "Горы были потрясающими." }, "topics": ["adjectives"] },
+    { "id": "january", "en": "January", "ipa": "ˈdʒænjuˌeri", "pos": "noun", "ru": ["январь"], "example": { "en": "It is cold in January.", "ru": "В январе холодно." }, "topics": ["months"] },
+    { "id": "february", "en": "February", "ipa": "ˈfebjuˌeri", "pos": "noun", "ru": ["февраль"], "example": { "en": "My birthday is in February.", "ru": "У меня день рождения в феврале." }, "topics": ["months"] },
+    { "id": "march", "en": "March", "ipa": "mɑːrtʃ", "pos": "noun", "ru": ["март"], "example": { "en": "Spring starts in March.", "ru": "Весна начинается в марте." }, "topics": ["months"] },
+    { "id": "april", "en": "April", "ipa": "ˈeɪprəl", "pos": "noun", "ru": ["апрель"], "example": { "en": "It rains in April.", "ru": "В апреле идут дожди." }, "topics": ["months"] },
+    { "id": "may", "en": "May", "ipa": "meɪ", "pos": "noun", "ru": ["май"], "example": { "en": "We visited Rome in May.", "ru": "Мы побывали в Риме в мае." }, "topics": ["months"] },
+    { "id": "june", "en": "June", "ipa": "dʒuːn", "pos": "noun", "ru": ["июнь"], "example": { "en": "Summer starts in June.", "ru": "Лето начинается в июне." }, "topics": ["months"] },
+    { "id": "july", "en": "July", "ipa": "dʒʊˈlaɪ", "pos": "noun", "ru": ["июль"], "example": { "en": "We went to the island in July.", "ru": "В июле мы поехали на остров." }, "topics": ["months"] },
+    { "id": "august", "en": "August", "ipa": "ˈɔːɡəst", "pos": "noun", "ru": ["август"], "example": { "en": "It was hot in August.", "ru": "В августе было жарко." }, "topics": ["months"] },
+    { "id": "september", "en": "September", "ipa": "sepˈtembɚ", "pos": "noun", "ru": ["сентябрь"], "example": { "en": "School starts in September.", "ru": "Школа начинается в сентябре." }, "topics": ["months"] },
+    { "id": "october", "en": "October", "ipa": "ɑːkˈtoʊbɚ", "pos": "noun", "ru": ["октябрь"], "example": { "en": "It is windy in October.", "ru": "В октябре ветрено." }, "topics": ["months"] },
+    { "id": "november", "en": "November", "ipa": "noʊˈvembɚ", "pos": "noun", "ru": ["ноябрь"], "example": { "en": "It is cloudy in November.", "ru": "В ноябре облачно." }, "topics": ["months"] },
+    { "id": "december", "en": "December", "ipa": "dɪˈsembɚ", "pos": "noun", "ru": ["декабрь"], "example": { "en": "It snows in December.", "ru": "В декабре идёт снег." }, "topics": ["months"] },
+    { "id": "date", "en": "date", "ipa": "deɪt", "pos": "noun", "ru": ["дата", "число"], "example": { "en": "What is the date today?", "ru": "Какое сегодня число?" }, "topics": ["months"] },
+    { "id": "second", "en": "second", "ipa": "ˈsekənd", "pos": "det", "ru": ["второй"], "example": { "en": "The flight was on the second of August.", "ru": "Рейс был второго августа." }, "topics": ["months"] },
+    { "id": "third", "en": "third", "ipa": "θɝːd", "pos": "det", "ru": ["третий"], "example": { "en": "My birthday is on the third of May.", "ru": "У меня день рождения третьего мая." }, "troubles": ["pron-th"], "topics": ["months"] },
+    { "id": "fourth", "en": "fourth", "ipa": "fɔːrθ", "pos": "det", "ru": ["четвёртый"], "example": { "en": "We arrived on the fourth of June.", "ru": "Мы приехали четвёртого июня." }, "topics": ["months"] },
+    { "id": "fifth", "en": "fifth", "ipa": "fɪfθ", "pos": "det", "ru": ["пятый"], "example": { "en": "I went home on the fifth of July.", "ru": "Я поехал домой пятого июля." }, "topics": ["months"] },
+    { "id": "how-long", "en": "how long", "ipa": "haʊ lɔːŋ", "pos": "phrase", "ru": ["как долго"], "example": { "en": "How long did you stay?", "ru": "Как долго вы пробыли?" }, "topics": ["travel"] }
+  ],
+  "texts": [
+    {
+      "id": "a2.u03.holiday",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "How was your holiday?", "ru": "Как прошёл отпуск?" },
+      "speakers": [
+        { "id": "tom", "name": "Tom", "voice": "male" },
+        { "id": "anna", "name": "Anna", "voice": "female" }
+      ],
+      "lines": [
+        { "speaker": "tom", "en": "Anna, how was your holiday?", "ru": "Анна, как прошёл отпуск?" },
+        { "speaker": "anna", "en": "It was wonderful! We went to an island in July.", "ru": "Замечательно! В июле мы ездили на остров." },
+        { "speaker": "tom", "en": "How did you get there?", "ru": "Как вы туда добрались?" },
+        { "speaker": "anna", "en": "We flew to Rome, and then we took a ship.", "ru": "Мы полетели в Рим, а потом сели на корабль." },
+        { "speaker": "tom", "en": "How long did you stay?", "ru": "Как долго вы пробыли?" },
+        { "speaker": "anna", "en": "For two weeks. We stayed at a small hotel near the beach.", "ru": "Две недели. Мы остановились в небольшом отеле возле пляжа." },
+        { "speaker": "tom", "en": "Who did you go with?", "ru": "С кем вы ездили?" },
+        { "speaker": "anna", "en": "With my sister. We swam in the sea and took many photos. And I bought a gift for you!", "ru": "С сестрой. Мы плавали в море и сделали много фото. И я купила подарок для тебя!" }
+      ]
+    },
+    {
+      "id": "a2.u03.mountains",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "A trip to the mountains", "ru": "Поездка в горы" },
+      "lines": [
+        { "en": "Last August Max went on a trip to the mountains with his friends. They drove to a small hotel and arrived on the second of August.", "ru": "В прошлом августе Макс ездил с друзьями в горы. Они доехали на машине до небольшого отеля и приехали второго августа." },
+        { "en": "The weather was sunny, but it was cold in the evening. Every day they walked in the forest and swam in the lake. The hotel was cheap, but the food was wonderful.", "ru": "Погода была солнечной, но вечером было холодно. Каждый день они гуляли по лесу и плавали в озере. Отель был недорогим, а еда замечательной." },
+        { "en": "They stayed for four days. On the fifth of August they packed their suitcases and went home. It was an amazing trip, and Max took a hundred photos with his camera.", "ru": "Они пробыли четыре дня. Пятого августа они собрали чемоданы и поехали домой. Это была потрясающая поездка, и Макс сделал сто фотографий на фотоаппарат." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "a2.u03.l01",
+      "kind": "vocabulary",
+      "title": "Путешествие: места и вещи",
+      "exercises": [
+        { "id": "a2.u03.l01.e01", "type": "match_pairs", "pairs": [{ "en": "trip", "ru": "поездка" }, { "en": "holiday", "ru": "отпуск" }, { "en": "beach", "ru": "пляж" }, { "en": "sea", "ru": "море" }, { "en": "mountain", "ru": "гора" }], "hint": "Все слова про отдых.", "explanation": "Trip — поездка, holiday — отпуск, beach — пляж, sea — море, mountain — гора." },
+        { "id": "a2.u03.l01.e02", "type": "match_pairs", "pairs": [{ "en": "island", "ru": "остров" }, { "en": "airport", "ru": "аэропорт" }, { "en": "plane", "ru": "самолёт" }, { "en": "flight", "ru": "рейс" }, { "en": "suitcase", "ru": "чемодан" }], "hint": "Слова про перелёт.", "explanation": "Island — остров, airport — аэропорт, plane — самолёт, flight — рейс, suitcase — чемодан." },
+        { "id": "a2.u03.l01.e03", "type": "match_pairs", "pairs": [{ "en": "camera", "ru": "фотоаппарат" }, { "en": "tourist", "ru": "турист" }, { "en": "guide", "ru": "гид" }, { "en": "souvenir", "ru": "сувенир" }, { "en": "country", "ru": "страна" }], "hint": "Слова про туризм.", "explanation": "Camera — фотоаппарат, tourist — турист, guide — гид, souvenir — сувенир, country — страна." },
+        { "id": "a2.u03.l01.e04", "type": "picture_choice", "mode": "picture-to-word", "word": "island", "distractors": ["beach", "mountain"], "hint": "Земля среди воды.", "explanation": "Island — «остров»: [ˈaɪlənd]. Буква s не читается." },
+        { "id": "a2.u03.l01.e05", "type": "picture_choice", "mode": "picture-to-word", "word": "suitcase", "distractors": ["camera", "plane"], "hint": "В неё собирают вещи.", "explanation": "Suitcase — «чемодан»: [ˈsuːtkeɪs]." },
+        { "id": "a2.u03.l01.e06", "type": "picture_choice", "mode": "word-to-picture", "word": "mountain", "distractors": ["sea", "beach"], "hint": "Высокая вершина.", "explanation": "Mountain — «гора»: [ˈmaʊntən]." },
+        { "id": "a2.u03.l01.e07", "type": "picture_choice", "mode": "word-to-picture", "word": "camera", "distractors": ["suitcase", "plane"], "hint": "Ей делают фото.", "explanation": "Camera — «фотоаппарат»: [ˈkæmrə]." },
+        { "id": "a2.u03.l01.e08", "type": "translate_choice", "from": "ru", "text": "за границей", "options": ["abroad", "airport", "island"], "answer": 0, "hint": "В другой стране.", "explanation": "Abroad — «за границей». Предлог не нужен: go abroad." },
+        { "id": "a2.u03.l01.e09", "type": "translate_choice", "from": "en", "text": "holiday", "options": ["отпуск", "поездка", "праздник"], "answer": 0, "hint": "В британском английском это отдых.", "explanation": "Holiday — «отпуск, каникулы»." },
+        { "id": "a2.u03.l01.e10", "type": "fill_gap", "text": "We went to an ___ in July.", "translation": "В июле мы поехали на остров.", "answers": [["island"]], "options": ["island", "airport", "suitcase"], "hint": "Окружён водой.", "explanation": "Правильно: We went to an island in July." },
+        { "id": "a2.u03.l01.e11", "type": "fill_gap", "text": "We arrived at the ___ at ten.", "translation": "Мы приехали в аэропорт в десять.", "answers": [["airport"]], "options": ["airport", "island", "country"], "hint": "Оттуда летают самолёты.", "explanation": "Правильно: We arrived at the airport at ten." },
+        { "id": "a2.u03.l01.e12", "type": "listen_choice", "audio": "suitcase", "question": "Что вы слышите?", "options": ["suitcase", "souvenir", "tourist"], "answer": 0, "hint": "Первый слог — [suːt].", "explanation": "Suitcase [ˈsuːtkeɪs] — «чемодан»." },
+        { "id": "a2.u03.l01.e13", "type": "listen_dictation", "text": "We swam in the sea.", "hint": "Пять слов.", "explanation": "We swam in the sea — «мы плавали в море»." },
+        { "id": "a2.u03.l01.e14", "type": "word_stress", "word": "souvenir", "syllables": ["sou", "ve", "nir"], "stress": 2, "hint": "Ударение на последнем слоге.", "explanation": "sou-ve-NIR — ударение на последний слог." }
+      ]
+    },
+    {
+      "id": "a2.u03.l02",
+      "kind": "vocabulary",
+      "title": "Что делают в поездке",
+      "exercises": [
+        { "id": "a2.u03.l02.e01", "type": "match_pairs", "pairs": [{ "en": "travel", "ru": "путешествовать" }, { "en": "fly", "ru": "лететь" }, { "en": "drive", "ru": "ехать на машине" }, { "en": "arrive", "ru": "приезжать" }, { "en": "book", "ru": "бронировать" }], "hint": "Все глаголы про дорогу.", "explanation": "Travel — путешествовать, fly — лететь, drive — ехать на машине, arrive — приезжать, book — бронировать." },
+        { "id": "a2.u03.l02.e02", "type": "match_pairs", "pairs": [{ "en": "pack", "ru": "собирать вещи" }, { "en": "miss", "ru": "опоздать" }, { "en": "wonderful", "ru": "замечательный" }, { "en": "crowded", "ru": "многолюдный" }, { "en": "terrible", "ru": "ужасный" }], "hint": "Wonderful и terrible — противоположные.", "explanation": "Pack — собирать вещи, miss — опоздать, wonderful — замечательный, crowded — многолюдный, terrible — ужасный." },
+        { "id": "a2.u03.l02.e03", "type": "translate_choice", "from": "en", "text": "amazing", "options": ["потрясающий", "ужасный", "скучный"], "answer": 0, "hint": "Очень хороший.", "explanation": "Amazing [əˈmeɪzɪŋ] — «потрясающий»." },
+        { "id": "a2.u03.l02.e04", "type": "translate_choice", "from": "ru", "text": "Мы опоздали на поезд.", "options": ["We missed the train.", "We lost the train.", "We broke the train."], "answer": 0, "hint": "Miss — не успеть.", "explanation": "We missed the train. Miss — «опоздать, пропустить»." },
+        { "id": "a2.u03.l02.e05", "type": "fill_gap", "text": "We ___ to Rome by plane.", "translation": "Мы летали в Рим на самолёте.", "answers": [["flew"]], "options": ["flew", "fly", "flied"], "hint": "Особая форма.", "explanation": "Правильно: We flew to Rome. Fly — flew.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u03.l02.e06", "type": "fill_gap", "text": "We ___ to the mountains by car.", "translation": "Мы ехали в горы на машине.", "answers": [["drove"]], "options": ["drove", "drived", "drive"], "hint": "Особая форма.", "explanation": "Правильно: We drove to the mountains. Drive — drove.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u03.l02.e07", "type": "fill_gap", "text": "I ___ a hotel near the beach.", "translation": "Я забронировал отель возле пляжа.", "answers": [["booked"]], "options": ["booked", "book", "books"], "hint": "Правильный глагол.", "explanation": "Правильно: I booked a hotel near the beach.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u03.l02.e08", "type": "fill_gap", "text": "I ___ my suitcase in ten minutes.", "translation": "Я собрал чемодан за десять минут.", "answers": [["packed"]], "options": ["packed", "pack", "packs"], "hint": "Правильный глагол.", "explanation": "Правильно: I packed my suitcase.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u03.l02.e09", "type": "fill_gap", "text": "The weather was ___. It rained every day.", "translation": "Погода была ужасной. Каждый день шёл дождь.", "answers": [["terrible"]], "options": ["terrible", "wonderful", "amazing"], "hint": "Дождь каждый день.", "explanation": "Правильно: The weather was terrible. It rained every day.", "grammar": ["a2.was-were"] },
+        { "id": "a2.u03.l02.e10", "type": "fill_gap", "text": "The beach was ___. There were many people.", "translation": "Пляж был многолюдным. Там было много людей.", "answers": [["crowded"]], "options": ["crowded", "wonderful", "cold"], "hint": "Много людей.", "explanation": "Правильно: The beach was crowded.", "grammar": ["a2.was-were"] },
+        { "id": "a2.u03.l02.e11", "type": "listen_choice", "audio": "We arrived on Monday.", "question": "Что вы слышите?", "options": ["We arrived on Monday.", "We arrive on Monday.", "We left on Monday."], "answer": 0, "hint": "Прошедшее время.", "explanation": "We arrived on Monday — «мы приехали в понедельник».", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u03.l02.e12", "type": "listen_dictation", "text": "The mountains were amazing.", "hint": "Четыре слова.", "explanation": "The mountains were amazing — «горы были потрясающими»." },
+        { "id": "a2.u03.l02.e13", "type": "type_translation", "from": "ru", "text": "приезжать", "answers": ["arrive"], "hint": "Шесть букв.", "explanation": "Arrive [əˈraɪv] — «приезжать»." },
+        { "id": "a2.u03.l02.e14", "type": "minimal_pair", "pair": [{ "en": "leave", "ipa": "liːv" }, { "en": "live", "ipa": "lɪv" }], "say": 0, "hint": "Здесь слышен долгий гласный.", "explanation": "Leave [liːv] — «уезжать», долгий гласный. Live [lɪv] — «жить», короткий.", "troubles": ["pron-vowels"] }
+      ]
+    },
+    {
+      "id": "a2.u03.l03",
+      "kind": "vocabulary",
+      "title": "Месяцы и даты",
+      "grammar": "a2.dates-months",
+      "exercises": [
+        { "id": "a2.u03.l03.e01", "type": "match_pairs", "pairs": [{ "en": "January", "ru": "январь" }, { "en": "February", "ru": "февраль" }, { "en": "March", "ru": "март" }, { "en": "April", "ru": "апрель" }, { "en": "May", "ru": "май" }], "hint": "Зима и весна.", "explanation": "January — январь, February — февраль, March — март, April — апрель, May — май." },
+        { "id": "a2.u03.l03.e02", "type": "match_pairs", "pairs": [{ "en": "June", "ru": "июнь" }, { "en": "July", "ru": "июль" }, { "en": "August", "ru": "август" }, { "en": "September", "ru": "сентябрь" }, { "en": "October", "ru": "октябрь" }], "hint": "Лето и осень.", "explanation": "June — июнь, July — июль, August — август, September — сентябрь, October — октябрь." },
+        { "id": "a2.u03.l03.e03", "type": "match_pairs", "pairs": [{ "en": "November", "ru": "ноябрь" }, { "en": "December", "ru": "декабрь" }, { "en": "date", "ru": "дата" }, { "en": "second", "ru": "второй" }, { "en": "third", "ru": "третий" }], "hint": "Последние месяцы и порядковые числа.", "explanation": "November — ноябрь, December — декабрь, date — дата, second — второй, third — третий." },
+        { "id": "a2.u03.l03.e04", "type": "match_pairs", "pairs": [{ "en": "the first", "ru": "первое" }, { "en": "the second", "ru": "второе" }, { "en": "the third", "ru": "третье" }, { "en": "the fourth", "ru": "четвёртое" }, { "en": "the fifth", "ru": "пятое" }], "hint": "Порядковые числа.", "explanation": "The first — первое, the second — второе, the third — третье, the fourth — четвёртое, the fifth — пятое." },
+        { "id": "a2.u03.l03.e05", "type": "fill_gap", "text": "My birthday is ___ May.", "translation": "Мой день рождения в мае.", "answers": [["in"]], "options": ["in", "on", "at"], "hint": "С месяцем.", "explanation": "My birthday is in May. С месяцем — in.", "grammar": ["a2.dates-months"], "troubles": ["prepositions"] },
+        { "id": "a2.u03.l03.e06", "type": "fill_gap", "text": "I arrived ___ the fifth of June.", "translation": "Я приехал пятого июня.", "answers": [["on"]], "options": ["on", "in", "at"], "hint": "С датой.", "explanation": "I arrived on the fifth of June. С датой — on.", "grammar": ["a2.dates-months"], "troubles": ["prepositions"] },
+        { "id": "a2.u03.l03.e07", "type": "fill_gap", "text": "We went there ___ July.", "translation": "Мы ездили туда в июле.", "answers": [["in"]], "options": ["in", "on", "at"], "hint": "С месяцем.", "explanation": "Правильно: We went there in July.", "grammar": ["a2.dates-months"] },
+        { "id": "a2.u03.l03.e08", "type": "error_correction", "text": "My birthday is on May.", "wrong": "on", "correction": "in", "options": ["in", "at", "to"], "hint": "С месяцем другой предлог.", "explanation": "Правильно: My birthday is in May.", "grammar": ["a2.dates-months"], "troubles": ["prepositions"] },
+        { "id": "a2.u03.l03.e09", "type": "error_correction", "text": "I arrived in the fifth of June.", "wrong": "in", "correction": "on", "options": ["on", "at", "to"], "hint": "С датой другой предлог.", "explanation": "Правильно: I arrived on the fifth of June.", "grammar": ["a2.dates-months"], "troubles": ["prepositions"] },
+        { "id": "a2.u03.l03.e10", "type": "tiles", "from": "ru", "text": "Рейс был второго августа.", "answer": "The flight was on the second of August.", "distractors": ["in", "at"], "difficulty": 2, "hint": "С датой — on.", "explanation": "Правильно: The flight was on the second of August.", "grammar": ["a2.dates-months"] },
+        { "id": "a2.u03.l03.e11", "type": "type_translation", "from": "ru", "text": "Мы поехали на остров в июле.", "answers": ["We went to the island in July.", "We went to an island in July."], "hint": "В июле — in July.", "explanation": "Правильно: We went to an island in July.", "grammar": ["a2.dates-months"] },
+        { "id": "a2.u03.l03.e12", "type": "listen_choice", "audio": "We arrived on the fourth of June.", "question": "Какая дата?", "options": ["the fourth of June", "the fifth of June", "the third of June"], "answer": 0, "hint": "Четвёртое.", "explanation": "We arrived on the fourth of June — «мы приехали четвёртого июня».", "grammar": ["a2.dates-months"] },
+        { "id": "a2.u03.l03.e13", "type": "listen_dictation", "text": "My birthday is in September.", "hint": "Пять слов.", "explanation": "My birthday is in September — «мой день рождения в сентябре»." },
+        { "id": "a2.u03.l03.e14", "type": "speak_answer", "question": "When is your birthday?", "questionRu": "Когда ваш день рождения? Ответьте: My birthday is in… или It is on the … of …", "keywords": [["\\b(birthday|it is|it's)\\b"], ["\\b(January|February|March|April|May|June|July|August|September|October|November|December)\\b"]], "minKeywords": 2, "samples": ["My birthday is in May.", "It is on the fifth of June."], "difficulty": 3, "hint": "Образец: My birthday is in…", "explanation": "Ответ: My birthday is in May.", "grammar": ["a2.dates-months"] },
+        { "id": "a2.u03.l03.e15", "type": "word_stress", "word": "September", "syllables": ["Sep", "tem", "ber"], "stress": 1, "hint": "Ударение на втором слоге.", "explanation": "Sep-TEM-ber — ударение на второй слог." }
+      ]
+    },
+    {
+      "id": "a2.u03.l04",
+      "kind": "grammar",
+      "title": "Расспрашиваем о поездке",
+      "grammar": "a2.travel-questions",
+      "exercises": [
+        { "id": "a2.u03.l04.e01", "type": "fill_gap", "text": "Where ___ you stay?", "translation": "Где вы остановились?", "answers": [["did"]], "options": ["did", "do", "were"], "hint": "Вопрос о прошлом.", "explanation": "Where did you stay? После where — did.", "grammar": ["a2.travel-questions"] },
+        { "id": "a2.u03.l04.e02", "type": "fill_gap", "text": "How ___ did you stay?", "translation": "Как долго вы пробыли?", "answers": [["long"]], "options": ["long", "much", "many"], "hint": "О сроке.", "explanation": "How long did you stay? How long — «как долго».", "grammar": ["a2.travel-questions"] },
+        { "id": "a2.u03.l04.e03", "type": "fill_gap", "text": "How much did the flight ___?", "translation": "Сколько стоил рейс?", "answers": [["cost"]], "options": ["cost", "costs", "costed"], "hint": "После did — без изменений.", "explanation": "Правильно: How much did the flight cost?", "grammar": ["a2.travel-questions"] },
+        { "id": "a2.u03.l04.e04", "type": "fill_gap", "text": "Who did you go ___?", "translation": "С кем вы ездили?", "answers": [["with"]], "options": ["with", "to", "by"], "hint": "Предлог в конце вопроса.", "explanation": "Who did you go with? Предлог стоит в конце.", "grammar": ["a2.travel-questions"] },
+        { "id": "a2.u03.l04.e05", "type": "fill_gap", "text": "We stayed ___ a week.", "translation": "Мы пробыли неделю.", "answers": [["for"]], "options": ["for", "from", "in"], "hint": "Для срока.", "explanation": "We stayed for a week. Срок называют с for.", "grammar": ["a2.travel-questions"], "troubles": ["prepositions"] },
+        { "id": "a2.u03.l04.e06", "type": "fill_gap", "text": "How did you get there? — ___ plane.", "translation": "Как вы туда добрались? — На самолёте.", "answers": [["By"]], "options": ["By", "On", "In"], "hint": "Транспорт.", "explanation": "By plane. Транспорт — с by.", "grammar": ["a1.transport"] },
+        { "id": "a2.u03.l04.e07", "type": "error_correction", "text": "How long you stayed there?", "wrong": "you stayed", "correction": "did you stay", "options": ["did you stay", "you did stay", "are you stay"], "hint": "Нужен did.", "explanation": "Правильно: How long did you stay there?", "grammar": ["a2.travel-questions"], "troubles": ["word-order"] },
+        { "id": "a2.u03.l04.e08", "type": "error_correction", "text": "Who did you went with?", "wrong": "went", "correction": "go", "options": ["go", "goes", "gone"], "hint": "После did — начальная форма.", "explanation": "Правильно: Who did you go with?", "grammar": ["a2.travel-questions"], "troubles": ["tenses"] },
+        { "id": "a2.u03.l04.e09", "type": "error_correction", "text": "We stayed in a week.", "wrong": "in", "correction": "for", "options": ["for", "from", "at"], "hint": "Срок — другой предлог.", "explanation": "Правильно: We stayed for a week.", "grammar": ["a2.travel-questions"], "troubles": ["prepositions"] },
+        { "id": "a2.u03.l04.e10", "type": "tiles", "from": "ru", "text": "Как долго вы пробыли в Риме?", "answer": "How long did you stay in Rome?", "distractors": ["do", "much"], "hint": "Образец: How long + did.", "explanation": "Правильно: How long did you stay in Rome?", "grammar": ["a2.travel-questions"] },
+        { "id": "a2.u03.l04.e11", "type": "tiles", "from": "ru", "text": "С кем вы ездили?", "answer": "Who did you go with?", "distractors": ["went", "to"], "hint": "Образец: Who + did + you.", "explanation": "Правильно: Who did you go with?", "grammar": ["a2.travel-questions"] },
+        { "id": "a2.u03.l04.e12", "type": "type_translation", "from": "ru", "text": "Где вы остановились?", "answers": ["Where did you stay?"], "hint": "Образец: Where + did.", "explanation": "Правильно: Where did you stay?", "grammar": ["a2.travel-questions"] },
+        { "id": "a2.u03.l04.e13", "type": "type_translation", "from": "ru", "text": "Сколько стоил отель?", "answers": ["How much did the hotel cost?"], "difficulty": 2, "hint": "Образец: How much + did.", "explanation": "Правильно: How much did the hotel cost?", "grammar": ["a2.travel-questions"] },
+        { "id": "a2.u03.l04.e14", "type": "speak_answer", "question": "How long did you stay?", "questionRu": "Как долго вы пробыли в последней поездке? Ответьте: We stayed for a week. I stayed for two days.", "keywords": [["\\b(we|I) stayed\\b"], ["\\bfor\\b"]], "minKeywords": 2, "samples": ["We stayed for a week.", "I stayed for two days."], "difficulty": 3, "hint": "Образец: We stayed for…", "explanation": "Ответ: We stayed for a week.", "grammar": ["a2.travel-questions"] },
+        { "id": "a2.u03.l04.e15", "type": "speak_repeat", "text": "How long did you stay and who did you go with?", "hint": "Два вопроса.", "explanation": "Did you — [dɪd ju] звучит слитно." }
+      ]
+    },
+    {
+      "id": "a2.u03.l05",
+      "kind": "grammar",
+      "title": "Arrive in, on the beach, in the sea",
+      "grammar": "a2.travel-prepositions",
+      "exercises": [
+        { "id": "a2.u03.l05.e01", "type": "fill_gap", "text": "We arrived ___ London on Monday.", "translation": "Мы приехали в Лондон в понедельник.", "answers": [["in"]], "options": ["in", "at", "to"], "hint": "Город.", "explanation": "We arrived in London. Город — arrive in.", "grammar": ["a2.travel-prepositions"], "troubles": ["prepositions"] },
+        { "id": "a2.u03.l05.e02", "type": "fill_gap", "text": "We arrived ___ the airport at ten.", "translation": "Мы приехали в аэропорт в десять.", "answers": [["at"]], "options": ["at", "in", "to"], "hint": "Конкретное место.", "explanation": "We arrived at the airport. Место — arrive at.", "grammar": ["a2.travel-prepositions"], "troubles": ["prepositions"] },
+        { "id": "a2.u03.l05.e03", "type": "fill_gap", "text": "We swam ___ the sea.", "translation": "Мы плавали в море.", "answers": [["in"]], "options": ["in", "on", "at"], "hint": "Внутри воды.", "explanation": "Правильно: We swam in the sea.", "grammar": ["a2.travel-prepositions"] },
+        { "id": "a2.u03.l05.e04", "type": "fill_gap", "text": "We walked ___ the beach.", "translation": "Мы гуляли по пляжу.", "answers": [["on"]], "options": ["on", "in", "at"], "hint": "Пляж — поверхность.", "explanation": "Правильно: We walked on the beach.", "grammar": ["a2.travel-prepositions"] },
+        { "id": "a2.u03.l05.e05", "type": "fill_gap", "text": "We flew ___ Rome.", "translation": "Мы летали в Рим.", "answers": [["to"]], "options": ["to", "in", "at"], "hint": "Направление.", "explanation": "We flew to Rome. После fly — to.", "grammar": ["a2.travel-prepositions"] },
+        { "id": "a2.u03.l05.e06", "type": "fill_gap", "text": "We stayed ___ a small hotel.", "translation": "Мы остановились в небольшом отеле.", "answers": [["at"]], "options": ["at", "on", "to"], "hint": "Конкретное место.", "explanation": "Правильно: We stayed at a small hotel.", "grammar": ["a2.travel-prepositions"] },
+        { "id": "a2.u03.l05.e07", "type": "error_correction", "text": "We arrived to the airport.", "wrong": "to", "correction": "at", "options": ["at", "in", "on"], "hint": "После arrive нет to.", "explanation": "Правильно: We arrived at the airport.", "grammar": ["a2.travel-prepositions"], "troubles": ["prepositions"] },
+        { "id": "a2.u03.l05.e08", "type": "error_correction", "text": "I swam at the sea.", "wrong": "at", "correction": "in", "options": ["in", "on", "to"], "hint": "Купаться — в воде.", "explanation": "Правильно: I swam in the sea.", "grammar": ["a2.travel-prepositions"], "troubles": ["prepositions"] },
+        { "id": "a2.u03.l05.e09", "type": "error_correction", "text": "We were in the beach.", "wrong": "in", "correction": "on", "options": ["on", "at", "to"], "hint": "Пляж — другой предлог.", "explanation": "Правильно: We were on the beach.", "grammar": ["a2.travel-prepositions"], "troubles": ["prepositions"] },
+        { "id": "a2.u03.l05.e10", "type": "tiles", "from": "ru", "text": "Мы приехали в Рим в июне.", "answer": "We arrived in Rome in June.", "distractors": ["to", "at"], "hint": "Город — in.", "explanation": "Правильно: We arrived in Rome in June.", "grammar": ["a2.travel-prepositions"] },
+        { "id": "a2.u03.l05.e11", "type": "type_translation", "from": "ru", "text": "Мы ездили в горы.", "answers": ["We went to the mountains."], "hint": "Образец: Go to.", "explanation": "Правильно: We went to the mountains.", "grammar": ["a2.travel-prepositions"] },
+        { "id": "a2.u03.l05.e12", "type": "type_translation", "from": "ru", "text": "Мы гуляли по пляжу и плавали в море.", "answers": ["We walked on the beach and swam in the sea."], "difficulty": 3, "hint": "Образец: On the beach, in the sea.", "explanation": "Правильно: We walked on the beach and swam in the sea.", "grammar": ["a2.travel-prepositions"] },
+        { "id": "a2.u03.l05.e13", "type": "listen_choice", "audio": "We arrived at the hotel at six.", "question": "Что вы слышите?", "options": ["We arrived at the hotel at six.", "We arrived in the hotel at six.", "We left the hotel at six."], "answer": 0, "hint": "Приехали в отель.", "explanation": "We arrived at the hotel at six — «мы приехали в отель в шесть».", "grammar": ["a2.travel-prepositions"] },
+        { "id": "a2.u03.l05.e14", "type": "listen_dictation", "text": "We stayed at a small hotel.", "hint": "Шесть слов.", "explanation": "We stayed at a small hotel — «мы остановились в небольшом отеле»." }
+      ]
+    },
+    {
+      "id": "a2.u03.l06",
+      "kind": "listening",
+      "title": "Как прошёл отпуск?",
+      "textId": "a2.u03.holiday",
+      "exercises": [
+        {
+          "id": "a2.u03.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "a2.u03.holiday",
+          "hint": "Слушайте, куда, на сколько и с кем ездила Анна.",
+          "explanation": "Анна провела две недели на острове с сестрой, добиралась самолётом до Рима и на корабле, остановилась в небольшом отеле у пляжа.",
+          "questions": [
+            { "kind": "mcq", "question": "Когда Анна ездила на остров?", "options": ["in July", "in June", "in August"], "answer": 0, "explanation": "Анна говорит: We went to an island in July." },
+            { "kind": "mcq", "question": "Как долго они пробыли?", "options": ["for two weeks", "for a week", "for two days"], "answer": 0, "explanation": "Анна говорит: For two weeks." },
+            { "kind": "mcq", "question": "С кем ездила Анна?", "options": ["with her sister", "with her friend", "with Tom"], "answer": 0, "explanation": "Анна говорит: With my sister." },
+            { "kind": "tfn", "statement": "Anna flew to Rome.", "answer": "true", "explanation": "Анна говорит: We flew to Rome." },
+            { "kind": "tfn", "statement": "The hotel was far from the beach.", "answer": "false", "explanation": "Анна говорит: a small hotel near the beach." },
+            { "kind": "tfn", "statement": "Anna bought a souvenir for her sister.", "answer": "not_given", "explanation": "Анна купила подарок для Тома, про сестру не сказано." }
+          ]
+        },
+        { "id": "a2.u03.l06.e02", "type": "listen_choice", "audio": "How long did you stay?", "question": "Что вы слышите?", "options": ["How long did you stay?", "How much did you pay?", "How did you get there?"], "answer": 0, "hint": "Вопрос о сроке.", "explanation": "How long did you stay? — «Как долго вы пробыли?»", "grammar": ["a2.travel-questions"] },
+        { "id": "a2.u03.l06.e03", "type": "listen_dictation", "text": "We swam in the sea and took many photos.", "hint": "Восемь слов.", "explanation": "We swam in the sea and took many photos — «мы плавали в море и сделали много фото»." },
+        { "id": "a2.u03.l06.e04", "type": "listen_dictation", "text": "It was wonderful!", "hint": "Три слова.", "explanation": "It was wonderful! — «Это было замечательно!»" },
+        { "id": "a2.u03.l06.e05", "type": "fill_gap", "text": "We ___ to Rome and then took a ship.", "translation": "Мы полетели в Рим, а потом сели на корабль.", "answers": [["flew"]], "options": ["flew", "fly", "flied"], "hint": "Особая форма.", "explanation": "Правильно: We flew to Rome.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u03.l06.e06", "type": "fill_gap", "text": "We stayed ___ two weeks.", "translation": "Мы пробыли две недели.", "answers": [["for"]], "options": ["for", "in", "at"], "hint": "Срок.", "explanation": "Правильно: We stayed for two weeks.", "grammar": ["a2.travel-questions"] },
+        { "id": "a2.u03.l06.e07", "type": "tiles", "from": "ru", "text": "Как вы туда добрались?", "answer": "How did you get there?", "distractors": ["do", "got"], "hint": "Образец: How + did + you.", "explanation": "Правильно: How did you get there?", "grammar": ["a2.travel-questions"] },
+        { "id": "a2.u03.l06.e08", "type": "type_translation", "from": "ru", "text": "Как прошёл отпуск?", "answers": ["How was your holiday?"], "hint": "Holiday — одно.", "explanation": "Правильно: How was your holiday?", "grammar": ["a2.was-were"] },
+        { "id": "a2.u03.l06.e09", "type": "speak_answer", "question": "How was your holiday?", "questionRu": "Как прошёл ваш отпуск? Ответьте: It was wonderful. I went to… для ответа.", "keywords": [["\\b(it was|I went|we went|I visited|we visited|I stayed|we stayed)\\b"], ["\\b(wonderful|great|amazing|terrible|nice|good|boring|crowded|beach|sea|mountains|island|hotel)\\b"]], "minKeywords": 2, "samples": ["It was wonderful. We went to the sea.", "It was amazing. I stayed at a small hotel."], "difficulty": 3, "hint": "Образец: It was… We went…", "explanation": "Ответ: It was wonderful. We stayed at a hotel.", "grammar": ["a2.was-were"] },
+        { "id": "a2.u03.l06.e10", "type": "speak_repeat", "text": "We flew to Rome and stayed at a small hotel near the beach.", "hint": "Говорите плавно.", "explanation": "Правильно: Flew [fluː], stayed [steɪd]." }
+      ]
+    },
+    {
+      "id": "a2.u03.l07",
+      "kind": "writing",
+      "title": "Поездка в горы",
+      "textId": "a2.u03.mountains",
+      "exercises": [
+        {
+          "id": "a2.u03.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "a2.u03.mountains",
+          "hint": "Обратите внимание на даты.",
+          "explanation": "Макс с друзьями ездил в горы в августе: приехали второго, пробыли четыре дня, уехали пятого.",
+          "questions": [
+            { "kind": "mcq", "question": "Как они добирались?", "options": ["by car", "by plane", "by train"], "answer": 0, "explanation": "В тексте: They drove to a small hotel." },
+            { "kind": "mcq", "question": "Когда они приехали?", "options": ["on the second of August", "on the fifth of August", "on the first of August"], "answer": 0, "explanation": "В тексте: arrived on the second of August." },
+            { "kind": "mcq", "question": "Сколько они пробыли?", "options": ["for four days", "for a week", "for two days"], "answer": 0, "explanation": "В тексте: They stayed for four days." },
+            { "kind": "tfn", "statement": "The hotel was expensive.", "answer": "false", "explanation": "В тексте: The hotel was cheap." },
+            { "kind": "tfn", "statement": "They swam in the lake.", "answer": "true", "explanation": "В тексте: swam in the lake." },
+            { "kind": "tfn", "statement": "Max took photos of the forest.", "answer": "not_given", "explanation": "Что именно фотографировал Макс, не сказано." }
+          ]
+        },
+        { "id": "a2.u03.l07.e02", "type": "translate_choice", "from": "en", "text": "The food was wonderful.", "options": ["Еда была замечательной.", "Еда была ужасной.", "Еда была дорогой."], "answer": 0, "hint": "Wonderful — «замечательный».", "explanation": "The food was wonderful — «еда была замечательной»." },
+        { "id": "a2.u03.l07.e03", "type": "fill_gap", "text": "On the fifth of August they ___ their suitcases.", "translation": "Пятого августа они собрали чемоданы.", "answers": [["packed"]], "options": ["packed", "pack", "packs"], "hint": "Прошлое.", "explanation": "Правильно: They packed their suitcases.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "a2.u03.l07.e04", "type": "fill_gap", "text": "Max ___ a hundred photos.", "translation": "Макс сделал сто фотографий.", "answers": [["took"]], "options": ["took", "taked", "take"], "hint": "Особая форма.", "explanation": "Правильно: Max took a hundred photos.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "a2.u03.l07.e05", "type": "type_translation", "from": "ru", "text": "Мы приехали в отель четвёртого июня.", "answers": ["We arrived at the hotel on the fourth of June."], "difficulty": 3, "hint": "Образец: At the hotel, on the fourth.", "explanation": "Правильно: We arrived at the hotel on the fourth of June.", "grammar": ["a2.dates-months", "a2.travel-prepositions"] },
+        { "id": "a2.u03.l07.e06", "type": "speak_describe", "picture": { "emoji": "🏝️" }, "situation": "Расскажите о поездке: куда ездили, когда, как добирались и что делали.", "keywords": [["\\b(we|I) (went|flew|drove|stayed|arrived|visited|swam)\\b"], ["\\b(July|June|August|May|island|sea|mountains|beach|hotel|Rome|London)\\b"]], "minKeywords": 2, "samples": ["Last summer we went to an island. We flew to Rome and stayed at a small hotel. We swam in the sea."], "difficulty": 3, "hint": "Образец: We went to… We stayed…", "explanation": "Используйте прошедшее время: We went, we stayed.", "grammar": ["a2.travel-prepositions"] },
+        { "id": "a2.u03.l07.e07", "type": "speak_answer", "question": "Where did you go last summer?", "questionRu": "Куда вы ездили прошлым летом? Ответьте: I went to… I stayed at home.", "keywords": [["\\bI (went|stayed|visited|flew|drove)\\b"], ["\\b(home|to|at|in)\\b"]], "minKeywords": 2, "samples": ["I went to the sea.", "I stayed at home."], "difficulty": 3, "hint": "Образец: I went to…", "explanation": "Ответ: I went to the sea.", "grammar": ["a2.travel-questions"] },
+        {
+          "id": "a2.u03.l07.e08",
+          "type": "write",
+          "task": "Расскажите о поездке или отпуске: когда и куда вы ездили, как добирались, где остановились, сколько пробыли и что делали. Например: Last July I went to an island. I flew to Rome. We stayed at a small hotel for a week.",
+          "minWords": 40,
+          "maxWords": 110,
+          "criteria": [
+            { "id": "when", "label": "Есть месяц или дата", "patterns": ["\\b(January|February|March|April|May|June|July|August|September|October|November|December|last (summer|year|week|month)|ago)\\b"] },
+            { "id": "move", "label": "Есть went, flew, drove или arrived", "patterns": ["\\b(went|flew|drove|arrived|travelled|traveled)\\b"] },
+            { "id": "stay", "label": "Сказано, где остановились или сколько пробыли", "patterns": ["\\b(stayed|stay|for (a|two|three|four|five|six|seven|ten) (day|days|week|weeks))\\b"] },
+            { "id": "prep", "label": "Есть arrive in/at, on the beach или in the sea", "patterns": ["\\b(arrived (in|at)|on the (beach|island)|in the (sea|mountains|lake))\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\barrived to\\b", "message": "После arrive нет to: arrived in London, arrived at the airport." },
+            { "pattern": "\\bin the beach\\b", "message": "Пляж — on the beach." },
+            { "pattern": "\\bat the sea\\b", "message": "Купаться — in the sea." },
+            { "pattern": "\\bon (May|June|July|August|September|October|November|December|January|February|March|April)\\b", "message": "С месяцем — in: in July. С датой — on the fifth of July." },
+            { "pattern": "\\b(goed|flied|drived|taked|buyed|maked)\\b", "message": "Это неправильный глагол: went, flew, drove, took, bought, made." }
+          ],
+          "samples": [
+            "Last July I went on a trip to an island. I flew to Rome and then I took a ship. We arrived at the hotel on the fourth of July. We stayed for two weeks. We swam in the sea and walked on the beach. The weather was wonderful. I took many photos.",
+            "In August we drove to the mountains. We stayed at a small hotel for four days. The mountains were amazing. We walked in the forest and swam in the lake. On the fifth of August we packed our suitcases and went home. It was a great trip."
+          ],
+          "difficulty": 3,
+          "hint": "План: когда → куда → как → где жили → что делали.",
+          "explanation": "В рассказе о поездке: in + месяц, on + дата, arrive in + город, arrive at + место. Для срока — for.",
+          "grammar": ["a2.dates-months", "a2.travel-questions", "a2.travel-prepositions"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "a2.u03.test.e01", "type": "match_pairs", "pairs": [{ "en": "airport", "ru": "аэропорт" }, { "en": "suitcase", "ru": "чемодан" }, { "en": "island", "ru": "остров" }, { "en": "souvenir", "ru": "сувенир" }, { "en": "flight", "ru": "рейс" }], "hint": "Слова про путешествие.", "explanation": "Airport — аэропорт, suitcase — чемодан, island — остров, souvenir — сувенир, flight — рейс." },
+      { "id": "a2.u03.test.e02", "type": "translate_choice", "from": "ru", "text": "ужасный", "options": ["terrible", "amazing", "crowded"], "answer": 0, "hint": "Очень плохой.", "explanation": "Terrible — «ужасный»." },
+      { "id": "a2.u03.test.e03", "type": "fill_gap", "text": "My birthday is ___ August.", "translation": "Мой день рождения в августе.", "answers": [["in"]], "options": ["in", "on", "at"], "hint": "С месяцем.", "explanation": "Правильно: My birthday is in August.", "grammar": ["a2.dates-months"] },
+      { "id": "a2.u03.test.e04", "type": "fill_gap", "text": "We arrived ___ the fifth of June.", "translation": "Мы приехали пятого июня.", "answers": [["on"]], "options": ["on", "in", "at"], "hint": "С датой.", "explanation": "Правильно: We arrived on the fifth of June.", "grammar": ["a2.dates-months"] },
+      { "id": "a2.u03.test.e05", "type": "fill_gap", "text": "How ___ did you stay?", "translation": "Как долго вы пробыли?", "answers": [["long"]], "options": ["long", "much", "many"], "hint": "О сроке.", "explanation": "Правильно: How long did you stay?", "grammar": ["a2.travel-questions"] },
+      { "id": "a2.u03.test.e06", "type": "fill_gap", "text": "We stayed ___ a week.", "translation": "Мы пробыли неделю.", "answers": [["for"]], "options": ["for", "from", "in"], "hint": "Срок.", "explanation": "Правильно: We stayed for a week.", "grammar": ["a2.travel-questions"] },
+      { "id": "a2.u03.test.e07", "type": "fill_gap", "text": "We arrived ___ the airport.", "translation": "Мы приехали в аэропорт.", "answers": [["at"]], "options": ["at", "in", "to"], "hint": "Конкретное место.", "explanation": "Правильно: We arrived at the airport.", "grammar": ["a2.travel-prepositions"] },
+      { "id": "a2.u03.test.e08", "type": "fill_gap", "text": "We swam ___ the sea.", "translation": "Мы плавали в море.", "answers": [["in"]], "options": ["in", "on", "at"], "hint": "Внутри воды.", "explanation": "Правильно: We swam in the sea.", "grammar": ["a2.travel-prepositions"] },
+      { "id": "a2.u03.test.e09", "type": "error_correction", "text": "We arrived to London.", "wrong": "to", "correction": "in", "options": ["in", "at", "on"], "hint": "После arrive нет to.", "explanation": "Правильно: We arrived in London.", "grammar": ["a2.travel-prepositions"] },
+      { "id": "a2.u03.test.e10", "type": "error_correction", "text": "Who did you went with?", "wrong": "went", "correction": "go", "options": ["go", "goes", "gone"], "hint": "После did — начальная форма.", "explanation": "Правильно: Who did you go with?", "grammar": ["a2.travel-questions"] },
+      { "id": "a2.u03.test.e11", "type": "error_correction", "text": "We were in the beach.", "wrong": "in", "correction": "on", "options": ["on", "at", "to"], "hint": "Пляж — другой предлог.", "explanation": "Правильно: We were on the beach.", "grammar": ["a2.travel-prepositions"] },
+      { "id": "a2.u03.test.e12", "type": "listen_choice", "audio": "We flew to Rome in July.", "question": "Что вы слышите?", "options": ["We flew to Rome in July.", "We drove to Rome in June.", "We flew to Rome in May."], "answer": 0, "hint": "Самолёт и июль.", "explanation": "We flew to Rome in July — «мы летали в Рим в июле».", "grammar": ["a2.dates-months"] },
+      { "id": "a2.u03.test.e13", "type": "listen_dictation", "text": "The weather was wonderful.", "hint": "Четыре слова.", "explanation": "The weather was wonderful — «погода была замечательной»." },
+      { "id": "a2.u03.test.e14", "type": "tiles", "from": "ru", "text": "Сколько стоил рейс?", "answer": "How much did the flight cost?", "distractors": ["costs", "long"], "difficulty": 2, "hint": "Образец: How much + did.", "explanation": "Правильно: How much did the flight cost?", "grammar": ["a2.travel-questions"] },
+      { "id": "a2.u03.test.e15", "type": "type_translation", "from": "ru", "text": "Мы остановились в небольшом отеле.", "answers": ["We stayed at a small hotel."], "difficulty": 2, "hint": "Образец: Stay at.", "explanation": "Правильно: We stayed at a small hotel.", "grammar": ["a2.travel-prepositions"] },
+      { "id": "a2.u03.test.e16", "type": "speak_repeat", "text": "We arrived in Rome on the fourth of June.", "hint": "Дата произносится плавно.", "explanation": "Fourth [fɔːrθ] — звук [θ] на конце." }
+    ]
+  }
+}

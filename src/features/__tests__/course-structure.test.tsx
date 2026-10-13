@@ -82,9 +82,12 @@ describe('Path', () => {
       .flatMap((m) => m.planned)[0]!;
     const number = Number(planned.id.split('.u')[1]);
     expect(screen.getByLabelText(`Юнит ${number}: ${planned.title.ru}. Скоро.`)).toBeOnTheScreen();
-    expect(
-      screen.getAllByText(/Появится, когда будут готовы все юниты модуля/).length,
-    ).toBeGreaterThan(3);
+    const unfinishedModules = getCourse()
+      .levels.flatMap((l) => l.modules)
+      .filter((m) => m.planned.length > 0).length;
+    expect(screen.getAllByText(/Появится, когда будут готовы все юниты модуля/)).toHaveLength(
+      unfinishedModules,
+    );
     expect(screen.getByText('Экзамен уровня A1')).toBeOnTheScreen();
   });
 
