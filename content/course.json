@@ -318,9 +318,8 @@
           "order": 3,
           "title": { "en": "Society and work", "ru": "Общество и работа" },
           "goals": ["Могу использовать пассив в любых временах.", "Могу говорить о работе, бизнесе и СМИ."],
-          "units": [],
+          "units": ["b2.u06"],
           "planned": [
-            { "id": "b2.u06", "title": { "en": "The passive in detail", "ru": "Пассив в деталях" } },
             { "id": "b2.u07", "title": { "en": "Business life", "ru": "Деловая жизнь" } },
             { "id": "b2.u08", "title": { "en": "Media and society", "ru": "СМИ и общество" } }
           ]
