@@ -1,0 +1,331 @@
+{
+  "id": "b1.u05",
+  "level": "B1",
+  "order": 5,
+  "title": { "en": "Work and study", "ru": "Работа и учёба" },
+  "description": "Говорим о работе и учёбе: ищем работу, проходим собеседование, рассказываем о навыках и о том, как привыкали к новому. Пассивный залог, doing или to do, be used to.",
+  "goals": [
+    "Могу рассказать о работе и навыках на собеседовании.",
+    "Могу говорить о результатах без исполнителя: Our products are sold all over the world.",
+    "Могу правильно выбрать doing или to do: I enjoy working, I decided to apply.",
+    "Могу сказать, к чему привык и к чему привыкаю.",
+    "Могу говорить об учёбе: предметы, экзамены, курсы.",
+    "Могу написать сопроводительное письмо или текст о своей работе."
+  ],
+  "grammar": ["b1.passive-basic", "b1.gerund-infinitive", "b1.be-used-to"],
+  "troubles": ["tenses", "word-order"],
+  "words": [
+    { "id": "company", "en": "company", "ipa": "ˈkʌmpəni", "pos": "noun", "ru": ["компания"], "example": { "en": "She works for a big company.", "ru": "Она работает в большой компании." }, "forms": { "plural": "companies" }, "topics": ["work"] },
+    { "id": "employee", "en": "employee", "ipa": "ɪmˈplɔɪi", "pos": "noun", "ru": ["сотрудник"], "example": { "en": "The company has two hundred employees.", "ru": "В компании двести сотрудников." }, "topics": ["work"] },
+    { "id": "employer", "en": "employer", "ipa": "ɪmˈplɔɪɚ", "pos": "noun", "ru": ["работодатель"], "example": { "en": "My employer pays for my English course.", "ru": "Мой работодатель оплачивает мне курс английского." }, "topics": ["work"] },
+    { "id": "salary", "en": "salary", "ipa": "ˈsælɚi", "pos": "noun", "ru": ["зарплата"], "example": { "en": "The salary is good.", "ru": "Зарплата хорошая." }, "forms": { "plural": "salaries" }, "topics": ["work"] },
+    { "id": "contract", "en": "contract", "ipa": "ˈkɑːntrækt", "pos": "noun", "ru": ["контракт", "договор"], "example": { "en": "I signed a contract for one year.", "ru": "Я подписал контракт на год." }, "topics": ["work"] },
+    { "id": "apply", "en": "apply", "ipa": "əˈplaɪ", "pos": "verb", "ru": ["подавать заявку"], "example": { "en": "She decided to apply for the job.", "ru": "Она решила откликнуться на вакансию." }, "forms": { "third": "applies" }, "note": "Подать заявку на работу — apply for a job.", "topics": ["work"] },
+    { "id": "application", "en": "application", "ipa": "ˌæpləˈkeɪʃən", "pos": "noun", "ru": ["заявка", "заявление"], "example": { "en": "Thank you for your application.", "ru": "Спасибо за вашу заявку." }, "topics": ["work"] },
+    { "id": "skill", "en": "skill", "ipa": "skɪl", "pos": "noun", "ru": ["навык"], "example": { "en": "What skills do you have?", "ru": "Какие у вас есть навыки?" }, "topics": ["work"] },
+    { "id": "qualification", "en": "qualification", "ipa": "ˌkwɑːləfəˈkeɪʃən", "pos": "noun", "ru": ["квалификация", "образование"], "example": { "en": "You need a qualification for this job.", "ru": "Для этой работы нужна квалификация." }, "topics": ["work"] },
+    { "id": "training", "en": "training", "ipa": "ˈtreɪnɪŋ", "pos": "noun", "ru": ["обучение", "тренинг"], "example": { "en": "New employees get training.", "ru": "Новые сотрудники проходят обучение." }, "topics": ["work"] },
+    { "id": "department", "en": "department", "ipa": "dɪˈpɑːrtmənt", "pos": "noun", "ru": ["отдел"], "example": { "en": "She works in the design department.", "ru": "Она работает в отделе дизайна." }, "topics": ["work"] },
+    { "id": "full-time", "en": "full-time", "ipa": "ˈfʊlˌtaɪm", "pos": "adj", "ru": ["на полный день"], "example": { "en": "This job is full-time.", "ru": "Это работа на полный день." }, "topics": ["work"] },
+    { "id": "part-time", "en": "part-time", "ipa": "ˈpɑːrtˌtaɪm", "pos": "adj", "ru": ["на неполный день"], "example": { "en": "Students often have part-time jobs.", "ru": "У студентов часто бывает работа на неполный день." }, "topics": ["work"] },
+    { "id": "shift", "en": "shift", "ipa": "ʃɪft", "pos": "noun", "ru": ["смена"], "example": { "en": "I work the night shift.", "ru": "Я работаю в ночную смену." }, "topics": ["work"] },
+    { "id": "deadline", "en": "deadline", "ipa": "ˈdedlaɪn", "pos": "noun", "ru": ["срок сдачи", "дедлайн"], "example": { "en": "The deadline is on Friday.", "ru": "Срок сдачи — в пятницу." }, "topics": ["work"] },
+    { "id": "task", "en": "task", "ipa": "tæsk", "pos": "noun", "ru": ["задача", "задание"], "example": { "en": "I have many tasks today.", "ru": "Сегодня у меня много задач." }, "topics": ["work"] },
+    { "id": "project", "en": "project", "ipa": "ˈprɑːdʒekt", "pos": "noun", "ru": ["проект"], "example": { "en": "I would like to work on bigger projects.", "ru": "Я хотел бы работать над более крупными проектами." }, "topics": ["work"] },
+    { "id": "responsible", "en": "responsible", "ipa": "rɪˈspɑːnsəbəl", "pos": "adj", "ru": ["ответственный"], "example": { "en": "She is responsible for the project.", "ru": "Она отвечает за проект." }, "note": "Отвечать за что-то — be responsible for something.", "topics": ["work"] },
+    { "id": "promotion", "en": "promotion", "ipa": "prəˈmoʊʃən", "pos": "noun", "ru": ["повышение (по службе)"], "example": { "en": "He got a promotion last year.", "ru": "В прошлом году его повысили." }, "topics": ["work"] },
+    { "id": "hire", "en": "hire", "ipa": "ˈhaɪɚ", "pos": "verb", "ru": ["нанимать"], "example": { "en": "The company hired ten new employees.", "ru": "Компания наняла десять новых сотрудников." }, "forms": { "third": "hires" }, "topics": ["work"] },
+    { "id": "quit", "en": "quit", "ipa": "kwɪt", "pos": "verb", "ru": ["уволиться", "бросить"], "example": { "en": "She quit her job last month.", "ru": "В прошлом месяце она уволилась." }, "forms": { "third": "quits", "ing": "quitting" }, "topics": ["work"] },
+    { "id": "subject", "en": "subject", "ipa": "ˈsʌbdʒɪkt", "pos": "noun", "ru": ["предмет (в школе)"], "example": { "en": "My favorite subject was history.", "ru": "Моим любимым предметом была история." }, "topics": ["study"] },
+    { "id": "lecture", "en": "lecture", "ipa": "ˈlektʃɚ", "pos": "noun", "ru": ["лекция"], "example": { "en": "The lecture starts at ten.", "ru": "Лекция начинается в десять." }, "topics": ["study"] },
+    { "id": "mark", "en": "mark", "ipa": "mɑːrk", "pos": "noun", "ru": ["оценка"], "example": { "en": "She got a good mark in the exam.", "ru": "Она получила хорошую оценку на экзамене." }, "note": "В американском английском оценка — grade.", "topics": ["study"] },
+    { "id": "essay", "en": "essay", "ipa": "ˈeseɪ", "pos": "noun", "ru": ["эссе", "сочинение"], "example": { "en": "I have to write an essay.", "ru": "Мне нужно написать эссе." }, "topics": ["study"] },
+    { "id": "research", "en": "research", "ipa": "rɪˈsɝːtʃ", "pos": "noun", "ru": ["исследование"], "example": { "en": "She does research at the university.", "ru": "Она занимается исследованиями в университете." }, "note": "Research — несчитаемое слово: some research, а не a research.", "topics": ["study"] },
+    { "id": "knowledge", "en": "knowledge", "ipa": "ˈnɑːlɪdʒ", "pos": "noun", "ru": ["знания"], "example": { "en": "He has good knowledge of history.", "ru": "У него хорошие знания истории." }, "note": "Knowledge — несчитаемое слово. K в начале не читается.", "topics": ["study"] },
+    { "id": "revise", "en": "revise", "ipa": "rɪˈvaɪz", "pos": "verb", "ru": ["повторять (к экзамену)"], "example": { "en": "I am revising for my exams.", "ru": "Я повторяю материал к экзаменам." }, "forms": { "third": "revises" }, "topics": ["study"] },
+    { "id": "practise", "en": "practise", "ipa": "ˈpræktɪs", "pos": "verb", "ru": ["тренироваться", "практиковаться"], "example": { "en": "I practise English every day.", "ru": "Я практикуюсь в английском каждый день." }, "forms": { "third": "practises" }, "note": "Британский глагол — practise, американский — practice.", "topics": ["study"] },
+    { "id": "improve", "en": "improve", "ipa": "ɪmˈpruːv", "pos": "verb", "ru": ["улучшать"], "example": { "en": "I would like to improve my English.", "ru": "Я хотел бы улучшить свой английский." }, "forms": { "third": "improves" }, "topics": ["study"] },
+    { "id": "succeed", "en": "succeed", "ipa": "səkˈsiːd", "pos": "verb", "ru": ["добиться успеха"], "example": { "en": "If you work hard, you will succeed.", "ru": "Если будешь много работать, добьёшься успеха." }, "forms": { "third": "succeeds" }, "topics": ["study"] },
+    { "id": "attend", "en": "attend", "ipa": "əˈtend", "pos": "verb", "ru": ["посещать"], "example": { "en": "I am attending an English course.", "ru": "Я хожу на курс английского." }, "forms": { "third": "attends" }, "topics": ["study"] },
+    { "id": "college", "en": "college", "ipa": "ˈkɑːlɪdʒ", "pos": "noun", "ru": ["колледж"], "example": { "en": "When I finished college, I looked for a job.", "ru": "Когда я окончил колледж, я стал искать работу." }, "topics": ["study"] },
+    { "id": "certificate", "en": "certificate", "ipa": "sɚˈtɪfɪkət", "pos": "noun", "ru": ["сертификат", "свидетельство"], "example": { "en": "I got a certificate after the course.", "ru": "После курса я получил сертификат." }, "topics": ["study"] },
+    { "id": "sign", "en": "sign", "ipa": "saɪn", "pos": "verb", "ru": ["подписывать"], "example": { "en": "I signed a contract for one year.", "ru": "Я подписал контракт на год." }, "forms": { "third": "signs" }, "note": "G в слове sign не читается.", "topics": ["work"] },
+    { "id": "hard", "en": "hard", "ipa": "hɑːrd", "pos": "adv", "ru": ["усердно", "тяжело"], "example": { "en": "If you work hard, you will succeed.", "ru": "Если будешь усердно работать, добьёшься успеха." }, "note": "Hard — и «трудный», и «усердно»: work hard.", "topics": ["work"] },
+    { "id": "into", "en": "into", "ipa": "ˈɪntuː", "pos": "prep", "ru": ["в (внутрь)", "на (язык)"], "example": { "en": "The book was translated into Russian.", "ru": "Книга была переведена на русский." }, "topics": ["grammar"] },
+    { "id": "product", "en": "product", "ipa": "ˈprɑːdʌkt", "pos": "noun", "ru": ["продукт", "товар"], "example": { "en": "Our products are sold all over the world.", "ru": "Наша продукция продаётся по всему миру." }, "topics": ["work"] },
+    { "id": "excellent", "en": "excellent", "ipa": "ˈeksələnt", "pos": "adj", "ru": ["отличный"], "example": { "en": "Excellent work!", "ru": "Отличная работа!" }, "topics": ["adjectives"] },
+    { "id": "assistant", "en": "assistant", "ipa": "əˈsɪstənt", "pos": "noun", "ru": ["помощник", "ассистент"], "example": { "en": "I was hired as an assistant.", "ru": "Меня взяли помощником." }, "topics": ["work"] },
+    { "id": "midnight", "en": "midnight", "ipa": "ˈmɪdnaɪt", "pos": "noun", "ru": ["полночь"], "example": { "en": "She finished at midnight.", "ru": "Она закончила в полночь." }, "topics": ["time"] },
+    { "id": "dear", "en": "dear", "ipa": "dɪr", "pos": "adj", "ru": ["дорогой (в обращении)", "уважаемый"], "example": { "en": "Dear manager, I would like to apply for the job.", "ru": "Уважаемый менеджер, я хотел бы откликнуться на вакансию." }, "topics": ["work"] },
+    { "id": "machine", "en": "machine", "ipa": "məˈʃiːn", "pos": "noun", "ru": ["машина", "станок", "аппарат"], "example": { "en": "Our machines are produced in three countries.", "ru": "Наши станки производятся в трёх странах." }, "topics": ["work"] },
+    { "id": "check", "en": "check", "ipa": "tʃek", "pos": "verb", "ru": ["проверять"], "example": { "en": "I check my email every morning.", "ru": "Каждое утро я проверяю почту." }, "forms": { "third": "checks" }, "topics": ["work"] },
+    { "id": "produce", "en": "produce", "ipa": "prəˈduːs", "pos": "verb", "ru": ["производить"], "example": { "en": "These phones are produced in China.", "ru": "Эти телефоны производятся в Китае." }, "forms": { "third": "produces" }, "topics": ["work"] },
+    { "id": "invent", "en": "invent", "ipa": "ɪnˈvent", "pos": "verb", "ru": ["изобретать"], "example": { "en": "The phone was invented in 1876.", "ru": "Телефон был изобретён в 1876 году." }, "forms": { "third": "invents" }, "topics": ["work"] },
+    { "id": "design", "en": "design", "ipa": "dɪˈzaɪn", "pos": "verb", "ru": ["проектировать", "разрабатывать дизайн"], "example": { "en": "This bag was designed in Italy.", "ru": "Эта сумка разработана в Италии." }, "forms": { "third": "designs" }, "topics": ["work"] },
+    { "id": "translate", "en": "translate", "ipa": "trænsˈleɪt", "pos": "verb", "ru": ["переводить"], "example": { "en": "The book was translated into Russian.", "ru": "Книга была переведена на русский." }, "forms": { "third": "translates" }, "note": "Переводить на язык — translate into.", "topics": ["work"] },
+    { "id": "deliver", "en": "deliver", "ipa": "dɪˈlɪvɚ", "pos": "verb", "ru": ["доставлять"], "example": { "en": "The letters are delivered every morning.", "ru": "Письма приносят каждое утро." }, "forms": { "third": "delivers" }, "topics": ["work"] },
+    { "id": "sell", "en": "sell", "ipa": "sel", "pos": "verb", "ru": ["продавать"], "example": { "en": "Our products are sold all over the world.", "ru": "Наша продукция продаётся по всему миру." }, "forms": { "third": "sells" }, "topics": ["work"] },
+    { "id": "get-used-to", "en": "get used to", "ipa": "ɡet juːst tuː", "pos": "phrase", "ru": ["привыкать"], "example": { "en": "I got used to getting up early.", "ru": "Я привык вставать рано." }, "forms": { "third": "gets used to" }, "note": "После get used to — существительное или глагол на -ing.", "topics": ["grammar"] }
+  ],
+  "texts": [
+    {
+      "id": "b1.u05.interview",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "A job interview", "ru": "Собеседование" },
+      "speakers": [
+        { "id": "tom", "name": "Tom", "voice": "male" },
+        { "id": "anna", "name": "Anna", "voice": "female" }
+      ],
+      "lines": [
+        { "speaker": "tom", "en": "Good morning, Anna. Thank you for your application. Tell me about your experience.", "ru": "Доброе утро, Анна. Спасибо за вашу заявку. Расскажите о своём опыте." },
+        { "speaker": "anna", "en": "I have worked as a designer for five years. I enjoy working with people, and I am good at solving problems.", "ru": "Я работаю дизайнером пять лет. Мне нравится работать с людьми, и я хорошо решаю проблемы." },
+        { "speaker": "tom", "en": "Why did you decide to apply for this job?", "ru": "Почему вы решили откликнуться на эту вакансию?" },
+        { "speaker": "anna", "en": "Your company is famous. Your products are sold all over the world, and I would like to work on bigger projects.", "ru": "Ваша компания известная. Ваша продукция продаётся по всему миру, и я хотела бы работать над более крупными проектами." },
+        { "speaker": "tom", "en": "This job is full-time, and sometimes there are deadlines at the weekend. Are you used to working long hours?", "ru": "Это работа на полный день, и иногда сроки выпадают на выходные. Вы привыкли много работать?" },
+        { "speaker": "anna", "en": "Yes, I am. In my last job I often worked late, so I am used to it.", "ru": "Да. На прошлой работе я часто задерживалась, так что я к этому привыкла." },
+        { "speaker": "tom", "en": "Good. What skills would you like to improve?", "ru": "Хорошо. Какие навыки вы хотели бы улучшить?" },
+        { "speaker": "anna", "en": "I would like to improve my English. I am attending a course now, and I practise every day.", "ru": "Я хотела бы улучшить английский. Сейчас я хожу на курс и практикуюсь каждый день." },
+        { "speaker": "tom", "en": "Excellent. We will contact you next week.", "ru": "Отлично. Мы свяжемся с вами на следующей неделе." }
+      ]
+    },
+    {
+      "id": "b1.u05.first-job",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "My first job", "ru": "Моя первая работа" },
+      "lines": [
+        { "en": "When I finished college, I applied for many jobs, but I didn't get any answers. I was worried, because I didn't have any experience. Then a small company invited me to an interview, and I was hired as a part-time assistant.", "ru": "Когда я окончил колледж, я подавал заявки на множество вакансий, но не получил ни одного ответа. Я волновался, потому что у меня не было опыта. Потом небольшая компания пригласила меня на собеседование, и меня взяли помощником на неполный день." },
+        { "en": "At first it was difficult. I wasn't used to getting up at six, and I had a lot of new tasks. Every morning I had to check the email, and the letters were delivered to my desk at nine. I made a lot of mistakes, but my boss was patient.", "ru": "Сначала было трудно. Я не привык вставать в шесть, и у меня было много новых задач. Каждое утро я должен был проверять почту, а в девять мне на стол приносили письма. Я делал много ошибок, но начальник был терпелив." },
+        { "en": "After a few months I got used to the job. I started enjoying it, and I decided to learn more. The company paid for my training, and I got a certificate.", "ru": "Через несколько месяцев я привык к работе. Она начала мне нравиться, и я решил учиться дальше. Компания оплатила моё обучение, и я получил сертификат." },
+        { "en": "Two years later I got a promotion, and now I am responsible for a small department. I am still learning, but I am proud of what I have achieved.", "ru": "Через два года меня повысили, и теперь я отвечаю за небольшой отдел. Я всё ещё учусь, но горжусь тем, чего добился." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "b1.u05.l01",
+      "kind": "vocabulary",
+      "title": "Работа",
+      "exercises": [
+        { "id": "b1.u05.l01.e01", "type": "match_pairs", "pairs": [{ "en": "company", "ru": "компания" }, { "en": "employee", "ru": "сотрудник" }, { "en": "employer", "ru": "работодатель" }, { "en": "salary", "ru": "зарплата" }, { "en": "contract", "ru": "контракт" }], "hint": "Employee работает, employer нанимает.", "explanation": "Company — компания, employee — сотрудник, employer — работодатель, salary — зарплата, contract — контракт." },
+        { "id": "b1.u05.l01.e02", "type": "match_pairs", "pairs": [{ "en": "apply", "ru": "подавать заявку" }, { "en": "application", "ru": "заявка" }, { "en": "skill", "ru": "навык" }, { "en": "qualification", "ru": "квалификация" }, { "en": "training", "ru": "обучение" }], "hint": "Apply и application — родственные.", "explanation": "Apply — подавать заявку, application — заявка, skill — навык, qualification — квалификация, training — обучение." },
+        { "id": "b1.u05.l01.e03", "type": "match_pairs", "pairs": [{ "en": "department", "ru": "отдел" }, { "en": "full-time", "ru": "на полный день" }, { "en": "part-time", "ru": "на неполный день" }, { "en": "shift", "ru": "смена" }, { "en": "deadline", "ru": "срок сдачи" }], "hint": "Full и part — целое и часть.", "explanation": "Department — отдел, full-time — на полный день, part-time — на неполный день, shift — смена, deadline — срок сдачи." },
+        { "id": "b1.u05.l01.e04", "type": "match_pairs", "pairs": [{ "en": "task", "ru": "задача" }, { "en": "project", "ru": "проект" }, { "en": "responsible", "ru": "ответственный" }, { "en": "promotion", "ru": "повышение" }, { "en": "hire", "ru": "нанимать" }], "hint": "Promotion — шаг вверх.", "explanation": "Task — задача, project — проект, responsible — ответственный, promotion — повышение, hire — нанимать." },
+        { "id": "b1.u05.l01.e05", "type": "translate_choice", "from": "ru", "text": "Она решила откликнуться на вакансию.", "options": ["She decided to apply for the job.", "She decided applying the job.", "She decided to apply the job."], "answer": 0, "hint": "Образец: Apply for.", "explanation": "Правильно: She decided to apply for the job." },
+        { "id": "b1.u05.l01.e06", "type": "translate_choice", "from": "en", "text": "She is responsible for the project.", "options": ["Она отвечает за проект.", "Она ответила на проект.", "Она устала от проекта."], "answer": 0, "hint": "Образец: Responsible for.", "explanation": "She is responsible for the project — «она отвечает за проект»." },
+        { "id": "b1.u05.l01.e07", "type": "fill_gap", "text": "The ___ is on Friday. We must finish by then.", "translation": "Срок сдачи — в пятницу. Мы должны закончить к этому времени.", "answers": [["deadline"]], "options": ["deadline", "salary", "shift"], "hint": "Последний день.", "explanation": "Правильно: The deadline is on Friday." },
+        { "id": "b1.u05.l01.e08", "type": "fill_gap", "text": "He got a ___ last year. Now he is a manager.", "translation": "В прошлом году его повысили. Теперь он менеджер.", "answers": [["promotion"]], "options": ["promotion", "contract", "training"], "hint": "Шаг вверх по службе.", "explanation": "Правильно: He got a promotion last year." },
+        { "id": "b1.u05.l01.e09", "type": "fill_gap", "text": "Students often have ___ jobs.", "translation": "У студентов часто бывает работа на неполный день.", "answers": [["part-time"]], "options": ["part-time", "full-time", "night"], "hint": "Неполный день.", "explanation": "Правильно: Students often have part-time jobs." },
+        { "id": "b1.u05.l01.e10", "type": "fill_gap", "text": "The company ___ ten new employees.", "translation": "Компания наняла десять новых сотрудников.", "answers": [["hired"]], "options": ["hired", "quit", "applied"], "hint": "Взяла на работу.", "explanation": "Правильно: The company hired ten new employees." },
+        { "id": "b1.u05.l01.e11", "type": "listen_choice", "audio": "Thank you for your application.", "question": "Что вы слышите?", "options": ["Thank you for your application.", "Thank you for your invitation.", "Thank you for your qualification."], "answer": 0, "hint": "Заявка.", "explanation": "Thank you for your application — «спасибо за вашу заявку»." },
+        { "id": "b1.u05.l01.e12", "type": "listen_dictation", "text": "What skills do you have?", "hint": "Пять слов.", "explanation": "What skills do you have? — «Какие у вас навыки?»" },
+        { "id": "b1.u05.l01.e13", "type": "type_translation", "from": "ru", "text": "зарплата", "answers": ["salary"], "hint": "Шесть букв.", "explanation": "Salary [ˈsælɚi] — «зарплата»." },
+        { "id": "b1.u05.l01.e14", "type": "word_stress", "word": "employee", "syllables": ["em", "ploy", "ee"], "stress": 1, "hint": "Второй слог в американском варианте.", "explanation": "em-PLOY-ee — в американском варианте ударение на второй слог, в британском часто на последний." }
+      ]
+    },
+    {
+      "id": "b1.u05.l02",
+      "kind": "vocabulary",
+      "title": "Учёба и создание",
+      "exercises": [
+        { "id": "b1.u05.l02.e01", "type": "match_pairs", "pairs": [{ "en": "quit", "ru": "уволиться" }, { "en": "subject", "ru": "предмет" }, { "en": "lecture", "ru": "лекция" }, { "en": "mark", "ru": "оценка" }, { "en": "essay", "ru": "эссе" }], "hint": "Учебные слова.", "explanation": "Quit — уволиться, subject — предмет, lecture — лекция, mark — оценка, essay — эссе." },
+        { "id": "b1.u05.l02.e02", "type": "match_pairs", "pairs": [{ "en": "research", "ru": "исследование" }, { "en": "knowledge", "ru": "знания" }, { "en": "revise", "ru": "повторять" }, { "en": "practise", "ru": "практиковаться" }, { "en": "improve", "ru": "улучшать" }], "hint": "Revise — к экзамену.", "explanation": "Research — исследование, knowledge — знания, revise — повторять, practise — практиковаться, improve — улучшать." },
+        { "id": "b1.u05.l02.e03", "type": "match_pairs", "pairs": [{ "en": "succeed", "ru": "добиться успеха" }, { "en": "attend", "ru": "посещать" }, { "en": "college", "ru": "колледж" }, { "en": "certificate", "ru": "сертификат" }, { "en": "check", "ru": "проверять" }], "hint": "Attend — ходить на занятия.", "explanation": "Succeed — добиться успеха, attend — посещать, college — колледж, certificate — сертификат, check — проверять." },
+        { "id": "b1.u05.l02.e04", "type": "match_pairs", "pairs": [{ "en": "produce", "ru": "производить" }, { "en": "invent", "ru": "изобретать" }, { "en": "design", "ru": "разрабатывать" }, { "en": "translate", "ru": "переводить" }, { "en": "deliver", "ru": "доставлять" }], "hint": "Глаголы для пассива.", "explanation": "Produce — производить, invent — изобретать, design — разрабатывать, translate — переводить, deliver — доставлять." },
+        { "id": "b1.u05.l02.e05", "type": "translate_choice", "from": "ru", "text": "Я хожу на курс английского.", "options": ["I am attending an English course.", "I am visiting an English course.", "I am attending to an English course."], "answer": 0, "hint": "Attend без предлога.", "explanation": "I am attending an English course. После attend предлог не нужен." },
+        { "id": "b1.u05.l02.e06", "type": "translate_choice", "from": "en", "text": "I am revising for my exams.", "options": ["Я повторяю материал к экзаменам.", "Я пересдаю экзамены.", "Я проверяю экзамены."], "answer": 0, "hint": "Revise — британское «готовиться».", "explanation": "I am revising for my exams — «я повторяю материал к экзаменам»." },
+        { "id": "b1.u05.l02.e07", "type": "fill_gap", "text": "My favorite ___ was history.", "translation": "Моим любимым предметом была история.", "answers": [["subject"]], "options": ["subject", "lecture", "mark"], "hint": "Школьный предмет.", "explanation": "Правильно: My favorite subject was history." },
+        { "id": "b1.u05.l02.e08", "type": "fill_gap", "text": "She got a good ___ in the exam.", "translation": "Она получила хорошую оценку на экзамене.", "answers": [["mark"]], "options": ["mark", "subject", "essay"], "hint": "Оценка.", "explanation": "Правильно: She got a good mark in the exam." },
+        { "id": "b1.u05.l02.e09", "type": "fill_gap", "text": "If you work hard, you will ___.", "translation": "Если будешь много работать, добьёшься успеха.", "answers": [["succeed"]], "options": ["succeed", "success", "successful"], "hint": "Глагол.", "explanation": "If you work hard, you will succeed. Succeed — глагол, success — существительное." },
+        { "id": "b1.u05.l02.e10", "type": "fill_gap", "text": "I ___ my email every morning.", "translation": "Каждое утро я проверяю почту.", "answers": [["check"]], "options": ["check", "deliver", "produce"], "hint": "Проверять.", "explanation": "Правильно: I check my email every morning." },
+        { "id": "b1.u05.l02.e11", "type": "listen_choice", "audio": "She quit her job last month.", "question": "Что вы слышите?", "options": ["She quit her job last month.", "She got a job last month.", "She quit her course last month."], "answer": 0, "hint": "Уволилась.", "explanation": "She quit her job last month — «в прошлом месяце она уволилась»." },
+        { "id": "b1.u05.l02.e12", "type": "listen_dictation", "text": "I have to write an essay.", "hint": "Шесть слов.", "explanation": "I have to write an essay — «мне нужно написать эссе»." },
+        { "id": "b1.u05.l02.e13", "type": "type_translation", "from": "ru", "text": "знания", "answers": ["knowledge"], "hint": "K не читается.", "explanation": "Knowledge [ˈnɑːlɪdʒ] — «знания». Несчитаемое слово." },
+        { "id": "b1.u05.l02.e15", "type": "match_pairs", "pairs": [{ "en": "sign", "ru": "подписывать" }, { "en": "hard", "ru": "усердно" }, { "en": "into", "ru": "в (внутрь)" }, { "en": "product", "ru": "продукт" }, { "en": "excellent", "ru": "отличный" }], "hint": "Work hard — усердно работать.", "explanation": "Sign — подписывать, hard — усердно, into — в, product — продукт, excellent — отличный." },
+        { "id": "b1.u05.l02.e16", "type": "match_pairs", "pairs": [{ "en": "assistant", "ru": "помощник" }, { "en": "midnight", "ru": "полночь" }, { "en": "dear", "ru": "уважаемый" }, { "en": "machine", "ru": "станок" }, { "en": "sell", "ru": "продавать" }], "hint": "Dear — в начале письма.", "explanation": "Assistant — помощник, midnight — полночь, dear — уважаемый, machine — станок, sell — продавать." },
+        { "id": "b1.u05.l02.e14", "type": "word_stress", "word": "certificate", "syllables": ["cer", "ti", "fi", "cate"], "stress": 1, "hint": "Второй слог.", "explanation": "cer-TI-fi-cate — ударение на второй слог." }
+      ]
+    },
+    {
+      "id": "b1.u05.l03",
+      "kind": "grammar",
+      "title": "Пассив: is made, was built",
+      "grammar": "b1.passive-basic",
+      "exercises": [
+        { "id": "b1.u05.l03.e01", "type": "fill_gap", "text": "English ___ spoken in many countries.", "translation": "На английском говорят во многих странах.", "answers": [["is"]], "options": ["is", "are", "was"], "hint": "Present Simple, ед. число.", "explanation": "Правильно: English is spoken in many countries.", "grammar": ["b1.passive-basic"] },
+        { "id": "b1.u05.l03.e02", "type": "fill_gap", "text": "This house was ___ in 1900.", "translation": "Этот дом был построен в 1900 году.", "answers": [["built"]], "options": ["built", "build", "builded"], "hint": "Третья форма от build.", "explanation": "Правильно: This house was built in 1900.", "grammar": ["b1.passive-basic"] },
+        { "id": "b1.u05.l03.e03", "type": "fill_gap", "text": "Cars ___ made in this factory.", "translation": "В этом цехе делают машины.", "answers": [["are"]], "options": ["are", "is", "were"], "hint": "Cars — мн. число.", "explanation": "Правильно: Cars are made in this factory.", "grammar": ["b1.passive-basic"] },
+        { "id": "b1.u05.l03.e04", "type": "fill_gap", "text": "The phone was ___ in 1876.", "translation": "Телефон был изобретён в 1876 году.", "answers": [["invented"]], "options": ["invented", "invent", "inventing"], "hint": "Третья форма.", "explanation": "Правильно: The phone was invented in 1876.", "grammar": ["b1.passive-basic"] },
+        { "id": "b1.u05.l03.e05", "type": "fill_gap", "text": "Our products are ___ all over the world.", "translation": "Наша продукция продаётся по всему миру.", "answers": [["sold"]], "options": ["sold", "sell", "selled"], "hint": "Третья форма от sell.", "explanation": "Правильно: Our products are sold all over the world.", "grammar": ["b1.passive-basic"] },
+        { "id": "b1.u05.l03.e06", "type": "fill_gap", "text": "The house was built ___ my grandfather.", "translation": "Дом построил мой дедушка.", "answers": [["by"]], "options": ["by", "from", "with"], "hint": "Кто сделал.", "explanation": "Правильно: The house was built by my grandfather.", "grammar": ["b1.passive-basic"] },
+        { "id": "b1.u05.l03.e07", "type": "fill_gap", "text": "The letters ___ delivered every morning.", "translation": "Письма приносят каждое утро.", "answers": [["are"]], "options": ["are", "is", "was"], "hint": "Letters — мн. число.", "explanation": "Правильно: The letters are delivered every morning.", "grammar": ["b1.passive-basic"] },
+        { "id": "b1.u05.l03.e08", "type": "error_correction", "text": "The house built in 1900.", "wrong": "built", "correction": "was built", "options": ["was built", "is build", "were build"], "hint": "Нужен be.", "explanation": "Правильно: The house was built in 1900.", "grammar": ["b1.passive-basic"], "troubles": ["tenses"] },
+        { "id": "b1.u05.l03.e09", "type": "error_correction", "text": "English is speak here.", "wrong": "speak", "correction": "spoken", "options": ["spoken", "spoke", "speaking"], "hint": "Третья форма.", "explanation": "Правильно: English is spoken here.", "grammar": ["b1.passive-basic"], "troubles": ["tenses"] },
+        { "id": "b1.u05.l03.e10", "type": "error_correction", "text": "The letters was delivered.", "wrong": "was", "correction": "were", "options": ["were", "is", "be"], "hint": "Мн. число.", "explanation": "Правильно: The letters were delivered.", "grammar": ["b1.passive-basic"], "troubles": ["tenses"] },
+        { "id": "b1.u05.l03.e11", "type": "tiles", "from": "ru", "text": "Книга была переведена на русский.", "answer": "The book was translated into Russian.", "distractors": ["is", "translate"], "difficulty": 2, "hint": "Образец: Was translated into.", "explanation": "Правильно: The book was translated into Russian.", "grammar": ["b1.passive-basic"] },
+        { "id": "b1.u05.l03.e12", "type": "tiles", "from": "ru", "text": "Вчера у меня украли велосипед.", "answer": "My bike was stolen yesterday.", "distractors": ["stole", "is"], "difficulty": 2, "hint": "Образец: Was stolen.", "explanation": "Правильно: My bike was stolen yesterday.", "grammar": ["b1.passive-basic"] },
+        { "id": "b1.u05.l03.e13", "type": "type_translation", "from": "ru", "text": "Эти телефоны производятся в Китае.", "answers": ["These phones are produced in China.", "These phones are made in China."], "difficulty": 2, "hint": "Образец: Are produced.", "explanation": "Правильно: These phones are produced in China.", "grammar": ["b1.passive-basic"] },
+        { "id": "b1.u05.l03.e14", "type": "type_translation", "from": "ru", "text": "Меня взяли на работу в прошлом году.", "answers": ["I was hired last year."], "difficulty": 3, "hint": "Образец: Was hired.", "explanation": "I was hired last year. По-русски «меня взяли», по-английски — пассив.", "grammar": ["b1.passive-basic"] },
+        { "id": "b1.u05.l03.e15", "type": "speak_answer", "question": "Where was your phone made?", "questionRu": "Где был сделан ваш телефон? Ответьте: It was made in… Если не знаете: I don't know where it was made.", "keywords": [["\\b(was|is) (made|produced|designed)\\b"], ["\\b(in|China|Korea|America|know)\\b"]], "minKeywords": 2, "samples": ["It was made in China.", "I don't know where it was made."], "difficulty": 3, "hint": "Образец: It was made in…", "explanation": "Ответ: It was made in China.", "grammar": ["b1.passive-basic"] }
+      ]
+    },
+    {
+      "id": "b1.u05.l04",
+      "kind": "grammar",
+      "title": "Doing или to do",
+      "grammar": "b1.gerund-infinitive",
+      "exercises": [
+        { "id": "b1.u05.l04.e01", "type": "fill_gap", "text": "I enjoy ___ with people.", "translation": "Мне нравится работать с людьми.", "answers": [["working"]], "options": ["working", "to work", "work"], "hint": "После enjoy.", "explanation": "Правильно: I enjoy working with people.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l04.e02", "type": "fill_gap", "text": "She decided ___ for the job.", "translation": "Она решила откликнуться на вакансию.", "answers": [["to apply"]], "options": ["to apply", "applying", "apply"], "hint": "После decide.", "explanation": "Правильно: She decided to apply for the job.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l04.e03", "type": "fill_gap", "text": "I am good at ___ problems.", "translation": "Я хорошо решаю проблемы.", "answers": [["solving"]], "options": ["solving", "to solve", "solve"], "hint": "После предлога.", "explanation": "Правильно: I am good at solving problems.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l04.e04", "type": "fill_gap", "text": "I would like ___ my English.", "translation": "Я хотел бы улучшить свой английский.", "answers": [["to improve"]], "options": ["to improve", "improving", "improve"], "hint": "После would like.", "explanation": "Правильно: I would like to improve my English.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l04.e05", "type": "fill_gap", "text": "She finished ___ the essay at midnight.", "translation": "Она закончила писать эссе в полночь.", "answers": [["writing"]], "options": ["writing", "to write", "write"], "hint": "После finish.", "explanation": "Правильно: She finished writing the essay.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l04.e06", "type": "fill_gap", "text": "Before ___ the office, I check my email.", "translation": "Перед уходом из офиса я проверяю почту.", "answers": [["leaving"]], "options": ["leaving", "to leave", "leave"], "hint": "После before.", "explanation": "Правильно: Before leaving the office, I check my email.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l04.e07", "type": "fill_gap", "text": "We need ___ more people.", "translation": "Нам нужно нанять больше людей.", "answers": [["to hire"]], "options": ["to hire", "hiring", "hire"], "hint": "После need.", "explanation": "Правильно: We need to hire more people.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l04.e08", "type": "error_correction", "text": "I enjoy to work with people.", "wrong": "to work", "correction": "working", "options": ["working", "work", "worked"], "hint": "После enjoy.", "explanation": "Правильно: I enjoy working with people.", "grammar": ["b1.gerund-infinitive"], "troubles": ["word-order"] },
+        { "id": "b1.u05.l04.e09", "type": "error_correction", "text": "She decided applying for the job.", "wrong": "applying", "correction": "to apply", "options": ["to apply", "apply", "applied"], "hint": "После decide.", "explanation": "Правильно: She decided to apply for the job.", "grammar": ["b1.gerund-infinitive"], "troubles": ["word-order"] },
+        { "id": "b1.u05.l04.e10", "type": "error_correction", "text": "I am good in draw.", "wrong": "in draw", "correction": "at drawing", "options": ["at drawing", "at draw", "in drawing"], "hint": "Образец: Good at + -ing.", "explanation": "Правильно: I am good at drawing.", "grammar": ["b1.gerund-infinitive"], "troubles": ["prepositions"] },
+        { "id": "b1.u05.l04.e11", "type": "tiles", "from": "ru", "text": "Я надеюсь получить повышение.", "answer": "I hope to get a promotion.", "distractors": ["getting", "for"], "hint": "Образец: Hope to.", "explanation": "Правильно: I hope to get a promotion.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l04.e12", "type": "tiles", "from": "ru", "text": "Я практикуюсь говорить каждый день.", "answer": "I practise speaking every day.", "distractors": ["to speak", "speak"], "hint": "Образец: Practise + -ing.", "explanation": "Правильно: I practise speaking every day.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l04.e13", "type": "type_translation", "from": "ru", "text": "Она перестала работать по ночам.", "answers": ["She stopped working at night.", "She stopped working nights."], "difficulty": 2, "hint": "Образец: Stop + -ing.", "explanation": "Правильно: She stopped working at night.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l04.e14", "type": "type_translation", "from": "ru", "text": "Я решил выучить английский.", "answers": ["I decided to learn English.", "I have decided to learn English."], "difficulty": 2, "hint": "Образец: Decide to.", "explanation": "Правильно: I decided to learn English.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l04.e15", "type": "speak_answer", "question": "What do you enjoy doing at work or at school?", "questionRu": "Что вам нравится делать на работе или в учёбе? Ответьте: I enjoy… и что хотели бы: I would like to…", "keywords": [["\\bI enjoy [a-z]+ing\\b", "\\bI (like|love) [a-z]+ing\\b"], ["\\b(would like to|want to|hope to|plan to)\\b", "\\b[a-z]+ing\\b"]], "minKeywords": 2, "samples": ["I enjoy working with people. I would like to learn more.", "I love designing things."], "difficulty": 3, "hint": "Образец: I enjoy… I would like to…", "explanation": "Ответ: I enjoy working with people. I would like to learn more.", "grammar": ["b1.gerund-infinitive"] }
+      ]
+    },
+    {
+      "id": "b1.u05.l05",
+      "kind": "grammar",
+      "title": "Be used to и get used to",
+      "grammar": "b1.be-used-to",
+      "exercises": [
+        { "id": "b1.u05.l05.e01", "type": "fill_gap", "text": "I am used to ___ long hours.", "translation": "Я привык много работать.", "answers": [["working"]], "options": ["working", "work", "to work"], "hint": "Образец: -ing.", "explanation": "Правильно: I am used to working long hours.", "grammar": ["b1.be-used-to"] },
+        { "id": "b1.u05.l05.e02", "type": "fill_gap", "text": "I ___ to work at night, but now I work in the day.", "translation": "Раньше я работал по ночам, а теперь днём.", "answers": [["used"]], "options": ["used", "am used", "use"], "hint": "Привычка в прошлом.", "explanation": "Правильно: I used to work at night.", "grammar": ["b1.be-used-to"] },
+        { "id": "b1.u05.l05.e03", "type": "fill_gap", "text": "It took me a month to get used to the new ___.", "translation": "Мне понадобился месяц, чтобы привыкнуть к новой работе.", "answers": [["job"]], "options": ["job", "work hard", "to work"], "hint": "Существительное.", "explanation": "Правильно: To get used to the new job.", "grammar": ["b1.be-used-to"] },
+        { "id": "b1.u05.l05.e04", "type": "fill_gap", "text": "She is not used ___ the cold.", "translation": "Она не привыкла к холоду.", "answers": [["to"]], "options": ["to", "with", "for"], "hint": "Образец: Be used to.", "explanation": "Правильно: She is not used to the cold.", "grammar": ["b1.be-used-to"] },
+        { "id": "b1.u05.l05.e05", "type": "fill_gap", "text": "You will soon get used to ___ on the left.", "translation": "Вы скоро привыкнете ездить по левой стороне.", "answers": [["driving"]], "options": ["driving", "drive", "to drive"], "hint": "Образец: -ing.", "explanation": "Правильно: You will soon get used to driving on the left.", "grammar": ["b1.be-used-to"] },
+        { "id": "b1.u05.l05.e06", "type": "error_correction", "text": "I am used to work at night.", "wrong": "work", "correction": "working", "options": ["working", "worked", "works"], "hint": "Образец: -ing.", "explanation": "Правильно: I am used to working at night.", "grammar": ["b1.be-used-to"], "troubles": ["tenses"] },
+        { "id": "b1.u05.l05.e07", "type": "error_correction", "text": "I can't get used to wake up early.", "wrong": "wake", "correction": "waking", "options": ["waking", "woke", "wakes"], "hint": "Образец: -ing.", "explanation": "Правильно: I can't get used to waking up early.", "grammar": ["b1.be-used-to"], "troubles": ["tenses"] },
+        { "id": "b1.u05.l05.e08", "type": "error_correction", "text": "I am used to live here.", "wrong": "live", "correction": "living", "options": ["living", "lived", "lives"], "hint": "Образец: -ing.", "explanation": "Правильно: I am used to living here.", "grammar": ["b1.be-used-to"], "troubles": ["tenses"] },
+        { "id": "b1.u05.l05.e09", "type": "tiles", "from": "ru", "text": "Я привык вставать рано.", "answer": "I am used to getting up early.", "distractors": ["get", "use"], "difficulty": 2, "hint": "Образец: Am used to + -ing.", "explanation": "Правильно: I am used to getting up early.", "grammar": ["b1.be-used-to"] },
+        { "id": "b1.u05.l05.e10", "type": "tiles", "from": "ru", "text": "Я привыкаю к новому городу.", "answer": "I am getting used to the new city.", "distractors": ["use", "with"], "difficulty": 2, "hint": "Образец: Am getting used to.", "explanation": "Правильно: I am getting used to the new city.", "grammar": ["b1.be-used-to"] },
+        { "id": "b1.u05.l05.e11", "type": "type_translation", "from": "ru", "text": "Раньше я жил в деревне.", "answers": ["I used to live in a village."], "hint": "Образец: Used to + live.", "explanation": "Правильно: I used to live in a village.", "grammar": ["b1.be-used-to", "a2.used-to"] },
+        { "id": "b1.u05.l05.e12", "type": "type_translation", "from": "ru", "text": "Она не привыкла работать в команде.", "answers": ["She is not used to working in a team.", "She isn't used to working in a team."], "difficulty": 3, "hint": "Образец: Is not used to + -ing.", "explanation": "Правильно: She is not used to working in a team.", "grammar": ["b1.be-used-to"] },
+        { "id": "b1.u05.l05.e13", "type": "listen_choice", "audio": "I am used to working long hours.", "question": "Что вы слышите?", "options": ["I am used to working long hours.", "I used to work long hours.", "I use long hours."], "answer": 0, "hint": "Привык.", "explanation": "I am used to working long hours — «я привык много работать».", "grammar": ["b1.be-used-to"] },
+        { "id": "b1.u05.l05.e14", "type": "speak_answer", "question": "What was difficult to get used to in your job or school?", "questionRu": "К чему было трудно привыкнуть на работе или в учёбе? Ответьте: It was difficult to get used to… / Now I am used to…", "keywords": [["\\b(get used to|got used to|am used to|'m used to|getting used to)\\b"], ["\\b[a-z]+ing\\b", "\\b(the|my|new)\\b"]], "minKeywords": 2, "samples": ["It was difficult to get used to getting up early. Now I am used to it.", "I am getting used to the new office."], "difficulty": 3, "hint": "Образец: It was difficult to get used to…", "explanation": "После get used to — существительное или -ing.", "grammar": ["b1.be-used-to"] }
+      ]
+    },
+    {
+      "id": "b1.u05.l06",
+      "kind": "listening",
+      "title": "Собеседование",
+      "textId": "b1.u05.interview",
+      "exercises": [
+        {
+          "id": "b1.u05.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "b1.u05.interview",
+          "hint": "Слушайте опыт Анны и условия работы.",
+          "explanation": "Анна пять лет работает дизайнером, хорошо решает проблемы и привыкла много работать. Она хочет улучшить английский и ходит на курс.",
+          "questions": [
+            { "kind": "mcq", "question": "Сколько лет Анна работает дизайнером?", "options": ["five years", "two years", "ten years"], "answer": 0, "explanation": "Анна говорит: I have worked as a designer for five years." },
+            { "kind": "mcq", "question": "Почему она хочет работать в этой компании?", "options": ["to work on bigger projects", "for a bigger salary", "to work part-time"], "answer": 0, "explanation": "Анна говорит: I would like to work on bigger projects." },
+            { "kind": "mcq", "question": "Что она хочет улучшить?", "options": ["her English", "her design skills", "her salary"], "answer": 0, "explanation": "Анна говорит: I would like to improve my English." },
+            { "kind": "tfn", "statement": "The job is part-time.", "answer": "false", "explanation": "Том говорит: This job is full-time." },
+            { "kind": "tfn", "statement": "Anna is used to working late.", "answer": "true", "explanation": "Анна говорит: I am used to it." },
+            { "kind": "tfn", "statement": "Anna got the job.", "answer": "not_given", "explanation": "Ей ответят на следующей неделе." }
+          ]
+        },
+        { "id": "b1.u05.l06.e02", "type": "listen_choice", "audio": "Your products are sold all over the world.", "question": "Что вы слышите?", "options": ["Your products are sold all over the world.", "Your products are made all over the world.", "You sell products all over the world."], "answer": 0, "hint": "Пассив.", "explanation": "Правильно: Your products are sold all over the world.", "grammar": ["b1.passive-basic"] },
+        { "id": "b1.u05.l06.e03", "type": "listen_dictation", "text": "Why did you decide to apply for this job?", "hint": "Девять слов.", "explanation": "Why did you decide to apply for this job? — «Почему вы решили откликнуться на эту вакансию?»" },
+        { "id": "b1.u05.l06.e04", "type": "listen_dictation", "text": "We will contact you next week.", "hint": "Шесть слов.", "explanation": "We will contact you next week — «мы свяжемся с вами на следующей неделе»." },
+        { "id": "b1.u05.l06.e05", "type": "fill_gap", "text": "I enjoy ___ with people.", "translation": "Мне нравится работать с людьми.", "answers": [["working"]], "options": ["working", "to work", "work"], "hint": "После enjoy.", "explanation": "Правильно: I enjoy working with people.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l06.e06", "type": "fill_gap", "text": "Are you used to ___ long hours?", "translation": "Вы привыкли много работать?", "answers": [["working"]], "options": ["working", "work", "worked"], "hint": "Образец: -ing.", "explanation": "Правильно: Are you used to working long hours?", "grammar": ["b1.be-used-to"] },
+        { "id": "b1.u05.l06.e07", "type": "tiles", "from": "ru", "text": "Расскажите о своём опыте.", "answer": "Tell me about your experience.", "distractors": ["say", "for"], "hint": "Образец: Tell me about.", "explanation": "Правильно: Tell me about your experience." },
+        { "id": "b1.u05.l06.e08", "type": "type_translation", "from": "ru", "text": "Я хорошо решаю проблемы.", "answers": ["I am good at solving problems.", "I'm good at solving problems."], "difficulty": 2, "hint": "Образец: Good at + -ing.", "explanation": "Правильно: I am good at solving problems.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l06.e09", "type": "speak_answer", "question": "Tell me about your experience.", "questionRu": "Вы на собеседовании. Расскажите о своём опыте: I have worked as… for… I am good at…", "keywords": [["\\bI (have|'ve) (worked|studied|been)\\b"], ["\\b(good at|for|since|enjoy|skills?)\\b"]], "minKeywords": 2, "samples": ["I have worked as an engineer for three years. I am good at solving problems.", "I have studied English since school, and I enjoy working with people."], "difficulty": 3, "hint": "Образец: I have worked as… for… I am good at…", "explanation": "Опыт — Present Perfect с for/since, навыки — good at + -ing.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l06.e10", "type": "speak_repeat", "text": "I would like to improve my English, so I am attending a course.", "hint": "Две части.", "explanation": "Правильно: Improve [ɪmˈpruːv], attending [əˈtendɪŋ]." }
+      ]
+    },
+    {
+      "id": "b1.u05.l07",
+      "kind": "writing",
+      "title": "Моя первая работа",
+      "textId": "b1.u05.first-job",
+      "exercises": [
+        {
+          "id": "b1.u05.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "b1.u05.first-job",
+          "hint": "Проследите путь автора от колледжа до повышения.",
+          "explanation": "После колледжа автор долго искал работу, его взяли помощником на неполный день. Сначала было трудно, но он привык, прошёл обучение и через два года получил повышение.",
+          "questions": [
+            { "kind": "mcq", "question": "Почему автор волновался?", "options": ["He didn't have any experience.", "He was ill.", "He didn't like the company."], "answer": 0, "explanation": "В тексте: I didn't have any experience." },
+            { "kind": "mcq", "question": "Кем его взяли?", "options": ["a part-time assistant", "a full-time manager", "a designer"], "answer": 0, "explanation": "В тексте: I was hired as a part-time assistant." },
+            { "kind": "mcq", "question": "Кто оплатил его обучение?", "options": ["the company", "his parents", "the college"], "answer": 0, "explanation": "В тексте: The company paid for my training." },
+            { "kind": "tfn", "statement": "At first he was used to getting up at six.", "answer": "false", "explanation": "В тексте: I wasn't used to getting up at six." },
+            { "kind": "tfn", "statement": "He is responsible for a department now.", "answer": "true", "explanation": "В тексте: now I am responsible for a small department." },
+            { "kind": "tfn", "statement": "His boss was angry about his mistakes.", "answer": "false", "explanation": "В тексте: my boss was patient." }
+          ]
+        },
+        { "id": "b1.u05.l07.e02", "type": "translate_choice", "from": "en", "text": "I was hired as a part-time assistant.", "options": ["Меня взяли помощником на неполный день.", "Я нанял помощника на неполный день.", "Я ушёл с работы помощника."], "answer": 0, "hint": "Was hired — пассив.", "explanation": "Правильно: I was hired as a part-time assistant." },
+        { "id": "b1.u05.l07.e03", "type": "fill_gap", "text": "The letters were ___ to my desk at nine.", "translation": "В девять мне на стол приносили письма.", "answers": [["delivered"]], "options": ["delivered", "deliver", "delivering"], "hint": "Пассив в прошлом.", "explanation": "Правильно: The letters were delivered to my desk at nine.", "grammar": ["b1.passive-basic"] },
+        { "id": "b1.u05.l07.e04", "type": "fill_gap", "text": "I started ___ it, and I decided to learn more.", "translation": "Она начала мне нравиться, и я решил учиться дальше.", "answers": [["enjoying"]], "options": ["enjoying", "to enjoy it", "enjoyed"], "hint": "Образец: Start + -ing.", "explanation": "Правильно: I started enjoying it.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l07.e05", "type": "type_translation", "from": "ru", "text": "Через несколько месяцев я привык к работе.", "answers": ["After a few months I got used to the job.", "After a few months I got used to the work."], "difficulty": 3, "hint": "Образец: Got used to.", "explanation": "Правильно: After a few months I got used to the job.", "grammar": ["b1.be-used-to"] },
+        { "id": "b1.u05.l07.e06", "type": "speak_describe", "picture": { "emoji": "💼" }, "situation": "Расскажите о своей работе или учёбе: что вы делаете, что вам нравится и к чему было трудно привыкнуть.", "keywords": [["\\b(enjoy|like|love) [a-z]+ing\\b", "\\bused to\\b"], ["\\b(work|job|study|company|course|office|school|college|university)\\b"]], "minKeywords": 2, "samples": ["I work in a small company. I enjoy designing things. It was difficult to get used to the deadlines."], "difficulty": 3, "hint": "Образец: I work in… I enjoy… It was difficult to get used to…", "explanation": "Используйте enjoy + -ing и get used to.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u05.l07.e07", "type": "speak_answer", "question": "Would you prefer a full-time or a part-time job? Why?", "questionRu": "Вы предпочли бы работу на полный или неполный день? Почему? Ответьте: I would prefer… because…", "keywords": [["\\b(full-time|part-time)\\b"], ["\\bbecause\\b"]], "minKeywords": 2, "samples": ["I would prefer a part-time job because I want to study.", "I would prefer a full-time job because the salary is better."], "difficulty": 3, "hint": "Образец: I would prefer… because…", "explanation": "Ответ: I would prefer a part-time job because I want to study." },
+        {
+          "id": "b1.u05.l07.e08",
+          "type": "write",
+          "task": "Напишите короткое сопроводительное письмо на вакансию или текст о своей работе или учёбе. Расскажите об опыте и навыках, о том, что вам нравится делать, к чему вы привыкли и чего хотите добиться. Используйте хотя бы одну форму пассива.",
+          "minWords": 80,
+          "maxWords": 180,
+          "criteria": [
+            { "id": "passive", "label": "Есть пассив: is / was + третья форма", "patterns": ["\\b(is|are|was|were) (made|sold|built|produced|designed|hired|invented|translated|delivered|paid|given|taught|known|used|written|spoken)\\b"] },
+            { "id": "gerund", "label": "Есть enjoy, good at или другая форма -ing", "patterns": ["\\b(enjoy|like|love|finish|practise|good at|before|after) [a-z]+ing\\b"] },
+            { "id": "infinitive", "label": "Есть want, decide, would like, hope + to", "patterns": ["\\b(want|wanted|decide|decided|would like|hope|plan|need|learn) to [a-z]+\\b"] },
+            { "id": "used", "label": "Есть be used to или get used to", "patterns": ["\\b(am|is|are|was|were|'m|get|got|getting) used to\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\benjoy to [a-z]+\\b", "message": "После enjoy — форма на -ing: enjoy working." },
+            { "pattern": "\\b(decided|decide|want|wanted|hope) [a-z]+ing\\b", "message": "После decide, want, hope — to + глагол: decided to apply." },
+            { "pattern": "\\b(am|is|are|was|were|get|got) used to (work|live|get|wake|drive|study|speak)\\b", "message": "После be used to и get used to — форма на -ing: used to working." },
+            { "pattern": "\\bgood in\\b", "message": "Хорошо умею — good at: good at solving problems." },
+            { "pattern": "\\b(is|are|was|were) (speak|build|make|sell|write|give)\\b", "message": "В пассиве после be нужна третья форма: is spoken, was built." }
+          ],
+          "samples": [
+            "Dear manager, I would like to apply for the job of designer in your company. I have worked as a designer for five years, and I am good at solving problems. Your products are sold all over the world, and I would like to work on bigger projects. I enjoy working with people, and I am used to working long hours and meeting deadlines. I am attending an English course now, and I hope to improve my English. Thank you for your time.",
+            "I work as an engineer in a big company. Our machines are produced in three countries and sold all over the world. When I was hired, it was difficult to get used to the deadlines, but now I am used to them. I enjoy designing new things, and I am good at working in a team. Last year I decided to attend a course, and I got a certificate. Next year I hope to get a promotion and to work on bigger projects with my team."
+          ],
+          "difficulty": 3,
+          "hint": "План: кто вы и что делаете → опыт и навыки → к чему привыкли → чего хотите добиться.",
+          "explanation": "Об опыте — Present Perfect, о навыках — good at + -ing, о планах — want/hope/would like + to, о привычках — be used to + -ing, о продукции — пассив.",
+          "grammar": ["b1.passive-basic", "b1.gerund-infinitive", "b1.be-used-to"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "b1.u05.test.e01", "type": "match_pairs", "pairs": [{ "en": "salary", "ru": "зарплата" }, { "en": "deadline", "ru": "срок сдачи" }, { "en": "promotion", "ru": "повышение" }, { "en": "knowledge", "ru": "знания" }, { "en": "attend", "ru": "посещать" }], "hint": "Слова юнита.", "explanation": "Salary — зарплата, deadline — срок сдачи, promotion — повышение, knowledge — знания, attend — посещать." },
+      { "id": "b1.u05.test.e02", "type": "translate_choice", "from": "ru", "text": "работодатель", "options": ["employer", "employee", "colleague"], "answer": 0, "hint": "Тот, кто нанимает.", "explanation": "Employer — «работодатель», employee — «сотрудник»." },
+      { "id": "b1.u05.test.e03", "type": "fill_gap", "text": "English ___ spoken here.", "translation": "Здесь говорят по-английски.", "answers": [["is"]], "options": ["is", "are", "be"], "hint": "Пассив.", "explanation": "Правильно: English is spoken here.", "grammar": ["b1.passive-basic"] },
+      { "id": "b1.u05.test.e04", "type": "fill_gap", "text": "This house was ___ in 1900.", "translation": "Этот дом был построен в 1900 году.", "answers": [["built"]], "options": ["built", "build", "builded"], "hint": "Третья форма.", "explanation": "Правильно: This house was built in 1900.", "grammar": ["b1.passive-basic"] },
+      { "id": "b1.u05.test.e05", "type": "fill_gap", "text": "I enjoy ___ with people.", "translation": "Мне нравится работать с людьми.", "answers": [["working"]], "options": ["working", "to work", "work"], "hint": "После enjoy.", "explanation": "Правильно: I enjoy working with people.", "grammar": ["b1.gerund-infinitive"] },
+      { "id": "b1.u05.test.e06", "type": "fill_gap", "text": "She decided ___ for the job.", "translation": "Она решила откликнуться на вакансию.", "answers": [["to apply"]], "options": ["to apply", "applying", "apply"], "hint": "После decide.", "explanation": "Правильно: She decided to apply for the job.", "grammar": ["b1.gerund-infinitive"] },
+      { "id": "b1.u05.test.e07", "type": "fill_gap", "text": "I am used to ___ up early.", "translation": "Я привык рано вставать.", "answers": [["getting"]], "options": ["getting", "get", "got"], "hint": "Образец: -ing.", "explanation": "Правильно: I am used to getting up early.", "grammar": ["b1.be-used-to"] },
+      { "id": "b1.u05.test.e08", "type": "fill_gap", "text": "I am good ___ solving problems.", "translation": "Я хорошо решаю проблемы.", "answers": [["at"]], "options": ["at", "in", "on"], "hint": "Образец: Good …", "explanation": "Правильно: I am good at solving problems.", "grammar": ["b1.gerund-infinitive"] },
+      { "id": "b1.u05.test.e09", "type": "error_correction", "text": "English is speak here.", "wrong": "speak", "correction": "spoken", "options": ["spoken", "spoke", "speaking"], "hint": "Третья форма.", "explanation": "Правильно: English is spoken here.", "grammar": ["b1.passive-basic"] },
+      { "id": "b1.u05.test.e10", "type": "error_correction", "text": "I enjoy to work with people.", "wrong": "to work", "correction": "working", "options": ["working", "work", "worked"], "hint": "После enjoy.", "explanation": "Правильно: I enjoy working with people.", "grammar": ["b1.gerund-infinitive"] },
+      { "id": "b1.u05.test.e11", "type": "error_correction", "text": "I am used to work at night.", "wrong": "work", "correction": "working", "options": ["working", "worked", "works"], "hint": "Образец: -ing.", "explanation": "Правильно: I am used to working at night.", "grammar": ["b1.be-used-to"] },
+      { "id": "b1.u05.test.e12", "type": "listen_choice", "audio": "The phone was invented in 1876.", "question": "Что вы слышите?", "options": ["The phone was invented in 1876.", "The phone is invented in 1876.", "He invented the phone in 1876."], "answer": 0, "hint": "Пассив в прошлом.", "explanation": "Правильно: The phone was invented in 1876.", "grammar": ["b1.passive-basic"] },
+      { "id": "b1.u05.test.e13", "type": "listen_dictation", "text": "I would like to improve my English.", "hint": "Семь слов.", "explanation": "I would like to improve my English — «я хотел бы улучшить свой английский»." },
+      { "id": "b1.u05.test.e14", "type": "tiles", "from": "ru", "text": "Вчера у меня украли велосипед.", "answer": "My bike was stolen yesterday.", "distractors": ["stole", "is"], "difficulty": 2, "hint": "Образец: Was stolen.", "explanation": "Правильно: My bike was stolen yesterday.", "grammar": ["b1.passive-basic"] },
+      { "id": "b1.u05.test.e15", "type": "type_translation", "from": "ru", "text": "Я привыкаю к новому городу.", "answers": ["I am getting used to the new city.", "I'm getting used to the new city."], "difficulty": 3, "hint": "Образец: Am getting used to.", "explanation": "Правильно: I am getting used to the new city.", "grammar": ["b1.be-used-to"] },
+      { "id": "b1.u05.test.e16", "type": "speak_repeat", "text": "I enjoy working with people, and I am good at solving problems.", "hint": "Две части.", "explanation": "Правильно: Working [ˈwɝːkɪŋ], solving [ˈsɑːlvɪŋ]." }
+    ]
+  }
+}

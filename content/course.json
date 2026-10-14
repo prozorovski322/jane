@@ -257,9 +257,8 @@
           "order": 3,
           "title": { "en": "Work and the world", "ru": "Работа и мир" },
           "goals": ["Могу говорить о работе и учёбе.", "Могу обсуждать технологии, медиа и здоровье."],
-          "units": [],
+          "units": ["b1.u05"],
           "planned": [
-            { "id": "b1.u05", "title": { "en": "Work and study", "ru": "Работа и учёба" } },
             { "id": "b1.u06", "title": { "en": "Technology and media", "ru": "Технологии и медиа" } },
             { "id": "b1.u07", "title": { "en": "Health and sport", "ru": "Здоровье и спорт" } }
           ]
