@@ -1,0 +1,317 @@
+{
+  "id": "b2.u10",
+  "level": "B2",
+  "order": 10,
+  "title": { "en": "Getting on with people", "ru": "Фразовые глаголы и коллокации" },
+  "description": "Говорим о конфликтах на работе и дома, советуем, как их решить. Порядок слов во фразовых глаголах, глаголы из трёх слов (get on with, put up with) и устойчивые сочетания (make an effort, pay attention).",
+  "goals": [
+    "Могу правильно поставить местоимение во фразовом глаголе: sort it out, deal with it.",
+    "Могу говорить об отношениях: get on with, fall out with, put up with.",
+    "Могу использовать устойчивые сочетания: make a mistake, do homework, pay attention.",
+    "Могу описать конфликт и предложить, как его решить.",
+    "Могу понять статью с советами по общению с трудными коллегами.",
+    "Могу написать другу письмо с советом."
+  ],
+  "grammar": ["b2.phrasal-word-order", "b2.phrasal-three-part", "b2.collocations"],
+  "troubles": ["word-order", "prepositions"],
+  "words": [
+    { "id": "get-on-with", "en": "get on with", "ipa": "ɡet ɑːn wɪð", "pos": "phrasal", "ru": ["ладить с"], "example": { "en": "I just can't get on with him.", "ru": "Я просто не могу с ним поладить." }, "forms": { "third": "gets on with", "ing": "getting on with" }, "topics": ["phrasal"] },
+    { "id": "put-up-with", "en": "put up with", "ipa": "pʊt ʌp wɪð", "pos": "phrasal", "ru": ["терпеть", "мириться с"], "example": { "en": "How long have you put up with this?", "ru": "Сколько ты это уже терпишь?" }, "forms": { "third": "puts up with", "ing": "putting up with" }, "topics": ["phrasal"] },
+    { "id": "come-up-with", "en": "come up with", "ipa": "kʌm ʌp wɪð", "pos": "phrasal", "ru": ["придумать", "предложить"], "example": { "en": "He never comes up with any ideas.", "ru": "Он никогда ничего не предлагает." }, "forms": { "third": "comes up with", "ing": "coming up with" }, "topics": ["phrasal"] },
+    { "id": "run-out-of", "en": "run out of", "ipa": "rʌn aʊt ʌv", "pos": "phrasal", "ru": ["израсходовать", "кончиться (у кого-то)"], "example": { "en": "I've run out of patience.", "ru": "У меня кончилось терпение." }, "forms": { "third": "runs out of", "ing": "running out of" }, "topics": ["phrasal"] },
+    { "id": "fall-out-with", "en": "fall out with", "ipa": "fɔːl aʊt wɪð", "pos": "phrasal", "ru": ["поссориться с"], "example": { "en": "I don't want to fall out with him.", "ru": "Я не хочу с ним ссориться." }, "forms": { "third": "falls out with" }, "topics": ["phrasal"] },
+    { "id": "sort-out", "en": "sort out", "ipa": "sɔːrt aʊt", "pos": "phrasal", "ru": ["уладить", "разобраться"], "example": { "en": "Shouting won't sort it out.", "ru": "Криком делу не поможешь." }, "forms": { "third": "sorts out" }, "topics": ["phrasal"] },
+    { "id": "point-out", "en": "point out", "ipa": "pɔɪnt aʊt", "pos": "phrasal", "ru": ["указать на", "обратить внимание"], "example": { "en": "Point out the problem politely.", "ru": "Вежливо укажи на проблему." }, "forms": { "third": "points out" }, "topics": ["phrasal"] },
+    { "id": "put-off", "en": "put off", "ipa": "pʊt ɔːf", "pos": "phrasal", "ru": ["откладывать"], "example": { "en": "I keep putting it off.", "ru": "Я всё откладываю." }, "forms": { "third": "puts off", "ing": "putting off" }, "topics": ["phrasal"] },
+    { "id": "call-off", "en": "call off", "ipa": "kɔːl ɔːf", "pos": "phrasal", "ru": ["отменить"], "example": { "en": "Please don't call it off this time.", "ru": "Только в этот раз не отменяй." }, "forms": { "third": "calls off" }, "topics": ["phrasal"] },
+    { "id": "let-down", "en": "let down", "ipa": "let daʊn", "pos": "phrasal", "ru": ["подвести"], "example": { "en": "I won't let you down.", "ru": "Я тебя не подведу." }, "forms": { "third": "lets down", "ing": "letting down" }, "topics": ["phrasal"] },
+    { "id": "turn-up", "en": "turn up", "ipa": "tɝːn ʌp", "pos": "phrasal", "ru": ["появиться", "прийти"], "example": { "en": "He keeps turning up late.", "ru": "Он вечно приходит с опозданием." }, "forms": { "third": "turns up" }, "topics": ["phrasal"] },
+    { "id": "deal-with", "en": "deal with", "ipa": "diːl wɪð", "pos": "phrasal", "ru": ["разбираться с", "иметь дело с"], "example": { "en": "You shouldn't have to deal with this on your own.", "ru": "Тебе не нужно разбираться с этим в одиночку." }, "forms": { "third": "deals with" }, "note": "Неправильный глагол: deal — dealt — dealt.", "topics": ["phrasal"] },
+    { "id": "get-over", "en": "get over", "ipa": "ɡet ˈoʊvɚ", "pos": "phrasal", "ru": ["оправиться от", "пережить"], "example": { "en": "It takes time to get over an argument.", "ru": "Чтобы пережить ссору, нужно время." }, "forms": { "third": "gets over", "ing": "getting over" }, "topics": ["phrasal"] },
+    { "id": "talk-over", "en": "talk over", "ipa": "tɔːk ˈoʊvɚ", "pos": "phrasal", "ru": ["обсудить"], "example": { "en": "Have you talked it over with him?", "ru": "Ты с ним это обсуждала?" }, "forms": { "third": "talks over" }, "topics": ["phrasal"] },
+    { "id": "calm-down", "en": "calm down", "ipa": "kɑːm daʊn", "pos": "phrasal", "ru": ["успокоиться"], "example": { "en": "Calm down. Shouting won't help.", "ru": "Успокойся. Криком не поможешь." }, "forms": { "third": "calms down" }, "note": "L не читается: [kɑːm].", "topics": ["phrasal"] },
+    { "id": "cheer-up", "en": "cheer up", "ipa": "tʃɪr ʌp", "pos": "phrasal", "ru": ["подбодрить", "приободриться"], "example": { "en": "You've really cheered me up.", "ru": "Ты меня очень подбодрила." }, "forms": { "third": "cheers up" }, "topics": ["phrasal"] },
+    { "id": "conflict", "en": "conflict", "ipa": "ˈkɑːnflɪkt", "pos": "noun", "ru": ["конфликт"], "example": { "en": "Many conflicts start with a small problem.", "ru": "Многие конфликты начинаются с мелочи." }, "topics": ["communication"] },
+    { "id": "feedback", "en": "feedback", "ipa": "ˈfiːdˌbæk", "pos": "noun", "ru": ["обратная связь", "отзыв"], "example": { "en": "Give him feedback, not criticism.", "ru": "Дай ему обратную связь, а не критику." }, "note": "Неисчисляемое: some feedback, без a.", "topics": ["work"] },
+    { "id": "criticism", "en": "criticism", "ipa": "ˈkrɪtəˌsɪzəm", "pos": "noun", "ru": ["критика"], "example": { "en": "He doesn't like criticism.", "ru": "Он не любит критику." }, "topics": ["communication"] },
+    { "id": "respect", "en": "respect", "ipa": "rɪˈspekt", "pos": "noun", "ru": ["уважение"], "example": { "en": "We have to work together with respect.", "ru": "Нам нужно работать вместе с уважением." }, "note": "Ещё и глагол: I respect her.", "topics": ["communication"] },
+    { "id": "compromise", "en": "compromise", "ipa": "ˈkɑːmprəˌmaɪz", "pos": "noun", "ru": ["компромисс"], "example": { "en": "Be ready to make a compromise.", "ru": "Будь готов к компромиссу." }, "topics": ["communication"] },
+    { "id": "apology", "en": "apology", "ipa": "əˈpɑːlədʒi", "pos": "noun", "ru": ["извинение"], "example": { "en": "An apology can make a big difference.", "ru": "Извинение может многое изменить." }, "forms": { "plural": "apologies" }, "topics": ["communication"] },
+    { "id": "impression", "en": "impression", "ipa": "ɪmˈpreʃən", "pos": "noun", "ru": ["впечатление"], "example": { "en": "He made a bad impression.", "ru": "Он произвёл плохое впечатление." }, "topics": ["communication"] },
+    { "id": "behavior", "en": "behavior", "ipa": "bɪˈheɪvjɚ", "pos": "noun", "ru": ["поведение"], "example": { "en": "Talk about the behavior, not the person.", "ru": "Говори о поведении, а не о человеке." }, "note": "Британское написание — behaviour.", "topics": ["communication"] },
+    { "id": "seriously", "en": "seriously", "ipa": "ˈsɪriəsli", "pos": "adv", "ru": ["серьёзно"], "example": { "en": "She takes her work seriously.", "ru": "Она серьёзно относится к работе." }, "topics": ["adverbs"] },
+    { "id": "deeply", "en": "deeply", "ipa": "ˈdiːpli", "pos": "adv", "ru": ["глубоко", "очень"], "example": { "en": "I'm deeply sorry.", "ru": "Мне очень жаль." }, "topics": ["adverbs"] },
+    { "id": "totally", "en": "totally", "ipa": "ˈtoʊtəli", "pos": "adv", "ru": ["совершенно", "полностью"], "example": { "en": "That's totally different.", "ru": "Это совсем другое." }, "topics": ["adverbs"] },
+    { "id": "highly", "en": "highly", "ipa": "ˈhaɪli", "pos": "adv", "ru": ["очень", "высоко"], "example": { "en": "This book is highly recommended.", "ru": "Эту книгу очень рекомендуют." }, "topics": ["adverbs"] },
+    { "id": "breath", "en": "breath", "ipa": "breθ", "pos": "noun", "ru": ["дыхание", "вдох"], "example": { "en": "Take a deep breath.", "ru": "Сделай глубокий вдох." }, "note": "Существительное breath [breθ], глагол breathe [briːð].", "topics": ["health"] },
+    { "id": "calmly", "en": "calmly", "ipa": "ˈkɑːmli", "pos": "adv", "ru": ["спокойно"], "example": { "en": "Explain the problem calmly.", "ru": "Спокойно объясни проблему." }, "topics": ["adverbs"] },
+    { "id": "politely", "en": "politely", "ipa": "pəˈlaɪtli", "pos": "adv", "ru": ["вежливо"], "example": { "en": "Point out the problem politely.", "ru": "Вежливо укажи на проблему." }, "topics": ["adverbs"] },
+    { "id": "favor", "en": "favor", "ipa": "ˈfeɪvɚ", "pos": "noun", "ru": ["одолжение", "услуга"], "example": { "en": "Could you do me a favor?", "ru": "Можешь сделать мне одолжение?" }, "note": "Британское написание — favour.", "topics": ["communication"] }
+  ],
+  "texts": [
+    {
+      "id": "b2.u10.colleague",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "I've run out of patience", "ru": "У меня кончилось терпение" },
+      "speakers": [
+        { "id": "olga", "name": "Olga", "voice": "female" },
+        { "id": "anna", "name": "Anna", "voice": "female" }
+      ],
+      "lines": [
+        { "speaker": "olga", "en": "Anna, you look really tired. Is everything OK?", "ru": "Аня, ты какая-то совсем уставшая. Всё в порядке?" },
+        { "speaker": "anna", "en": "Not really. It's Max, the new person in my team. I just can't get on with him.", "ru": "Не очень. Это Макс, новенький в моей команде. Я просто не могу с ним поладить." },
+        { "speaker": "olga", "en": "What's the problem?", "ru": "А что не так?" },
+        { "speaker": "anna", "en": "He keeps turning up late to meetings, and when we ask for ideas, he never comes up with anything. Then he tells the boss that my ideas were his!", "ru": "Он вечно опаздывает на совещания, а когда мы просим идей, ничего не предлагает. А потом говорит начальнику, что мои идеи — его!" },
+        { "speaker": "olga", "en": "That's terrible. How long have you put up with this?", "ru": "Ужасно. И сколько ты это уже терпишь?" },
+        { "speaker": "anna", "en": "Three months. I've run out of patience. Yesterday I almost shouted at him.", "ru": "Три месяца. У меня кончилось терпение. Вчера я чуть на него не накричала." },
+        { "speaker": "olga", "en": "Calm down. Shouting won't sort it out. Have you talked it over with him?", "ru": "Успокойся. Криком делу не поможешь. Ты с ним это обсуждала?" },
+        { "speaker": "anna", "en": "Not yet. I keep putting it off. I don't want to fall out with him completely.", "ru": "Пока нет. Всё откладываю. Не хочу с ним окончательно ссориться." },
+        { "speaker": "olga", "en": "I understand, but you can't just ignore it. Make an effort to stay calm and point out the problem politely. Give him feedback, not criticism.", "ru": "Понимаю, но и не замечать это нельзя. Постарайся сохранять спокойствие и вежливо укажи на проблему. Дай ему обратную связь, а не критику." },
+        { "speaker": "anna", "en": "You're right. And if that doesn't work?", "ru": "Ты права. А если не поможет?" },
+        { "speaker": "olga", "en": "Then talk to your manager. You shouldn't have to deal with this on your own. You've always taken your work seriously, and your boss knows it.", "ru": "Тогда поговори с руководителем. Тебе не нужно разбираться с этим в одиночку. Ты всегда серьёзно относилась к работе, и начальник это знает." },
+        { "speaker": "anna", "en": "Thanks, Olga. You've really cheered me up. So when are we going to catch up properly?", "ru": "Спасибо, Оля. Ты меня очень подбодрила. Так когда мы наконец нормально посидим и поболтаем?" },
+        { "speaker": "olga", "en": "How about Friday? But please don't call it off this time!", "ru": "Может, в пятницу? Только в этот раз не отменяй!" },
+        { "speaker": "anna", "en": "I promise. I won't let you down.", "ru": "Обещаю. Не подведу." }
+      ]
+    },
+    {
+      "id": "b2.u10.colleagues",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "How to get on with a difficult colleague", "ru": "Как поладить с трудным коллегой" },
+      "lines": [
+        { "en": "Almost everybody has worked with someone they find difficult. Maybe they turn up late, interrupt you in meetings or never finish their part of the work. The problem may be different every time, but you will probably have to deal with it one day. Here is some advice from experts.", "ru": "Почти каждому приходилось работать с человеком, с которым трудно. Может, он опаздывает, перебивает вас на совещаниях или никогда не доделывает свою часть работы. Проблемы бывают разные, но разбираться с ними, скорее всего, однажды придётся. Вот несколько советов специалистов." },
+        { "en": "First, calm down before you do anything. It is easy to make a decision when you are angry and regret it later. Take a deep breath, go for a walk and think about the situation. Ask yourself: is this person really trying to annoy me, or are they simply under pressure?", "ru": "Во-первых, успокойтесь, прежде чем что-то делать. Легко принять решение в гневе и потом пожалеть. Сделайте глубокий вдох, прогуляйтесь и подумайте о ситуации. Спросите себя: этот человек правда хочет меня разозлить или просто работает под давлением?" },
+        { "en": "Second, talk it over with the person alone. Many conflicts start with a small misunderstanding. Instead of complaining to other colleagues, ask the person for a short meeting. Point out the problem calmly and give clear examples. Experts say you should talk about the behavior, not the person: \"When you turn up late, I have to repeat everything\" works much better than \"You're so lazy.\"", "ru": "Во-вторых, обсудите всё с этим человеком наедине. Многие конфликты начинаются с небольшого недоразумения. Вместо того чтобы жаловаться другим коллегам, попросите этого человека о короткой встрече. Спокойно укажите на проблему и приведите понятные примеры. Специалисты советуют говорить о поведении, а не о человеке: «Когда ты опаздываешь, мне приходится всё повторять» работает гораздо лучше, чем «Какой ты ленивый»." },
+        { "en": "Third, listen. The other person may have a problem you know nothing about. They may be trying to get over an illness, or they may simply have too much work. Try to come up with a solution together, and be ready to make a compromise.", "ru": "В-третьих, слушайте. У другого человека может быть проблема, о которой вы ничего не знаете. Может, он восстанавливается после болезни или у него просто слишком много работы. Постарайтесь вместе найти решение и будьте готовы к компромиссу." },
+        { "en": "Finally, if nothing changes, don't just put up with it. Write down what happens and talk to your manager. Nobody should have to deal with bad behavior on their own. And remember: you don't have to become best friends with every colleague. You only have to work together with respect.", "ru": "И наконец, если ничего не меняется, не терпите молча. Записывайте, что происходит, и поговорите с руководителем. Никто не должен разбираться с плохим поведением в одиночку. И помните: не обязательно дружить с каждым коллегой. Достаточно работать вместе с уважением." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "b2.u10.l01",
+      "kind": "vocabulary",
+      "title": "Отношения и конфликты",
+      "exercises": [
+        { "id": "b2.u10.l01.e01", "type": "match_pairs", "pairs": [{ "en": "get on with", "ru": "ладить с" }, { "en": "put up with", "ru": "терпеть" }, { "en": "come up with", "ru": "придумать" }, { "en": "run out of", "ru": "израсходовать" }, { "en": "fall out with", "ru": "поссориться с" }], "hint": "Глаголы из трёх слов.", "explanation": "Get on with — ладить с, put up with — терпеть, come up with — придумать, run out of — израсходовать, fall out with — поссориться с." },
+        { "id": "b2.u10.l01.e02", "type": "match_pairs", "pairs": [{ "en": "sort out", "ru": "уладить" }, { "en": "point out", "ru": "указать на" }, { "en": "put off", "ru": "откладывать" }, { "en": "call off", "ru": "отменить" }, { "en": "let down", "ru": "подвести" }], "hint": "Разделяемые глаголы.", "explanation": "Sort out — уладить, point out — указать на, put off — откладывать, call off — отменить, let down — подвести." },
+        { "id": "b2.u10.l01.e03", "type": "match_pairs", "pairs": [{ "en": "turn up", "ru": "появиться" }, { "en": "deal with", "ru": "разбираться с" }, { "en": "get over", "ru": "оправиться от" }, { "en": "talk over", "ru": "обсудить" }, { "en": "calm down", "ru": "успокоиться" }], "hint": "Образец: Calm down!", "explanation": "Turn up — появиться, deal with — разбираться с, get over — оправиться от, talk over — обсудить, calm down — успокоиться." },
+        { "id": "b2.u10.l01.e04", "type": "translate_choice", "from": "ru", "text": "У меня кончилось терпение.", "options": ["I've run out of patience.", "I've run out patience.", "I've run off my patience."], "answer": 0, "hint": "Три слова: run, out, of.", "explanation": "Правильно: I've run out of patience." },
+        { "id": "b2.u10.l01.e05", "type": "fill_gap", "text": "I just can't get on ___ him.", "translation": "Я просто не могу с ним поладить.", "answers": [["with"]], "options": ["with", "to", "at"], "hint": "Ладить с.", "explanation": "Правильно: I just can't get on with him." },
+        { "id": "b2.u10.l01.e06", "type": "fill_gap", "text": "He never comes up ___ any ideas.", "translation": "Он никогда ничего не предлагает.", "answers": [["with"]], "options": ["with", "to", "for"], "hint": "Придумать.", "explanation": "Правильно: He never comes up with any ideas." },
+        { "id": "b2.u10.l01.e07", "type": "fill_gap", "text": "He keeps turning ___ late to meetings.", "translation": "Он вечно опаздывает на совещания.", "answers": [["up"]], "options": ["up", "down", "off"], "hint": "Появиться.", "explanation": "Правильно: He keeps turning up late to meetings." },
+        { "id": "b2.u10.l01.e08", "type": "fill_gap", "text": "I won't let you ___.", "translation": "Я тебя не подведу.", "answers": [["down"]], "options": ["down", "up", "off"], "hint": "Подвести.", "explanation": "Правильно: I won't let you down." },
+        { "id": "b2.u10.l01.e09", "type": "fill_gap", "text": "It takes time to get ___ an argument.", "translation": "Чтобы пережить ссору, нужно время.", "answers": [["over"]], "options": ["over", "on", "out"], "hint": "Пережить.", "explanation": "Правильно: It takes time to get over an argument." },
+        { "id": "b2.u10.l01.e10", "type": "listen_choice", "audio": "How long have you put up with this?", "question": "Что вы слышите?", "options": ["How long have you put up with this?", "How long have you put this up?", "How long did you put it off?"], "answer": 0, "hint": "Терпеть.", "explanation": "Правильно: How long have you put up with this?" },
+        { "id": "b2.u10.l01.e11", "type": "listen_dictation", "text": "I won't let you down.", "hint": "Пять слов.", "explanation": "I won't let you down — «я тебя не подведу»." },
+        { "id": "b2.u10.l01.e12", "type": "type_translation", "from": "ru", "text": "Успокойся!", "answers": ["Calm down!"], "hint": "Образец: Calm + частица.", "explanation": "Calm down [kɑːm daʊn] — «успокойся», l не читается." },
+        { "id": "b2.u10.l01.e13", "type": "minimal_pair", "pair": [{ "en": "calm", "ipa": "kɑːm" }, { "en": "come", "ipa": "kʌm" }], "say": 0, "hint": "L в calm не читается.", "explanation": "Calm [kɑːm] — долгий звук, come [kʌm] — краткий." },
+        { "id": "b2.u10.l01.e14", "type": "word_stress", "word": "compromise", "syllables": ["com", "pro", "mise"], "stress": 0, "hint": "Первый слог.", "explanation": "COM-pro-mise — ударение на первый слог." }
+      ]
+    },
+    {
+      "id": "b2.u10.l02",
+      "kind": "vocabulary",
+      "title": "Как говорить о проблеме",
+      "exercises": [
+        { "id": "b2.u10.l02.e01", "type": "match_pairs", "pairs": [{ "en": "conflict", "ru": "конфликт" }, { "en": "feedback", "ru": "обратная связь" }, { "en": "criticism", "ru": "критика" }, { "en": "respect", "ru": "уважение" }, { "en": "compromise", "ru": "компромисс" }], "hint": "Общение.", "explanation": "Conflict — конфликт, feedback — обратная связь, criticism — критика, respect — уважение, compromise — компромисс." },
+        { "id": "b2.u10.l02.e02", "type": "match_pairs", "pairs": [{ "en": "apology", "ru": "извинение" }, { "en": "impression", "ru": "впечатление" }, { "en": "behavior", "ru": "поведение" }, { "en": "seriously", "ru": "серьёзно" }, { "en": "deeply", "ru": "глубоко" }], "hint": "Образец: Make an impression.", "explanation": "Apology — извинение, impression — впечатление, behavior — поведение, seriously — серьёзно, deeply — глубоко." },
+        { "id": "b2.u10.l02.e03", "type": "match_pairs", "pairs": [{ "en": "totally", "ru": "совершенно" }, { "en": "highly", "ru": "очень" }, { "en": "breath", "ru": "вдох" }, { "en": "calmly", "ru": "спокойно" }, { "en": "lazy", "ru": "ленивый" }], "hint": "Breath — существительное.", "explanation": "Totally — совершенно, highly — очень, breath — вдох, calmly — спокойно, lazy — ленивый." },
+        { "id": "b2.u10.l02.e04", "type": "match_pairs", "pairs": [{ "en": "favor", "ru": "одолжение" }, { "en": "cheer up", "ru": "подбодрить" }, { "en": "sort out", "ru": "разобраться" }, { "en": "turn up", "ru": "прийти" }, { "en": "talk over", "ru": "обсудить" }], "hint": "Образец: Do me a favor.", "explanation": "Favor — одолжение, cheer up — подбодрить, sort out — разобраться, turn up — прийти, talk over — обсудить." },
+        { "id": "b2.u10.l02.e05", "type": "translate_choice", "from": "en", "text": "Give him feedback, not criticism.", "options": ["Дай ему обратную связь, а не критику.", "Покорми его и не критикуй.", "Не давай ему никаких отзывов."], "answer": 0, "hint": "Feedback — обратная связь.", "explanation": "Правильно: Give him feedback, not criticism." },
+        { "id": "b2.u10.l02.e06", "type": "fill_gap", "text": "Be ready to make a ___.", "translation": "Будь готов к компромиссу.", "answers": [["compromise"]], "options": ["compromise", "criticism", "conflict"], "hint": "Компромисс.", "explanation": "Правильно: Be ready to make a compromise." },
+        { "id": "b2.u10.l02.e07", "type": "fill_gap", "text": "Talk about the ___, not the person.", "translation": "Говори о поведении, а не о человеке.", "answers": [["behavior"]], "options": ["behavior", "impression", "apology"], "hint": "Поведение.", "explanation": "Правильно: Talk about the behavior, not the person." },
+        { "id": "b2.u10.l02.e08", "type": "fill_gap", "text": "She takes her work very ___.", "translation": "Она очень серьёзно относится к работе.", "answers": [["seriously"]], "options": ["seriously", "serious", "deeply"], "hint": "Наречие.", "explanation": "Правильно: She takes her work very seriously." },
+        { "id": "b2.u10.l02.e09", "type": "fill_gap", "text": "An ___ can make a big difference.", "translation": "Извинение может многое изменить.", "answers": [["apology"]], "options": ["apology", "impression", "respect"], "hint": "Извинение.", "explanation": "Правильно: An apology can make a big difference." },
+        { "id": "b2.u10.l02.e10", "type": "listen_choice", "audio": "Make an effort to stay calm and point out the problem politely.", "question": "Что вы слышите?", "options": ["Make an effort to stay calm and point out the problem politely.", "Make an effort to come and point at the problem.", "Do your best to stay at home and forget the problem."], "answer": 0, "hint": "Спокойно и вежливо.", "explanation": "Правильно: Make an effort to stay calm and point out the problem politely." },
+        { "id": "b2.u10.l02.e11", "type": "listen_dictation", "text": "Take a deep breath.", "hint": "Четыре слова.", "explanation": "Take a deep breath — «сделай глубокий вдох»." },
+        { "id": "b2.u10.l02.e12", "type": "type_translation", "from": "ru", "text": "Мне очень жаль.", "answers": ["I'm deeply sorry.", "I'm very sorry.", "I am deeply sorry.", "I'm really sorry.", "I'm so sorry."], "difficulty": 2, "hint": "Образец: Deeply sorry.", "explanation": "Правильно: I'm deeply sorry." },
+        { "id": "b2.u10.l02.e13", "type": "minimal_pair", "pair": [{ "en": "breath", "ipa": "breθ" }, { "en": "breathe", "ipa": "briːð" }], "say": 0, "hint": "Существительное короче.", "explanation": "Breath [breθ] — «вдох», breathe [briːð] — «дышать»." },
+        { "id": "b2.u10.l02.e14", "type": "word_stress", "word": "criticism", "syllables": ["crit", "i", "cism"], "stress": 0, "hint": "Первый слог.", "explanation": "CRIT-i-cism — ударение на первый слог." }
+      ]
+    },
+    {
+      "id": "b2.u10.l03",
+      "kind": "grammar",
+      "title": "Sort it out, deal with it",
+      "grammar": "b2.phrasal-word-order",
+      "exercises": [
+        { "id": "b2.u10.l03.e01", "type": "fill_gap", "text": "Shouting won't sort ___ out.", "translation": "Криком делу не поможешь.", "answers": [["it"]], "options": ["it", "out it", "with it"], "hint": "Местоимение — в середину.", "explanation": "Правильно: Shouting won't sort it out.", "grammar": ["b2.phrasal-word-order"] },
+        { "id": "b2.u10.l03.e02", "type": "fill_gap", "text": "I keep putting ___ off.", "translation": "Я всё откладываю.", "answers": [["it"]], "options": ["it", "off it", "on"], "hint": "Местоимение — в середину.", "explanation": "Правильно: I keep putting it off.", "grammar": ["b2.phrasal-word-order"] },
+        { "id": "b2.u10.l03.e03", "type": "fill_gap", "text": "You shouldn't have to deal ___ this on your own.", "translation": "Тебе не нужно разбираться с этим в одиночку.", "answers": [["with"]], "options": ["with", "it", "out"], "hint": "Неразделяемый глагол.", "explanation": "Правильно: You shouldn't have to deal with this on your own.", "grammar": ["b2.phrasal-word-order"] },
+        { "id": "b2.u10.l03.e04", "type": "fill_gap", "text": "Please don't call ___ off this time.", "translation": "Только в этот раз не отменяй.", "answers": [["it"]], "options": ["it", "off", "with"], "hint": "Местоимение — в середину.", "explanation": "Правильно: Please don't call it off this time.", "grammar": ["b2.phrasal-word-order"] },
+        { "id": "b2.u10.l03.e05", "type": "fill_gap", "text": "Have you talked ___ over with him?", "translation": "Ты с ним это обсуждала?", "answers": [["it"]], "options": ["it", "over", "with"], "hint": "Местоимение — в середину.", "explanation": "Правильно: Have you talked it over with him?", "grammar": ["b2.phrasal-word-order"] },
+        { "id": "b2.u10.l03.e06", "type": "fill_gap", "text": "You've really cheered ___ up.", "translation": "Ты меня очень подбодрила.", "answers": [["me"]], "options": ["me", "up me", "I"], "hint": "Кого? Меня.", "explanation": "Правильно: You've really cheered me up.", "grammar": ["b2.phrasal-word-order"] },
+        { "id": "b2.u10.l03.e07", "type": "error_correction", "text": "Shouting won't sort out it.", "wrong": "sort out it", "correction": "sort it out", "options": ["sort it out", "sort out with it", "out sort it"], "hint": "Местоимение.", "explanation": "Правильно: Shouting won't sort it out.", "grammar": ["b2.phrasal-word-order"], "troubles": ["word-order"] },
+        { "id": "b2.u10.l03.e08", "type": "error_correction", "text": "Don't call off it this time.", "wrong": "call off it", "correction": "call it off", "options": ["call it off", "call off with it", "off call it"], "hint": "Местоимение.", "explanation": "Правильно: Don't call it off this time.", "grammar": ["b2.phrasal-word-order"], "troubles": ["word-order"] },
+        { "id": "b2.u10.l03.e09", "type": "error_correction", "text": "I can't deal it with.", "wrong": "deal it with", "correction": "deal with it", "options": ["deal with it", "deal it", "with it deal"], "hint": "Неразделяемый.", "explanation": "Правильно: I can't deal with it.", "grammar": ["b2.phrasal-word-order"], "troubles": ["word-order"] },
+        { "id": "b2.u10.l03.e10", "type": "translate_choice", "from": "ru", "text": "Я тебя не подведу.", "options": ["I won't let you down.", "I won't let down you.", "I won't down let you."], "answer": 0, "hint": "Местоимение — в середину.", "explanation": "Правильно: I won't let you down.", "grammar": ["b2.phrasal-word-order"] },
+        { "id": "b2.u10.l03.e11", "type": "tiles", "from": "ru", "text": "Давай обсудим это завтра.", "answer": "Let's talk it over tomorrow.", "distractors": ["about", "with"], "difficulty": 2, "hint": "Образец: Talk + it + over.", "explanation": "Правильно: Let's talk it over tomorrow.", "grammar": ["b2.phrasal-word-order"] },
+        { "id": "b2.u10.l03.e12", "type": "tiles", "from": "ru", "text": "Мы разберёмся с этим вместе.", "answer": "We'll deal with it together.", "distractors": ["out", "sort"], "difficulty": 2, "hint": "Образец: Deal with + it.", "explanation": "Правильно: We'll deal with it together.", "grammar": ["b2.phrasal-word-order"] },
+        { "id": "b2.u10.l03.e13", "type": "type_translation", "from": "ru", "text": "Я всё время это откладываю.", "answers": ["I keep putting it off.", "I'm always putting it off.", "I always put it off."], "difficulty": 3, "hint": "Образец: Keep + putting + it + off.", "explanation": "Правильно: I keep putting it off.", "grammar": ["b2.phrasal-word-order"] },
+        { "id": "b2.u10.l03.e14", "type": "listen_choice", "audio": "Calm down. Shouting won't sort it out.", "question": "Что вы слышите?", "options": ["Calm down. Shouting won't sort it out.", "Come down. Shouting will sort it out.", "Calm down. Shouting won't sort out it."], "answer": 0, "hint": "Местоимение — в середине.", "explanation": "Правильно: Calm down. Shouting won't sort it out.", "grammar": ["b2.phrasal-word-order"] },
+        { "id": "b2.u10.l03.e15", "type": "speak_answer", "question": "What do you usually put off? How do you deal with stress?", "questionRu": "Что вы обычно откладываете? Как вы справляетесь со стрессом? Ответьте: I usually put… off. I deal with it by…", "keywords": [["\\bput(ting)? ([a-z]+ ){1,2}off\\b", "\\bput off\\b"], ["\\bdeal with\\b", "\\bcalm (myself )?down\\b", "\\bcheer (me|myself) up\\b"]], "minKeywords": 2, "samples": ["I usually put off cleaning my flat. When I'm stressed, I deal with it by going for a run.", "I always put my emails off until Friday. To deal with stress, I call a friend who cheers me up."], "difficulty": 3, "hint": "Образец: I usually put off… I deal with stress by…", "explanation": "Ответ: I usually put off cleaning my flat. When I'm stressed, I deal with it by going for a run.", "grammar": ["b2.phrasal-word-order"] }
+      ]
+    },
+    {
+      "id": "b2.u10.l04",
+      "kind": "grammar",
+      "title": "Get on with, put up with",
+      "grammar": "b2.phrasal-three-part",
+      "exercises": [
+        { "id": "b2.u10.l04.e01", "type": "fill_gap", "text": "I can't put up ___ this noise.", "translation": "Я не могу терпеть этот шум.", "answers": [["with"]], "options": ["with", "on", "to"], "hint": "Терпеть.", "explanation": "Правильно: I can't put up with this noise.", "grammar": ["b2.phrasal-three-part"] },
+        { "id": "b2.u10.l04.e02", "type": "fill_gap", "text": "We've run out ___ milk.", "translation": "У нас кончилось молоко.", "answers": [["of"]], "options": ["of", "from", "with"], "hint": "Кончиться.", "explanation": "Правильно: We've run out of milk.", "grammar": ["b2.phrasal-three-part"] },
+        { "id": "b2.u10.l04.e03", "type": "fill_gap", "text": "I'm looking forward to ___ you.", "translation": "Жду встречи с тобой.", "answers": [["seeing"]], "options": ["seeing", "see", "saw"], "hint": "После to.", "explanation": "Правильно: I'm looking forward to seeing you.", "grammar": ["b2.phrasal-three-part"] },
+        { "id": "b2.u10.l04.e04", "type": "fill_gap", "text": "Who do you get on with best ___ work?", "translation": "С кем ты лучше всего ладишь на работе?", "answers": [["at"]], "options": ["at", "with", "on"], "hint": "На работе.", "explanation": "Правильно: Who do you get on with best at work?", "grammar": ["b2.phrasal-three-part"] },
+        { "id": "b2.u10.l04.e05", "type": "fill_gap", "text": "I don't want to fall ___ with him.", "translation": "Я не хочу с ним ссориться.", "answers": [["out"]], "options": ["out", "off", "down"], "hint": "Поссориться.", "explanation": "Правильно: I don't want to fall out with him.", "grammar": ["b2.phrasal-three-part"] },
+        { "id": "b2.u10.l04.e06", "type": "fill_gap", "text": "Try to come ___ with a solution together.", "translation": "Постарайтесь вместе найти решение.", "answers": [["up"]], "options": ["up", "out", "on"], "hint": "Придумать.", "explanation": "Правильно: Try to come up with a solution together.", "grammar": ["b2.phrasal-three-part"] },
+        { "id": "b2.u10.l04.e07", "type": "error_correction", "text": "I can't put up this noise.", "wrong": "put up this", "correction": "put up with this", "options": ["put up with this", "put this up", "put up to this"], "hint": "Пропущен предлог.", "explanation": "Правильно: I can't put up with this noise.", "grammar": ["b2.phrasal-three-part"], "troubles": ["prepositions"] },
+        { "id": "b2.u10.l04.e08", "type": "error_correction", "text": "We've run out the milk.", "wrong": "run out the", "correction": "run out of", "options": ["run out of", "run of out", "run out from"], "hint": "Пропущен предлог.", "explanation": "Правильно: We've run out of milk.", "grammar": ["b2.phrasal-three-part"], "troubles": ["prepositions"] },
+        { "id": "b2.u10.l04.e09", "type": "error_correction", "text": "I'm looking forward to see you.", "wrong": "see", "correction": "seeing", "options": ["seeing", "seen", "saw"], "hint": "После to.", "explanation": "Правильно: I'm looking forward to seeing you.", "grammar": ["b2.phrasal-three-part"], "troubles": ["prepositions"] },
+        { "id": "b2.u10.l04.e10", "type": "translate_choice", "from": "en", "text": "He came up with a great idea.", "options": ["Он придумал отличную идею.", "Он подошёл с отличной идеей.", "Он согласился с отличной идеей."], "answer": 0, "hint": "Come up with — придумать.", "explanation": "Правильно: He came up with a great idea.", "grammar": ["b2.phrasal-three-part"] },
+        { "id": "b2.u10.l04.e11", "type": "tiles", "from": "ru", "text": "Я не могу с ним поладить.", "answer": "I can't get on with him.", "distractors": ["to", "he"], "difficulty": 2, "hint": "Образец: Get on with + кто.", "explanation": "Правильно: I can't get on with him.", "grammar": ["b2.phrasal-three-part"] },
+        { "id": "b2.u10.l04.e12", "type": "tiles", "from": "ru", "text": "У меня кончилось терпение.", "answer": "I've run out of patience.", "distractors": ["from", "off"], "difficulty": 2, "hint": "Образец: Run out of.", "explanation": "Правильно: I've run out of patience.", "grammar": ["b2.phrasal-three-part"] },
+        { "id": "b2.u10.l04.e13", "type": "type_translation", "from": "ru", "text": "Сколько ты это уже терпишь?", "answers": ["How long have you put up with this?", "How long have you been putting up with this?", "How long have you put up with it?"], "difficulty": 3, "hint": "Образец: Put up with.", "explanation": "Правильно: How long have you put up with this?", "grammar": ["b2.phrasal-three-part"] },
+        { "id": "b2.u10.l04.e14", "type": "listen_choice", "audio": "He never comes up with anything.", "question": "Что вы слышите?", "options": ["He never comes up with anything.", "He never comes up to anyone.", "He never comes on time."], "answer": 0, "hint": "Придумать.", "explanation": "Правильно: He never comes up with anything.", "grammar": ["b2.phrasal-three-part"] },
+        { "id": "b2.u10.l04.e15", "type": "speak_answer", "question": "Who do you get on with best in your family? What can't you put up with?", "questionRu": "С кем в семье вы лучше всего ладите? Что вы не можете терпеть? Ответьте: I get on with… I can't put up with…", "keywords": [["\\bget on( well| best)? with\\b"], ["\\bput up with\\b"]], "minKeywords": 2, "samples": ["I get on best with my sister. I can't put up with people who are always late.", "I get on well with my dad, but I can't put up with his loud music."], "difficulty": 3, "hint": "Образец: I get on best with… I can't put up with…", "explanation": "Ответ: I get on best with my sister. I can't put up with people who are always late.", "grammar": ["b2.phrasal-three-part"] }
+      ]
+    },
+    {
+      "id": "b2.u10.l05",
+      "kind": "grammar",
+      "title": "Make a mistake, pay attention",
+      "grammar": "b2.collocations",
+      "exercises": [
+        { "id": "b2.u10.l05.e01", "type": "fill_gap", "text": "I ___ a big mistake.", "translation": "Я совершил большую ошибку.", "answers": [["made"]], "options": ["made", "did", "took"], "hint": "Ошибку не делают, а создают.", "explanation": "Правильно: I made a big mistake.", "grammar": ["b2.collocations"], "troubles": ["false-friends"] },
+        { "id": "b2.u10.l05.e02", "type": "fill_gap", "text": "I have to ___ my homework.", "translation": "Мне нужно сделать домашнее задание.", "answers": [["do"]], "options": ["do", "make", "take"], "hint": "Работа, дела.", "explanation": "Правильно: I have to do my homework.", "grammar": ["b2.collocations"] },
+        { "id": "b2.u10.l05.e03", "type": "fill_gap", "text": "Please ___ attention.", "translation": "Пожалуйста, будьте внимательны.", "answers": [["pay"]], "options": ["pay", "give", "make"], "hint": "Внимание «платят».", "explanation": "Правильно: Please pay attention.", "grammar": ["b2.collocations"] },
+        { "id": "b2.u10.l05.e04", "type": "fill_gap", "text": "Could you ___ me a favor?", "translation": "Можешь сделать мне одолжение?", "answers": [["do"]], "options": ["do", "make", "give"], "hint": "Одолжение.", "explanation": "Правильно: Could you do me a favor?", "grammar": ["b2.collocations"] },
+        { "id": "b2.u10.l05.e05", "type": "fill_gap", "text": "There was ___ rain yesterday.", "translation": "Вчера был сильный дождь.", "answers": [["heavy"]], "options": ["heavy", "strong", "big"], "hint": "О дожде.", "explanation": "Правильно: There was heavy rain yesterday.", "grammar": ["b2.collocations"] },
+        { "id": "b2.u10.l05.e06", "type": "fill_gap", "text": "Try to ___ an effort to stay calm.", "translation": "Постарайся сохранять спокойствие.", "answers": [["make"]], "options": ["make", "do", "take"], "hint": "Усилие.", "explanation": "Правильно: Try to make an effort to stay calm.", "grammar": ["b2.collocations"] },
+        { "id": "b2.u10.l05.e07", "type": "error_correction", "text": "I did a big mistake.", "wrong": "did", "correction": "made", "options": ["made", "took", "had"], "hint": "Ошибку — другой глагол.", "explanation": "Правильно: I made a big mistake.", "grammar": ["b2.collocations"], "troubles": ["false-friends"] },
+        { "id": "b2.u10.l05.e08", "type": "error_correction", "text": "There was strong rain yesterday.", "wrong": "strong", "correction": "heavy", "options": ["heavy", "hard", "big"], "hint": "О дожде.", "explanation": "Правильно: There was heavy rain yesterday.", "grammar": ["b2.collocations"] },
+        { "id": "b2.u10.l05.e09", "type": "error_correction", "text": "Please give attention to the teacher.", "wrong": "give", "correction": "pay", "options": ["pay", "take", "make"], "hint": "Внимание.", "explanation": "Правильно: Please pay attention to the teacher.", "grammar": ["b2.collocations"] },
+        { "id": "b2.u10.l05.e10", "type": "translate_choice", "from": "en", "text": "She takes her work seriously.", "options": ["Она серьёзно относится к работе.", "Она берёт работу домой.", "Она серьёзно больна из-за работы."], "answer": 0, "hint": "Образец: Take seriously.", "explanation": "Правильно: She takes her work seriously.", "grammar": ["b2.collocations"] },
+        { "id": "b2.u10.l05.e11", "type": "tiles", "from": "ru", "text": "Мы должны принять решение.", "answer": "We have to make a decision.", "distractors": ["do", "take"], "difficulty": 2, "hint": "Решение — make.", "explanation": "Правильно: We have to make a decision.", "grammar": ["b2.collocations"] },
+        { "id": "b2.u10.l05.e12", "type": "tiles", "from": "ru", "text": "Давай не терять связь.", "answer": "Let's keep in touch.", "distractors": ["hold", "lose"], "difficulty": 2, "hint": "Образец: Keep in touch.", "explanation": "Правильно: Let's keep in touch.", "grammar": ["b2.collocations"] },
+        { "id": "b2.u10.l05.e13", "type": "type_translation", "from": "ru", "text": "Я совершил ошибку.", "answers": ["I made a mistake.", "I've made a mistake.", "I have made a mistake."], "difficulty": 2, "hint": "Образец: Make + a mistake.", "explanation": "Правильно: I made a mistake.", "grammar": ["b2.collocations"] },
+        { "id": "b2.u10.l05.e14", "type": "listen_choice", "audio": "You've always taken your work seriously.", "question": "Что вы слышите?", "options": ["You've always taken your work seriously.", "You've always taken your work home.", "You've always made your work serious."], "answer": 0, "hint": "Серьёзно.", "explanation": "Правильно: You've always taken your work seriously.", "grammar": ["b2.collocations"] },
+        { "id": "b2.u10.l05.e15", "type": "speak_answer", "question": "Tell me about a mistake you made and what you learned from it.", "questionRu": "Расскажите об ошибке, которую вы совершили, и о том, чему она вас научила. Используйте make a mistake, make a decision, pay attention.", "keywords": [["\\bmade (a|the|this|that|one|some|big) ?[a-z]* ?mistakes?\\b", "\\bmade a (bad|wrong|quick) decision\\b"], ["\\b(pay attention|paid attention|take [a-z]+ seriously|make an effort|learned|learnt)\\b"]], "minKeywords": 2, "samples": ["I once made a big mistake at work: I didn't check an email. Now I always pay attention when I check my emails.", "I made a bad decision when I chose my first job. I learned to take my time."], "difficulty": 3, "hint": "Образец: I once made a big mistake… Now I always pay attention…", "explanation": "Ответ: I once made a big mistake at work. Now I always pay attention when I check my emails.", "grammar": ["b2.collocations"] }
+      ]
+    },
+    {
+      "id": "b2.u10.l06",
+      "kind": "listening",
+      "title": "У меня кончилось терпение",
+      "textId": "b2.u10.colleague",
+      "exercises": [
+        {
+          "id": "b2.u10.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "b2.u10.colleague",
+          "hint": "Слушайте, на что жалуется Анна и что ей советует Ольга.",
+          "explanation": "Новый коллега Анны Макс опаздывает, ничего не предлагает и выдаёт её идеи за свои. Анна терпит три месяца и всё откладывает разговор. Ольга советует успокоиться, вежливо поговорить с ним, а если не поможет — пойти к руководителю. Подруги договариваются встретиться в пятницу.",
+          "questions": [
+            { "kind": "mcq", "question": "Что делает Макс?", "options": ["turns up late and takes Anna's ideas", "shouts at Anna", "never comes to work"], "answer": 0, "explanation": "Анна: He keeps turning up late… he tells the boss that my ideas were his." },
+            { "kind": "mcq", "question": "Сколько Анна уже терпит?", "options": ["three months", "three weeks", "a year"], "answer": 0, "explanation": "Анна: Three months." },
+            { "kind": "mcq", "question": "Что советует Ольга, если разговор не поможет?", "options": ["talk to the manager", "look for a new job", "shout at Max"], "answer": 0, "explanation": "Ольга: Then talk to your manager." },
+            { "kind": "tfn", "statement": "Anna has already talked to Max about the problem.", "answer": "false", "explanation": "Анна: Not yet. I keep putting it off." },
+            { "kind": "tfn", "statement": "Olga and Anna plan to meet on Friday.", "answer": "true", "explanation": "Ольга: How about Friday?" },
+            { "kind": "tfn", "statement": "Max has worked in Anna's team for a year.", "answer": "not_given", "explanation": "Сказано только, что он новенький." }
+          ]
+        },
+        { "id": "b2.u10.l06.e02", "type": "listen_choice", "audio": "I don't want to fall out with him completely.", "question": "Что вы слышите?", "options": ["I don't want to fall out with him completely.", "I don't want to fall down with him.", "I want to find out about him."], "answer": 0, "hint": "Поссориться.", "explanation": "Правильно: I don't want to fall out with him completely.", "grammar": ["b2.phrasal-three-part"] },
+        { "id": "b2.u10.l06.e03", "type": "listen_dictation", "text": "I've run out of patience.", "hint": "Пять слов.", "explanation": "I've run out of patience — «у меня кончилось терпение»." },
+        { "id": "b2.u10.l06.e04", "type": "listen_dictation", "text": "Please don't call it off this time.", "hint": "Семь слов.", "explanation": "Please don't call it off this time — «только в этот раз не отменяй»." },
+        { "id": "b2.u10.l06.e05", "type": "fill_gap", "text": "Have you talked it ___ with him?", "translation": "Ты с ним это обсуждала?", "answers": [["over"]], "options": ["over", "out", "up"], "hint": "Обсудить.", "explanation": "Правильно: Have you talked it over with him?", "grammar": ["b2.phrasal-word-order"] },
+        { "id": "b2.u10.l06.e06", "type": "fill_gap", "text": "You've always ___ your work seriously.", "translation": "Ты всегда серьёзно относилась к работе.", "answers": [["taken"]], "options": ["taken", "made", "done"], "hint": "Образец: … seriously.", "explanation": "Правильно: You've always taken your work seriously.", "grammar": ["b2.collocations"] },
+        { "id": "b2.u10.l06.e07", "type": "tiles", "from": "ru", "text": "Ты меня очень подбодрила.", "answer": "You've really cheered me up.", "distractors": ["up me", "I"], "difficulty": 2, "hint": "Образец: Cheer + me + up.", "explanation": "Правильно: You've really cheered me up.", "grammar": ["b2.phrasal-word-order"] },
+        { "id": "b2.u10.l06.e08", "type": "type_translation", "from": "ru", "text": "Я не могу с ним поладить.", "answers": ["I can't get on with him.", "I can't get along with him."], "difficulty": 3, "hint": "Образец: Get on with.", "explanation": "Правильно: I can't get on with him.", "grammar": ["b2.phrasal-three-part"] },
+        { "id": "b2.u10.l06.e09", "type": "speak_answer", "question": "Have you ever had a difficult colleague or neighbor? How did you deal with it?", "questionRu": "Был ли у вас трудный коллега или сосед? Как вы с этим справились?", "keywords": [["\\b(get on with|put up with|fall out|fell out|deal with|dealt with|sort it out|sorted it out|talk it over|talked it over)\\b"], ["\\b(colleague|classmate|neighbor|boss|friend|flatmate)\\b"]], "minKeywords": 2, "samples": ["I didn't get on with a colleague who was always late. In the end we talked it over and sorted it out.", "My neighbor played loud music, and I put up with it for months. Finally, I dealt with it by talking to him."], "difficulty": 3, "hint": "Образец: I didn't get on with… In the end we talked it over…", "explanation": "Ответ: I didn't get on with a colleague who was always late. In the end we talked it over and sorted it out." },
+        { "id": "b2.u10.l06.e10", "type": "speak_repeat", "text": "Calm down. Shouting won't sort it out.", "hint": "Sort it out — слитно.", "explanation": "Sort it out звучит как [sɔːrtɪˈtaʊt]: слова сливаются." }
+      ]
+    },
+    {
+      "id": "b2.u10.l07",
+      "kind": "writing",
+      "title": "Трудный коллега",
+      "textId": "b2.u10.colleagues",
+      "exercises": [
+        {
+          "id": "b2.u10.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "b2.u10.colleagues",
+          "hint": "Найдите четыре совета и что нужно делать в каждом случае.",
+          "explanation": "Четыре совета: сначала успокоиться; обсудить наедине и говорить о поведении, а не о человеке; выслушать и искать решение вместе; если ничего не меняется, записывать и идти к руководителю. Дружить со всеми не обязательно, нужно уважение.",
+          "questions": [
+            { "kind": "mcq", "question": "Что нужно сделать прежде всего?", "options": ["calm down", "talk to the manager", "complain to colleagues"], "answer": 0, "explanation": "В тексте: First, calm down before you do anything." },
+            { "kind": "mcq", "question": "О чём советуют говорить при встрече?", "options": ["the behavior, not the person", "the person's character", "other colleagues"], "answer": 0, "explanation": "В тексте: talk about the behavior, not the person." },
+            { "kind": "mcq", "question": "Что делать, если ничего не меняется?", "options": ["write down what happens and talk to the manager", "put up with it", "become best friends"], "answer": 0, "explanation": "В тексте: Write down what happens and talk to your manager." },
+            { "kind": "tfn", "statement": "The article says you should complain to other colleagues.", "answer": "false", "explanation": "В тексте: Instead of complaining to other colleagues, ask the person for a short meeting." },
+            { "kind": "tfn", "statement": "You don't have to be best friends with every colleague.", "answer": "true", "explanation": "В тексте: you don't have to become best friends with every colleague." },
+            { "kind": "tfn", "statement": "Most difficult colleagues are lazy.", "answer": "not_given", "explanation": "Об этом в тексте не сказано." }
+          ]
+        },
+        { "id": "b2.u10.l07.e02", "type": "translate_choice", "from": "en", "text": "Nobody should have to deal with bad behavior on their own.", "options": ["Никто не должен разбираться с плохим поведением в одиночку.", "Никто не должен плохо себя вести.", "Только сам человек может справиться со своим поведением."], "answer": 0, "hint": "Deal with — разбираться с.", "explanation": "Правильно: Nobody should have to deal with bad behavior on their own.", "grammar": ["b2.phrasal-word-order"] },
+        { "id": "b2.u10.l07.e03", "type": "fill_gap", "text": "It is easy to ___ a decision when you are angry.", "translation": "Легко принять решение в гневе.", "answers": [["make"]], "options": ["make", "do", "take on"], "hint": "Решение.", "explanation": "Правильно: It is easy to make a decision when you are angry.", "grammar": ["b2.collocations"] },
+        { "id": "b2.u10.l07.e04", "type": "fill_gap", "text": "If nothing changes, don't just put up ___ it.", "translation": "Если ничего не меняется, не терпите молча.", "answers": [["with"]], "options": ["with", "on", "for"], "hint": "Терпеть.", "explanation": "Правильно: don't just put up with it.", "grammar": ["b2.phrasal-three-part"] },
+        { "id": "b2.u10.l07.e05", "type": "type_translation", "from": "ru", "text": "Постарайтесь вместе найти решение.", "answers": ["Try to come up with a solution together.", "Try to find a solution together."], "difficulty": 3, "hint": "Образец: Come up with.", "explanation": "Правильно: Try to come up with a solution together.", "grammar": ["b2.phrasal-three-part"] },
+        { "id": "b2.u10.l07.e06", "type": "speak_describe", "picture": { "emoji": "🤝" }, "situation": "Ваш друг поссорился с соседом по квартире. Дайте ему два-три совета, используя фразовые глаголы.", "keywords": [["\\b(calm down|talk it over|sort it out|come up with|put up with|deal with|point out)\\b"], ["\\b(you should|why don't you|try to|if I were you)\\b"]], "minKeywords": 2, "samples": ["First, calm down. Then you should talk it over with him. Try to come up with some rules together, and don't put up with it if nothing changes."], "difficulty": 3, "hint": "Образец: First, calm down. You should talk it over…", "explanation": "Советуйте с you should, try to, why don't you и фразовыми глаголами." },
+        { "id": "b2.u10.l07.e07", "type": "speak_answer", "question": "Which piece of advice from the article do you find the most useful? Why?", "questionRu": "Какой совет из статьи вам кажется самым полезным? Почему?", "keywords": [["\\b(I think|I believe|in my opinion)\\b"], ["\\bbecause\\b"]], "minKeywords": 2, "samples": ["I think the most useful advice is to talk about the behavior, not the person, because nobody likes being called lazy.", "In my opinion, calming down first is the most important, because we often say silly things when we're angry."], "difficulty": 3, "hint": "Образец: I think the most useful advice is…, because…", "explanation": "Ответ: I think the most useful advice is to talk about the behavior, not the person." },
+        {
+          "id": "b2.u10.l07.e08",
+          "type": "write",
+          "task": "Ваш друг или подруга поссорились с соседом по квартире (или с другом) и просят совета. Напишите неформальное письмо: посочувствуйте, дайте 3–4 совета и подбодрите. Используйте фразовые глаголы (talk it over, sort it out, put up with) и устойчивые сочетания (make an effort, pay attention, keep in touch).",
+          "minWords": 140,
+          "maxWords": 260,
+          "criteria": [
+            { "id": "phrasal", "label": "Есть фразовые глаголы: get on with, put up with, come up with, sort out, calm down…", "patterns": ["\\b(get on with|put up with|come up with|run out of|sort (it|this|things) out|sort out|talk (it|things) over|calm down|fall(en)? out|fell out|point out|deal with|get over|cheer (you|her|him) up|let (you|him|her) down)\\b"] },
+            { "id": "pronoun", "label": "Есть местоимение внутри фразового глагола: sort it out, talk it over", "patterns": ["\\b(sort|talk|point|call|put|turn|cheer|let|think) (it|them|him|her|you|things) (out|over|off|down|up)\\b"] },
+            { "id": "collocation", "label": "Есть устойчивое сочетание: make an effort, pay attention, keep in touch…", "patterns": ["\\b(make an effort|make a decision|make a mistake|made a mistake|pay attention|take [a-z]+ seriously|keep in touch|make a compromise|do [a-z]+ a favou?r|deep breath|make a big difference)\\b"] },
+            { "id": "advice", "label": "Есть советы", "patterns": ["\\b(you should|why don't you|if I were you|try to|I'd)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\b(sort|talk|point|call|put|turn|cheer|let|think) (out|over|off|down|up) (it|them|him|her)\\b", "message": "Местоимение ставится в середину: sort it out, talk it over." },
+            { "pattern": "\\bdo (a|the|this|that|any|many) mistakes?\\b", "message": "Ошибку — make: make a mistake." },
+            { "pattern": "\\bmake (my|your|the|his|her) homework\\b", "message": "Домашнее задание — do: do your homework." },
+            { "pattern": "\\blooking forward to (see|meet|hear|talk)\\b", "message": "После look forward to — -ing: looking forward to seeing." },
+            { "pattern": "\\bput up (this|it|him|her|them)\\b", "message": "Терпеть — put up with: put up with it." }
+          ],
+          "samples": [
+            "Hi Kate, I'm sorry to hear that you've fallen out with your flatmate. I know how hard that is. First of all, try to calm down before you talk to her. If you're angry, you might say something you regret. Take a deep breath and think about what really annoys you. Then sit down with her and talk it over. Point out the problem calmly, and listen to her side too. Maybe she's under a lot of pressure at work and hasn't noticed how messy the kitchen is. You could come up with some simple rules together, for example a list of who cleans what. If you both make an effort, I'm sure you can sort it out. But if she keeps breaking her promises, you shouldn't put up with it for too long. Perhaps it's time to look for a new place. Call me if you need to talk. I'm looking forward to seeing you next week, and I promise I'll cheer you up! Love, Anna",
+            "Hi Max, thanks for your message. I'm really sorry that you and Tom don't get on with each other at the moment. You've been friends for years, so don't give up. If I were you, I'd call him and ask to meet. Don't send a long angry message, because it's much easier to sort things out when you see each other. When you meet, pay attention to what he says and don't interrupt him. You should also say sorry for your own mistakes. Nobody is perfect, and an apology can make a big difference. Maybe you can come up with a compromise about the money you borrowed. If he still doesn't want to talk, give him some time. People sometimes need a few weeks to get over an argument. Try not to think about it all the time, and enjoy your holiday. Keep in touch and tell me how it goes! Best wishes, Ivan"
+          ],
+          "difficulty": 3,
+          "hint": "План: сочувствие → советы (try to, you should, if I were you) → что делать, если не поможет → поддержка и прощание.",
+          "explanation": "Местоимение — в середину разделяемого глагола: sort it out, talk it over. Глаголы из трёх слов не разделяются: put up with it. Make a mistake, pay attention, keep in touch — устойчивые сочетания.",
+          "grammar": ["b2.phrasal-word-order", "b2.phrasal-three-part", "b2.collocations"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "b2.u10.test.e01", "type": "match_pairs", "pairs": [{ "en": "get on with", "ru": "ладить с" }, { "en": "put off", "ru": "откладывать" }, { "en": "let down", "ru": "подвести" }, { "en": "feedback", "ru": "обратная связь" }, { "en": "compromise", "ru": "компромисс" }], "hint": "Слова юнита.", "explanation": "Get on with — ладить с, put off — откладывать, let down — подвести, feedback — обратная связь, compromise — компромисс." },
+      { "id": "b2.u10.test.e02", "type": "translate_choice", "from": "ru", "text": "отменить", "options": ["call off", "call back", "put up"], "answer": 0, "hint": "Встречу, концерт.", "explanation": "Call off — «отменить»." },
+      { "id": "b2.u10.test.e03", "type": "fill_gap", "text": "Shouting won't sort ___ out.", "translation": "Криком делу не поможешь.", "answers": [["it"]], "options": ["it", "out it", "with it"], "hint": "Местоимение.", "explanation": "Правильно: Shouting won't sort it out.", "grammar": ["b2.phrasal-word-order"] },
+      { "id": "b2.u10.test.e04", "type": "fill_gap", "text": "You shouldn't have to deal ___ this on your own.", "translation": "Тебе не нужно разбираться с этим в одиночку.", "answers": [["with"]], "options": ["with", "it", "out"], "hint": "Неразделяемый.", "explanation": "Правильно: deal with this.", "grammar": ["b2.phrasal-word-order"] },
+      { "id": "b2.u10.test.e05", "type": "fill_gap", "text": "I can't put up ___ this noise.", "translation": "Я не могу терпеть этот шум.", "answers": [["with"]], "options": ["with", "on", "to"], "hint": "Терпеть.", "explanation": "Правильно: I can't put up with this noise.", "grammar": ["b2.phrasal-three-part"] },
+      { "id": "b2.u10.test.e06", "type": "fill_gap", "text": "I'm looking forward to ___ you.", "translation": "Жду встречи с тобой.", "answers": [["seeing"]], "options": ["seeing", "see", "saw"], "hint": "После to.", "explanation": "Правильно: I'm looking forward to seeing you.", "grammar": ["b2.phrasal-three-part"] },
+      { "id": "b2.u10.test.e07", "type": "fill_gap", "text": "I ___ a big mistake.", "translation": "Я совершил большую ошибку.", "answers": [["made"]], "options": ["made", "did", "took"], "hint": "Ошибку.", "explanation": "Правильно: I made a big mistake.", "grammar": ["b2.collocations"] },
+      { "id": "b2.u10.test.e08", "type": "fill_gap", "text": "Please ___ attention.", "translation": "Пожалуйста, будьте внимательны.", "answers": [["pay"]], "options": ["pay", "give", "make"], "hint": "Внимание.", "explanation": "Правильно: Please pay attention.", "grammar": ["b2.collocations"] },
+      { "id": "b2.u10.test.e09", "type": "error_correction", "text": "Don't call off it this time.", "wrong": "call off it", "correction": "call it off", "options": ["call it off", "call off with it", "off call it"], "hint": "Местоимение.", "explanation": "Правильно: Don't call it off this time.", "grammar": ["b2.phrasal-word-order"] },
+      { "id": "b2.u10.test.e10", "type": "error_correction", "text": "We've run out the milk.", "wrong": "run out the", "correction": "run out of", "options": ["run out of", "run of out", "run out from"], "hint": "Предлог.", "explanation": "Правильно: We've run out of milk.", "grammar": ["b2.phrasal-three-part"] },
+      { "id": "b2.u10.test.e11", "type": "error_correction", "text": "There was strong rain yesterday.", "wrong": "strong", "correction": "heavy", "options": ["heavy", "hard", "big"], "hint": "О дожде.", "explanation": "Правильно: There was heavy rain yesterday.", "grammar": ["b2.collocations"] },
+      { "id": "b2.u10.test.e12", "type": "listen_choice", "audio": "How long have you put up with this?", "question": "Что вы слышите?", "options": ["How long have you put up with this?", "How long have you put this up?", "How long did you put it off?"], "answer": 0, "hint": "Терпеть.", "explanation": "Правильно: How long have you put up with this?", "grammar": ["b2.phrasal-three-part"] },
+      { "id": "b2.u10.test.e13", "type": "listen_dictation", "text": "I won't let you down.", "hint": "Пять слов.", "explanation": "I won't let you down — «я тебя не подведу»." },
+      { "id": "b2.u10.test.e14", "type": "tiles", "from": "ru", "text": "Давай обсудим это завтра.", "answer": "Let's talk it over tomorrow.", "distractors": ["about", "with"], "difficulty": 2, "hint": "Образец: Talk + it + over.", "explanation": "Правильно: Let's talk it over tomorrow.", "grammar": ["b2.phrasal-word-order"] },
+      { "id": "b2.u10.test.e15", "type": "type_translation", "from": "ru", "text": "У меня кончилось терпение.", "answers": ["I've run out of patience.", "I have run out of patience.", "I ran out of patience."], "difficulty": 3, "hint": "Образец: Run out of.", "explanation": "Правильно: I've run out of patience.", "grammar": ["b2.phrasal-three-part"] },
+      { "id": "b2.u10.test.e16", "type": "speak_repeat", "text": "Calm down. Shouting won't sort it out.", "hint": "L в calm не читается.", "explanation": "Calm [kɑːm], sort it out — слитно." }
+    ]
+  }
+}
