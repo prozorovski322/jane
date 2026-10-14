@@ -1,0 +1,318 @@
+{
+  "id": "b1.u08",
+  "level": "B1",
+  "order": 8,
+  "title": { "en": "What people said", "ru": "Что сказали другие" },
+  "description": "Пересказываем чужие слова, вопросы и просьбы: новости друзей, слухи, разговоры на работе. Косвенная речь со сдвигом времён, косвенные вопросы с if и whether, глаголы promise, refuse, suggest, apologize.",
+  "goals": [
+    "Могу пересказать, что сказал другой человек: She said that she was tired.",
+    "Могу пересказать вопрос: He asked me where I lived.",
+    "Могу вежливо спросить: Can you tell me where the station is?",
+    "Могу пересказать просьбу или совет: She asked me not to tell anyone.",
+    "Могу точно передать смысл: promised to, refused to, apologized for.",
+    "Могу написать письмо с пересказом разговора."
+  ],
+  "grammar": ["b1.reported-speech", "b1.reported-questions", "b1.reporting-verbs"],
+  "troubles": ["tenses", "word-order"],
+  "words": [
+    { "id": "admit", "en": "admit", "ipa": "ədˈmɪt", "pos": "verb", "ru": ["признавать"], "example": { "en": "He admitted that he was wrong.", "ru": "Он признал, что был неправ." }, "forms": { "third": "admits", "ing": "admitting" }, "topics": ["communication"] },
+    { "id": "announce", "en": "announce", "ipa": "əˈnaʊns", "pos": "verb", "ru": ["объявлять"], "example": { "en": "The boss announced that he was leaving.", "ru": "Начальник объявил, что уходит." }, "forms": { "third": "announces" }, "topics": ["communication"] },
+    { "id": "apologize", "en": "apologize", "ipa": "əˈpɑːlədʒaɪz", "pos": "verb", "ru": ["извиняться"], "example": { "en": "He apologized for being late.", "ru": "Он извинился за опоздание." }, "forms": { "third": "apologizes" }, "note": "Британское написание — apologise. После apologize — for + -ing.", "topics": ["communication"] },
+    { "id": "apparently", "en": "apparently", "ipa": "əˈperəntli", "pos": "adv", "ru": ["судя по всему", "говорят"], "example": { "en": "Apparently, Tom has found a new job.", "ru": "Говорят, Том нашёл новую работу." }, "topics": ["communication"] },
+    { "id": "argue", "en": "argue", "ipa": "ˈɑːrɡjuː", "pos": "verb", "ru": ["спорить", "ссориться"], "example": { "en": "My neighbors argue every evening.", "ru": "Мои соседи ссорятся каждый вечер." }, "forms": { "third": "argues" }, "topics": ["communication"] },
+    { "id": "argument", "en": "argument", "ipa": "ˈɑːrɡjəmənt", "pos": "noun", "ru": ["ссора", "спор", "довод"], "example": { "en": "We had an argument about money.", "ru": "Мы поссорились из-за денег." }, "topics": ["communication"] },
+    { "id": "complain", "en": "complain", "ipa": "kəmˈpleɪn", "pos": "verb", "ru": ["жаловаться"], "example": { "en": "She complained that the room was too cold.", "ru": "Она пожаловалась, что в комнате слишком холодно." }, "forms": { "third": "complains" }, "topics": ["communication"] },
+    { "id": "conversation", "en": "conversation", "ipa": "ˌkɑːnvɚˈseɪʃən", "pos": "noun", "ru": ["разговор"], "example": { "en": "We had a long conversation.", "ru": "У нас был долгий разговор." }, "topics": ["communication"] },
+    { "id": "deny", "en": "deny", "ipa": "dɪˈnaɪ", "pos": "verb", "ru": ["отрицать"], "example": { "en": "He denied taking the money.", "ru": "Он отрицал, что взял деньги." }, "forms": { "third": "denies" }, "topics": ["communication"] },
+    { "id": "discuss", "en": "discuss", "ipa": "dɪˈskʌs", "pos": "verb", "ru": ["обсуждать"], "example": { "en": "We discussed the plan.", "ru": "Мы обсудили план." }, "forms": { "third": "discusses" }, "note": "Discuss без about: discuss the plan.", "topics": ["communication"] },
+    { "id": "gossip", "en": "gossip", "ipa": "ˈɡɑːsəp", "pos": "noun", "ru": ["сплетни"], "example": { "en": "Don't listen to gossip.", "ru": "Не слушай сплетни." }, "topics": ["communication"] },
+    { "id": "insist", "en": "insist", "ipa": "ɪnˈsɪst", "pos": "verb", "ru": ["настаивать"], "example": { "en": "She insisted that she was right.", "ru": "Она настаивала, что права." }, "forms": { "third": "insists" }, "topics": ["communication"] },
+    { "id": "loud", "en": "loud", "ipa": "laʊd", "pos": "adj", "ru": ["громкий"], "example": { "en": "The music was too loud.", "ru": "Музыка была слишком громкой." }, "topics": ["adjectives"] },
+    { "id": "marry", "en": "marry", "ipa": "ˈmeri", "pos": "verb", "ru": ["жениться", "выйти замуж"], "example": { "en": "She is getting married in June.", "ru": "Она выходит замуж в июне." }, "forms": { "third": "marries" }, "note": "Get married — «пожениться», marry somebody — «жениться на ком-то, выйти за кого-то».", "topics": ["family"] },
+    { "id": "engaged", "en": "engaged", "ipa": "ɪnˈɡeɪdʒd", "pos": "adj", "ru": ["помолвлен(а)"], "example": { "en": "Anna and Marco got engaged.", "ru": "Анна и Марко обручились." }, "topics": ["family"] },
+    { "id": "mention", "en": "mention", "ipa": "ˈmenʃən", "pos": "verb", "ru": ["упоминать"], "example": { "en": "He didn't mention the wedding.", "ru": "Он не упомянул о свадьбе." }, "forms": { "third": "mentions" }, "topics": ["communication"] },
+    { "id": "offer", "en": "offer", "ipa": "ˈɔːfɚ", "pos": "verb", "ru": ["предлагать"], "example": { "en": "He offered to help me.", "ru": "Он предложил мне помочь." }, "forms": { "third": "offers" }, "note": "Offer to do — предложить сделать самому. Suggest doing — предложить идею.", "topics": ["communication"] },
+    { "id": "refuse", "en": "refuse", "ipa": "rɪˈfjuːz", "pos": "verb", "ru": ["отказываться"], "example": { "en": "She refused to answer.", "ru": "Она отказалась отвечать." }, "forms": { "third": "refuses" }, "topics": ["communication"] },
+    { "id": "remind", "en": "remind", "ipa": "rɪˈmaɪnd", "pos": "verb", "ru": ["напоминать"], "example": { "en": "Remind me to call my mother.", "ru": "Напомни мне позвонить маме." }, "forms": { "third": "reminds" }, "topics": ["communication"] },
+    { "id": "rude", "en": "rude", "ipa": "ruːd", "pos": "adj", "ru": ["грубый", "невежливый"], "example": { "en": "It was rude to say that.", "ru": "Говорить так было грубо." }, "topics": ["character"] },
+    { "id": "rumor", "en": "rumor", "ipa": "ˈruːmɚ", "pos": "noun", "ru": ["слух"], "example": { "en": "There is a rumor that the boss is leaving.", "ru": "Ходит слух, что начальник уходит." }, "note": "Британское написание — rumour.", "topics": ["communication"] },
+    { "id": "secret", "en": "secret", "ipa": "ˈsiːkrət", "pos": "noun", "ru": ["секрет", "тайна"], "example": { "en": "Can you keep a secret?", "ru": "Умеешь хранить секреты?" }, "picture": { "emoji": "🤫" }, "topics": ["communication"] },
+    { "id": "suggest", "en": "suggest", "ipa": "səˈdʒest", "pos": "verb", "ru": ["предлагать (идею)"], "example": { "en": "He suggested going to the cinema.", "ru": "Он предложил сходить в кино." }, "forms": { "third": "suggests" }, "note": "После suggest — -ing или that: suggested going, suggested that we go.", "topics": ["communication"] },
+    { "id": "surprise", "en": "surprise", "ipa": "sɚˈpraɪz", "pos": "noun", "ru": ["сюрприз", "удивление"], "example": { "en": "The party was a surprise.", "ru": "Вечеринка была сюрпризом." }, "picture": { "emoji": "🎁" }, "topics": ["feelings"] },
+    { "id": "upset", "en": "upset", "ipa": "ʌpˈset", "pos": "adj", "ru": ["расстроенный"], "example": { "en": "Why are you upset?", "ru": "Почему ты расстроен?" }, "topics": ["feelings"] },
+    { "id": "voice", "en": "voice", "ipa": "vɔɪs", "pos": "noun", "ru": ["голос"], "example": { "en": "She has a beautiful voice.", "ru": "У неё красивый голос." }, "topics": ["communication"] },
+    { "id": "warn", "en": "warn", "ipa": "wɔːrn", "pos": "verb", "ru": ["предупреждать"], "example": { "en": "He warned me not to go there.", "ru": "Он предупредил меня не ходить туда." }, "forms": { "third": "warns" }, "note": "W не влияет на чтение ar: [wɔːrn].", "topics": ["communication"] },
+    { "id": "whether", "en": "whether", "ipa": "ˈweðɚ", "pos": "conj", "ru": ["ли"], "example": { "en": "She asked whether I liked my job.", "ru": "Она спросила, нравится ли мне моя работа." }, "note": "Звучит так же, как weather — «погода».", "topics": ["grammar"] },
+    { "id": "whisper", "en": "whisper", "ipa": "ˈwɪspɚ", "pos": "verb", "ru": ["шептать"], "example": { "en": "She whispered something to me.", "ru": "Она что-то прошептала мне." }, "forms": { "third": "whispers" }, "topics": ["communication"] },
+    { "id": "wonder", "en": "wonder", "ipa": "ˈwʌndɚ", "pos": "verb", "ru": ["интересоваться", "задаваться вопросом"], "example": { "en": "I wonder whether he is honest.", "ru": "Интересно, честен ли он." }, "forms": { "third": "wonders" }, "topics": ["communication"] },
+    { "id": "worried", "en": "worried", "ipa": "ˈwɝːid", "pos": "adj", "ru": ["обеспокоенный"], "example": { "en": "I was worried about you.", "ru": "Я за тебя волновался." }, "topics": ["feelings"] },
+    { "id": "according-to", "en": "according to", "ipa": "əˈkɔːrdɪŋ tuː", "pos": "prep", "ru": ["по словам", "согласно"], "example": { "en": "According to Kate, Tom is leaving.", "ru": "По словам Кейт, Том уходит." }, "topics": ["communication"] },
+    { "id": "previous", "en": "previous", "ipa": "ˈpriːviəs", "pos": "adj", "ru": ["предыдущий"], "example": { "en": "He said he had lost it the previous day.", "ru": "Он сказал, что потерял это накануне." }, "topics": ["time"] },
+    { "id": "report", "en": "report", "ipa": "rɪˈpɔːrt", "pos": "verb", "ru": ["сообщать", "докладывать"], "example": { "en": "The police reported that the wallet had been found.", "ru": "Полиция сообщила, что кошелёк нашёлся." }, "forms": { "third": "reports" }, "topics": ["media"] },
+    { "id": "forgive", "en": "forgive", "ipa": "fɚˈɡɪv", "pos": "verb", "ru": ["прощать"], "example": { "en": "Please forgive me.", "ru": "Пожалуйста, прости меня." }, "forms": { "third": "forgives" }, "topics": ["feelings"] },
+    { "id": "unhappy", "en": "unhappy", "ipa": "ʌnˈhæpi", "pos": "adj", "ru": ["несчастный", "недовольный"], "example": { "en": "He was unhappy at work.", "ru": "Ему было плохо на работе." }, "note": "Приставка un- даёт противоположность: happy — unhappy.", "topics": ["feelings"] }
+  ],
+  "texts": [
+    {
+      "id": "b1.u08.secret",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Can you keep a secret?", "ru": "Умеешь хранить секреты?" },
+      "speakers": [
+        { "id": "kate", "name": "Kate", "voice": "female" },
+        { "id": "anna", "name": "Anna", "voice": "female" }
+      ],
+      "lines": [
+        { "speaker": "kate", "en": "Anna, you won't believe what Tom told me today!", "ru": "Анна, ты не поверишь, что мне сегодня сказал Том!" },
+        { "speaker": "anna", "en": "What did he say?", "ru": "Что он сказал?" },
+        { "speaker": "kate", "en": "He said that he was leaving the company. He told me that he had found a new job in London.", "ru": "Он сказал, что уходит из компании. Сказал, что нашёл новую работу в Лондоне." },
+        { "speaker": "anna", "en": "Really? Did you ask him why?", "ru": "Правда? Ты спросила почему?" },
+        { "speaker": "kate", "en": "Yes. I asked him if he was unhappy here. He said the boss had refused to give him more money.", "ru": "Да. Я спросила, плохо ли ему здесь. Он сказал, что начальник отказался платить ему больше." },
+        { "speaker": "anna", "en": "Did he say when he was going to tell the boss?", "ru": "А он сказал, когда собирается сообщить начальнику?" },
+        { "speaker": "kate", "en": "He said he would tell him the next day. And he asked me not to tell anyone.", "ru": "Сказал, что скажет ему на следующий день. И попросил меня никому не говорить." },
+        { "speaker": "anna", "en": "Kate! He asked you not to tell anyone, and you are telling me!", "ru": "Кейт! Он попросил тебя никому не говорить, а ты рассказываешь мне!" },
+        { "speaker": "kate", "en": "I know, I know. I promised to keep it a secret. But you are my best friend. Please don't mention it to anyone.", "ru": "Знаю, знаю. Я обещала молчать. Но ты моя лучшая подруга. Пожалуйста, никому об этом не говори." },
+        { "speaker": "anna", "en": "Don't worry. I won't say a word.", "ru": "Не волнуйся. Я ни слова не скажу." }
+      ]
+    },
+    {
+      "id": "b1.u08.wallet",
+      "kind": "reading",
+      "genre": "news",
+      "title": { "en": "An honest student", "ru": "Честный студент" },
+      "lines": [
+        { "en": "Last Tuesday a student called Lucas found a wallet near the university. There was a lot of money in it, and there was also a card with a name and a phone number.", "ru": "В прошлый вторник студент по имени Лукас нашёл кошелёк возле университета. В нём было много денег, а ещё карточка с именем и номером телефона." },
+        { "en": "Lucas told journalists that he had thought about it for only a second. \"I knew that somebody was worried,\" he said. He called the number, but nobody answered, so he took the wallet to the police.", "ru": "Лукас рассказал журналистам, что думал всего секунду. «Я знал, что кто-то волнуется», — сказал он. Он позвонил по номеру, но никто не ответил, и он отнёс кошелёк в полицию." },
+        { "en": "The owner of the wallet was an old man, Ivan Kuznetsov. He said that he had lost it on the bus the previous day. He explained that the money was for his daughter's wedding and that he had been very upset. When the police called him, he could not believe it.", "ru": "Владельцем кошелька оказался пожилой мужчина, Иван Кузнецов. Он сказал, что потерял его в автобусе накануне. Он объяснил, что деньги были на свадьбу дочери и что он очень расстроился. Когда ему позвонили из полиции, он не мог в это поверить." },
+        { "en": "Mr Kuznetsov offered to give Lucas some of the money, but Lucas refused to take it. He said that he had only done the right thing. So Mr Kuznetsov invited him to the wedding instead.", "ru": "Господин Кузнецов предложил Лукасу часть денег, но Лукас отказался. Он сказал, что просто поступил правильно. Тогда господин Кузнецов пригласил его на свадьбу." },
+        { "en": "The police reminded people to be careful with their things on buses. When journalists asked Lucas whether he would do the same again, he answered that he would. \"Of course,\" he said. \"Wouldn't you?\"", "ru": "Полиция напомнила, что в автобусах нужно внимательно следить за вещами. Когда журналисты спросили Лукаса, поступил бы он так снова, он ответил, что да. «Конечно, — сказал он. — А вы разве нет?»" }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "b1.u08.l01",
+      "kind": "vocabulary",
+      "title": "Глаголы речи",
+      "exercises": [
+        { "id": "b1.u08.l01.e01", "type": "match_pairs", "pairs": [{ "en": "admit", "ru": "признавать" }, { "en": "announce", "ru": "объявлять" }, { "en": "apologize", "ru": "извиняться" }, { "en": "argue", "ru": "спорить" }, { "en": "complain", "ru": "жаловаться" }], "hint": "Как люди говорят.", "explanation": "Admit — признавать, announce — объявлять, apologize — извиняться, argue — спорить, complain — жаловаться." },
+        { "id": "b1.u08.l01.e02", "type": "match_pairs", "pairs": [{ "en": "deny", "ru": "отрицать" }, { "en": "discuss", "ru": "обсуждать" }, { "en": "insist", "ru": "настаивать" }, { "en": "mention", "ru": "упоминать" }, { "en": "offer", "ru": "предлагать" }], "hint": "Deny — противоположность admit.", "explanation": "Deny — отрицать, discuss — обсуждать, insist — настаивать, mention — упоминать, offer — предлагать." },
+        { "id": "b1.u08.l01.e03", "type": "match_pairs", "pairs": [{ "en": "refuse", "ru": "отказываться" }, { "en": "remind", "ru": "напоминать" }, { "en": "suggest", "ru": "предлагать идею" }, { "en": "warn", "ru": "предупреждать" }, { "en": "whisper", "ru": "шептать" }], "hint": "Remind — чтобы не забыли.", "explanation": "Refuse — отказываться, remind — напоминать, suggest — предлагать идею, warn — предупреждать, whisper — шептать." },
+        { "id": "b1.u08.l01.e04", "type": "match_pairs", "pairs": [{ "en": "wonder", "ru": "задаваться вопросом" }, { "en": "report", "ru": "сообщать" }, { "en": "forgive", "ru": "прощать" }, { "en": "marry", "ru": "жениться" }, { "en": "whether", "ru": "ли" }], "hint": "Whether звучит как weather.", "explanation": "Wonder — задаваться вопросом, report — сообщать, forgive — прощать, marry — жениться, whether — ли." },
+        { "id": "b1.u08.l01.e05", "type": "translate_choice", "from": "ru", "text": "Он извинился за опоздание.", "options": ["He apologized for being late.", "He complained about being late.", "He admitted being late."], "answer": 0, "hint": "Извиниться.", "explanation": "Правильно: He apologized for being late." },
+        { "id": "b1.u08.l01.e06", "type": "fill_gap", "text": "She ___ that the room was too cold.", "translation": "Она пожаловалась, что в комнате слишком холодно.", "answers": [["complained"]], "options": ["complained", "apologized", "whispered"], "hint": "Пожаловалась.", "explanation": "Правильно: She complained that the room was too cold." },
+        { "id": "b1.u08.l01.e07", "type": "fill_gap", "text": "We ___ the plan at the meeting.", "translation": "Мы обсудили план на встрече.", "answers": [["discussed"]], "options": ["discussed", "argued", "denied"], "hint": "Без about.", "explanation": "We discussed the plan. Discuss — без about." },
+        { "id": "b1.u08.l01.e08", "type": "fill_gap", "text": "___ me to call my mother tonight.", "translation": "Напомни мне позвонить маме вечером.", "answers": [["Remind"]], "options": ["Remind", "Remember", "Warn"], "hint": "Напомни.", "explanation": "Remind me to call my mother. Remember — помнить самому, remind — напомнить другому." },
+        { "id": "b1.u08.l01.e09", "type": "fill_gap", "text": "He ___ that he was wrong.", "translation": "Он признал, что был неправ.", "answers": [["admitted"]], "options": ["admitted", "denied", "refused"], "hint": "Признал. Удвойте t.", "explanation": "Правильно: He admitted that he was wrong." },
+        { "id": "b1.u08.l01.e10", "type": "listen_choice", "audio": "She refused to answer.", "question": "Что вы слышите?", "options": ["She refused to answer.", "She forgot to answer.", "She offered to answer."], "answer": 0, "hint": "Отказалась.", "explanation": "She refused to answer — «она отказалась отвечать»." },
+        { "id": "b1.u08.l01.e11", "type": "listen_dictation", "text": "He warned me not to go there.", "hint": "Семь слов.", "explanation": "He warned me not to go there — «он предупредил меня не ходить туда»." },
+        { "id": "b1.u08.l01.e12", "type": "type_translation", "from": "ru", "text": "прощать", "answers": ["forgive"], "hint": "Образец: For + give.", "explanation": "Forgive [fɚˈɡɪv] — «прощать». Forgave, forgiven." },
+        { "id": "b1.u08.l01.e13", "type": "word_stress", "word": "apologize", "syllables": ["a", "pol", "o", "gize"], "stress": 1, "hint": "Второй слог.", "explanation": "a-POL-o-gize — ударение на второй слог." },
+        { "id": "b1.u08.l01.e14", "type": "minimal_pair", "pair": [{ "en": "warn", "ipa": "wɔːrn" }, { "en": "warm", "ipa": "wɔːrm" }], "say": 0, "hint": "Последний звук — язык у зубов.", "explanation": "Warn [wɔːrn] — «предупреждать», в конце [n]. Warm [wɔːrm] — «тёплый», в конце [m], губы сомкнуты." }
+      ]
+    },
+    {
+      "id": "b1.u08.l02",
+      "kind": "vocabulary",
+      "title": "Разговоры, слухи, чувства",
+      "exercises": [
+        { "id": "b1.u08.l02.e01", "type": "match_pairs", "pairs": [{ "en": "argument", "ru": "ссора" }, { "en": "conversation", "ru": "разговор" }, { "en": "gossip", "ru": "сплетни" }, { "en": "rumor", "ru": "слух" }, { "en": "secret", "ru": "секрет" }], "hint": "Что говорят люди.", "explanation": "Argument — ссора, conversation — разговор, gossip — сплетни, rumor — слух, secret — секрет." },
+        { "id": "b1.u08.l02.e02", "type": "match_pairs", "pairs": [{ "en": "surprise", "ru": "сюрприз" }, { "en": "voice", "ru": "голос" }, { "en": "loud", "ru": "громкий" }, { "en": "rude", "ru": "грубый" }, { "en": "upset", "ru": "расстроенный" }], "hint": "Loud — противоположность quiet.", "explanation": "Surprise — сюрприз, voice — голос, loud — громкий, rude — грубый, upset — расстроенный." },
+        { "id": "b1.u08.l02.e03", "type": "match_pairs", "pairs": [{ "en": "worried", "ru": "обеспокоенный" }, { "en": "engaged", "ru": "помолвлен" }, { "en": "according to", "ru": "по словам" }, { "en": "previous", "ru": "предыдущий" }, { "en": "apparently", "ru": "судя по всему" }], "hint": "According to Kate — по словам Кейт.", "explanation": "Worried — обеспокоенный, engaged — помолвлен, according to — по словам, previous — предыдущий, apparently — судя по всему." },
+        { "id": "b1.u08.l02.e04", "type": "match_pairs", "pairs": [{ "en": "unhappy", "ru": "несчастный" }, { "en": "secret", "ru": "тайна" }, { "en": "marry", "ru": "выйти замуж" }, { "en": "forgive", "ru": "прощать" }, { "en": "report", "ru": "докладывать" }], "hint": "Un- — противоположность.", "explanation": "Unhappy — несчастный, secret — тайна, marry — выйти замуж, forgive — прощать, report — докладывать." },
+        { "id": "b1.u08.l02.e05", "type": "picture_choice", "mode": "picture-to-word", "word": "secret", "distractors": ["surprise", "medal"], "hint": "Тсс!", "explanation": "Secret [ˈsiːkrət] — «секрет»." },
+        { "id": "b1.u08.l02.e06", "type": "picture_choice", "mode": "word-to-picture", "word": "surprise", "distractors": ["secret", "heart"], "hint": "Подарок, о котором не знали.", "explanation": "Surprise [sɚˈpraɪz] — «сюрприз»." },
+        { "id": "b1.u08.l02.e07", "type": "translate_choice", "from": "en", "text": "Apparently, Tom has found a new job.", "options": ["Говорят, Том нашёл новую работу.", "Конечно, Том нашёл новую работу.", "Том точно не нашёл работу."], "answer": 0, "hint": "Apparently — по слухам.", "explanation": "Apparently — «судя по всему, говорят»." },
+        { "id": "b1.u08.l02.e08", "type": "fill_gap", "text": "We had an ___ about money.", "translation": "Мы поссорились из-за денег.", "answers": [["argument"]], "options": ["argument", "conversation", "rumor"], "hint": "Ссора.", "explanation": "Правильно: We had an argument about money." },
+        { "id": "b1.u08.l02.e09", "type": "fill_gap", "text": "Can you keep a ___?", "translation": "Умеешь хранить секреты?", "answers": [["secret"]], "options": ["secret", "gossip", "voice"], "hint": "Тайна.", "explanation": "Правильно: Can you keep a secret?" },
+        { "id": "b1.u08.l02.e10", "type": "fill_gap", "text": "___ to Kate, Tom is leaving the company.", "translation": "По словам Кейт, Том уходит из компании.", "answers": [["According"]], "options": ["According", "Apparently", "Previous"], "hint": "По словам.", "explanation": "Правильно: According to Kate, Tom is leaving." },
+        { "id": "b1.u08.l02.e11", "type": "fill_gap", "text": "Anna and Marco got ___ last week.", "translation": "Анна и Марко обручились на прошлой неделе.", "answers": [["engaged"]], "options": ["engaged", "married", "upset"], "hint": "Помолвка.", "explanation": "Правильно: Anna and Marco got engaged." },
+        { "id": "b1.u08.l02.e12", "type": "listen_choice", "audio": "There is a rumor that the boss is leaving.", "question": "Что вы слышите?", "options": ["There is a rumor that the boss is leaving.", "There is a report that the boss is leaving.", "The boss announced that he is leaving."], "answer": 0, "hint": "Слух.", "explanation": "Правильно: There is a rumor that the boss is leaving." },
+        { "id": "b1.u08.l02.e13", "type": "listen_dictation", "text": "Why are you so upset?", "hint": "Пять слов.", "explanation": "Why are you so upset? — «Почему ты так расстроен?»" },
+        { "id": "b1.u08.l02.e14", "type": "type_translation", "from": "ru", "text": "разговор", "answers": ["conversation"], "hint": "Двенадцать букв.", "explanation": "Conversation [ˌkɑːnvɚˈseɪʃən] — «разговор»." },
+        { "id": "b1.u08.l02.e15", "type": "word_stress", "word": "conversation", "syllables": ["con", "ver", "sa", "tion"], "stress": 2, "hint": "Перед -tion.", "explanation": "con-ver-SA-tion — ударение перед -tion." }
+      ]
+    },
+    {
+      "id": "b1.u08.l03",
+      "kind": "grammar",
+      "title": "She said that she was tired",
+      "grammar": "b1.reported-speech",
+      "exercises": [
+        { "id": "b1.u08.l03.e01", "type": "fill_gap", "text": "\"I am tired.\" — She said that she ___ tired.", "translation": "«Я устала». — Она сказала, что устала.", "answers": [["was"]], "options": ["was", "is", "has been"], "hint": "Am сдвигается на шаг назад.", "explanation": "Правильно: She said that she was tired.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l03.e02", "type": "fill_gap", "text": "\"I will call you.\" — He said that he ___ call me.", "translation": "«Я позвоню тебе». — Он сказал, что позвонит мне.", "answers": [["would"]], "options": ["would", "will", "can"], "hint": "Will сдвигается.", "explanation": "Правильно: He said that he would call me.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l03.e03", "type": "fill_gap", "text": "\"I can help.\" — She said that she ___ help.", "translation": "«Я могу помочь». — Она сказала, что может помочь.", "answers": [["could"]], "options": ["could", "can", "would"], "hint": "Can сдвигается.", "explanation": "Правильно: She said that she could help.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l03.e04", "type": "fill_gap", "text": "\"I have found a new job.\" — He told me that he ___ found a new job.", "translation": "«Я нашёл новую работу». — Он сказал мне, что нашёл новую работу.", "answers": [["had"]], "options": ["had", "has", "have"], "hint": "Образец: Have done → ? done.", "explanation": "Правильно: He told me that he had found a new job.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l03.e05", "type": "fill_gap", "text": "She ___ me that she was getting married.", "translation": "Она сказала мне, что выходит замуж.", "answers": [["told"]], "options": ["told", "said", "spoke"], "hint": "С человеком сразу после глагола.", "explanation": "Правильно: She told me that she was getting married.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l03.e06", "type": "fill_gap", "text": "\"I'll come tomorrow.\" — He said he would come the ___ day.", "translation": "«Я приду завтра». — Он сказал, что придёт на следующий день.", "answers": [["next"]], "options": ["next", "previous", "same"], "hint": "Образец: Tomorrow → the ? day.", "explanation": "Правильно: He said he would come the next day.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l03.e07", "type": "error_correction", "text": "She said me that she was busy.", "wrong": "said me", "correction": "told me", "options": ["told me", "said to", "spoke me"], "hint": "С человеком.", "explanation": "Правильно: She told me that she was busy.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l03.e08", "type": "error_correction", "text": "He said that he will come.", "wrong": "will", "correction": "would", "options": ["would", "can", "is"], "hint": "Сдвиг времени.", "explanation": "Правильно: He said that he would come.", "grammar": ["b1.reported-speech"], "troubles": ["tenses"] },
+        { "id": "b1.u08.l03.e09", "type": "error_correction", "text": "She told that she was tired.", "wrong": "told", "correction": "said", "options": ["said", "spoke", "talked"], "hint": "Без человека.", "explanation": "Правильно: She said that she was tired.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l03.e10", "type": "tiles", "from": "ru", "text": "Он сказал, что уходит из компании.", "answer": "He said that he was leaving the company.", "distractors": ["told", "is"], "difficulty": 2, "hint": "Present Continuous сдвигается.", "explanation": "Правильно: He said that he was leaving the company.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l03.e11", "type": "tiles", "from": "ru", "text": "Она сказала мне, что потеряла ключи.", "answer": "She told me that she had lost her keys.", "distractors": ["said", "has"], "difficulty": 3, "hint": "Образец: Told me + had + V3.", "explanation": "Правильно: She told me that she had lost her keys.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l03.e12", "type": "type_translation", "from": "ru", "text": "Он сказал, что занят.", "answers": ["He said that he was busy.", "He said he was busy."], "difficulty": 2, "hint": "Сдвиг: is → was.", "explanation": "Правильно: He said that he was busy.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l03.e13", "type": "type_translation", "from": "ru", "text": "Она сказала, что позвонит мне.", "answers": ["She said that she would call me.", "She said she would call me.", "She said that she would phone me.", "She said she would phone me."], "difficulty": 3, "hint": "Образец: Will → would.", "explanation": "Правильно: She said that she would call me.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l03.e14", "type": "listen_choice", "audio": "He told me that he had found a new job.", "question": "Что вы слышите?", "options": ["He told me that he had found a new job.", "He told me that he would find a new job.", "He said that he was finding a new job."], "answer": 0, "hint": "Уже нашёл.", "explanation": "Правильно: He told me that he had found a new job.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l03.e15", "type": "speak_answer", "question": "What did your friend tell you last time you met?", "questionRu": "Что вам рассказал друг при последней встрече? Перескажите: He said that… / She told me that…", "keywords": [["\\b(said|told me|told us)\\b"], ["\\b(was|were|had|would|could)\\b"]], "minKeywords": 2, "samples": ["She told me that she was going to France.", "He said that he had bought a new car."], "difficulty": 3, "hint": "Образец: She told me that she was…", "explanation": "Ответ: She told me that she was going to France.", "grammar": ["b1.reported-speech"] }
+      ]
+    },
+    {
+      "id": "b1.u08.l04",
+      "kind": "grammar",
+      "title": "He asked if I was busy",
+      "grammar": "b1.reported-questions",
+      "exercises": [
+        { "id": "b1.u08.l04.e01", "type": "fill_gap", "text": "\"Are you busy?\" — He asked ___ I was busy.", "translation": "«Ты занят?» — Он спросил, занят ли я.", "answers": [["if", "whether"]], "options": ["if", "that", "what"], "hint": "Русское «ли».", "explanation": "Правильно: He asked if I was busy.", "grammar": ["b1.reported-questions"] },
+        { "id": "b1.u08.l04.e02", "type": "fill_gap", "text": "\"Where do you live?\" — She asked me where I ___.", "translation": "«Где ты живёшь?» — Она спросила, где я живу.", "answers": [["lived"]], "options": ["lived", "did live", "live do"], "hint": "Без did, сдвиг времени.", "explanation": "Правильно: She asked me where I lived.", "grammar": ["b1.reported-questions"] },
+        { "id": "b1.u08.l04.e03", "type": "fill_gap", "text": "Can you tell me where the station ___?", "translation": "Не подскажете, где вокзал?", "answers": [["is"]], "options": ["is", "are", "does"], "hint": "Глагол в конце.", "explanation": "Правильно: Can you tell me where the station is?", "grammar": ["b1.reported-questions"] },
+        { "id": "b1.u08.l04.e04", "type": "fill_gap", "text": "They asked what time the meeting ___.", "translation": "Они спросили, во сколько начинается встреча.", "answers": [["started"]], "options": ["started", "did start", "starts did"], "hint": "Без did.", "explanation": "Правильно: They asked what time the meeting started.", "grammar": ["b1.reported-questions"] },
+        { "id": "b1.u08.l04.e05", "type": "fill_gap", "text": "I ___ whether he is honest.", "translation": "Интересно, честен ли он.", "answers": [["wonder"]], "options": ["wonder", "ask", "say"], "hint": "Задаваться вопросом.", "explanation": "Правильно: I wonder whether he is honest.", "grammar": ["b1.reported-questions"] },
+        { "id": "b1.u08.l04.e06", "type": "fill_gap", "text": "\"Why are you upset?\" — He asked why I ___ upset.", "translation": "«Почему ты расстроена?» — Он спросил, почему я расстроена.", "answers": [["was"]], "options": ["was", "am", "were I"], "hint": "Сдвиг времени.", "explanation": "Правильно: He asked why I was upset.", "grammar": ["b1.reported-questions"] },
+        { "id": "b1.u08.l04.e07", "type": "error_correction", "text": "She asked me where did I live.", "wrong": "where did I live", "correction": "where I lived", "options": ["where I lived", "where I did live", "where lived I"], "hint": "Порядок как в утверждении.", "explanation": "Правильно: She asked me where I lived.", "grammar": ["b1.reported-questions"], "troubles": ["word-order"] },
+        { "id": "b1.u08.l04.e08", "type": "error_correction", "text": "He asked me was I busy.", "wrong": "was I", "correction": "if I was", "options": ["if I was", "that I was", "was if I"], "hint": "Нужно «ли».", "explanation": "Правильно: He asked me if I was busy.", "grammar": ["b1.reported-questions"], "troubles": ["word-order"] },
+        { "id": "b1.u08.l04.e09", "type": "error_correction", "text": "Can you tell me where is the station?", "wrong": "where is the station", "correction": "where the station is", "options": ["where the station is", "where is station", "the station where is"], "hint": "Глагол в конце.", "explanation": "Правильно: Can you tell me where the station is?", "grammar": ["b1.reported-questions"], "troubles": ["word-order"] },
+        { "id": "b1.u08.l04.e10", "type": "tiles", "from": "ru", "text": "Она спросила, нравится ли мне моя работа.", "answer": "She asked me whether I liked my job.", "distractors": ["did", "that"], "difficulty": 3, "hint": "Whether + прямой порядок.", "explanation": "Правильно: She asked me whether I liked my job.", "grammar": ["b1.reported-questions"] },
+        { "id": "b1.u08.l04.e11", "type": "tiles", "from": "ru", "text": "Вы не знаете, во сколько открывается магазин?", "answer": "Do you know what time the shop opens?", "distractors": ["does", "is"], "difficulty": 3, "hint": "Do you know + прямой порядок.", "explanation": "Правильно: Do you know what time the shop opens?", "grammar": ["b1.reported-questions"] },
+        { "id": "b1.u08.l04.e12", "type": "type_translation", "from": "ru", "text": "Он спросил, где я живу.", "answers": ["He asked where I lived.", "He asked me where I lived.", "He asked where I live.", "He asked me where I live."], "difficulty": 2, "hint": "Без did.", "explanation": "Правильно: He asked me where I lived.", "grammar": ["b1.reported-questions"] },
+        { "id": "b1.u08.l04.e13", "type": "type_translation", "from": "ru", "text": "Не подскажете, где вокзал?", "answers": ["Can you tell me where the station is?", "Could you tell me where the station is?", "Do you know where the station is?"], "difficulty": 3, "hint": "Образец: Can you tell me…", "explanation": "Правильно: Can you tell me where the station is?", "grammar": ["b1.reported-questions"] },
+        { "id": "b1.u08.l04.e14", "type": "listen_choice", "audio": "She asked me whether I liked my job.", "question": "Что вы слышите?", "options": ["She asked me whether I liked my job.", "She asked me what my job was.", "She told me that she liked her job."], "answer": 0, "hint": "Нравится ли.", "explanation": "Правильно: She asked me whether I liked my job.", "grammar": ["b1.reported-questions"] },
+        { "id": "b1.u08.l04.e15", "type": "speak_answer", "question": "What did they ask you at your last job interview or exam?", "questionRu": "О чём вас спрашивали на последнем собеседовании или экзамене? Перескажите: They asked me if… / They asked me why…", "keywords": [["\\basked( me)?\\b"], ["\\b(if|whether|why|where|what|when|how)\\b"]], "minKeywords": 2, "samples": ["They asked me why I wanted the job.", "They asked me if I could speak English."], "difficulty": 3, "hint": "Образец: They asked me if I…", "explanation": "Ответ: They asked me why I wanted the job.", "grammar": ["b1.reported-questions"] }
+      ]
+    },
+    {
+      "id": "b1.u08.l05",
+      "kind": "grammar",
+      "title": "Told me to, promised to, apologized for",
+      "grammar": "b1.reporting-verbs",
+      "exercises": [
+        { "id": "b1.u08.l05.e01", "type": "fill_gap", "text": "The doctor told me ___ stay in bed.", "translation": "Врач велел мне лежать в постели.", "answers": [["to"]], "options": ["to", "that", "for"], "hint": "Tell + человек + ? + глагол.", "explanation": "Правильно: The doctor told me to stay in bed.", "grammar": ["b1.reporting-verbs"] },
+        { "id": "b1.u08.l05.e02", "type": "fill_gap", "text": "She asked me ___ to tell anyone.", "translation": "Она попросила меня никому не говорить.", "answers": [["not"]], "options": ["not", "don't", "no"], "hint": "Отрицание перед to.", "explanation": "Правильно: She asked me not to tell anyone.", "grammar": ["b1.reporting-verbs"] },
+        { "id": "b1.u08.l05.e03", "type": "fill_gap", "text": "He promised ___ call me.", "translation": "Он пообещал мне позвонить.", "answers": [["to"]], "options": ["to", "for", "that"], "hint": "Promise + ? + глагол.", "explanation": "Правильно: He promised to call me.", "grammar": ["b1.reporting-verbs"] },
+        { "id": "b1.u08.l05.e04", "type": "fill_gap", "text": "He suggested ___ to the cinema.", "translation": "Он предложил сходить в кино.", "answers": [["going"]], "options": ["going", "to go", "go"], "hint": "После suggest — -ing.", "explanation": "Правильно: He suggested going to the cinema.", "grammar": ["b1.reporting-verbs"] },
+        { "id": "b1.u08.l05.e05", "type": "fill_gap", "text": "He apologized for ___ late.", "translation": "Он извинился за опоздание.", "answers": [["being"]], "options": ["being", "be", "was"], "hint": "После for — -ing.", "explanation": "Правильно: He apologized for being late.", "grammar": ["b1.reporting-verbs"] },
+        { "id": "b1.u08.l05.e06", "type": "fill_gap", "text": "He ___ to help me with the bags.", "translation": "Он предложил помочь мне с сумками.", "answers": [["offered"]], "options": ["offered", "suggested", "denied"], "hint": "Предложил сделать сам.", "explanation": "He offered to help me. Offer to do — предложить сделать самому.", "grammar": ["b1.reporting-verbs"] },
+        { "id": "b1.u08.l05.e07", "type": "error_correction", "text": "He told me don't be late.", "wrong": "don't be", "correction": "not to be", "options": ["not to be", "to not being", "don't to be"], "hint": "Отрицание в косвенной просьбе.", "explanation": "Правильно: He told me not to be late.", "grammar": ["b1.reporting-verbs"], "troubles": ["word-order"] },
+        { "id": "b1.u08.l05.e08", "type": "error_correction", "text": "She suggested to go home.", "wrong": "to go", "correction": "going", "options": ["going", "go", "went"], "hint": "После suggest.", "explanation": "Правильно: She suggested going home.", "grammar": ["b1.reporting-verbs"] },
+        { "id": "b1.u08.l05.e09", "type": "error_correction", "text": "He apologized for be late.", "wrong": "be", "correction": "being", "options": ["being", "to be", "was"], "hint": "После for.", "explanation": "Правильно: He apologized for being late.", "grammar": ["b1.reporting-verbs"] },
+        { "id": "b1.u08.l05.e10", "type": "tiles", "from": "ru", "text": "Она отказалась отвечать.", "answer": "She refused to answer.", "distractors": ["answering", "for"], "hint": "Образец: Refuse + to.", "explanation": "Правильно: She refused to answer.", "grammar": ["b1.reporting-verbs"] },
+        { "id": "b1.u08.l05.e11", "type": "tiles", "from": "ru", "text": "Мама напомнила мне взять зонт.", "answer": "My mother reminded me to take an umbrella.", "distractors": ["remembered", "taking"], "difficulty": 3, "hint": "Remind + человек + to.", "explanation": "Правильно: My mother reminded me to take an umbrella.", "grammar": ["b1.reporting-verbs"] },
+        { "id": "b1.u08.l05.e12", "type": "type_translation", "from": "ru", "text": "Он попросил меня подождать.", "answers": ["He asked me to wait."], "difficulty": 2, "hint": "Ask + человек + to.", "explanation": "Правильно: He asked me to wait.", "grammar": ["b1.reporting-verbs"] },
+        { "id": "b1.u08.l05.e13", "type": "type_translation", "from": "ru", "text": "Врач велел мне не работать.", "answers": ["The doctor told me not to work.", "My doctor told me not to work."], "difficulty": 3, "hint": "Образец: Told me not to…", "explanation": "Правильно: The doctor told me not to work.", "grammar": ["b1.reporting-verbs"] },
+        { "id": "b1.u08.l05.e14", "type": "listen_choice", "audio": "He warned me not to go there.", "question": "Что вы слышите?", "options": ["He warned me not to go there.", "He wanted me to go there.", "He told me to go there."], "answer": 0, "hint": "Предупредил.", "explanation": "Правильно: He warned me not to go there.", "grammar": ["b1.reporting-verbs"] },
+        { "id": "b1.u08.l05.e15", "type": "speak_answer", "question": "What did your parents often tell you to do when you were a child?", "questionRu": "Что родители часто велели вам делать в детстве? Ответьте: They told me to… / They asked me not to…", "keywords": [["\\b(told|asked|reminded|warned)( me| us)?\\b"], ["\\b(to|not to)\\b"]], "minKeywords": 2, "samples": ["My mother always told me to do my homework.", "They asked me not to come home late."], "difficulty": 3, "hint": "Образец: My mother told me to…", "explanation": "Ответ: My mother always told me to do my homework.", "grammar": ["b1.reporting-verbs"] }
+      ]
+    },
+    {
+      "id": "b1.u08.l06",
+      "kind": "listening",
+      "title": "Умеешь хранить секреты?",
+      "textId": "b1.u08.secret",
+      "exercises": [
+        {
+          "id": "b1.u08.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "b1.u08.secret",
+          "hint": "Слушайте, что Том сказал Кейт и о чём он её попросил.",
+          "explanation": "Том сказал Кейт, что уходит из компании: нашёл работу в Лондоне, потому что начальник отказался платить больше. Он попросил никому не говорить, но Кейт рассказала Анне.",
+          "questions": [
+            { "kind": "mcq", "question": "Что сказал Том?", "options": ["He was leaving the company.", "He was getting married.", "He had lost his job."], "answer": 0, "explanation": "Кейт: He said that he was leaving the company." },
+            { "kind": "mcq", "question": "Где его новая работа?", "options": ["in London", "in Moscow", "in Rome"], "answer": 0, "explanation": "Кейт: he had found a new job in London." },
+            { "kind": "mcq", "question": "Почему он уходит?", "options": ["The boss refused to give him more money.", "He argued with Kate.", "He wanted to study."], "answer": 0, "explanation": "Кейт: the boss had refused to give him more money." },
+            { "kind": "tfn", "statement": "Tom asked Kate not to tell anyone.", "answer": "true", "explanation": "Кейт: he asked me not to tell anyone." },
+            { "kind": "tfn", "statement": "Tom has already told the boss.", "answer": "false", "explanation": "Он собирался сказать начальнику на следующий день." },
+            { "kind": "tfn", "statement": "Tom's new salary is very good.", "answer": "not_given", "explanation": "О новой зарплате ничего не сказано." }
+          ]
+        },
+        { "id": "b1.u08.l06.e02", "type": "listen_choice", "audio": "I asked him if he was unhappy here.", "question": "Что вы слышите?", "options": ["I asked him if he was unhappy here.", "I asked him why he was unhappy here.", "I told him that he was unhappy here."], "answer": 0, "hint": "Вопрос «да или нет».", "explanation": "Правильно: I asked him if he was unhappy here.", "grammar": ["b1.reported-questions"] },
+        { "id": "b1.u08.l06.e03", "type": "listen_dictation", "text": "He asked me not to tell anyone.", "hint": "Семь слов.", "explanation": "He asked me not to tell anyone — «он попросил меня никому не говорить»." },
+        { "id": "b1.u08.l06.e04", "type": "listen_dictation", "text": "I promised to keep it a secret.", "hint": "Семь слов.", "explanation": "I promised to keep it a secret — «я обещала молчать»." },
+        { "id": "b1.u08.l06.e05", "type": "fill_gap", "text": "He said he would tell him the ___ day.", "translation": "Он сказал, что скажет ему на следующий день.", "answers": [["next"]], "options": ["next", "previous", "last"], "hint": "Tomorrow в косвенной речи.", "explanation": "Правильно: He said he would tell him the next day.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l06.e06", "type": "fill_gap", "text": "Please don't ___ it to anyone.", "translation": "Пожалуйста, никому об этом не говори.", "answers": [["mention"]], "options": ["mention", "discuss", "whisper"], "hint": "Упоминать.", "explanation": "Правильно: Please don't mention it to anyone." },
+        { "id": "b1.u08.l06.e07", "type": "tiles", "from": "ru", "text": "Он сказал, что нашёл новую работу.", "answer": "He said that he had found a new job.", "distractors": ["has", "told"], "difficulty": 2, "hint": "Образец: Had + V3.", "explanation": "Правильно: He said that he had found a new job.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l06.e08", "type": "type_translation", "from": "ru", "text": "Ты спросила его почему?", "answers": ["Did you ask him why?"], "hint": "Образец: Did you ask…", "explanation": "Правильно: Did you ask him why?" },
+        { "id": "b1.u08.l06.e09", "type": "speak_answer", "question": "Can you keep a secret? What do you do if a friend tells you a secret?", "questionRu": "Вы умеете хранить секреты? Что вы делаете, если друг рассказал вам секрет?", "keywords": [["\\b(yes|no|I can|I can't|I never|I don't|I always|I try)\\b"], ["\\b(secret|tell|told|anyone|nobody|promise|mention)\\b"]], "minKeywords": 2, "samples": ["Yes, I can. If a friend tells me a secret, I never tell anyone.", "I try, but sometimes I tell my sister."], "difficulty": 3, "hint": "Образец: Yes, I can. I never tell anyone…", "explanation": "Ответ: Yes, I can. If a friend tells me a secret, I never tell anyone." },
+        { "id": "b1.u08.l06.e10", "type": "speak_repeat", "text": "He asked me not to tell anyone, but I told my best friend.", "hint": "Две части.", "explanation": "Not to tell [nɑːt tə tel] — слитно." }
+      ]
+    },
+    {
+      "id": "b1.u08.l07",
+      "kind": "writing",
+      "title": "Честный студент",
+      "textId": "b1.u08.wallet",
+      "exercises": [
+        {
+          "id": "b1.u08.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "b1.u08.wallet",
+          "hint": "Следите, кто что сказал: Лукас, владелец кошелька, полиция.",
+          "explanation": "Лукас нашёл кошелёк с деньгами и отнёс его в полицию. Владелец потерял его в автобусе, деньги были на свадьбу дочери. Лукас отказался от награды, и его пригласили на свадьбу.",
+          "questions": [
+            { "kind": "mcq", "question": "Где Лукас нашёл кошелёк?", "options": ["near the university", "on the bus", "in a shop"], "answer": 0, "explanation": "В тексте: found a wallet near the university." },
+            { "kind": "mcq", "question": "Для чего были деньги?", "options": ["for his daughter's wedding", "for a new car", "for a holiday"], "answer": 0, "explanation": "В тексте: the money was for his daughter's wedding." },
+            { "kind": "mcq", "question": "Что предложил владелец?", "options": ["to give Lucas some of the money", "to buy Lucas a car", "to call the journalists"], "answer": 0, "explanation": "В тексте: offered to give Lucas some of the money." },
+            { "kind": "tfn", "statement": "Lucas refused to take the money.", "answer": "true", "explanation": "В тексте: Lucas refused to take it." },
+            { "kind": "tfn", "statement": "The owner answered the phone when Lucas called.", "answer": "false", "explanation": "В тексте: nobody answered." },
+            { "kind": "tfn", "statement": "Lucas went to the wedding with his sister.", "answer": "not_given", "explanation": "Об этом в тексте ничего нет." }
+          ]
+        },
+        { "id": "b1.u08.l07.e02", "type": "translate_choice", "from": "en", "text": "He said that he had lost it on the bus the previous day.", "options": ["Он сказал, что потерял его в автобусе накануне.", "Он сказал, что потеряет его в автобусе завтра.", "Он сказал, что нашёл его в автобусе."], "answer": 0, "hint": "Previous day — накануне.", "explanation": "Правильно: He said that he had lost it the previous day." },
+        { "id": "b1.u08.l07.e03", "type": "fill_gap", "text": "Journalists asked Lucas ___ he would do the same again.", "translation": "Журналисты спросили Лукаса, поступил бы он так снова.", "answers": [["whether", "if"]], "options": ["whether", "that", "what"], "hint": "Русское «ли».", "explanation": "Правильно: Journalists asked Lucas whether he would do the same again.", "grammar": ["b1.reported-questions"] },
+        { "id": "b1.u08.l07.e04", "type": "fill_gap", "text": "The police ___ people to be careful with their things.", "translation": "Полиция напомнила людям быть внимательными к своим вещам.", "answers": [["reminded"]], "options": ["reminded", "remembered", "suggested"], "hint": "Напомнила.", "explanation": "Правильно: The police reminded people to be careful.", "grammar": ["b1.reporting-verbs"] },
+        { "id": "b1.u08.l07.e05", "type": "type_translation", "from": "ru", "text": "Лукас сказал, что просто поступил правильно.", "answers": ["Lucas said that he had only done the right thing.", "Lucas said he had only done the right thing.", "Lucas said that he had just done the right thing.", "Lucas said he had just done the right thing."], "difficulty": 3, "hint": "Образец: Had + V3.", "explanation": "Правильно: Lucas said that he had only done the right thing.", "grammar": ["b1.reported-speech"] },
+        { "id": "b1.u08.l07.e06", "type": "speak_describe", "picture": { "emoji": "📰" }, "situation": "Перескажите историю о Лукасе от третьего лица: что он нашёл, что сказал журналистам, что ответил владелец.", "keywords": [["\\b(said|told|asked|explained|refused|offered)\\b"], ["\\b(wallet|money|police|owner|wedding)\\b"]], "minKeywords": 2, "samples": ["Lucas found a wallet. He said that he had thought about it for only a second. He refused to take the money."], "difficulty": 3, "hint": "Образец: Lucas said that he had…", "explanation": "Используйте said that, refused to, offered to.", "grammar": ["b1.reported-speech", "b1.reporting-verbs"] },
+        { "id": "b1.u08.l07.e07", "type": "speak_answer", "question": "Would you do the same as Lucas? Why?", "questionRu": "Вы бы поступили так же, как Лукас? Почему?", "keywords": [["\\b(yes|no|I would|I wouldn't|I think)\\b"], ["\\bbecause\\b"]], "minKeywords": 2, "samples": ["Yes, I would, because the money wasn't mine.", "I think I would, because the owner was worried."], "difficulty": 3, "hint": "Образец: Yes, I would, because…", "explanation": "Ответ: Yes, I would, because the money wasn't mine.", "grammar": ["b1.second-conditional"] },
+        {
+          "id": "b1.u08.l07.e08",
+          "type": "write",
+          "task": "Напишите письмо другу и перескажите интересный разговор (с коллегой, соседом, родственником): что вам сказали (said that, told me that), о чём спросили (asked me if, asked me why) и о чём попросили или что пообещали (asked me to, promised to, refused to).",
+          "minWords": 90,
+          "maxWords": 200,
+          "criteria": [
+            { "id": "statement", "label": "Есть пересказ слов: said that, told me that", "patterns": ["\\b(said|told (me|us|him|her|them))( that)? (he|she|they|I|we|it|the)\\b"] },
+            { "id": "question", "label": "Есть пересказ вопроса: asked if, asked why", "patterns": ["\\basked( (me|us|him|her|them))? (if|whether|where|what|when|why|how)\\b"] },
+            { "id": "verb", "label": "Есть глагол пересказа: asked me to, promised to, refused to, suggested", "patterns": ["\\b(asked|told|reminded|warned) (me|us|him|her|them) (not )?to\\b", "\\b(promised|refused|offered|agreed) to\\b", "\\b(suggested|apologized for|admitted|denied) [a-z]+ing\\b"] },
+            { "id": "backshift", "label": "Время сдвинуто: was, would, had, could", "patterns": ["\\b(would|could|had [a-z]+(ed|en|wn|nt|t|d)|was|were)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\bsaid (me|him|her|us|them)\\b", "message": "С человеком — told: told me that…" },
+            { "pattern": "\\btold that\\b", "message": "Без человека — said that, с человеком — told me that." },
+            { "pattern": "\\basked( me| him| her| us| them)? (where|what|when|why|how) (did|do|does) \\b", "message": "В косвенном вопросе нет do и did: asked me where I lived." },
+            { "pattern": "\\b(told|asked) (me|him|her|us|them) (don't|do not)\\b", "message": "Отрицание в просьбе — not to: told me not to be late." },
+            { "pattern": "\\bsuggested to [a-z]+\\b", "message": "После suggest — -ing: suggested going." }
+          ],
+          "samples": [
+            "Hi Sofia, you won't believe what my neighbor told me yesterday! She said that she was moving to Rome next month. She told me that she had found a job there and that her new flat was near the sea. I asked her if she could speak Italian, and she said that she was learning it. Then she asked me to look after her cat for a week, and I promised to help. She also suggested having a party before she leaves. I'll be sad when she goes. Write soon! Elena",
+            "Dear Max, I had a strange conversation with my boss today. He asked me whether I was happy at work. I said that I was, but I admitted that I was very tired. He asked me why I hadn't taken a holiday this year. I told him that we had too much work. He told me to take a week off and promised to find somebody to help me. He also apologized for being so busy lately. I couldn't believe it! Maybe he isn't so bad after all. See you soon, Anna"
+          ],
+          "difficulty": 3,
+          "hint": "План: приветствие → кто и когда сказал → что сказал (said that) → о чём спросил (asked if) → о чём попросил (asked me to) → моя реакция.",
+          "explanation": "После said и told время сдвигается: is → was, will → would, have done → had done. В косвенном вопросе — прямой порядок слов и if или whether. Просьба — asked me to, отрицание — not to.",
+          "grammar": ["b1.reported-speech", "b1.reported-questions", "b1.reporting-verbs"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "b1.u08.test.e01", "type": "match_pairs", "pairs": [{ "en": "refuse", "ru": "отказываться" }, { "en": "remind", "ru": "напоминать" }, { "en": "rumor", "ru": "слух" }, { "en": "upset", "ru": "расстроенный" }, { "en": "whether", "ru": "ли" }], "hint": "Слова юнита.", "explanation": "Refuse — отказываться, remind — напоминать, rumor — слух, upset — расстроенный, whether — ли." },
+      { "id": "b1.u08.test.e02", "type": "translate_choice", "from": "ru", "text": "извиняться", "options": ["apologize", "complain", "admit"], "answer": 0, "hint": "Образец: Sorry.", "explanation": "Apologize — «извиняться»." },
+      { "id": "b1.u08.test.e03", "type": "fill_gap", "text": "\"I am tired.\" — She said that she ___ tired.", "translation": "Она сказала, что устала.", "answers": [["was"]], "options": ["was", "is", "has been"], "hint": "Сдвиг времени.", "explanation": "Правильно: She said that she was tired.", "grammar": ["b1.reported-speech"] },
+      { "id": "b1.u08.test.e04", "type": "fill_gap", "text": "\"I will help you.\" — He said that he ___ help me.", "translation": "Он сказал, что поможет мне.", "answers": [["would"]], "options": ["would", "will", "can"], "hint": "Will сдвигается.", "explanation": "Правильно: He said that he would help me.", "grammar": ["b1.reported-speech"] },
+      { "id": "b1.u08.test.e05", "type": "fill_gap", "text": "She ___ me that she was getting married.", "translation": "Она сказала мне, что выходит замуж.", "answers": [["told"]], "options": ["told", "said", "spoke"], "hint": "С человеком.", "explanation": "Правильно: She told me that she was getting married.", "grammar": ["b1.reported-speech"] },
+      { "id": "b1.u08.test.e06", "type": "fill_gap", "text": "He asked ___ I was busy.", "translation": "Он спросил, занят ли я.", "answers": [["if", "whether"]], "options": ["if", "that", "what"], "hint": "Русское «ли».", "explanation": "Правильно: He asked if I was busy.", "grammar": ["b1.reported-questions"] },
+      { "id": "b1.u08.test.e07", "type": "fill_gap", "text": "She asked me ___ to tell anyone.", "translation": "Она попросила меня никому не говорить.", "answers": [["not"]], "options": ["not", "don't", "no"], "hint": "Отрицание.", "explanation": "Правильно: She asked me not to tell anyone.", "grammar": ["b1.reporting-verbs"] },
+      { "id": "b1.u08.test.e08", "type": "fill_gap", "text": "He suggested ___ to the cinema.", "translation": "Он предложил сходить в кино.", "answers": [["going"]], "options": ["going", "to go", "go"], "hint": "После suggest.", "explanation": "Правильно: He suggested going to the cinema.", "grammar": ["b1.reporting-verbs"] },
+      { "id": "b1.u08.test.e09", "type": "error_correction", "text": "She said me that she was busy.", "wrong": "said me", "correction": "told me", "options": ["told me", "said to", "spoke me"], "hint": "С человеком.", "explanation": "Правильно: She told me that she was busy.", "grammar": ["b1.reported-speech"] },
+      { "id": "b1.u08.test.e10", "type": "error_correction", "text": "She asked me where did I live.", "wrong": "where did I live", "correction": "where I lived", "options": ["where I lived", "where I did live", "where lived I"], "hint": "Порядок слов.", "explanation": "Правильно: She asked me where I lived.", "grammar": ["b1.reported-questions"] },
+      { "id": "b1.u08.test.e11", "type": "error_correction", "text": "He told me don't be late.", "wrong": "don't be", "correction": "not to be", "options": ["not to be", "to not being", "don't to be"], "hint": "Отрицание.", "explanation": "Правильно: He told me not to be late.", "grammar": ["b1.reporting-verbs"] },
+      { "id": "b1.u08.test.e12", "type": "listen_choice", "audio": "He told me that he had found a new job.", "question": "Что вы слышите?", "options": ["He told me that he had found a new job.", "He told me that he would find a new job.", "He asked me if I had found a new job."], "answer": 0, "hint": "Уже нашёл.", "explanation": "Правильно: He told me that he had found a new job.", "grammar": ["b1.reported-speech"] },
+      { "id": "b1.u08.test.e13", "type": "listen_dictation", "text": "Can you tell me where the station is?", "hint": "Восемь слов.", "explanation": "Can you tell me where the station is? — «Не подскажете, где вокзал?»" },
+      { "id": "b1.u08.test.e14", "type": "tiles", "from": "ru", "text": "Он извинился за опоздание.", "answer": "He apologized for being late.", "distractors": ["be", "to"], "difficulty": 2, "hint": "Образец: For + -ing.", "explanation": "Правильно: He apologized for being late.", "grammar": ["b1.reporting-verbs"] },
+      { "id": "b1.u08.test.e15", "type": "type_translation", "from": "ru", "text": "Она спросила, где я живу.", "answers": ["She asked where I lived.", "She asked me where I lived.", "She asked where I live.", "She asked me where I live."], "difficulty": 3, "hint": "Без did.", "explanation": "Правильно: She asked me where I lived.", "grammar": ["b1.reported-questions"] },
+      { "id": "b1.u08.test.e16", "type": "speak_repeat", "text": "She said that she would call me the next day.", "hint": "Would — коротко.", "explanation": "She said that she would [ʃi sed ðət ʃi wʊd] — слитно." }
+    ]
+  }
+}
