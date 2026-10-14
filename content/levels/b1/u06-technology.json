@@ -1,0 +1,340 @@
+{
+  "id": "b1.u06",
+  "level": "B1",
+  "order": 6,
+  "title": { "en": "Technology and media", "ru": "Технологии и медиа" },
+  "description": "Говорим о технологиях, интернете и новостях: приложения, соцсети, пароли, фейки и экранное время. Пассив в разных временах, much, many и a few, фразовые глаголы turn on, log in, find out.",
+  "goals": [
+    "Могу говорить о телефоне, приложениях и интернете.",
+    "Могу понять сообщения и новости в пассиве: Your message has been sent.",
+    "Могу сказать, сколько чего-то: too much time, a few apps, not many followers.",
+    "Могу пользоваться фразовыми глаголами: turn it off, log in, find out.",
+    "Могу обсуждать новости и надёжность информации.",
+    "Могу написать мнение о технологиях в жизни."
+  ],
+  "grammar": ["b1.passive-modal", "b1.quantifiers", "b1.phrasal-tech"],
+  "troubles": ["tenses", "word-order"],
+  "words": [
+    { "id": "internet", "en": "internet", "ipa": "ˈɪntɚnet", "pos": "noun", "ru": ["интернет"], "example": { "en": "I read the news on the internet.", "ru": "Я читаю новости в интернете." }, "topics": ["technology"] },
+    { "id": "website", "en": "website", "ipa": "ˈwebsaɪt", "pos": "noun", "ru": ["сайт"], "example": { "en": "The website has been updated.", "ru": "Сайт обновлён." }, "topics": ["technology"] },
+    { "id": "online", "en": "online", "ipa": "ˈɔːnˌlaɪn", "pos": "adv", "ru": ["в сети", "онлайн"], "example": { "en": "I spend too much time online.", "ru": "Я провожу слишком много времени в сети." }, "topics": ["technology"] },
+    { "id": "app", "en": "app", "ipa": "æp", "pos": "noun", "ru": ["приложение"], "example": { "en": "This app is very useful.", "ru": "Это приложение очень полезное." }, "topics": ["technology"] },
+    { "id": "screen", "en": "screen", "ipa": "skriːn", "pos": "noun", "ru": ["экран"], "example": { "en": "My phone screen is broken.", "ru": "У меня разбит экран телефона." }, "topics": ["technology"] },
+    { "id": "password", "en": "password", "ipa": "ˈpæswɝːd", "pos": "noun", "ru": ["пароль"], "example": { "en": "Your password must be changed.", "ru": "Пароль нужно сменить." }, "topics": ["technology"] },
+    { "id": "account", "en": "account", "ipa": "əˈkaʊnt", "pos": "noun", "ru": ["аккаунт", "счёт"], "example": { "en": "I logged in to my account.", "ru": "Я вошёл в свой аккаунт." }, "topics": ["technology"] },
+    { "id": "download", "en": "download", "ipa": "ˈdaʊnloʊd", "pos": "verb", "ru": ["скачивать"], "example": { "en": "The app has been downloaded a million times.", "ru": "Приложение скачали миллион раз." }, "forms": { "third": "downloads" }, "topics": ["technology"] },
+    { "id": "upload", "en": "upload", "ipa": "ˈʌploʊd", "pos": "verb", "ru": ["загружать (в сеть)"], "example": { "en": "I uploaded the photos.", "ru": "Я загрузил фотографии." }, "forms": { "third": "uploads" }, "topics": ["technology"] },
+    { "id": "delete", "en": "delete", "ipa": "dɪˈliːt", "pos": "verb", "ru": ["удалять"], "example": { "en": "I deleted the app.", "ru": "Я удалил приложение." }, "forms": { "third": "deletes" }, "topics": ["technology"] },
+    { "id": "share", "en": "share", "ipa": "ʃer", "pos": "verb", "ru": ["делиться"], "example": { "en": "Don't share your password.", "ru": "Не сообщайте никому свой пароль." }, "forms": { "third": "shares" }, "topics": ["technology"] },
+    { "id": "post", "en": "post", "ipa": "poʊst", "pos": "verb", "ru": ["публиковать (в сети)"], "example": { "en": "The video will be posted tomorrow.", "ru": "Видео опубликуют завтра." }, "forms": { "third": "posts" }, "topics": ["technology"] },
+    { "id": "comment", "en": "comment", "ipa": "ˈkɑːment", "pos": "noun", "ru": ["комментарий"], "example": { "en": "I read the comments under the video.", "ru": "Я читаю комментарии под видео." }, "topics": ["technology"] },
+    { "id": "link", "en": "link", "ipa": "lɪŋk", "pos": "noun", "ru": ["ссылка"], "example": { "en": "Don't click on strange links.", "ru": "Не нажимайте на странные ссылки." }, "topics": ["technology"] },
+    { "id": "click", "en": "click", "ipa": "klɪk", "pos": "verb", "ru": ["нажимать (мышкой)"], "example": { "en": "Click on the link.", "ru": "Нажмите на ссылку." }, "forms": { "third": "clicks" }, "topics": ["technology"] },
+    { "id": "search", "en": "search", "ipa": "sɝːtʃ", "pos": "verb", "ru": ["искать"], "example": { "en": "I searched for the information online.", "ru": "Я искал информацию в интернете." }, "forms": { "third": "searches" }, "topics": ["technology"] },
+    { "id": "keyboard", "en": "keyboard", "ipa": "ˈkiːbɔːrd", "pos": "noun", "ru": ["клавиатура"], "example": { "en": "My keyboard is broken.", "ru": "У меня сломалась клавиатура." }, "picture": { "emoji": "⌨️" }, "topics": ["technology"] },
+    { "id": "update", "en": "update", "ipa": "ʌpˈdeɪt", "pos": "verb", "ru": ["обновлять"], "example": { "en": "You should update the app.", "ru": "Вам стоит обновить приложение." }, "forms": { "third": "updates" }, "topics": ["technology"] },
+    { "id": "virus", "en": "virus", "ipa": "ˈvaɪrəs", "pos": "noun", "ru": ["вирус"], "example": { "en": "My computer has a virus.", "ru": "У меня на компьютере вирус." }, "forms": { "plural": "viruses" }, "topics": ["technology"] },
+    { "id": "privacy", "en": "privacy", "ipa": "ˈpraɪvəsi", "pos": "noun", "ru": ["конфиденциальность", "личная жизнь"], "example": { "en": "Privacy online is important.", "ru": "Конфиденциальность в сети важна." }, "topics": ["technology"] },
+    { "id": "software", "en": "software", "ipa": "ˈsɔːftwer", "pos": "noun", "ru": ["программное обеспечение"], "example": { "en": "The software has been updated.", "ru": "Программа обновлена." }, "topics": ["technology"] },
+    { "id": "data", "en": "data", "ipa": "ˈdeɪtə", "pos": "noun", "ru": ["данные"], "example": { "en": "Data can be stolen from your phone.", "ru": "Данные с телефона могут украсть." }, "topics": ["technology"] },
+    { "id": "information", "en": "information", "ipa": "ˌɪnfɚˈmeɪʃən", "pos": "noun", "ru": ["информация"], "example": { "en": "There isn't much information here.", "ru": "Здесь мало информации." }, "note": "Information — несчитаемое слово: some information, а не an information и не informations.", "topics": ["technology"] },
+    { "id": "device", "en": "device", "ipa": "dɪˈvaɪs", "pos": "noun", "ru": ["устройство"], "example": { "en": "Turn off all devices.", "ru": "Выключите все устройства." }, "topics": ["technology"] },
+    { "id": "charge", "en": "charge", "ipa": "tʃɑːrdʒ", "pos": "verb", "ru": ["заряжать"], "example": { "en": "I need to charge my phone.", "ru": "Мне нужно зарядить телефон." }, "forms": { "third": "charges" }, "topics": ["technology"] },
+    { "id": "media", "en": "media", "ipa": "ˈmiːdiə", "pos": "noun", "ru": ["СМИ", "медиа"], "example": { "en": "Social media is part of our lives.", "ru": "Соцсети — часть нашей жизни." }, "topics": ["media"] },
+    { "id": "news", "en": "news", "ipa": "nuːz", "pos": "noun", "ru": ["новости"], "example": { "en": "The news is good today.", "ru": "Сегодня хорошие новости." }, "note": "News — единственное число: the news is, а не the news are.", "topics": ["media"] },
+    { "id": "article", "en": "article", "ipa": "ˈɑːrtɪkəl", "pos": "noun", "ru": ["статья"], "example": { "en": "I read an interesting article.", "ru": "Я прочитал интересную статью." }, "topics": ["media"] },
+    { "id": "journalist", "en": "journalist", "ipa": "ˈdʒɝːnələst", "pos": "noun", "ru": ["журналист"], "example": { "en": "The article was written by a journalist.", "ru": "Статью написал журналист." }, "topics": ["media"] },
+    { "id": "advert", "en": "advert", "ipa": "ˈædvɝːt", "pos": "noun", "ru": ["реклама", "объявление"], "example": { "en": "There are too many adverts in this app.", "ru": "В этом приложении слишком много рекламы." }, "note": "Британское advert, американское ad. Полное слово — advertisement.", "topics": ["media"] },
+    { "id": "smartphone", "en": "smartphone", "ipa": "ˈsmɑːrtfoʊn", "pos": "noun", "ru": ["смартфон"], "example": { "en": "Almost everybody has a smartphone.", "ru": "Почти у всех есть смартфон." }, "picture": { "emoji": "📱" }, "topics": ["technology"] },
+    { "id": "connect", "en": "connect", "ipa": "kəˈnekt", "pos": "verb", "ru": ["подключать(ся)"], "example": { "en": "I can't connect to the internet.", "ru": "Не могу подключиться к интернету." }, "forms": { "third": "connects" }, "topics": ["technology"] },
+    { "id": "video", "en": "video", "ipa": "ˈvɪdioʊ", "pos": "noun", "ru": ["видео"], "example": { "en": "The video has been watched a million times.", "ru": "Видео посмотрели миллион раз." }, "topics": ["media"] },
+    { "id": "channel", "en": "channel", "ipa": "ˈtʃænəl", "pos": "noun", "ru": ["канал"], "example": { "en": "She has her own video channel.", "ru": "У неё свой видеоканал." }, "topics": ["media"] },
+    { "id": "follower", "en": "follower", "ipa": "ˈfɑːloʊɚ", "pos": "noun", "ru": ["подписчик"], "example": { "en": "How many followers do you have?", "ru": "Сколько у вас подписчиков?" }, "topics": ["media"] },
+    { "id": "user", "en": "user", "ipa": "ˈjuːzɚ", "pos": "noun", "ru": ["пользователь"], "example": { "en": "The app has many users.", "ru": "У приложения много пользователей." }, "topics": ["technology"] },
+    { "id": "digital", "en": "digital", "ipa": "ˈdɪdʒətəl", "pos": "adj", "ru": ["цифровой"], "example": { "en": "We live in a digital world.", "ru": "Мы живём в цифровом мире." }, "topics": ["technology"] },
+    { "id": "smart", "en": "smart", "ipa": "smɑːrt", "pos": "adj", "ru": ["умный"], "example": { "en": "I have a smart watch.", "ru": "У меня умные часы." }, "topics": ["technology"] },
+    { "id": "fake", "en": "fake", "ipa": "feɪk", "pos": "adj", "ru": ["поддельный", "фейковый"], "example": { "en": "This news is fake.", "ru": "Эта новость фейковая." }, "topics": ["media"] },
+    { "id": "reliable", "en": "reliable", "ipa": "rɪˈlaɪəbəl", "pos": "adj", "ru": ["надёжный"], "example": { "en": "Is this website reliable?", "ru": "Этот сайт надёжный?" }, "topics": ["media"] },
+    { "id": "avoid", "en": "avoid", "ipa": "əˈvɔɪd", "pos": "verb", "ru": ["избегать"], "example": { "en": "I avoid using my phone in the evening.", "ru": "Вечером я стараюсь не пользоваться телефоном." }, "forms": { "third": "avoids" }, "note": "После avoid — форма на -ing: avoid using.", "topics": ["verbs"] },
+    { "id": "publish", "en": "publish", "ipa": "ˈpʌblɪʃ", "pos": "verb", "ru": ["публиковать"], "example": { "en": "The results will be published on Monday.", "ru": "Результаты опубликуют в понедельник." }, "forms": { "third": "publishes" }, "topics": ["media"] },
+    { "id": "dictionary", "en": "dictionary", "ipa": "ˈdɪkʃəˌneri", "pos": "noun", "ru": ["словарь"], "example": { "en": "Look up the word in a dictionary.", "ru": "Посмотрите слово в словаре." }, "forms": { "plural": "dictionaries" }, "topics": ["study"] },
+    { "id": "much", "en": "much", "ipa": "mʌtʃ", "pos": "det", "ru": ["много (с несчитаемыми)"], "example": { "en": "I don't have much time.", "ru": "У меня немного времени." }, "topics": ["grammar"] },
+    { "id": "few", "en": "few", "ipa": "fjuː", "pos": "det", "ru": ["мало (со считаемыми)"], "example": { "en": "Few people read newspapers now.", "ru": "Сейчас мало кто читает газеты." }, "topics": ["grammar"] },
+    { "id": "little", "en": "little", "ipa": "ˈlɪtəl", "pos": "det", "ru": ["мало (с несчитаемыми)", "маленький"], "example": { "en": "I have little free time.", "ru": "У меня мало свободного времени." }, "topics": ["grammar"] },
+    { "id": "turn-on", "en": "turn on", "ipa": "tɝːn ɑːn", "pos": "phrasal", "ru": ["включать"], "example": { "en": "Turn on the light.", "ru": "Включи свет." }, "forms": { "third": "turns on" }, "topics": ["phrasal"] },
+    { "id": "turn-off", "en": "turn off", "ipa": "tɝːn ɔːf", "pos": "phrasal", "ru": ["выключать"], "example": { "en": "Turn it off.", "ru": "Выключи его." }, "forms": { "third": "turns off" }, "topics": ["phrasal"] },
+    { "id": "log-in", "en": "log in", "ipa": "lɔːɡ ɪn", "pos": "phrasal", "ru": ["входить (в аккаунт)"], "example": { "en": "I logged in to my account.", "ru": "Я вошёл в свой аккаунт." }, "forms": { "third": "logs in", "ing": "logging in" }, "topics": ["phrasal"] },
+    { "id": "sign-up", "en": "sign up", "ipa": "saɪn ʌp", "pos": "phrasal", "ru": ["зарегистрироваться", "записаться"], "example": { "en": "Sign up for the course.", "ru": "Запишитесь на курс." }, "forms": { "third": "signs up" }, "topics": ["phrasal"] },
+    { "id": "look-up", "en": "look up", "ipa": "lʊk ʌp", "pos": "phrasal", "ru": ["посмотреть (в словаре)"], "example": { "en": "I looked it up.", "ru": "Я посмотрел это в словаре." }, "forms": { "third": "looks up" }, "topics": ["phrasal"] },
+    { "id": "find-out", "en": "find out", "ipa": "faɪnd aʊt", "pos": "phrasal", "ru": ["узнать", "выяснить"], "example": { "en": "I found out the truth.", "ru": "Я узнал правду." }, "forms": { "third": "finds out" }, "topics": ["phrasal"] },
+    { "id": "useful", "en": "useful", "ipa": "ˈjuːsfəl", "pos": "adj", "ru": ["полезный"], "example": { "en": "This app is very useful.", "ru": "Это приложение очень полезное." }, "topics": ["adjectives"] },
+    { "id": "social", "en": "social", "ipa": "ˈsoʊʃəl", "pos": "adj", "ru": ["социальный"], "example": { "en": "Social media is part of our lives.", "ru": "Соцсети — часть нашей жизни." }, "note": "Social media — «соцсети».", "topics": ["media"] },
+    { "id": "almost", "en": "almost", "ipa": "ˈɔːlmoʊst", "pos": "adv", "ru": ["почти"], "example": { "en": "Almost everybody has a smartphone.", "ru": "Почти у всех есть смартфон." }, "topics": ["adverbs"] },
+    { "id": "without", "en": "without", "ipa": "wɪˈθaʊt", "pos": "prep", "ru": ["без"], "example": { "en": "I can't live without my phone.", "ru": "Я не могу жить без телефона." }, "topics": ["prepositions"] },
+    { "id": "notification", "en": "notification", "ipa": "ˌnoʊtəfəˈkeɪʃən", "pos": "noun", "ru": ["уведомление"], "example": { "en": "I turned off all the notifications.", "ru": "Я отключил все уведомления." }, "topics": ["technology"] },
+    { "id": "completely", "en": "completely", "ipa": "kəmˈpliːtli", "pos": "adv", "ru": ["полностью", "совсем"], "example": { "en": "I completely forgot about it.", "ru": "Я совсем об этом забыл." }, "topics": ["adverbs"] },
+    { "id": "surprised", "en": "surprised", "ipa": "sɚˈpraɪzd", "pos": "adj", "ru": ["удивлённый"], "example": { "en": "You will be surprised.", "ru": "Вы удивитесь." }, "topics": ["feelings"] },
+    { "id": "opinion", "en": "opinion", "ipa": "əˈpɪnjən", "pos": "noun", "ru": ["мнение"], "example": { "en": "In my opinion, this website is not reliable.", "ru": "По-моему, этот сайт ненадёжный." }, "topics": ["communication"] }
+  ],
+  "texts": [
+    {
+      "id": "b1.u06.phone",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Too much time online", "ru": "Слишком много времени в сети" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Tom, you are always on your phone! How much time do you spend online?", "ru": "Том, ты всё время в телефоне! Сколько времени ты проводишь в сети?" },
+        { "speaker": "tom", "en": "Not much. Maybe four or five hours a day.", "ru": "Немного. Часа четыре-пять в день." },
+        { "speaker": "anna", "en": "That's a lot! What do you do?", "ru": "Это много! Что ты там делаешь?" },
+        { "speaker": "tom", "en": "I read the news, I watch videos, and I post photos. I have a few hundred followers now.", "ru": "Читаю новости, смотрю видео, выкладываю фото. У меня уже несколько сотен подписчиков." },
+        { "speaker": "anna", "en": "But are the news websites reliable? A lot of news is fake.", "ru": "А новостные сайты надёжные? Много новостей — фейки." },
+        { "speaker": "tom", "en": "I know. If I read something strange, I try to find out if it is true.", "ru": "Знаю. Если читаю что-то странное, стараюсь выяснить, правда ли это." },
+        { "speaker": "anna", "en": "That's smart. And what about your privacy? Has your password been changed recently?", "ru": "Это разумно. А как насчёт конфиденциальности? Ты давно менял пароль?" },
+        { "speaker": "tom", "en": "Not for a year. You are right, it should be changed. And maybe I should turn off my phone in the evening.", "ru": "Уже год не менял. Ты права, его нужно сменить. И, может быть, мне стоит выключать телефон по вечерам." }
+      ]
+    },
+    {
+      "id": "b1.u06.detox",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "A week without my smartphone", "ru": "Неделя без смартфона" },
+      "lines": [
+        { "en": "Last month I found out that I was spending more than five hours a day on my smartphone. I decided to try something new: one week without social media, games and videos. My friends thought that it was a strange idea.", "ru": "В прошлом месяце я выяснил, что провожу в смартфоне больше пяти часов в день. Я решил попробовать кое-что новое: неделю без соцсетей, игр и видео. Друзья решили, что это странная затея." },
+        { "en": "On the first day I deleted the apps and turned off all the notifications. It was difficult. I kept looking at my phone, and I felt that I was missing important news.", "ru": "В первый день я удалил приложения и отключил все уведомления. Было трудно. Я то и дело смотрел на телефон, и мне казалось, что я пропускаю важные новости." },
+        { "en": "But after a few days I started to feel better. I had much more free time, and I read two books. I slept better, too, because I didn't use any devices before bed.", "ru": "Но через несколько дней мне стало лучше. У меня появилось гораздо больше свободного времени, и я прочитал две книги. Я и спал лучше, потому что не пользовался никакими устройствами перед сном." },
+        { "en": "Of course, technology is very useful, and I can't live without it completely. But now I use my phone less. I check the news only twice a day, and my phone is turned off after nine. If you spend too much time online, try it. You will be surprised.", "ru": "Конечно, технологии очень полезны, и совсем без них я жить не могу. Но теперь я пользуюсь телефоном меньше. Новости проверяю только два раза в день, а после девяти телефон выключен. Если вы проводите в сети слишком много времени, попробуйте. Вы удивитесь." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "b1.u06.l01",
+      "kind": "vocabulary",
+      "title": "Интернет и устройства",
+      "exercises": [
+        { "id": "b1.u06.l01.e01", "type": "match_pairs", "pairs": [{ "en": "internet", "ru": "интернет" }, { "en": "website", "ru": "сайт" }, { "en": "online", "ru": "в сети" }, { "en": "app", "ru": "приложение" }, { "en": "screen", "ru": "экран" }], "hint": "Слова интернета.", "explanation": "Internet — интернет, website — сайт, online — в сети, app — приложение, screen — экран." },
+        { "id": "b1.u06.l01.e02", "type": "match_pairs", "pairs": [{ "en": "password", "ru": "пароль" }, { "en": "account", "ru": "аккаунт" }, { "en": "download", "ru": "скачивать" }, { "en": "upload", "ru": "загружать" }, { "en": "delete", "ru": "удалять" }], "hint": "Download — вниз, upload — вверх.", "explanation": "Password — пароль, account — аккаунт, download — скачивать, upload — загружать, delete — удалять." },
+        { "id": "b1.u06.l01.e03", "type": "match_pairs", "pairs": [{ "en": "share", "ru": "делиться" }, { "en": "post", "ru": "публиковать" }, { "en": "comment", "ru": "комментарий" }, { "en": "link", "ru": "ссылка" }, { "en": "click", "ru": "нажимать" }], "hint": "Действия в соцсетях.", "explanation": "Share — делиться, post — публиковать, comment — комментарий, link — ссылка, click — нажимать." },
+        { "id": "b1.u06.l01.e04", "type": "match_pairs", "pairs": [{ "en": "search", "ru": "искать" }, { "en": "keyboard", "ru": "клавиатура" }, { "en": "update", "ru": "обновлять" }, { "en": "virus", "ru": "вирус" }, { "en": "privacy", "ru": "конфиденциальность" }], "hint": "Компьютерные слова.", "explanation": "Search — искать, keyboard — клавиатура, update — обновлять, virus — вирус, privacy — конфиденциальность." },
+        { "id": "b1.u06.l01.e05", "type": "match_pairs", "pairs": [{ "en": "software", "ru": "программы" }, { "en": "data", "ru": "данные" }, { "en": "information", "ru": "информация" }, { "en": "device", "ru": "устройство" }, { "en": "charge", "ru": "заряжать" }], "hint": "Device — любое устройство.", "explanation": "Software — программы, data — данные, information — информация, device — устройство, charge — заряжать." },
+        { "id": "b1.u06.l01.e06", "type": "picture_choice", "mode": "picture-to-word", "word": "keyboard", "distractors": ["smartphone", "camera"], "hint": "На ней печатают.", "explanation": "Keyboard — «клавиатура»: [ˈkiːbɔːrd]." },
+        { "id": "b1.u06.l01.e07", "type": "translate_choice", "from": "ru", "text": "Не сообщайте никому свой пароль.", "options": ["Don't share your password.", "Don't post your password.", "Don't search your password."], "answer": 0, "hint": "Делиться — share.", "explanation": "Правильно: Don't share your password." },
+        { "id": "b1.u06.l01.e08", "type": "fill_gap", "text": "I need to ___ my phone. The battery is almost empty.", "translation": "Мне нужно зарядить телефон. Батарея почти села.", "answers": [["charge"]], "options": ["charge", "update", "delete"], "hint": "Батарея.", "explanation": "Правильно: I need to charge my phone." },
+        { "id": "b1.u06.l01.e09", "type": "fill_gap", "text": "Don't click on strange ___.", "translation": "Не нажимайте на странные ссылки.", "answers": [["links"]], "options": ["links", "keyboards", "screens"], "hint": "Ссылки.", "explanation": "Правильно: Don't click on strange links." },
+        { "id": "b1.u06.l01.e10", "type": "fill_gap", "text": "There isn't much ___ on this website.", "translation": "На этом сайте мало информации.", "answers": [["information"]], "options": ["information", "informations", "an information"], "hint": "Несчитаемое.", "explanation": "Правильно: There isn't much information on this website.", "grammar": ["b1.quantifiers"] },
+        { "id": "b1.u06.l01.e11", "type": "listen_choice", "audio": "I can't connect to the internet.", "question": "Что вы слышите?", "options": ["I can't connect to the internet.", "I can't log in to my account.", "I can't charge my phone."], "answer": 0, "hint": "Подключиться.", "explanation": "Правильно: I can't connect to the internet." },
+        { "id": "b1.u06.l01.e12", "type": "listen_dictation", "text": "You should update the app.", "hint": "Пять слов.", "explanation": "You should update the app — «вам стоит обновить приложение»." },
+        { "id": "b1.u06.l01.e13", "type": "type_translation", "from": "ru", "text": "пароль", "answers": ["password"], "hint": "Восемь букв.", "explanation": "Password [ˈpæswɝːd] — «пароль». W не читается." },
+        { "id": "b1.u06.l01.e14", "type": "word_stress", "word": "information", "syllables": ["in", "for", "ma", "tion"], "stress": 2, "hint": "Третий слог.", "explanation": "in-for-MA-tion — ударение на третий слог." }
+      ]
+    },
+    {
+      "id": "b1.u06.l02",
+      "kind": "vocabulary",
+      "title": "Медиа и новости",
+      "exercises": [
+        { "id": "b1.u06.l02.e01", "type": "match_pairs", "pairs": [{ "en": "media", "ru": "СМИ" }, { "en": "news", "ru": "новости" }, { "en": "article", "ru": "статья" }, { "en": "journalist", "ru": "журналист" }, { "en": "advert", "ru": "реклама" }], "hint": "Слова о новостях.", "explanation": "Media — СМИ, news — новости, article — статья, journalist — журналист, advert — реклама." },
+        { "id": "b1.u06.l02.e02", "type": "match_pairs", "pairs": [{ "en": "smartphone", "ru": "смартфон" }, { "en": "connect", "ru": "подключаться" }, { "en": "video", "ru": "видео" }, { "en": "channel", "ru": "канал" }, { "en": "follower", "ru": "подписчик" }], "hint": "Follower — тот, кто подписан.", "explanation": "Smartphone — смартфон, connect — подключаться, video — видео, channel — канал, follower — подписчик." },
+        { "id": "b1.u06.l02.e03", "type": "match_pairs", "pairs": [{ "en": "user", "ru": "пользователь" }, { "en": "digital", "ru": "цифровой" }, { "en": "smart", "ru": "умный" }, { "en": "fake", "ru": "фейковый" }, { "en": "reliable", "ru": "надёжный" }], "hint": "Fake и reliable — противоположные.", "explanation": "User — пользователь, digital — цифровой, smart — умный, fake — фейковый, reliable — надёжный." },
+        { "id": "b1.u06.l02.e04", "type": "match_pairs", "pairs": [{ "en": "avoid", "ru": "избегать" }, { "en": "publish", "ru": "публиковать" }, { "en": "dictionary", "ru": "словарь" }, { "en": "much", "ru": "много" }, { "en": "few", "ru": "мало" }], "hint": "Much и few — количество.", "explanation": "Avoid — избегать, publish — публиковать, dictionary — словарь, much — много, few — мало." },
+        { "id": "b1.u06.l02.e05", "type": "match_pairs", "pairs": [{ "en": "little", "ru": "мало" }, { "en": "turn on", "ru": "включать" }, { "en": "turn off", "ru": "выключать" }, { "en": "log in", "ru": "войти" }, { "en": "sign up", "ru": "зарегистрироваться" }], "hint": "Фразовые глаголы.", "explanation": "Little — мало, turn on — включать, turn off — выключать, log in — войти, sign up — зарегистрироваться." },
+        { "id": "b1.u06.l02.e15", "type": "match_pairs", "pairs": [{ "en": "useful", "ru": "полезный" }, { "en": "social", "ru": "социальный" }, { "en": "almost", "ru": "почти" }, { "en": "without", "ru": "без" }, { "en": "notification", "ru": "уведомление" }], "hint": "Social media — соцсети.", "explanation": "Useful — полезный, social — социальный, almost — почти, without — без, notification — уведомление." },
+        { "id": "b1.u06.l02.e16", "type": "match_pairs", "pairs": [{ "en": "completely", "ru": "полностью" }, { "en": "surprised", "ru": "удивлённый" }, { "en": "opinion", "ru": "мнение" }, { "en": "fake", "ru": "фейковый" }, { "en": "reliable", "ru": "надёжный" }], "hint": "In my opinion — по-моему.", "explanation": "Completely — полностью, surprised — удивлённый, opinion — мнение, fake — фейковый, reliable — надёжный." },
+        { "id": "b1.u06.l02.e06", "type": "picture_choice", "mode": "word-to-picture", "word": "smartphone", "distractors": ["keyboard", "camera"], "hint": "Телефон с экраном.", "explanation": "Smartphone — «смартфон»." },
+        { "id": "b1.u06.l02.e07", "type": "translate_choice", "from": "en", "text": "The news is good today.", "options": ["Сегодня хорошие новости.", "Сегодня хорошая газета.", "Новости хорошо написаны."], "answer": 0, "hint": "News — ед. число.", "explanation": "The news is good today. News — единственное число: is." },
+        { "id": "b1.u06.l02.e08", "type": "fill_gap", "text": "Is this website ___? Can I believe it?", "translation": "Этот сайт надёжный? Ему можно верить?", "answers": [["reliable"]], "options": ["reliable", "fake", "digital"], "hint": "Надёжный.", "explanation": "Правильно: Is this website reliable?" },
+        { "id": "b1.u06.l02.e09", "type": "fill_gap", "text": "The article was written by a ___.", "translation": "Статью написал журналист.", "answers": [["journalist"]], "options": ["journalist", "follower", "user"], "hint": "Пишет статьи.", "explanation": "Правильно: The article was written by a journalist.", "grammar": ["b1.passive-basic"] },
+        { "id": "b1.u06.l02.e10", "type": "fill_gap", "text": "I ___ using my phone in the evening.", "translation": "Вечером я стараюсь не пользоваться телефоном.", "answers": [["avoid"]], "options": ["avoid", "enjoy", "delete"], "hint": "Избегать.", "explanation": "I avoid using my phone in the evening. После avoid — -ing.", "grammar": ["b1.gerund-infinitive"] },
+        { "id": "b1.u06.l02.e11", "type": "listen_choice", "audio": "This news is fake.", "question": "Что вы слышите?", "options": ["This news is fake.", "This news is great.", "This news is late."], "answer": 0, "hint": "Фейк.", "explanation": "This news is fake — «эта новость фейковая»." },
+        { "id": "b1.u06.l02.e12", "type": "listen_dictation", "text": "How many followers do you have?", "hint": "Шесть слов.", "explanation": "How many followers do you have? — «Сколько у вас подписчиков?»" },
+        { "id": "b1.u06.l02.e13", "type": "type_translation", "from": "ru", "text": "статья", "answers": ["article"], "hint": "Семь букв.", "explanation": "Article [ˈɑːrtɪkəl] — «статья»." },
+        { "id": "b1.u06.l02.e14", "type": "word_stress", "word": "reliable", "syllables": ["re", "li", "a", "ble"], "stress": 1, "hint": "Второй слог.", "explanation": "re-LI-a-ble — ударение на второй слог." }
+      ]
+    },
+    {
+      "id": "b1.u06.l03",
+      "kind": "grammar",
+      "title": "Пассив: has been sent, will be posted",
+      "grammar": "b1.passive-modal",
+      "exercises": [
+        { "id": "b1.u06.l03.e01", "type": "fill_gap", "text": "Your message has ___ sent.", "translation": "Ваше сообщение отправлено.", "answers": [["been"]], "options": ["been", "be", "being"], "hint": "После has — третья форма be, потом V3.", "explanation": "Правильно: Your message has been sent.", "grammar": ["b1.passive-modal"] },
+        { "id": "b1.u06.l03.e02", "type": "fill_gap", "text": "The video will be ___ tomorrow.", "translation": "Видео опубликуют завтра.", "answers": [["posted"]], "options": ["posted", "post", "posting"], "hint": "Третья форма.", "explanation": "Правильно: The video will be posted tomorrow.", "grammar": ["b1.passive-modal"] },
+        { "id": "b1.u06.l03.e03", "type": "fill_gap", "text": "Your password must ___ changed.", "translation": "Пароль нужно сменить.", "answers": [["be"]], "options": ["be", "been", "is"], "hint": "Образец: Must be + V3.", "explanation": "Правильно: Your password must be changed.", "grammar": ["b1.passive-modal"] },
+        { "id": "b1.u06.l03.e04", "type": "fill_gap", "text": "The app has been ___ a million times.", "translation": "Приложение скачали миллион раз.", "answers": [["downloaded"]], "options": ["downloaded", "download", "downloading"], "hint": "Третья форма.", "explanation": "Правильно: The app has been downloaded a million times.", "grammar": ["b1.passive-modal"] },
+        { "id": "b1.u06.l03.e05", "type": "fill_gap", "text": "Data can be ___ from your phone.", "translation": "Данные с телефона могут украсть.", "answers": [["stolen"]], "options": ["stolen", "stole", "steal"], "hint": "Третья форма от steal.", "explanation": "Правильно: Data can be stolen from your phone.", "grammar": ["b1.passive-modal"] },
+        { "id": "b1.u06.l03.e06", "type": "fill_gap", "text": "Phones should be turned ___ during the lecture.", "translation": "Во время лекции телефоны следует выключить.", "answers": [["off"]], "options": ["off", "on", "up"], "hint": "Выключить.", "explanation": "Правильно: Phones should be turned off during the lecture.", "grammar": ["b1.passive-modal"] },
+        { "id": "b1.u06.l03.e07", "type": "error_correction", "text": "The app has downloaded a million times.", "wrong": "has downloaded", "correction": "has been downloaded", "options": ["has been downloaded", "has be downloaded", "was been downloaded"], "hint": "Пропущено слово.", "explanation": "Правильно: The app has been downloaded a million times.", "grammar": ["b1.passive-modal"], "troubles": ["tenses"] },
+        { "id": "b1.u06.l03.e08", "type": "error_correction", "text": "It can be use on any phone.", "wrong": "use", "correction": "used", "options": ["used", "using", "uses"], "hint": "Третья форма.", "explanation": "Правильно: It can be used on any phone.", "grammar": ["b1.passive-modal"], "troubles": ["tenses"] },
+        { "id": "b1.u06.l03.e09", "type": "error_correction", "text": "The video will posted tomorrow.", "wrong": "will posted", "correction": "will be posted", "options": ["will be posted", "will been posted", "will post"], "hint": "Пропущено слово.", "explanation": "Правильно: The video will be posted tomorrow.", "grammar": ["b1.passive-modal"], "troubles": ["tenses"] },
+        { "id": "b1.u06.l03.e10", "type": "tiles", "from": "ru", "text": "Сайт обновлён.", "answer": "The website has been updated.", "distractors": ["is", "update"], "hint": "Образец: Has been updated.", "explanation": "Правильно: The website has been updated.", "grammar": ["b1.passive-modal"] },
+        { "id": "b1.u06.l03.e11", "type": "tiles", "from": "ru", "text": "Результаты опубликуют в понедельник.", "answer": "The results will be published on Monday.", "distractors": ["publish", "are"], "difficulty": 2, "hint": "Образец: Will be published.", "explanation": "Правильно: The results will be published on Monday.", "grammar": ["b1.passive-modal"] },
+        { "id": "b1.u06.l03.e12", "type": "type_translation", "from": "ru", "text": "Пароль нужно сменить.", "answers": ["The password must be changed.", "Your password must be changed.", "The password should be changed.", "Your password should be changed."], "difficulty": 2, "hint": "Образец: Must be changed.", "explanation": "Правильно: Your password must be changed.", "grammar": ["b1.passive-modal"] },
+        { "id": "b1.u06.l03.e13", "type": "type_translation", "from": "ru", "text": "Видео посмотрели миллион раз.", "answers": ["The video has been watched a million times."], "difficulty": 3, "hint": "Образец: Has been watched.", "explanation": "Правильно: The video has been watched a million times.", "grammar": ["b1.passive-modal"] },
+        { "id": "b1.u06.l03.e14", "type": "listen_choice", "audio": "Your message has been sent.", "question": "Что вы слышите?", "options": ["Your message has been sent.", "Your message will be sent.", "Your message was not sent."], "answer": 0, "hint": "Уже отправлено.", "explanation": "Правильно: Your message has been sent.", "grammar": ["b1.passive-modal"] },
+        { "id": "b1.u06.l03.e15", "type": "speak_repeat", "text": "The app has been downloaded a million times.", "hint": "После has — третья форма be.", "explanation": "Has been [həz bɪn] — безударно и слитно." }
+      ]
+    },
+    {
+      "id": "b1.u06.l04",
+      "kind": "grammar",
+      "title": "Much, many, a few, a little",
+      "grammar": "b1.quantifiers",
+      "exercises": [
+        { "id": "b1.u06.l04.e01", "type": "fill_gap", "text": "How ___ followers do you have?", "translation": "Сколько у вас подписчиков?", "answers": [["many"]], "options": ["many", "much", "little"], "hint": "Считаемые.", "explanation": "Правильно: How many followers do you have?", "grammar": ["b1.quantifiers"] },
+        { "id": "b1.u06.l04.e02", "type": "fill_gap", "text": "I don't have ___ time.", "translation": "У меня немного времени.", "answers": [["much"]], "options": ["much", "many", "few"], "hint": "Несчитаемое.", "explanation": "Правильно: I don't have much time.", "grammar": ["b1.quantifiers"] },
+        { "id": "b1.u06.l04.e03", "type": "fill_gap", "text": "I spend too ___ time online.", "translation": "Я провожу слишком много времени в сети.", "answers": [["much"]], "options": ["much", "many", "few"], "hint": "Time — несчитаемое.", "explanation": "Правильно: I spend too much time online.", "grammar": ["b1.quantifiers"] },
+        { "id": "b1.u06.l04.e04", "type": "fill_gap", "text": "There are too ___ adverts in this app.", "translation": "В этом приложении слишком много рекламы.", "answers": [["many"]], "options": ["many", "much", "little"], "hint": "Adverts — считаемые.", "explanation": "Правильно: There are too many adverts in this app.", "grammar": ["b1.quantifiers"] },
+        { "id": "b1.u06.l04.e05", "type": "fill_gap", "text": "I have a ___ friends in this city.", "translation": "У меня есть несколько друзей в этом городе.", "answers": [["few"]], "options": ["few", "little", "much"], "hint": "Считаемые, немного.", "explanation": "Правильно: I have a few friends in this city.", "grammar": ["b1.quantifiers"] },
+        { "id": "b1.u06.l04.e06", "type": "fill_gap", "text": "I have ___ free time. I am always busy.", "translation": "У меня мало свободного времени. Я всегда занят.", "answers": [["little"]], "options": ["little", "few", "many"], "hint": "Несчитаемое, мало.", "explanation": "Правильно: I have little free time.", "grammar": ["b1.quantifiers"] },
+        { "id": "b1.u06.l04.e07", "type": "error_correction", "text": "I don't have many time.", "wrong": "many", "correction": "much", "options": ["much", "a few", "lots"], "hint": "Time — несчитаемое.", "explanation": "Правильно: I don't have much time.", "grammar": ["b1.quantifiers"], "troubles": ["articles"] },
+        { "id": "b1.u06.l04.e08", "type": "error_correction", "text": "There are too much adverts.", "wrong": "much", "correction": "many", "options": ["many", "little", "few"], "hint": "Adverts — считаемые.", "explanation": "Правильно: There are too many adverts.", "grammar": ["b1.quantifiers"], "troubles": ["articles"] },
+        { "id": "b1.u06.l04.e09", "type": "error_correction", "text": "I have few money.", "wrong": "few", "correction": "little", "options": ["little", "many", "a few"], "hint": "Money — несчитаемое.", "explanation": "Правильно: I have little money.", "grammar": ["b1.quantifiers"], "troubles": ["articles"] },
+        { "id": "b1.u06.l04.e10", "type": "tiles", "from": "ru", "text": "Сейчас мало кто читает газеты.", "answer": "Few people read newspapers now.", "distractors": ["little", "much"], "difficulty": 2, "hint": "Образец: Few people.", "explanation": "Правильно: Few people read newspapers now.", "grammar": ["b1.quantifiers"] },
+        { "id": "b1.u06.l04.e11", "type": "tiles", "from": "ru", "text": "Сколько времени ты проводишь в сети?", "answer": "How much time do you spend online?", "distractors": ["many", "does"], "difficulty": 2, "hint": "Образец: How much time.", "explanation": "Правильно: How much time do you spend online?", "grammar": ["b1.quantifiers"] },
+        { "id": "b1.u06.l04.e12", "type": "type_translation", "from": "ru", "text": "У меня мало подписчиков.", "answers": ["I have few followers.", "I don't have many followers."], "difficulty": 2, "hint": "Образец: Few followers.", "explanation": "I have few followers. Или: I don't have many followers.", "grammar": ["b1.quantifiers"] },
+        { "id": "b1.u06.l04.e13", "type": "type_translation", "from": "ru", "text": "Мне нужно немного информации.", "answers": ["I need a little information.", "I need some information."], "difficulty": 2, "hint": "Образец: A little information.", "explanation": "Правильно: I need a little information.", "grammar": ["b1.quantifiers"] },
+        { "id": "b1.u06.l04.e14", "type": "listen_choice", "audio": "I spend too much time online.", "question": "Что вы слышите?", "options": ["I spend too much time online.", "I spend a little time online.", "I don't spend much time online."], "answer": 0, "hint": "Слишком много.", "explanation": "Правильно: I spend too much time online.", "grammar": ["b1.quantifiers"] },
+        { "id": "b1.u06.l04.e15", "type": "speak_answer", "question": "How much time do you spend online every day?", "questionRu": "Сколько времени вы проводите в сети каждый день? Ответьте: I spend… Это много или мало для вас?", "keywords": [["\\bI spend\\b", "\\b(hours?|minutes)\\b"], ["\\b(too much|a lot|not much|a little|little|much|enough)\\b"]], "minKeywords": 2, "samples": ["I spend about three hours online. It is too much.", "I don't spend much time online. Only an hour."], "difficulty": 3, "hint": "Образец: I spend… It is too much.", "explanation": "Ответ: I spend three hours online. It is too much.", "grammar": ["b1.quantifiers"] }
+      ]
+    },
+    {
+      "id": "b1.u06.l05",
+      "kind": "grammar",
+      "title": "Turn it off, log in, find out",
+      "grammar": "b1.phrasal-tech",
+      "exercises": [
+        { "id": "b1.u06.l05.e01", "type": "match_pairs", "pairs": [{ "en": "look up", "ru": "посмотреть в словаре" }, { "en": "find out", "ru": "выяснить" }, { "en": "turn on", "ru": "включить" }, { "en": "turn off", "ru": "выключить" }, { "en": "sign up", "ru": "записаться" }], "hint": "Фразовые глаголы.", "explanation": "Look up — посмотреть в словаре, find out — выяснить, turn on — включить, turn off — выключить, sign up — записаться." },
+        { "id": "b1.u06.l05.e02", "type": "fill_gap", "text": "Turn ___ the light, please. It is dark.", "translation": "Включи свет, пожалуйста. Темно.", "answers": [["on"]], "options": ["on", "off", "up"], "hint": "Включить.", "explanation": "Правильно: Turn on the light.", "grammar": ["b1.phrasal-tech"] },
+        { "id": "b1.u06.l05.e03", "type": "fill_gap", "text": "I logged ___ to my account.", "translation": "Я вошёл в свой аккаунт.", "answers": [["in"]], "options": ["in", "on", "up"], "hint": "Войти.", "explanation": "Правильно: I logged in to my account.", "grammar": ["b1.phrasal-tech"] },
+        { "id": "b1.u06.l05.e04", "type": "fill_gap", "text": "Sign ___ for the course.", "translation": "Запишитесь на курс.", "answers": [["up"]], "options": ["up", "in", "on"], "hint": "Записаться.", "explanation": "Правильно: Sign up for the course.", "grammar": ["b1.phrasal-tech"] },
+        { "id": "b1.u06.l05.e05", "type": "fill_gap", "text": "I don't know this word. I will look it ___.", "translation": "Я не знаю это слово. Посмотрю его в словаре.", "answers": [["up"]], "options": ["up", "out", "on"], "hint": "Образец: Look up.", "explanation": "Правильно: I will look it up.", "grammar": ["b1.phrasal-tech"] },
+        { "id": "b1.u06.l05.e06", "type": "fill_gap", "text": "I found ___ the truth.", "translation": "Я узнал правду.", "answers": [["out"]], "options": ["out", "up", "off"], "hint": "Образец: Find out.", "explanation": "Правильно: I found out the truth.", "grammar": ["b1.phrasal-tech"] },
+        { "id": "b1.u06.l05.e07", "type": "error_correction", "text": "Turn off it.", "wrong": "off it", "correction": "it off", "options": ["it off", "off them", "off"], "hint": "Местоимение посередине.", "explanation": "Правильно: Turn it off.", "grammar": ["b1.phrasal-tech"], "troubles": ["word-order"] },
+        { "id": "b1.u06.l05.e08", "type": "error_correction", "text": "I looked up it.", "wrong": "up it", "correction": "it up", "options": ["it up", "up", "it out"], "hint": "Местоимение посередине.", "explanation": "Правильно: I looked it up.", "grammar": ["b1.phrasal-tech"], "troubles": ["word-order"] },
+        { "id": "b1.u06.l05.e09", "type": "error_correction", "text": "Sign in for the course.", "wrong": "in", "correction": "up", "options": ["up", "on", "out"], "hint": "Записаться — другое слово.", "explanation": "Правильно: Sign up for the course.", "grammar": ["b1.phrasal-tech"] },
+        { "id": "b1.u06.l05.e10", "type": "tiles", "from": "ru", "text": "Выключи его, пожалуйста.", "answer": "Turn it off, please.", "distractors": ["on", "up"], "hint": "It посередине.", "explanation": "Правильно: Turn it off, please.", "grammar": ["b1.phrasal-tech"] },
+        { "id": "b1.u06.l05.e11", "type": "tiles", "from": "ru", "text": "Я хочу выяснить, правда ли это.", "answer": "I want to find out if it is true.", "distractors": ["up", "that"], "difficulty": 3, "hint": "Образец: Find out if.", "explanation": "Правильно: I want to find out if it is true.", "grammar": ["b1.phrasal-tech"] },
+        { "id": "b1.u06.l05.e12", "type": "type_translation", "from": "ru", "text": "Выключите телефоны.", "answers": ["Turn off your phones.", "Turn your phones off.", "Turn off the phones."], "hint": "Образец: Turn off.", "explanation": "Правильно: Turn off your phones.", "grammar": ["b1.phrasal-tech"] },
+        { "id": "b1.u06.l05.e13", "type": "type_translation", "from": "ru", "text": "Посмотри это слово в словаре.", "answers": ["Look up this word in a dictionary.", "Look this word up in a dictionary.", "Look up this word in the dictionary.", "Look this word up in the dictionary."], "difficulty": 2, "hint": "Образец: Look up.", "explanation": "Правильно: Look up this word in a dictionary.", "grammar": ["b1.phrasal-tech"] },
+        { "id": "b1.u06.l05.e14", "type": "listen_choice", "audio": "I looked it up in the dictionary.", "question": "Что вы слышите?", "options": ["I looked it up in the dictionary.", "I looked at the dictionary.", "I found it out in the dictionary."], "answer": 0, "hint": "Образец: Look it up.", "explanation": "Правильно: I looked it up in the dictionary.", "grammar": ["b1.phrasal-tech"] },
+        { "id": "b1.u06.l05.e15", "type": "speak_repeat", "text": "Turn it off and find out if it is true.", "hint": "Две части.", "explanation": "Turn it off [tɝːn ɪt ɔːf] — слитно." }
+      ]
+    },
+    {
+      "id": "b1.u06.l06",
+      "kind": "listening",
+      "title": "Слишком много времени в сети",
+      "textId": "b1.u06.phone",
+      "exercises": [
+        {
+          "id": "b1.u06.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "b1.u06.phone",
+          "hint": "Слушайте, что делает Том в сети и что ему советует Анна.",
+          "explanation": "Том проводит в сети 4–5 часов: читает новости, смотрит видео, выкладывает фото. Он проверяет странные новости, но год не менял пароль и решает выключать телефон вечером.",
+          "questions": [
+            { "kind": "mcq", "question": "Сколько времени Том проводит в сети?", "options": ["four or five hours a day", "one hour a day", "ten hours a day"], "answer": 0, "explanation": "Том говорит: Maybe four or five hours a day." },
+            { "kind": "mcq", "question": "Сколько у него подписчиков?", "options": ["a few hundred", "a million", "a few"], "answer": 0, "explanation": "Том говорит: I have a few hundred followers." },
+            { "kind": "mcq", "question": "Когда Том последний раз менял пароль?", "options": ["a year ago", "last week", "never"], "answer": 0, "explanation": "Том говорит: Not for a year." },
+            { "kind": "tfn", "statement": "Tom checks strange news.", "answer": "true", "explanation": "Том говорит: I try to find out if it is true." },
+            { "kind": "tfn", "statement": "Anna thinks all news is reliable.", "answer": "false", "explanation": "Анна говорит: A lot of news is fake." },
+            { "kind": "tfn", "statement": "Tom deleted his apps.", "answer": "not_given", "explanation": "Об этом не сказано." }
+          ]
+        },
+        { "id": "b1.u06.l06.e02", "type": "listen_choice", "audio": "Has your password been changed recently?", "question": "Что вы слышите?", "options": ["Has your password been changed recently?", "Have you changed your phone recently?", "Was your password stolen recently?"], "answer": 0, "hint": "Пассив в Present Perfect.", "explanation": "Правильно: Has your password been changed recently?", "grammar": ["b1.passive-modal"] },
+        { "id": "b1.u06.l06.e03", "type": "listen_dictation", "text": "How much time do you spend online?", "hint": "Семь слов.", "explanation": "How much time do you spend online? — «Сколько времени ты проводишь в сети?»" },
+        { "id": "b1.u06.l06.e04", "type": "listen_dictation", "text": "A lot of news is fake.", "hint": "Шесть слов.", "explanation": "A lot of news is fake — «много новостей — фейки»." },
+        { "id": "b1.u06.l06.e05", "type": "fill_gap", "text": "I have a ___ hundred followers now.", "translation": "У меня уже несколько сотен подписчиков.", "answers": [["few"]], "options": ["few", "little", "much"], "hint": "Несколько.", "explanation": "Правильно: I have a few hundred followers now.", "grammar": ["b1.quantifiers"] },
+        { "id": "b1.u06.l06.e06", "type": "fill_gap", "text": "Maybe I should turn ___ my phone in the evening.", "translation": "Может быть, мне стоит выключать телефон по вечерам.", "answers": [["off"]], "options": ["off", "on", "out"], "hint": "Выключать.", "explanation": "Правильно: I should turn off my phone in the evening.", "grammar": ["b1.phrasal-tech"] },
+        { "id": "b1.u06.l06.e07", "type": "tiles", "from": "ru", "text": "Его нужно сменить.", "answer": "It should be changed.", "distractors": ["change", "been"], "hint": "Образец: Should be changed.", "explanation": "Правильно: It should be changed.", "grammar": ["b1.passive-modal"] },
+        { "id": "b1.u06.l06.e08", "type": "type_translation", "from": "ru", "text": "Эти новостные сайты надёжные?", "answers": ["Are these news websites reliable?", "Are the news websites reliable?"], "difficulty": 2, "hint": "Образец: Are … reliable.", "explanation": "Правильно: Are these news websites reliable?" },
+        { "id": "b1.u06.l06.e09", "type": "speak_answer", "question": "How do you know if news is fake?", "questionRu": "Как вы понимаете, что новость фейковая? Ответьте: I try to find out… I check… I avoid…", "keywords": [["\\b(find out|check|look up|search|avoid|read)\\b"], ["\\b(news|website|article|source|reliable|fake|true)\\b"]], "minKeywords": 2, "samples": ["I try to find out if the website is reliable. I check the news on other websites."], "difficulty": 3, "hint": "Образец: I try to find out… I check…", "explanation": "Ответ: I try to find out if the website is reliable.", "grammar": ["b1.phrasal-tech"] },
+        { "id": "b1.u06.l06.e10", "type": "speak_repeat", "text": "If I read something strange, I try to find out if it is true.", "hint": "Две части.", "explanation": "Find out [faɪnd aʊt] — слитно." }
+      ]
+    },
+    {
+      "id": "b1.u06.l07",
+      "kind": "writing",
+      "title": "Неделя без смартфона",
+      "textId": "b1.u06.detox",
+      "exercises": [
+        {
+          "id": "b1.u06.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "b1.u06.detox",
+          "hint": "Сравните, как автор чувствовал себя в начале и в конце.",
+          "explanation": "Автор неделю жил без соцсетей и видео. Сначала было трудно, потом появилось время, он прочитал две книги и лучше спал. Теперь проверяет новости дважды в день.",
+          "questions": [
+            { "kind": "mcq", "question": "Сколько времени автор проводил в смартфоне?", "options": ["more than five hours a day", "one hour a day", "ten minutes a day"], "answer": 0, "explanation": "В тексте: more than five hours a day." },
+            { "kind": "mcq", "question": "Что он сделал в первый день?", "options": ["deleted the apps", "bought a new phone", "posted a video"], "answer": 0, "explanation": "В тексте: I deleted the apps." },
+            { "kind": "mcq", "question": "Сколько раз в день он теперь проверяет новости?", "options": ["twice", "once", "five times"], "answer": 0, "explanation": "В тексте: I check the news only twice a day." },
+            { "kind": "tfn", "statement": "The first day was easy.", "answer": "false", "explanation": "В тексте: It was difficult." },
+            { "kind": "tfn", "statement": "He slept better during that week.", "answer": "true", "explanation": "В тексте: I slept better." },
+            { "kind": "tfn", "statement": "He has stopped using technology completely.", "answer": "false", "explanation": "В тексте: I can't live without it completely." }
+          ]
+        },
+        { "id": "b1.u06.l07.e02", "type": "translate_choice", "from": "en", "text": "My phone is turned off after nine.", "options": ["После девяти мой телефон выключен.", "После девяти я выключаю свет.", "После девяти телефон звонит."], "answer": 0, "hint": "Turned off — пассив.", "explanation": "Правильно: My phone is turned off after nine." },
+        { "id": "b1.u06.l07.e03", "type": "fill_gap", "text": "I had ___ more free time.", "translation": "У меня было гораздо больше свободного времени.", "answers": [["much"]], "options": ["much", "many", "few"], "hint": "Гораздо больше — ? more, время несчитаемое.", "explanation": "Правильно: I had much more free time.", "grammar": ["b1.quantifiers"] },
+        { "id": "b1.u06.l07.e04", "type": "fill_gap", "text": "I ___ the apps and turned off the notifications.", "translation": "Я удалил приложения и отключил уведомления.", "answers": [["deleted"]], "options": ["deleted", "downloaded", "posted"], "hint": "Удалил.", "explanation": "Правильно: I deleted the apps." },
+        { "id": "b1.u06.l07.e05", "type": "type_translation", "from": "ru", "text": "В прошлом месяце я выяснил, что провожу в смартфоне слишком много времени.", "answers": ["Last month I found out that I spent too much time on my smartphone.", "Last month I found out that I was spending too much time on my smartphone.", "Last month I found out I was spending too much time on my smartphone."], "difficulty": 3, "hint": "Образец: Found out that…", "explanation": "Правильно: Last month I found out that I was spending too much time on my smartphone.", "grammar": ["b1.phrasal-tech"] },
+        { "id": "b1.u06.l07.e06", "type": "speak_describe", "picture": { "emoji": "📱" }, "situation": "Расскажите, как вы пользуетесь телефоном: сколько времени, для чего, что вам нравится и что нет.", "keywords": [["\\b(much|many|a lot of|a few|little|too)\\b"], ["\\b(phone|smartphone|app|video|news|online|internet|followers)\\b"]], "minKeywords": 2, "samples": ["I spend a lot of time on my phone. I use a few apps for work, and I watch too many videos in the evening."], "difficulty": 3, "hint": "Образец: I spend a lot of time… I use a few apps…", "explanation": "Используйте much, many, a few, a lot of.", "grammar": ["b1.quantifiers"] },
+        { "id": "b1.u06.l07.e07", "type": "speak_answer", "question": "Could you live without your smartphone for a week?", "questionRu": "Смогли бы вы прожить неделю без смартфона? Ответьте и объясните почему.", "keywords": [["\\b(yes|no|I could|I couldn't|I would|I think)\\b"], ["\\bbecause\\b"]], "minKeywords": 2, "samples": ["No, I couldn't, because I need it for work.", "Yes, I could, because I don't use it much."], "difficulty": 3, "hint": "Образец: Yes, I could, because… / No, I couldn't, because…", "explanation": "Ответ: No, I couldn't, because I need it for work.", "grammar": ["b1.second-conditional"] },
+        {
+          "id": "b1.u06.l07.e08",
+          "type": "write",
+          "task": "Напишите мнение: делают ли смартфоны и интернет нашу жизнь лучше? Приведите аргументы за и против, расскажите о своём опыте и что вы советуете. Используйте пассив (can be used, has been changed), слова much / many / a few и хотя бы один фразовый глагол.",
+          "minWords": 90,
+          "maxWords": 200,
+          "criteria": [
+            { "id": "passive", "label": "Есть пассив: can be, has been, will be + V3", "patterns": ["\\b(can|should|must|will|has|have) (be|been) [a-z]+(ed|en|wn|nt|t)\\b", "\\b(is|are|was|were) [a-z]+(ed|en)\\b"] },
+            { "id": "quantity", "label": "Есть much, many, a few, a little, too much", "patterns": ["\\b(much|many|a few|a little|few|little|too much|too many|a lot of|enough)\\b"] },
+            { "id": "phrasal", "label": "Есть фразовый глагол", "patterns": ["\\b(turn|turned|turns) (on|off|it on|it off)\\b", "\\b(log|logged|sign|signed|look|looked|find|found) (in|up|out|it up|it out)\\b"] },
+            { "id": "opinion", "label": "Есть мнение и аргументы", "patterns": ["\\b(I think|I believe|in my opinion|on the other hand|but|however|because)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\b(has|have) (downloaded|changed|updated|posted|sent|deleted) (a|the|my|your|many|a million)\\b", "message": "Если речь о результате без исполнителя, нужен пассив: has been downloaded." },
+            { "pattern": "\\bmany (time|information|money|news|data|software)\\b", "message": "С несчитаемыми словами — much: much time, much information." },
+            { "pattern": "\\bmuch (apps|people|videos|followers|adverts|devices|hours)\\b", "message": "Со считаемыми словами — many: many apps, many people." },
+            { "pattern": "\\b(turn|turned|look|looked|find|found) (off|on|up|out) (it|them)\\b", "message": "Местоимение ставят в середину: turn it off, look it up." },
+            { "pattern": "\\binformations\\b", "message": "Information — несчитаемое: some information." }
+          ],
+          "samples": [
+            "I think smartphones make our lives easier, but they can also be dangerous. On the one hand, a lot of information can be found online in a few seconds, and we can talk to friends all over the world. On the other hand, many people spend too much time on their phones, and their data can be stolen. A lot of news is fake. I have found out that I was spending four hours a day online, so now I turn off my phone after nine. In my opinion, technology is good if we are careful.",
+            "In my opinion, the internet has changed our lives for the better. Most things can be done online now: we can buy tickets, study and work from home. My grandmother has learned to use video calls, and now she talks to us every week. But there are some problems too. There are too many adverts, and few websites are reliable. A lot of time can be lost online. My advice is easy: check the news on two or three websites, change your passwords often, look up information on reliable websites and turn off your phone when you sleep."
+          ],
+          "difficulty": 3,
+          "hint": "План: моё мнение → аргументы за → аргументы против → мой опыт → совет.",
+          "explanation": "Для результатов без исполнителя — пассив. Для количества — much (несчитаемые) и many (считаемые). Местоимение во фразовом глаголе — посередине: turn it off.",
+          "grammar": ["b1.passive-modal", "b1.quantifiers", "b1.phrasal-tech"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "b1.u06.test.e01", "type": "match_pairs", "pairs": [{ "en": "password", "ru": "пароль" }, { "en": "download", "ru": "скачивать" }, { "en": "follower", "ru": "подписчик" }, { "en": "reliable", "ru": "надёжный" }, { "en": "find out", "ru": "выяснить" }], "hint": "Слова юнита.", "explanation": "Password — пароль, download — скачивать, follower — подписчик, reliable — надёжный, find out — выяснить." },
+      { "id": "b1.u06.test.e02", "type": "translate_choice", "from": "ru", "text": "удалять", "options": ["delete", "update", "upload"], "answer": 0, "hint": "Убрать навсегда.", "explanation": "Delete — «удалять»." },
+      { "id": "b1.u06.test.e03", "type": "fill_gap", "text": "Your message has ___ sent.", "translation": "Ваше сообщение отправлено.", "answers": [["been"]], "options": ["been", "be", "being"], "hint": "После has — третья форма be.", "explanation": "Правильно: Your message has been sent.", "grammar": ["b1.passive-modal"] },
+      { "id": "b1.u06.test.e04", "type": "fill_gap", "text": "Your password must ___ changed.", "translation": "Пароль нужно сменить.", "answers": [["be"]], "options": ["be", "been", "is"], "hint": "Образец: Must be.", "explanation": "Правильно: Your password must be changed.", "grammar": ["b1.passive-modal"] },
+      { "id": "b1.u06.test.e05", "type": "fill_gap", "text": "I don't have ___ time.", "translation": "У меня немного времени.", "answers": [["much"]], "options": ["much", "many", "few"], "hint": "Несчитаемое.", "explanation": "Правильно: I don't have much time.", "grammar": ["b1.quantifiers"] },
+      { "id": "b1.u06.test.e06", "type": "fill_gap", "text": "How ___ apps do you use?", "translation": "Сколькими приложениями вы пользуетесь?", "answers": [["many"]], "options": ["many", "much", "little"], "hint": "Считаемые.", "explanation": "Правильно: How many apps do you use?", "grammar": ["b1.quantifiers"] },
+      { "id": "b1.u06.test.e07", "type": "fill_gap", "text": "Turn it ___, please.", "translation": "Выключи его, пожалуйста.", "answers": [["off"]], "options": ["off", "up", "out"], "hint": "Выключить.", "explanation": "Правильно: Turn it off, please.", "grammar": ["b1.phrasal-tech"] },
+      { "id": "b1.u06.test.e08", "type": "fill_gap", "text": "I logged ___ to my account.", "translation": "Я вошёл в свой аккаунт.", "answers": [["in"]], "options": ["in", "on", "up"], "hint": "Войти.", "explanation": "Правильно: I logged in to my account.", "grammar": ["b1.phrasal-tech"] },
+      { "id": "b1.u06.test.e09", "type": "error_correction", "text": "The app has downloaded a million times.", "wrong": "has downloaded", "correction": "has been downloaded", "options": ["has been downloaded", "has be downloaded", "was been downloaded"], "hint": "Пассив.", "explanation": "Правильно: The app has been downloaded a million times.", "grammar": ["b1.passive-modal"] },
+      { "id": "b1.u06.test.e10", "type": "error_correction", "text": "There are too much adverts.", "wrong": "much", "correction": "many", "options": ["many", "little", "few"], "hint": "Считаемые.", "explanation": "Правильно: There are too many adverts.", "grammar": ["b1.quantifiers"] },
+      { "id": "b1.u06.test.e11", "type": "error_correction", "text": "I looked up it.", "wrong": "up it", "correction": "it up", "options": ["it up", "up", "it out"], "hint": "Местоимение посередине.", "explanation": "Правильно: I looked it up.", "grammar": ["b1.phrasal-tech"] },
+      { "id": "b1.u06.test.e12", "type": "listen_choice", "audio": "The video will be posted tomorrow.", "question": "Что вы слышите?", "options": ["The video will be posted tomorrow.", "The video was posted yesterday.", "I will post the video tomorrow."], "answer": 0, "hint": "Будущее, пассив.", "explanation": "Правильно: The video will be posted tomorrow.", "grammar": ["b1.passive-modal"] },
+      { "id": "b1.u06.test.e13", "type": "listen_dictation", "text": "I spend too much time online.", "hint": "Шесть слов.", "explanation": "I spend too much time online — «я провожу слишком много времени в сети»." },
+      { "id": "b1.u06.test.e14", "type": "tiles", "from": "ru", "text": "Сайт обновлён.", "answer": "The website has been updated.", "distractors": ["is", "update"], "difficulty": 2, "hint": "Образец: Has been updated.", "explanation": "Правильно: The website has been updated.", "grammar": ["b1.passive-modal"] },
+      { "id": "b1.u06.test.e15", "type": "type_translation", "from": "ru", "text": "Сейчас мало кто читает газеты.", "answers": ["Few people read newspapers now.", "Now few people read newspapers."], "difficulty": 3, "hint": "Образец: Few people.", "explanation": "Правильно: Few people read newspapers now.", "grammar": ["b1.quantifiers"] },
+      { "id": "b1.u06.test.e16", "type": "speak_repeat", "text": "Your password should be changed, so log in and change it.", "hint": "Две части.", "explanation": "Правильно: Should be changed [ʃʊd bi tʃeɪndʒd]." }
+    ]
+  }
+}
