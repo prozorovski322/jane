@@ -326,9 +326,8 @@
           "order": 4,
           "title": { "en": "Argument", "ru": "Аргументация" },
           "goals": ["Могу написать эссе и понять сложный текст.", "Могу использовать фразовые глаголы и устойчивые сочетания."],
-          "units": [],
+          "units": ["b2.u09"],
           "planned": [
-            { "id": "b2.u09", "title": { "en": "Essays and complex texts", "ru": "Эссе и сложные тексты" } },
             { "id": "b2.u10", "title": { "en": "Phrasal verbs and collocations", "ru": "Фразовые глаголы и коллокации" } }
           ]
         }
