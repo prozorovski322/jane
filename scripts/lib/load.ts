@@ -191,10 +191,14 @@ export function loadContent(): LoadedContent {
     files.set(note.id, rel(file));
   }
 
-  // Units and level tests.
+  // Units and level tests. Track units live in content/tracks/<track>/ and are ordinary units.
   const byId = new Map<string, UnitT>();
   const levelTests: LevelTestT[] = [];
-  for (const file of walk(join(CONTENT_DIR, 'levels'), '.json')) {
+  const unitFiles = [
+    ...walk(join(CONTENT_DIR, 'levels'), '.json'),
+    ...walk(join(CONTENT_DIR, 'tracks'), '.json'),
+  ];
+  for (const file of unitFiles) {
     const data = readJson(file, issues);
     if (file.endsWith('level-test.json')) {
       const t = parseFile(file, LevelTest, data, issues);
@@ -218,17 +222,18 @@ export function loadContent(): LoadedContent {
     files.set(unit.id, rel(file));
   }
 
+  // Levels first, then tracks: a track builds on the vocabulary of the level it requires.
   const units: UnitT[] = [];
-  for (const level of course?.levels ?? []) {
-    for (const id of levelUnitIds(level)) {
-      const unit = byId.get(id);
-      if (!unit) {
-        // Units listed in course.json but not written yet are reported by the checker.
-        continue;
-      }
-      units.push(unit);
-      byId.delete(id);
-    }
+  const ordered = [
+    ...(course?.levels ?? []).flatMap((l) => levelUnitIds(l)),
+    ...(course?.tracks ?? []).flatMap((t) => t.units),
+  ];
+  for (const id of ordered) {
+    const unit = byId.get(id);
+    // Units listed in course.json but not written yet are reported by the checker.
+    if (!unit) continue;
+    units.push(unit);
+    byId.delete(id);
   }
   for (const unit of byId.values()) {
     issues.push({

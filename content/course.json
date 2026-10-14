@@ -384,5 +384,52 @@
       ]
     }
   ],
-  "tracks": []
+  "tracks": [
+    {
+      "id": "travel",
+      "title": { "en": "Travel", "ru": "Путешествия" },
+      "description": "Аэропорт, гостиница, аренда машины, врач за границей, местные обычаи: английский для поездок, особенно когда что-то идёт не по плану.",
+      "requires": "B1",
+      "units": ["travel.u01"],
+      "planned": [
+        { "id": "travel.u02", "title": { "en": "Hotel problems", "ru": "Проблемы в гостинице" } },
+        { "id": "travel.u03", "title": { "en": "On the road", "ru": "Аренда машины и дороги" } },
+        { "id": "travel.u04", "title": { "en": "Health abroad", "ru": "Здоровье в поездке" } },
+        { "id": "travel.u05", "title": { "en": "Local customs", "ru": "Местные обычаи" } },
+        { "id": "travel.u06", "title": { "en": "Planning the perfect trip", "ru": "Как спланировать поездку" } }
+      ]
+    },
+    {
+      "id": "business",
+      "title": { "en": "Business English", "ru": "Деловой английский" },
+      "description": "Письма, совещания, звонки, знакомства, отчёты и работа с клиентами: английский для офиса и деловых поездок.",
+      "requires": "B1",
+      "units": [],
+      "planned": [
+        { "id": "business.u01", "title": { "en": "Emails that get answers", "ru": "Деловые письма" } },
+        { "id": "business.u02", "title": { "en": "Meetings", "ru": "Совещания" } },
+        { "id": "business.u03", "title": { "en": "On the phone", "ru": "Деловой телефон" } },
+        { "id": "business.u04", "title": { "en": "Small talk and networking", "ru": "Светская беседа и знакомства" } },
+        { "id": "business.u05", "title": { "en": "Reports and figures", "ru": "Отчёты и цифры" } },
+        { "id": "business.u06", "title": { "en": "Customers and complaints", "ru": "Клиенты и жалобы" } }
+      ]
+    },
+    {
+      "id": "ielts",
+      "title": { "en": "Exam preparation", "ru": "Подготовка к IELTS и TOEFL" },
+      "description": "Как устроены международные экзамены, стратегии для каждой части и тренировка в их формате. Это подготовка, а не официальный материал экзаменов и не гарантия балла.",
+      "requires": "B2",
+      "units": [],
+      "planned": [
+        { "id": "ielts.u01", "title": { "en": "How the exams work", "ru": "Как устроены экзамены" } },
+        { "id": "ielts.u02", "title": { "en": "Listening strategies", "ru": "Стратегии аудирования" } },
+        { "id": "ielts.u03", "title": { "en": "Reading strategies", "ru": "Стратегии чтения" } },
+        { "id": "ielts.u04", "title": { "en": "Writing: describing data", "ru": "Письмо: описание данных" } },
+        { "id": "ielts.u05", "title": { "en": "Writing: the essay", "ru": "Письмо: эссе" } },
+        { "id": "ielts.u06", "title": { "en": "Speaking: interview and long turn", "ru": "Говорение: интервью и монолог" } },
+        { "id": "ielts.u07", "title": { "en": "Speaking: discussion", "ru": "Говорение: дискуссия" } },
+        { "id": "ielts.u08", "title": { "en": "Practice test", "ru": "Пробный экзамен" } }
+      ]
+    }
+  ]
 }

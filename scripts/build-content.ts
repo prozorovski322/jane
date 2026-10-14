@@ -73,8 +73,14 @@ function main() {
   const outlines = new Map<string, UnitOutline>();
   const { irregular } = content.extras;
 
+  const inLexicon = new Set<string>();
   for (const unit of content.units) {
-    for (const w of unit.words) lexicon.push({ ...w, unit: unit.id, level: unit.level });
+    // A track may reuse a word of a higher level: the lexicon keeps the level's entry only.
+    for (const w of unit.words) {
+      if (inLexicon.has(w.id)) continue;
+      inLexicon.add(w.id);
+      lexicon.push({ ...w, unit: unit.id, level: unit.level });
+    }
 
     const { words, ...rest } = unit;
     const bundle: UnitBundle = {
@@ -133,7 +139,14 @@ function main() {
         units: modules.flatMap((m) => m.units),
       };
     }),
-    tracks: content.course.tracks,
+    tracks: content.course.tracks.map((t) => ({
+      id: t.id,
+      title: t.title,
+      description: t.description,
+      requires: t.requires,
+      units: t.units.map((id) => outlines.get(id)!),
+      planned: t.planned,
+    })),
   };
 
   writeJson(join(OUT, 'course.json'), outline);

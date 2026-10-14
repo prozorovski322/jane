@@ -24,7 +24,15 @@ import {
 } from '../progress/eta';
 import { useProgress } from '../progress/store';
 import { KIND_ICON, KIND_LABEL } from './kinds';
-import { pathState, type ExamNode, type PathLevel, type PathNode, type PathUnit } from './state';
+import {
+  isTrackOpen,
+  pathState,
+  type ExamNode,
+  type PathLevel,
+  type PathNode,
+  type PathTrack,
+  type PathUnit,
+} from './state';
 
 /** Horizontal offsets of nodes: a gentle winding road. */
 const WIND = [0, 1, 2, 1, 0, -1, -2, -1];
@@ -125,18 +133,24 @@ function UnitBlock({ unit }: { unit: PathUnit }) {
   );
 }
 
+const EXAM_TEXT = {
+  level: {
+    open: 'Около 50 заданий, нужно 75%. Можно сдать, не проходя уроки.',
+    soon: 'Появится, когда будут готовы все юниты уровня.',
+  },
+  module: {
+    open: 'Около 20 заданий по темам модуля, нужно 70%.',
+    soon: 'Появится, когда будут готовы все юниты модуля.',
+  },
+  track: {
+    open: 'Около 30 заданий по темам трека, нужно 75%.',
+    soon: 'Появится, когда будут готовы все юниты трека.',
+  },
+} as const;
+
 function ExamRow({ exam, title }: { exam: ExamNode; title: string }) {
-  const subtitle = {
-    done: 'Сдан. Можно пересдать.',
-    open:
-      exam.kind === 'level'
-        ? 'Около 50 заданий, нужно 75%. Можно сдать, не проходя уроки.'
-        : 'Около 20 заданий по темам модуля, нужно 70%.',
-    soon:
-      exam.kind === 'level'
-        ? 'Появится, когда будут готовы все юниты уровня.'
-        : 'Появится, когда будут готовы все юниты модуля.',
-  }[exam.status];
+  const subtitle =
+    exam.status === 'done' ? 'Сдан. Можно пересдать.' : EXAM_TEXT[exam.kind][exam.status];
   return (
     <ListRow
       icon={exam.kind === 'level' ? 'trophy' : 'star'}
@@ -233,6 +247,54 @@ function LevelBlock({ level, certificate }: { level: PathLevel; certificate?: Ce
   );
 }
 
+function TrackBlock({ track, open }: { track: PathTrack; open: boolean }) {
+  const { colors } = useTheme();
+  const level = LEVEL_LABEL[track.requires];
+  return (
+    <View style={styles.level}>
+      <View style={styles.unitHead}>
+        <AppText variant="heading" role="heading" style={styles.flex}>
+          {track.title.ru}
+        </AppText>
+        <AppText variant="small" color="textMuted">
+          {open ? `${track.done}/${track.total}` : `с уровня ${level}`}
+        </AppText>
+      </View>
+      <AppText variant="small" color="textMuted">
+        {track.description}
+      </AppText>
+      {open ? (
+        <>
+          {track.units.map((u) => (
+            <UnitBlock key={u.id} unit={u} />
+          ))}
+          {track.planned.map((p) => (
+            <SoonUnit key={p.id} order={Number(p.id.split('.u')[1])} title={p.title} />
+          ))}
+          <ExamRow exam={track.exam} title={`Итоговый тест: ${track.title.ru}`} />
+        </>
+      ) : (
+        <Card tone="surface">
+          <View style={styles.unitHead}>
+            <Icon name="lock" size={20} color={colors.textMuted} />
+            <AppText variant="small" style={styles.flex}>
+              Откроется с сертификатом {level}: сдайте экзамен уровня {level} или пройдите входной
+              тест.
+            </AppText>
+          </View>
+          <Button
+            label={`Экзамен ${level}`}
+            icon="trophy"
+            variant="ghost"
+            compact
+            onPress={() => router.push(`/lesson/${track.requires.toLowerCase()}.exam`)}
+          />
+        </Card>
+      )}
+    </View>
+  );
+}
+
 export function PathScreen() {
   const completed = useProgress((s) => s.snapshot?.completedLessons);
   const state = useMemo(() => pathState(getCourse(), completed ?? new Set()), [completed]);
@@ -278,6 +340,15 @@ export function PathScreen() {
 
       {state.levels.map((l) => (
         <LevelBlock key={l.level} level={l} certificate={byLevel.get(l.level)} />
+      ))}
+
+      {state.tracks.length > 0 && (
+        <AppText variant="heading" role="heading">
+          Треки
+        </AppText>
+      )}
+      {state.tracks.map((t) => (
+        <TrackBlock key={t.id} track={t} open={isTrackOpen(t.requires, [...byLevel.keys()])} />
       ))}
     </Screen>
   );

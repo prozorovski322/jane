@@ -72,6 +72,12 @@ class Vocabulary {
 
   constructor(private readonly content: LoadedContent) {}
 
+  /** Replaces the known vocabulary, e.g. with the vocabulary of a level when a track starts. */
+  reset(tokens: ReadonlySet<string>) {
+    this.allowed.clear();
+    for (const t of tokens) this.allowed.add(t);
+  }
+
   addWord(w: Word) {
     for (const t of headwordTokens(w.en)) this.allowed.add(t);
     for (const form of Object.values(w.forms ?? {})) {
@@ -318,6 +324,11 @@ export function checkContent(content: LoadedContent): Issue[] {
   const vocab = new Vocabulary(content);
   const wordsById = new Map<string, Word>();
   const wordKeys = new Map<string, string>();
+  /** Who introduced each word: a level ("B2") or a track ("track:travel"). */
+  const wordOwner = new Map<string, string>();
+  /** Known vocabulary at the end of each level, the starting point of the tracks that require it. */
+  const levelSnapshots = new Map<Level, Set<string>>();
+  let currentTrack: string | null = null;
   const allIds = new Map<string, string>();
   const grammarIds = new Set(content.grammar.keys());
   const grammarSeen = new Set<string>();
@@ -375,6 +386,39 @@ export function checkContent(content: LoadedContent): Issue[] {
         }
       }
     }
+    // Tracks: optional branches with their own unit ids ("travel.u01").
+    const levelCodes = new Set(LEVELS.map((l) => l.toLowerCase()));
+    for (const d of dupes(content.course.tracks.map((t) => t.id)))
+      courseIssue('tracks', `track ${d} listed twice`);
+    for (const [ti, track] of content.course.tracks.entries()) {
+      const at = `tracks[${ti}]`;
+      if (levelCodes.has(track.id) || !/^[a-z]+$/.test(track.id))
+        courseIssue(`${at}.id`, `track id must be lowercase letters and not a level code`);
+      if (track.units.length + track.planned.length === 0)
+        courseIssue(`${at}.units`, `track ${track.id} has no units`);
+      for (const id of track.units) {
+        everyUnit.push(id);
+        if (!unitIdOk(track.id, id))
+          courseIssue(`${at}.units`, `"${id}" is not a ${track.id} unit id`);
+        if (!content.files.has(id))
+          courseIssue(`${at}.units`, `unit "${id}" is listed but has no file`);
+      }
+      for (const p of track.planned) {
+        everyUnit.push(p.id);
+        if (!unitIdOk(track.id, p.id))
+          courseIssue(`${at}.planned`, `"${p.id}" is not a ${track.id} unit id`);
+        if (content.files.has(p.id))
+          courseIssue(
+            `${at}.planned`,
+            `unit "${p.id}" is written: move it from "planned" to "units"`,
+          );
+      }
+      const nums = [...track.units, ...track.planned.map((p) => p.id)].map((id) =>
+        Number(id.split('.u')[1]),
+      );
+      if (nums.some((n, i) => n !== i + 1))
+        courseIssue(at, `${track.id} units must be numbered u01, u02, … in order`);
+    }
     for (const d of dupes(everyUnit)) courseIssue('levels', `unit ${d} appears twice`);
 
     // Unit numbers within a level run 1…n in course order, written and planned alike.
@@ -395,21 +439,62 @@ export function checkContent(content: LoadedContent): Issue[] {
         issues.push({ severity, file, path: path ? `${prefix}.${path}` : prefix, message });
     const unitReport = at('unit');
 
-    // Identity.
-    const expectedId = `${unit.level.toLowerCase()}.u${String(unit.order).padStart(2, '0')}`;
+    // Identity. Track units are numbered within their track and need its level to be written.
+    const track = unit.track ? content.course?.tracks.find((t) => t.id === unit.track) : undefined;
+    if (unit.track && !track) unitReport('error', 'track', `unknown track "${unit.track}"`);
+    if (track && LEVELS.indexOf(unit.level) < LEVELS.indexOf(track.requires))
+      unitReport('error', 'level', `unit is ${unit.level}, the track requires ${track.requires}`);
+    const code = unit.track ?? unit.level.toLowerCase();
+    const expectedId = `${code}.u${String(unit.order).padStart(2, '0')}`;
     if (unit.id !== expectedId)
-      unitReport('error', 'id', `expected id "${expectedId}" from level and order`);
+      unitReport(
+        'error',
+        'id',
+        `expected id "${expectedId}" from ${unit.track ? 'track' : 'level'} and order`,
+      );
     claimId(unit.id, file, 'id');
+
+    // A track starts from the vocabulary of the level it requires, not from the whole course.
+    if (track && currentTrack !== track.id) {
+      currentTrack = track.id;
+      const base = levelSnapshots.get(track.requires);
+      if (!base) unitReport('error', 'track', `level ${track.requires} has no written units yet`);
+      vocab.reset(base ?? new Set());
+    }
+    const owner = track ? `track:${track.id}` : unit.level;
+    // Words a learner of this unit already knows: everything for a level unit; for a track unit,
+    // words of the required level and below, and of earlier units of the same track.
+    const visible = (o: string): boolean =>
+      !track ||
+      o === owner ||
+      ((LEVELS as readonly string[]).includes(o) &&
+        LEVELS.indexOf(o as Level) <= LEVELS.indexOf(track.requires));
 
     // Vocabulary of this unit becomes available to all of its content.
     unit.words.forEach((w, i) => {
       const report = at(`words[${i}]`);
-      if (wordsById.has(w.id)) report('error', 'id', `duplicate word id "${w.id}"`);
-      wordsById.set(w.id, w);
+      const prevWord = wordsById.get(w.id);
+      if (prevWord) {
+        // A track may teach a word that the course introduces only at a higher level: it then
+        // reuses that word's id, so the dictionary and the review schedule keep one entry.
+        const shared =
+          !visible(wordOwner.get(w.id) ?? '') && prevWord.en === w.en && prevWord.pos === w.pos;
+        if (!shared) report('error', 'id', `duplicate word id "${w.id}"`);
+      } else {
+        wordsById.set(w.id, w);
+        wordOwner.set(w.id, owner);
+      }
       const key = `${w.en.toLowerCase()}#${w.pos}`;
       const prev = wordKeys.get(key);
-      if (prev) report('error', 'en', `"${w.en}" (${w.pos}) already introduced as "${prev}"`);
-      wordKeys.set(key, w.id);
+      if (prev && visible(wordOwner.get(prev) ?? ''))
+        report('error', 'en', `"${w.en}" (${w.pos}) already introduced as "${prev}"`);
+      else if (prev && prev !== w.id)
+        report(
+          'error',
+          'id',
+          `"${w.en}" (${w.pos}) is "${prev}" elsewhere in the course: reuse that id`,
+        );
+      if (!prev) wordKeys.set(key, w.id);
       vocab.addWord(w);
 
       if (hasCyrillic(w.en) || hasCyrillic(w.example.en))
@@ -672,6 +757,8 @@ export function checkContent(content: LoadedContent): Issue[] {
       if (!/^Могу /.test(g))
         unitReport('warning', `goals[${i}]`, 'can-do goals start with "Могу …"');
     });
+
+    if (!unit.track) levelSnapshots.set(unit.level, new Set(vocab.allowed));
   }
 
   for (const [name, where] of vocab.assumedNames) {

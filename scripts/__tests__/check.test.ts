@@ -34,6 +34,32 @@ describe('content check', () => {
     expect(errors).toEqual([]);
   });
 
+  it('checks track units against the vocabulary of the level the track requires', () => {
+    const copy: LoadedContent = { ...original, issues: [], units: structuredClone(original.units) };
+    const unit = copy.units.find((u) => u.track === 'travel')!;
+    // "itinerary" is not taught anywhere; "negotiation" is a C1 word, above the B1 track.
+    unit.texts[0]!.lines[0]!.en = 'Good evening. Is this your itinerary? Negotiation is hard.';
+    const errors = checkContent(copy)
+      .filter((i) => i.severity === 'error')
+      .map((i) => i.message)
+      .join('\n');
+    expect(errors).toMatch(/"itinerary" is above the level/);
+    expect(errors).toMatch(/"Negotiation" is above the level/);
+  });
+
+  it('lets a track reuse a higher-level word only under the same id', () => {
+    const copy: LoadedContent = { ...original, issues: [], units: structuredClone(original.units) };
+    const unit = copy.units.find((u) => u.track === 'travel')!;
+    const gate = unit.words.find((w) => w.en === 'gate')!;
+    gate.id = 'airport-gate';
+    const errors = checkContent(copy)
+      .filter((i) => i.severity === 'error')
+      .map((i) => i.message);
+    expect(errors.join('\n')).toMatch(
+      /"gate" \(noun\) is "gate" elsewhere in the course: reuse that id/,
+    );
+  });
+
   it('catches words above the level', () => {
     const errors = errorsAfter((u) => {
       u.texts[0]!.lines[0]!.en = 'Good morning! Are you the new architect?';

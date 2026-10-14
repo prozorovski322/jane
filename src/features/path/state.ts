@@ -3,10 +3,22 @@
  * start anywhere); "next" is simply the first unfinished lesson in course order. Module tests and
  * level exams are open too once the units they cover are written; they never block anything.
  */
-import type { CourseOutline, LevelOutline } from '@/core/content/bundle-types';
-import type { Level } from '@/core/content/schema';
+import type {
+  CourseOutline,
+  LevelOutline,
+  TrackOutline,
+  UnitOutline,
+} from '@/core/content/bundle-types';
+import { LEVELS, type Level } from '@/core/content/schema';
 
-import { isLevelReady, isModuleReady, levelExamId, moduleTestId } from '../exams/exam';
+import {
+  isLevelReady,
+  isModuleReady,
+  isTrackReady,
+  levelExamId,
+  moduleTestId,
+  trackTestId,
+} from '../exams/exam';
 
 export type NodeStatus = 'done' | 'next' | 'open';
 
@@ -31,7 +43,7 @@ export interface PathUnit {
 /** A module test or a level exam: `soon` while some units of its scope are still to be written. */
 export interface ExamNode {
   id: string;
-  kind: 'module' | 'level';
+  kind: 'module' | 'level' | 'track';
   status: 'done' | 'open' | 'soon';
 }
 
@@ -57,9 +69,61 @@ export interface PathLevel {
   total: number;
 }
 
+/** An optional branch; its lessons never become the path's "next" step. */
+export interface PathTrack {
+  id: string;
+  title: { en: string; ru: string };
+  description: string;
+  requires: Level;
+  units: PathUnit[];
+  planned: { id: string; title: { en: string; ru: string } }[];
+  exam: ExamNode;
+  done: number;
+  total: number;
+}
+
 export interface PathState {
   levels: PathLevel[];
+  tracks: PathTrack[];
   next: { node: PathNode; unitId: string } | null;
+}
+
+function trackUnit(u: UnitOutline, completed: ReadonlySet<string>): PathUnit {
+  const nodes: PathNode[] = [
+    ...u.lessons.map((ls) => ({ id: ls.id, title: ls.title, kind: ls.kind, isTest: false })),
+    { id: `${u.id}.test`, title: 'Тест юнита', kind: 'test', isTest: true },
+  ].map((n): PathNode => ({ ...n, status: completed.has(n.id) ? 'done' : 'open' }));
+  const done = nodes.filter((n) => n.status === 'done').length;
+  return {
+    id: u.id,
+    order: u.order,
+    title: u.title,
+    grammar: u.grammar,
+    nodes,
+    done,
+    total: nodes.length,
+  };
+}
+
+function trackState(t: TrackOutline, completed: ReadonlySet<string>): PathTrack {
+  const units = t.units.map((u) => trackUnit(u, completed));
+  const examId = trackTestId(t.id);
+  return {
+    id: t.id,
+    title: t.title,
+    description: t.description,
+    requires: t.requires,
+    units,
+    planned: t.planned,
+    exam: { id: examId, kind: 'track', status: examStatus(examId, isTrackReady(t), completed) },
+    done: units.reduce((n, u) => n + u.done, 0),
+    total: units.reduce((n, u) => n + u.total, 0),
+  };
+}
+
+/** A track is open once the learner holds a certificate of its level or any higher one. */
+export function isTrackOpen(requires: Level, certified: readonly Level[]): boolean {
+  return certified.some((l) => LEVELS.indexOf(l) >= LEVELS.indexOf(requires));
 }
 
 function examStatus(
@@ -133,5 +197,5 @@ export function pathState(course: CourseOutline, completed: ReadonlySet<string>)
       total: units.reduce((n, u) => n + u.total, 0),
     };
   });
-  return { levels, next };
+  return { levels, tracks: course.tracks.map((t) => trackState(t, completed)), next };
 }

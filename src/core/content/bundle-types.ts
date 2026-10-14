@@ -48,10 +48,21 @@ export interface LevelOutline {
   units: UnitOutline[];
 }
 
+/** An optional branch opened by the certificate of `requires` (or a higher level). */
+export interface TrackOutline {
+  id: string;
+  title: Unit['title'];
+  description: string;
+  requires: Level;
+  /** Written units of the track in order. */
+  units: UnitOutline[];
+  planned: { id: string; title: Unit['title'] }[];
+}
+
 export interface CourseOutline {
   version: Course['version'];
   levels: LevelOutline[];
-  tracks: Course['tracks'];
+  tracks: TrackOutline[];
 }
 
 export interface LexiconEntry extends Word {

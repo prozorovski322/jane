@@ -448,6 +448,8 @@ export const UnitTest = z.strictObject({
 export const Unit = z.strictObject({
   id: Id,
   level: Level,
+  /** Set for units of an optional track; their ids are "<track>.uNN" instead of "<level>.uNN". */
+  track: Id.optional(),
   order: z.number().int().min(1),
   title: Bilingual,
   description: Ru,

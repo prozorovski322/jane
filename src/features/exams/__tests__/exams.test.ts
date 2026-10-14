@@ -12,12 +12,13 @@ import {
   creditLevelsBelow,
   loadCertificates,
 } from '../../certificates/service';
-import { pathState } from '../../path/state';
+import { isTrackOpen, pathState } from '../../path/state';
 import { recordSession } from '../../progress/service';
 import {
   isExamId,
   isLevelReady,
   isModuleReady,
+  isTrackReady,
   LEVEL_EXAM,
   levelExamId,
   MODULE_TEST,
@@ -25,6 +26,8 @@ import {
   parseExamId,
   selectExercises,
   sessionForExam,
+  TRACK_TEST,
+  trackTestId,
 } from '../exam';
 
 describe('exam ids', () => {
@@ -208,6 +211,75 @@ describe('path with modules and exams', () => {
     ]);
     expect(pa1.modules.map((m) => m.test.status)).toEqual(['open', 'open', 'open']);
     expect(pa1.exam).toEqual({ id: 'pa1.exam', kind: 'level', status: 'open' });
+  });
+});
+
+describe('tracks', () => {
+  it('have their own final test id that never counts as a level exam', () => {
+    expect(trackTestId('travel')).toBe('travel.exam');
+    expect(parseExamId('travel.exam')).toEqual({ kind: 'track', trackId: 'travel' });
+    expect(isExamId('nowhere.exam')).toBe(false);
+  });
+
+  it('keep the final test closed while units are still planned', () => {
+    const travel = getCourse().tracks.find((t) => t.id === 'travel')!;
+    expect(isTrackReady(travel)).toBe(travel.planned.length === 0);
+    if (!isTrackReady(travel)) expect(sessionForExam('travel.exam', 's')).toBeNull();
+  });
+
+  it('assemble the final test from the track units once they are all written', () => {
+    const travel = getCourse().tracks.find((t) => t.id === 'travel')!;
+    const done: CourseOutline = {
+      ...getCourse(),
+      tracks: [{ ...travel, planned: [] }],
+    };
+    jest.spyOn(content, 'getCourse').mockReturnValue(done);
+    try {
+      const session = sessionForExam('travel.exam', 's')!;
+      expect(session.passScore).toBe(TRACK_TEST.passScore);
+      expect(session.exercises.length).toBeLessThanOrEqual(TRACK_TEST.size);
+      const own = new Set(
+        travel.units.flatMap((u) =>
+          getUnit(u.id).lessons.flatMap((l) => l.exercises.map((e) => e.id)),
+        ),
+      );
+      for (const ex of session.exercises) expect(ex.id.startsWith('travel.')).toBe(true);
+      expect(session.exercises.some((e) => own.has(e.id))).toBe(true);
+    } finally {
+      jest.restoreAllMocks();
+    }
+  });
+
+  it('show on the path apart from the levels and never become the next step', () => {
+    const s = pathState(getCourse(), new Set());
+    const travel = s.tracks.find((t) => t.id === 'travel')!;
+    expect(travel.requires).toBe('B1');
+    expect(travel.units[0]!.id).toBe('travel.u01');
+    expect(travel.units[0]!.nodes.every((n) => n.status === 'open')).toBe(true);
+    expect(s.next?.unitId.startsWith('travel')).toBe(false);
+  });
+
+  it('open with a certificate of the required level or any higher one', () => {
+    expect(isTrackOpen('B1', [])).toBe(false);
+    expect(isTrackOpen('B1', ['A1', 'A2'])).toBe(false);
+    expect(isTrackOpen('B1', ['B1'])).toBe(true);
+    expect(isTrackOpen('B1', ['C1'])).toBe(true);
+    expect(isTrackOpen('B2', ['B1'])).toBe(false);
+  });
+
+  it('do not award a certificate when the final test is passed', async () => {
+    const db = openNodeDb();
+    await migrate(db);
+    const info = await recordSession(
+      db,
+      { id: 'travel.exam', kind: 'test', unitId: 'travel', passScore: 0.75 },
+      summary(0.9),
+      { now: new Date('2026-10-14T10:00:00Z') },
+    );
+    expect(info.passed).toBe(true);
+    expect(info.certificate).toBeNull();
+    expect(await loadCertificates(db)).toEqual([]);
+    db.close();
   });
 });
 
