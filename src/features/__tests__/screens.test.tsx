@@ -123,13 +123,14 @@ describe('Add word', () => {
     await user.press(screen.getByRole('button', { name: 'Сохранить и учить' }));
     expect(screen.getByText('Напишите слово или фразу по-английски.')).toBeOnTheScreen();
 
-    await user.type(screen.getByLabelText('Слово или фраза'), 'deadline');
-    await user.type(screen.getByLabelText('Перевод'), 'срок, крайний срок');
+    // A word the course does not teach, so the screen does not warn about a duplicate.
+    await user.type(screen.getByLabelText('Слово или фраза'), 'spreadsheet');
+    await user.type(screen.getByLabelText('Перевод'), 'таблица, электронная таблица');
     await user.press(screen.getByRole('button', { name: 'Сохранить и учить' }));
 
     expect(mockRouter.replace).toHaveBeenCalledWith('/word/user-1');
     expect(await listUserWords(db)).toMatchObject([
-      { en: 'deadline', ru: ['срок', 'крайний срок'] },
+      { en: 'spreadsheet', ru: ['таблица', 'электронная таблица'] },
     ]);
     expect(useProgress.getState().dueCount).toBe(1);
   });
