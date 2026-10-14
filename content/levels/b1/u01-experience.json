@@ -1,0 +1,336 @@
+{
+  "id": "b1.u01",
+  "level": "B1",
+  "order": 1,
+  "title": { "en": "Have you ever…?", "ru": "Что вы уже делали" },
+  "description": "Говорим о жизненном опыте и достижениях: где бывали, что пробовали, чего добились. Present Perfect, разница с Past Simple, слова already, yet, just, ever и never.",
+  "goals": [
+    "Могу рассказать о своём опыте: I have been to Italy. I have never climbed a mountain.",
+    "Могу спросить об опыте: Have you ever…? — и продолжить разговор в Past Simple.",
+    "Могу выбрать между Present Perfect и Past Simple.",
+    "Могу сказать, что уже сделал, только что сделал или ещё не сделал.",
+    "Могу говорить о целях, мечтах и достижениях.",
+    "Могу написать связный текст о своём опыте."
+  ],
+  "grammar": ["b1.present-perfect", "b1.perfect-vs-past", "b1.already-yet-just"],
+  "troubles": ["tenses", "word-order"],
+  "words": [
+    { "id": "experience", "en": "experience", "ipa": "ɪkˈspɪriəns", "pos": "noun", "ru": ["опыт", "впечатление"], "example": { "en": "It was an amazing experience.", "ru": "Это был потрясающий опыт." }, "note": "Experience — и «опыт» (несчитаемое: work experience), и «случай, впечатление» (считаемое: an amazing experience).", "topics": ["experience"] },
+    { "id": "adventure", "en": "adventure", "ipa": "ədˈventʃɚ", "pos": "noun", "ru": ["приключение"], "example": { "en": "The trip was a real adventure.", "ru": "Поездка была настоящим приключением." }, "topics": ["experience"] },
+    { "id": "achievement", "en": "achievement", "ipa": "əˈtʃiːvmənt", "pos": "noun", "ru": ["достижение"], "example": { "en": "Running a marathon is a great achievement.", "ru": "Пробежать марафон — большое достижение." }, "topics": ["experience"] },
+    { "id": "achieve", "en": "achieve", "ipa": "əˈtʃiːv", "pos": "verb", "ru": ["достигать"], "example": { "en": "She has achieved a lot this year.", "ru": "В этом году она многого добилась." }, "forms": { "third": "achieves" }, "topics": ["experience"] },
+    { "id": "dream", "en": "dream", "ipa": "driːm", "pos": "noun", "ru": ["мечта", "сон"], "example": { "en": "My dream is to travel around the world.", "ru": "Моя мечта — объехать весь мир." }, "topics": ["experience"] },
+    { "id": "goal", "en": "goal", "ipa": "ɡoʊl", "pos": "noun", "ru": ["цель"], "example": { "en": "My goal is to learn English.", "ru": "Моя цель — выучить английский." }, "topics": ["experience"] },
+    { "id": "chance", "en": "chance", "ipa": "tʃæns", "pos": "noun", "ru": ["шанс", "возможность"], "example": { "en": "I have never had the chance to go abroad.", "ru": "У меня никогда не было возможности поехать за границу." }, "topics": ["experience"] },
+    { "id": "opportunity", "en": "opportunity", "ipa": "ˌɑːpɚˈtuːnəti", "pos": "noun", "ru": ["возможность"], "example": { "en": "This job is a great opportunity.", "ru": "Эта работа — отличная возможность." }, "forms": { "plural": "opportunities" }, "topics": ["experience"] },
+    { "id": "success", "en": "success", "ipa": "səkˈses", "pos": "noun", "ru": ["успех"], "example": { "en": "The festival was a big success.", "ru": "Фестиваль имел большой успех." }, "topics": ["experience"] },
+    { "id": "successful", "en": "successful", "ipa": "səkˈsesfəl", "pos": "adj", "ru": ["успешный"], "example": { "en": "She is a successful designer.", "ru": "Она успешный дизайнер." }, "topics": ["experience"] },
+    { "id": "proud", "en": "proud", "ipa": "praʊd", "pos": "adj", "ru": ["гордый"], "example": { "en": "I am proud of my sister.", "ru": "Я горжусь своей сестрой." }, "note": "Гордиться чем-то — be proud of something.", "topics": ["feelings"] },
+    { "id": "brave", "en": "brave", "ipa": "breɪv", "pos": "adj", "ru": ["смелый"], "example": { "en": "You are very brave.", "ru": "Вы очень смелый." }, "topics": ["feelings"] },
+    { "id": "scared", "en": "scared", "ipa": "skerd", "pos": "adj", "ru": ["испуганный"], "example": { "en": "I was scared, but I did it.", "ru": "Мне было страшно, но я это сделал." }, "note": "Бояться чего-то — be scared of something.", "topics": ["feelings"] },
+    { "id": "unforgettable", "en": "unforgettable", "ipa": "ˌʌnfɚˈɡetəbəl", "pos": "adj", "ru": ["незабываемый"], "example": { "en": "It was an unforgettable day.", "ru": "Это был незабываемый день." }, "topics": ["feelings"] },
+    { "id": "foreign", "en": "foreign", "ipa": "ˈfɔːrən", "pos": "adj", "ru": ["иностранный"], "example": { "en": "I have learned two foreign languages.", "ru": "Я выучил два иностранных языка." }, "note": "G в слове foreign не читается.", "topics": ["travel"] },
+    { "id": "taste", "en": "taste", "ipa": "teɪst", "pos": "verb", "ru": ["пробовать (на вкус)"], "example": { "en": "Have you ever tasted Italian food?", "ru": "Вы когда-нибудь пробовали итальянскую еду?" }, "forms": { "third": "tastes" }, "topics": ["verbs"] },
+    { "id": "explore", "en": "explore", "ipa": "ɪkˈsplɔːr", "pos": "verb", "ru": ["исследовать", "осматривать"], "example": { "en": "We explored the old town.", "ru": "Мы осмотрели старый город." }, "forms": { "third": "explores" }, "topics": ["verbs"] },
+    { "id": "discover", "en": "discover", "ipa": "dɪˈskʌvɚ", "pos": "verb", "ru": ["открывать", "обнаруживать"], "example": { "en": "I have discovered a new hobby.", "ru": "Я открыл для себя новое хобби." }, "forms": { "third": "discovers" }, "topics": ["verbs"] },
+    { "id": "organize", "en": "organize", "ipa": "ˈɔːrɡənaɪz", "pos": "verb", "ru": ["организовывать"], "example": { "en": "She has organized a festival.", "ru": "Она организовала фестиваль." }, "forms": { "third": "organizes" }, "note": "Британский вариант написания — organise.", "topics": ["verbs"] },
+    { "id": "perform", "en": "perform", "ipa": "pɚˈfɔːrm", "pos": "verb", "ru": ["выступать"], "example": { "en": "I have never performed on stage.", "ru": "Я никогда не выступал на сцене." }, "forms": { "third": "performs" }, "topics": ["verbs"] },
+    { "id": "fail", "en": "fail", "ipa": "feɪl", "pos": "verb", "ru": ["провалить", "не справиться"], "example": { "en": "He failed the exam, but he tried again.", "ru": "Он провалил экзамен, но попробовал ещё раз." }, "forms": { "third": "fails" }, "topics": ["verbs"] },
+    { "id": "competition", "en": "competition", "ipa": "ˌkɑːmpəˈtɪʃən", "pos": "noun", "ru": ["соревнование", "конкурс"], "example": { "en": "She has won a competition.", "ru": "Она выиграла конкурс." }, "topics": ["experience"] },
+    { "id": "prize", "en": "prize", "ipa": "praɪz", "pos": "noun", "ru": ["приз"], "example": { "en": "He has won first prize.", "ru": "Он выиграл первый приз." }, "topics": ["experience"] },
+    { "id": "marathon", "en": "marathon", "ipa": "ˈmærəθɑːn", "pos": "noun", "ru": ["марафон"], "example": { "en": "I have run a marathon twice.", "ru": "Я дважды пробежал марафон." }, "topics": ["experience"] },
+    { "id": "stage", "en": "stage", "ipa": "steɪdʒ", "pos": "noun", "ru": ["сцена"], "example": { "en": "She sang on stage.", "ru": "Она пела на сцене." }, "topics": ["experience"] },
+    { "id": "audience", "en": "audience", "ipa": "ˈɔːdiəns", "pos": "noun", "ru": ["зрители", "публика"], "example": { "en": "The audience loved the concert.", "ru": "Зрителям очень понравился концерт." }, "topics": ["experience"] },
+    { "id": "desert", "en": "desert", "ipa": "ˈdezɚt", "pos": "noun", "ru": ["пустыня"], "example": { "en": "Have you ever been to a desert?", "ru": "Вы когда-нибудь были в пустыне?" }, "picture": { "emoji": "🏜️" }, "topics": ["nature"] },
+    { "id": "jungle", "en": "jungle", "ipa": "ˈdʒʌŋɡəl", "pos": "noun", "ru": ["джунгли"], "example": { "en": "We walked through the jungle.", "ru": "Мы шли через джунгли." }, "topics": ["nature"] },
+    { "id": "volcano", "en": "volcano", "ipa": "vɑːlˈkeɪnoʊ", "pos": "noun", "ru": ["вулкан"], "example": { "en": "I have climbed a volcano once.", "ru": "Однажды я поднялся на вулкан." }, "forms": { "plural": "volcanoes" }, "picture": { "emoji": "🌋" }, "topics": ["nature"] },
+    { "id": "culture", "en": "culture", "ipa": "ˈkʌltʃɚ", "pos": "noun", "ru": ["культура"], "example": { "en": "I love learning about other cultures.", "ru": "Я люблю узнавать о других культурах." }, "topics": ["travel"] },
+    { "id": "language", "en": "language", "ipa": "ˈlæŋɡwɪdʒ", "pos": "noun", "ru": ["язык"], "example": { "en": "How many languages do you speak?", "ru": "На скольких языках вы говорите?" }, "topics": ["travel"] },
+    { "id": "festival", "en": "festival", "ipa": "ˈfestəvəl", "pos": "noun", "ru": ["фестиваль"], "example": { "en": "We went to a music festival.", "ru": "Мы ходили на музыкальный фестиваль." }, "topics": ["experience"] },
+    { "id": "very", "en": "very", "ipa": "ˈveri", "pos": "adv", "ru": ["очень"], "example": { "en": "It was very difficult.", "ru": "Было очень трудно." }, "topics": ["adverbs"] },
+    { "id": "really", "en": "really", "ipa": "ˈrɪli", "pos": "adv", "ru": ["правда", "действительно", "очень"], "example": { "en": "Really? When did you do that?", "ru": "Правда? Когда это было?" }, "topics": ["adverbs"] },
+    { "id": "real", "en": "real", "ipa": "riːl", "pos": "adj", "ru": ["настоящий"], "example": { "en": "The trip was a real adventure.", "ru": "Поездка была настоящим приключением." }, "topics": ["adjectives"] },
+    { "id": "own", "en": "own", "ipa": "oʊn", "pos": "adj", "ru": ["собственный", "свой"], "example": { "en": "I have travelled a lot in my own country.", "ru": "Я много путешествовал по своей стране." }, "note": "Own стоит после притяжательного слова: my own, her own.", "topics": ["adjectives"] },
+    { "id": "other", "en": "other", "ipa": "ˈʌðɚ", "pos": "det", "ru": ["другой"], "example": { "en": "I love learning about other cultures.", "ru": "Я люблю узнавать о других культурах." }, "troubles": ["pron-th"], "topics": ["grammar"] },
+    { "id": "another", "en": "another", "ipa": "əˈnʌðɚ", "pos": "det", "ru": ["ещё один", "другой"], "example": { "en": "I want to run another marathon.", "ru": "Я хочу пробежать ещё один марафон." }, "topics": ["grammar"] },
+    { "id": "around", "en": "around", "ipa": "əˈraʊnd", "pos": "prep", "ru": ["вокруг", "по (всему)"], "example": { "en": "My dream is to travel around the world.", "ru": "Моя мечта — объехать весь мир." }, "topics": ["grammar"] },
+    { "id": "top", "en": "top", "ipa": "tɑːp", "pos": "noun", "ru": ["вершина", "верх"], "example": { "en": "We got to the top of the mountain.", "ru": "Мы добрались до вершины горы." }, "topics": ["nature"] },
+    { "id": "a-bit", "en": "a bit", "ipa": "ə bɪt", "pos": "phrase", "ru": ["немного", "чуть-чуть"], "example": { "en": "I am a bit scared.", "ru": "Мне немного страшно." }, "topics": ["adverbs"] },
+    { "id": "exciting", "en": "exciting", "ipa": "ɪkˈsaɪtɪŋ", "pos": "adj", "ru": ["захватывающий", "интересный"], "example": { "en": "It was an exciting year.", "ru": "Это был захватывающий год." }, "note": "Exciting — о событии («захватывающий»), excited — о человеке («взволнованный»).", "topics": ["feelings"] },
+    { "id": "myself", "en": "myself", "ipa": "maɪˈself", "pos": "pron", "ru": ["себя", "сам"], "example": { "en": "I was proud of myself.", "ru": "Я гордился собой." }, "topics": ["grammar"] },
+    { "id": "middle", "en": "middle", "ipa": "ˈmɪdəl", "pos": "noun", "ru": ["середина"], "example": { "en": "In the middle of the race I wanted to stop.", "ru": "В середине забега мне хотелось остановиться." }, "topics": ["experience"] },
+    { "id": "race", "en": "race", "ipa": "reɪs", "pos": "noun", "ru": ["забег", "гонка"], "example": { "en": "She has won the race.", "ru": "Она выиграла забег." }, "topics": ["experience"] },
+    { "id": "begin", "en": "begin", "ipa": "bɪˈɡɪn", "pos": "verb", "ru": ["начинать"], "example": { "en": "When did you begin learning English?", "ru": "Когда вы начали учить английский?" }, "forms": { "third": "begins", "ing": "beginning" }, "topics": ["verbs"] },
+    { "id": "ever", "en": "ever", "ipa": "ˈevɚ", "pos": "adv", "ru": ["когда-либо", "когда-нибудь"], "example": { "en": "Have you ever been to Rome?", "ru": "Вы когда-нибудь бывали в Риме?" }, "topics": ["grammar"] },
+    { "id": "already", "en": "already", "ipa": "ɔːlˈredi", "pos": "adv", "ru": ["уже"], "example": { "en": "I have already booked the tickets.", "ru": "Я уже забронировал билеты." }, "topics": ["grammar"] },
+    { "id": "yet", "en": "yet", "ipa": "jet", "pos": "adv", "ru": ["ещё (не)", "уже (в вопросе)"], "example": { "en": "I haven't finished yet.", "ru": "Я ещё не закончил." }, "topics": ["grammar"] },
+    { "id": "just", "en": "just", "ipa": "dʒʌst", "pos": "adv", "ru": ["только что", "просто"], "example": { "en": "I have just arrived.", "ru": "Я только что приехал." }, "topics": ["grammar"] },
+    { "id": "recently", "en": "recently", "ipa": "ˈriːsəntli", "pos": "adv", "ru": ["недавно"], "example": { "en": "I have recently started a new job.", "ru": "Недавно я начал работать на новом месте." }, "topics": ["grammar"] },
+    { "id": "so-far", "en": "so far", "ipa": "soʊ fɑːr", "pos": "phrase", "ru": ["пока что", "до сих пор"], "example": { "en": "So far I have visited three countries.", "ru": "Пока что я побывал в трёх странах." }, "topics": ["grammar"] },
+    { "id": "once", "en": "once", "ipa": "wʌns", "pos": "adv", "ru": ["один раз", "однажды"], "example": { "en": "I have been there once.", "ru": "Я был там один раз." }, "topics": ["grammar"] },
+    { "id": "twice", "en": "twice", "ipa": "twaɪs", "pos": "adv", "ru": ["дважды"], "example": { "en": "She has seen this film twice.", "ru": "Она смотрела этот фильм дважды." }, "topics": ["grammar"] },
+    { "id": "several", "en": "several", "ipa": "ˈsevrəl", "pos": "det", "ru": ["несколько"], "example": { "en": "I have been there several times.", "ru": "Я бывал там несколько раз." }, "topics": ["grammar"] }
+  ],
+  "texts": [
+    {
+      "id": "b1.u01.experiences",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Have you ever been abroad?", "ru": "Вы бывали за границей?" },
+      "speakers": [
+        { "id": "tom", "name": "Tom", "voice": "male" },
+        { "id": "anna", "name": "Anna", "voice": "female" }
+      ],
+      "lines": [
+        { "speaker": "tom", "en": "Anna, have you ever been abroad?", "ru": "Анна, ты бывала за границей?" },
+        { "speaker": "anna", "en": "Yes, I have. I have been to Italy and Spain. What about you?", "ru": "Да. Я была в Италии и Испании. А ты?" },
+        { "speaker": "tom", "en": "I have never been abroad, but I have travelled a lot in my own country.", "ru": "Я никогда не был за границей, но много путешествовал по своей стране." },
+        { "speaker": "anna", "en": "Have you ever climbed a mountain?", "ru": "Ты когда-нибудь поднимался на гору?" },
+        { "speaker": "tom", "en": "Yes, I have climbed a volcano once. It was an unforgettable experience.", "ru": "Да, однажды я поднялся на вулкан. Это было незабываемо." },
+        { "speaker": "anna", "en": "Really? When did you do that?", "ru": "Правда? Когда это было?" },
+        { "speaker": "tom", "en": "Two years ago. I went with my brother, and we were very proud when we got to the top.", "ru": "Два года назад. Я ездил с братом, и мы очень гордились, когда добрались до вершины." },
+        { "speaker": "anna", "en": "I have always wanted to try, but I am a bit scared.", "ru": "Я всегда хотела попробовать, но мне немного страшно." },
+        { "speaker": "tom", "en": "You should do it. It is an adventure you will never forget.", "ru": "Тебе стоит. Это приключение ты никогда не забудешь." }
+      ]
+    },
+    {
+      "id": "b1.u01.year-of-firsts",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "A year of firsts", "ru": "Год первых раз" },
+      "lines": [
+        { "en": "This year has been the most exciting year of my life. I have tried a lot of new things, I have met many interesting people, and I have learned a lot about myself.", "ru": "Этот год стал самым интересным в моей жизни. Я попробовала много нового, познакомилась со многими интересными людьми и многое узнала о себе." },
+        { "en": "In March I ran my first marathon. It was difficult, and in the middle of the race I wanted to stop. But I did not give up. I finished it in four hours, and I was proud of myself.", "ru": "В марте я пробежала свой первый марафон. Было трудно, и в середине забега мне хотелось остановиться. Но я не сдалась. Я финишировала за четыре часа и гордилась собой." },
+        { "en": "In summer I travelled abroad for the first time. So far I have visited three countries, and I have tasted food from many different cultures. I have also started learning a foreign language, but I can't speak it well yet.", "ru": "Летом я впервые поехала за границу. Пока что я побывала в трёх странах и попробовала еду многих культур. Ещё я начала учить иностранный язык, но пока говорю на нём плохо." },
+        { "en": "I have just organized a small music festival in my town, and it was a success. My next goal is to perform on stage. I have never done it before, and I am a bit scared, but I think it will be an amazing experience.", "ru": "Я только что организовала небольшой музыкальный фестиваль в своём городе, и он прошёл успешно. Моя следующая цель — выступить на сцене. Я никогда этого не делала, и мне немного страшно, но думаю, это будет потрясающий опыт." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "b1.u01.l01",
+      "kind": "vocabulary",
+      "title": "Опыт, цели и чувства",
+      "exercises": [
+        { "id": "b1.u01.l01.e01", "type": "match_pairs", "pairs": [{ "en": "experience", "ru": "опыт" }, { "en": "adventure", "ru": "приключение" }, { "en": "achievement", "ru": "достижение" }, { "en": "achieve", "ru": "достигать" }, { "en": "dream", "ru": "мечта" }], "hint": "Achieve и achievement — родственные.", "explanation": "Experience — опыт, adventure — приключение, achievement — достижение, achieve — достигать, dream — мечта." },
+        { "id": "b1.u01.l01.e02", "type": "match_pairs", "pairs": [{ "en": "goal", "ru": "цель" }, { "en": "chance", "ru": "шанс" }, { "en": "opportunity", "ru": "возможность" }, { "en": "success", "ru": "успех" }, { "en": "successful", "ru": "успешный" }], "hint": "Success и successful — родственные.", "explanation": "Goal — цель, chance — шанс, opportunity — возможность, success — успех, successful — успешный." },
+        { "id": "b1.u01.l01.e03", "type": "match_pairs", "pairs": [{ "en": "proud", "ru": "гордый" }, { "en": "brave", "ru": "смелый" }, { "en": "scared", "ru": "испуганный" }, { "en": "unforgettable", "ru": "незабываемый" }, { "en": "foreign", "ru": "иностранный" }], "hint": "Brave и scared — противоположные.", "explanation": "Proud — гордый, brave — смелый, scared — испуганный, unforgettable — незабываемый, foreign — иностранный." },
+        { "id": "b1.u01.l01.e04", "type": "translate_choice", "from": "ru", "text": "Я горжусь своей сестрой.", "options": ["I am proud of my sister.", "I am proud for my sister.", "I proud my sister."], "answer": 0, "hint": "Гордиться — be proud of.", "explanation": "I am proud of my sister. После proud — of." },
+        { "id": "b1.u01.l01.e05", "type": "translate_choice", "from": "en", "text": "This job is a great opportunity.", "options": ["Эта работа — отличная возможность.", "Эта работа — большой успех.", "Эта работа — моя мечта."], "answer": 0, "hint": "Opportunity — «возможность».", "explanation": "Правильно: This job is a great opportunity." },
+        { "id": "b1.u01.l01.e06", "type": "fill_gap", "text": "My ___ is to travel around the world.", "translation": "Моя мечта — объехать весь мир.", "answers": [["dream"]], "options": ["dream", "success", "prize"], "hint": "То, чего очень хочется.", "explanation": "Правильно: My dream is to travel around the world." },
+        { "id": "b1.u01.l01.e07", "type": "fill_gap", "text": "Running a marathon is a great ___.", "translation": "Пробежать марафон — большое достижение.", "answers": [["achievement"]], "options": ["achievement", "achieve", "adventure"], "hint": "Существительное от achieve.", "explanation": "Правильно: Running a marathon is a great achievement." },
+        { "id": "b1.u01.l01.e08", "type": "fill_gap", "text": "I was ___, but I did it.", "translation": "Мне было страшно, но я это сделал.", "answers": [["scared"]], "options": ["scared", "brave", "proud"], "hint": "Страшно.", "explanation": "Правильно: I was scared, but I did it." },
+        { "id": "b1.u01.l01.e09", "type": "fill_gap", "text": "She is a ___ designer.", "translation": "Она успешный дизайнер.", "answers": [["successful"]], "options": ["successful", "success", "proud"], "hint": "Прилагательное.", "explanation": "She is a successful designer. Success — существительное, successful — прилагательное." },
+        { "id": "b1.u01.l01.e10", "type": "listen_choice", "audio": "It was an unforgettable experience.", "question": "Что вы слышите?", "options": ["It was an unforgettable experience.", "It was an interesting experience.", "It was an unforgettable adventure."], "answer": 0, "hint": "Незабываемый опыт.", "explanation": "It was an unforgettable experience — «это был незабываемый опыт»." },
+        { "id": "b1.u01.l01.e11", "type": "listen_dictation", "text": "My goal is to learn English.", "hint": "Шесть слов.", "explanation": "My goal is to learn English — «моя цель — выучить английский»." },
+        { "id": "b1.u01.l01.e12", "type": "type_translation", "from": "ru", "text": "приключение", "answers": ["adventure"], "hint": "Девять букв.", "explanation": "Adventure [ədˈventʃɚ] — «приключение»." },
+        { "id": "b1.u01.l01.e13", "type": "word_stress", "word": "opportunity", "syllables": ["op", "por", "tu", "ni", "ty"], "stress": 2, "hint": "Третий слог.", "explanation": "op-por-TU-ni-ty — ударение на третий слог." },
+        { "id": "b1.u01.l01.e14", "type": "word_stress", "word": "experience", "syllables": ["ex", "pe", "ri", "ence"], "stress": 1, "hint": "Второй слог.", "explanation": "ex-PE-ri-ence — ударение на второй слог." }
+      ]
+    },
+    {
+      "id": "b1.u01.l02",
+      "kind": "vocabulary",
+      "title": "Что можно попробовать",
+      "exercises": [
+        { "id": "b1.u01.l02.e01", "type": "match_pairs", "pairs": [{ "en": "taste", "ru": "пробовать на вкус" }, { "en": "explore", "ru": "исследовать" }, { "en": "discover", "ru": "открывать" }, { "en": "organize", "ru": "организовывать" }, { "en": "perform", "ru": "выступать" }], "hint": "Глаголы опыта.", "explanation": "Taste — пробовать на вкус, explore — исследовать, discover — открывать, organize — организовывать, perform — выступать." },
+        { "id": "b1.u01.l02.e02", "type": "match_pairs", "pairs": [{ "en": "fail", "ru": "провалить" }, { "en": "competition", "ru": "соревнование" }, { "en": "prize", "ru": "приз" }, { "en": "marathon", "ru": "марафон" }, { "en": "stage", "ru": "сцена" }], "hint": "Fail — противоположное win.", "explanation": "Fail — провалить, competition — соревнование, prize — приз, marathon — марафон, stage — сцена." },
+        { "id": "b1.u01.l02.e03", "type": "match_pairs", "pairs": [{ "en": "audience", "ru": "зрители" }, { "en": "desert", "ru": "пустыня" }, { "en": "jungle", "ru": "джунгли" }, { "en": "volcano", "ru": "вулкан" }, { "en": "culture", "ru": "культура" }], "hint": "Три слова — природа.", "explanation": "Audience — зрители, desert — пустыня, jungle — джунгли, volcano — вулкан, culture — культура." },
+        { "id": "b1.u01.l02.e04", "type": "match_pairs", "pairs": [{ "en": "language", "ru": "язык" }, { "en": "festival", "ru": "фестиваль" }, { "en": "recently", "ru": "недавно" }, { "en": "several", "ru": "несколько" }, { "en": "once", "ru": "один раз" }], "hint": "Recently — про время.", "explanation": "Language — язык, festival — фестиваль, recently — недавно, several — несколько, once — один раз." },
+        { "id": "b1.u01.l02.e05", "type": "picture_choice", "mode": "picture-to-word", "word": "volcano", "distractors": ["desert", "mountain"], "hint": "Гора, из которой может идти дым.", "explanation": "Volcano — «вулкан»: [vɑːlˈkeɪnoʊ]." },
+        { "id": "b1.u01.l02.e06", "type": "picture_choice", "mode": "word-to-picture", "word": "desert", "distractors": ["volcano", "island"], "hint": "Песок и жара.", "explanation": "Desert [ˈdezɚt] — «пустыня». Не путайте с dessert [dɪˈzɝːt] — «десерт»." },
+        { "id": "b1.u01.l02.e07", "type": "fill_gap", "text": "We ___ the old town on foot.", "translation": "Мы осмотрели старый город пешком.", "answers": [["explored"]], "options": ["explored", "explore", "discovered"], "hint": "Осматривать новое место.", "explanation": "Правильно: We explored the old town on foot.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "b1.u01.l02.e08", "type": "fill_gap", "text": "He ___ the exam, but he tried again.", "translation": "Он провалил экзамен, но попробовал ещё раз.", "answers": [["failed"]], "options": ["failed", "passed", "won"], "hint": "Не сдал.", "explanation": "Правильно: He failed the exam.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "b1.u01.l02.e09", "type": "fill_gap", "text": "The ___ loved the concert.", "translation": "Зрителям очень понравился концерт.", "answers": [["audience"]], "options": ["audience", "stage", "prize"], "hint": "Люди в зале.", "explanation": "Правильно: The audience loved the concert." },
+        { "id": "b1.u01.l02.e10", "type": "fill_gap", "text": "How many ___ do you speak?", "translation": "На скольких языках вы говорите?", "answers": [["languages"]], "options": ["languages", "cultures", "countries"], "hint": "Английский, русский…", "explanation": "Правильно: How many languages do you speak?" },
+        { "id": "b1.u01.l02.e11", "type": "listen_choice", "audio": "She has won first prize in the competition.", "question": "Что вы слышите?", "options": ["She has won first prize in the competition.", "She has lost the competition.", "She has organized the competition."], "answer": 0, "hint": "Победа.", "explanation": "She has won first prize in the competition — «она выиграла первый приз на конкурсе»." },
+        { "id": "b1.u01.l02.e12", "type": "listen_dictation", "text": "We went to a music festival.", "hint": "Шесть слов.", "explanation": "We went to a music festival — «мы ходили на музыкальный фестиваль»." },
+        { "id": "b1.u01.l02.e13", "type": "type_translation", "from": "ru", "text": "выступать на сцене", "answers": ["perform on stage", "to perform on stage"], "hint": "Образец: Perform + on stage.", "explanation": "Perform on stage — «выступать на сцене»." },
+        { "id": "b1.u01.l02.e15", "type": "match_pairs", "pairs": [{ "en": "really", "ru": "правда" }, { "en": "real", "ru": "настоящий" }, { "en": "own", "ru": "собственный" }, { "en": "other", "ru": "другой" }, { "en": "top", "ru": "вершина" }], "hint": "Real и really — родственные.", "explanation": "Really — правда, real — настоящий, own — собственный, other — другой, top — вершина." },
+        { "id": "b1.u01.l02.e16", "type": "match_pairs", "pairs": [{ "en": "myself", "ru": "себя" }, { "en": "middle", "ru": "середина" }, { "en": "race", "ru": "забег" }, { "en": "very", "ru": "очень" }, { "en": "a bit", "ru": "немного" }], "hint": "Very и a bit — разная сила.", "explanation": "Myself — себя, middle — середина, race — забег, very — очень, a bit — немного." },
+        { "id": "b1.u01.l02.e14", "type": "minimal_pair", "pair": [{ "en": "desert", "ipa": "ˈdezɚt" }, { "en": "dessert", "ipa": "dɪˈzɝːt" }], "say": 0, "hint": "Ударение на первом слоге.", "explanation": "Desert [ˈdezɚt] — пустыня, ударение на первый слог. Dessert [dɪˈzɝːt] — десерт, на второй.", "troubles": ["pron-vowels"] }
+      ]
+    },
+    {
+      "id": "b1.u01.l03",
+      "kind": "grammar",
+      "title": "Present Perfect: Have you ever…?",
+      "grammar": "b1.present-perfect",
+      "exercises": [
+        { "id": "b1.u01.l03.e01", "type": "fill_gap", "text": "I ___ visited three countries.", "translation": "Я побывал в трёх странах.", "answers": [["have"]], "options": ["have", "has", "am"], "hint": "С I.", "explanation": "Правильно: I have visited three countries.", "grammar": ["b1.present-perfect"] },
+        { "id": "b1.u01.l03.e02", "type": "fill_gap", "text": "She ___ been to Spain.", "translation": "Она бывала в Испании.", "answers": [["has"]], "options": ["has", "have", "is"], "hint": "С she.", "explanation": "Правильно: She has been to Spain.", "grammar": ["b1.present-perfect"] },
+        { "id": "b1.u01.l03.e03", "type": "fill_gap", "text": "I have ___ this film twice.", "translation": "Я смотрел этот фильм дважды.", "answers": [["seen"]], "options": ["seen", "saw", "see"], "hint": "Третья форма от see.", "explanation": "Правильно: I have seen this film twice.", "grammar": ["b1.present-perfect"], "troubles": ["tenses"] },
+        { "id": "b1.u01.l03.e04", "type": "fill_gap", "text": "Have you ___ climbed a mountain?", "translation": "Вы когда-нибудь поднимались на гору?", "answers": [["ever"]], "options": ["ever", "never", "yet"], "hint": "Когда-нибудь.", "explanation": "Правильно: Have you ever climbed a mountain?", "grammar": ["b1.present-perfect"] },
+        { "id": "b1.u01.l03.e05", "type": "fill_gap", "text": "I have ___ been abroad.", "translation": "Я никогда не был за границей.", "answers": [["never"]], "options": ["never", "ever", "not"], "hint": "Никогда.", "explanation": "Правильно: I have never been abroad.", "grammar": ["b1.present-perfect"] },
+        { "id": "b1.u01.l03.e06", "type": "fill_gap", "text": "Have you ever eaten fish soup? — Yes, I ___.", "translation": "Вы когда-нибудь ели рыбный суп? — Да.", "answers": [["have"]], "options": ["have", "did", "do"], "hint": "Короткий ответ.", "explanation": "Правильно: Yes, I have.", "grammar": ["b1.present-perfect"] },
+        { "id": "b1.u01.l03.e07", "type": "fill_gap", "text": "He is not here. He has ___ to Italy.", "translation": "Его здесь нет. Он уехал в Италию.", "answers": [["gone"]], "options": ["gone", "been", "went"], "hint": "Уехал и сейчас там.", "explanation": "He has gone to Italy. Gone — уехал и не вернулся.", "grammar": ["b1.present-perfect"] },
+        { "id": "b1.u01.l03.e08", "type": "error_correction", "text": "I have see this film.", "wrong": "see", "correction": "seen", "options": ["seen", "saw", "seeing"], "hint": "Третья форма.", "explanation": "Правильно: I have seen this film.", "grammar": ["b1.present-perfect"], "troubles": ["tenses"] },
+        { "id": "b1.u01.l03.e09", "type": "error_correction", "text": "She has went to Spain.", "wrong": "went", "correction": "gone", "options": ["gone", "go", "goes"], "hint": "Третья форма от go.", "explanation": "Правильно: She has gone to Spain.", "grammar": ["b1.present-perfect"], "troubles": ["tenses"] },
+        { "id": "b1.u01.l03.e10", "type": "error_correction", "text": "Did you ever be in Rome?", "wrong": "Did you ever be in", "correction": "Have you ever been to", "options": ["Have you ever been to", "Were you ever in", "Do you ever be in"], "hint": "Вопрос об опыте.", "explanation": "Правильно: Have you ever been to Rome?", "grammar": ["b1.present-perfect"], "troubles": ["tenses"] },
+        { "id": "b1.u01.l03.e11", "type": "tiles", "from": "ru", "text": "Вы когда-нибудь бывали в пустыне?", "answer": "Have you ever been to a desert?", "distractors": ["did", "went"], "hint": "Образец: Have you ever been to.", "explanation": "Правильно: Have you ever been to a desert?", "grammar": ["b1.present-perfect"] },
+        { "id": "b1.u01.l03.e12", "type": "tiles", "from": "ru", "text": "Она никогда не выступала на сцене.", "answer": "She has never performed on stage.", "distractors": ["have", "ever"], "difficulty": 2, "hint": "Образец: Has never + performed.", "explanation": "Правильно: She has never performed on stage.", "grammar": ["b1.present-perfect"] },
+        { "id": "b1.u01.l03.e13", "type": "type_translation", "from": "ru", "text": "Я дважды пробежал марафон.", "answers": ["I have run a marathon twice."], "difficulty": 2, "hint": "Образец: Third form of run — run.", "explanation": "I have run a marathon twice. Третья форма от run — run.", "grammar": ["b1.present-perfect"] },
+        { "id": "b1.u01.l03.e14", "type": "type_translation", "from": "ru", "text": "Вы когда-нибудь пробовали итальянскую еду?", "answers": ["Have you ever tasted Italian food?", "Have you ever tried Italian food?"], "difficulty": 2, "hint": "Образец: Have you ever + tasted.", "explanation": "Правильно: Have you ever tasted Italian food?", "grammar": ["b1.present-perfect"] },
+        { "id": "b1.u01.l03.e15", "type": "speak_answer", "question": "Have you ever been abroad?", "questionRu": "Вы когда-нибудь были за границей? Ответьте и добавьте подробность: Yes, I have. I have been to… или No, I haven't.", "keywords": [["\\b(yes|no)\\b"], ["\\bI (have|haven't|have never|'ve)\\b"]], "minKeywords": 2, "samples": ["Yes, I have. I have been to Italy.", "No, I haven't. I have never been abroad."], "difficulty": 3, "hint": "Образец: Yes, I have. / No, I haven't.", "explanation": "Ответ: Yes, I have. I have been to Italy.", "grammar": ["b1.present-perfect"] }
+      ]
+    },
+    {
+      "id": "b1.u01.l04",
+      "kind": "grammar",
+      "title": "Present Perfect или Past Simple",
+      "grammar": "b1.perfect-vs-past",
+      "exercises": [
+        { "id": "b1.u01.l04.e01", "type": "fill_gap", "text": "I ___ to Rome last year.", "translation": "Я ездил в Рим в прошлом году.", "answers": [["went"]], "options": ["went", "have been", "have gone"], "hint": "Есть время: last year.", "explanation": "I went to Rome last year. С last year — Past Simple.", "grammar": ["b1.perfect-vs-past"], "troubles": ["tenses"] },
+        { "id": "b1.u01.l04.e02", "type": "fill_gap", "text": "I ___ to Rome twice.", "translation": "Я дважды бывал в Риме.", "answers": [["have been"]], "options": ["have been", "went", "was"], "hint": "Опыт, время не названо.", "explanation": "I have been to Rome twice. Опыт — Present Perfect.", "grammar": ["b1.perfect-vs-past"] },
+        { "id": "b1.u01.l04.e03", "type": "fill_gap", "text": "When ___ you go there?", "translation": "Когда вы туда ездили?", "answers": [["did"]], "options": ["did", "have", "has"], "hint": "Вопрос с when.", "explanation": "When did you go there? С when — Past Simple.", "grammar": ["b1.perfect-vs-past"] },
+        { "id": "b1.u01.l04.e04", "type": "fill_gap", "text": "Have you ever tried fish soup? — Yes. I ___ it in Spain two years ago.", "translation": "Вы пробовали рыбный суп? — Да. Я попробовал его в Испании два года назад.", "answers": [["tried"]], "options": ["tried", "have tried", "try"], "hint": "Есть время: two years ago.", "explanation": "I tried it in Spain two years ago. Подробности — Past Simple.", "grammar": ["b1.perfect-vs-past"], "troubles": ["tenses"] },
+        { "id": "b1.u01.l04.e05", "type": "fill_gap", "text": "She ___ three marathons so far.", "translation": "Пока что она пробежала три марафона.", "answers": [["has run"]], "options": ["has run", "ran", "runs"], "hint": "Образец: So far — Present Perfect.", "explanation": "Правильно: She has run three marathons so far.", "grammar": ["b1.perfect-vs-past"] },
+        { "id": "b1.u01.l04.e06", "type": "fill_gap", "text": "Yesterday I ___ my old friend.", "translation": "Вчера я встретил старого друга.", "answers": [["met"]], "options": ["met", "have met", "meet"], "hint": "Образец: Yesterday — Past Simple.", "explanation": "Правильно: Yesterday I met my old friend.", "grammar": ["b1.perfect-vs-past"], "troubles": ["tenses"] },
+        { "id": "b1.u01.l04.e07", "type": "error_correction", "text": "I have visited Rome last year.", "wrong": "have visited", "correction": "visited", "options": ["visited", "visit", "had visit"], "hint": "Есть last year.", "explanation": "Правильно: I visited Rome last year.", "grammar": ["b1.perfect-vs-past"], "troubles": ["tenses"] },
+        { "id": "b1.u01.l04.e08", "type": "error_correction", "text": "When have you been there?", "wrong": "have you been", "correction": "did you go", "options": ["did you go", "you went", "have you go"], "hint": "С when — другое время.", "explanation": "Правильно: When did you go there?", "grammar": ["b1.perfect-vs-past"], "troubles": ["tenses"] },
+        { "id": "b1.u01.l04.e09", "type": "error_correction", "text": "Yesterday I have seen him.", "wrong": "have seen", "correction": "saw", "options": ["saw", "see", "seen"], "hint": "Образец: Yesterday.", "explanation": "Правильно: Yesterday I saw him.", "grammar": ["b1.perfect-vs-past"], "troubles": ["tenses"] },
+        { "id": "b1.u01.l04.e10", "type": "tiles", "from": "ru", "text": "Я бывал в Италии, но в прошлом году я ездил в Испанию.", "answer": "I have been to Italy, but last year I went to Spain.", "distractors": ["have gone", "was"], "difficulty": 3, "hint": "Опыт, потом конкретное событие.", "explanation": "Правильно: I have been to Italy, but last year I went to Spain.", "grammar": ["b1.perfect-vs-past"] },
+        { "id": "b1.u01.l04.e11", "type": "type_translation", "from": "ru", "text": "Когда вы начали учить английский?", "answers": ["When did you start learning English?", "When did you start to learn English?", "When did you begin learning English?"], "difficulty": 2, "hint": "Образец: When + did.", "explanation": "Правильно: When did you start learning English?", "grammar": ["b1.perfect-vs-past"] },
+        { "id": "b1.u01.l04.e12", "type": "type_translation", "from": "ru", "text": "Я никогда не видел вулкан.", "answers": ["I have never seen a volcano."], "hint": "Образец: Have never + seen.", "explanation": "Правильно: I have never seen a volcano.", "grammar": ["b1.perfect-vs-past"] },
+        { "id": "b1.u01.l04.e13", "type": "translate_choice", "from": "en", "text": "I went to Rome in May.", "options": ["Я ездил в Рим в мае.", "Я бывал в Риме.", "Я уехал в Рим и сейчас там."], "answer": 0, "hint": "Конкретное время.", "explanation": "I went to Rome in May — событие в конкретное время." },
+        { "id": "b1.u01.l04.e14", "type": "listen_choice", "audio": "I have been to Spain, but I went there a long time ago.", "question": "Что вы слышите?", "options": ["I have been to Spain, but I went there a long time ago.", "I went to Spain last week.", "I have never been to Spain."], "answer": 0, "hint": "Опыт и давно.", "explanation": "Правильно: I have been to Spain, but I went there a long time ago.", "grammar": ["b1.perfect-vs-past"] },
+        { "id": "b1.u01.l04.e15", "type": "speak_answer", "question": "Have you ever won a competition? When was it?", "questionRu": "Вы когда-нибудь выигрывали соревнование или конкурс? Если да — когда? Ответьте: Yes, I have. I won… in… или No, I haven't.", "keywords": [["\\bI (have|haven't|have never|'ve)\\b"], ["\\b(won|was|did|ago|last|in|never)\\b"]], "minKeywords": 2, "samples": ["Yes, I have. I won a competition at school ten years ago.", "No, I haven't. I have never won a prize."], "difficulty": 3, "hint": "Образец: Yes, I have. I won…", "explanation": "Опыт — Present Perfect, подробности — Past Simple.", "grammar": ["b1.perfect-vs-past"] }
+      ]
+    },
+    {
+      "id": "b1.u01.l05",
+      "kind": "grammar",
+      "title": "Already, yet, just",
+      "grammar": "b1.already-yet-just",
+      "exercises": [
+        { "id": "b1.u01.l05.e01", "type": "match_pairs", "pairs": [{ "en": "already", "ru": "уже" }, { "en": "yet", "ru": "ещё не" }, { "en": "just", "ru": "только что" }, { "en": "so far", "ru": "пока что" }, { "en": "twice", "ru": "дважды" }], "hint": "Слова Present Perfect.", "explanation": "Already — уже, yet — ещё не, just — только что, so far — пока что, twice — дважды." },
+        { "id": "b1.u01.l05.e02", "type": "fill_gap", "text": "I have ___ finished my work.", "translation": "Я только что закончил работу.", "answers": [["just"]], "options": ["just", "yet", "ever"], "hint": "Только что.", "explanation": "Правильно: I have just finished my work.", "grammar": ["b1.already-yet-just"] },
+        { "id": "b1.u01.l05.e03", "type": "fill_gap", "text": "She has ___ booked the tickets.", "translation": "Она уже забронировала билеты.", "answers": [["already"]], "options": ["already", "yet", "ever"], "hint": "Уже, в утверждении.", "explanation": "Правильно: She has already booked the tickets.", "grammar": ["b1.already-yet-just"] },
+        { "id": "b1.u01.l05.e04", "type": "fill_gap", "text": "I haven't finished ___.", "translation": "Я ещё не закончил.", "answers": [["yet"]], "options": ["yet", "already", "just"], "hint": "В конце отрицания.", "explanation": "Правильно: I haven't finished yet.", "grammar": ["b1.already-yet-just"] },
+        { "id": "b1.u01.l05.e05", "type": "fill_gap", "text": "Have you finished ___?", "translation": "Вы уже закончили?", "answers": [["yet"]], "options": ["yet", "already", "just"], "hint": "В конце вопроса.", "explanation": "Правильно: Have you finished yet?", "grammar": ["b1.already-yet-just"] },
+        { "id": "b1.u01.l05.e06", "type": "fill_gap", "text": "___ I have visited three countries.", "translation": "Пока что я побывал в трёх странах.", "answers": [["So far"]], "options": ["So far", "Yet", "Just"], "hint": "Пока что.", "explanation": "Правильно: So far I have visited three countries.", "grammar": ["b1.already-yet-just"] },
+        { "id": "b1.u01.l05.e07", "type": "fill_gap", "text": "I have been there ___ — in 2019.", "translation": "Я был там один раз — в 2019 году.", "answers": [["once"]], "options": ["once", "twice", "several"], "hint": "Один раз.", "explanation": "Правильно: I have been there once.", "grammar": ["b1.already-yet-just"] },
+        { "id": "b1.u01.l05.e08", "type": "error_correction", "text": "I have done it yet.", "wrong": "have done it yet", "correction": "have already done it", "options": ["have already done it", "have done yet it", "have yet done it"], "hint": "«Уже» в утверждении.", "explanation": "Правильно: I have already done it.", "grammar": ["b1.already-yet-just"], "troubles": ["word-order"] },
+        { "id": "b1.u01.l05.e09", "type": "error_correction", "text": "I just have finished.", "wrong": "just have", "correction": "have just", "options": ["have just", "just has", "have yet"], "hint": "Порядок слов.", "explanation": "Правильно: I have just finished.", "grammar": ["b1.already-yet-just"], "troubles": ["word-order"] },
+        { "id": "b1.u01.l05.e10", "type": "error_correction", "text": "I haven't yet finished.", "wrong": "haven't yet finished", "correction": "haven't finished yet", "options": ["haven't finished yet", "haven't already finished", "yet haven't finished"], "hint": "Yet — в конце.", "explanation": "Правильно: I haven't finished yet.", "grammar": ["b1.already-yet-just"], "troubles": ["word-order"] },
+        { "id": "b1.u01.l05.e11", "type": "tiles", "from": "ru", "text": "Я только что приехал.", "answer": "I have just arrived.", "distractors": ["yet", "arrive"], "hint": "Образец: Have just + arrived.", "explanation": "Правильно: I have just arrived.", "grammar": ["b1.already-yet-just"] },
+        { "id": "b1.u01.l05.e12", "type": "tiles", "from": "ru", "text": "Вы уже забронировали отель?", "answer": "Have you booked the hotel yet?", "distractors": ["already", "did"], "difficulty": 2, "hint": "Yet в конце вопроса.", "explanation": "Правильно: Have you booked the hotel yet?", "grammar": ["b1.already-yet-just"] },
+        { "id": "b1.u01.l05.e13", "type": "type_translation", "from": "ru", "text": "Я бывал там несколько раз.", "answers": ["I have been there several times."], "hint": "Образец: Several times.", "explanation": "Правильно: I have been there several times.", "grammar": ["b1.already-yet-just"] },
+        { "id": "b1.u01.l05.e14", "type": "type_translation", "from": "ru", "text": "Недавно я начал работать на новом месте.", "answers": ["I have recently started a new job.", "Recently I have started a new job.", "I recently started a new job."], "difficulty": 3, "hint": "Образец: Have recently started.", "explanation": "Правильно: I have recently started a new job.", "grammar": ["b1.already-yet-just"] },
+        { "id": "b1.u01.l05.e15", "type": "listen_choice", "audio": "I haven't booked the tickets yet.", "question": "Что вы слышите?", "options": ["I haven't booked the tickets yet.", "I have already booked the tickets.", "I have just booked the tickets."], "answer": 0, "hint": "Ещё не.", "explanation": "I haven't booked the tickets yet — «я ещё не забронировал билеты».", "grammar": ["b1.already-yet-just"] }
+      ]
+    },
+    {
+      "id": "b1.u01.l06",
+      "kind": "listening",
+      "title": "Вы бывали за границей?",
+      "textId": "b1.u01.experiences",
+      "exercises": [
+        {
+          "id": "b1.u01.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "b1.u01.experiences",
+          "hint": "Слушайте, у кого какой опыт.",
+          "explanation": "Анна бывала в Италии и Испании. Том никогда не был за границей, но однажды поднялся на вулкан с братом. Анна хочет попробовать, но боится.",
+          "questions": [
+            { "kind": "mcq", "question": "Где бывала Анна?", "options": ["in Italy and Spain", "in Italy and China", "in China and Spain"], "answer": 0, "explanation": "Анна говорит: I have been to Italy and Spain." },
+            { "kind": "mcq", "question": "Что однажды сделал Том?", "options": ["climbed a volcano", "ran a marathon", "performed on stage"], "answer": 0, "explanation": "Том говорит: I have climbed a volcano once." },
+            { "kind": "mcq", "question": "Когда это было?", "options": ["two years ago", "last year", "last month"], "answer": 0, "explanation": "Том говорит: Two years ago." },
+            { "kind": "tfn", "statement": "Tom has been abroad.", "answer": "false", "explanation": "Том говорит: I have never been abroad." },
+            { "kind": "tfn", "statement": "Tom went with his brother.", "answer": "true", "explanation": "Том говорит: I went with my brother." },
+            { "kind": "tfn", "statement": "Anna has climbed a volcano too.", "answer": "false", "explanation": "Анна говорит: I have always wanted to try, but I am a bit scared." }
+          ]
+        },
+        { "id": "b1.u01.l06.e02", "type": "listen_choice", "audio": "I have never been abroad, but I have travelled a lot.", "question": "Что вы слышите?", "options": ["I have never been abroad, but I have travelled a lot.", "I have been abroad and I have travelled a lot.", "I never travel abroad."], "answer": 0, "hint": "Never и but.", "explanation": "Правильно: I have never been abroad, but I have travelled a lot.", "grammar": ["b1.present-perfect"] },
+        { "id": "b1.u01.l06.e03", "type": "listen_dictation", "text": "Have you ever been abroad?", "hint": "Пять слов.", "explanation": "Have you ever been abroad? — «Вы бывали за границей?»" },
+        { "id": "b1.u01.l06.e04", "type": "listen_dictation", "text": "It was an unforgettable experience.", "hint": "Пять слов.", "explanation": "It was an unforgettable experience — «это был незабываемый опыт»." },
+        { "id": "b1.u01.l06.e05", "type": "fill_gap", "text": "I have climbed a volcano ___.", "translation": "Однажды я поднялся на вулкан.", "answers": [["once"]], "options": ["once", "yet", "ever"], "hint": "Один раз.", "explanation": "Правильно: I have climbed a volcano once.", "grammar": ["b1.already-yet-just"] },
+        { "id": "b1.u01.l06.e06", "type": "fill_gap", "text": "When ___ you do that? — Two years ago.", "translation": "Когда ты это сделал? — Два года назад.", "answers": [["did"]], "options": ["did", "have", "do"], "hint": "Вопрос с when.", "explanation": "Правильно: When did you do that?", "grammar": ["b1.perfect-vs-past"] },
+        { "id": "b1.u01.l06.e07", "type": "tiles", "from": "ru", "text": "Это приключение ты никогда не забудешь.", "answer": "It is an adventure you will never forget.", "distractors": ["ever", "have"], "difficulty": 2, "hint": "Образец: Will never forget.", "explanation": "Правильно: It is an adventure you will never forget.", "grammar": ["a2.will"] },
+        { "id": "b1.u01.l06.e08", "type": "type_translation", "from": "ru", "text": "Я всегда хотела попробовать.", "answers": ["I have always wanted to try.", "I have always wanted to try it."], "difficulty": 2, "hint": "Образец: Have always wanted.", "explanation": "I have always wanted to try. Always с Present Perfect — «всю жизнь, до сих пор».", "grammar": ["b1.present-perfect"] },
+        { "id": "b1.u01.l06.e09", "type": "speak_answer", "question": "What is the most exciting thing you have ever done?", "questionRu": "Что самое захватывающее вы когда-либо делали? Ответьте: The most exciting thing I have ever done is…", "keywords": [["\\bI (have|'ve)\\b", "\\bI (went|climbed|ran|visited|won|tried|performed|travelled|traveled)\\b"], ["\\b(climbed|run|ran|been|visited|tried|won|performed|travelled|traveled|went|done)\\b"]], "minKeywords": 2, "samples": ["The most exciting thing I have ever done is climbing a volcano. I did it two years ago.", "I have run a marathon. It was in May."], "difficulty": 3, "hint": "Образец: The most exciting thing I have ever done is…", "explanation": "Начните с Present Perfect, подробности — в Past Simple.", "grammar": ["b1.perfect-vs-past"] },
+        { "id": "b1.u01.l06.e10", "type": "speak_repeat", "text": "I have always wanted to try, but I am a bit scared.", "hint": "Две части с but.", "explanation": "Scared [skerd] — один слог." }
+      ]
+    },
+    {
+      "id": "b1.u01.l07",
+      "kind": "writing",
+      "title": "Год первых раз",
+      "textId": "b1.u01.year-of-firsts",
+      "exercises": [
+        {
+          "id": "b1.u01.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "b1.u01.year-of-firsts",
+          "hint": "Отметьте, что автор уже сделала и что ещё хочет сделать.",
+          "explanation": "За год автор пробежала марафон, впервые съездила за границу, начала учить язык и организовала фестиваль. Её следующая цель — выступить на сцене.",
+          "questions": [
+            { "kind": "mcq", "question": "Что автор сделала в марте?", "options": ["ran a marathon", "travelled abroad", "organized a festival"], "answer": 0, "explanation": "В тексте: In March I ran my first marathon." },
+            { "kind": "mcq", "question": "Сколько стран она посетила?", "options": ["three", "two", "five"], "answer": 0, "explanation": "В тексте: So far I have visited three countries." },
+            { "kind": "mcq", "question": "Какая у неё следующая цель?", "options": ["to perform on stage", "to run another marathon", "to learn another language"], "answer": 0, "explanation": "В тексте: My next goal is to perform on stage." },
+            { "kind": "tfn", "statement": "She can speak the foreign language well.", "answer": "false", "explanation": "В тексте: I can't speak it well yet." },
+            { "kind": "tfn", "statement": "The festival was a success.", "answer": "true", "explanation": "В тексте: it was a success." },
+            { "kind": "tfn", "statement": "She has performed on stage before.", "answer": "false", "explanation": "В тексте: I have never done it before." }
+          ]
+        },
+        { "id": "b1.u01.l07.e02", "type": "translate_choice", "from": "en", "text": "This year has been the most exciting year of my life.", "options": ["Этот год стал самым интересным в моей жизни.", "Этот год был самым трудным в моей жизни.", "В этом году я жила интересно."], "answer": 0, "hint": "Образец: The most exciting.", "explanation": "Правильно: This year has been the most exciting year of my life." },
+        { "id": "b1.u01.l07.e03", "type": "fill_gap", "text": "In March I ___ my first marathon.", "translation": "В марте я пробежала свой первый марафон.", "answers": [["ran"]], "options": ["ran", "have run", "run"], "hint": "In March — конкретное время.", "explanation": "Правильно: In March I ran my first marathon.", "grammar": ["b1.perfect-vs-past"] },
+        { "id": "b1.u01.l07.e04", "type": "fill_gap", "text": "I have ___ organized a small music festival.", "translation": "Я только что организовала небольшой музыкальный фестиваль.", "answers": [["just"]], "options": ["just", "yet", "ever"], "hint": "Только что.", "explanation": "Правильно: I have just organized a small music festival.", "grammar": ["b1.already-yet-just"] },
+        { "id": "b1.u01.l07.e05", "type": "type_translation", "from": "ru", "text": "Пока что я побывала в трёх странах и попробовала много новой еды.", "answers": ["So far I have visited three countries and I have tasted a lot of new food.", "So far I have visited three countries and tasted a lot of new food.", "So far I have visited three countries and I have tried a lot of new food."], "difficulty": 3, "hint": "Образец: So far + Present Perfect.", "explanation": "Правильно: So far I have visited three countries and tasted a lot of new food.", "grammar": ["b1.already-yet-just"] },
+        { "id": "b1.u01.l07.e06", "type": "speak_describe", "picture": { "emoji": "🏆" }, "situation": "Расскажите о своём самом большом достижении: что вы сделали, когда и что почувствовали.", "keywords": [["\\bI (have|'ve)\\b"], ["\\b(won|ran|achieved|finished|learned|learnt|passed|organized|performed|was|felt|proud)\\b"]], "minKeywords": 2, "samples": ["I have achieved a lot this year. In May I passed an important exam. I was very proud."], "difficulty": 3, "hint": "Образец: I have achieved… In May I…", "explanation": "Опыт — Present Perfect, событие с датой — Past Simple.", "grammar": ["b1.perfect-vs-past"] },
+        { "id": "b1.u01.l07.e07", "type": "speak_answer", "question": "What have you done this week?", "questionRu": "Что вы уже сделали на этой неделе? И что ещё не сделали? Ответьте: I have already… I haven't… yet.", "keywords": [["\\bI (have|'ve)\\b"], ["\\b(already|yet|just|haven't)\\b"]], "minKeywords": 2, "samples": ["I have already finished my work, but I haven't cleaned the flat yet."], "difficulty": 3, "hint": "Образец: I have already… I haven't… yet.", "explanation": "Already — в середине, yet — в конце.", "grammar": ["b1.already-yet-just"] },
+        {
+          "id": "b1.u01.l07.e08",
+          "type": "write",
+          "task": "Напишите о своём опыте: где вы бывали, что пробовали, чего добились и чего ещё не сделали. Добавьте хотя бы одну подробную историю в Past Simple: когда это было и как прошло. Например: I have been to five countries. I have never climbed a mountain. Last year I ran my first marathon…",
+          "minWords": 70,
+          "maxWords": 160,
+          "criteria": [
+            { "id": "perfect", "label": "Есть Present Perfect", "patterns": ["\\b(have|has|'ve|haven't|hasn't) (never |already |just |ever |recently )?(been|visited|tried|tasted|done|seen|won|run|climbed|travelled|traveled|learned|learnt|achieved|organized|performed|started|finished)\\b"] },
+            { "id": "past", "label": "Есть Past Simple с указанием времени", "patterns": ["\\b(last (year|month|week|summer)|ago|in (19|20)[0-9]{2}|in (january|february|march|april|may|june|july|august|september|october|november|december)|yesterday|when I was)\\b"] },
+            { "id": "adverbs", "label": "Есть ever, never, already, yet, just или so far", "patterns": ["\\b(ever|never|already|yet|just|so far|once|twice|recently)\\b"] },
+            { "id": "feelings", "label": "Есть чувства или оценка", "patterns": ["\\b(proud|scared|brave|amazing|unforgettable|exciting|difficult|successful|happy|wonderful|great)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\b(have|has) [a-z]+ (last (year|month|week|summer)|yesterday|[a-z]+ ago)\\b", "message": "С точным временем (last year, yesterday, ago) нужно Past Simple: I visited Rome last year." },
+            { "pattern": "\\bwhen (have|has) \\b", "message": "Вопрос с when — в Past Simple: When did you go?" },
+            { "pattern": "\\b(have|has) (went|saw|did|ate|ran|wrote|took|was|were)\\b", "message": "После have нужна третья форма: gone, seen, done, eaten, run, written, taken, been." },
+            { "pattern": "\\bhaven't yet [a-z]+ed\\b", "message": "Yet ставят в конце: I haven't finished yet." },
+            { "pattern": "\\bjust (have|has)\\b", "message": "Just стоит после have: I have just finished." }
+          ],
+          "samples": [
+            "I have travelled a lot in my life. I have been to five countries, and I have tasted food from many cultures. I have never climbed a mountain, but I have always wanted to try. My biggest achievement was my first marathon. I ran it last May. It was very difficult, and I wanted to stop many times, but I finished, and I was very proud. Two years ago I climbed a volcano with my friends. So far I haven't learned a foreign language well, but I have just started a new course.",
+            "So far this year has been interesting. I have recently started a new job, and I have already made several new friends. Two months ago I organized a small festival at work. I was scared, but it was a big success. I have never performed on stage, and I haven't travelled abroad yet. My next goal is to visit Italy next summer with my sister. I think it will be an unforgettable experience for us."
+          ],
+          "difficulty": 3,
+          "hint": "План: опыт в целом → одна история с датой → чего ещё не сделали → цель.",
+          "explanation": "Об опыте без даты — Present Perfect (I have been, I have never…). О конкретном событии с датой — Past Simple. Already и just — в середине, yet — в конце.",
+          "grammar": ["b1.present-perfect", "b1.perfect-vs-past", "b1.already-yet-just"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "b1.u01.test.e01", "type": "match_pairs", "pairs": [{ "en": "achievement", "ru": "достижение" }, { "en": "opportunity", "ru": "возможность" }, { "en": "proud", "ru": "гордый" }, { "en": "audience", "ru": "зрители" }, { "en": "already", "ru": "уже" }], "hint": "Слова юнита.", "explanation": "Achievement — достижение, opportunity — возможность, proud — гордый, audience — зрители, already — уже." },
+      { "id": "b1.u01.test.e02", "type": "translate_choice", "from": "ru", "text": "незабываемый", "options": ["unforgettable", "successful", "foreign"], "answer": 0, "hint": "Не забыть никогда.", "explanation": "Unforgettable — «незабываемый»." },
+      { "id": "b1.u01.test.e03", "type": "fill_gap", "text": "She ___ been to Spain twice.", "translation": "Она дважды бывала в Испании.", "answers": [["has"]], "options": ["has", "have", "is"], "hint": "С she.", "explanation": "Правильно: She has been to Spain twice.", "grammar": ["b1.present-perfect"] },
+      { "id": "b1.u01.test.e04", "type": "fill_gap", "text": "Have you ___ tasted Italian food?", "translation": "Вы когда-нибудь пробовали итальянскую еду?", "answers": [["ever"]], "options": ["ever", "never", "yet"], "hint": "Когда-нибудь.", "explanation": "Правильно: Have you ever tasted Italian food?", "grammar": ["b1.present-perfect"] },
+      { "id": "b1.u01.test.e05", "type": "fill_gap", "text": "I have ___ this film.", "translation": "Я смотрел этот фильм.", "answers": [["seen"]], "options": ["seen", "saw", "see"], "hint": "Третья форма.", "explanation": "Правильно: I have seen this film.", "grammar": ["b1.present-perfect"] },
+      { "id": "b1.u01.test.e06", "type": "fill_gap", "text": "I ___ to Rome last year.", "translation": "В прошлом году я ездил в Рим.", "answers": [["went"]], "options": ["went", "have been", "have gone"], "hint": "Образец: Last year.", "explanation": "Правильно: I went to Rome last year.", "grammar": ["b1.perfect-vs-past"] },
+      { "id": "b1.u01.test.e07", "type": "fill_gap", "text": "I haven't finished ___.", "translation": "Я ещё не закончил.", "answers": [["yet"]], "options": ["yet", "already", "just"], "hint": "В конце.", "explanation": "Правильно: I haven't finished yet.", "grammar": ["b1.already-yet-just"] },
+      { "id": "b1.u01.test.e08", "type": "fill_gap", "text": "I have ___ arrived.", "translation": "Я только что приехал.", "answers": [["just"]], "options": ["just", "yet", "ever"], "hint": "Только что.", "explanation": "Правильно: I have just arrived.", "grammar": ["b1.already-yet-just"] },
+      { "id": "b1.u01.test.e09", "type": "error_correction", "text": "She has went to Spain.", "wrong": "went", "correction": "gone", "options": ["gone", "go", "goes"], "hint": "Третья форма.", "explanation": "Правильно: She has gone to Spain.", "grammar": ["b1.present-perfect"] },
+      { "id": "b1.u01.test.e10", "type": "error_correction", "text": "I have visited Rome last year.", "wrong": "have visited", "correction": "visited", "options": ["visited", "visit", "had visit"], "hint": "Образец: Last year.", "explanation": "Правильно: I visited Rome last year.", "grammar": ["b1.perfect-vs-past"] },
+      { "id": "b1.u01.test.e11", "type": "error_correction", "text": "I just have finished.", "wrong": "just have", "correction": "have just", "options": ["have just", "just has", "have yet"], "hint": "Порядок.", "explanation": "Правильно: I have just finished.", "grammar": ["b1.already-yet-just"] },
+      { "id": "b1.u01.test.e12", "type": "listen_choice", "audio": "Have you ever climbed a mountain?", "question": "Что вы слышите?", "options": ["Have you ever climbed a mountain?", "Did you climb a mountain?", "Have you climbed a mountain yet?"], "answer": 0, "hint": "Вопрос об опыте.", "explanation": "Правильно: Have you ever climbed a mountain?", "grammar": ["b1.present-perfect"] },
+      { "id": "b1.u01.test.e13", "type": "listen_dictation", "text": "I have never performed on stage.", "hint": "Шесть слов.", "explanation": "I have never performed on stage — «я никогда не выступал на сцене»." },
+      { "id": "b1.u01.test.e14", "type": "tiles", "from": "ru", "text": "Когда вы туда ездили?", "answer": "When did you go there?", "distractors": ["have", "been"], "difficulty": 2, "hint": "Образец: When + did.", "explanation": "Правильно: When did you go there?", "grammar": ["b1.perfect-vs-past"] },
+      { "id": "b1.u01.test.e15", "type": "type_translation", "from": "ru", "text": "Я никогда не был за границей.", "answers": ["I have never been abroad."], "difficulty": 2, "hint": "Образец: Have never been.", "explanation": "Правильно: I have never been abroad.", "grammar": ["b1.present-perfect"] },
+      { "id": "b1.u01.test.e16", "type": "speak_repeat", "text": "I have been to Italy, but I went there a long time ago.", "hint": "Две части с but.", "explanation": "Правильно: Have been [hæv bɪn], went [went]." }
+    ]
+  }
+}
