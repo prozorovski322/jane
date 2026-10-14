@@ -1,0 +1,336 @@
+{
+  "id": "b1.u07",
+  "level": "B1",
+  "order": 7,
+  "title": { "en": "Health and sport", "ru": "Здоровье и спорт" },
+  "description": "Говорим о здоровье, теле, стрессе и спорте: тренировки, клубы, матчи и советы. Present Perfect Continuous (I have been training), too и enough, советы с you'd better, ought to и if I were you.",
+  "goals": [
+    "Могу говорить о здоровье, теле и привычках.",
+    "Могу рассказать, чем занимаюсь и как долго: I have been running for a year.",
+    "Могу сказать, что чего-то слишком много или недостаточно: too tired, fit enough.",
+    "Могу дать совет разными способами: you'd better, ought to, if I were you.",
+    "Могу говорить о спорте: матчи, команды, тренеры, болельщики.",
+    "Могу написать письмо-совет другу, который хочет заняться спортом."
+  ],
+  "grammar": ["b1.perfect-continuous", "b1.too-enough", "b1.advice"],
+  "troubles": ["tenses", "word-order"],
+  "words": [
+    { "id": "body", "en": "body", "ipa": "ˈbɑːdi", "pos": "noun", "ru": ["тело"], "example": { "en": "Sport is good for your body.", "ru": "Спорт полезен для тела." }, "forms": { "plural": "bodies" }, "topics": ["health"] },
+    { "id": "heart", "en": "heart", "ipa": "hɑːrt", "pos": "noun", "ru": ["сердце"], "example": { "en": "Running is good for your heart.", "ru": "Бег полезен для сердца." }, "picture": { "emoji": "❤️" }, "topics": ["health"] },
+    { "id": "blood", "en": "blood", "ipa": "blʌd", "pos": "noun", "ru": ["кровь"], "example": { "en": "The doctor checked my blood.", "ru": "Врач проверил мне кровь." }, "topics": ["health"] },
+    { "id": "muscle", "en": "muscle", "ipa": "ˈmʌsəl", "pos": "noun", "ru": ["мышца"], "example": { "en": "My muscles hurt after the gym.", "ru": "После спортзала у меня болят мышцы." }, "note": "C не читается: [ˈmʌsəl].", "topics": ["health"] },
+    { "id": "knee", "en": "knee", "ipa": "niː", "pos": "noun", "ru": ["колено"], "example": { "en": "I hurt my knee.", "ru": "Я повредил колено." }, "note": "K в начале не читается: [niː].", "topics": ["health"] },
+    { "id": "injury", "en": "injury", "ipa": "ˈɪndʒɚi", "pos": "noun", "ru": ["травма"], "example": { "en": "He can't play because of an injury.", "ru": "Он не может играть из-за травмы." }, "forms": { "plural": "injuries" }, "topics": ["health"] },
+    { "id": "illness", "en": "illness", "ipa": "ˈɪlnəs", "pos": "noun", "ru": ["болезнь"], "example": { "en": "He felt weak after a long illness.", "ru": "После долгой болезни он чувствовал слабость." }, "topics": ["health"] },
+    { "id": "breathe", "en": "breathe", "ipa": "briːð", "pos": "verb", "ru": ["дышать"], "example": { "en": "Breathe slowly.", "ru": "Дышите медленно." }, "forms": { "third": "breathes" }, "note": "Breath [breθ] — «дыхание», breathe [briːð] — «дышать».", "topics": ["health"] },
+    { "id": "weight", "en": "weight", "ipa": "weɪt", "pos": "noun", "ru": ["вес"], "example": { "en": "He has lost a lot of weight.", "ru": "Он сильно похудел." }, "note": "Lose weight — «худеть», put on weight — «поправляться».", "topics": ["health"] },
+    { "id": "diet", "en": "diet", "ipa": "ˈdaɪət", "pos": "noun", "ru": ["питание", "диета"], "example": { "en": "A healthy diet is important.", "ru": "Здоровое питание важно." }, "topics": ["health"] },
+    { "id": "vitamin", "en": "vitamin", "ipa": "ˈvaɪtəmɪn", "pos": "noun", "ru": ["витамин"], "example": { "en": "Fruit has a lot of vitamins.", "ru": "Во фруктах много витаминов." }, "topics": ["health"] },
+    { "id": "meal", "en": "meal", "ipa": "miːl", "pos": "noun", "ru": ["приём пищи", "еда"], "example": { "en": "Don't eat a big meal before you run.", "ru": "Не ешьте плотно перед бегом." }, "topics": ["food"] },
+    { "id": "stress", "en": "stress", "ipa": "stres", "pos": "noun", "ru": ["стресс"], "example": { "en": "Sport helps with stress.", "ru": "Спорт помогает справиться со стрессом." }, "topics": ["health"] },
+    { "id": "relax", "en": "relax", "ipa": "rɪˈlæks", "pos": "verb", "ru": ["расслабляться", "отдыхать"], "example": { "en": "I relax with yoga.", "ru": "Я расслабляюсь с помощью йоги." }, "forms": { "third": "relaxes" }, "topics": ["health"] },
+    { "id": "calm", "en": "calm", "ipa": "kɑːm", "pos": "adj", "ru": ["спокойный"], "example": { "en": "Yoga is calm.", "ru": "Йога спокойная." }, "note": "L не читается: [kɑːm].", "topics": ["feelings"] },
+    { "id": "mental", "en": "mental", "ipa": "ˈmentəl", "pos": "adj", "ru": ["психический", "душевный"], "example": { "en": "Mental health is important too.", "ru": "Психическое здоровье тоже важно." }, "topics": ["health"] },
+    { "id": "mind", "en": "mind", "ipa": "maɪnd", "pos": "noun", "ru": ["ум", "психика"], "example": { "en": "Yoga is good for your body and your mind.", "ru": "Йога полезна для тела и для головы." }, "topics": ["health"] },
+    { "id": "active", "en": "active", "ipa": "ˈæktɪv", "pos": "adj", "ru": ["активный"], "example": { "en": "My grandmother is very active.", "ru": "Моя бабушка очень активная." }, "topics": ["health"] },
+    { "id": "regularly", "en": "regularly", "ipa": "ˈreɡjəlɚli", "pos": "adv", "ru": ["регулярно"], "example": { "en": "I do sport regularly.", "ru": "Я регулярно занимаюсь спортом." }, "topics": ["adverbs"] },
+    { "id": "exhausted", "en": "exhausted", "ipa": "ɪɡˈzɔːstɪd", "pos": "adj", "ru": ["измотанный", "без сил"], "example": { "en": "You look exhausted.", "ru": "Ты выглядишь измотанным." }, "note": "Exhausted — сильнее, чем tired: «совсем без сил».", "topics": ["feelings"] },
+    { "id": "fitness", "en": "fitness", "ipa": "ˈfɪtnəs", "pos": "noun", "ru": ["физическая форма", "фитнес"], "example": { "en": "Fitness is important for football players.", "ru": "Футболистам важна физическая форма." }, "topics": ["sport"] },
+    { "id": "yoga", "en": "yoga", "ipa": "ˈjoʊɡə", "pos": "noun", "ru": ["йога"], "example": { "en": "I have been doing yoga for a year.", "ru": "Я занимаюсь йогой уже год." }, "picture": { "emoji": "🧘" }, "topics": ["sport"] },
+    { "id": "coach", "en": "coach", "ipa": "koʊtʃ", "pos": "noun", "ru": ["тренер"], "example": { "en": "Our coach is great.", "ru": "Тренер у нас отличный." }, "forms": { "plural": "coaches" }, "topics": ["sport"] },
+    { "id": "player", "en": "player", "ipa": "ˈpleɪɚ", "pos": "noun", "ru": ["игрок"], "example": { "en": "He is the best player in the team.", "ru": "Он лучший игрок в команде." }, "topics": ["sport"] },
+    { "id": "match", "en": "match", "ipa": "mætʃ", "pos": "noun", "ru": ["матч"], "example": { "en": "We watched the match at home.", "ru": "Мы смотрели матч дома." }, "forms": { "plural": "matches" }, "topics": ["sport"] },
+    { "id": "score", "en": "score", "ipa": "skɔːr", "pos": "verb", "ru": ["забивать (гол)", "набирать очки"], "example": { "en": "He scored two goals.", "ru": "Он забил два гола." }, "forms": { "third": "scores" }, "topics": ["sport"] },
+    { "id": "beat", "en": "beat", "ipa": "biːt", "pos": "verb", "ru": ["обыграть", "победить"], "example": { "en": "We beat them three to one.", "ru": "Мы обыграли их три — один." }, "forms": { "third": "beats" }, "note": "Win a match — выиграть матч, beat a team — обыграть команду.", "topics": ["sport"] },
+    { "id": "champion", "en": "champion", "ipa": "ˈtʃæmpiən", "pos": "noun", "ru": ["чемпион"], "example": { "en": "She is the world champion.", "ru": "Она чемпионка мира." }, "topics": ["sport"] },
+    { "id": "club", "en": "club", "ipa": "klʌb", "pos": "noun", "ru": ["клуб", "секция"], "example": { "en": "I joined a running club.", "ru": "Я записался в беговой клуб." }, "topics": ["sport"] },
+    { "id": "member", "en": "member", "ipa": "ˈmembɚ", "pos": "noun", "ru": ["член (клуба)", "участник"], "example": { "en": "The club has fifty members.", "ru": "В клубе пятьдесят человек." }, "topics": ["sport"] },
+    { "id": "fan", "en": "fan", "ipa": "fæn", "pos": "noun", "ru": ["болельщик", "фанат"], "example": { "en": "The fans were singing.", "ru": "Болельщики пели." }, "topics": ["sport"] },
+    { "id": "stadium", "en": "stadium", "ipa": "ˈsteɪdiəm", "pos": "noun", "ru": ["стадион"], "example": { "en": "The stadium was full.", "ru": "Стадион был полон." }, "picture": { "emoji": "🏟️" }, "topics": ["sport"] },
+    { "id": "medal", "en": "medal", "ipa": "ˈmedəl", "pos": "noun", "ru": ["медаль"], "example": { "en": "She has won three medals.", "ru": "Она выиграла три медали." }, "picture": { "emoji": "🏅" }, "topics": ["sport"] },
+    { "id": "weak", "en": "weak", "ipa": "wiːk", "pos": "adj", "ru": ["слабый"], "example": { "en": "I am too weak to run today.", "ru": "Сегодня я слишком слаб, чтобы бегать." }, "topics": ["health"] },
+    { "id": "smoke", "en": "smoke", "ipa": "smoʊk", "pos": "verb", "ru": ["курить"], "example": { "en": "My father doesn't smoke.", "ru": "Мой папа не курит." }, "forms": { "third": "smokes" }, "topics": ["health"] },
+    { "id": "recommend", "en": "recommend", "ipa": "ˌrekəˈmend", "pos": "verb", "ru": ["рекомендовать", "советовать"], "example": { "en": "I recommend this club.", "ru": "Я рекомендую этот клуб." }, "forms": { "third": "recommends" }, "note": "Одна c и две m: recommend.", "topics": ["verbs"] },
+    { "id": "lately", "en": "lately", "ipa": "ˈleɪtli", "pos": "adv", "ru": ["в последнее время"], "example": { "en": "I have been sleeping badly lately.", "ru": "В последнее время я плохо сплю." }, "topics": ["time"] },
+    { "id": "ought-to", "en": "ought to", "ipa": "ˈɔːt tuː", "pos": "modal", "ru": ["следует", "стоит"], "example": { "en": "You ought to drink more water.", "ru": "Тебе следует пить больше воды." }, "topics": ["grammar"] },
+    { "id": "had-better", "en": "had better", "ipa": "hæd ˈbetɚ", "pos": "modal", "ru": ["лучше бы (тебе)"], "example": { "en": "You'd better see a doctor.", "ru": "Тебе лучше сходить к врачу." }, "note": "Коротко: you'd better. После него глагол без to.", "topics": ["grammar"] },
+    { "id": "give-up", "en": "give up", "ipa": "ɡɪv ʌp", "pos": "phrasal", "ru": ["бросить", "сдаться"], "example": { "en": "He gave up smoking.", "ru": "Он бросил курить." }, "forms": { "third": "gives up" }, "note": "После give up — форма на -ing: give up smoking.", "topics": ["phrasal"] },
+    { "id": "take-up", "en": "take up", "ipa": "teɪk ʌp", "pos": "phrasal", "ru": ["заняться (новым делом)"], "example": { "en": "I took up yoga last year.", "ru": "Я занялся йогой в прошлом году." }, "forms": { "third": "takes up" }, "topics": ["phrasal"] },
+    { "id": "work-out", "en": "work out", "ipa": "wɝːk aʊt", "pos": "phrasal", "ru": ["тренироваться"], "example": { "en": "I work out at the gym three times a week.", "ru": "Я тренируюсь в зале три раза в неделю." }, "forms": { "third": "works out" }, "topics": ["phrasal"] },
+    { "id": "warm-up", "en": "warm up", "ipa": "wɔːrm ʌp", "pos": "phrasal", "ru": ["разминаться"], "example": { "en": "Always warm up before you run.", "ru": "Всегда разминайтесь перед бегом." }, "forms": { "third": "warms up" }, "topics": ["phrasal"] },
+    { "id": "slowly", "en": "slowly", "ipa": "ˈsloʊli", "pos": "adv", "ru": ["медленно"], "example": { "en": "Breathe slowly.", "ru": "Дышите медленно." }, "topics": ["adverbs"] },
+    { "id": "fast", "en": "fast", "ipa": "fæst", "pos": "adv", "ru": ["быстро", "быстрый"], "example": { "en": "Don't run too fast.", "ru": "Не бегайте слишком быстро." }, "note": "Fast — и прилагательное, и наречие: a fast car, run fast. Слова fastly нет.", "topics": ["adverbs"] },
+    { "id": "badly", "en": "badly", "ipa": "ˈbædli", "pos": "adv", "ru": ["плохо"], "example": { "en": "I have been sleeping badly lately.", "ru": "В последнее время я плохо сплю." }, "topics": ["adverbs"] },
+    { "id": "understand", "en": "understand", "ipa": "ˌʌndɚˈstænd", "pos": "verb", "ru": ["понимать"], "example": { "en": "I understand, but I have no time.", "ru": "Понимаю, но у меня нет времени." }, "forms": { "third": "understands" }, "topics": ["verbs"] },
+    { "id": "especially", "en": "especially", "ipa": "əˈspeʃəli", "pos": "adv", "ru": ["особенно"], "example": { "en": "I love sport, especially tennis.", "ru": "Я люблю спорт, особенно теннис." }, "topics": ["adverbs"] },
+    { "id": "pool", "en": "pool", "ipa": "puːl", "pos": "noun", "ru": ["бассейн"], "example": { "en": "I go to the pool twice a week.", "ru": "Я хожу в бассейн два раза в неделю." }, "topics": ["sport"] },
+    { "id": "tip", "en": "tip", "ipa": "tɪp", "pos": "noun", "ru": ["совет", "подсказка"], "example": { "en": "Here are my five tips.", "ru": "Вот мои пять советов." }, "note": "Tip — короткий практический совет. Ещё значит «чаевые».", "topics": ["communication"] }
+  ],
+  "texts": [
+    {
+      "id": "b1.u07.tired",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "You look exhausted", "ru": "Ты выглядишь измотанной" },
+      "speakers": [
+        { "id": "max", "name": "Max", "voice": "male" },
+        { "id": "elena", "name": "Elena", "voice": "female" }
+      ],
+      "lines": [
+        { "speaker": "max", "en": "Elena, you look exhausted. Are you OK?", "ru": "Елена, ты выглядишь измотанной. Ты в порядке?" },
+        { "speaker": "elena", "en": "Not really. I have been working too much lately, and I haven't been sleeping well.", "ru": "Не очень. В последнее время я слишком много работаю и плохо сплю." },
+        { "speaker": "max", "en": "Have you been doing any sport?", "ru": "А спортом ты занимаешься?" },
+        { "speaker": "elena", "en": "No. I'm too tired to do sport, and I don't have enough time.", "ru": "Нет. Я слишком устаю, и у меня не хватает времени." },
+        { "speaker": "max", "en": "I understand, but sport helps with stress. I have been running for three months now, and I feel much better.", "ru": "Понимаю, но спорт помогает от стресса. Я бегаю уже три месяца и чувствую себя гораздо лучше." },
+        { "speaker": "elena", "en": "Three months? Are you training for something?", "ru": "Три месяца? Ты к чему-то готовишься?" },
+        { "speaker": "max", "en": "Yes, for a marathon in October. I joined a running club, and our coach is great.", "ru": "Да, к марафону в октябре. Я записался в беговой клуб, и тренер у нас отличный." },
+        { "speaker": "elena", "en": "I'm not fit enough to run a marathon!", "ru": "Я недостаточно в форме, чтобы бежать марафон!" },
+        { "speaker": "max", "en": "You don't have to. If I were you, I'd start with yoga. It's calm, and it's good for your body and your mind.", "ru": "И не надо. На твоём месте я бы начал с йоги. Она спокойная и полезна и для тела, и для головы." },
+        { "speaker": "elena", "en": "Maybe you're right. I ought to try something.", "ru": "Может, ты и прав. Мне стоит что-то попробовать." },
+        { "speaker": "max", "en": "And you'd better go to bed earlier, too!", "ru": "И ложиться тебе лучше пораньше!" }
+      ]
+    },
+    {
+      "id": "b1.u07.tips",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "Five tips from a running coach", "ru": "Пять советов от тренера по бегу" },
+      "lines": [
+        { "en": "I have been working as a running coach for ten years, and people often ask me the same question: how do I start? Here are my five tips.", "ru": "Я работаю тренером по бегу уже десять лет, и люди часто задают мне один и тот же вопрос: с чего начать? Вот мои пять советов." },
+        { "en": "First, don't run too fast or too far. Many people run too much on the first day. The next morning their muscles hurt so much that they give up.", "ru": "Во-первых, не бегайте слишком быстро и слишком далеко. Многие в первый день бегают слишком много. На следующее утро мышцы болят так, что они бросают." },
+        { "en": "Second, always warm up. Walk for five minutes before you start running. This helps you avoid injuries, especially to your knees.", "ru": "Во-вторых, всегда разминайтесь. Пройдите пешком пять минут, прежде чем побежать. Это помогает избежать травм, особенно коленей." },
+        { "en": "Third, run regularly. It is better to run for twenty minutes three times a week than for two hours once a month.", "ru": "В-третьих, бегайте регулярно. Лучше бегать по двадцать минут три раза в неделю, чем два часа раз в месяц." },
+        { "en": "Fourth, think about your diet. You ought to eat enough fruit and vegetables and drink a lot of water. You'd better not eat a big meal before you run.", "ru": "В-четвёртых, подумайте о питании. Нужно есть достаточно фруктов и овощей и пить много воды. Перед бегом лучше не есть плотно." },
+        { "en": "Finally, be patient. Your body needs time. After two or three months you will be surprised: you will breathe better, you will sleep better, and you will have more energy. If I were you, I would start tomorrow morning.", "ru": "И наконец, будьте терпеливы. Телу нужно время. Через два-три месяца вы удивитесь: вы будете лучше дышать, лучше спать, и у вас будет больше сил. На вашем месте я бы начал завтра утром." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "b1.u07.l01",
+      "kind": "vocabulary",
+      "title": "Тело и здоровье",
+      "exercises": [
+        { "id": "b1.u07.l01.e01", "type": "match_pairs", "pairs": [{ "en": "body", "ru": "тело" }, { "en": "heart", "ru": "сердце" }, { "en": "blood", "ru": "кровь" }, { "en": "muscle", "ru": "мышца" }, { "en": "knee", "ru": "колено" }], "hint": "Части тела.", "explanation": "Body — тело, heart — сердце, blood — кровь, muscle — мышца, knee — колено." },
+        { "id": "b1.u07.l01.e02", "type": "match_pairs", "pairs": [{ "en": "injury", "ru": "травма" }, { "en": "illness", "ru": "болезнь" }, { "en": "breathe", "ru": "дышать" }, { "en": "weight", "ru": "вес" }, { "en": "diet", "ru": "питание" }], "hint": "Injury — от спорта, illness — от вируса.", "explanation": "Injury — травма, illness — болезнь, breathe — дышать, weight — вес, diet — питание." },
+        { "id": "b1.u07.l01.e03", "type": "match_pairs", "pairs": [{ "en": "vitamin", "ru": "витамин" }, { "en": "meal", "ru": "приём пищи" }, { "en": "stress", "ru": "стресс" }, { "en": "relax", "ru": "расслабляться" }, { "en": "calm", "ru": "спокойный" }], "hint": "Relax — отдыхать.", "explanation": "Vitamin — витамин, meal — приём пищи, stress — стресс, relax — расслабляться, calm — спокойный." },
+        { "id": "b1.u07.l01.e04", "type": "match_pairs", "pairs": [{ "en": "mental", "ru": "психический" }, { "en": "mind", "ru": "ум" }, { "en": "active", "ru": "активный" }, { "en": "regularly", "ru": "регулярно" }, { "en": "exhausted", "ru": "измотанный" }], "hint": "Exhausted — сильнее, чем tired.", "explanation": "Mental — психический, mind — ум, active — активный, regularly — регулярно, exhausted — измотанный." },
+        { "id": "b1.u07.l01.e15", "type": "match_pairs", "pairs": [{ "en": "slowly", "ru": "медленно" }, { "en": "fast", "ru": "быстро" }, { "en": "badly", "ru": "плохо" }, { "en": "understand", "ru": "понимать" }, { "en": "especially", "ru": "особенно" }], "hint": "Наречия и глагол.", "explanation": "Slowly — медленно, fast — быстро, badly — плохо, understand — понимать, especially — особенно." },
+        { "id": "b1.u07.l01.e05", "type": "picture_choice", "mode": "picture-to-word", "word": "heart", "distractors": ["yoga", "medal"], "hint": "Оно бьётся.", "explanation": "Heart [hɑːrt] — «сердце»." },
+        { "id": "b1.u07.l01.e06", "type": "translate_choice", "from": "en", "text": "He has lost a lot of weight.", "options": ["Он сильно похудел.", "Он потерял много денег.", "Он поднял много веса."], "answer": 0, "hint": "Образец: Lose weight.", "explanation": "Lose weight — «худеть»: He has lost a lot of weight." },
+        { "id": "b1.u07.l01.e07", "type": "fill_gap", "text": "My ___ hurt after the gym.", "translation": "После спортзала у меня болят мышцы.", "answers": [["muscles"]], "options": ["muscles", "minds", "meals"], "hint": "Мышцы.", "explanation": "Правильно: My muscles hurt after the gym." },
+        { "id": "b1.u07.l01.e08", "type": "fill_gap", "text": "A healthy ___ is important.", "translation": "Здоровое питание важно.", "answers": [["diet"]], "options": ["diet", "blood", "injury"], "hint": "Питание.", "explanation": "Правильно: A healthy diet is important." },
+        { "id": "b1.u07.l01.e09", "type": "fill_gap", "text": "___ slowly. In and out.", "translation": "Дышите медленно. Вдох и выдох.", "answers": [["Breathe"]], "options": ["Breathe", "Relax", "Smoke"], "hint": "Дышать.", "explanation": "Breathe slowly. Breathe [briːð] — глагол." },
+        { "id": "b1.u07.l01.e10", "type": "fill_gap", "text": "Mental health is important ___.", "translation": "Психическое здоровье тоже важно.", "answers": [["too"]], "options": ["too", "enough", "very"], "hint": "Тоже — в конце.", "explanation": "Правильно: Mental health is important too." },
+        { "id": "b1.u07.l01.e11", "type": "listen_choice", "audio": "You look exhausted.", "question": "Что вы слышите?", "options": ["You look exhausted.", "You look excited.", "You look surprised."], "answer": 0, "hint": "Без сил.", "explanation": "You look exhausted — «ты выглядишь измотанным»." },
+        { "id": "b1.u07.l01.e12", "type": "listen_dictation", "text": "Sport helps with stress.", "hint": "Четыре слова.", "explanation": "Sport helps with stress — «спорт помогает от стресса»." },
+        { "id": "b1.u07.l01.e13", "type": "type_translation", "from": "ru", "text": "колено", "answers": ["knee"], "hint": "Первая буква не читается.", "explanation": "Knee [niː] — «колено». K не читается." },
+        { "id": "b1.u07.l01.e14", "type": "word_stress", "word": "exhausted", "syllables": ["ex", "haust", "ed"], "stress": 1, "hint": "Второй слог.", "explanation": "ex-HAUST-ed — ударение на второй слог." }
+      ]
+    },
+    {
+      "id": "b1.u07.l02",
+      "kind": "vocabulary",
+      "title": "Спорт",
+      "exercises": [
+        { "id": "b1.u07.l02.e01", "type": "match_pairs", "pairs": [{ "en": "fitness", "ru": "физическая форма" }, { "en": "yoga", "ru": "йога" }, { "en": "coach", "ru": "тренер" }, { "en": "player", "ru": "игрок" }, { "en": "match", "ru": "матч" }], "hint": "Coach — тренер.", "explanation": "Fitness — физическая форма, yoga — йога, coach — тренер, player — игрок, match — матч." },
+        { "id": "b1.u07.l02.e02", "type": "match_pairs", "pairs": [{ "en": "score", "ru": "забивать" }, { "en": "beat", "ru": "обыграть" }, { "en": "champion", "ru": "чемпион" }, { "en": "club", "ru": "клуб" }, { "en": "member", "ru": "член клуба" }], "hint": "Образец: Score a goal.", "explanation": "Score — забивать, beat — обыграть, champion — чемпион, club — клуб, member — член клуба." },
+        { "id": "b1.u07.l02.e03", "type": "match_pairs", "pairs": [{ "en": "fan", "ru": "болельщик" }, { "en": "stadium", "ru": "стадион" }, { "en": "medal", "ru": "медаль" }, { "en": "weak", "ru": "слабый" }, { "en": "smoke", "ru": "курить" }], "hint": "Weak — противоположность strong.", "explanation": "Fan — болельщик, stadium — стадион, medal — медаль, weak — слабый, smoke — курить." },
+        { "id": "b1.u07.l02.e04", "type": "match_pairs", "pairs": [{ "en": "recommend", "ru": "рекомендовать" }, { "en": "lately", "ru": "в последнее время" }, { "en": "ought to", "ru": "следует" }, { "en": "had better", "ru": "лучше бы" }, { "en": "give up", "ru": "бросить" }], "hint": "Ought to и had better — советы.", "explanation": "Recommend — рекомендовать, lately — в последнее время, ought to — следует, had better — лучше бы, give up — бросить." },
+        { "id": "b1.u07.l02.e05", "type": "match_pairs", "pairs": [{ "en": "take up", "ru": "заняться" }, { "en": "work out", "ru": "тренироваться" }, { "en": "warm up", "ru": "разминаться" }, { "en": "give up", "ru": "бросить" }, { "en": "find out", "ru": "выяснить" }], "hint": "Фразовые глаголы.", "explanation": "Take up — заняться, work out — тренироваться, warm up — разминаться, give up — бросить, find out — выяснить." },
+        { "id": "b1.u07.l02.e16", "type": "match_pairs", "pairs": [{ "en": "pool", "ru": "бассейн" }, { "en": "tip", "ru": "совет" }, { "en": "stadium", "ru": "стадион" }, { "en": "champion", "ru": "чемпион" }, { "en": "club", "ru": "клуб" }], "hint": "Tip — короткий совет.", "explanation": "Pool — бассейн, tip — совет, stadium — стадион, champion — чемпион, club — клуб." },
+        { "id": "b1.u07.l02.e06", "type": "picture_choice", "mode": "word-to-picture", "word": "medal", "distractors": ["stadium", "yoga"], "hint": "Её дают победителю.", "explanation": "Medal [ˈmedəl] — «медаль»." },
+        { "id": "b1.u07.l02.e07", "type": "picture_choice", "mode": "picture-to-word", "word": "stadium", "distractors": ["medal", "heart"], "hint": "Там играют матчи.", "explanation": "Stadium [ˈsteɪdiəm] — «стадион»." },
+        { "id": "b1.u07.l02.e08", "type": "fill_gap", "text": "He ___ two goals in the match.", "translation": "Он забил два гола в матче.", "answers": [["scored"]], "options": ["scored", "beat", "won"], "hint": "Забить гол.", "explanation": "Правильно: He scored two goals." },
+        { "id": "b1.u07.l02.e09", "type": "fill_gap", "text": "We ___ them three to one.", "translation": "Мы обыграли их три — один.", "answers": [["beat"]], "options": ["beat", "won", "scored"], "hint": "Обыграть команду — не win.", "explanation": "Правильно: We beat them three to one. Win a match, beat a team." },
+        { "id": "b1.u07.l02.e10", "type": "fill_gap", "text": "He gave ___ smoking last year.", "translation": "Он бросил курить в прошлом году.", "answers": [["up"]], "options": ["up", "out", "off"], "hint": "Бросить.", "explanation": "Правильно: He gave up smoking." },
+        { "id": "b1.u07.l02.e11", "type": "fill_gap", "text": "I work ___ at the gym three times a week.", "translation": "Я тренируюсь в зале три раза в неделю.", "answers": [["out"]], "options": ["out", "up", "on"], "hint": "Тренироваться.", "explanation": "Правильно: I work out at the gym three times a week." },
+        { "id": "b1.u07.l02.e12", "type": "listen_choice", "audio": "I took up yoga last year.", "question": "Что вы слышите?", "options": ["I took up yoga last year.", "I gave up yoga last year.", "I tried yoga last week."], "answer": 0, "hint": "Занялся.", "explanation": "I took up yoga last year — «я занялся йогой в прошлом году»." },
+        { "id": "b1.u07.l02.e13", "type": "listen_dictation", "text": "Always warm up before you run.", "hint": "Шесть слов.", "explanation": "Always warm up before you run — «всегда разминайтесь перед бегом»." },
+        { "id": "b1.u07.l02.e14", "type": "type_translation", "from": "ru", "text": "тренер", "answers": ["coach"], "hint": "Как автобус между городами.", "explanation": "Coach [koʊtʃ] — «тренер»." },
+        { "id": "b1.u07.l02.e15", "type": "word_stress", "word": "recommend", "syllables": ["rec", "om", "mend"], "stress": 2, "hint": "Последний слог.", "explanation": "rec-om-MEND — ударение на последний слог." }
+      ]
+    },
+    {
+      "id": "b1.u07.l03",
+      "kind": "grammar",
+      "title": "I have been training for two years",
+      "grammar": "b1.perfect-continuous",
+      "exercises": [
+        { "id": "b1.u07.l03.e01", "type": "fill_gap", "text": "I have ___ running for an hour.", "translation": "Я бегаю уже час.", "answers": [["been"]], "options": ["been", "be", "being"], "hint": "После have — третья форма be.", "explanation": "Правильно: I have been running for an hour.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "b1.u07.l03.e02", "type": "fill_gap", "text": "She has been ___ since May.", "translation": "Она тренируется с мая.", "answers": [["training"]], "options": ["training", "trained", "train"], "hint": "Форма на -ing.", "explanation": "Правильно: She has been training since May.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "b1.u07.l03.e03", "type": "fill_gap", "text": "How long ___ you been learning English?", "translation": "Сколько вы уже учите английский?", "answers": [["have"]], "options": ["have", "are", "do"], "hint": "Вспомогательный глагол.", "explanation": "Правильно: How long have you been learning English?", "grammar": ["b1.perfect-continuous"] },
+        { "id": "b1.u07.l03.e04", "type": "fill_gap", "text": "I'm tired because I have been ___ all day.", "translation": "Я устал, потому что работал весь день.", "answers": [["working"]], "options": ["working", "worked", "work"], "hint": "Процесс.", "explanation": "Правильно: I have been working all day.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "b1.u07.l03.e05", "type": "fill_gap", "text": "I have ___ him for ten years.", "translation": "Я знаю его десять лет.", "answers": [["known"]], "options": ["known", "been knowing", "know"], "hint": "Know не бывает в continuous.", "explanation": "Правильно: I have known him for ten years.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "b1.u07.l03.e06", "type": "fill_gap", "text": "I have been sleeping badly ___.", "translation": "В последнее время я плохо сплю.", "answers": [["lately"]], "options": ["lately", "yesterday", "ago"], "hint": "В последнее время.", "explanation": "Правильно: I have been sleeping badly lately.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "b1.u07.l03.e07", "type": "error_correction", "text": "I am training for two years.", "wrong": "am training", "correction": "have been training", "options": ["have been training", "was training", "am trained"], "hint": "С прошлого до сих пор.", "explanation": "Правильно: I have been training for two years.", "grammar": ["b1.perfect-continuous"], "troubles": ["tenses"] },
+        { "id": "b1.u07.l03.e08", "type": "error_correction", "text": "How long are you playing tennis?", "wrong": "are you playing", "correction": "have you been playing", "options": ["have you been playing", "do you play", "were you playing"], "hint": "How long + с прошлого.", "explanation": "Правильно: How long have you been playing tennis?", "grammar": ["b1.perfect-continuous"], "troubles": ["tenses"] },
+        { "id": "b1.u07.l03.e09", "type": "error_correction", "text": "I have been knowing him for years.", "wrong": "have been knowing", "correction": "have known", "options": ["have known", "am knowing", "knew"], "hint": "Глагол состояния.", "explanation": "Правильно: I have known him for years.", "grammar": ["b1.perfect-continuous"], "troubles": ["tenses"] },
+        { "id": "b1.u07.l03.e10", "type": "tiles", "from": "ru", "text": "Я занимаюсь йогой уже год.", "answer": "I have been doing yoga for a year.", "distractors": ["am", "since"], "difficulty": 2, "hint": "Образец: Have been doing.", "explanation": "Правильно: I have been doing yoga for a year.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "b1.u07.l03.e11", "type": "tiles", "from": "ru", "text": "У тебя красное лицо. Ты бегал?", "answer": "Your face is red. Have you been running?", "distractors": ["did", "are"], "difficulty": 3, "hint": "Видно по следу.", "explanation": "Правильно: Your face is red. Have you been running?", "grammar": ["b1.perfect-continuous"] },
+        { "id": "b1.u07.l03.e12", "type": "type_translation", "from": "ru", "text": "Я бегаю уже три месяца.", "answers": ["I have been running for three months.", "I've been running for three months."], "difficulty": 2, "hint": "Образец: Have been + -ing + for.", "explanation": "Правильно: I have been running for three months.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "b1.u07.l03.e13", "type": "type_translation", "from": "ru", "text": "Сколько вы уже играете в теннис?", "answers": ["How long have you been playing tennis?"], "difficulty": 3, "hint": "Образец: How long have you…", "explanation": "Правильно: How long have you been playing tennis?", "grammar": ["b1.perfect-continuous"] },
+        { "id": "b1.u07.l03.e14", "type": "listen_choice", "audio": "She has been training since May.", "question": "Что вы слышите?", "options": ["She has been training since May.", "She was training in May.", "She will be training in May."], "answer": 0, "hint": "С мая до сих пор.", "explanation": "Правильно: She has been training since May.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "b1.u07.l03.e15", "type": "speak_answer", "question": "How long have you been learning English?", "questionRu": "Сколько вы уже учите английский? Ответьте: I have been learning English for… / since…", "keywords": [["\\b(have|I've) been learning\\b"], ["\\b(for|since)\\b"]], "minKeywords": 2, "samples": ["I have been learning English for two years.", "I've been learning English since September."], "difficulty": 3, "hint": "Образец: I have been learning English for…", "explanation": "Ответ: I have been learning English for two years.", "grammar": ["b1.perfect-continuous"] }
+      ]
+    },
+    {
+      "id": "b1.u07.l04",
+      "kind": "grammar",
+      "title": "Too tired, fit enough",
+      "grammar": "b1.too-enough",
+      "exercises": [
+        { "id": "b1.u07.l04.e01", "type": "fill_gap", "text": "I am ___ tired to run today.", "translation": "Я слишком устал, чтобы бегать сегодня.", "answers": [["too"]], "options": ["too", "enough", "very"], "hint": "Слишком.", "explanation": "Правильно: I am too tired to run today.", "grammar": ["b1.too-enough"] },
+        { "id": "b1.u07.l04.e02", "type": "fill_gap", "text": "He isn't fit ___ to run a marathon.", "translation": "Он недостаточно в форме, чтобы пробежать марафон.", "answers": [["enough"]], "options": ["enough", "too", "very"], "hint": "Достаточно — после прилагательного.", "explanation": "Правильно: He isn't fit enough to run a marathon.", "grammar": ["b1.too-enough"] },
+        { "id": "b1.u07.l04.e03", "type": "fill_gap", "text": "Do you get ___ sleep?", "translation": "Вы достаточно спите?", "answers": [["enough"]], "options": ["enough", "too", "many"], "hint": "Перед существительным.", "explanation": "Правильно: Do you get enough sleep?", "grammar": ["b1.too-enough"] },
+        { "id": "b1.u07.l04.e04", "type": "fill_gap", "text": "The water is too cold ___ swim.", "translation": "Вода слишком холодная, чтобы купаться.", "answers": [["to"]], "options": ["to", "for", "that"], "hint": "Too + прилагательное + ? + глагол.", "explanation": "Правильно: The water is too cold to swim.", "grammar": ["b1.too-enough"] },
+        { "id": "b1.u07.l04.e05", "type": "fill_gap", "text": "You eat too ___ sugar.", "translation": "Ты ешь слишком много сахара.", "answers": [["much"]], "options": ["much", "many", "enough"], "hint": "Сахар несчитаемый.", "explanation": "Правильно: You eat too much sugar.", "grammar": ["b1.too-enough", "b1.quantifiers"] },
+        { "id": "b1.u07.l04.e06", "type": "fill_gap", "text": "I don't have ___ time to do sport.", "translation": "У меня не хватает времени на спорт.", "answers": [["enough"]], "options": ["enough", "too", "few"], "hint": "Достаточно.", "explanation": "Правильно: I don't have enough time to do sport.", "grammar": ["b1.too-enough"] },
+        { "id": "b1.u07.l04.e07", "type": "error_correction", "text": "He isn't enough fit.", "wrong": "enough fit", "correction": "fit enough", "options": ["fit enough", "too fit", "enough of fit"], "hint": "Порядок слов.", "explanation": "Правильно: He isn't fit enough.", "grammar": ["b1.too-enough"], "troubles": ["word-order"] },
+        { "id": "b1.u07.l04.e08", "type": "error_correction", "text": "I'm too much tired.", "wrong": "too much tired", "correction": "too tired", "options": ["too tired", "much too tired", "tired too much"], "hint": "Перед прилагательным одно слово.", "explanation": "Правильно: I'm too tired.", "grammar": ["b1.too-enough"], "troubles": ["word-order"] },
+        { "id": "b1.u07.l04.e09", "type": "error_correction", "text": "It's too cold for swim.", "wrong": "for swim", "correction": "to swim", "options": ["to swim", "for swimming in", "swim"], "hint": "Too + прилагательное + to.", "explanation": "Правильно: It's too cold to swim.", "grammar": ["b1.too-enough"] },
+        { "id": "b1.u07.l04.e10", "type": "tiles", "from": "ru", "text": "Я недостаточно сильный.", "answer": "I am not strong enough.", "distractors": ["too", "very"], "hint": "Enough после прилагательного.", "explanation": "Правильно: I am not strong enough.", "grammar": ["b1.too-enough"] },
+        { "id": "b1.u07.l04.e11", "type": "tiles", "from": "ru", "text": "Я слишком устал, чтобы бегать сегодня.", "answer": "I am too tired to run today.", "distractors": ["enough", "for"], "difficulty": 2, "hint": "Образец: Too tired to.", "explanation": "Правильно: I am too tired to run today.", "grammar": ["b1.too-enough"] },
+        { "id": "b1.u07.l04.e12", "type": "type_translation", "from": "ru", "text": "Вы пьёте достаточно воды?", "answers": ["Do you drink enough water?"], "difficulty": 2, "hint": "Enough перед существительным.", "explanation": "Правильно: Do you drink enough water?", "grammar": ["b1.too-enough"] },
+        { "id": "b1.u07.l04.e13", "type": "type_translation", "from": "ru", "text": "Он недостаточно в форме.", "answers": ["He isn't fit enough.", "He is not fit enough."], "difficulty": 2, "hint": "Образец: Fit + ?", "explanation": "Правильно: He isn't fit enough.", "grammar": ["b1.too-enough"] },
+        { "id": "b1.u07.l04.e14", "type": "listen_choice", "audio": "I'm not fit enough to run a marathon.", "question": "Что вы слышите?", "options": ["I'm not fit enough to run a marathon.", "I'm too fit to run a marathon.", "I'm fit enough to run a marathon."], "answer": 0, "hint": "Недостаточно.", "explanation": "Правильно: I'm not fit enough to run a marathon.", "grammar": ["b1.too-enough"] },
+        { "id": "b1.u07.l04.e15", "type": "speak_answer", "question": "Why don't you do more sport?", "questionRu": "Почему вы не занимаетесь спортом больше? Ответьте с too или enough: I'm too busy… I don't have enough…", "keywords": [["\\btoo\\b", "\\benough\\b"], ["\\b(time|tired|busy|lazy|money|energy|fit)\\b"]], "minKeywords": 2, "samples": ["I'm too busy, and I don't have enough time.", "I'm too tired after work."], "difficulty": 3, "hint": "Образец: I'm too… I don't have enough…", "explanation": "Ответ: I'm too busy, and I don't have enough time.", "grammar": ["b1.too-enough"] }
+      ]
+    },
+    {
+      "id": "b1.u07.l05",
+      "kind": "grammar",
+      "title": "You'd better, ought to, if I were you",
+      "grammar": "b1.advice",
+      "exercises": [
+        { "id": "b1.u07.l05.e01", "type": "fill_gap", "text": "You'd better ___ a doctor.", "translation": "Тебе лучше сходить к врачу.", "answers": [["see"]], "options": ["see", "to see", "seeing"], "hint": "Глагол без to.", "explanation": "Правильно: You'd better see a doctor.", "grammar": ["b1.advice"] },
+        { "id": "b1.u07.l05.e02", "type": "fill_gap", "text": "You ought ___ drink more water.", "translation": "Тебе следует пить больше воды.", "answers": [["to"]], "options": ["to", "for", "that"], "hint": "После ought нужна частица.", "explanation": "Правильно: You ought to drink more water.", "grammar": ["b1.advice"] },
+        { "id": "b1.u07.l05.e03", "type": "fill_gap", "text": "If I ___ you, I'd start with yoga.", "translation": "На твоём месте я бы начал с йоги.", "answers": [["were"]], "options": ["were", "am", "will be"], "hint": "Второе условное.", "explanation": "Правильно: If I were you, I'd start with yoga.", "grammar": ["b1.advice", "b1.second-conditional"] },
+        { "id": "b1.u07.l05.e04", "type": "fill_gap", "text": "Why ___ you join a club?", "translation": "Почему бы тебе не вступить в клуб?", "answers": [["don't"]], "options": ["don't", "not", "aren't"], "hint": "Образец: Why … you?", "explanation": "Правильно: Why don't you join a club?", "grammar": ["b1.advice"] },
+        { "id": "b1.u07.l05.e05", "type": "fill_gap", "text": "You'd better ___ eat so much sugar.", "translation": "Тебе лучше не есть столько сахара.", "answers": [["not"]], "options": ["not", "don't", "no"], "hint": "Отрицание после better.", "explanation": "Правильно: You'd better not eat so much sugar.", "grammar": ["b1.advice"] },
+        { "id": "b1.u07.l05.e06", "type": "fill_gap", "text": "I ___ this club. The coach is great.", "translation": "Я рекомендую этот клуб. Тренер отличный.", "answers": [["recommend"]], "options": ["recommend", "advice", "ought"], "hint": "Рекомендовать.", "explanation": "Правильно: I recommend this club." },
+        { "id": "b1.u07.l05.e07", "type": "error_correction", "text": "You'd better to go home.", "wrong": "to go", "correction": "go", "options": ["go", "going", "went"], "hint": "После had better.", "explanation": "Правильно: You'd better go home.", "grammar": ["b1.advice"] },
+        { "id": "b1.u07.l05.e08", "type": "error_correction", "text": "You ought go to bed.", "wrong": "ought go", "correction": "ought to go", "options": ["ought to go", "ought going", "ought went"], "hint": "Пропущено слово.", "explanation": "Правильно: You ought to go to bed.", "grammar": ["b1.advice"] },
+        { "id": "b1.u07.l05.e09", "type": "error_correction", "text": "If I were you, I will rest.", "wrong": "will", "correction": "would", "options": ["would", "am", "shall"], "hint": "Второе условное.", "explanation": "Правильно: If I were you, I would rest.", "grammar": ["b1.advice", "b1.second-conditional"], "troubles": ["tenses"] },
+        { "id": "b1.u07.l05.e10", "type": "tiles", "from": "ru", "text": "Тебе лучше сходить к врачу.", "answer": "You'd better see a doctor.", "distractors": ["to", "would"], "hint": "Образец: You'd better.", "explanation": "Правильно: You'd better see a doctor.", "grammar": ["b1.advice"] },
+        { "id": "b1.u07.l05.e11", "type": "tiles", "from": "ru", "text": "На твоём месте я бы бросил курить.", "answer": "If I were you, I would give up smoking.", "distractors": ["will", "smoke"], "difficulty": 3, "hint": "Образец: If I were you + give up + -ing.", "explanation": "Правильно: If I were you, I would give up smoking.", "grammar": ["b1.advice"] },
+        { "id": "b1.u07.l05.e12", "type": "type_translation", "from": "ru", "text": "Тебе следует пить больше воды.", "answers": ["You ought to drink more water.", "You should drink more water."], "difficulty": 2, "hint": "Образец: Ought to.", "explanation": "Правильно: You ought to drink more water.", "grammar": ["b1.advice"] },
+        { "id": "b1.u07.l05.e13", "type": "type_translation", "from": "ru", "text": "Почему бы тебе не заняться йогой?", "answers": ["Why don't you take up yoga?", "Why don't you try yoga?", "Why don't you do yoga?"], "difficulty": 3, "hint": "Образец: Why don't you…", "explanation": "Правильно: Why don't you take up yoga?", "grammar": ["b1.advice"] },
+        { "id": "b1.u07.l05.e14", "type": "listen_choice", "audio": "You'd better not eat so much sugar.", "question": "Что вы слышите?", "options": ["You'd better not eat so much sugar.", "You'd better eat more sugar.", "You wouldn't eat so much sugar."], "answer": 0, "hint": "Совет с отрицанием.", "explanation": "Правильно: You'd better not eat so much sugar.", "grammar": ["b1.advice"] },
+        { "id": "b1.u07.l05.e15", "type": "speak_answer", "question": "My friend is always tired. What should he do?", "questionRu": "Друг всё время устаёт. Что ему делать? Дайте два совета: You'd better… / He ought to… / If I were him, I'd…", "keywords": [["\\b(better|ought to|if I were|why don't|should)\\b"], ["\\b(sleep|bed|sport|yoga|run|walk|eat|drink|doctor|work|relax)\\b"]], "minKeywords": 2, "samples": ["He'd better go to bed earlier. He ought to do some sport.", "If I were him, I'd sleep more and see a doctor."], "difficulty": 3, "hint": "Образец: He'd better… He ought to…", "explanation": "Ответ: He'd better go to bed earlier. He ought to do some sport.", "grammar": ["b1.advice"] }
+      ]
+    },
+    {
+      "id": "b1.u07.l06",
+      "kind": "listening",
+      "title": "Ты выглядишь измотанной",
+      "textId": "b1.u07.tired",
+      "exercises": [
+        {
+          "id": "b1.u07.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "b1.u07.tired",
+          "hint": "Слушайте, почему Елена устала и что ей советует Макс.",
+          "explanation": "Елена много работает и плохо спит, на спорт нет сил и времени. Макс бегает три месяца, готовится к марафону и советует ей йогу и ложиться раньше.",
+          "questions": [
+            { "kind": "mcq", "question": "Почему Елена устала?", "options": ["She has been working too much.", "She has been running a lot.", "She has been ill."], "answer": 0, "explanation": "Елена говорит: I have been working too much lately." },
+            { "kind": "mcq", "question": "Как долго Макс бегает?", "options": ["for three months", "for three years", "for three weeks"], "answer": 0, "explanation": "Макс говорит: I have been running for three months." },
+            { "kind": "mcq", "question": "Что Макс советует Елене?", "options": ["to start with yoga", "to run a marathon", "to see a doctor"], "answer": 0, "explanation": "Макс говорит: If I were you, I'd start with yoga." },
+            { "kind": "tfn", "statement": "Max is training for a marathon.", "answer": "true", "explanation": "Макс говорит: for a marathon in October." },
+            { "kind": "tfn", "statement": "Elena has enough time for sport.", "answer": "false", "explanation": "Елена говорит: I don't have enough time." },
+            { "kind": "tfn", "statement": "Max's coach is a champion.", "answer": "not_given", "explanation": "Макс только говорит, что тренер отличный." }
+          ]
+        },
+        { "id": "b1.u07.l06.e02", "type": "listen_choice", "audio": "I haven't been sleeping well.", "question": "Что вы слышите?", "options": ["I haven't been sleeping well.", "I haven't slept at all.", "I wasn't sleeping well."], "answer": 0, "hint": "Present Perfect Continuous с not.", "explanation": "I haven't been sleeping well — «я плохо сплю (в последнее время)».", "grammar": ["b1.perfect-continuous"] },
+        { "id": "b1.u07.l06.e03", "type": "listen_dictation", "text": "I'm too tired to do sport.", "hint": "Шесть слов.", "explanation": "I'm too tired to do sport — «я слишком устаю для спорта»." },
+        { "id": "b1.u07.l06.e04", "type": "listen_dictation", "text": "I joined a running club.", "hint": "Пять слов.", "explanation": "I joined a running club — «я записался в беговой клуб»." },
+        { "id": "b1.u07.l06.e05", "type": "fill_gap", "text": "I have been running for three months ___.", "translation": "Я бегаю уже три месяца.", "answers": [["now"]], "options": ["now", "ago", "yet"], "hint": "Уже — в конце.", "explanation": "Правильно: I have been running for three months now.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "b1.u07.l06.e06", "type": "fill_gap", "text": "It's good for your body and your ___.", "translation": "Она полезна для тела и для головы.", "answers": [["mind"]], "options": ["mind", "meal", "match"], "hint": "Ум.", "explanation": "Правильно: It's good for your body and your mind." },
+        { "id": "b1.u07.l06.e07", "type": "tiles", "from": "ru", "text": "Мне стоит что-то попробовать.", "answer": "I ought to try something.", "distractors": ["better", "would"], "hint": "Образец: Ought to.", "explanation": "Правильно: I ought to try something.", "grammar": ["b1.advice"] },
+        { "id": "b1.u07.l06.e08", "type": "type_translation", "from": "ru", "text": "Тебе лучше ложиться спать пораньше.", "answers": ["You'd better go to bed earlier.", "You had better go to bed earlier."], "difficulty": 2, "hint": "Образец: You'd better…", "explanation": "Правильно: You'd better go to bed earlier.", "grammar": ["b1.advice"] },
+        { "id": "b1.u07.l06.e09", "type": "speak_answer", "question": "What do you do when you are stressed?", "questionRu": "Что вы делаете, когда у вас стресс? Ответьте: I usually… It helps me… I have been… lately.", "keywords": [["\\b(run|walk|yoga|swim|sleep|read|relax|work out|sport|music|friends)\\b"], ["\\b(help|helps|calm|better|relax)\\b"]], "minKeywords": 2, "samples": ["I usually go for a walk. It helps me relax.", "I do yoga. It makes me calm, and I feel better."], "difficulty": 3, "hint": "Образец: I usually… It helps me…", "explanation": "Ответ: I usually go for a walk. It helps me relax." },
+        { "id": "b1.u07.l06.e10", "type": "speak_repeat", "text": "If I were you, I'd start with yoga.", "hint": "I'd — коротко.", "explanation": "I'd [aɪd] — коротко от I would." }
+      ]
+    },
+    {
+      "id": "b1.u07.l07",
+      "kind": "writing",
+      "title": "Пять советов от тренера",
+      "textId": "b1.u07.tips",
+      "exercises": [
+        {
+          "id": "b1.u07.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "b1.u07.tips",
+          "hint": "Ищите пять советов: скорость, разминка, регулярность, питание, терпение.",
+          "explanation": "Тренер советует не бегать слишком много сначала, разминаться, бегать регулярно, следить за питанием и быть терпеливым.",
+          "questions": [
+            { "kind": "mcq", "question": "Как долго автор работает тренером?", "options": ["for ten years", "for two years", "for five years"], "answer": 0, "explanation": "В тексте: I have been working as a running coach for ten years." },
+            { "kind": "mcq", "question": "Что сделать перед бегом?", "options": ["walk for five minutes", "eat a big meal", "drink coffee"], "answer": 0, "explanation": "В тексте: Walk for five minutes before you start running." },
+            { "kind": "mcq", "question": "Что лучше, по мнению тренера?", "options": ["twenty minutes three times a week", "two hours once a month", "one hour every day"], "answer": 0, "explanation": "В тексте: It is better to run for twenty minutes three times a week." },
+            { "kind": "tfn", "statement": "Many people give up because their muscles hurt.", "answer": "true", "explanation": "В тексте: their muscles hurt so much that they give up." },
+            { "kind": "tfn", "statement": "You should eat a big meal before you run.", "answer": "false", "explanation": "В тексте: You'd better not eat a big meal before you run." },
+            { "kind": "tfn", "statement": "The coach has won a medal.", "answer": "not_given", "explanation": "О медалях в тексте ничего нет." }
+          ]
+        },
+        { "id": "b1.u07.l07.e02", "type": "translate_choice", "from": "en", "text": "This helps you avoid injuries.", "options": ["Это помогает избежать травм.", "Это помогает вылечить болезни.", "Это помогает похудеть."], "answer": 0, "hint": "Injury — травма.", "explanation": "Правильно: This helps you avoid injuries." },
+        { "id": "b1.u07.l07.e03", "type": "fill_gap", "text": "Don't run too fast or too ___.", "translation": "Не бегайте слишком быстро и слишком далеко.", "answers": [["far"]], "options": ["far", "enough", "much"], "hint": "Далеко.", "explanation": "Правильно: Don't run too fast or too far.", "grammar": ["b1.too-enough"] },
+        { "id": "b1.u07.l07.e04", "type": "fill_gap", "text": "You ought to eat ___ fruit and vegetables.", "translation": "Нужно есть достаточно фруктов и овощей.", "answers": [["enough"]], "options": ["enough", "too", "many"], "hint": "Достаточно.", "explanation": "Правильно: You ought to eat enough fruit and vegetables.", "grammar": ["b1.too-enough"] },
+        { "id": "b1.u07.l07.e05", "type": "type_translation", "from": "ru", "text": "Я работаю тренером уже десять лет.", "answers": ["I have been working as a coach for ten years.", "I've been working as a coach for ten years."], "difficulty": 3, "hint": "Образец: Have been working as…", "explanation": "Правильно: I have been working as a coach for ten years.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "b1.u07.l07.e06", "type": "speak_describe", "picture": { "emoji": "🏃" }, "situation": "Расскажите, каким спортом вы занимаетесь или хотели бы заняться, как давно и что это вам даёт.", "keywords": [["\\b(have|I've) been\\b", "\\b(for|since)\\b"], ["\\b(run|running|yoga|swim|swimming|football|tennis|gym|walk|sport|bike)\\b"]], "minKeywords": 2, "samples": ["I have been swimming for two years. I go to the pool twice a week, and it helps me with stress."], "difficulty": 3, "hint": "Образец: I have been … for …", "explanation": "Используйте Present Perfect Continuous: I have been swimming for two years.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "b1.u07.l07.e07", "type": "speak_answer", "question": "What would you recommend to a person who wants to start running?", "questionRu": "Что бы вы посоветовали человеку, который хочет начать бегать? Дайте два совета.", "keywords": [["\\b(better|ought to|should|if I were|why don't|recommend)\\b"], ["\\b(warm up|slowly|regularly|water|shoes|club|coach|diet|meal|too)\\b"]], "minKeywords": 2, "samples": ["You'd better start slowly. You ought to warm up before you run."], "difficulty": 3, "hint": "Образец: You'd better… You ought to…", "explanation": "Ответ: You'd better start slowly. You ought to warm up before you run.", "grammar": ["b1.advice"] },
+        {
+          "id": "b1.u07.l07.e08",
+          "type": "write",
+          "task": "Друг написал вам, что хочет заняться спортом и стать здоровее, но не знает, с чего начать. Напишите ему письмо: расскажите о своём опыте (I have been … for …) и дайте несколько советов (you'd better, ought to, if I were you, why don't you). Используйте too или enough.",
+          "minWords": 90,
+          "maxWords": 200,
+          "criteria": [
+            { "id": "advice", "label": "Есть советы: you'd better, ought to, if I were you, why don't you", "patterns": ["\\b(you'd better|you had better|ought to|if i were you|why don't you)\\b"] },
+            { "id": "continuous", "label": "Есть Present Perfect Continuous: have been + -ing", "patterns": ["\\b(have|has|i've|you've|we've|he's|she's) been [a-z]+ing\\b"] },
+            { "id": "tooenough", "label": "Есть too или enough", "patterns": ["\\btoo [a-z]+\\b", "\\benough\\b"] },
+            { "id": "sport", "label": "Есть слова о спорте и здоровье", "patterns": ["\\b(run|running|yoga|gym|swim|swimming|club|coach|training|exercise|sport|walk|diet|sleep)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\b(you'd|had) better to\\b", "message": "После had better глагол без to: you'd better go." },
+            { "pattern": "\\bought (go|do|eat|drink|start|try|sleep|run|walk|see)\\b", "message": "После ought нужно to: ought to go." },
+            { "pattern": "\\benough (fit|strong|healthy|good|fast|old|active)\\b", "message": "Enough ставят после прилагательного: fit enough." },
+            { "pattern": "\\btoo much (tired|cold|hot|busy|fast|difficult|expensive|lazy)\\b", "message": "Перед прилагательным просто too: too tired." },
+            { "pattern": "\\bI am (training|running|learning|working|doing|swimming) [a-z ]*(for|since) (a|an|two|three|four|five|six|ten|many|\\d)", "message": "С for и since о том, что длится до сих пор, — have been + -ing: I have been running for a year." }
+          ],
+          "samples": [
+            "Hi Tom, you wrote that you want to get fit. That's a great idea! I have been running for a year now, and I feel much better. If I were you, I'd start slowly. Don't run too fast or too far on the first day, or your muscles will hurt and you will give up. You ought to warm up before you run, and you'd better not eat a big meal before training. Why don't you join a running club? Our coach is great, and the members are very nice. Three times a week is enough. Good luck! Anna",
+            "Dear Marco, I'm sorry that you have been feeling tired lately. I think you are working too much, and you don't get enough sleep. You ought to go to bed earlier and turn off your phone at night. You'd better not drink coffee in the evening. Why don't you take up yoga? I have been doing yoga for six months, and it helps me with stress. It is calm, and you don't have to be fit or strong to start. If I were you, I'd also walk to work. It is good for your heart and your mind. Write to me soon! Sofia"
+          ],
+          "difficulty": 3,
+          "hint": "План: приветствие → мой опыт (I have been … for …) → два-три совета → too / enough → прощание.",
+          "explanation": "Опыт до сих пор — have been + -ing. Советы — you'd better + глагол без to, ought to + глагол, if I were you, I'd… Enough — после прилагательного: fit enough.",
+          "grammar": ["b1.perfect-continuous", "b1.too-enough", "b1.advice"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "b1.u07.test.e01", "type": "match_pairs", "pairs": [{ "en": "injury", "ru": "травма" }, { "en": "coach", "ru": "тренер" }, { "en": "exhausted", "ru": "измотанный" }, { "en": "breathe", "ru": "дышать" }, { "en": "give up", "ru": "бросить" }], "hint": "Слова юнита.", "explanation": "Injury — травма, coach — тренер, exhausted — измотанный, breathe — дышать, give up — бросить." },
+      { "id": "b1.u07.test.e02", "type": "translate_choice", "from": "ru", "text": "болельщик", "options": ["fan", "player", "member"], "answer": 0, "hint": "Сидит на трибуне.", "explanation": "Fan — «болельщик»." },
+      { "id": "b1.u07.test.e03", "type": "fill_gap", "text": "I have been ___ for an hour.", "translation": "Я бегаю уже час.", "answers": [["running"]], "options": ["running", "run", "ran"], "hint": "Форма на -ing.", "explanation": "Правильно: I have been running for an hour.", "grammar": ["b1.perfect-continuous"] },
+      { "id": "b1.u07.test.e04", "type": "fill_gap", "text": "How long ___ you been playing tennis?", "translation": "Сколько вы уже играете в теннис?", "answers": [["have"]], "options": ["have", "are", "do"], "hint": "Вспомогательный глагол.", "explanation": "Правильно: How long have you been playing tennis?", "grammar": ["b1.perfect-continuous"] },
+      { "id": "b1.u07.test.e05", "type": "fill_gap", "text": "He isn't fit ___.", "translation": "Он недостаточно в форме.", "answers": [["enough"]], "options": ["enough", "too", "very"], "hint": "Достаточно.", "explanation": "Правильно: He isn't fit enough.", "grammar": ["b1.too-enough"] },
+      { "id": "b1.u07.test.e06", "type": "fill_gap", "text": "I am ___ tired to run.", "translation": "Я слишком устал, чтобы бегать.", "answers": [["too"]], "options": ["too", "enough", "much"], "hint": "Слишком.", "explanation": "Правильно: I am too tired to run.", "grammar": ["b1.too-enough"] },
+      { "id": "b1.u07.test.e07", "type": "fill_gap", "text": "You'd better ___ a doctor.", "translation": "Тебе лучше сходить к врачу.", "answers": [["see"]], "options": ["see", "to see", "seeing"], "hint": "Без to.", "explanation": "Правильно: You'd better see a doctor.", "grammar": ["b1.advice"] },
+      { "id": "b1.u07.test.e08", "type": "fill_gap", "text": "You ought ___ drink more water.", "translation": "Тебе следует пить больше воды.", "answers": [["to"]], "options": ["to", "for", "that"], "hint": "После ought нужна частица.", "explanation": "Правильно: You ought to drink more water.", "grammar": ["b1.advice"] },
+      { "id": "b1.u07.test.e09", "type": "error_correction", "text": "I am training for two years.", "wrong": "am training", "correction": "have been training", "options": ["have been training", "was training", "am trained"], "hint": "С прошлого до сих пор.", "explanation": "Правильно: I have been training for two years.", "grammar": ["b1.perfect-continuous"] },
+      { "id": "b1.u07.test.e10", "type": "error_correction", "text": "He isn't enough fit.", "wrong": "enough fit", "correction": "fit enough", "options": ["fit enough", "too fit", "enough of fit"], "hint": "Порядок слов.", "explanation": "Правильно: He isn't fit enough.", "grammar": ["b1.too-enough"] },
+      { "id": "b1.u07.test.e11", "type": "error_correction", "text": "You'd better to go home.", "wrong": "to go", "correction": "go", "options": ["go", "going", "went"], "hint": "После had better.", "explanation": "Правильно: You'd better go home.", "grammar": ["b1.advice"] },
+      { "id": "b1.u07.test.e12", "type": "listen_choice", "audio": "If I were you, I'd start with yoga.", "question": "Что вы слышите?", "options": ["If I were you, I'd start with yoga.", "If I was you, I'll start with yoga.", "When I'm with you, I do yoga."], "answer": 0, "hint": "Совет.", "explanation": "Правильно: If I were you, I'd start with yoga.", "grammar": ["b1.advice"] },
+      { "id": "b1.u07.test.e13", "type": "listen_dictation", "text": "I haven't been sleeping well lately.", "hint": "Шесть слов.", "explanation": "I haven't been sleeping well lately — «в последнее время я плохо сплю»." },
+      { "id": "b1.u07.test.e14", "type": "tiles", "from": "ru", "text": "Я занимаюсь йогой уже год.", "answer": "I have been doing yoga for a year.", "distractors": ["am", "since"], "difficulty": 2, "hint": "Образец: Have been doing.", "explanation": "Правильно: I have been doing yoga for a year.", "grammar": ["b1.perfect-continuous"] },
+      { "id": "b1.u07.test.e15", "type": "type_translation", "from": "ru", "text": "Почему бы тебе не вступить в клуб?", "answers": ["Why don't you join a club?", "Why don't you join the club?"], "difficulty": 3, "hint": "Образец: Why don't you…", "explanation": "Правильно: Why don't you join a club?", "grammar": ["b1.advice"] },
+      { "id": "b1.u07.test.e16", "type": "speak_repeat", "text": "You'd better warm up before you start running.", "hint": "You'd — коротко.", "explanation": "You'd better [juːd ˈbetɚ] — слитно." }
+    ]
+  }
+}
