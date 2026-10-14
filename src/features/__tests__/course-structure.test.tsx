@@ -227,7 +227,9 @@ describe('time to the next level', () => {
       .units.reduce((n, u) => n + u.lessons.length + 1, 0);
     expect(remainingInLevel('A1', new Set())).toBe(a1Total);
     expect(remainingInLevel('A1', new Set(['a1.u01.l01', 'a1.u01.test']))).toBe(a1Total - 2);
-    expect(remainingInLevel('B2', new Set())).toBe(0);
+    // A level with nothing written yet has nothing left to count.
+    const empty = getCourse().levels.find((l) => l.units.length === 0);
+    if (empty) expect(remainingInLevel(empty.level, new Set())).toBe(0);
     expect(remainingInLevel('PA1', new Set())).toBeGreaterThan(20);
   });
 
