@@ -378,9 +378,8 @@
           "order": 3,
           "title": { "en": "Academic and professional", "ru": "Академическое и профессиональное" },
           "goals": ["Могу понимать лекции и участвовать в дискуссиях.", "Могу писать академические тексты и вести переговоры."],
-          "units": ["c1.u05"],
+          "units": ["c1.u05", "c1.u06"],
           "planned": [
-            { "id": "c1.u06", "title": { "en": "Academic writing", "ru": "Академическое письмо" } },
             { "id": "c1.u07", "title": { "en": "Negotiations and presentations", "ru": "Переговоры и презентации" } }
           ]
         }
