@@ -1,0 +1,342 @@
+{
+  "id": "b1.u02",
+  "level": "B1",
+  "order": 2,
+  "title": { "en": "Life stories", "ru": "Рассказ о жизни" },
+  "description": "Рассказываем истории из жизни и биографии: что происходило в тот момент, как долго что-то длится и что случилось раньше. Past Continuous, for и since, Past Perfect.",
+  "goals": [
+    "Могу рассказать историю с фоном и событиями: I was walking home when it started to rain.",
+    "Могу сказать, как долго что-то длится: I have lived here for ten years.",
+    "Могу показать, что одно событие было раньше другого: The train had already left.",
+    "Могу рассказать о главных событиях жизни: born, graduate, get married, retire.",
+    "Могу понять и пересказать короткую биографию.",
+    "Могу написать связный рассказ о человеке или случае из жизни."
+  ],
+  "grammar": ["b1.past-continuous", "b1.for-since", "b1.past-perfect"],
+  "troubles": ["tenses"],
+  "words": [
+    { "id": "born", "en": "born", "ipa": "bɔːrn", "pos": "adj", "ru": ["рождённый"], "example": { "en": "I was born in a small village.", "ru": "Я родился в небольшой деревне." }, "note": "«Родиться» — be born: I was born in 1990. Без was сказать нельзя.", "topics": ["life"] },
+    { "id": "university", "en": "university", "ipa": "ˌjuːnəˈvɝːsəti", "pos": "noun", "ru": ["университет"], "example": { "en": "She studied at university.", "ru": "Она училась в университете." }, "topics": ["life"] },
+    { "id": "graduate", "en": "graduate", "ipa": "ˈɡrædʒuˌeɪt", "pos": "verb", "ru": ["окончить (вуз)"], "example": { "en": "He graduated from university in 2010.", "ru": "Он окончил университет в 2010 году." }, "forms": { "third": "graduates" }, "topics": ["life"] },
+    { "id": "career", "en": "career", "ipa": "kəˈrɪr", "pos": "noun", "ru": ["карьера"], "example": { "en": "She started her career as a nurse.", "ru": "Она начала карьеру медсестрой." }, "topics": ["life"] },
+    { "id": "retire", "en": "retire", "ipa": "rɪˈtaɪɚ", "pos": "verb", "ru": ["уйти на пенсию"], "example": { "en": "My grandfather retired last year.", "ru": "Мой дедушка вышел на пенсию в прошлом году." }, "forms": { "third": "retires" }, "topics": ["life"] },
+    { "id": "get-married", "en": "get married", "ipa": "ɡet ˈmærid", "pos": "phrase", "ru": ["пожениться", "выйти замуж"], "example": { "en": "They got married two years later.", "ru": "Через два года они поженились." }, "forms": { "third": "gets married" }, "topics": ["life"] },
+    { "id": "teenager", "en": "teenager", "ipa": "ˈtiːneɪdʒɚ", "pos": "noun", "ru": ["подросток"], "example": { "en": "When I was a teenager, I played the guitar.", "ru": "Когда я был подростком, я играл на гитаре." }, "topics": ["life"] },
+    { "id": "adult", "en": "adult", "ipa": "əˈdʌlt", "pos": "noun", "ru": ["взрослый"], "example": { "en": "Tickets for adults cost ten euros.", "ru": "Билеты для взрослых стоят десять евро." }, "topics": ["life"] },
+    { "id": "age", "en": "age", "ipa": "eɪdʒ", "pos": "noun", "ru": ["возраст"], "example": { "en": "She started work at the age of sixteen.", "ru": "Она начала работать в шестнадцать лет." }, "topics": ["life"] },
+    { "id": "memory", "en": "memory", "ipa": "ˈmemɚi", "pos": "noun", "ru": ["воспоминание", "память"], "example": { "en": "I have many happy memories of that house.", "ru": "У меня много счастливых воспоминаний об этом доме." }, "forms": { "plural": "memories" }, "topics": ["life"] },
+    { "id": "moment", "en": "moment", "ipa": "ˈmoʊmənt", "pos": "noun", "ru": ["момент", "мгновение"], "example": { "en": "It was the best moment of my life.", "ru": "Это был лучший момент в моей жизни." }, "topics": ["life"] },
+    { "id": "event", "en": "event", "ipa": "ɪˈvent", "pos": "noun", "ru": ["событие"], "example": { "en": "It was an important event.", "ru": "Это было важное событие." }, "topics": ["life"] },
+    { "id": "accident", "en": "accident", "ipa": "ˈæksədənt", "pos": "noun", "ru": ["несчастный случай", "авария"], "example": { "en": "He had an accident on the road.", "ru": "Он попал в аварию на дороге." }, "topics": ["life"] },
+    { "id": "history", "en": "history", "ipa": "ˈhɪstəri", "pos": "noun", "ru": ["история (наука, прошлое)"], "example": { "en": "I love history.", "ru": "Я люблю историю." }, "note": "History — история как прошлое и наука. Рассказ — story.", "topics": ["life"] },
+    { "id": "biography", "en": "biography", "ipa": "baɪˈɑːɡrəfi", "pos": "noun", "ru": ["биография"], "example": { "en": "I am reading a biography of a famous cook.", "ru": "Я читаю биографию знаменитого повара." }, "forms": { "plural": "biographies" }, "topics": ["life"] },
+    { "id": "famous", "en": "famous", "ipa": "ˈfeɪməs", "pos": "adj", "ru": ["знаменитый"], "example": { "en": "He became a famous cook.", "ru": "Он стал знаменитым поваром." }, "topics": ["life"] },
+    { "id": "poor", "en": "poor", "ipa": "pʊr", "pos": "adj", "ru": ["бедный"], "example": { "en": "His family was poor.", "ru": "Его семья была бедной." }, "topics": ["life"] },
+    { "id": "rich", "en": "rich", "ipa": "rɪtʃ", "pos": "adj", "ru": ["богатый"], "example": { "en": "He became rich and famous.", "ru": "Он стал богатым и знаменитым." }, "topics": ["life"] },
+    { "id": "lonely", "en": "lonely", "ipa": "ˈloʊnli", "pos": "adj", "ru": ["одинокий"], "example": { "en": "She felt lonely in the big city.", "ru": "Она чувствовала себя одиноко в большом городе." }, "topics": ["feelings"] },
+    { "id": "unusual", "en": "unusual", "ipa": "ʌnˈjuːʒuəl", "pos": "adj", "ru": ["необычный"], "example": { "en": "It was an unusual day.", "ru": "Это был необычный день." }, "topics": ["adjectives"] },
+    { "id": "notice", "en": "notice", "ipa": "ˈnoʊtɪs", "pos": "verb", "ru": ["замечать"], "example": { "en": "Nobody noticed me.", "ru": "Никто меня не заметил." }, "forms": { "third": "notices" }, "topics": ["verbs"] },
+    { "id": "realize", "en": "realize", "ipa": "ˈriːəlaɪz", "pos": "verb", "ru": ["понимать", "осознавать"], "example": { "en": "I realized that I had lost my bag.", "ru": "Я понял, что потерял сумку." }, "forms": { "third": "realizes" }, "note": "Британский вариант написания — realise.", "topics": ["verbs"] },
+    { "id": "recognize", "en": "recognize", "ipa": "ˈrekəɡnaɪz", "pos": "verb", "ru": ["узнавать"], "example": { "en": "I didn't recognize her at first.", "ru": "Сначала я её не узнал." }, "forms": { "third": "recognizes" }, "topics": ["verbs"] },
+    { "id": "die", "en": "die", "ipa": "daɪ", "pos": "verb", "ru": ["умирать"], "example": { "en": "My grandfather died in 2015.", "ru": "Мой дедушка умер в 2015 году." }, "forms": { "third": "dies", "ing": "dying" }, "topics": ["verbs"] },
+    { "id": "grow", "en": "grow", "ipa": "ɡroʊ", "pos": "verb", "ru": ["расти", "выращивать"], "example": { "en": "We grew vegetables in the garden.", "ru": "Мы выращивали овощи в саду." }, "forms": { "third": "grows" }, "topics": ["verbs"] },
+    { "id": "ambulance", "en": "ambulance", "ipa": "ˈæmbjələns", "pos": "noun", "ru": ["скорая помощь"], "example": { "en": "Somebody called an ambulance.", "ru": "Кто-то вызвал скорую." }, "picture": { "emoji": "🚑" }, "topics": ["events"] },
+    { "id": "police", "en": "police", "ipa": "pəˈliːs", "pos": "noun", "ru": ["полиция"], "example": { "en": "He called the police.", "ru": "Он вызвал полицию." }, "note": "Police — множественное число: the police are here.", "picture": { "emoji": "🚓" }, "topics": ["events"] },
+    { "id": "fire", "en": "fire", "ipa": "ˈfaɪɚ", "pos": "noun", "ru": ["огонь", "пожар"], "example": { "en": "There was a fire in the kitchen.", "ru": "На кухне был пожар." }, "picture": { "emoji": "🔥" }, "topics": ["events"] },
+    { "id": "shout", "en": "shout", "ipa": "ʃaʊt", "pos": "verb", "ru": ["кричать"], "example": { "en": "Somebody was shouting in the street.", "ru": "Кто-то кричал на улице." }, "forms": { "third": "shouts" }, "topics": ["verbs"] },
+    { "id": "knock", "en": "knock", "ipa": "nɑːk", "pos": "verb", "ru": ["стучать"], "example": { "en": "Somebody knocked on the door.", "ru": "Кто-то постучал в дверь." }, "forms": { "third": "knocks" }, "note": "K в начале слова не читается.", "topics": ["verbs"] },
+    { "id": "drop", "en": "drop", "ipa": "drɑːp", "pos": "verb", "ru": ["ронять", "уронить"], "example": { "en": "I dropped my phone.", "ru": "Я уронил телефон." }, "forms": { "third": "drops", "ing": "dropping" }, "topics": ["verbs"] },
+    { "id": "still", "en": "still", "ipa": "stɪl", "pos": "adv", "ru": ["всё ещё", "до сих пор"], "example": { "en": "She still lives in the same village.", "ru": "Она до сих пор живёт в той же деревне." }, "topics": ["time"] },
+    { "id": "everybody", "en": "everybody", "ipa": "ˈevriˌbɑːdi", "pos": "pron", "ru": ["все", "каждый"], "example": { "en": "Everybody in the village knows us.", "ru": "Все в деревне нас знают." }, "note": "Everybody — единственное число: everybody knows, а не everybody know.", "topics": ["grammar"] },
+    { "id": "nobody", "en": "nobody", "ipa": "ˈnoʊˌbɑːdi", "pos": "pron", "ru": ["никто"], "example": { "en": "Nobody noticed me.", "ru": "Никто меня не заметил." }, "note": "С nobody не нужен второй not: nobody came, а не nobody didn't come.", "topics": ["grammar"] },
+    { "id": "somebody", "en": "somebody", "ipa": "ˈsʌmˌbɑːdi", "pos": "pron", "ru": ["кто-то"], "example": { "en": "Somebody knocked on the door.", "ru": "Кто-то постучал в дверь." }, "topics": ["grammar"] },
+    { "id": "same", "en": "same", "ipa": "seɪm", "pos": "adj", "ru": ["тот же самый", "одинаковый"], "example": { "en": "She still lives in the same village.", "ru": "Она до сих пор живёт в той же деревне." }, "note": "Перед same всегда ставят the: the same village.", "topics": ["adjectives"] },
+    { "id": "asleep", "en": "asleep", "ipa": "əˈsliːp", "pos": "adj", "ru": ["спящий"], "example": { "en": "I fell asleep during the film.", "ru": "Я уснул во время фильма." }, "note": "Fall asleep — «уснуть».", "topics": ["adjectives"] },
+    { "id": "question", "en": "question", "ipa": "ˈkwestʃən", "pos": "noun", "ru": ["вопрос"], "example": { "en": "A young man asked me a question.", "ru": "Молодой человек задал мне вопрос." }, "topics": ["life"] },
+    { "id": "plate", "en": "plate", "ipa": "pleɪt", "pos": "noun", "ru": ["тарелка"], "example": { "en": "He was washing plates in the kitchen.", "ru": "Он мыл тарелки на кухне." }, "topics": ["things"] },
+    { "id": "guest", "en": "guest", "ipa": "ɡest", "pos": "noun", "ru": ["гость"], "example": { "en": "The cook was talking to some guests.", "ru": "Повар разговаривал с гостями." }, "topics": ["people"] },
+    { "id": "himself", "en": "himself", "ipa": "hɪmˈself", "pos": "pron", "ru": ["сам", "себя (о нём)"], "example": { "en": "He finished the dinner himself.", "ru": "Он сам закончил ужин." }, "topics": ["grammar"] },
+    { "id": "talent", "en": "talent", "ipa": "ˈtælənt", "pos": "noun", "ru": ["талант"], "example": { "en": "The boy had real talent.", "ru": "У мальчика был настоящий талант." }, "topics": ["life"] },
+    { "id": "each-other", "en": "each other", "ipa": "iːtʃ ˈʌðɚ", "pos": "phrase", "ru": ["друг друга"], "example": { "en": "We have known each other for twenty years.", "ru": "Мы знаем друг друга двадцать лет." }, "topics": ["grammar"] },
+    { "id": "away", "en": "away", "ipa": "əˈweɪ", "pos": "adv", "ru": ["прочь", "вдали"], "example": { "en": "The man ran away.", "ru": "Мужчина убежал." }, "topics": ["grammar"] },
+    { "id": "shine", "en": "shine", "ipa": "ʃaɪn", "pos": "verb", "ru": ["светить", "сиять"], "example": { "en": "The sun was shining.", "ru": "Светило солнце." }, "forms": { "third": "shines", "ing": "shining" }, "topics": ["verbs"] },
+    { "id": "factory", "en": "factory", "ipa": "ˈfæktɚi", "pos": "noun", "ru": ["фабрика", "завод"], "example": { "en": "My grandfather worked in a factory.", "ru": "Мой дедушка работал на заводе." }, "forms": { "plural": "factories" }, "topics": ["life"] },
+    { "id": "grandma", "en": "grandma", "ipa": "ˈɡrændmɑː", "pos": "noun", "ru": ["бабушка (разг.)"], "example": { "en": "Grandma, where were you born?", "ru": "Бабушка, где ты родилась?" }, "topics": ["family"] },
+    { "id": "grandpa", "en": "grandpa", "ipa": "ˈɡrændˌpɑː", "pos": "noun", "ru": ["дедушка (разг.)"], "example": { "en": "When did you meet Grandpa?", "ru": "Когда ты познакомилась с дедушкой?" }, "topics": ["family"] },
+    { "id": "while", "en": "while", "ipa": "waɪl", "pos": "conj", "ru": ["пока", "в то время как"], "example": { "en": "While I was cooking, the phone rang.", "ru": "Пока я готовил, зазвонил телефон." }, "topics": ["time"] },
+    { "id": "during", "en": "during", "ipa": "ˈdʊrɪŋ", "pos": "prep", "ru": ["во время"], "example": { "en": "I fell asleep during the film.", "ru": "Я уснул во время фильма." }, "note": "During + существительное (during the film), while + действие (while I was watching).", "topics": ["time"] },
+    { "id": "since", "en": "since", "ipa": "sɪns", "pos": "prep", "ru": ["с (какого-то времени)"], "example": { "en": "She has worked here since 2015.", "ru": "Она работает здесь с 2015 года." }, "topics": ["time"] },
+    { "id": "until", "en": "until", "ipa": "ənˈtɪl", "pos": "prep", "ru": ["до", "пока не"], "example": { "en": "He worked there until he retired.", "ru": "Он работал там, пока не ушёл на пенсию." }, "topics": ["time"] },
+    { "id": "eventually", "en": "eventually", "ipa": "ɪˈventʃəwəli", "pos": "adv", "ru": ["в конце концов"], "example": { "en": "Eventually he opened his own restaurant.", "ru": "В конце концов он открыл свой ресторан." }, "note": "Eventually — «в конце концов», а не «эвентуально».", "troubles": ["false-friends"], "topics": ["time"] },
+    { "id": "decade", "en": "decade", "ipa": "ˈdekeɪd", "pos": "noun", "ru": ["десятилетие"], "example": { "en": "They lived there for a decade.", "ru": "Они прожили там десять лет." }, "topics": ["time"] },
+    { "id": "century", "en": "century", "ipa": "ˈsentʃɚi", "pos": "noun", "ru": ["век", "столетие"], "example": { "en": "The house is two centuries old.", "ru": "Дому два века." }, "forms": { "plural": "centuries" }, "topics": ["time"] },
+    { "id": "past#noun", "en": "past", "ipa": "pæst", "pos": "noun", "ru": ["прошлое"], "example": { "en": "In the past, life was difficult.", "ru": "В прошлом жизнь была трудной." }, "topics": ["time"] },
+    { "id": "present#noun", "en": "present", "ipa": "ˈprezənt", "pos": "noun", "ru": ["настоящее (время)"], "example": { "en": "Live in the present.", "ru": "Живите настоящим." }, "note": "Present значит ещё и «подарок»: a birthday present.", "topics": ["time"] }
+  ],
+  "texts": [
+    {
+      "id": "b1.u02.grandma",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Grandma's story", "ru": "История бабушки" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "olga", "name": "Olga", "voice": "female" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Grandma, where were you born?", "ru": "Бабушка, где ты родилась?" },
+        { "speaker": "olga", "en": "I was born in a small village. My family was poor, but we were happy.", "ru": "Я родилась в небольшой деревне. Моя семья была бедной, но мы были счастливы." },
+        { "speaker": "anna", "en": "What were you doing when you met Grandpa?", "ru": "Чем ты занималась, когда познакомилась с дедушкой?" },
+        { "speaker": "olga", "en": "I was studying at university. One day I was reading in the library when a young man asked me a question.", "ru": "Я училась в университете. Однажды я читала в библиотеке, и тут молодой человек задал мне вопрос." },
+        { "speaker": "anna", "en": "Did you like him at once?", "ru": "Он тебе сразу понравился?" },
+        { "speaker": "olga", "en": "Not at first! I had never noticed him before. But we got married two years later.", "ru": "Сначала нет! Я его раньше даже не замечала. Но через два года мы поженились." },
+        { "speaker": "anna", "en": "How long have you lived in this house?", "ru": "Как давно вы живёте в этом доме?" },
+        { "speaker": "olga", "en": "We have lived here for forty years, since your mother was born.", "ru": "Мы живём здесь сорок лет, с тех пор как родилась твоя мама." },
+        { "speaker": "anna", "en": "Have you ever wanted to move?", "ru": "Тебе когда-нибудь хотелось переехать?" },
+        { "speaker": "olga", "en": "Never. Everybody in the village knows us, and I have many happy memories here.", "ru": "Никогда. Все в деревне нас знают, и у меня здесь много счастливых воспоминаний." }
+      ]
+    },
+    {
+      "id": "b1.u02.marco",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "The story of Marco", "ru": "История Марко" },
+      "lines": [
+        { "en": "Marco was born in a small town near Rome. His family was poor, and at the age of fourteen he started working in a restaurant. He was washing plates and cleaning the kitchen, but he dreamed of cooking.", "ru": "Марко родился в небольшом городке под Римом. Его семья была бедной, и в четырнадцать лет он начал работать в ресторане. Он мыл тарелки и убирал кухню, но мечтал готовить." },
+        { "en": "One evening, while the cook was talking to some guests, a fire started in the kitchen. Marco had never cooked for guests before, but he did not stop. He finished the dinner himself, and nobody noticed that the cook had left the kitchen.", "ru": "Однажды вечером, пока повар разговаривал с гостями, на кухне начался пожар. Марко никогда раньше не готовил для гостей, но не растерялся. Он сам закончил ужин, и никто не заметил, что повар ушёл с кухни." },
+        { "en": "The owner of the restaurant realized that the boy had real talent. He sent Marco to study, and after that Marco worked in the best restaurants of Italy and France.", "ru": "Владелец ресторана понял, что у мальчика настоящий талант. Он отправил Марко учиться, и после этого Марко работал в лучших ресторанах Италии и Франции." },
+        { "en": "By the time he was thirty, he had opened his own restaurant in London. He has lived in London since then, and he has written three books. Eventually he became rich and famous, but he still remembers the small kitchen where his career started.", "ru": "К тридцати годам он открыл собственный ресторан в Лондоне. С тех пор он живёт в Лондоне и написал три книги. В конце концов он стал богатым и знаменитым, но до сих пор помнит маленькую кухню, где началась его карьера." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "b1.u02.l01",
+      "kind": "vocabulary",
+      "title": "События жизни",
+      "exercises": [
+        { "id": "b1.u02.l01.e01", "type": "match_pairs", "pairs": [{ "en": "born", "ru": "рождённый" }, { "en": "university", "ru": "университет" }, { "en": "graduate", "ru": "окончить вуз" }, { "en": "career", "ru": "карьера" }, { "en": "retire", "ru": "уйти на пенсию" }], "hint": "Этапы жизни по порядку.", "explanation": "Born — рождённый, university — университет, graduate — окончить вуз, career — карьера, retire — уйти на пенсию." },
+        { "id": "b1.u02.l01.e02", "type": "match_pairs", "pairs": [{ "en": "get married", "ru": "пожениться" }, { "en": "teenager", "ru": "подросток" }, { "en": "adult", "ru": "взрослый" }, { "en": "age", "ru": "возраст" }, { "en": "memory", "ru": "воспоминание" }], "hint": "Teenager — от 13 до 19 лет.", "explanation": "Get married — пожениться, teenager — подросток, adult — взрослый, age — возраст, memory — воспоминание." },
+        { "id": "b1.u02.l01.e03", "type": "match_pairs", "pairs": [{ "en": "moment", "ru": "момент" }, { "en": "event", "ru": "событие" }, { "en": "accident", "ru": "авария" }, { "en": "history", "ru": "история" }, { "en": "biography", "ru": "биография" }], "hint": "History — не рассказ, а прошлое.", "explanation": "Moment — момент, event — событие, accident — авария, history — история, biography — биография." },
+        { "id": "b1.u02.l01.e04", "type": "match_pairs", "pairs": [{ "en": "famous", "ru": "знаменитый" }, { "en": "poor", "ru": "бедный" }, { "en": "rich", "ru": "богатый" }, { "en": "lonely", "ru": "одинокий" }, { "en": "unusual", "ru": "необычный" }], "hint": "Poor и rich — противоположные.", "explanation": "Famous — знаменитый, poor — бедный, rich — богатый, lonely — одинокий, unusual — необычный." },
+        { "id": "b1.u02.l01.e05", "type": "translate_choice", "from": "ru", "text": "Я родился в 1990 году.", "options": ["I was born in 1990.", "I born in 1990.", "I am born in 1990."], "answer": 0, "hint": "Образец: Be born.", "explanation": "I was born in 1990. «Родиться» — be born." },
+        { "id": "b1.u02.l01.e06", "type": "translate_choice", "from": "en", "text": "My grandfather retired last year.", "options": ["Мой дедушка вышел на пенсию в прошлом году.", "Мой дедушка устал в прошлом году.", "Мой дедушка вернулся в прошлом году."], "answer": 0, "hint": "Retire — «уйти на пенсию».", "explanation": "Правильно: My grandfather retired last year." },
+        { "id": "b1.u02.l01.e07", "type": "fill_gap", "text": "He ___ from university in 2010.", "translation": "Он окончил университет в 2010 году.", "answers": [["graduated"]], "options": ["graduated", "finished", "retired"], "hint": "Окончить вуз.", "explanation": "He graduated from university in 2010. После graduate — from." },
+        { "id": "b1.u02.l01.e08", "type": "fill_gap", "text": "They got ___ two years later.", "translation": "Через два года они поженились.", "answers": [["married"]], "options": ["married", "wedding", "born"], "hint": "Свадьба.", "explanation": "Правильно: They got married two years later." },
+        { "id": "b1.u02.l01.e09", "type": "fill_gap", "text": "She started work at the ___ of sixteen.", "translation": "Она начала работать в шестнадцать лет.", "answers": [["age"]], "options": ["age", "year", "time"], "hint": "Образец: At the age of.", "explanation": "At the age of sixteen — «в шестнадцать лет»." },
+        { "id": "b1.u02.l01.e10", "type": "fill_gap", "text": "I love ___. I read about old cities and famous people.", "translation": "Я люблю историю. Я читаю о королях и старых городах.", "answers": [["history"]], "options": ["history", "story", "memory"], "hint": "Наука о прошлом.", "explanation": "I love history. История как наука — history, рассказ — story." },
+        { "id": "b1.u02.l01.e11", "type": "listen_choice", "audio": "She felt lonely in the big city.", "question": "Что вы слышите?", "options": ["She felt lonely in the big city.", "She felt lucky in the big city.", "She felt lonely in the small town."], "answer": 0, "hint": "Одиноко.", "explanation": "Правильно: She felt lonely in the big city." },
+        { "id": "b1.u02.l01.e12", "type": "listen_dictation", "text": "It was the best moment of my life.", "hint": "Восемь слов.", "explanation": "It was the best moment of my life — «это был лучший момент в моей жизни»." },
+        { "id": "b1.u02.l01.e13", "type": "type_translation", "from": "ru", "text": "подросток", "answers": ["teenager"], "hint": "Восемь букв.", "explanation": "Teenager [ˈtiːneɪdʒɚ] — «подросток»." },
+        { "id": "b1.u02.l01.e14", "type": "word_stress", "word": "university", "syllables": ["u", "ni", "ver", "si", "ty"], "stress": 2, "hint": "Третий слог.", "explanation": "u-ni-VER-si-ty — ударение на третий слог." },
+        { "id": "b1.u02.l01.e15", "type": "word_stress", "word": "career", "syllables": ["ca", "reer"], "stress": 1, "hint": "Второй слог.", "explanation": "ca-REER — ударение на второй слог, не как в русском «карьера»." }
+      ]
+    },
+    {
+      "id": "b1.u02.l02",
+      "kind": "vocabulary",
+      "title": "Как рассказывают историю",
+      "exercises": [
+        { "id": "b1.u02.l02.e01", "type": "match_pairs", "pairs": [{ "en": "notice", "ru": "замечать" }, { "en": "realize", "ru": "понимать" }, { "en": "recognize", "ru": "узнавать" }, { "en": "die", "ru": "умирать" }, { "en": "grow", "ru": "расти" }], "hint": "Recognize — увидеть и вспомнить.", "explanation": "Notice — замечать, realize — понимать, recognize — узнавать, die — умирать, grow — расти." },
+        { "id": "b1.u02.l02.e02", "type": "match_pairs", "pairs": [{ "en": "ambulance", "ru": "скорая помощь" }, { "en": "police", "ru": "полиция" }, { "en": "fire", "ru": "пожар" }, { "en": "shout", "ru": "кричать" }, { "en": "knock", "ru": "стучать" }], "hint": "Слова для драматичной истории.", "explanation": "Ambulance — скорая, police — полиция, fire — пожар, shout — кричать, knock — стучать." },
+        { "id": "b1.u02.l02.e03", "type": "match_pairs", "pairs": [{ "en": "drop", "ru": "уронить" }, { "en": "still", "ru": "до сих пор" }, { "en": "everybody", "ru": "все" }, { "en": "nobody", "ru": "никто" }, { "en": "somebody", "ru": "кто-то" }], "hint": "Три слова на -body.", "explanation": "Drop — уронить, still — до сих пор, everybody — все, nobody — никто, somebody — кто-то." },
+        { "id": "b1.u02.l02.e04", "type": "match_pairs", "pairs": [{ "en": "while", "ru": "пока" }, { "en": "during", "ru": "во время" }, { "en": "since", "ru": "с (момента)" }, { "en": "until", "ru": "до" }, { "en": "eventually", "ru": "в конце концов" }], "hint": "Слова времени.", "explanation": "While — пока, during — во время, since — с, until — до, eventually — в конце концов." },
+        { "id": "b1.u02.l02.e05", "type": "match_pairs", "pairs": [{ "en": "decade", "ru": "десятилетие" }, { "en": "century", "ru": "век" }, { "en": "past", "ru": "прошлое" }, { "en": "present", "ru": "настоящее" }, { "en": "future", "ru": "будущее" }], "hint": "Время и его отрезки.", "explanation": "Decade — десятилетие, century — век, past — прошлое, present — настоящее, future — будущее." },
+        { "id": "b1.u02.l02.e06", "type": "picture_choice", "mode": "picture-to-word", "word": "ambulance", "distractors": ["police", "fire"], "hint": "Машина врачей.", "explanation": "Ambulance — «скорая помощь»: [ˈæmbjələns]." },
+        { "id": "b1.u02.l02.e07", "type": "translate_choice", "from": "en", "text": "Eventually he opened his own restaurant.", "options": ["В конце концов он открыл свой ресторан.", "Возможно, он откроет свой ресторан.", "Иногда он открывал свой ресторан."], "answer": 0, "hint": "Eventually — ложный друг.", "explanation": "Eventually — «в конце концов», а не «эвентуально, возможно».", "troubles": ["false-friends"] },
+        { "id": "b1.u02.l02.e08", "type": "fill_gap", "text": "I didn't ___ her at first. She had short hair.", "translation": "Сначала я её не узнал. У неё были короткие волосы.", "answers": [["recognize"]], "options": ["recognize", "notice", "realize"], "hint": "Узнать знакомого человека.", "explanation": "Правильно: I didn't recognize her at first." },
+        { "id": "b1.u02.l02.e09", "type": "fill_gap", "text": "I fell asleep ___ the film.", "translation": "Я уснул во время фильма.", "answers": [["during"]], "options": ["during", "while", "since"], "hint": "Перед существительным.", "explanation": "I fell asleep during the film. During + существительное." },
+        { "id": "b1.u02.l02.e10", "type": "fill_gap", "text": "She ___ lives in the same village.", "translation": "Она до сих пор живёт в той же деревне.", "answers": [["still"]], "options": ["still", "yet", "already"], "hint": "До сих пор.", "explanation": "Правильно: She still lives in the same village." },
+        { "id": "b1.u02.l02.e11", "type": "fill_gap", "text": "___ knocked on the door, but I didn't open it.", "translation": "Кто-то постучал в дверь, но я не открыл.", "answers": [["Somebody"]], "options": ["Somebody", "Nobody", "Everybody"], "hint": "Неизвестный человек.", "explanation": "Правильно: Somebody knocked on the door." },
+        { "id": "b1.u02.l02.e12", "type": "listen_choice", "audio": "Nobody noticed me.", "question": "Что вы слышите?", "options": ["Nobody noticed me.", "Somebody noticed me.", "Everybody noticed me."], "answer": 0, "hint": "Никто.", "explanation": "Nobody noticed me — «никто меня не заметил»." },
+        { "id": "b1.u02.l02.e13", "type": "listen_dictation", "text": "Somebody called an ambulance.", "hint": "Четыре слова.", "explanation": "Somebody called an ambulance — «кто-то вызвал скорую»." },
+        { "id": "b1.u02.l02.e14", "type": "type_translation", "from": "ru", "text": "Я уронил телефон.", "answers": ["I dropped my phone.", "I dropped the phone."], "hint": "Образец: Drop → dropped.", "explanation": "I dropped my phone. Согласная удваивается: dropped.", "grammar": ["a2.past-simple-regular"] },
+        { "id": "b1.u02.l02.e16", "type": "match_pairs", "pairs": [{ "en": "same", "ru": "тот же" }, { "en": "asleep", "ru": "спящий" }, { "en": "question", "ru": "вопрос" }, { "en": "plate", "ru": "тарелка" }, { "en": "guest", "ru": "гость" }], "hint": "Fall asleep — уснуть.", "explanation": "Same — тот же, asleep — спящий, question — вопрос, plate — тарелка, guest — гость." },
+        { "id": "b1.u02.l02.e17", "type": "match_pairs", "pairs": [{ "en": "himself", "ru": "сам" }, { "en": "talent", "ru": "талант" }, { "en": "each other", "ru": "друг друга" }, { "en": "away", "ru": "прочь" }, { "en": "shine", "ru": "светить" }], "hint": "Run away — убежать.", "explanation": "Himself — сам, talent — талант, each other — друг друга, away — прочь, shine — светить." },
+        { "id": "b1.u02.l02.e18", "type": "match_pairs", "pairs": [{ "en": "factory", "ru": "завод" }, { "en": "grandma", "ru": "бабушка" }, { "en": "grandpa", "ru": "дедушка" }, { "en": "lonely", "ru": "одинокий" }, { "en": "still", "ru": "до сих пор" }], "hint": "Grandma и grandpa — разговорные слова.", "explanation": "Factory — завод, grandma — бабушка, grandpa — дедушка, lonely — одинокий, still — до сих пор." },
+        { "id": "b1.u02.l02.e15", "type": "word_stress", "word": "eventually", "syllables": ["e", "ven", "tu", "al", "ly"], "stress": 1, "hint": "Второй слог.", "explanation": "e-VEN-tu-al-ly — ударение на второй слог." }
+      ]
+    },
+    {
+      "id": "b1.u02.l03",
+      "kind": "grammar",
+      "title": "Past Continuous: фон и событие",
+      "grammar": "b1.past-continuous",
+      "exercises": [
+        { "id": "b1.u02.l03.e01", "type": "fill_gap", "text": "At eight o'clock I ___ reading a book.", "translation": "В восемь я читал книгу.", "answers": [["was"]], "options": ["was", "were", "did"], "hint": "С I.", "explanation": "Правильно: At eight o'clock I was reading a book.", "grammar": ["b1.past-continuous"] },
+        { "id": "b1.u02.l03.e02", "type": "fill_gap", "text": "We ___ watching a film when you called.", "translation": "Мы смотрели фильм, когда ты позвонил.", "answers": [["were"]], "options": ["were", "was", "are"], "hint": "С we.", "explanation": "Правильно: We were watching a film when you called.", "grammar": ["b1.past-continuous"] },
+        { "id": "b1.u02.l03.e03", "type": "fill_gap", "text": "I was walking home when it ___ to rain.", "translation": "Я шёл домой, когда пошёл дождь.", "answers": [["started"]], "options": ["started", "was starting", "starts"], "hint": "Короткое событие.", "explanation": "Правильно: I was walking home when it started to rain.", "grammar": ["b1.past-continuous"], "troubles": ["tenses"] },
+        { "id": "b1.u02.l03.e04", "type": "fill_gap", "text": "___ I was cooking, the phone rang.", "translation": "Пока я готовил, зазвонил телефон.", "answers": [["While"]], "options": ["While", "During", "Since"], "hint": "Перед длинным действием.", "explanation": "Правильно: While I was cooking, the phone rang.", "grammar": ["b1.past-continuous"] },
+        { "id": "b1.u02.l03.e05", "type": "fill_gap", "text": "She was ___ in the library when she met him.", "translation": "Она читала в библиотеке, когда познакомилась с ним.", "answers": [["reading"]], "options": ["reading", "read", "reads"], "hint": "После was — -ing.", "explanation": "Правильно: She was reading in the library when she met him.", "grammar": ["b1.past-continuous"] },
+        { "id": "b1.u02.l03.e06", "type": "fill_gap", "text": "What ___ you doing at nine yesterday?", "translation": "Что вы делали вчера в девять?", "answers": [["were"]], "options": ["were", "did", "was"], "hint": "С you.", "explanation": "Правильно: What were you doing at nine yesterday?", "grammar": ["b1.past-continuous"] },
+        { "id": "b1.u02.l03.e07", "type": "error_correction", "text": "I was walk home.", "wrong": "walk", "correction": "walking", "options": ["walking", "walked", "walks"], "hint": "Образец: -ing.", "explanation": "Правильно: I was walking home.", "grammar": ["b1.past-continuous"], "troubles": ["tenses"] },
+        { "id": "b1.u02.l03.e08", "type": "error_correction", "text": "While I cooked, the phone was ringing.", "wrong": "I cooked, the phone was ringing", "correction": "I was cooking, the phone rang", "options": ["I was cooking, the phone rang", "I cook, the phone rings", "I was cooking, the phone was ring"], "hint": "Длинное и короткое действие.", "explanation": "Правильно: While I was cooking, the phone rang.", "grammar": ["b1.past-continuous"], "troubles": ["tenses"] },
+        { "id": "b1.u02.l03.e09", "type": "error_correction", "text": "We was watching a film.", "wrong": "was", "correction": "were", "options": ["were", "are", "be"], "hint": "С we.", "explanation": "Правильно: We were watching a film.", "grammar": ["b1.past-continuous"], "troubles": ["tenses"] },
+        { "id": "b1.u02.l03.e10", "type": "tiles", "from": "ru", "text": "Пока я спал, кто-то постучал в дверь.", "answer": "While I was sleeping, somebody knocked on the door.", "distractors": ["was knocking", "slept"], "difficulty": 3, "hint": "Образец: While + was sleeping.", "explanation": "Правильно: While I was sleeping, somebody knocked on the door.", "grammar": ["b1.past-continuous"] },
+        { "id": "b1.u02.l03.e11", "type": "tiles", "from": "ru", "text": "Она уронила телефон, когда бежала.", "answer": "She dropped her phone when she was running.", "distractors": ["was dropping", "ran"], "difficulty": 3, "hint": "Короткое — dropped, длинное — was running.", "explanation": "Правильно: She dropped her phone when she was running.", "grammar": ["b1.past-continuous"] },
+        { "id": "b1.u02.l03.e12", "type": "type_translation", "from": "ru", "text": "Что ты делал, когда я позвонил?", "answers": ["What were you doing when I called?"], "difficulty": 2, "hint": "Образец: Were you doing.", "explanation": "Правильно: What were you doing when I called?", "grammar": ["b1.past-continuous"] },
+        { "id": "b1.u02.l03.e13", "type": "type_translation", "from": "ru", "text": "Светило солнце, и люди гуляли в парке.", "answers": ["The sun was shining and people were walking in the park."], "difficulty": 3, "hint": "Два действия-фона.", "explanation": "Правильно: The sun was shining and people were walking in the park.", "grammar": ["b1.past-continuous"] },
+        { "id": "b1.u02.l03.e14", "type": "listen_choice", "audio": "I was walking home when it started to rain.", "question": "Что вы слышите?", "options": ["I was walking home when it started to rain.", "I walked home and it rained.", "I was walking home while it was raining."], "answer": 0, "hint": "Фон и событие.", "explanation": "Правильно: I was walking home when it started to rain.", "grammar": ["b1.past-continuous"] },
+        { "id": "b1.u02.l03.e15", "type": "speak_answer", "question": "What were you doing at eight o'clock yesterday evening?", "questionRu": "Что вы делали вчера в восемь вечера? Ответьте: At eight o'clock I was…", "keywords": [["\\bI was\\b"], ["\\b[a-z]+ing\\b"]], "minKeywords": 2, "samples": ["At eight o'clock I was cooking dinner.", "I was watching a film."], "difficulty": 3, "hint": "Образец: I was + -ing.", "explanation": "Ответ: At eight o'clock I was cooking dinner.", "grammar": ["b1.past-continuous"] }
+      ]
+    },
+    {
+      "id": "b1.u02.l04",
+      "kind": "grammar",
+      "title": "For и since: как давно",
+      "grammar": "b1.for-since",
+      "exercises": [
+        { "id": "b1.u02.l04.e01", "type": "fill_gap", "text": "I have lived here ___ ten years.", "translation": "Я живу здесь десять лет.", "answers": [["for"]], "options": ["for", "since", "during"], "hint": "Отрезок времени.", "explanation": "Правильно: I have lived here for ten years.", "grammar": ["b1.for-since"] },
+        { "id": "b1.u02.l04.e02", "type": "fill_gap", "text": "She has worked here ___ 2015.", "translation": "Она работает здесь с 2015 года.", "answers": [["since"]], "options": ["since", "for", "from"], "hint": "Точка начала.", "explanation": "Правильно: She has worked here since 2015.", "grammar": ["b1.for-since"] },
+        { "id": "b1.u02.l04.e03", "type": "fill_gap", "text": "How long ___ you known him?", "translation": "Как давно вы его знаете?", "answers": [["have"]], "options": ["have", "do", "did"], "hint": "Образец: How long + Present Perfect.", "explanation": "Правильно: How long have you known him?", "grammar": ["b1.for-since"] },
+        { "id": "b1.u02.l04.e04", "type": "fill_gap", "text": "We have been friends ___ school.", "translation": "Мы дружим со школы.", "answers": [["since"]], "options": ["since", "for", "during"], "hint": "С какого момента.", "explanation": "Правильно: We have been friends since school.", "grammar": ["b1.for-since"] },
+        { "id": "b1.u02.l04.e05", "type": "fill_gap", "text": "I haven't seen her ___ a long time.", "translation": "Я давно её не видел.", "answers": [["for"]], "options": ["for", "since", "ago"], "hint": "Отрезок.", "explanation": "Правильно: I haven't seen her for a long time.", "grammar": ["b1.for-since"] },
+        { "id": "b1.u02.l04.e06", "type": "fill_gap", "text": "They ___ lived in this house for a decade.", "translation": "Они живут в этом доме десять лет.", "answers": [["have"]], "options": ["have", "are", "did"], "hint": "До сих пор живут.", "explanation": "Правильно: They have lived in this house for a decade.", "grammar": ["b1.for-since"] },
+        { "id": "b1.u02.l04.e07", "type": "error_correction", "text": "I live here for ten years.", "wrong": "live", "correction": "have lived", "options": ["have lived", "lived", "am living"], "hint": "До сих пор.", "explanation": "Правильно: I have lived here for ten years.", "grammar": ["b1.for-since"], "troubles": ["tenses"] },
+        { "id": "b1.u02.l04.e08", "type": "error_correction", "text": "I have lived here since ten years.", "wrong": "since", "correction": "for", "options": ["for", "during", "from"], "hint": "Отрезок.", "explanation": "Правильно: I have lived here for ten years.", "grammar": ["b1.for-since"], "troubles": ["prepositions"] },
+        { "id": "b1.u02.l04.e09", "type": "error_correction", "text": "How long do you know him?", "wrong": "do you know", "correction": "have you known", "options": ["have you known", "did you know", "are you knowing"], "hint": "Образец: How long + Present Perfect.", "explanation": "Правильно: How long have you known him?", "grammar": ["b1.for-since"], "troubles": ["tenses"] },
+        { "id": "b1.u02.l04.e10", "type": "tiles", "from": "ru", "text": "Я учу английский с прошлого года.", "answer": "I have learned English since last year.", "distractors": ["for", "learn"], "difficulty": 2, "hint": "Образец: Since + last year.", "explanation": "Правильно: I have learned English since last year.", "grammar": ["b1.for-since"] },
+        { "id": "b1.u02.l04.e11", "type": "tiles", "from": "ru", "text": "Как давно вы здесь работаете?", "answer": "How long have you worked here?", "distractors": ["do", "since"], "difficulty": 2, "hint": "Образец: How long have you.", "explanation": "Правильно: How long have you worked here?", "grammar": ["b1.for-since"] },
+        { "id": "b1.u02.l04.e12", "type": "type_translation", "from": "ru", "text": "Мы знаем друг друга двадцать лет.", "answers": ["We have known each other for twenty years."], "difficulty": 3, "hint": "Образец: Have known + for.", "explanation": "We have known each other for twenty years. Each other — «друг друга».", "grammar": ["b1.for-since"] },
+        { "id": "b1.u02.l04.e13", "type": "type_translation", "from": "ru", "text": "Она живёт в Лондоне с 2010 года.", "answers": ["She has lived in London since 2010."], "difficulty": 2, "hint": "Образец: Has lived + since.", "explanation": "Правильно: She has lived in London since 2010.", "grammar": ["b1.for-since"] },
+        { "id": "b1.u02.l04.e14", "type": "listen_choice", "audio": "We have lived here for forty years.", "question": "Что вы слышите?", "options": ["We have lived here for forty years.", "We lived here for forty years.", "We have lived here since forty years."], "answer": 0, "hint": "Образец: Present Perfect + for.", "explanation": "Правильно: We have lived here for forty years.", "grammar": ["b1.for-since"] },
+        { "id": "b1.u02.l04.e15", "type": "speak_answer", "question": "How long have you lived in your town?", "questionRu": "Как давно вы живёте в своём городе? Ответьте: I have lived here for… / since…", "keywords": [["\\bI (have|'ve) lived\\b"], ["\\b(for|since)\\b"]], "minKeywords": 2, "samples": ["I have lived here for ten years.", "I have lived here since I was a child."], "difficulty": 3, "hint": "Образец: I have lived here for… / since…", "explanation": "Ответ: I have lived here for ten years.", "grammar": ["b1.for-since"] }
+      ]
+    },
+    {
+      "id": "b1.u02.l05",
+      "kind": "grammar",
+      "title": "Past Perfect: ещё раньше",
+      "grammar": "b1.past-perfect",
+      "exercises": [
+        { "id": "b1.u02.l05.e01", "type": "fill_gap", "text": "When I arrived, the train ___ already left.", "translation": "Когда я приехал, поезд уже ушёл.", "answers": [["had"]], "options": ["had", "has", "was"], "hint": "Раньше другого события в прошлом.", "explanation": "Правильно: When I arrived, the train had already left.", "grammar": ["b1.past-perfect"] },
+        { "id": "b1.u02.l05.e02", "type": "fill_gap", "text": "She had never ___ the sea before she was ten.", "translation": "До десяти лет она ни разу не видела моря.", "answers": [["seen"]], "options": ["seen", "saw", "see"], "hint": "Третья форма.", "explanation": "Правильно: She had never seen the sea before she was ten.", "grammar": ["b1.past-perfect"] },
+        { "id": "b1.u02.l05.e03", "type": "fill_gap", "text": "By the time he was thirty, he had ___ his own restaurant.", "translation": "К тридцати годам он открыл собственный ресторан.", "answers": [["opened"]], "options": ["opened", "open", "opens"], "hint": "Третья форма.", "explanation": "Правильно: By the time he was thirty, he had opened his own restaurant.", "grammar": ["b1.past-perfect"] },
+        { "id": "b1.u02.l05.e04", "type": "fill_gap", "text": "I realized that I ___ lost my bag.", "translation": "Я понял, что потерял сумку.", "answers": [["had"]], "options": ["had", "have", "was"], "hint": "Потерял раньше, чем понял.", "explanation": "Правильно: I realized that I had lost my bag.", "grammar": ["b1.past-perfect"] },
+        { "id": "b1.u02.l05.e05", "type": "fill_gap", "text": "The film ___ started when we got there.", "translation": "Когда мы пришли, фильм уже начался.", "answers": [["had"]], "options": ["had", "has", "did"], "hint": "Раньше.", "explanation": "Правильно: The film had started when we got there.", "grammar": ["b1.past-perfect"] },
+        { "id": "b1.u02.l05.e06", "type": "error_correction", "text": "When we arrived, the film already started.", "wrong": "already started", "correction": "had already started", "options": ["had already started", "has already started", "already starts"], "hint": "Действие раньше.", "explanation": "Правильно: When we arrived, the film had already started.", "grammar": ["b1.past-perfect"], "troubles": ["tenses"] },
+        { "id": "b1.u02.l05.e07", "type": "error_correction", "text": "I had went home.", "wrong": "went", "correction": "gone", "options": ["gone", "go", "going"], "hint": "Третья форма.", "explanation": "Правильно: I had gone home.", "grammar": ["b1.past-perfect"], "troubles": ["tenses"] },
+        { "id": "b1.u02.l05.e08", "type": "error_correction", "text": "He said he has lost his bag.", "wrong": "has lost", "correction": "had lost", "options": ["had lost", "lose", "is lost"], "hint": "В рассказе о прошлом.", "explanation": "Правильно: He said he had lost his bag.", "grammar": ["b1.past-perfect"], "troubles": ["tenses"] },
+        { "id": "b1.u02.l05.e09", "type": "tiles", "from": "ru", "text": "Я раньше его не замечала.", "answer": "I had never noticed him before.", "distractors": ["have", "notice"], "difficulty": 2, "hint": "Образец: Had never + noticed.", "explanation": "Правильно: I had never noticed him before.", "grammar": ["b1.past-perfect"] },
+        { "id": "b1.u02.l05.e10", "type": "tiles", "from": "ru", "text": "Когда пришла полиция, вор уже убежал.", "answer": "When the police came, the man had already run away.", "distractors": ["has", "ran"], "difficulty": 3, "hint": "Образец: Had already + run.", "explanation": "Правильно: When the police came, the man had already run away.", "grammar": ["b1.past-perfect"] },
+        { "id": "b1.u02.l05.e11", "type": "type_translation", "from": "ru", "text": "Когда мы приехали, поезд уже ушёл.", "answers": ["When we arrived, the train had already left."], "difficulty": 3, "hint": "Образец: Had already left.", "explanation": "Правильно: When we arrived, the train had already left.", "grammar": ["b1.past-perfect"] },
+        { "id": "b1.u02.l05.e12", "type": "translate_choice", "from": "en", "text": "She had already eaten when I came.", "options": ["Когда я пришёл, она уже поела.", "Когда я пришёл, она ела.", "Она поест, когда я приду."], "answer": 0, "hint": "Had eaten — раньше.", "explanation": "She had already eaten when I came — сначала поела, потом я пришёл." },
+        { "id": "b1.u02.l05.e13", "type": "listen_choice", "audio": "I had never seen the sea before.", "question": "Что вы слышите?", "options": ["I had never seen the sea before.", "I have never seen the sea.", "I never saw the sea."], "answer": 0, "hint": "Образец: Had.", "explanation": "Правильно: I had never seen the sea before.", "grammar": ["b1.past-perfect"] },
+        { "id": "b1.u02.l05.e14", "type": "listen_dictation", "text": "The film had already started.", "hint": "Пять слов.", "explanation": "The film had already started — «фильм уже начался»." },
+        { "id": "b1.u02.l05.e15", "type": "speak_repeat", "text": "When I arrived at the station, the train had already left.", "hint": "Две части.", "explanation": "Правильно: Had already left — [hæd ɔːlˈredi left]." }
+      ]
+    },
+    {
+      "id": "b1.u02.l06",
+      "kind": "listening",
+      "title": "История бабушки",
+      "textId": "b1.u02.grandma",
+      "exercises": [
+        {
+          "id": "b1.u02.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "b1.u02.grandma",
+          "hint": "Слушайте, где, когда и как познакомились бабушка и дедушка.",
+          "explanation": "Бабушка Анны родилась в бедной деревенской семье. Она училась в университете и познакомилась с дедушкой в библиотеке. Через два года они поженились и живут в одном доме сорок лет.",
+          "questions": [
+            { "kind": "mcq", "question": "Где родилась бабушка?", "options": ["in a small village", "in a big city", "in London"], "answer": 0, "explanation": "Ольга говорит: I was born in a small village." },
+            { "kind": "mcq", "question": "Что она делала, когда встретила дедушку?", "options": ["She was reading in the library.", "She was cooking.", "She was working in a shop."], "answer": 0, "explanation": "Ольга говорит: I was reading in the library." },
+            { "kind": "mcq", "question": "Как давно они живут в этом доме?", "options": ["for forty years", "for twenty years", "since last year"], "answer": 0, "explanation": "Ольга говорит: We have lived here for forty years." },
+            { "kind": "tfn", "statement": "Olga liked Grandpa at once.", "answer": "false", "explanation": "Ольга говорит: Not at first!" },
+            { "kind": "tfn", "statement": "Olga's family was rich.", "answer": "false", "explanation": "Ольга говорит: My family was poor." },
+            { "kind": "tfn", "statement": "Olga wants to move to the city.", "answer": "false", "explanation": "Ольга говорит: Never." }
+          ]
+        },
+        { "id": "b1.u02.l06.e02", "type": "listen_choice", "audio": "I had never noticed him before.", "question": "Что вы слышите?", "options": ["I had never noticed him before.", "I have never noticed him.", "I never noticed him."], "answer": 0, "hint": "Образец: Had.", "explanation": "I had never noticed him before — «раньше я его не замечала».", "grammar": ["b1.past-perfect"] },
+        { "id": "b1.u02.l06.e03", "type": "listen_dictation", "text": "Where were you born?", "hint": "Четыре слова.", "explanation": "Where were you born? — «Где ты родилась?»" },
+        { "id": "b1.u02.l06.e04", "type": "listen_dictation", "text": "We got married two years later.", "hint": "Шесть слов.", "explanation": "We got married two years later — «через два года мы поженились»." },
+        { "id": "b1.u02.l06.e05", "type": "fill_gap", "text": "I ___ studying at university.", "translation": "Я училась в университете.", "answers": [["was"]], "options": ["was", "were", "had"], "hint": "Фон.", "explanation": "Правильно: I was studying at university.", "grammar": ["b1.past-continuous"] },
+        { "id": "b1.u02.l06.e06", "type": "fill_gap", "text": "We have lived here ___ your mother was born.", "translation": "Мы живём здесь с тех пор, как родилась твоя мама.", "answers": [["since"]], "options": ["since", "for", "while"], "hint": "С момента.", "explanation": "Правильно: We have lived here since your mother was born.", "grammar": ["b1.for-since"] },
+        { "id": "b1.u02.l06.e07", "type": "tiles", "from": "ru", "text": "Все в деревне нас знают.", "answer": "Everybody in the village knows us.", "distractors": ["know", "nobody"], "difficulty": 2, "hint": "Everybody — единственное число.", "explanation": "Everybody in the village knows us. После everybody — knows.", "grammar": ["a1.present-simple"] },
+        { "id": "b1.u02.l06.e08", "type": "type_translation", "from": "ru", "text": "Где ты родилась?", "answers": ["Where were you born?"], "hint": "Образец: Were + born.", "explanation": "Правильно: Where were you born?" },
+        { "id": "b1.u02.l06.e09", "type": "speak_answer", "question": "Where were you born, and how long have you lived in your town?", "questionRu": "Где вы родились и как давно живёте в своём городе? Ответьте двумя предложениями.", "keywords": [["\\bI was born\\b"], ["\\bI (have|'ve) lived\\b", "\\b(for|since)\\b"]], "minKeywords": 2, "samples": ["I was born in Kazan. I have lived in Moscow for five years."], "difficulty": 3, "hint": "Образец: I was born in… I have lived here for…", "explanation": "Ответ: I was born in Kazan. I have lived here for five years.", "grammar": ["b1.for-since"] },
+        { "id": "b1.u02.l06.e10", "type": "speak_repeat", "text": "Everybody in the village knows us, and I have many happy memories here.", "hint": "Две части.", "explanation": "Memories [ˈmeməriz]: ударение на первый слог." }
+      ]
+    },
+    {
+      "id": "b1.u02.l07",
+      "kind": "writing",
+      "title": "История Марко",
+      "textId": "b1.u02.marco",
+      "exercises": [
+        {
+          "id": "b1.u02.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "b1.u02.marco",
+          "hint": "Следите за событиями и временами.",
+          "explanation": "Марко из бедной семьи начал работать в ресторане в четырнадцать лет. Однажды он сам закончил ужин, владелец заметил его талант, и Марко стал знаменитым поваром.",
+          "questions": [
+            { "kind": "mcq", "question": "Сколько лет было Марко, когда он начал работать?", "options": ["fourteen", "sixteen", "twenty"], "answer": 0, "explanation": "В тексте: at the age of fourteen." },
+            { "kind": "mcq", "question": "Что случилось однажды вечером?", "options": ["A fire started in the kitchen.", "The owner died.", "Marco lost his job."], "answer": 0, "explanation": "В тексте: a fire started in the kitchen." },
+            { "kind": "mcq", "question": "Где Марко открыл свой ресторан?", "options": ["in London", "in Rome", "in France"], "answer": 0, "explanation": "В тексте: his own restaurant in London." },
+            { "kind": "tfn", "statement": "Marco had cooked for guests many times before that evening.", "answer": "false", "explanation": "В тексте: Marco had never cooked for guests before." },
+            { "kind": "tfn", "statement": "Marco has written three books.", "answer": "true", "explanation": "В тексте: he has written three books." },
+            { "kind": "tfn", "statement": "Marco has forgotten the small kitchen.", "answer": "false", "explanation": "В тексте: he still remembers the small kitchen." }
+          ]
+        },
+        { "id": "b1.u02.l07.e02", "type": "translate_choice", "from": "en", "text": "He still remembers the small kitchen where his career started.", "options": ["Он до сих пор помнит маленькую кухню, где началась его карьера.", "Он больше не помнит маленькую кухню.", "Он хочет открыть маленькую кухню."], "answer": 0, "hint": "Still — «до сих пор».", "explanation": "Правильно: He still remembers the small kitchen where his career started." },
+        { "id": "b1.u02.l07.e03", "type": "fill_gap", "text": "While the cook ___ talking to some guests, a fire started.", "translation": "Пока повар разговаривал с гостями, начался пожар.", "answers": [["was"]], "options": ["was", "were", "had"], "hint": "Фон.", "explanation": "Правильно: While the cook was talking to some guests, a fire started.", "grammar": ["b1.past-continuous"] },
+        { "id": "b1.u02.l07.e04", "type": "fill_gap", "text": "He has lived in London ___ then.", "translation": "С тех пор он живёт в Лондоне.", "answers": [["since"]], "options": ["since", "for", "during"], "hint": "С тех пор.", "explanation": "Правильно: He has lived in London since then.", "grammar": ["b1.for-since"] },
+        { "id": "b1.u02.l07.e05", "type": "type_translation", "from": "ru", "text": "Владелец понял, что у мальчика настоящий талант.", "answers": ["The owner realized that the boy had real talent.", "The owner realized the boy had real talent."], "difficulty": 3, "hint": "Образец: Realized that…", "explanation": "Правильно: The owner realized that the boy had real talent.", "grammar": ["b1.past-perfect"] },
+        { "id": "b1.u02.l07.e06", "type": "speak_describe", "picture": { "emoji": "👵" }, "situation": "Расскажите историю из жизни своей семьи: что происходило, что случилось и чем закончилось.", "keywords": [["\\b(was|were) [a-z]+ing\\b", "\\bhad [a-z]+\\b"], ["\\b(when|while|since|for|eventually|suddenly)\\b"]], "minKeywords": 2, "samples": ["My grandfather was working in a factory when he met my grandmother. They got married in 1970 and they have lived in the same house since then."], "difficulty": 3, "hint": "Образец: He was working… when…", "explanation": "Фон — Past Continuous, событие — Past Simple, до сих пор — Present Perfect.", "grammar": ["b1.past-continuous"] },
+        { "id": "b1.u02.l07.e07", "type": "speak_answer", "question": "What is your earliest memory?", "questionRu": "Какое ваше самое раннее воспоминание? Ответьте: I remember… I was… years old. I was…", "keywords": [["\\bI (remember|was)\\b"], ["\\b(was|were) [a-z]+ing\\b", "\\b(old|age|child|years)\\b"]], "minKeywords": 2, "samples": ["I remember my first day at school. I was six years old and I was holding my mother's hand."], "difficulty": 3, "hint": "Образец: I remember… I was…", "explanation": "Опишите сцену в Past Continuous: I was holding…", "grammar": ["b1.past-continuous"] },
+        {
+          "id": "b1.u02.l07.e08",
+          "type": "write",
+          "task": "Напишите короткую биографию человека, которого вы знаете (или свою): где он родился, что происходило в важные моменты, что случилось раньше, чем он чего-то добился, и как давно он делает то, что делает сейчас. Например: My grandmother was born in 1950. She was studying at university when she met my grandfather. They have lived in the same house for forty years.",
+          "minWords": 80,
+          "maxWords": 180,
+          "criteria": [
+            { "id": "born", "label": "Есть was born", "patterns": ["\\b(was|were) born\\b"] },
+            { "id": "continuous", "label": "Есть Past Continuous", "patterns": ["\\b(was|were) [a-z]+ing\\b"] },
+            { "id": "forsince", "label": "Есть Present Perfect с for или since", "patterns": ["\\b(have|has|'ve|'s) [a-z]+ (here |there |in [a-z ]+ )?(for|since)\\b", "\\b(for|since) [a-z0-9 ]+\\b"] },
+            { "id": "perfect", "label": "Есть Past Perfect (had + третья форма)", "patterns": ["\\bhad (never |already |just )?(been|seen|done|gone|met|lived|worked|opened|finished|started|lost|left|learned|learnt|graduated|retired|married|written|heard|noticed|[a-z]+ed)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\b(I|he|she|they|we) (born)\\b", "message": "«Родился» — was born: She was born in 1950." },
+            { "pattern": "\\b(live|lives|work|works|know|knows) (here |there )?for (a |[0-9]+ |two |three |four |five |ten |twenty |forty )", "message": "Если действие длится до сих пор, нужно Present Perfect: have lived here for ten years." },
+            { "pattern": "\\bsince (two|three|four|five|six|seven|eight|nine|ten|twenty|thirty|forty|fifty|many|several) (years|months|weeks|days)\\b", "message": "С отрезком времени — for: for ten years. Since — с точкой: since 2015." },
+            { "pattern": "\\bhad (went|saw|did|ate|took|wrote|was|were|began|ran)\\b", "message": "После had нужна третья форма: gone, seen, done, eaten, taken, written, been, begun, run." },
+            { "pattern": "\\bwhile (I|he|she|we|they) (cooked|walked|worked|read|slept|studied)\\b", "message": "После while длинное действие обычно в Past Continuous: while I was cooking." }
+          ],
+          "samples": [
+            "My grandmother was born in a small village in 1950. Her family was poor, but she was clever and she went to university. She was studying in the library when she met my grandfather. She had never noticed him before, but they got married two years later. They moved to the city, and they have lived in the same house for forty years. My grandfather retired in 2010. She still remembers her village, and she says she has many happy memories.",
+            "I was born in Kazan in 1995. When I was a teenager, I was learning to play the guitar, and I wanted to become famous. Eventually I studied engineering at university. I had never worked in an office before I graduated, so my first job was difficult. I have lived in Moscow since 2018, and I have worked as an engineer for five years. I am proud of my career, but I still play the guitar in the evenings, and sometimes I play at small concerts with my friends."
+          ],
+          "difficulty": 3,
+          "hint": "План: рождение и детство → важный момент (фон + событие) → что было раньше → чем человек занимается до сих пор.",
+          "explanation": "Фон — Past Continuous, события — Past Simple, ещё раньше — Past Perfect, до сих пор — Present Perfect с for и since.",
+          "grammar": ["b1.past-continuous", "b1.for-since", "b1.past-perfect"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "b1.u02.test.e01", "type": "match_pairs", "pairs": [{ "en": "graduate", "ru": "окончить вуз" }, { "en": "retire", "ru": "уйти на пенсию" }, { "en": "recognize", "ru": "узнавать" }, { "en": "eventually", "ru": "в конце концов" }, { "en": "century", "ru": "век" }], "hint": "Слова юнита.", "explanation": "Graduate — окончить вуз, retire — уйти на пенсию, recognize — узнавать, eventually — в конце концов, century — век." },
+      { "id": "b1.u02.test.e02", "type": "translate_choice", "from": "ru", "text": "никто", "options": ["nobody", "somebody", "everybody"], "answer": 0, "hint": "Ни один человек.", "explanation": "Nobody — «никто»." },
+      { "id": "b1.u02.test.e03", "type": "fill_gap", "text": "I ___ walking home when it started to rain.", "translation": "Я шёл домой, когда пошёл дождь.", "answers": [["was"]], "options": ["was", "were", "had"], "hint": "Фон.", "explanation": "Правильно: I was walking home when it started to rain.", "grammar": ["b1.past-continuous"] },
+      { "id": "b1.u02.test.e04", "type": "fill_gap", "text": "___ I was cooking, the phone rang.", "translation": "Пока я готовил, зазвонил телефон.", "answers": [["While"]], "options": ["While", "During", "Since"], "hint": "Перед действием.", "explanation": "Правильно: While I was cooking, the phone rang.", "grammar": ["b1.past-continuous"] },
+      { "id": "b1.u02.test.e05", "type": "fill_gap", "text": "I have lived here ___ ten years.", "translation": "Я живу здесь десять лет.", "answers": [["for"]], "options": ["for", "since", "during"], "hint": "Отрезок.", "explanation": "Правильно: I have lived here for ten years.", "grammar": ["b1.for-since"] },
+      { "id": "b1.u02.test.e06", "type": "fill_gap", "text": "She has worked here ___ 2015.", "translation": "Она работает здесь с 2015 года.", "answers": [["since"]], "options": ["since", "for", "from"], "hint": "Точка.", "explanation": "Правильно: She has worked here since 2015.", "grammar": ["b1.for-since"] },
+      { "id": "b1.u02.test.e07", "type": "fill_gap", "text": "When I arrived, the train ___ already left.", "translation": "Когда я приехал, поезд уже ушёл.", "answers": [["had"]], "options": ["had", "has", "was"], "hint": "Раньше.", "explanation": "Правильно: When I arrived, the train had already left.", "grammar": ["b1.past-perfect"] },
+      { "id": "b1.u02.test.e08", "type": "fill_gap", "text": "I fell asleep ___ the film.", "translation": "Я уснул во время фильма.", "answers": [["during"]], "options": ["during", "while", "since"], "hint": "Перед существительным.", "explanation": "Правильно: I fell asleep during the film." },
+      { "id": "b1.u02.test.e09", "type": "error_correction", "text": "I live here for ten years.", "wrong": "live", "correction": "have lived", "options": ["have lived", "lived", "am living"], "hint": "До сих пор.", "explanation": "Правильно: I have lived here for ten years.", "grammar": ["b1.for-since"] },
+      { "id": "b1.u02.test.e10", "type": "error_correction", "text": "We was watching a film.", "wrong": "was", "correction": "were", "options": ["were", "are", "be"], "hint": "С we.", "explanation": "Правильно: We were watching a film.", "grammar": ["b1.past-continuous"] },
+      { "id": "b1.u02.test.e11", "type": "error_correction", "text": "When we arrived, the film already started.", "wrong": "already started", "correction": "had already started", "options": ["had already started", "has already started", "already starts"], "hint": "Раньше.", "explanation": "Правильно: When we arrived, the film had already started.", "grammar": ["b1.past-perfect"] },
+      { "id": "b1.u02.test.e12", "type": "listen_choice", "audio": "While I was sleeping, somebody knocked on the door.", "question": "Что вы слышите?", "options": ["While I was sleeping, somebody knocked on the door.", "When I slept, nobody knocked.", "While I was sleeping, somebody was shouting."], "answer": 0, "hint": "Стук в дверь.", "explanation": "Правильно: While I was sleeping, somebody knocked on the door.", "grammar": ["b1.past-continuous"] },
+      { "id": "b1.u02.test.e13", "type": "listen_dictation", "text": "I was born in a small village.", "hint": "Семь слов.", "explanation": "I was born in a small village — «я родился в небольшой деревне»." },
+      { "id": "b1.u02.test.e14", "type": "tiles", "from": "ru", "text": "Как давно вы его знаете?", "answer": "How long have you known him?", "distractors": ["do", "since"], "difficulty": 2, "hint": "Образец: How long have you.", "explanation": "Правильно: How long have you known him?", "grammar": ["b1.for-since"] },
+      { "id": "b1.u02.test.e15", "type": "type_translation", "from": "ru", "text": "Я понял, что потерял сумку.", "answers": ["I realized that I had lost my bag.", "I realized I had lost my bag."], "difficulty": 3, "hint": "Образец: Had lost.", "explanation": "Правильно: I realized that I had lost my bag.", "grammar": ["b1.past-perfect"] },
+      { "id": "b1.u02.test.e16", "type": "speak_repeat", "text": "She was reading in the library when she met him.", "hint": "Фон и событие.", "explanation": "Правильно: Was reading [wəz ˈriːdɪŋ], met [met]." }
+    ]
+  }
+}
