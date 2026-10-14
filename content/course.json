@@ -302,10 +302,8 @@
           "order": 1,
           "title": { "en": "Complex tenses", "ru": "Сложные времена" },
           "goals": ["Могу говорить о долгих процессах и будущем в деталях.", "Могу выразить сожаление: I wish…"],
-          "units": ["b2.u01", "b2.u02"],
-          "planned": [
-            { "id": "b2.u03", "title": { "en": "Regrets and wishes", "ru": "Сожаления и wish" } }
-          ]
+          "units": ["b2.u01", "b2.u02", "b2.u03"],
+          "planned": []
         },
         {
           "id": "b2.m2",
