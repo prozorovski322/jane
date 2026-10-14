@@ -249,10 +249,8 @@
           "order": 2,
           "title": { "en": "Conditions and guesses", "ru": "Условия и догадки" },
           "goals": ["Могу сказать, что будет, если…", "Могу строить предположения: might, must be, can't be."],
-          "units": ["b1.u03"],
-          "planned": [
-            { "id": "b1.u04", "title": { "en": "Maybe and must be", "ru": "Предположения и возможности" } }
-          ]
+          "units": ["b1.u03", "b1.u04"],
+          "planned": []
         },
         {
           "id": "b1.m3",

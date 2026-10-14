@@ -1,0 +1,323 @@
+{
+  "id": "b1.u04",
+  "level": "B1",
+  "order": 4,
+  "title": { "en": "Maybe and must be", "ru": "Предположения и возможности" },
+  "description": "Строим догадки и рассуждаем, как детективы: кто это мог быть, что случилось и насколько мы уверены. Must be, might be, can't be, seem и sound, I'm sure, probably, I doubt.",
+  "goals": [
+    "Могу высказать догадку: She must be at home. He might be ill. It can't be Tom.",
+    "Могу сказать о впечатлении: She seems tired. That sounds great.",
+    "Могу показать степень уверенности: I'm sure, probably, I doubt it.",
+    "Могу объяснить причину и найти решение загадки.",
+    "Могу понять короткий детективный рассказ.",
+    "Могу написать текст с догадками и выводами."
+  ],
+  "grammar": ["b1.deduction-present", "b1.seem-sound", "b1.certainty"],
+  "troubles": ["word-order"],
+  "words": [
+    { "id": "mystery", "en": "mystery", "ipa": "ˈmɪstɚi", "pos": "noun", "ru": ["загадка", "тайна"], "example": { "en": "It is a real mystery.", "ru": "Это настоящая загадка." }, "forms": { "plural": "mysteries" }, "topics": ["mystery"] },
+    { "id": "detective", "en": "detective", "ipa": "dɪˈtektɪv", "pos": "noun", "ru": ["детектив", "сыщик"], "example": { "en": "The detective found a clue.", "ru": "Детектив нашёл улику." }, "topics": ["mystery"] },
+    { "id": "clue", "en": "clue", "ipa": "kluː", "pos": "noun", "ru": ["улика", "подсказка"], "example": { "en": "There are no clues.", "ru": "Нет никаких улик." }, "topics": ["mystery"] },
+    { "id": "evidence", "en": "evidence", "ipa": "ˈevədəns", "pos": "noun", "ru": ["доказательство", "улики"], "example": { "en": "We have no evidence.", "ru": "У нас нет доказательств." }, "note": "Evidence — несчитаемое слово: some evidence, а не an evidence.", "topics": ["mystery"] },
+    { "id": "guess", "en": "guess", "ipa": "ɡes", "pos": "verb", "ru": ["угадывать", "предполагать"], "example": { "en": "Can you guess who did it?", "ru": "Можете угадать, кто это сделал?" }, "forms": { "third": "guesses" }, "topics": ["mystery"] },
+    { "id": "explain", "en": "explain", "ipa": "ɪkˈspleɪn", "pos": "verb", "ru": ["объяснять"], "example": { "en": "Can you explain what happened?", "ru": "Вы можете объяснить, что случилось?" }, "forms": { "third": "explains" }, "note": "Объяснить кому-то — explain to someone, а не explain someone.", "topics": ["mystery"] },
+    { "id": "explanation", "en": "explanation", "ipa": "ˌekspləˈneɪʃən", "pos": "noun", "ru": ["объяснение"], "example": { "en": "There must be an explanation.", "ru": "Должно быть какое-то объяснение." }, "topics": ["mystery"] },
+    { "id": "reason", "en": "reason", "ipa": "ˈriːzən", "pos": "noun", "ru": ["причина"], "example": { "en": "What is the reason?", "ru": "Какая причина?" }, "topics": ["mystery"] },
+    { "id": "mistake", "en": "mistake", "ipa": "mɪˈsteɪk", "pos": "noun", "ru": ["ошибка"], "example": { "en": "It must be a mistake.", "ru": "Это, должно быть, ошибка." }, "note": "Сделать ошибку — make a mistake.", "topics": ["mystery"] },
+    { "id": "truth", "en": "truth", "ipa": "truːθ", "pos": "noun", "ru": ["правда"], "example": { "en": "I doubt that he is telling the truth.", "ru": "Сомневаюсь, что он говорит правду." }, "note": "Говорить правду — tell the truth, а не say the truth.", "topics": ["mystery"] },
+    { "id": "lie", "en": "lie", "ipa": "laɪ", "pos": "verb", "ru": ["лгать"], "example": { "en": "He might be lying.", "ru": "Возможно, он лжёт." }, "forms": { "third": "lies", "ing": "lying" }, "topics": ["mystery"] },
+    { "id": "steal", "en": "steal", "ipa": "stiːl", "pos": "verb", "ru": ["красть"], "example": { "en": "Somebody stole my bike.", "ru": "Кто-то украл мой велосипед." }, "forms": { "third": "steals" }, "topics": ["mystery"] },
+    { "id": "thief", "en": "thief", "ipa": "θiːf", "pos": "noun", "ru": ["вор"], "example": { "en": "The thief must be someone from the office.", "ru": "Вор, должно быть, кто-то из офиса." }, "forms": { "plural": "thieves" }, "topics": ["mystery"] },
+    { "id": "missing", "en": "missing", "ipa": "ˈmɪsɪŋ", "pos": "adj", "ru": ["пропавший"], "example": { "en": "My keys are missing.", "ru": "Мои ключи пропали." }, "topics": ["mystery"] },
+    { "id": "disappear", "en": "disappear", "ipa": "ˌdɪsəˈpɪr", "pos": "verb", "ru": ["исчезать"], "example": { "en": "The cake disappeared.", "ru": "Торт исчез." }, "forms": { "third": "disappears" }, "topics": ["mystery"] },
+    { "id": "noise", "en": "noise", "ipa": "nɔɪz", "pos": "noun", "ru": ["шум"], "example": { "en": "I heard a strange noise.", "ru": "Я услышал странный шум." }, "topics": ["mystery"] },
+    { "id": "lock", "en": "lock", "ipa": "lɑːk", "pos": "verb", "ru": ["запирать"], "example": { "en": "Did you lock the door?", "ru": "Ты запер дверь?" }, "forms": { "third": "locks" }, "topics": ["mystery"] },
+    { "id": "empty", "en": "empty", "ipa": "ˈempti", "pos": "adj", "ru": ["пустой"], "example": { "en": "The wallet was empty.", "ru": "Кошелёк был пустым." }, "topics": ["adjectives"] },
+    { "id": "full", "en": "full", "ipa": "fʊl", "pos": "adj", "ru": ["полный"], "example": { "en": "The bag was full of money.", "ru": "Сумка была полна денег." }, "note": "Full of — «полный чего-то».", "topics": ["adjectives"] },
+    { "id": "owner", "en": "owner", "ipa": "ˈoʊnɚ", "pos": "noun", "ru": ["владелец"], "example": { "en": "Perhaps the owner forgot it.", "ru": "Возможно, владелец его забыл." }, "topics": ["mystery"] },
+    { "id": "belong", "en": "belong", "ipa": "bɪˈlɔːŋ", "pos": "verb", "ru": ["принадлежать"], "example": { "en": "This bag might belong to Kate.", "ru": "Эта сумка, возможно, принадлежит Кейт." }, "forms": { "third": "belongs" }, "note": "Belong to someone — принадлежать кому-то.", "topics": ["mystery"] },
+    { "id": "suspect", "en": "suspect", "ipa": "səˈspekt", "pos": "verb", "ru": ["подозревать"], "example": { "en": "I suspect that the dog ate the cake.", "ru": "Подозреваю, что торт съела собака." }, "forms": { "third": "suspects" }, "topics": ["mystery"] },
+    { "id": "someone", "en": "someone", "ipa": "ˈsʌmwʌn", "pos": "pron", "ru": ["кто-то"], "example": { "en": "Someone left this bag here.", "ru": "Кто-то оставил здесь эту сумку." }, "note": "Someone и somebody значат одно и то же.", "topics": ["grammar"] },
+    { "id": "anyone", "en": "anyone", "ipa": "ˈeniwʌn", "pos": "pron", "ru": ["кто-нибудь", "никто (в отрицании)"], "example": { "en": "Did anyone see the thief?", "ru": "Кто-нибудь видел вора?" }, "topics": ["grammar"] },
+    { "id": "inside", "en": "inside", "ipa": "ˌɪnˈsaɪd", "pos": "adv", "ru": ["внутри"], "example": { "en": "There is a wallet inside.", "ru": "Внутри кошелёк." }, "topics": ["grammar"] },
+    { "id": "a-few", "en": "a few", "ipa": "ə fjuː", "pos": "phrase", "ru": ["несколько"], "example": { "en": "Only a few pieces were left.", "ru": "Осталось всего несколько кусочков." }, "note": "A few — с исчисляемыми (a few pieces), a little — с неисчисляемыми (a little money).", "topics": ["grammar"] },
+    { "id": "piece", "en": "piece", "ipa": "piːs", "pos": "noun", "ru": ["кусок", "кусочек"], "example": { "en": "Can I have a piece of cake?", "ru": "Можно кусочек торта?" }, "topics": ["things"] },
+    { "id": "angry", "en": "angry", "ipa": "ˈæŋɡri", "pos": "adj", "ru": ["сердитый", "злой"], "example": { "en": "Elena was angry.", "ru": "Елена разозлилась." }, "note": "Злиться на кого-то — be angry with someone.", "topics": ["feelings"] },
+    { "id": "nothing", "en": "nothing", "ipa": "ˈnʌθɪŋ", "pos": "pron", "ru": ["ничего"], "example": { "en": "Nothing was missing.", "ru": "Ничего не пропало." }, "note": "С nothing второй not не нужен: I saw nothing.", "topics": ["grammar"] },
+    { "id": "else", "en": "else", "ipa": "els", "pos": "adv", "ru": ["ещё", "другой"], "example": { "en": "Nobody else was at home.", "ru": "Больше никого дома не было." }, "topics": ["grammar"] },
+    { "id": "keep", "en": "keep", "ipa": "kiːp", "pos": "verb", "ru": ["хранить", "держать"], "example": { "en": "I always keep my phone in my pocket.", "ru": "Я всегда держу телефон в кармане." }, "forms": { "third": "keeps" }, "topics": ["verbs"] },
+    { "id": "pocket", "en": "pocket", "ipa": "ˈpɑːkɪt", "pos": "noun", "ru": ["карман"], "example": { "en": "The keys were in my pocket.", "ru": "Ключи были у меня в кармане." }, "topics": ["things"] },
+    { "id": "end", "en": "end", "ipa": "end", "pos": "noun", "ru": ["конец"], "example": { "en": "At the end she was laughing.", "ru": "В конце она смеялась." }, "topics": ["time"] },
+    { "id": "strange", "en": "strange", "ipa": "streɪndʒ", "pos": "adj", "ru": ["странный"], "example": { "en": "That's strange.", "ru": "Странно." }, "topics": ["adjectives"] },
+    { "id": "obvious", "en": "obvious", "ipa": "ˈɑːbviəs", "pos": "adj", "ru": ["очевидный"], "example": { "en": "The answer is obvious.", "ru": "Ответ очевиден." }, "topics": ["adjectives"] },
+    { "id": "impossible", "en": "impossible", "ipa": "ɪmˈpɑːsəbəl", "pos": "adj", "ru": ["невозможный"], "example": { "en": "That is impossible!", "ru": "Это невозможно!" }, "topics": ["certainty"] },
+    { "id": "likely", "en": "likely", "ipa": "ˈlaɪkli", "pos": "adj", "ru": ["вероятный"], "example": { "en": "It is likely to rain.", "ru": "Скорее всего, будет дождь." }, "topics": ["certainty"] },
+    { "id": "unlikely", "en": "unlikely", "ipa": "ʌnˈlaɪkli", "pos": "adj", "ru": ["маловероятный"], "example": { "en": "It is unlikely that he will come.", "ru": "Маловероятно, что он придёт." }, "topics": ["certainty"] },
+    { "id": "certain", "en": "certain", "ipa": "ˈsɝːtən", "pos": "adj", "ru": ["уверенный", "определённый"], "example": { "en": "I am certain that it was Tom.", "ru": "Я уверен, что это был Том." }, "topics": ["certainty"] },
+    { "id": "doubt", "en": "doubt", "ipa": "daʊt", "pos": "verb", "ru": ["сомневаться"], "example": { "en": "I doubt that he knows the truth.", "ru": "Сомневаюсь, что он знает правду." }, "forms": { "third": "doubts" }, "note": "B в слове doubt не читается: [daʊt].", "topics": ["certainty"] },
+    { "id": "suppose", "en": "suppose", "ipa": "səˈpoʊz", "pos": "verb", "ru": ["полагать", "предполагать"], "example": { "en": "I suppose you are right.", "ru": "Полагаю, вы правы." }, "forms": { "third": "supposes" }, "topics": ["certainty"] },
+    { "id": "seem", "en": "seem", "ipa": "siːm", "pos": "verb", "ru": ["казаться"], "example": { "en": "She seems tired.", "ru": "Она кажется уставшей." }, "forms": { "third": "seems" }, "topics": ["certainty"] },
+    { "id": "sound#verb", "en": "sound", "ipa": "saʊnd", "pos": "verb", "ru": ["звучать", "казаться (по словам)"], "example": { "en": "That sounds great.", "ru": "Звучит отлично." }, "forms": { "third": "sounds" }, "topics": ["certainty"] },
+    { "id": "might", "en": "might", "ipa": "maɪt", "pos": "modal", "ru": ["может быть", "возможно"], "example": { "en": "He might be ill.", "ru": "Возможно, он болен." }, "topics": ["grammar"] },
+    { "id": "may#modal", "en": "may", "ipa": "meɪ", "pos": "modal", "ru": ["может быть", "возможно"], "example": { "en": "They may know the answer.", "ru": "Возможно, они знают ответ." }, "note": "May и might в догадках почти одинаковы. May ещё значит «можно» в вежливой просьбе: May I come in?", "topics": ["grammar"] }
+  ],
+  "texts": [
+    {
+      "id": "b1.u04.bag",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Whose bag is this?", "ru": "Чья это сумка?" },
+      "speakers": [
+        { "id": "anna", "name": "Anna", "voice": "female" },
+        { "id": "tom", "name": "Tom", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "anna", "en": "Tom, whose bag is this? It was on my desk this morning.", "ru": "Том, чья это сумка? Утром она лежала на моём столе." },
+        { "speaker": "tom", "en": "I don't know. It might be Kate's. She has a black bag.", "ru": "Не знаю. Может, Кейт. У неё чёрная сумка." },
+        { "speaker": "anna", "en": "It can't be Kate's. She is on holiday this week.", "ru": "Это не может быть сумка Кейт. Она в отпуске на этой неделе." },
+        { "speaker": "tom", "en": "Then it must belong to someone from the meeting yesterday.", "ru": "Тогда она, должно быть, кого-то со вчерашней встречи." },
+        { "speaker": "anna", "en": "Look, there is a wallet inside, but it is empty.", "ru": "Смотри, внутри кошелёк, но он пустой." },
+        { "speaker": "tom", "en": "That's strange. Maybe someone stole the money.", "ru": "Странно. Может, кто-то украл деньги." },
+        { "speaker": "anna", "en": "I doubt it. The bag seems new, and there is a phone in it too. A thief would take the phone.", "ru": "Сомневаюсь. Сумка кажется новой, и в ней ещё телефон. Вор взял бы телефон." },
+        { "speaker": "tom", "en": "That sounds right. Perhaps the owner just forgot it. Let's give it to the boss.", "ru": "Звучит логично. Возможно, владелец просто её забыл. Давай отдадим её начальнику." }
+      ]
+    },
+    {
+      "id": "b1.u04.cake",
+      "kind": "reading",
+      "genre": "story",
+      "title": { "en": "The missing cake", "ru": "Пропавший торт" },
+      "lines": [
+        { "en": "On Saturday Elena made a big cake for her brother's birthday. She left it on the kitchen table and went to the shop. When she came back an hour later, the cake had disappeared. Only a few small pieces were left on the floor.", "ru": "В субботу Елена испекла большой торт на день рождения брата. Она оставила его на кухонном столе и пошла в магазин. Когда через час она вернулась, торт исчез. На полу остались только несколько маленьких кусочков." },
+        { "en": "Elena was angry. 'Someone must have a key,' she thought. But the door was locked, and nothing was missing from the flat. 'It can't be a thief. A thief would take my laptop, not a cake.'", "ru": "Елена разозлилась. «У кого-то, должно быть, есть ключ», — подумала она. Но дверь была заперта, и из квартиры ничего не пропало. «Это не может быть вор. Вор взял бы мой ноутбук, а не торт»." },
+        { "en": "Then she noticed that the kitchen window was open. 'Maybe someone came in through the window,' she said. But the flat is on the third floor, so that seemed impossible.", "ru": "Потом она заметила, что окно на кухне открыто. «Может быть, кто-то залез через окно», — сказала она. Но квартира на третьем этаже, так что это казалось невозможным." },
+        { "en": "Suddenly she heard a strange noise under the sofa. She looked, and there was her dog, Max. His nose was white with sugar, and he looked very happy. The mystery was solved. The answer was obvious, and Elena couldn't stop laughing.", "ru": "Вдруг она услышала странный шум под диваном. Она заглянула туда — там был её пёс Макс. Нос у него был белым от сахара, и выглядел он очень довольным. Загадка была разгадана. Ответ был очевиден, и Елена не могла перестать смеяться." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "b1.u04.l01",
+      "kind": "vocabulary",
+      "title": "Загадки и улики",
+      "exercises": [
+        { "id": "b1.u04.l01.e01", "type": "match_pairs", "pairs": [{ "en": "mystery", "ru": "загадка" }, { "en": "detective", "ru": "сыщик" }, { "en": "clue", "ru": "улика" }, { "en": "evidence", "ru": "доказательство" }, { "en": "guess", "ru": "угадывать" }], "hint": "Слова детектива.", "explanation": "Mystery — загадка, detective — сыщик, clue — улика, evidence — доказательство, guess — угадывать." },
+        { "id": "b1.u04.l01.e02", "type": "match_pairs", "pairs": [{ "en": "explain", "ru": "объяснять" }, { "en": "explanation", "ru": "объяснение" }, { "en": "reason", "ru": "причина" }, { "en": "mistake", "ru": "ошибка" }, { "en": "truth", "ru": "правда" }], "hint": "Explain и explanation — родственные.", "explanation": "Explain — объяснять, explanation — объяснение, reason — причина, mistake — ошибка, truth — правда." },
+        { "id": "b1.u04.l01.e03", "type": "match_pairs", "pairs": [{ "en": "lie", "ru": "лгать" }, { "en": "steal", "ru": "красть" }, { "en": "thief", "ru": "вор" }, { "en": "missing", "ru": "пропавший" }, { "en": "disappear", "ru": "исчезать" }], "hint": "Thief крадёт.", "explanation": "Lie — лгать, steal — красть, thief — вор, missing — пропавший, disappear — исчезать." },
+        { "id": "b1.u04.l01.e04", "type": "match_pairs", "pairs": [{ "en": "noise", "ru": "шум" }, { "en": "lock", "ru": "запирать" }, { "en": "empty", "ru": "пустой" }, { "en": "full", "ru": "полный" }, { "en": "owner", "ru": "владелец" }], "hint": "Empty и full — противоположные.", "explanation": "Noise — шум, lock — запирать, empty — пустой, full — полный, owner — владелец." },
+        { "id": "b1.u04.l01.e05", "type": "translate_choice", "from": "ru", "text": "Говорить правду", "options": ["tell the truth", "say the truth", "speak the truth to"], "answer": 0, "hint": "Устойчивое сочетание с tell.", "explanation": "Tell the truth — «говорить правду». Say the truth — ошибка." },
+        { "id": "b1.u04.l01.e06", "type": "translate_choice", "from": "en", "text": "My keys are missing.", "options": ["Мои ключи пропали.", "Я скучаю по ключам.", "Мои ключи пустые."], "answer": 0, "hint": "Missing — «пропавший».", "explanation": "My keys are missing — «мои ключи пропали»." },
+        { "id": "b1.u04.l01.e07", "type": "fill_gap", "text": "Somebody ___ my bike yesterday.", "translation": "Вчера кто-то украл мой велосипед.", "answers": [["stole"]], "options": ["stole", "stealed", "steal"], "hint": "Особая форма.", "explanation": "Правильно: Somebody stole my bike yesterday. Steal — stole.", "grammar": ["a2.past-simple-irregular"] },
+        { "id": "b1.u04.l01.e08", "type": "fill_gap", "text": "Can you ___ what happened?", "translation": "Вы можете объяснить, что случилось?", "answers": [["explain"]], "options": ["explain", "explanation", "guess"], "hint": "Глагол.", "explanation": "Правильно: Can you explain what happened?" },
+        { "id": "b1.u04.l01.e09", "type": "fill_gap", "text": "The wallet was ___. There was no money in it.", "translation": "Кошелёк был пустым. В нём не было денег.", "answers": [["empty"]], "options": ["empty", "full", "missing"], "hint": "Без денег.", "explanation": "Правильно: The wallet was empty." },
+        { "id": "b1.u04.l01.e10", "type": "fill_gap", "text": "Did you ___ the door?", "translation": "Ты запер дверь?", "answers": [["lock"]], "options": ["lock", "steal", "close up"], "hint": "Ключом.", "explanation": "Правильно: Did you lock the door?" },
+        { "id": "b1.u04.l01.e11", "type": "listen_choice", "audio": "I heard a strange noise.", "question": "Что вы слышите?", "options": ["I heard a strange noise.", "I heard a strange song.", "I saw a strange noise."], "answer": 0, "hint": "Шум.", "explanation": "I heard a strange noise — «я услышал странный шум»." },
+        { "id": "b1.u04.l01.e12", "type": "listen_dictation", "text": "There must be an explanation.", "hint": "Пять слов.", "explanation": "There must be an explanation — «должно быть какое-то объяснение»." },
+        { "id": "b1.u04.l01.e13", "type": "type_translation", "from": "ru", "text": "вор", "answers": ["thief"], "hint": "Пять букв.", "explanation": "Thief [θiːf] — «вор». Во множественном — thieves." },
+        { "id": "b1.u04.l01.e14", "type": "word_stress", "word": "detective", "syllables": ["de", "tec", "tive"], "stress": 1, "hint": "Второй слог.", "explanation": "de-TEC-tive — ударение на второй слог." }
+      ]
+    },
+    {
+      "id": "b1.u04.l02",
+      "kind": "vocabulary",
+      "title": "Насколько вы уверены",
+      "exercises": [
+        { "id": "b1.u04.l02.e01", "type": "match_pairs", "pairs": [{ "en": "belong", "ru": "принадлежать" }, { "en": "suspect", "ru": "подозревать" }, { "en": "someone", "ru": "кто-то" }, { "en": "anyone", "ru": "кто-нибудь" }, { "en": "strange", "ru": "странный" }], "hint": "Образец: Belong to someone.", "explanation": "Belong — принадлежать, suspect — подозревать, someone — кто-то, anyone — кто-нибудь, strange — странный." },
+        { "id": "b1.u04.l02.e02", "type": "match_pairs", "pairs": [{ "en": "obvious", "ru": "очевидный" }, { "en": "impossible", "ru": "невозможный" }, { "en": "likely", "ru": "вероятный" }, { "en": "unlikely", "ru": "маловероятный" }, { "en": "certain", "ru": "уверенный" }], "hint": "Likely и unlikely — противоположные.", "explanation": "Obvious — очевидный, impossible — невозможный, likely — вероятный, unlikely — маловероятный, certain — уверенный." },
+        { "id": "b1.u04.l02.e03", "type": "match_pairs", "pairs": [{ "en": "doubt", "ru": "сомневаться" }, { "en": "suppose", "ru": "полагать" }, { "en": "seem", "ru": "казаться" }, { "en": "sound", "ru": "звучать" }, { "en": "might", "ru": "возможно" }], "hint": "Seem — кажется.", "explanation": "Doubt — сомневаться, suppose — полагать, seem — казаться, sound — звучать, might — возможно." },
+        { "id": "b1.u04.l02.e04", "type": "translate_choice", "from": "ru", "text": "Это невозможно!", "options": ["That is impossible!", "That is unlikely!", "That is obvious!"], "answer": 0, "hint": "Образец: Im- + possible.", "explanation": "Правильно: That is impossible!" },
+        { "id": "b1.u04.l02.e05", "type": "translate_choice", "from": "en", "text": "I suppose you are right.", "options": ["Полагаю, вы правы.", "Я уверен, что вы неправы.", "Сомневаюсь, что вы правы."], "answer": 0, "hint": "Suppose — «полагать».", "explanation": "I suppose you are right — «полагаю, вы правы»." },
+        { "id": "b1.u04.l02.e06", "type": "fill_gap", "text": "This bag might ___ to Kate.", "translation": "Эта сумка, возможно, принадлежит Кейт.", "answers": [["belong"]], "options": ["belong", "belongs", "belonging"], "hint": "После might — без окончаний.", "explanation": "Правильно: This bag might belong to Kate.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l02.e07", "type": "fill_gap", "text": "Did ___ see the thief?", "translation": "Кто-нибудь видел вора?", "answers": [["anyone"]], "options": ["anyone", "someone", "nobody"], "hint": "В вопросе.", "explanation": "Did anyone see the thief? В вопросе — anyone." },
+        { "id": "b1.u04.l02.e08", "type": "fill_gap", "text": "I ___ that he knows the truth.", "translation": "Сомневаюсь, что он знает правду.", "answers": [["doubt"]], "options": ["doubt", "suppose", "suspect"], "hint": "Сомневаться.", "explanation": "Правильно: I doubt that he knows the truth.", "grammar": ["b1.certainty"] },
+        { "id": "b1.u04.l02.e09", "type": "fill_gap", "text": "The answer is ___. Everybody can see it.", "translation": "Ответ очевиден. Все его видят.", "answers": [["obvious"]], "options": ["obvious", "strange", "unlikely"], "hint": "Очевидный.", "explanation": "Правильно: The answer is obvious." },
+        { "id": "b1.u04.l02.e10", "type": "listen_choice", "audio": "It is unlikely that he will come.", "question": "Что вы слышите?", "options": ["It is unlikely that he will come.", "It is likely that he will come.", "I am sure that he will come."], "answer": 0, "hint": "Маловероятно.", "explanation": "Правильно: It is unlikely that he will come.", "grammar": ["b1.certainty"] },
+        { "id": "b1.u04.l02.e11", "type": "listen_dictation", "text": "That sounds great.", "hint": "Три слова.", "explanation": "That sounds great — «звучит отлично»." },
+        { "id": "b1.u04.l02.e12", "type": "type_translation", "from": "ru", "text": "Подозреваю, что торт съела собака.", "answers": ["I suspect that the dog ate the cake.", "I suspect the dog ate the cake."], "difficulty": 2, "hint": "Образец: Suspect that…", "explanation": "Правильно: I suspect that the dog ate the cake." },
+        { "id": "b1.u04.l02.e13", "type": "word_stress", "word": "impossible", "syllables": ["im", "pos", "si", "ble"], "stress": 1, "hint": "Второй слог.", "explanation": "im-POS-si-ble — ударение на второй слог." },
+        { "id": "b1.u04.l02.e15", "type": "match_pairs", "pairs": [{ "en": "inside", "ru": "внутри" }, { "en": "a few", "ru": "несколько" }, { "en": "piece", "ru": "кусок" }, { "en": "angry", "ru": "сердитый" }, { "en": "nothing", "ru": "ничего" }], "hint": "Nothing — ничего.", "explanation": "Inside — внутри, a few — несколько, piece — кусок, angry — сердитый, nothing — ничего." },
+        { "id": "b1.u04.l02.e16", "type": "match_pairs", "pairs": [{ "en": "else", "ru": "ещё" }, { "en": "keep", "ru": "хранить" }, { "en": "pocket", "ru": "карман" }, { "en": "end", "ru": "конец" }, { "en": "may", "ru": "возможно" }], "hint": "Nobody else — больше никто.", "explanation": "Else — ещё, keep — хранить, pocket — карман, end — конец, may — возможно." },
+        { "id": "b1.u04.l02.e14", "type": "minimal_pair", "pair": [{ "en": "thief", "ipa": "θiːf" }, { "en": "leaf", "ipa": "liːf" }], "say": 0, "hint": "Межзубный звук.", "explanation": "Thief [θiːf] начинается со звука [θ] — язык между зубами.", "troubles": ["pron-th"] }
+      ]
+    },
+    {
+      "id": "b1.u04.l03",
+      "kind": "grammar",
+      "title": "Must be, might be, can't be",
+      "grammar": "b1.deduction-present",
+      "exercises": [
+        { "id": "b1.u04.l03.e01", "type": "fill_gap", "text": "The lights are on. She ___ be at home.", "translation": "Горит свет. Она наверняка дома.", "answers": [["must"]], "options": ["must", "can't", "mustn't"], "hint": "Почти уверены — да.", "explanation": "Правильно: She must be at home.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l03.e02", "type": "fill_gap", "text": "It ___ be Tom. He is in London.", "translation": "Это не может быть Том. Он в Лондоне.", "answers": [["can't"]], "options": ["can't", "mustn't", "might"], "hint": "Почти уверены — нет.", "explanation": "Правильно: It can't be Tom.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l03.e03", "type": "fill_gap", "text": "He is not at work. He ___ be ill.", "translation": "Его нет на работе. Возможно, он болен.", "answers": [["might", "may", "could"]], "options": ["might", "must", "can't"], "hint": "Возможно.", "explanation": "He might be ill. Это лишь возможность.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l03.e04", "type": "fill_gap", "text": "They ___ know the answer, but I'm not sure.", "translation": "Возможно, они знают ответ, но я не уверен.", "answers": [["may", "might"]], "options": ["may", "must", "can't"], "hint": "Не уверен.", "explanation": "Правильно: They may know the answer.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l03.e05", "type": "fill_gap", "text": "She must ___ him. They work together.", "translation": "Она, должно быть, его знает. Они работают вместе.", "answers": [["know"]], "options": ["know", "knows", "to know"], "hint": "После must — начальная форма.", "explanation": "Правильно: She must know him.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l03.e06", "type": "fill_gap", "text": "It ___ be a mistake. The price is only one euro.", "translation": "Это, должно быть, ошибка. Цена всего один евро.", "answers": [["must"]], "options": ["must", "mustn't", "can't"], "hint": "Почти уверены.", "explanation": "Правильно: It must be a mistake.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l03.e07", "type": "error_correction", "text": "He must to be at home.", "wrong": "must to be", "correction": "must be", "options": ["must be", "must is", "musts be"], "hint": "Без to.", "explanation": "Правильно: He must be at home.", "grammar": ["b1.deduction-present"], "troubles": ["word-order"] },
+        { "id": "b1.u04.l03.e08", "type": "error_correction", "text": "It mustn't be Tom.", "wrong": "mustn't", "correction": "can't", "options": ["can't", "don't", "isn't"], "hint": "Для «не может быть».", "explanation": "Правильно: It can't be Tom.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l03.e09", "type": "error_correction", "text": "She might is late.", "wrong": "is", "correction": "be", "options": ["be", "being", "to be"], "hint": "После might.", "explanation": "Правильно: She might be late.", "grammar": ["b1.deduction-present"], "troubles": ["tenses"] },
+        { "id": "b1.u04.l03.e10", "type": "tiles", "from": "ru", "text": "Сумка, должно быть, кого-то со встречи.", "answer": "The bag must belong to someone from the meeting.", "distractors": ["mustn't", "belongs"], "difficulty": 3, "hint": "Образец: Must + belong to.", "explanation": "Правильно: The bag must belong to someone from the meeting.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l03.e11", "type": "tiles", "from": "ru", "text": "Это не может быть вор.", "answer": "It can't be a thief.", "distractors": ["mustn't", "is"], "hint": "Образец: Can't be.", "explanation": "Правильно: It can't be a thief.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l03.e12", "type": "type_translation", "from": "ru", "text": "Возможно, он лжёт.", "answers": ["He might be lying.", "He may be lying.", "He could be lying."], "difficulty": 2, "hint": "Образец: Might be lying.", "explanation": "Правильно: He might be lying.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l03.e13", "type": "type_translation", "from": "ru", "text": "Ты, наверное, устал.", "answers": ["You must be tired."], "difficulty": 2, "hint": "Образец: Must be.", "explanation": "You must be tired. Наверняка — must.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l03.e14", "type": "listen_choice", "audio": "It can't be Kate's. She is on holiday.", "question": "Что вы слышите?", "options": ["It can't be Kate's. She is on holiday.", "It must be Kate's. She is on holiday.", "It might be Kate's."], "answer": 0, "hint": "Не может быть.", "explanation": "Правильно: It can't be Kate's. She is on holiday.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l03.e15", "type": "speak_answer", "question": "Your friend is not answering the phone. Why?", "questionRu": "Друг не отвечает на звонок. Почему? Выскажите две догадки: He might be… He must be… He can't be…", "keywords": [["\\b(might|may|must|could|can't)\\b"], ["\\bbe\\b", "\\b(busy|asleep|working|driving|sleeping|out|at)\\b"]], "minKeywords": 2, "samples": ["He might be busy. He must be at work.", "He can't be asleep. It's ten in the morning."], "difficulty": 3, "hint": "Образец: He might be… He must be…", "explanation": "Ответ: He might be busy. He must be at work.", "grammar": ["b1.deduction-present"] }
+      ]
+    },
+    {
+      "id": "b1.u04.l04",
+      "kind": "grammar",
+      "title": "Seem, look, sound",
+      "grammar": "b1.seem-sound",
+      "exercises": [
+        { "id": "b1.u04.l04.e01", "type": "fill_gap", "text": "She ___ tired today.", "translation": "Сегодня она кажется уставшей.", "answers": [["seems", "looks"]], "options": ["seems", "sounds", "seem"], "hint": "Общее впечатление.", "explanation": "Правильно: She seems tired today.", "grammar": ["b1.seem-sound"] },
+        { "id": "b1.u04.l04.e02", "type": "fill_gap", "text": "That ___ great!", "translation": "Звучит отлично!", "answers": [["sounds"]], "options": ["sounds", "seems like", "looks like"], "hint": "О том, что слышим.", "explanation": "Правильно: That sounds great!", "grammar": ["b1.seem-sound"] },
+        { "id": "b1.u04.l04.e03", "type": "fill_gap", "text": "He seems ___ know the answer.", "translation": "Кажется, он знает ответ.", "answers": [["to"]], "options": ["to", "that", "like"], "hint": "Seem to + глагол.", "explanation": "Правильно: He seems to know the answer.", "grammar": ["b1.seem-sound"] },
+        { "id": "b1.u04.l04.e04", "type": "fill_gap", "text": "That sounds ___ a good idea.", "translation": "Похоже, это хорошая идея.", "answers": [["like"]], "options": ["like", "as", "to"], "hint": "Перед существительным.", "explanation": "Правильно: That sounds like a good idea.", "grammar": ["b1.seem-sound"] },
+        { "id": "b1.u04.l04.e05", "type": "fill_gap", "text": "The bag ___ new.", "translation": "Сумка выглядит новой.", "answers": [["looks", "seems"]], "options": ["looks", "sounds", "looks like"], "hint": "Видим глазами.", "explanation": "Правильно: The bag looks new.", "grammar": ["b1.seem-sound"] },
+        { "id": "b1.u04.l04.e06", "type": "error_correction", "text": "That sounds like great.", "wrong": "like great", "correction": "great", "options": ["great", "as great", "to great"], "hint": "Лишнее слово.", "explanation": "Правильно: That sounds great.", "grammar": ["b1.seem-sound"], "troubles": ["word-order"] },
+        { "id": "b1.u04.l04.e07", "type": "error_correction", "text": "He seems know the answer.", "wrong": "seems know", "correction": "seems to know", "options": ["seems to know", "seems knowing", "seem know"], "hint": "Пропущено слово.", "explanation": "Правильно: He seems to know the answer.", "grammar": ["b1.seem-sound"], "troubles": ["word-order"] },
+        { "id": "b1.u04.l04.e08", "type": "error_correction", "text": "It sounds a good idea.", "wrong": "sounds a", "correction": "sounds like a", "options": ["sounds like a", "sounds as a", "sounds to a"], "hint": "Перед существительным.", "explanation": "Правильно: It sounds like a good idea.", "grammar": ["b1.seem-sound"], "troubles": ["word-order"] },
+        { "id": "b1.u04.l04.e09", "type": "tiles", "from": "ru", "text": "Похоже, они заблудились.", "answer": "They seem to be lost.", "distractors": ["like", "seems"], "hint": "Образец: Seem to be.", "explanation": "Правильно: They seem to be lost.", "grammar": ["b1.seem-sound"] },
+        { "id": "b1.u04.l04.e10", "type": "tiles", "from": "ru", "text": "Ваш план звучит интересно.", "answer": "Your plan sounds interesting.", "distractors": ["like", "sound"], "hint": "Sounds + прилагательное.", "explanation": "Правильно: Your plan sounds interesting.", "grammar": ["b1.seem-sound"] },
+        { "id": "b1.u04.l04.e11", "type": "type_translation", "from": "ru", "text": "Звучит странно.", "answers": ["That sounds strange.", "It sounds strange."], "hint": "Sounds + прилагательное.", "explanation": "Правильно: That sounds strange.", "grammar": ["b1.seem-sound"] },
+        { "id": "b1.u04.l04.e12", "type": "type_translation", "from": "ru", "text": "Похоже на ошибку.", "answers": ["That sounds like a mistake.", "It sounds like a mistake.", "That looks like a mistake.", "It looks like a mistake."], "difficulty": 2, "hint": "Like + существительное.", "explanation": "Правильно: That sounds like a mistake.", "grammar": ["b1.seem-sound"] },
+        { "id": "b1.u04.l04.e13", "type": "listen_choice", "audio": "She seems to know the truth.", "question": "Что вы слышите?", "options": ["She seems to know the truth.", "She must know the truth.", "She sounds like the truth."], "answer": 0, "hint": "Образец: Seems to.", "explanation": "Правильно: She seems to know the truth.", "grammar": ["b1.seem-sound"] },
+        { "id": "b1.u04.l04.e14", "type": "speak_answer", "question": "Let's have a picnic on Sunday!", "questionRu": "Друг предлагает пикник в воскресенье. Ответьте: That sounds great! или That sounds like a good idea, but…", "keywords": [["\\bsounds?\\b"], ["\\b(great|good|nice|fun|interesting|like|idea|but)\\b"]], "minKeywords": 2, "samples": ["That sounds great!", "That sounds like a good idea, but it might rain."], "difficulty": 3, "hint": "Образец: That sounds…", "explanation": "Ответ: That sounds great!", "grammar": ["b1.seem-sound"] }
+      ]
+    },
+    {
+      "id": "b1.u04.l05",
+      "kind": "grammar",
+      "title": "I'm sure, probably, I doubt",
+      "grammar": "b1.certainty",
+      "exercises": [
+        { "id": "b1.u04.l05.e01", "type": "fill_gap", "text": "She will ___ be late.", "translation": "Она, скорее всего, опоздает.", "answers": [["probably"]], "options": ["probably", "likely", "sure"], "hint": "После will.", "explanation": "Правильно: She will probably be late.", "grammar": ["b1.certainty"] },
+        { "id": "b1.u04.l05.e02", "type": "fill_gap", "text": "She ___ won't come.", "translation": "Она, скорее всего, не придёт.", "answers": [["probably"]], "options": ["probably", "likely", "doubt"], "hint": "Перед won't.", "explanation": "Правильно: She probably won't come.", "grammar": ["b1.certainty"] },
+        { "id": "b1.u04.l05.e03", "type": "fill_gap", "text": "It is likely ___ rain tomorrow.", "translation": "Завтра, скорее всего, будет дождь.", "answers": [["to"]], "options": ["to", "that", "for"], "hint": "Образец: Likely to.", "explanation": "Правильно: It is likely to rain tomorrow.", "grammar": ["b1.certainty"] },
+        { "id": "b1.u04.l05.e04", "type": "fill_gap", "text": "I am not sure ___ it.", "translation": "Я в этом не уверен.", "answers": [["about"]], "options": ["about", "in", "of"], "hint": "Нужен предлог.", "explanation": "Правильно: I am not sure about it.", "grammar": ["b1.certainty"] },
+        { "id": "b1.u04.l05.e05", "type": "fill_gap", "text": "I ___ you are right.", "translation": "Полагаю, вы правы.", "answers": [["suppose"]], "options": ["suppose", "doubt", "sure"], "hint": "Полагать.", "explanation": "Правильно: I suppose you are right.", "grammar": ["b1.certainty"] },
+        { "id": "b1.u04.l05.e06", "type": "fill_gap", "text": "I am ___ that it was Tom. I saw him.", "translation": "Я уверен, что это был Том. Я его видел.", "answers": [["certain", "sure"]], "options": ["certain", "likely", "doubt"], "hint": "Уверен.", "explanation": "Правильно: I am certain that it was Tom.", "grammar": ["b1.certainty"] },
+        { "id": "b1.u04.l05.e07", "type": "error_correction", "text": "He probably will come.", "wrong": "probably will", "correction": "will probably", "options": ["will probably", "probably wills", "will likely to"], "hint": "Порядок слов.", "explanation": "Правильно: He will probably come.", "grammar": ["b1.certainty"], "troubles": ["word-order"] },
+        { "id": "b1.u04.l05.e08", "type": "error_correction", "text": "I am sure in it.", "wrong": "in", "correction": "about", "options": ["about", "of it in", "on"], "hint": "Другой предлог.", "explanation": "Правильно: I am sure about it.", "grammar": ["b1.certainty"], "troubles": ["prepositions"] },
+        { "id": "b1.u04.l05.e09", "type": "error_correction", "text": "It is likely that rain.", "wrong": "that rain", "correction": "to rain", "options": ["to rain", "rain", "raining"], "hint": "Образец: Likely to.", "explanation": "Правильно: It is likely to rain.", "grammar": ["b1.certainty"] },
+        { "id": "b1.u04.l05.e10", "type": "tiles", "from": "ru", "text": "Сомневаюсь, что он придёт.", "answer": "I doubt that he will come.", "distractors": ["sure", "comes"], "difficulty": 2, "hint": "Образец: I doubt that.", "explanation": "Правильно: I doubt that he will come.", "grammar": ["b1.certainty"] },
+        { "id": "b1.u04.l05.e11", "type": "tiles", "from": "ru", "text": "Маловероятно, что он знает правду.", "answer": "It is unlikely that he knows the truth.", "distractors": ["likely", "say"], "difficulty": 3, "hint": "Образец: It is unlikely that.", "explanation": "Правильно: It is unlikely that he knows the truth.", "grammar": ["b1.certainty"] },
+        { "id": "b1.u04.l05.e12", "type": "type_translation", "from": "ru", "text": "Я уверен, что она придёт.", "answers": ["I am sure that she will come.", "I'm sure she will come.", "I am sure she will come.", "I'm sure that she will come."], "hint": "Образец: I'm sure.", "explanation": "Правильно: I'm sure she will come.", "grammar": ["b1.certainty"] },
+        { "id": "b1.u04.l05.e13", "type": "listen_choice", "audio": "She will probably be late.", "question": "Что вы слышите?", "options": ["She will probably be late.", "She will certainly be late.", "She probably won't be late."], "answer": 0, "hint": "Скорее всего.", "explanation": "Правильно: She will probably be late.", "grammar": ["b1.certainty"] },
+        { "id": "b1.u04.l05.e14", "type": "speak_answer", "question": "Do you think it will rain tomorrow?", "questionRu": "Как думаете, завтра будет дождь? Ответьте с оттенком уверенности: I'm sure… / It will probably… / I doubt it.", "keywords": [["\\b(sure|certain|probably|likely|unlikely|doubt|suppose|maybe|perhaps)\\b"], ["\\b(rain|will|won't|it)\\b"]], "minKeywords": 2, "samples": ["It will probably rain.", "I doubt it. It is sunny today."], "difficulty": 3, "hint": "Образец: It will probably… / I doubt it.", "explanation": "Ответ: It will probably rain.", "grammar": ["b1.certainty"] }
+      ]
+    },
+    {
+      "id": "b1.u04.l06",
+      "kind": "listening",
+      "title": "Чья это сумка?",
+      "textId": "b1.u04.bag",
+      "exercises": [
+        {
+          "id": "b1.u04.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "b1.u04.bag",
+          "hint": "Слушайте догадки и почему их отвергают.",
+          "explanation": "Анна нашла сумку. Это не может быть сумка Кейт — она в отпуске. В сумке пустой кошелёк и телефон. Анна сомневается, что это вор, и они решают отдать сумку начальнику.",
+          "questions": [
+            { "kind": "mcq", "question": "Почему это не сумка Кейт?", "options": ["She is on holiday.", "Her bag is red.", "She is at home."], "answer": 0, "explanation": "Анна говорит: She is on holiday this week." },
+            { "kind": "mcq", "question": "Что было в сумке?", "options": ["an empty wallet and a phone", "a lot of money", "keys and a laptop"], "answer": 0, "explanation": "В сумке пустой кошелёк и телефон." },
+            { "kind": "mcq", "question": "Что они решили сделать?", "options": ["give the bag to the boss", "call the police", "keep the bag"], "answer": 0, "explanation": "Том говорит: Let's give it to the boss." },
+            { "kind": "tfn", "statement": "Anna thinks a thief took the money.", "answer": "false", "explanation": "Анна говорит: I doubt it." },
+            { "kind": "tfn", "statement": "The bag seems new.", "answer": "true", "explanation": "Анна говорит: The bag seems new." },
+            { "kind": "tfn", "statement": "The bag belongs to the boss.", "answer": "not_given", "explanation": "Чья сумка, так и не выяснилось." }
+          ]
+        },
+        { "id": "b1.u04.l06.e02", "type": "listen_choice", "audio": "Then it must belong to someone from the meeting.", "question": "Что вы слышите?", "options": ["Then it must belong to someone from the meeting.", "Then it might be someone's from the office.", "It can't belong to someone from the meeting."], "answer": 0, "hint": "Образец: Must belong.", "explanation": "Правильно: Then it must belong to someone from the meeting.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l06.e03", "type": "listen_dictation", "text": "Perhaps the owner just forgot it.", "hint": "Шесть слов.", "explanation": "Perhaps the owner just forgot it — «возможно, владелец просто её забыл»." },
+        { "id": "b1.u04.l06.e04", "type": "listen_dictation", "text": "It can't be Kate's.", "hint": "Четыре слова.", "explanation": "It can't be Kate's — «это не может быть сумка Кейт»." },
+        { "id": "b1.u04.l06.e05", "type": "fill_gap", "text": "It ___ be Kate's. She has a black bag.", "translation": "Может, это сумка Кейт. У неё чёрная сумка.", "answers": [["might", "may", "could"]], "options": ["might", "must", "can't"], "hint": "Возможно.", "explanation": "Правильно: It might be Kate's.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l06.e06", "type": "fill_gap", "text": "The bag ___ new.", "translation": "Сумка кажется новой.", "answers": [["seems", "looks"]], "options": ["seems", "sounds", "seem"], "hint": "Кажется.", "explanation": "Правильно: The bag seems new.", "grammar": ["b1.seem-sound"] },
+        { "id": "b1.u04.l06.e07", "type": "tiles", "from": "ru", "text": "Вор взял бы телефон.", "answer": "A thief would take the phone.", "distractors": ["will", "must"], "hint": "Образец: Would take.", "explanation": "A thief would take the phone. Would — «взял бы».", "grammar": ["b1.second-conditional"] },
+        { "id": "b1.u04.l06.e08", "type": "type_translation", "from": "ru", "text": "Звучит логично.", "answers": ["That sounds right."], "hint": "Образец: Sounds right.", "explanation": "Правильно: That sounds right.", "grammar": ["b1.seem-sound"] },
+        { "id": "b1.u04.l06.e09", "type": "speak_answer", "question": "You find a phone on a bus. Whose could it be?", "questionRu": "Вы нашли телефон в автобусе. Чей он может быть? Выскажите догадки: It might belong to… It must be…", "keywords": [["\\b(might|may|must|could|can't)\\b"], ["\\b(belong|be|someone|student|passenger|driver|owner)\\b"]], "minKeywords": 2, "samples": ["It might belong to a student. It must be someone from this bus.", "It could be the driver's."], "difficulty": 3, "hint": "Образец: It might belong to…", "explanation": "Ответ: It might belong to a student.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l06.e10", "type": "speak_repeat", "text": "It can't be Kate's. She is on holiday this week.", "hint": "Два предложения.", "explanation": "Can't [kænt] — звук t в конце слышен слабо." }
+      ]
+    },
+    {
+      "id": "b1.u04.l07",
+      "kind": "writing",
+      "title": "Пропавший торт",
+      "textId": "b1.u04.cake",
+      "exercises": [
+        {
+          "id": "b1.u04.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "b1.u04.cake",
+          "hint": "Проследите за догадками Елены.",
+          "explanation": "Торт исчез, дверь была заперта, ничего не пропало, а окно на третьем этаже было открыто. Разгадка — пёс Макс с сахаром на носу.",
+          "questions": [
+            { "kind": "mcq", "question": "Почему Елена сделала торт?", "options": ["for her brother's birthday", "for a party at work", "for her dog"], "answer": 0, "explanation": "В тексте: for her brother's birthday." },
+            { "kind": "mcq", "question": "Почему это не мог быть вор?", "options": ["Nothing else was missing.", "The window was closed.", "Elena was at home."], "answer": 0, "explanation": "В тексте: nothing was missing from the flat." },
+            { "kind": "mcq", "question": "Кто съел торт?", "options": ["the dog", "her brother", "a thief"], "answer": 0, "explanation": "Пёс Макс: His nose was white with sugar." },
+            { "kind": "tfn", "statement": "The door was open.", "answer": "false", "explanation": "В тексте: the door was locked." },
+            { "kind": "tfn", "statement": "The flat is on the third floor.", "answer": "true", "explanation": "В тексте: the flat is on the third floor." },
+            { "kind": "tfn", "statement": "Elena was angry at the end.", "answer": "false", "explanation": "В конце Елена не могла перестать смеяться." }
+          ]
+        },
+        { "id": "b1.u04.l07.e02", "type": "translate_choice", "from": "en", "text": "That seemed impossible.", "options": ["Это казалось невозможным.", "Это было очевидно.", "Это звучало странно."], "answer": 0, "hint": "Seemed — «казалось».", "explanation": "Правильно: That seemed impossible." },
+        { "id": "b1.u04.l07.e03", "type": "fill_gap", "text": "It ___ be a thief. A thief would take my laptop.", "translation": "Это не может быть вор. Вор взял бы ноутбук.", "answers": [["can't"]], "options": ["can't", "must", "mustn't"], "hint": "Почти уверены — нет.", "explanation": "Правильно: It can't be a thief.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l07.e04", "type": "fill_gap", "text": "The answer was ___.", "translation": "Ответ был очевиден.", "answers": [["obvious"]], "options": ["obvious", "strange", "impossible"], "hint": "Очевидный.", "explanation": "Правильно: The answer was obvious." },
+        { "id": "b1.u04.l07.e05", "type": "type_translation", "from": "ru", "text": "У кого-то, должно быть, есть ключ.", "answers": ["Someone must have a key.", "Somebody must have a key."], "difficulty": 2, "hint": "Образец: Must have.", "explanation": "Правильно: Someone must have a key.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l07.e06", "type": "speak_describe", "picture": { "emoji": "🕵️" }, "situation": "Ваши ключи пропали. Расскажите, где они могут быть и где точно быть не могут.", "keywords": [["\\b(might|may|must|could|can't)\\b"], ["\\b(be|in|at|on|under)\\b"]], "minKeywords": 2, "samples": ["My keys might be in my bag. They can't be at work, because I locked the door this morning."], "difficulty": 3, "hint": "Образец: They might be… They can't be…", "explanation": "Используйте must, might и can't для догадок.", "grammar": ["b1.deduction-present"] },
+        { "id": "b1.u04.l07.e07", "type": "speak_answer", "question": "Who do you think ate the cake?", "questionRu": "Как вы думаете, кто съел торт? Ответьте с догадкой и причиной: It must be… because…", "keywords": [["\\b(must|might|may|could|can't|sure|probably)\\b"], ["\\b(because|dog|nose|sugar)\\b"]], "minKeywords": 2, "samples": ["It must be the dog, because his nose was white with sugar."], "difficulty": 3, "hint": "Образец: It must be…, because…", "explanation": "Ответ: It must be the dog, because his nose was white with sugar.", "grammar": ["b1.deduction-present"] },
+        {
+          "id": "b1.u04.l07.e08",
+          "type": "write",
+          "task": "Придумайте и опишите небольшую загадку: что-то пропало или случилось что-то странное. Расскажите, какие были догадки (might, must, can't), насколько вы были уверены (probably, I doubt, I'm sure) и какой оказалась разгадка.",
+          "minWords": 80,
+          "maxWords": 180,
+          "criteria": [
+            { "id": "modals", "label": "Есть must, might, may, could или can't", "patterns": ["\\b(must|might|may|could|can't) (be|have|belong|know|take|come)\\b"] },
+            { "id": "certainty", "label": "Есть sure, probably, likely, doubt или suppose", "patterns": ["\\b(sure|certain|probably|likely|unlikely|doubt|suppose|perhaps|maybe)\\b"] },
+            { "id": "seem", "label": "Есть seem, look или sound", "patterns": ["\\b(seem|seems|seemed|look|looks|looked|sound|sounds|sounded)\\b"] },
+            { "id": "story", "label": "Есть слова темы: missing, clue, mystery", "patterns": ["\\b(missing|disappeared|clue|mystery|thief|stole|noise|strange|explanation|obvious)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\b(must|might|may|could|can't) to\\b", "message": "После модального глагола нет to: must be, might know." },
+            { "pattern": "\\bmustn't be\\b", "message": "Для «не может быть» — can't be. Mustn't значит «нельзя»." },
+            { "pattern": "\\b(must|might|may|could) (is|are|was|knows|has)\\b", "message": "После модального глагола — начальная форма: might be, must know, may have." },
+            { "pattern": "\\bsounds like (great|good|strange|interesting|nice|right)\\b", "message": "Перед прилагательным like не нужен: sounds great." },
+            { "pattern": "\\bprobably will\\b", "message": "Probably ставят после will: will probably." }
+          ],
+          "samples": [
+            "Last week my phone disappeared. I was sure that I had left it on the kitchen table, but it was not there. My brother said, 'Someone must have it.' But nobody else was at home, so that seemed impossible. 'It might be in your bag,' my mother said. I doubted it, because I always keep it in my pocket. Then I heard a strange noise from the sofa. The phone was ringing under the sofa. The answer was obvious: my cat had played with it.",
+            "This morning there was a strange box near our door. My neighbor thought it might be a gift. My husband said it must be a mistake, because we hadn't bought anything. It couldn't be from my parents, because they are on holiday. I was certain it was dangerous, and I didn't want to open it. In the evening the owner came. The box belonged to the family on the next floor, and the driver had left it at the wrong door. It seems funny now."
+          ],
+          "difficulty": 3,
+          "hint": "План: что случилось → догадки → уверенность → разгадка.",
+          "explanation": "Для догадок — must, might, can't + глагол без to. Для впечатления — seem, look, sound. Для уверенности — I'm sure, probably, I doubt.",
+          "grammar": ["b1.deduction-present", "b1.seem-sound", "b1.certainty"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "b1.u04.test.e01", "type": "match_pairs", "pairs": [{ "en": "clue", "ru": "улика" }, { "en": "thief", "ru": "вор" }, { "en": "owner", "ru": "владелец" }, { "en": "obvious", "ru": "очевидный" }, { "en": "doubt", "ru": "сомневаться" }], "hint": "Слова юнита.", "explanation": "Clue — улика, thief — вор, owner — владелец, obvious — очевидный, doubt — сомневаться." },
+      { "id": "b1.u04.test.e02", "type": "translate_choice", "from": "ru", "text": "исчезать", "options": ["disappear", "steal", "missing"], "answer": 0, "hint": "Пропадать из виду.", "explanation": "Disappear — «исчезать»." },
+      { "id": "b1.u04.test.e03", "type": "fill_gap", "text": "The lights are on. She ___ be at home.", "translation": "Горит свет. Она наверняка дома.", "answers": [["must"]], "options": ["must", "can't", "mustn't"], "hint": "Уверены.", "explanation": "Правильно: She must be at home.", "grammar": ["b1.deduction-present"] },
+      { "id": "b1.u04.test.e04", "type": "fill_gap", "text": "It ___ be Tom. He is in London.", "translation": "Это не может быть Том.", "answers": [["can't"]], "options": ["can't", "mustn't", "might"], "hint": "Уверены, что нет.", "explanation": "Правильно: It can't be Tom.", "grammar": ["b1.deduction-present"] },
+      { "id": "b1.u04.test.e05", "type": "fill_gap", "text": "He ___ be ill. I'm not sure.", "translation": "Возможно, он болен. Я не уверен.", "answers": [["might", "may", "could"]], "options": ["might", "must", "can't"], "hint": "Возможно.", "explanation": "Правильно: He might be ill.", "grammar": ["b1.deduction-present"] },
+      { "id": "b1.u04.test.e06", "type": "fill_gap", "text": "That ___ great!", "translation": "Звучит отлично!", "answers": [["sounds"]], "options": ["sounds", "seems like", "looks like"], "hint": "О том, что слышим.", "explanation": "Правильно: That sounds great!", "grammar": ["b1.seem-sound"] },
+      { "id": "b1.u04.test.e07", "type": "fill_gap", "text": "He seems ___ know the answer.", "translation": "Кажется, он знает ответ.", "answers": [["to"]], "options": ["to", "that", "like"], "hint": "Образец: Seem to.", "explanation": "Правильно: He seems to know the answer.", "grammar": ["b1.seem-sound"] },
+      { "id": "b1.u04.test.e08", "type": "fill_gap", "text": "She will ___ be late.", "translation": "Она, скорее всего, опоздает.", "answers": [["probably"]], "options": ["probably", "likely", "sure"], "hint": "После will.", "explanation": "Правильно: She will probably be late.", "grammar": ["b1.certainty"] },
+      { "id": "b1.u04.test.e09", "type": "error_correction", "text": "He must to be at home.", "wrong": "must to be", "correction": "must be", "options": ["must be", "must is", "musts be"], "hint": "Без to.", "explanation": "Правильно: He must be at home.", "grammar": ["b1.deduction-present"] },
+      { "id": "b1.u04.test.e10", "type": "error_correction", "text": "That sounds like great.", "wrong": "like great", "correction": "great", "options": ["great", "as great", "to great"], "hint": "Лишнее слово.", "explanation": "Правильно: That sounds great.", "grammar": ["b1.seem-sound"] },
+      { "id": "b1.u04.test.e11", "type": "error_correction", "text": "I am sure in it.", "wrong": "in", "correction": "about", "options": ["about", "of it in", "on"], "hint": "Предлог.", "explanation": "Правильно: I am sure about it.", "grammar": ["b1.certainty"] },
+      { "id": "b1.u04.test.e12", "type": "listen_choice", "audio": "It must be a mistake.", "question": "Что вы слышите?", "options": ["It must be a mistake.", "It can't be a mistake.", "It might be a mystery."], "answer": 0, "hint": "Образец: Must.", "explanation": "Правильно: It must be a mistake.", "grammar": ["b1.deduction-present"] },
+      { "id": "b1.u04.test.e13", "type": "listen_dictation", "text": "I doubt that he knows the truth.", "hint": "Семь слов.", "explanation": "I doubt that he knows the truth — «сомневаюсь, что он знает правду»." },
+      { "id": "b1.u04.test.e14", "type": "tiles", "from": "ru", "text": "Эта сумка, возможно, принадлежит Кейт.", "answer": "This bag might belong to Kate.", "distractors": ["belongs", "must"], "difficulty": 2, "hint": "Образец: Might + belong to.", "explanation": "Правильно: This bag might belong to Kate.", "grammar": ["b1.deduction-present"] },
+      { "id": "b1.u04.test.e15", "type": "type_translation", "from": "ru", "text": "Ты, наверное, устал.", "answers": ["You must be tired."], "difficulty": 2, "hint": "Образец: Must be.", "explanation": "Правильно: You must be tired.", "grammar": ["b1.deduction-present"] },
+      { "id": "b1.u04.test.e16", "type": "speak_repeat", "text": "There must be an explanation.", "hint": "Уверенно.", "explanation": "Explanation [ˌekspləˈneɪʃən]: ударение на третий слог." }
+    ]
+  }
+}
