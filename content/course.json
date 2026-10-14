@@ -398,9 +398,8 @@
       "title": { "en": "Business English", "ru": "Деловой английский" },
       "description": "Письма, совещания, звонки, знакомства, отчёты и работа с клиентами: английский для офиса и деловых поездок.",
       "requires": "B1",
-      "units": [],
+      "units": ["business.u01"],
       "planned": [
-        { "id": "business.u01", "title": { "en": "Emails that get answers", "ru": "Деловые письма" } },
         { "id": "business.u02", "title": { "en": "Meetings", "ru": "Совещания" } },
         { "id": "business.u03", "title": { "en": "On the phone", "ru": "Деловой телефон" } },
         { "id": "business.u04", "title": { "en": "Small talk and networking", "ru": "Светская беседа и знакомства" } },
