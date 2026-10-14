@@ -310,9 +310,8 @@
           "order": 2,
           "title": { "en": "The unreal", "ru": "Нереальное" },
           "goals": ["Могу говорить о прошлом, которого не было.", "Могу строить предположения о прошлом."],
-          "units": [],
+          "units": ["b2.u04"],
           "planned": [
-            { "id": "b2.u04", "title": { "en": "Third and mixed conditionals", "ru": "Условные 3 и смешанные" } },
             { "id": "b2.u05", "title": { "en": "Guessing about the past", "ru": "Предположения о прошлом" } }
           ]
         },
