@@ -1,0 +1,341 @@
+{
+  "id": "b1.u09",
+  "level": "B1",
+  "order": 9,
+  "title": { "en": "People and places in detail", "ru": "Описание людей и мест" },
+  "description": "Подробно описываем характер людей, города и деревни: какой человек, какое место и что мы чувствуем. Придаточные с who, which, where, whose, придаточные с запятыми и прилагательные bored и boring.",
+  "goals": [
+    "Могу описать характер человека: generous, cheerful, ambitious.",
+    "Могу описать город, район или деревню: narrow streets, a peaceful atmosphere.",
+    "Могу уточнить, о ком или о чём речь: the woman who lives next door, the cafe where we met.",
+    "Могу добавить подробность через запятую: my sister, who lives in Kazan, is a doctor.",
+    "Могу различать чувство и причину: I was bored, the film was boring.",
+    "Могу написать описание места и человека, которые для меня важны."
+  ],
+  "grammar": ["b1.relative-defining", "b1.relative-nondefining", "b1.ed-ing-adjectives"],
+  "troubles": ["word-order"],
+  "words": [
+    { "id": "character", "en": "character", "ipa": "ˈkerəktɚ", "pos": "noun", "ru": ["характер", "персонаж"], "example": { "en": "She has a strong character.", "ru": "У неё сильный характер." }, "topics": ["character"] },
+    { "id": "personality", "en": "personality", "ipa": "ˌpɝːsəˈnæləti", "pos": "noun", "ru": ["личность", "характер"], "example": { "en": "He has a great personality.", "ru": "Он замечательный человек." }, "topics": ["character"] },
+    { "id": "generous", "en": "generous", "ipa": "ˈdʒenɚəs", "pos": "adj", "ru": ["щедрый"], "example": { "en": "My grandmother is very generous.", "ru": "Моя бабушка очень щедрая." }, "topics": ["character"] },
+    { "id": "selfish", "en": "selfish", "ipa": "ˈselfɪʃ", "pos": "adj", "ru": ["эгоистичный"], "example": { "en": "Don't be so selfish!", "ru": "Не будь таким эгоистом!" }, "topics": ["character"] },
+    { "id": "ambitious", "en": "ambitious", "ipa": "æmˈbɪʃəs", "pos": "adj", "ru": ["целеустремлённый", "амбициозный"], "example": { "en": "She is ambitious and hard-working.", "ru": "Она целеустремлённая и трудолюбивая." }, "topics": ["character"] },
+    { "id": "confident", "en": "confident", "ipa": "ˈkɑːnfədənt", "pos": "adj", "ru": ["уверенный в себе"], "example": { "en": "He looks confident.", "ru": "Он выглядит уверенным." }, "topics": ["character"] },
+    { "id": "creative", "en": "creative", "ipa": "kriˈeɪtɪv", "pos": "adj", "ru": ["творческий", "креативный"], "example": { "en": "Li is very creative.", "ru": "Ли очень творческий человек." }, "topics": ["character"] },
+    { "id": "cheerful", "en": "cheerful", "ipa": "ˈtʃɪrfəl", "pos": "adj", "ru": ["жизнерадостный"], "example": { "en": "She is always cheerful.", "ru": "Она всегда жизнерадостная." }, "topics": ["character"] },
+    { "id": "hard-working", "en": "hard-working", "ipa": "ˈhɑːrdˌwɝːkɪŋ", "pos": "adj", "ru": ["трудолюбивый"], "example": { "en": "My parents are very hard-working.", "ru": "Мои родители очень трудолюбивые." }, "topics": ["character"] },
+    { "id": "sensitive", "en": "sensitive", "ipa": "ˈsensətɪv", "pos": "adj", "ru": ["чувствительный", "ранимый"], "example": { "en": "He is very sensitive, so be careful.", "ru": "Он очень ранимый, так что будь осторожен." }, "note": "Не путайте: sensitive — «чувствительный», sensible — «благоразумный».", "topics": ["character"] },
+    { "id": "mean", "en": "mean", "ipa": "miːn", "pos": "adj", "ru": ["жадный", "злой"], "example": { "en": "It was mean to say that.", "ru": "Сказать такое было подло." }, "note": "Как прилагательное mean — «жадный» (британское) или «злой, вредный» (американское). Как глагол — «значить».", "topics": ["character"] },
+    { "id": "modest", "en": "modest", "ipa": "ˈmɑːdəst", "pos": "adj", "ru": ["скромный"], "example": { "en": "She is a champion, but she is very modest.", "ru": "Она чемпионка, но очень скромная." }, "topics": ["character"] },
+    { "id": "talkative", "en": "talkative", "ipa": "ˈtɔːkətɪv", "pos": "adj", "ru": ["разговорчивый"], "example": { "en": "My brother is very talkative.", "ru": "Мой брат очень разговорчивый." }, "topics": ["character"] },
+    { "id": "curious", "en": "curious", "ipa": "ˈkjʊriəs", "pos": "adj", "ru": ["любопытный", "любознательный"], "example": { "en": "Children are curious about everything.", "ru": "Детям всё интересно." }, "topics": ["character"] },
+    { "id": "bored", "en": "bored", "ipa": "bɔːrd", "pos": "adj", "ru": ["скучающий (мне скучно)"], "example": { "en": "I was bored in the evenings.", "ru": "По вечерам мне было скучно." }, "topics": ["feelings"] },
+    { "id": "interested", "en": "interested", "ipa": "ˈɪntrəstɪd", "pos": "adj", "ru": ["заинтересованный (мне интересно)"], "example": { "en": "I'm interested in history.", "ru": "Мне интересна история." }, "note": "Interested in + существительное или -ing.", "topics": ["feelings"] },
+    { "id": "annoying", "en": "annoying", "ipa": "əˈnɔɪɪŋ", "pos": "adj", "ru": ["раздражающий"], "example": { "en": "The noise is really annoying.", "ru": "Этот шум очень раздражает." }, "topics": ["feelings"] },
+    { "id": "confusing", "en": "confusing", "ipa": "kənˈfjuːzɪŋ", "pos": "adj", "ru": ["запутанный", "сбивающий с толку"], "example": { "en": "The map was confusing.", "ru": "Карта была запутанной." }, "topics": ["feelings"] },
+    { "id": "disappointed", "en": "disappointed", "ipa": "ˌdɪsəˈpɔɪntɪd", "pos": "adj", "ru": ["разочарованный"], "example": { "en": "I was disappointed with the hotel.", "ru": "Я был разочарован отелем." }, "topics": ["feelings"] },
+    { "id": "embarrassed", "en": "embarrassed", "ipa": "ɪmˈberəst", "pos": "adj", "ru": ["смущённый (мне неловко)"], "example": { "en": "I was embarrassed when I fell.", "ru": "Мне было стыдно, когда я упал." }, "note": "Не «беременная»! Беременная — pregnant.", "topics": ["feelings"] },
+    { "id": "frightening", "en": "frightening", "ipa": "ˈfraɪtənɪŋ", "pos": "adj", "ru": ["пугающий", "страшный"], "example": { "en": "The film was frightening.", "ru": "Фильм был страшный." }, "topics": ["feelings"] },
+    { "id": "tiring", "en": "tiring", "ipa": "ˈtaɪrɪŋ", "pos": "adj", "ru": ["утомительный"], "example": { "en": "The journey was tiring.", "ru": "Поездка была утомительной." }, "topics": ["feelings"] },
+    { "id": "shocked", "en": "shocked", "ipa": "ʃɑːkt", "pos": "adj", "ru": ["потрясённый", "в шоке"], "example": { "en": "We were shocked by the news.", "ru": "Новость нас потрясла." }, "topics": ["feelings"] },
+    { "id": "ancient", "en": "ancient", "ipa": "ˈeɪnʃənt", "pos": "adj", "ru": ["древний"], "example": { "en": "Rome is an ancient city.", "ru": "Рим — древний город." }, "topics": ["places"] },
+    { "id": "castle", "en": "castle", "ipa": "ˈkæsəl", "pos": "noun", "ru": ["замок"], "example": { "en": "There is an old castle in the town.", "ru": "В городе есть старый замок." }, "picture": { "emoji": "🏰" }, "note": "T не читается: [ˈkæsəl].", "topics": ["places"] },
+    { "id": "church", "en": "church", "ipa": "tʃɝːtʃ", "pos": "noun", "ru": ["церковь"], "example": { "en": "The village has a little church.", "ru": "В деревне есть маленькая церковь." }, "picture": { "emoji": "⛪" }, "topics": ["places"] },
+    { "id": "coast", "en": "coast", "ipa": "koʊst", "pos": "noun", "ru": ["побережье"], "example": { "en": "We live on the coast.", "ru": "Мы живём на побережье." }, "topics": ["places"] },
+    { "id": "countryside", "en": "countryside", "ipa": "ˈkʌntriˌsaɪd", "pos": "noun", "ru": ["сельская местность", "природа за городом"], "example": { "en": "I prefer the countryside to the city.", "ru": "Я предпочитаю загород городу." }, "topics": ["places"] },
+    { "id": "district", "en": "district", "ipa": "ˈdɪstrɪkt", "pos": "noun", "ru": ["район"], "example": { "en": "This is the oldest district of the city.", "ru": "Это самый старый район города." }, "topics": ["places"] },
+    { "id": "square", "en": "square", "ipa": "skwer", "pos": "noun", "ru": ["площадь"], "example": { "en": "Let's meet in the old square.", "ru": "Давай встретимся на старой площади." }, "topics": ["places"] },
+    { "id": "huge", "en": "huge", "ipa": "hjuːdʒ", "pos": "adj", "ru": ["огромный"], "example": { "en": "Moscow is a huge city.", "ru": "Москва — огромный город." }, "topics": ["places"] },
+    { "id": "tiny", "en": "tiny", "ipa": "ˈtaɪni", "pos": "adj", "ru": ["крошечный"], "example": { "en": "We had a tiny flat.", "ru": "У нас была крошечная квартира." }, "topics": ["places"] },
+    { "id": "narrow", "en": "narrow", "ipa": "ˈneroʊ", "pos": "adj", "ru": ["узкий"], "example": { "en": "The streets are narrow.", "ru": "Улицы узкие." }, "topics": ["places"] },
+    { "id": "wide", "en": "wide", "ipa": "waɪd", "pos": "adj", "ru": ["широкий"], "example": { "en": "The street is very wide here.", "ru": "Здесь улица очень широкая." }, "topics": ["places"] },
+    { "id": "noisy", "en": "noisy", "ipa": "ˈnɔɪzi", "pos": "adj", "ru": ["шумный"], "example": { "en": "Our street is very noisy.", "ru": "Наша улица очень шумная." }, "topics": ["places"] },
+    { "id": "peaceful", "en": "peaceful", "ipa": "ˈpiːsfəl", "pos": "adj", "ru": ["спокойный", "мирный"], "example": { "en": "The village is peaceful.", "ru": "В деревне спокойно." }, "topics": ["places"] },
+    { "id": "lively", "en": "lively", "ipa": "ˈlaɪvli", "pos": "adj", "ru": ["оживлённый", "живой"], "example": { "en": "It's a lively district with a lot of cafes.", "ru": "Это оживлённый район с множеством кафе." }, "topics": ["places"] },
+    { "id": "local", "en": "local", "ipa": "ˈloʊkəl", "pos": "adj", "ru": ["местный"], "example": { "en": "She knows all the local news.", "ru": "Она знает все местные новости." }, "topics": ["places"] },
+    { "id": "view", "en": "view", "ipa": "vjuː", "pos": "noun", "ru": ["вид"], "example": { "en": "There is a beautiful view of the sea.", "ru": "Оттуда прекрасный вид на море." }, "topics": ["places"] },
+    { "id": "population", "en": "population", "ipa": "ˌpɑːpjəˈleɪʃən", "pos": "noun", "ru": ["население"], "example": { "en": "The town has a small population.", "ru": "В городке небольшое население." }, "topics": ["places"] },
+    { "id": "capital", "en": "capital", "ipa": "ˈkæpətəl", "pos": "noun", "ru": ["столица"], "example": { "en": "Madrid is the capital of Spain.", "ru": "Мадрид — столица Испании." }, "topics": ["places"] },
+    { "id": "atmosphere", "en": "atmosphere", "ipa": "ˈætməsfɪr", "pos": "noun", "ru": ["атмосфера"], "example": { "en": "I love the peaceful atmosphere.", "ru": "Я люблю спокойную атмосферу." }, "topics": ["places"] },
+    { "id": "dirty", "en": "dirty", "ipa": "ˈdɝːti", "pos": "adj", "ru": ["грязный"], "example": { "en": "The streets were dirty.", "ru": "Улицы были грязными." }, "topics": ["places"] },
+    { "id": "cozy", "en": "cozy", "ipa": "ˈkoʊzi", "pos": "adj", "ru": ["уютный"], "example": { "en": "It's a small, cozy cafe.", "ru": "Это маленькое уютное кафе." }, "note": "Британское написание — cosy.", "topics": ["places"] },
+    { "id": "neighborhood", "en": "neighborhood", "ipa": "ˈneɪbɚˌhʊd", "pos": "noun", "ru": ["район", "округа"], "example": { "en": "It's a quiet neighborhood.", "ru": "Это тихий район." }, "note": "Британское написание — neighbourhood.", "topics": ["places"] },
+    { "id": "which", "en": "which", "ipa": "wɪtʃ", "pos": "pron", "ru": ["который (о предметах)", "какой"], "example": { "en": "This is the book which changed my life.", "ru": "Это книга, которая изменила мою жизнь." }, "topics": ["grammar"] },
+    { "id": "place", "en": "place", "ipa": "pleɪs", "pos": "noun", "ru": ["место"], "example": { "en": "This is my favorite place.", "ru": "Это моё любимое место." }, "topics": ["places"] },
+    { "id": "cafe", "en": "cafe", "ipa": "kæˈfeɪ", "pos": "noun", "ru": ["кафе"], "example": { "en": "That's the cafe where we first met.", "ru": "Это кафе, где мы впервые встретились." }, "note": "Пишут и cafe, и с французским знаком над e.", "topics": ["places"] },
+    { "id": "shocking", "en": "shocking", "ipa": "ˈʃɑːkɪŋ", "pos": "adj", "ru": ["шокирующий"], "example": { "en": "The news was shocking.", "ru": "Новость была шокирующей." }, "topics": ["feelings"] },
+    { "id": "lovely", "en": "lovely", "ipa": "ˈlʌvli", "pos": "adj", "ru": ["милый", "прелестный"], "example": { "en": "What a lovely street!", "ru": "Какая милая улица!" }, "note": "Не путайте: lovely [ˈlʌvli] — «милый», lively [ˈlaɪvli] — «оживлённый».", "topics": ["adjectives"] },
+    { "id": "introduce", "en": "introduce", "ipa": "ˌɪntrəˈduːs", "pos": "verb", "ru": ["знакомить", "представлять"], "example": { "en": "Let me introduce you to my grandmother.", "ru": "Позволь познакомить тебя с моей бабушкой." }, "forms": { "third": "introduces" }, "topics": ["communication"] },
+    { "id": "even", "en": "even", "ipa": "ˈiːvən", "pos": "adv", "ru": ["даже"], "example": { "en": "You can buy everything there, even shoes.", "ru": "Там можно купить всё, даже обувь." }, "topics": ["adverbs"] },
+    { "id": "chef", "en": "chef", "ipa": "ʃef", "pos": "noun", "ru": ["шеф-повар"], "example": { "en": "My brother is a chef.", "ru": "Мой брат — шеф-повар." }, "note": "Ch читается как [ʃ].", "topics": ["jobs"] },
+    { "id": "actor", "en": "actor", "ipa": "ˈæktɚ", "pos": "noun", "ru": ["актёр"], "example": { "en": "His father is a famous actor.", "ru": "Его отец — известный актёр." }, "topics": ["jobs"] },
+    { "id": "confused", "en": "confused", "ipa": "kənˈfjuːzd", "pos": "adj", "ru": ["сбитый с толку"], "example": { "en": "I was confused by the map.", "ru": "Карта сбила меня с толку." }, "topics": ["feelings"] },
+    { "id": "frightened", "en": "frightened", "ipa": "ˈfraɪtənd", "pos": "adj", "ru": ["испуганный"], "example": { "en": "The child was frightened.", "ru": "Ребёнок был напуган." }, "topics": ["feelings"] }
+  ],
+  "texts": [
+    {
+      "id": "b1.u09.hometown",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "The street where I grew up", "ru": "Улица, где я выросла" },
+      "speakers": [
+        { "id": "olga", "name": "Olga", "voice": "female" },
+        { "id": "marco", "name": "Marco", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "olga", "en": "This is the street where I grew up. Our flat was in that old building on the corner.", "ru": "Это улица, где я выросла. Наша квартира была вон в том старом доме на углу." },
+        { "speaker": "marco", "en": "It's lovely! The street is so narrow and quiet.", "ru": "Как красиво! Улица такая узкая и тихая." },
+        { "speaker": "olga", "en": "And that's the school which I went to. The woman who is standing at the door was my English teacher.", "ru": "А это школа, в которую я ходила. Женщина, которая стоит у двери, была моей учительницей английского." },
+        { "speaker": "marco", "en": "Really? Was she a good teacher?", "ru": "Правда? Она была хорошей учительницей?" },
+        { "speaker": "olga", "en": "She was great. She was the person who made me interested in languages. Her lessons were never boring.", "ru": "Отличной. Именно она пробудила во мне интерес к языкам. На её уроках никогда не было скучно." },
+        { "speaker": "marco", "en": "And who lives in that house with the blue door?", "ru": "А кто живёт в том доме с синей дверью?" },
+        { "speaker": "olga", "en": "That's my grandmother's house. My grandmother, who is eighty-five, still works in her garden every day.", "ru": "Это дом моей бабушки. Бабушка, которой восемьдесят пять, до сих пор каждый день работает в саду." },
+        { "speaker": "marco", "en": "Eighty-five? She must be very active!", "ru": "Восемьдесят пять? Она, должно быть, очень активная!" },
+        { "speaker": "olga", "en": "She is. She is the most cheerful and generous person I know. Come on, I'll introduce you. But I warn you: she will give you a huge lunch!", "ru": "Да. Она самый жизнерадостный и щедрый человек, которого я знаю. Пойдём, я тебя познакомлю. Но предупреждаю: она накормит тебя огромным обедом!" },
+        { "speaker": "marco", "en": "I'm not worried. I'm always hungry!", "ru": "Я не волнуюсь. Я всегда голодный!" }
+      ]
+    },
+    {
+      "id": "b1.u09.village",
+      "kind": "reading",
+      "genre": "story",
+      "title": { "en": "The place which I wanted to leave", "ru": "Место, откуда я хотел уехать" },
+      "lines": [
+        { "en": "I grew up in a small village on the coast, which is about two hours from the capital. Only three hundred people live there, so everybody knows everybody.", "ru": "Я вырос в маленькой деревне на побережье, примерно в двух часах от столицы. Там живёт всего триста человек, так что все друг друга знают." },
+        { "en": "The village has one narrow street, a little church and a shop where you can buy almost everything: bread, newspapers, even shoes. The owner of the shop, whose name is Olga, knows all the local news. If you want to find out what is happening, you just go to her shop.", "ru": "В деревне одна узкая улица, маленькая церковь и магазин, где можно купить почти всё: хлеб, газеты, даже обувь. Хозяйка магазина, которую зовут Ольга, знает все местные новости. Если хотите узнать, что происходит, просто зайдите к ней." },
+        { "en": "When I was a teenager, I thought that the village was boring. There was no cinema, and in the evenings I was always bored. I wanted to live in a big, lively city where something exciting happened every day.", "ru": "Подростком я считал деревню скучной. Кинотеатра не было, и по вечерам мне всегда было скучно. Я хотел жить в большом оживлённом городе, где каждый день происходит что-то интересное." },
+        { "en": "Now I live in the capital, which is huge, noisy and crowded. I have an interesting job and a lot of friends, but sometimes the city is really tiring.", "ru": "Теперь я живу в столице — огромной, шумной и многолюдной. У меня интересная работа и много друзей, но иногда город по-настоящему утомляет." },
+        { "en": "That's why I go back to the village every summer. I love the peaceful atmosphere, the view of the sea from my grandmother's window and the long walks on the coast. The people there are not rich, but they are the most generous people I have ever met. It's funny: the place which I wanted to leave is now the place which I miss the most.", "ru": "Поэтому каждое лето я возвращаюсь в деревню. Я люблю спокойную атмосферу, вид на море из бабушкиного окна и долгие прогулки по берегу. Люди там небогатые, но щедрее их я никого не встречал. Забавно: место, откуда я так хотел уехать, теперь то, по которому я скучаю больше всего." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "b1.u09.l01",
+      "kind": "vocabulary",
+      "title": "Характер и чувства",
+      "exercises": [
+        { "id": "b1.u09.l01.e01", "type": "match_pairs", "pairs": [{ "en": "character", "ru": "характер" }, { "en": "personality", "ru": "личность" }, { "en": "generous", "ru": "щедрый" }, { "en": "selfish", "ru": "эгоистичный" }, { "en": "ambitious", "ru": "целеустремлённый" }], "hint": "Generous и selfish — противоположности.", "explanation": "Character — характер, personality — личность, generous — щедрый, selfish — эгоистичный, ambitious — целеустремлённый." },
+        { "id": "b1.u09.l01.e02", "type": "match_pairs", "pairs": [{ "en": "confident", "ru": "уверенный в себе" }, { "en": "creative", "ru": "творческий" }, { "en": "cheerful", "ru": "жизнерадостный" }, { "en": "hard-working", "ru": "трудолюбивый" }, { "en": "sensitive", "ru": "ранимый" }], "hint": "Hard-working — много работает.", "explanation": "Confident — уверенный в себе, creative — творческий, cheerful — жизнерадостный, hard-working — трудолюбивый, sensitive — ранимый." },
+        { "id": "b1.u09.l01.e03", "type": "match_pairs", "pairs": [{ "en": "mean", "ru": "жадный" }, { "en": "modest", "ru": "скромный" }, { "en": "talkative", "ru": "разговорчивый" }, { "en": "curious", "ru": "любопытный" }, { "en": "bored", "ru": "скучающий" }], "hint": "Talkative — от talk.", "explanation": "Mean — жадный, modest — скромный, talkative — разговорчивый, curious — любопытный, bored — скучающий." },
+        { "id": "b1.u09.l01.e04", "type": "match_pairs", "pairs": [{ "en": "interested", "ru": "заинтересованный" }, { "en": "annoying", "ru": "раздражающий" }, { "en": "confusing", "ru": "запутанный" }, { "en": "disappointed", "ru": "разочарованный" }, { "en": "embarrassed", "ru": "смущённый" }], "hint": "-ed — чувство, -ing — причина.", "explanation": "Interested — заинтересованный, annoying — раздражающий, confusing — запутанный, disappointed — разочарованный, embarrassed — смущённый." },
+        { "id": "b1.u09.l01.e05", "type": "match_pairs", "pairs": [{ "en": "frightening", "ru": "страшный" }, { "en": "tiring", "ru": "утомительный" }, { "en": "shocked", "ru": "потрясённый" }, { "en": "whose", "ru": "чей" }, { "en": "generous", "ru": "щедрый" }], "hint": "Whose — вопрос о владельце.", "explanation": "Frightening — страшный, tiring — утомительный, shocked — потрясённый, whose — чей, generous — щедрый." },
+        { "id": "b1.u09.l01.e15", "type": "match_pairs", "pairs": [{ "en": "which", "ru": "который" }, { "en": "place", "ru": "место" }, { "en": "chef", "ru": "шеф-повар" }, { "en": "actor", "ru": "актёр" }, { "en": "cafe", "ru": "кафе" }], "hint": "Which — о предметах.", "explanation": "Which — который, place — место, chef — шеф-повар, actor — актёр, cafe — кафе." },
+        { "id": "b1.u09.l01.e16", "type": "match_pairs", "pairs": [{ "en": "confused", "ru": "сбитый с толку" }, { "en": "confusing", "ru": "запутанный" }, { "en": "frightened", "ru": "испуганный" }, { "en": "frightening", "ru": "страшный" }, { "en": "bored", "ru": "скучающий" }], "hint": "-ed — чувство, -ing — причина.", "explanation": "Confused — сбитый с толку, confusing — запутанный, frightened — испуганный, frightening — страшный, bored — скучающий." },
+        { "id": "b1.u09.l01.e17", "type": "match_pairs", "pairs": [{ "en": "shocking", "ru": "шокирующий" }, { "en": "lovely", "ru": "милый" }, { "en": "introduce", "ru": "знакомить" }, { "en": "even", "ru": "даже" }, { "en": "lively", "ru": "оживлённый" }], "hint": "Lovely и lively — разные слова.", "explanation": "Shocking — шокирующий, lovely — милый, introduce — знакомить, even — даже, lively — оживлённый." },
+        { "id": "b1.u09.l01.e06", "type": "translate_choice", "from": "ru", "text": "Она чемпионка, но очень скромная.", "options": ["She is a champion, but she is very modest.", "She is a champion, but she is very mean.", "She is a champion, but she is very selfish."], "answer": 0, "hint": "Скромная.", "explanation": "Правильно: She is a champion, but she is very modest." },
+        { "id": "b1.u09.l01.e07", "type": "fill_gap", "text": "My brother never stops speaking. He is very ___.", "translation": "Мой брат никогда не замолкает. Он очень разговорчивый.", "answers": [["talkative"]], "options": ["talkative", "modest", "creative"], "hint": "Разговорчивый.", "explanation": "Правильно: He is very talkative." },
+        { "id": "b1.u09.l01.e08", "type": "fill_gap", "text": "She gives presents to everybody. She is very ___.", "translation": "Она всем дарит подарки. Она очень щедрая.", "answers": [["generous"]], "options": ["generous", "selfish", "mean"], "hint": "Щедрая.", "explanation": "Правильно: She is very generous." },
+        { "id": "b1.u09.l01.e09", "type": "fill_gap", "text": "I was ___ with the hotel. The room was dirty.", "translation": "Я был разочарован отелем. Номер был грязный.", "answers": [["disappointed"]], "options": ["disappointed", "bored", "interested"], "hint": "Чувство человека.", "explanation": "Правильно: I was disappointed with the hotel.", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l01.e10", "type": "listen_choice", "audio": "She is ambitious and hard-working.", "question": "Что вы слышите?", "options": ["She is ambitious and hard-working.", "She is generous and hard-working.", "She is ambitious and talkative."], "answer": 0, "hint": "Целеустремлённая.", "explanation": "Правильно: She is ambitious and hard-working." },
+        { "id": "b1.u09.l01.e11", "type": "listen_dictation", "text": "Children are curious about everything.", "hint": "Пять слов.", "explanation": "Children are curious about everything — «детям всё интересно»." },
+        { "id": "b1.u09.l01.e12", "type": "type_translation", "from": "ru", "text": "щедрый", "answers": ["generous"], "hint": "Начинается на g.", "explanation": "Generous [ˈdʒenɚəs] — «щедрый»." },
+        { "id": "b1.u09.l01.e13", "type": "word_stress", "word": "personality", "syllables": ["per", "son", "al", "i", "ty"], "stress": 2, "hint": "Перед -ity.", "explanation": "per-son-AL-i-ty — ударение на слог перед -ity." },
+        { "id": "b1.u09.l01.e14", "type": "word_stress", "word": "embarrassed", "syllables": ["em", "bar", "rassed"], "stress": 1, "hint": "Второй слог.", "explanation": "em-BAR-rassed — ударение на второй слог." }
+      ]
+    },
+    {
+      "id": "b1.u09.l02",
+      "kind": "vocabulary",
+      "title": "Города и места",
+      "exercises": [
+        { "id": "b1.u09.l02.e01", "type": "match_pairs", "pairs": [{ "en": "ancient", "ru": "древний" }, { "en": "castle", "ru": "замок" }, { "en": "church", "ru": "церковь" }, { "en": "coast", "ru": "побережье" }, { "en": "countryside", "ru": "сельская местность" }], "hint": "Старинные места.", "explanation": "Ancient — древний, castle — замок, church — церковь, coast — побережье, countryside — сельская местность." },
+        { "id": "b1.u09.l02.e02", "type": "match_pairs", "pairs": [{ "en": "district", "ru": "район" }, { "en": "square", "ru": "площадь" }, { "en": "huge", "ru": "огромный" }, { "en": "tiny", "ru": "крошечный" }, { "en": "narrow", "ru": "узкий" }], "hint": "Huge и tiny — противоположности.", "explanation": "District — район, square — площадь, huge — огромный, tiny — крошечный, narrow — узкий." },
+        { "id": "b1.u09.l02.e03", "type": "match_pairs", "pairs": [{ "en": "wide", "ru": "широкий" }, { "en": "noisy", "ru": "шумный" }, { "en": "peaceful", "ru": "спокойный" }, { "en": "lively", "ru": "оживлённый" }, { "en": "crowded", "ru": "многолюдный" }], "hint": "Wide и narrow — противоположности.", "explanation": "Wide — широкий, noisy — шумный, peaceful — спокойный, lively — оживлённый, crowded — многолюдный." },
+        { "id": "b1.u09.l02.e04", "type": "match_pairs", "pairs": [{ "en": "local", "ru": "местный" }, { "en": "view", "ru": "вид" }, { "en": "population", "ru": "население" }, { "en": "capital", "ru": "столица" }, { "en": "atmosphere", "ru": "атмосфера" }], "hint": "Capital — главный город.", "explanation": "Local — местный, view — вид, population — население, capital — столица, atmosphere — атмосфера." },
+        { "id": "b1.u09.l02.e05", "type": "match_pairs", "pairs": [{ "en": "dirty", "ru": "грязный" }, { "en": "cozy", "ru": "уютный" }, { "en": "neighborhood", "ru": "округа" }, { "en": "tiny", "ru": "крошечный" }, { "en": "peaceful", "ru": "мирный" }], "hint": "Cozy — тёплый и приятный.", "explanation": "Dirty — грязный, cozy — уютный, neighborhood — округа, tiny — крошечный, peaceful — мирный." },
+        { "id": "b1.u09.l02.e06", "type": "picture_choice", "mode": "picture-to-word", "word": "castle", "distractors": ["church", "stadium"], "hint": "Там жили короли.", "explanation": "Castle [ˈkæsəl] — «замок». T не читается." },
+        { "id": "b1.u09.l02.e07", "type": "picture_choice", "mode": "word-to-picture", "word": "church", "distractors": ["castle", "stadium"], "hint": "Там молятся.", "explanation": "Church [tʃɝːtʃ] — «церковь»." },
+        { "id": "b1.u09.l02.e08", "type": "fill_gap", "text": "Madrid is the ___ of Spain.", "translation": "Мадрид — столица Испании.", "answers": [["capital"]], "options": ["capital", "district", "square"], "hint": "Столица.", "explanation": "Правильно: Madrid is the capital of Spain." },
+        { "id": "b1.u09.l02.e09", "type": "fill_gap", "text": "The bus was so ___ that I had to stand.", "translation": "Автобус был так переполнен, что мне пришлось стоять.", "answers": [["crowded"]], "options": ["crowded", "peaceful", "cozy"], "hint": "Много людей.", "explanation": "Правильно: The bus was so crowded that I had to stand." },
+        { "id": "b1.u09.l02.e10", "type": "fill_gap", "text": "There is a beautiful ___ of the sea from the window.", "translation": "Из окна прекрасный вид на море.", "answers": [["view"]], "options": ["view", "coast", "atmosphere"], "hint": "Вид.", "explanation": "Правильно: There is a beautiful view of the sea." },
+        { "id": "b1.u09.l02.e11", "type": "fill_gap", "text": "The streets in the old town are very ___. Cars can't drive there.", "translation": "Улицы в старом городе очень узкие. Машины там не проедут.", "answers": [["narrow"]], "options": ["narrow", "wide", "huge"], "hint": "Узкие.", "explanation": "Правильно: The streets are very narrow." },
+        { "id": "b1.u09.l02.e12", "type": "listen_choice", "audio": "It's a lively district with a lot of cafes.", "question": "Что вы слышите?", "options": ["It's a lively district with a lot of cafes.", "It's a lovely district with a lot of cafes.", "It's a quiet district with a few cafes."], "answer": 0, "hint": "Оживлённый.", "explanation": "Lively [ˈlaɪvli] — «оживлённый»; lovely [ˈlʌvli] — «милый»." },
+        { "id": "b1.u09.l02.e13", "type": "listen_dictation", "text": "I prefer the countryside to the city.", "hint": "Семь слов.", "explanation": "I prefer the countryside to the city — «я предпочитаю загород городу»." },
+        { "id": "b1.u09.l02.e14", "type": "type_translation", "from": "ru", "text": "огромный", "answers": ["huge"], "hint": "Четыре буквы.", "explanation": "Huge [hjuːdʒ] — «огромный»." },
+        { "id": "b1.u09.l02.e15", "type": "word_stress", "word": "population", "syllables": ["pop", "u", "la", "tion"], "stress": 2, "hint": "Перед -tion.", "explanation": "pop-u-LA-tion — ударение перед -tion." }
+      ]
+    },
+    {
+      "id": "b1.u09.l03",
+      "kind": "grammar",
+      "title": "Who, which, that, where, whose",
+      "grammar": "b1.relative-defining",
+      "exercises": [
+        { "id": "b1.u09.l03.e01", "type": "fill_gap", "text": "A chef is a person ___ cooks in a restaurant.", "translation": "Шеф-повар — это человек, который готовит в ресторане.", "answers": [["who", "that"]], "options": ["who", "which", "where"], "hint": "О человеке.", "explanation": "Правильно: A chef is a person who cooks in a restaurant.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l03.e02", "type": "fill_gap", "text": "This is the book ___ changed my life.", "translation": "Это книга, которая изменила мою жизнь.", "answers": [["which", "that"]], "options": ["which", "who", "where"], "hint": "О предмете.", "explanation": "Правильно: This is the book which changed my life.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l03.e03", "type": "fill_gap", "text": "That's the cafe ___ we first met.", "translation": "Это кафе, где мы впервые встретились.", "answers": [["where"]], "options": ["where", "which", "who"], "hint": "О месте.", "explanation": "Правильно: That's the cafe where we first met.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l03.e04", "type": "fill_gap", "text": "I have a friend ___ father is an actor.", "translation": "У меня есть друг, чей отец — актёр.", "answers": [["whose"]], "options": ["whose", "who", "who's his"], "hint": "Чей.", "explanation": "Правильно: I have a friend whose father is an actor.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l03.e05", "type": "fill_gap", "text": "The woman ___ lives next door is a doctor.", "translation": "Женщина, которая живёт по соседству, — врач.", "answers": [["who", "that"]], "options": ["who", "which", "whose"], "hint": "О человеке.", "explanation": "Правильно: The woman who lives next door is a doctor.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l03.e06", "type": "fill_gap", "text": "This is the street ___ I grew up.", "translation": "Это улица, где я вырос.", "answers": [["where"]], "options": ["where", "which", "that"], "hint": "Место.", "explanation": "Правильно: This is the street where I grew up.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l03.e07", "type": "error_correction", "text": "The man which lives next door is a doctor.", "wrong": "which", "correction": "who", "options": ["who", "whose", "where"], "hint": "О человеке.", "explanation": "Правильно: The man who lives next door is a doctor.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l03.e08", "type": "error_correction", "text": "I have a friend who his father is an actor.", "wrong": "who his", "correction": "whose", "options": ["whose", "who's", "which his"], "hint": "Чей.", "explanation": "Правильно: I have a friend whose father is an actor.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l03.e09", "type": "error_correction", "text": "The book that I read it was boring.", "wrong": "read it", "correction": "read", "options": ["read", "read that", "it read"], "hint": "Лишнее слово.", "explanation": "Правильно: The book that I read was boring.", "grammar": ["b1.relative-defining"], "troubles": ["word-order"] },
+        { "id": "b1.u09.l03.e10", "type": "tiles", "from": "ru", "text": "Это кафе, где мы впервые встретились.", "answer": "That's the cafe where we first met.", "distractors": ["which", "in"], "difficulty": 2, "hint": "Образец: Where.", "explanation": "Правильно: That's the cafe where we first met.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l03.e11", "type": "tiles", "from": "ru", "text": "Человек, которого я вчера встретил, был очень добрым.", "answer": "The man I met yesterday was very kind.", "distractors": ["him", "which"], "difficulty": 3, "hint": "Who можно опустить.", "explanation": "The man I met yesterday was very kind. Или: The man who I met yesterday…", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l03.e12", "type": "type_translation", "from": "ru", "text": "Это город, где я родился.", "answers": ["This is the town where I was born.", "This is the city where I was born.", "It's the town where I was born.", "It's the city where I was born."], "difficulty": 2, "hint": "Образец: Where I was born.", "explanation": "Правильно: This is the town where I was born.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l03.e13", "type": "type_translation", "from": "ru", "text": "Это женщина, чей сын — футболист.", "answers": ["This is the woman whose son is a football player.", "This is the woman whose son plays football.", "She is the woman whose son is a football player."], "difficulty": 3, "hint": "Образец: Whose son…", "explanation": "Правильно: This is the woman whose son is a football player.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l03.e14", "type": "listen_choice", "audio": "She was the person who made me interested in languages.", "question": "Что вы слышите?", "options": ["She was the person who made me interested in languages.", "She was the person whose languages were interesting.", "She was the teacher who was interested in languages."], "answer": 0, "hint": "Образец: Who made me…", "explanation": "Правильно: She was the person who made me interested in languages.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l03.e15", "type": "speak_answer", "question": "Describe a place where you like to spend time.", "questionRu": "Опишите место, где вы любите проводить время. Используйте where или which: It's a cafe where… / It's a park which…", "keywords": [["\\b(where|which|that|who)\\b"], ["\\b(cafe|park|room|street|place|square|house|garden|library|beach|coast)\\b"]], "minKeywords": 2, "samples": ["It's a small cafe where I meet my friends.", "It's a park which is near my house."], "difficulty": 3, "hint": "Образец: It's a cafe where I…", "explanation": "Ответ: It's a small cafe where I meet my friends.", "grammar": ["b1.relative-defining"] }
+      ]
+    },
+    {
+      "id": "b1.u09.l04",
+      "kind": "grammar",
+      "title": "My sister, who lives in Kazan",
+      "grammar": "b1.relative-nondefining",
+      "exercises": [
+        { "id": "b1.u09.l04.e01", "type": "fill_gap", "text": "My sister, ___ lives in Kazan, is a doctor.", "translation": "Моя сестра, которая живёт в Казани, врач.", "answers": [["who"]], "options": ["who", "that", "which"], "hint": "С запятыми that нельзя.", "explanation": "Правильно: My sister, who lives in Kazan, is a doctor.", "grammar": ["b1.relative-nondefining"] },
+        { "id": "b1.u09.l04.e02", "type": "fill_gap", "text": "Moscow, ___ is the capital of Russia, is a huge city.", "translation": "Москва, столица России, — огромный город.", "answers": [["which"]], "options": ["which", "that", "who"], "hint": "О городе, с запятыми.", "explanation": "Правильно: Moscow, which is the capital of Russia, is a huge city.", "grammar": ["b1.relative-nondefining"] },
+        { "id": "b1.u09.l04.e03", "type": "fill_gap", "text": "Rome, ___ I spent my holiday, is beautiful.", "translation": "Рим, где я провёл отпуск, прекрасен.", "answers": [["where"]], "options": ["where", "which", "that"], "hint": "Место, где.", "explanation": "Правильно: Rome, where I spent my holiday, is beautiful.", "grammar": ["b1.relative-nondefining"] },
+        { "id": "b1.u09.l04.e04", "type": "fill_gap", "text": "My neighbor, ___ son plays football, is very friendly.", "translation": "Мой сосед, чей сын играет в футбол, очень приветливый.", "answers": [["whose"]], "options": ["whose", "who", "that"], "hint": "Чей.", "explanation": "Правильно: My neighbor, whose son plays football, is very friendly.", "grammar": ["b1.relative-nondefining"] },
+        { "id": "b1.u09.l04.e05", "type": "fill_gap", "text": "My grandmother, who is eighty-five, ___ works in her garden.", "translation": "Моя бабушка, которой восемьдесят пять, до сих пор работает в саду.", "answers": [["still"]], "options": ["still", "yet", "already"], "hint": "До сих пор.", "explanation": "Правильно: My grandmother, who is eighty-five, still works in her garden.", "grammar": ["b1.relative-nondefining"] },
+        { "id": "b1.u09.l04.e06", "type": "error_correction", "text": "My brother, that lives in Rome, is a chef.", "wrong": "that", "correction": "who", "options": ["who", "which", "whose"], "hint": "С запятыми.", "explanation": "Правильно: My brother, who lives in Rome, is a chef.", "grammar": ["b1.relative-nondefining"] },
+        { "id": "b1.u09.l04.e07", "type": "error_correction", "text": "Kazan, which I visited it last year, is beautiful.", "wrong": "visited it", "correction": "visited", "options": ["visited", "visited there", "it visited"], "hint": "Лишнее слово.", "explanation": "Правильно: Kazan, which I visited last year, is beautiful.", "grammar": ["b1.relative-nondefining"], "troubles": ["word-order"] },
+        { "id": "b1.u09.l04.e08", "type": "error_correction", "text": "My mother, she is a teacher, loves books.", "wrong": "she is", "correction": "who is", "options": ["who is", "that is", "which is"], "hint": "Нужно связующее слово.", "explanation": "Правильно: My mother, who is a teacher, loves books.", "grammar": ["b1.relative-nondefining"] },
+        { "id": "b1.u09.l04.e09", "type": "translate_choice", "from": "en", "text": "My brother, who lives in Rome, is a chef.", "options": ["Мой брат (он у меня один) живёт в Риме и работает шеф-поваром.", "Из моих братьев шеф-повар тот, что живёт в Риме.", "Мой брат хочет переехать в Рим и стать поваром."], "answer": 0, "hint": "Запятые — дополнительная информация.", "explanation": "С запятыми брат один, а придаточное просто добавляет факт.", "grammar": ["b1.relative-nondefining"] },
+        { "id": "b1.u09.l04.e10", "type": "tiles", "from": "ru", "text": "Моя сестра, которая живёт в Казани, врач.", "answer": "My sister, who lives in Kazan, is a doctor.", "distractors": ["that", "she"], "difficulty": 2, "hint": "Who с запятыми.", "explanation": "Правильно: My sister, who lives in Kazan, is a doctor.", "grammar": ["b1.relative-nondefining"] },
+        { "id": "b1.u09.l04.e11", "type": "tiles", "from": "ru", "text": "Рим, где я провёл отпуск, прекрасен.", "answer": "Rome, where I spent my holiday, is beautiful.", "distractors": ["which", "there"], "difficulty": 3, "hint": "Where с запятыми.", "explanation": "Правильно: Rome, where I spent my holiday, is beautiful.", "grammar": ["b1.relative-nondefining"] },
+        { "id": "b1.u09.l04.e12", "type": "type_translation", "from": "ru", "text": "Мой отец, который очень трудолюбивый, работает в банке.", "answers": ["My father, who is very hard-working, works in a bank.", "My dad, who is very hard-working, works in a bank."], "difficulty": 3, "hint": "Образец: Who is very…", "explanation": "Правильно: My father, who is very hard-working, works in a bank.", "grammar": ["b1.relative-nondefining"] },
+        { "id": "b1.u09.l04.e13", "type": "type_translation", "from": "ru", "text": "Лондон, который я люблю, очень дорогой.", "answers": ["London, which I love, is very expensive."], "difficulty": 3, "hint": "Which с запятыми.", "explanation": "Правильно: London, which I love, is very expensive.", "grammar": ["b1.relative-nondefining"] },
+        { "id": "b1.u09.l04.e14", "type": "listen_choice", "audio": "My grandmother, who is eighty-five, still works in her garden.", "question": "Что вы слышите?", "options": ["My grandmother, who is eighty-five, still works in her garden.", "My grandmother, whose garden is huge, still works there.", "My grandmother was eighty-five when she worked in the garden."], "answer": 0, "hint": "Сколько ей лет.", "explanation": "Правильно: My grandmother, who is eighty-five, still works in her garden.", "grammar": ["b1.relative-nondefining"] },
+        { "id": "b1.u09.l04.e15", "type": "speak_repeat", "text": "My sister, who lives in Kazan, is a doctor.", "hint": "Паузы на запятых.", "explanation": "Запятые слышны как короткие паузы: My sister — who lives in Kazan — is a doctor." }
+      ]
+    },
+    {
+      "id": "b1.u09.l05",
+      "kind": "grammar",
+      "title": "Bored или boring",
+      "grammar": "b1.ed-ing-adjectives",
+      "exercises": [
+        { "id": "b1.u09.l05.e01", "type": "fill_gap", "text": "The film was ___. I almost fell asleep.", "translation": "Фильм был скучный. Я чуть не уснул.", "answers": [["boring"]], "options": ["boring", "bored", "tired"], "hint": "Какой фильм?", "explanation": "Правильно: The film was boring.", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l05.e02", "type": "fill_gap", "text": "I was ___ in the evenings. There was nothing to do.", "translation": "По вечерам мне было скучно. Делать было нечего.", "answers": [["bored"]], "options": ["bored", "boring", "tiring"], "hint": "Что я чувствую?", "explanation": "Правильно: I was bored in the evenings.", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l05.e03", "type": "fill_gap", "text": "I'm ___ in history.", "translation": "Мне интересна история.", "answers": [["interested"]], "options": ["interested", "interesting", "bored"], "hint": "Чувство + in.", "explanation": "Правильно: I'm interested in history.", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l05.e04", "type": "fill_gap", "text": "The journey was very ___. We slept for ten hours.", "translation": "Поездка была очень утомительной. Мы проспали десять часов.", "answers": [["tiring"]], "options": ["tiring", "tired", "bored"], "hint": "Какая поездка?", "explanation": "Правильно: The journey was very tiring.", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l05.e05", "type": "fill_gap", "text": "The news was ___. Nobody knew about it.", "translation": "Новость шокировала. Никто её не ожидал.", "answers": [["shocking"]], "options": ["shocking", "shocked", "bored"], "hint": "Какая новость?", "explanation": "Правильно: The news was shocking.", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l05.e06", "type": "fill_gap", "text": "I was so ___ when I fell in front of everybody.", "translation": "Мне было так стыдно, когда я упал на глазах у всех.", "answers": [["embarrassed"]], "options": ["embarrassed", "annoying", "bored"], "hint": "Что я чувствую?", "explanation": "Правильно: I was so embarrassed.", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l05.e07", "type": "error_correction", "text": "I am boring at work.", "wrong": "boring", "correction": "bored", "options": ["bored", "tiring", "annoying"], "hint": "Чувство.", "explanation": "I am bored at work. I am boring — «я зануда».", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l05.e08", "type": "error_correction", "text": "I'm interesting in history.", "wrong": "interesting", "correction": "interested", "options": ["interested", "tiring", "annoying"], "hint": "Чувство.", "explanation": "Правильно: I'm interested in history.", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l05.e09", "type": "error_correction", "text": "The map was very confused.", "wrong": "confused", "correction": "confusing", "options": ["confusing", "bored", "interested"], "hint": "Какая карта?", "explanation": "Правильно: The map was very confusing.", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l05.e10", "type": "tiles", "from": "ru", "text": "Фильм был страшный, и мне было страшно.", "answer": "The film was frightening, and I was frightened.", "distractors": ["bored", "is"], "difficulty": 3, "hint": "-ing и -ed.", "explanation": "Правильно: The film was frightening, and I was frightened.", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l05.e11", "type": "tiles", "from": "ru", "text": "Мы были разочарованы отелем.", "answer": "We were disappointed with the hotel.", "distractors": ["boring", "by"], "difficulty": 2, "hint": "Чувство + with.", "explanation": "Правильно: We were disappointed with the hotel.", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l05.e12", "type": "type_translation", "from": "ru", "text": "Мне скучно.", "answers": ["I'm bored.", "I am bored."], "hint": "Чувство.", "explanation": "I'm bored. А не I'm boring!", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l05.e13", "type": "type_translation", "from": "ru", "text": "Эта работа очень утомительная.", "answers": ["This job is very tiring.", "This work is very tiring.", "The job is very tiring."], "difficulty": 2, "hint": "Какая работа?", "explanation": "Правильно: This job is very tiring.", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l05.e14", "type": "listen_choice", "audio": "Her lessons were never boring.", "question": "Что вы слышите?", "options": ["Her lessons were never boring.", "Her lessons were never interesting.", "She was never bored in lessons."], "answer": 0, "hint": "Какие уроки?", "explanation": "Правильно: Her lessons were never boring.", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l05.e15", "type": "speak_answer", "question": "When did you last feel bored, and what was boring?", "questionRu": "Когда вам последний раз было скучно и что было скучным? Ответьте: I was bored when… It was so boring.", "keywords": [["\\bbored\\b"], ["\\bboring\\b"]], "minKeywords": 2, "samples": ["I was bored at a meeting yesterday. It was so boring.", "The film was boring, so I was bored."], "difficulty": 3, "hint": "Образец: I was bored when… It was boring.", "explanation": "Ответ: I was bored at a meeting yesterday. It was so boring.", "grammar": ["b1.ed-ing-adjectives"] }
+      ]
+    },
+    {
+      "id": "b1.u09.l06",
+      "kind": "listening",
+      "title": "Улица, где я выросла",
+      "textId": "b1.u09.hometown",
+      "exercises": [
+        {
+          "id": "b1.u09.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "b1.u09.hometown",
+          "hint": "Слушайте, какие места показывает Ольга и что говорит о людях.",
+          "explanation": "Ольга показывает Марко улицу, где выросла, свою школу и учительницу английского, которая пробудила в ней интерес к языкам, и дом бабушки, которой 85 лет и которая очень щедрая.",
+          "questions": [
+            { "kind": "mcq", "question": "Где была квартира Ольги?", "options": ["in an old building on the corner", "in a new building near the school", "in her grandmother's house"], "answer": 0, "explanation": "Ольга: Our flat was in that old building on the corner." },
+            { "kind": "mcq", "question": "Кто стоит у двери школы?", "options": ["her English teacher", "her grandmother", "her neighbor"], "answer": 0, "explanation": "Ольга: The woman who is standing at the door was my English teacher." },
+            { "kind": "mcq", "question": "Сколько лет бабушке?", "options": ["eighty-five", "seventy-five", "ninety"], "answer": 0, "explanation": "Ольга: My grandmother, who is eighty-five…" },
+            { "kind": "tfn", "statement": "The teacher's lessons were boring.", "answer": "false", "explanation": "Ольга: Her lessons were never boring." },
+            { "kind": "tfn", "statement": "Olga's grandmother is very generous.", "answer": "true", "explanation": "Ольга: She is the most cheerful and generous person I know." },
+            { "kind": "tfn", "statement": "Olga's grandmother lives with Olga's parents.", "answer": "not_given", "explanation": "Об этом не сказано." }
+          ]
+        },
+        { "id": "b1.u09.l06.e02", "type": "listen_choice", "audio": "This is the street where I grew up.", "question": "Что вы слышите?", "options": ["This is the street where I grew up.", "This is the street which I grew up.", "This street is where I go."], "answer": 0, "hint": "Место.", "explanation": "Правильно: This is the street where I grew up.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l06.e03", "type": "listen_dictation", "text": "The street is so narrow and quiet.", "hint": "Семь слов.", "explanation": "The street is so narrow and quiet — «улица такая узкая и тихая»." },
+        { "id": "b1.u09.l06.e04", "type": "listen_dictation", "text": "She is the most generous person I know.", "hint": "Восемь слов.", "explanation": "She is the most generous person I know — «она самый щедрый человек, которого я знаю»." },
+        { "id": "b1.u09.l06.e05", "type": "fill_gap", "text": "That's the school ___ I went to.", "translation": "Это школа, в которую я ходила.", "answers": [["which", "that"]], "options": ["which", "who", "whose"], "hint": "О предмете.", "explanation": "Правильно: That's the school which I went to.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l06.e06", "type": "fill_gap", "text": "She made me ___ in languages.", "translation": "Она пробудила во мне интерес к языкам.", "answers": [["interested"]], "options": ["interested", "interesting", "bored"], "hint": "Чувство.", "explanation": "Правильно: She made me interested in languages.", "grammar": ["b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l06.e07", "type": "tiles", "from": "ru", "text": "Женщина, которая стоит у двери, была моей учительницей.", "answer": "The woman who is standing at the door was my teacher.", "distractors": ["which", "she"], "difficulty": 3, "hint": "Образец: Who is standing.", "explanation": "Правильно: The woman who is standing at the door was my teacher.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l06.e08", "type": "type_translation", "from": "ru", "text": "Кто живёт в том доме?", "answers": ["Who lives in that house?"], "hint": "Образец: Who lives…", "explanation": "Правильно: Who lives in that house?" },
+        { "id": "b1.u09.l06.e09", "type": "speak_answer", "question": "Who was the teacher who made you interested in something?", "questionRu": "Какой учитель пробудил в вас интерес к чему-то? Ответьте: It was my … teacher, who… She made me interested in…", "keywords": [["\\b(who|whose|which)\\b"], ["\\binterested in\\b", "\\b(teacher|lessons)\\b"]], "minKeywords": 2, "samples": ["It was my history teacher, who was very creative. She made me interested in history."], "difficulty": 3, "hint": "Образец: It was my teacher, who…", "explanation": "Ответ: It was my history teacher, who was very creative.", "grammar": ["b1.relative-nondefining", "b1.ed-ing-adjectives"] },
+        { "id": "b1.u09.l06.e10", "type": "speak_repeat", "text": "My grandmother, who is eighty-five, still works in her garden every day.", "hint": "Паузы на запятых.", "explanation": "Запятые — короткие паузы." }
+      ]
+    },
+    {
+      "id": "b1.u09.l07",
+      "kind": "writing",
+      "title": "Место, откуда я хотел уехать",
+      "textId": "b1.u09.village",
+      "exercises": [
+        {
+          "id": "b1.u09.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "b1.u09.village",
+          "hint": "Сравните, как автор относился к деревне раньше и теперь.",
+          "explanation": "Автор вырос в маленькой деревне на побережье. Подростком ему было скучно, и он мечтал о большом городе. Теперь он живёт в столице, устаёт от неё и каждое лето возвращается в деревню, по которой скучает.",
+          "questions": [
+            { "kind": "mcq", "question": "Сколько людей живёт в деревне?", "options": ["three hundred", "three thousand", "thirty"], "answer": 0, "explanation": "В тексте: Only three hundred people live there." },
+            { "kind": "mcq", "question": "Кто знает все местные новости?", "options": ["the owner of the shop", "his grandmother", "the teacher"], "answer": 0, "explanation": "В тексте: The owner of the shop, whose name is Olga, knows all the local news." },
+            { "kind": "mcq", "question": "Какая сейчас столица для автора?", "options": ["huge, noisy and crowded", "peaceful and quiet", "small and boring"], "answer": 0, "explanation": "В тексте: the capital, which is huge, noisy and crowded." },
+            { "kind": "tfn", "statement": "As a teenager, he was bored in the village.", "answer": "true", "explanation": "В тексте: in the evenings I was always bored." },
+            { "kind": "tfn", "statement": "There was a cinema in the village.", "answer": "false", "explanation": "В тексте: There was no cinema." },
+            { "kind": "tfn", "statement": "He wants to move back to the village.", "answer": "not_given", "explanation": "Он скучает и ездит туда летом, но о переезде не пишет." }
+          ]
+        },
+        { "id": "b1.u09.l07.e02", "type": "translate_choice", "from": "en", "text": "The place which I wanted to leave is now the place which I miss the most.", "options": ["Место, откуда я хотел уехать, теперь то, по которому я больше всего скучаю.", "Место, куда я хотел поехать, мне больше не нравится.", "Я скучаю по месту, которое никогда не видел."], "answer": 0, "hint": "Miss — скучать.", "explanation": "Правильно: The place which I wanted to leave is now the place which I miss the most." },
+        { "id": "b1.u09.l07.e03", "type": "fill_gap", "text": "The owner of the shop, ___ name is Olga, knows all the local news.", "translation": "Хозяйка магазина, которую зовут Ольга, знает все местные новости.", "answers": [["whose"]], "options": ["whose", "who", "which"], "hint": "Чьё имя.", "explanation": "Правильно: The owner of the shop, whose name is Olga…", "grammar": ["b1.relative-nondefining"] },
+        { "id": "b1.u09.l07.e04", "type": "fill_gap", "text": "I love the ___ atmosphere of the village.", "translation": "Я люблю спокойную атмосферу деревни.", "answers": [["peaceful"]], "options": ["peaceful", "crowded", "noisy"], "hint": "Спокойная.", "explanation": "Правильно: I love the peaceful atmosphere." },
+        { "id": "b1.u09.l07.e05", "type": "type_translation", "from": "ru", "text": "Я вырос в маленькой деревне, где все друг друга знают.", "answers": ["I grew up in a small village where everybody knows everybody.", "I grew up in a small village where everybody knows each other."], "difficulty": 3, "hint": "Образец: Where everybody…", "explanation": "Правильно: I grew up in a small village where everybody knows everybody.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l07.e06", "type": "speak_describe", "picture": { "emoji": "🏘️" }, "situation": "Опишите город, район или деревню, где вы выросли: какие там улицы, какие люди, что вам нравилось и что было скучным.", "keywords": [["\\b(where|which|who|whose)\\b"], ["\\b(narrow|wide|huge|tiny|noisy|peaceful|lively|crowded|quiet|cozy|boring|bored|interesting)\\b"]], "minKeywords": 2, "samples": ["I grew up in a small town where the streets are narrow and quiet. It was peaceful, but sometimes I was bored."], "difficulty": 3, "hint": "Образец: I grew up in a town where…", "explanation": "Используйте where, which и прилагательные: narrow, peaceful, lively.", "grammar": ["b1.relative-defining"] },
+        { "id": "b1.u09.l07.e07", "type": "speak_answer", "question": "Do you prefer the city or the countryside? Why?", "questionRu": "Вы предпочитаете город или загород? Почему?", "keywords": [["\\b(city|countryside|village|town)\\b"], ["\\bbecause\\b"]], "minKeywords": 2, "samples": ["I prefer the countryside because it's peaceful.", "I prefer the city because it's lively and there is a lot to do."], "difficulty": 3, "hint": "Образец: I prefer … because…", "explanation": "Ответ: I prefer the countryside because it's peaceful." },
+        {
+          "id": "b1.u09.l07.e08",
+          "type": "write",
+          "task": "Опишите место, где вы выросли (или которое много для вас значит), и человека оттуда, которого вы хорошо помните. Какое это место, какой характер у этого человека, что вы чувствовали тогда и чувствуете сейчас. Используйте who, which, where или whose, хотя бы одно придаточное с запятыми и прилагательные на -ed или -ing.",
+          "minWords": 90,
+          "maxWords": 200,
+          "criteria": [
+            { "id": "relative", "label": "Есть придаточное: who, which, where, whose, that", "patterns": ["\\b(who|which|where|whose|that) [a-z]+\\b"] },
+            { "id": "nondefining", "label": "Есть придаточное с запятой: , who … / , which … / , where …", "patterns": [", (who|which|where|whose) "] },
+            { "id": "edging", "label": "Есть прилагательные на -ed или -ing о чувствах", "patterns": ["\\b(bored|boring|interested|interesting|tired|tiring|disappointed|disappointing|embarrassed|embarrassing|annoyed|annoying|excited|exciting|shocked|shocking|surprised|surprising|frightened|frightening|amazing|relaxing|confusing)\\b"] },
+            { "id": "describe", "label": "Есть слова-описания людей и мест", "patterns": ["\\b(generous|selfish|ambitious|confident|creative|cheerful|hard-working|sensitive|modest|talkative|curious|kind|friendly|narrow|wide|huge|tiny|noisy|peaceful|lively|crowded|quiet|cozy|ancient|local|beautiful)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\b(man|woman|person|people|friend|teacher|boy|girl|grandmother|grandfather|neighbor) which\\b", "message": "О людях — who, а не which." },
+            { "pattern": ", that\\b", "message": "В придаточном с запятыми that нельзя: , who … или , which …" },
+            { "pattern": "\\bwhere I (was born|grew up|lived|live) in\\b", "message": "Where уже значит «в котором»: where I was born." },
+            { "pattern": "\\bwho (his|her|their) \\b", "message": "«Чей» — whose: a friend whose father…" },
+            { "pattern": "\\bI (was|am|felt|feel) (boring|interesting|tiring|disappointing|embarrassing)\\b", "message": "О своих чувствах — форма на -ed: I was bored, I was interested." }
+          ],
+          "samples": [
+            "I grew up in Kazan, which is a big and lively city. We lived in a tiny flat in an old district where the streets were narrow and quiet. I remember our neighbor, whose name was Ivan. He was a generous and cheerful man who always gave us apples from his garden. When I was a teenager, I was often bored, because there was nothing interesting to do in our street. But now I miss the peaceful atmosphere of that place, and I am always excited when I go back there.",
+            "The place which means a lot to me is my grandmother's house in the countryside. It is a small, cozy house where I spent every summer when I was a child. My grandmother, who is eighty now, is the most hard-working person I know. She gets up at five and works in her garden all day. Her stories were never boring, and I was always interested in her life. The village is tiny, and some people think it is boring, but for me it is the most relaxing place in the world."
+          ],
+          "difficulty": 3,
+          "hint": "План: какое это место → какие там улицы и атмосфера → человек оттуда и его характер → что я чувствовал тогда → что чувствую сейчас.",
+          "explanation": "О людях — who, о предметах — which, о местах — where, «чей» — whose. Дополнительную информацию выделяйте запятыми и не используйте с ними that. Свои чувства — на -ed: I was bored.",
+          "grammar": ["b1.relative-defining", "b1.relative-nondefining", "b1.ed-ing-adjectives"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "b1.u09.test.e01", "type": "match_pairs", "pairs": [{ "en": "generous", "ru": "щедрый" }, { "en": "narrow", "ru": "узкий" }, { "en": "crowded", "ru": "многолюдный" }, { "en": "embarrassed", "ru": "смущённый" }, { "en": "whose", "ru": "чей" }], "hint": "Слова юнита.", "explanation": "Generous — щедрый, narrow — узкий, crowded — многолюдный, embarrassed — смущённый, whose — чей." },
+      { "id": "b1.u09.test.e02", "type": "translate_choice", "from": "ru", "text": "столица", "options": ["capital", "district", "square"], "answer": 0, "hint": "Главный город.", "explanation": "Capital — «столица»." },
+      { "id": "b1.u09.test.e03", "type": "fill_gap", "text": "A chef is a person ___ cooks in a restaurant.", "translation": "Шеф-повар — это человек, который готовит в ресторане.", "answers": [["who", "that"]], "options": ["who", "which", "where"], "hint": "О человеке.", "explanation": "Правильно: A chef is a person who cooks in a restaurant.", "grammar": ["b1.relative-defining"] },
+      { "id": "b1.u09.test.e04", "type": "fill_gap", "text": "That's the cafe ___ we first met.", "translation": "Это кафе, где мы впервые встретились.", "answers": [["where"]], "options": ["where", "which", "who"], "hint": "Место.", "explanation": "Правильно: That's the cafe where we first met.", "grammar": ["b1.relative-defining"] },
+      { "id": "b1.u09.test.e05", "type": "fill_gap", "text": "I have a friend ___ father is an actor.", "translation": "У меня есть друг, чей отец — актёр.", "answers": [["whose"]], "options": ["whose", "who", "which"], "hint": "Чей.", "explanation": "Правильно: I have a friend whose father is an actor.", "grammar": ["b1.relative-defining"] },
+      { "id": "b1.u09.test.e06", "type": "fill_gap", "text": "Moscow, ___ is the capital of Russia, is a huge city.", "translation": "Москва, столица России, — огромный город.", "answers": [["which"]], "options": ["which", "that", "who"], "hint": "С запятыми, о городе.", "explanation": "Правильно: Moscow, which is the capital of Russia, is a huge city.", "grammar": ["b1.relative-nondefining"] },
+      { "id": "b1.u09.test.e07", "type": "fill_gap", "text": "I was ___ in the evenings.", "translation": "По вечерам мне было скучно.", "answers": [["bored"]], "options": ["bored", "boring", "tiring"], "hint": "Чувство.", "explanation": "Правильно: I was bored in the evenings.", "grammar": ["b1.ed-ing-adjectives"] },
+      { "id": "b1.u09.test.e08", "type": "fill_gap", "text": "The journey was very ___.", "translation": "Поездка была очень утомительной.", "answers": [["tiring"]], "options": ["tiring", "tired", "bored"], "hint": "Какая поездка?", "explanation": "Правильно: The journey was very tiring.", "grammar": ["b1.ed-ing-adjectives"] },
+      { "id": "b1.u09.test.e09", "type": "error_correction", "text": "The man which lives next door is a doctor.", "wrong": "which", "correction": "who", "options": ["who", "whose", "where"], "hint": "О человеке.", "explanation": "Правильно: The man who lives next door is a doctor.", "grammar": ["b1.relative-defining"] },
+      { "id": "b1.u09.test.e10", "type": "error_correction", "text": "My brother, that lives in Rome, is a chef.", "wrong": "that", "correction": "who", "options": ["who", "which", "whose"], "hint": "С запятыми.", "explanation": "Правильно: My brother, who lives in Rome, is a chef.", "grammar": ["b1.relative-nondefining"] },
+      { "id": "b1.u09.test.e11", "type": "error_correction", "text": "I'm interesting in history.", "wrong": "interesting", "correction": "interested", "options": ["interested", "tiring", "annoying"], "hint": "Чувство.", "explanation": "Правильно: I'm interested in history.", "grammar": ["b1.ed-ing-adjectives"] },
+      { "id": "b1.u09.test.e12", "type": "listen_choice", "audio": "This is the street where I grew up.", "question": "Что вы слышите?", "options": ["This is the street where I grew up.", "This is the street which I grew up.", "This street is where I go."], "answer": 0, "hint": "Место.", "explanation": "Правильно: This is the street where I grew up.", "grammar": ["b1.relative-defining"] },
+      { "id": "b1.u09.test.e13", "type": "listen_dictation", "text": "It's a lively district with a lot of cafes.", "hint": "Девять слов.", "explanation": "It's a lively district with a lot of cafes — «это оживлённый район с множеством кафе»." },
+      { "id": "b1.u09.test.e14", "type": "tiles", "from": "ru", "text": "Моя сестра, которая живёт в Казани, врач.", "answer": "My sister, who lives in Kazan, is a doctor.", "distractors": ["that", "she"], "difficulty": 2, "hint": "Who с запятыми.", "explanation": "Правильно: My sister, who lives in Kazan, is a doctor.", "grammar": ["b1.relative-nondefining"] },
+      { "id": "b1.u09.test.e15", "type": "type_translation", "from": "ru", "text": "Это город, где я родился.", "answers": ["This is the town where I was born.", "This is the city where I was born.", "It's the town where I was born.", "It's the city where I was born."], "difficulty": 3, "hint": "Образец: Where I was born.", "explanation": "Правильно: This is the town where I was born.", "grammar": ["b1.relative-defining"] },
+      { "id": "b1.u09.test.e16", "type": "speak_repeat", "text": "She is the most cheerful and generous person I know.", "hint": "Образец: Cheerful [ˈtʃɪrfəl].", "explanation": "Правильно: Cheerful [ˈtʃɪrfəl], generous [ˈdʒenɚəs]." }
+    ]
+  }
+}
