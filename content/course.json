@@ -390,9 +390,8 @@
       "title": { "en": "Travel", "ru": "Путешествия" },
       "description": "Аэропорт, гостиница, аренда машины, врач за границей, местные обычаи: английский для поездок, особенно когда что-то идёт не по плану.",
       "requires": "B1",
-      "units": ["travel.u01", "travel.u02", "travel.u03"],
+      "units": ["travel.u01", "travel.u02", "travel.u03", "travel.u04"],
       "planned": [
-        { "id": "travel.u04", "title": { "en": "Health abroad", "ru": "Здоровье в поездке" } },
         { "id": "travel.u05", "title": { "en": "Local customs", "ru": "Местные обычаи" } },
         { "id": "travel.u06", "title": { "en": "Planning the perfect trip", "ru": "Как спланировать поездку" } }
       ]

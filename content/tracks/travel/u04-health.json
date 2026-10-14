@@ -1,0 +1,320 @@
+{
+  "id": "travel.u04",
+  "level": "B1",
+  "track": "travel",
+  "order": 4,
+  "title": { "en": "Health abroad", "ru": "Здоровье в поездке" },
+  "description": "Что делать, если в поездке заболел: объяснить врачу симптомы, понять рецепт и советы фармацевта, рассказать, что сказал врач. Повторяем for и since, догадки must be и might be и косвенную речь.",
+  "goals": [
+    "Могу описать симптомы и сказать, как давно они у меня: I've had a fever since this morning.",
+    "Могу предположить, в чём причина: It must be the seafood. It can't be serious.",
+    "Могу понять врача и фармацевта: как принимать лекарство и когда прийти снова.",
+    "Могу пересказать, что сказал врач: She said that I should rest.",
+    "Могу понять статью о том, как не заболеть в отпуске.",
+    "Могу написать другу о том, как заболел в поездке."
+  ],
+  "grammar": ["b1.for-since", "b1.deduction-present", "b1.reported-speech"],
+  "troubles": ["tenses"],
+  "words": [
+    { "id": "symptom", "en": "symptom", "ipa": "ˈsɪmptəm", "pos": "noun", "ru": ["симптом"], "example": { "en": "What are your symptoms?", "ru": "Какие у вас симптомы?" }, "topics": ["health"] },
+    { "id": "high", "en": "high", "ipa": "haɪ", "pos": "adj", "ru": ["высокий"], "example": { "en": "See a doctor if you have a high fever.", "ru": "При высокой температуре обратитесь к врачу." }, "note": "High — о температуре, горах, ценах. О людях — tall.", "topics": ["adjectives"] },
+    { "id": "rash", "en": "rash", "ipa": "ræʃ", "pos": "noun", "ru": ["сыпь"], "example": { "en": "I have a red rash on my arm.", "ru": "У меня красная сыпь на руке." }, "forms": { "plural": "rashes" }, "topics": ["health"] },
+    { "id": "itchy", "en": "itchy", "ipa": "ˈɪtʃi", "pos": "adj", "ru": ["зудящий", "чешется"], "example": { "en": "My skin is very itchy.", "ru": "У меня сильно чешется кожа." }, "topics": ["health"] },
+    { "id": "swollen", "en": "swollen", "ipa": "ˈswoʊlən", "pos": "adj", "ru": ["опухший"], "example": { "en": "My ankle is swollen.", "ru": "У меня опухла лодыжка." }, "topics": ["health"] },
+    { "id": "dizzy", "en": "dizzy", "ipa": "ˈdɪzi", "pos": "adj", "ru": ["с головокружением"], "example": { "en": "I feel dizzy.", "ru": "У меня кружится голова." }, "topics": ["health"] },
+    { "id": "allergy", "en": "allergy", "ipa": "ˈælɚdʒi", "pos": "noun", "ru": ["аллергия"], "example": { "en": "It must be an allergy.", "ru": "Наверное, это аллергия." }, "forms": { "plural": "allergies" }, "topics": ["health"] },
+    { "id": "allergic", "en": "allergic", "ipa": "əˈlɝːdʒɪk", "pos": "adj", "ru": ["аллергический", "с аллергией"], "example": { "en": "I'm allergic to fish.", "ru": "У меня аллергия на рыбу." }, "note": "Allergic to — с аллергией на что-то.", "topics": ["health"] },
+    { "id": "sunburn", "en": "sunburn", "ipa": "ˈsʌnˌbɝːn", "pos": "noun", "ru": ["солнечный ожог"], "example": { "en": "I got a bad sunburn on the first day.", "ru": "В первый же день я сильно обгорел на солнце." }, "topics": ["health"] },
+    { "id": "sunscreen", "en": "sunscreen", "ipa": "ˈsʌnˌskriːn", "pos": "noun", "ru": ["солнцезащитный крем"], "example": { "en": "Don't forget your sunscreen.", "ru": "Не забудь солнцезащитный крем." }, "topics": ["health"] },
+    { "id": "bite", "en": "bite", "ipa": "baɪt", "pos": "noun", "ru": ["укус"], "example": { "en": "These are mosquito bites.", "ru": "Это укусы комаров." }, "topics": ["health"] },
+    { "id": "mosquito", "en": "mosquito", "ipa": "məˈskiːtoʊ", "pos": "noun", "ru": ["комар"], "example": { "en": "There were a lot of mosquitoes by the lake.", "ru": "У озера было много комаров." }, "forms": { "plural": "mosquitoes" }, "topics": ["animals"] },
+    { "id": "ankle", "en": "ankle", "ipa": "ˈæŋkəl", "pos": "noun", "ru": ["лодыжка"], "example": { "en": "I hurt my ankle on the stairs.", "ru": "Я подвернул ногу на лестнице." }, "topics": ["body"] },
+    { "id": "sprain", "en": "sprain", "ipa": "spreɪn", "pos": "verb", "ru": ["растянуть (связки)"], "example": { "en": "I think I've sprained my ankle.", "ru": "Кажется, я растянул связки на лодыжке." }, "forms": { "third": "sprains" }, "topics": ["health"] },
+    { "id": "skin", "en": "skin", "ipa": "skɪn", "pos": "noun", "ru": ["кожа"], "example": { "en": "Use sunscreen to protect your skin.", "ru": "Пользуйтесь солнцезащитным кремом, чтобы защитить кожу." }, "topics": ["body"] },
+    { "id": "cut", "en": "cut", "ipa": "kʌt", "pos": "verb", "ru": ["резать", "сокращать"], "example": { "en": "I cut my finger in the kitchen.", "ru": "Я порезал палец на кухне." }, "forms": { "third": "cuts", "ing": "cutting" }, "note": "Неправильный глагол: cut — cut — cut.", "topics": ["actions"] },
+    { "id": "injured", "en": "injured", "ipa": "ˈɪndʒɚd", "pos": "adj", "ru": ["раненый", "травмированный"], "example": { "en": "Was anyone injured?", "ru": "Кто-нибудь пострадал?" }, "topics": ["health"] },
+    { "id": "food-poisoning", "en": "food poisoning", "ipa": "fuːd ˈpɔɪzənɪŋ", "pos": "noun", "ru": ["пищевое отравление"], "example": { "en": "I think I've got food poisoning.", "ru": "Кажется, я отравился." }, "topics": ["health"] },
+    { "id": "dehydrated", "en": "dehydrated", "ipa": "diˈhaɪˌdreɪtɪd", "pos": "adj", "ru": ["обезвоженный"], "example": { "en": "Drink water so that you don't get dehydrated.", "ru": "Пейте воду, чтобы не было обезвоживания." }, "topics": ["health"] },
+    { "id": "raw", "en": "raw", "ipa": "rɔː", "pos": "adj", "ru": ["сырой"], "example": { "en": "Avoid raw fish in hot weather.", "ru": "В жару не ешьте сырую рыбу." }, "topics": ["food"] },
+    { "id": "seafood", "en": "seafood", "ipa": "ˈsiːˌfuːd", "pos": "noun", "ru": ["морепродукты"], "example": { "en": "I had seafood for dinner.", "ru": "На ужин я ел морепродукты." }, "topics": ["food"] },
+    { "id": "recover", "en": "recover", "ipa": "rɪˈkʌvɚ", "pos": "verb", "ru": ["выздоравливать", "восстанавливаться"], "example": { "en": "Most people recover in a day or two.", "ru": "Большинство выздоравливает за день-два." }, "forms": { "third": "recovers" }, "topics": ["health"] },
+    { "id": "pharmacist", "en": "pharmacist", "ipa": "ˈfɑːrməsɪst", "pos": "noun", "ru": ["фармацевт", "аптекарь"], "example": { "en": "Ask the pharmacist for advice.", "ru": "Спросите совета у фармацевта." }, "topics": ["jobs"] },
+    { "id": "clinic", "en": "clinic", "ipa": "ˈklɪnɪk", "pos": "noun", "ru": ["клиника", "поликлиника"], "example": { "en": "There is a clinic near the hotel.", "ru": "Рядом с гостиницей есть клиника." }, "topics": ["places"] },
+    { "id": "emergency", "en": "emergency", "ipa": "ɪˈmɝːdʒənsi", "pos": "noun", "ru": ["экстренный случай", "неотложная ситуация"], "example": { "en": "In an emergency, call 112.", "ru": "В экстренном случае звоните 112." }, "forms": { "plural": "emergencies" }, "topics": ["health"] },
+    { "id": "prescription", "en": "prescription", "ipa": "prɪˈskrɪpʃən", "pos": "noun", "ru": ["рецепт (на лекарство)"], "example": { "en": "You need a prescription for these tablets.", "ru": "На эти таблетки нужен рецепт." }, "note": "Рецепт блюда — recipe.", "topics": ["health"] },
+    { "id": "x-ray", "en": "x-ray", "ipa": "ˈeksˌreɪ", "pos": "noun", "ru": ["рентген", "рентгеновский снимок"], "example": { "en": "The doctor sent me for an x-ray.", "ru": "Врач отправил меня на рентген." }, "topics": ["health"] },
+    { "id": "painkiller", "en": "painkiller", "ipa": "ˈpeɪnˌkɪlɚ", "pos": "noun", "ru": ["обезболивающее"], "example": { "en": "Take a painkiller and rest.", "ru": "Примите обезболивающее и отдохните." }, "topics": ["health"] },
+    { "id": "tablet", "en": "tablet", "ipa": "ˈtæblət", "pos": "noun", "ru": ["таблетка", "планшет"], "example": { "en": "Take two tablets twice a day.", "ru": "Принимайте по две таблетки два раза в день." }, "topics": ["health"] },
+    { "id": "cream", "en": "cream", "ipa": "kriːm", "pos": "noun", "ru": ["крем", "мазь", "сливки"], "example": { "en": "Put this cream on the rash.", "ru": "Нанесите этот крем на сыпь." }, "topics": ["health"] },
+    { "id": "bandage", "en": "bandage", "ipa": "ˈbændɪdʒ", "pos": "noun", "ru": ["бинт", "повязка"], "example": { "en": "The nurse put a bandage on my ankle.", "ru": "Медсестра наложила повязку мне на лодыжку." }, "topics": ["health"] },
+    { "id": "treatment", "en": "treatment", "ipa": "ˈtriːtmənt", "pos": "noun", "ru": ["лечение"], "example": { "en": "The treatment was very expensive.", "ru": "Лечение было очень дорогим." }, "topics": ["health"] },
+    { "id": "lie-down", "en": "lie down", "ipa": "laɪ daʊn", "pos": "phrasal", "ru": ["прилечь", "лечь"], "example": { "en": "If you feel dizzy, lie down.", "ru": "Если кружится голова, приляг." }, "forms": { "third": "lies down", "ing": "lying down" }, "note": "Неправильный глагол: lie — lay — lain.", "topics": ["phrasal"] }
+  ],
+  "texts": [
+    {
+      "id": "travel.u04.clinic",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "At the clinic", "ru": "В клинике" },
+      "speakers": [
+        { "id": "doctor", "name": "Doctor", "voice": "female" },
+        { "id": "max", "name": "Max", "voice": "male" }
+      ],
+      "lines": [
+        { "speaker": "doctor", "en": "Good afternoon. Please sit down. What seems to be the problem?", "ru": "Добрый день. Присаживайтесь. На что жалуетесь?" },
+        { "speaker": "max", "en": "I've had a terrible stomachache since last night, and I feel sick and dizzy.", "ru": "У меня со вчерашнего вечера ужасно болит живот, меня тошнит и кружится голова." },
+        { "speaker": "doctor", "en": "I see. Do you have a fever?", "ru": "Понятно. Температура есть?" },
+        { "speaker": "max", "en": "Yes, I've had a temperature since this morning. It was thirty-eight and a half.", "ru": "Да, с утра. Было тридцать восемь с половиной." },
+        { "speaker": "doctor", "en": "What did you eat yesterday?", "ru": "Что вы вчера ели?" },
+        { "speaker": "max", "en": "We had dinner at a small restaurant by the sea. I had seafood, and my wife only had soup.", "ru": "Мы ужинали в маленьком ресторане у моря. Я ел морепродукты, а жена — только суп." },
+        { "speaker": "doctor", "en": "And how is your wife?", "ru": "А как себя чувствует жена?" },
+        { "speaker": "max", "en": "She's fine.", "ru": "С ней всё в порядке." },
+        { "speaker": "doctor", "en": "Then it must be the seafood. You've probably got food poisoning. It can't be very serious, because the fever isn't too high.", "ru": "Значит, дело наверняка в морепродуктах. Скорее всего, у вас пищевое отравление. Вряд ли это что-то серьёзное: температура не слишком высокая." },
+        { "speaker": "max", "en": "Do I need to go to the hospital?", "ru": "Мне нужно в больницу?" },
+        { "speaker": "doctor", "en": "No, you don't. You might feel tired for a day or two, but you'll recover soon. Drink a lot of water so that you don't get dehydrated, and lie down as much as you can.", "ru": "Нет, не нужно. День-два вы можете чувствовать слабость, но скоро поправитесь. Пейте много воды, чтобы не было обезвоживания, и побольше лежите." },
+        { "speaker": "max", "en": "Can you give me something for the pain?", "ru": "Вы можете дать мне что-нибудь от боли?" },
+        { "speaker": "doctor", "en": "Here's a prescription. Take one tablet twice a day after meals. You can get them at any pharmacy. If you don't feel better in two days, come back.", "ru": "Вот рецепт. Принимайте по одной таблетке два раза в день после еды. Купить их можно в любой аптеке. Если через два дня не станет лучше, приходите снова." },
+        { "speaker": "max", "en": "Thank you. I have travel insurance. Do I pay now?", "ru": "Спасибо. У меня есть туристическая страховка. Мне сейчас платить?" },
+        { "speaker": "doctor", "en": "Yes, please pay at reception, and ask for a receipt so that your insurance company can pay you back.", "ru": "Да, оплатите на ресепшене и попросите чек, чтобы страховая компания вернула вам деньги." }
+      ]
+    },
+    {
+      "id": "travel.u04.tips",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "How to stay healthy on holiday", "ru": "Как не заболеть в отпуске" },
+      "lines": [
+        { "en": "Nobody wants to get ill on holiday, but it happens to millions of people every year. The good news is that most problems are small, and a few simple rules can help you avoid them.", "ru": "Никто не хочет заболеть в отпуске, но каждый год это случается с миллионами людей. Хорошая новость: большинство проблем несерьёзные, а несколько простых правил помогут их избежать." },
+        { "en": "Before you leave, buy travel insurance and check what it pays for, because a visit to a doctor abroad can be very expensive. Pack a small bag with painkillers, a bandage, sunscreen and any medicine that you usually take.", "ru": "Перед отъездом купите туристическую страховку и проверьте, что она покрывает: визит к врачу за границей может стоить очень дорого. Соберите небольшую аптечку: обезболивающее, бинт, солнцезащитный крем и все лекарства, которые вы обычно принимаете." },
+        { "en": "In hot countries, the sun is the biggest problem. Use sunscreen, wear a hat and stay inside in the middle of the day. Drink a lot of water, because it is easy to get dehydrated. A headache and feeling dizzy can be the first symptoms.", "ru": "В жарких странах главная опасность — солнце. Пользуйтесь солнцезащитным кремом, носите шляпу и в середине дня оставайтесь в помещении. Пейте много воды: обезвоживание наступает легко. Головная боль и головокружение могут быть первыми симптомами." },
+        { "en": "Be careful with food and water too. In some places it is better to drink water from a bottle and to avoid raw salads and ice. If you get a stomachache after eating seafood, it might be food poisoning. Most people recover in a day or two, but see a doctor if you have a high fever.", "ru": "Осторожнее и с едой и водой. Кое-где лучше пить воду из бутылки и не есть сырые салаты и лёд. Если после морепродуктов заболел живот, возможно, это пищевое отравление. Большинство людей поправляются за день-два, но при высокой температуре обратитесь к врачу." },
+        { "en": "One reader wrote to us about her holiday by the sea: \"On the second day my arms became red and itchy. I went to a pharmacy, and the pharmacist told me that it was an allergy to my new sunscreen. She said I should stop using it and gave me a cream. She also said that if it got worse, I would need to see a doctor. Two days later the rash had gone.\"", "ru": "Одна читательница написала нам о своём отдыхе на море: «На второй день у меня покраснели и зачесались руки. Я пошла в аптеку, и фармацевт сказала, что это аллергия на мой новый солнцезащитный крем. Она сказала, что мне нужно перестать им пользоваться, и дала мне мазь. Ещё она сказала, что если станет хуже, придётся идти к врачу. Через два дня сыпь прошла»." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "travel.u04.l01",
+      "kind": "vocabulary",
+      "title": "Симптомы",
+      "exercises": [
+        { "id": "travel.u04.l01.e01", "type": "match_pairs", "pairs": [{ "en": "symptom", "ru": "симптом" }, { "en": "rash", "ru": "сыпь" }, { "en": "itchy", "ru": "зудящий" }, { "en": "swollen", "ru": "опухший" }, { "en": "dizzy", "ru": "с головокружением" }], "hint": "Что беспокоит.", "explanation": "Symptom — симптом, rash — сыпь, itchy — зудящий, swollen — опухший, dizzy — с головокружением." },
+        { "id": "travel.u04.l01.e02", "type": "match_pairs", "pairs": [{ "en": "allergy", "ru": "аллергия" }, { "en": "allergic", "ru": "с аллергией" }, { "en": "sunburn", "ru": "солнечный ожог" }, { "en": "bite", "ru": "укус" }, { "en": "mosquito", "ru": "комар" }], "hint": "Летом.", "explanation": "Allergy — аллергия, allergic — с аллергией, sunburn — солнечный ожог, bite — укус, mosquito — комар." },
+        { "id": "travel.u04.l01.e03", "type": "match_pairs", "pairs": [{ "en": "ankle", "ru": "лодыжка" }, { "en": "sprain", "ru": "растянуть" }, { "en": "cut", "ru": "порезать" }, { "en": "injured", "ru": "травмированный" }, { "en": "skin", "ru": "кожа" }], "hint": "Травмы.", "explanation": "Ankle — лодыжка, sprain — растянуть, cut — порезать, injured — травмированный, skin — кожа." },
+        { "id": "travel.u04.l01.e04", "type": "match_pairs", "pairs": [{ "en": "food poisoning", "ru": "пищевое отравление" }, { "en": "dehydrated", "ru": "обезвоженный" }, { "en": "raw", "ru": "сырой" }, { "en": "seafood", "ru": "морепродукты" }, { "en": "recover", "ru": "выздоравливать" }], "hint": "Еда и вода.", "explanation": "Food poisoning — пищевое отравление, dehydrated — обезвоженный, raw — сырой, seafood — морепродукты, recover — выздоравливать." },
+        { "id": "travel.u04.l01.e05", "type": "translate_choice", "from": "ru", "text": "У меня кружится голова.", "options": ["I feel dizzy.", "I feel itchy.", "I have a headache."], "answer": 0, "hint": "Головокружение.", "explanation": "Правильно: I feel dizzy." },
+        { "id": "travel.u04.l01.e06", "type": "fill_gap", "text": "I'm ___ to fish.", "translation": "У меня аллергия на рыбу.", "answers": [["allergic"]], "options": ["allergic", "allergy", "itchy"], "hint": "Прилагательное.", "explanation": "Правильно: I'm allergic to fish." },
+        { "id": "travel.u04.l01.e07", "type": "fill_gap", "text": "My ankle is ___.", "translation": "У меня опухла лодыжка.", "answers": [["swollen"]], "options": ["swollen", "dizzy", "raw"], "hint": "Опухший.", "explanation": "Правильно: My ankle is swollen." },
+        { "id": "travel.u04.l01.e08", "type": "fill_gap", "text": "These are mosquito ___.", "translation": "Это укусы комаров.", "answers": [["bites"]], "options": ["bites", "rashes", "skins"], "hint": "Укусы.", "explanation": "Правильно: These are mosquito bites." },
+        { "id": "travel.u04.l01.e09", "type": "fill_gap", "text": "I got a bad ___ on the first day.", "translation": "В первый же день я сильно обгорел на солнце.", "answers": [["sunburn"]], "options": ["sunburn", "sunscreen", "symptom"], "hint": "Солнечный ожог.", "explanation": "Правильно: I got a bad sunburn on the first day." },
+        { "id": "travel.u04.l01.e10", "type": "fill_gap", "text": "Avoid ___ fish in hot weather.", "translation": "В жару не ешьте сырую рыбу.", "answers": [["raw"]], "options": ["raw", "swollen", "itchy"], "hint": "Сырой.", "explanation": "Правильно: Avoid raw fish in hot weather." },
+        { "id": "travel.u04.l01.e11", "type": "listen_choice", "audio": "I think I've sprained my ankle.", "question": "Что вы слышите?", "options": ["I think I've sprained my ankle.", "I think I've cut my finger.", "I think my ankle is fine."], "answer": 0, "hint": "Лодыжка.", "explanation": "Правильно: I think I've sprained my ankle." },
+        { "id": "travel.u04.l01.e12", "type": "listen_dictation", "text": "My skin is very itchy.", "hint": "Пять слов.", "explanation": "My skin is very itchy — «у меня сильно чешется кожа»." },
+        { "id": "travel.u04.l01.e13", "type": "type_translation", "from": "ru", "text": "пищевое отравление", "answers": ["food poisoning"], "hint": "Образец: Food + …", "explanation": "Food poisoning — «пищевое отравление»." },
+        { "id": "travel.u04.l01.e14", "type": "word_stress", "word": "allergic", "syllables": ["al", "ler", "gic"], "stress": 1, "hint": "Второй слог.", "explanation": "al-LER-gic — ударение на второй слог. А в allergy — на первый: AL-ler-gy." }
+      ]
+    },
+    {
+      "id": "travel.u04.l02",
+      "kind": "vocabulary",
+      "title": "У врача и в аптеке",
+      "exercises": [
+        { "id": "travel.u04.l02.e01", "type": "match_pairs", "pairs": [{ "en": "pharmacist", "ru": "фармацевт" }, { "en": "clinic", "ru": "клиника" }, { "en": "emergency", "ru": "экстренный случай" }, { "en": "prescription", "ru": "рецепт" }, { "en": "x-ray", "ru": "рентген" }], "hint": "Медицина.", "explanation": "Pharmacist — фармацевт, clinic — клиника, emergency — экстренный случай, prescription — рецепт, x-ray — рентген." },
+        { "id": "travel.u04.l02.e02", "type": "match_pairs", "pairs": [{ "en": "painkiller", "ru": "обезболивающее" }, { "en": "tablet", "ru": "таблетка" }, { "en": "cream", "ru": "мазь" }, { "en": "bandage", "ru": "бинт" }, { "en": "sunscreen", "ru": "солнцезащитный крем" }], "hint": "Аптечка.", "explanation": "Painkiller — обезболивающее, tablet — таблетка, cream — мазь, bandage — бинт, sunscreen — солнцезащитный крем." },
+        { "id": "travel.u04.l02.e03", "type": "match_pairs", "pairs": [{ "en": "treatment", "ru": "лечение" }, { "en": "lie down", "ru": "прилечь" }, { "en": "insurance", "ru": "страховка" }, { "en": "receipt", "ru": "чек" }, { "en": "recover", "ru": "выздоравливать" }], "hint": "После врача.", "explanation": "Treatment — лечение, lie down — прилечь, insurance — страховка, receipt — чек, recover — выздоравливать." },
+        { "id": "travel.u04.l02.e04", "type": "translate_choice", "from": "en", "text": "Take one tablet twice a day after meals.", "options": ["Принимайте по одной таблетке два раза в день после еды.", "Принимайте две таблетки один раз в день до еды.", "Не принимайте таблетки после еды."], "answer": 0, "hint": "Twice a day — два раза в день.", "explanation": "Правильно: Take one tablet twice a day after meals." },
+        { "id": "travel.u04.l02.e05", "type": "fill_gap", "text": "You need a ___ for these tablets.", "translation": "На эти таблетки нужен рецепт.", "answers": [["prescription"]], "options": ["prescription", "receipt", "treatment"], "hint": "Рецепт.", "explanation": "Правильно: You need a prescription for these tablets." },
+        { "id": "travel.u04.l02.e06", "type": "fill_gap", "text": "Ask the ___ for advice.", "translation": "Спросите совета у фармацевта.", "answers": [["pharmacist", "doctor"]], "options": ["pharmacist", "pharmacy", "prescription"], "hint": "Человек в аптеке.", "explanation": "Правильно: Ask the pharmacist for advice." },
+        { "id": "travel.u04.l02.e07", "type": "fill_gap", "text": "Put this ___ on the rash.", "translation": "Нанесите этот крем на сыпь.", "answers": [["cream"]], "options": ["cream", "tablet", "bandage"], "hint": "Мазь.", "explanation": "Правильно: Put this cream on the rash." },
+        { "id": "travel.u04.l02.e08", "type": "fill_gap", "text": "If you feel dizzy, lie ___.", "translation": "Если кружится голова, приляг.", "answers": [["down"]], "options": ["down", "up", "off"], "hint": "Прилечь.", "explanation": "Правильно: If you feel dizzy, lie down." },
+        { "id": "travel.u04.l02.e09", "type": "fill_gap", "text": "The doctor sent me for an ___.", "translation": "Врач отправил меня на рентген.", "answers": [["x-ray"]], "options": ["x-ray", "emergency", "allergy"], "hint": "Рентген.", "explanation": "Правильно: The doctor sent me for an x-ray." },
+        { "id": "travel.u04.l02.e10", "type": "fill_gap", "text": "In an ___, call 112.", "translation": "В экстренном случае звоните 112.", "answers": [["emergency"]], "options": ["emergency", "ambulance", "allergy"], "hint": "Экстренный случай.", "explanation": "Правильно: In an emergency, call 112." },
+        { "id": "travel.u04.l02.e11", "type": "listen_choice", "audio": "You can get these tablets at any pharmacy.", "question": "Что вы слышите?", "options": ["You can get these tablets at any pharmacy.", "You can't get these tablets without a prescription.", "You can get this cream at the clinic."], "answer": 0, "hint": "Аптека.", "explanation": "Правильно: You can get these tablets at any pharmacy." },
+        { "id": "travel.u04.l02.e12", "type": "listen_dictation", "text": "Take a painkiller and rest.", "hint": "Пять слов.", "explanation": "Take a painkiller and rest — «примите обезболивающее и отдохните»." },
+        { "id": "travel.u04.l02.e13", "type": "type_translation", "from": "ru", "text": "Мне нужно что-нибудь от боли.", "answers": ["I need something for the pain.", "I need something for pain.", "I need a painkiller."], "difficulty": 2, "hint": "Образец: Something for…", "explanation": "Правильно: I need something for the pain." },
+        { "id": "travel.u04.l02.e14", "type": "word_stress", "word": "prescription", "syllables": ["pre", "scrip", "tion"], "stress": 1, "hint": "Второй слог.", "explanation": "pre-SCRIP-tion — ударение на второй слог." },
+        { "id": "travel.u04.l02.e15", "type": "minimal_pair", "pair": [{ "en": "skin", "ipa": "skɪn" }, { "en": "scene", "ipa": "siːn" }], "say": 0, "hint": "Skin — короткий звук [ɪ].", "explanation": "Skin [skɪn] — «кожа», scene [siːn] — «сцена»." }
+      ]
+    },
+    {
+      "id": "travel.u04.l03",
+      "kind": "grammar",
+      "title": "I've had it since Monday",
+      "grammar": "b1.for-since",
+      "exercises": [
+        { "id": "travel.u04.l03.e01", "type": "fill_gap", "text": "I've had a stomachache ___ last night.", "translation": "У меня болит живот со вчерашнего вечера.", "answers": [["since"]], "options": ["since", "for", "from"], "hint": "Точка начала.", "explanation": "Правильно: I've had a stomachache since last night.", "grammar": ["b1.for-since"] },
+        { "id": "travel.u04.l03.e02", "type": "fill_gap", "text": "She has had a fever ___ two days.", "translation": "У неё температура уже два дня.", "answers": [["for"]], "options": ["for", "since", "during"], "hint": "Отрезок времени.", "explanation": "Правильно: She has had a fever for two days.", "grammar": ["b1.for-since"] },
+        { "id": "travel.u04.l03.e03", "type": "fill_gap", "text": "How long ___ you had this rash?", "translation": "Как давно у вас эта сыпь?", "answers": [["have"]], "options": ["have", "do", "are"], "hint": "Образец: How long + Present Perfect.", "explanation": "Правильно: How long have you had this rash?", "grammar": ["b1.for-since"] },
+        { "id": "travel.u04.l03.e04", "type": "fill_gap", "text": "My ankle has ___ swollen since Tuesday.", "translation": "Лодыжка опухшая со вторника.", "answers": [["been"]], "options": ["been", "be", "was"], "hint": "Образец: Has + V3.", "explanation": "Правильно: My ankle has been swollen since Tuesday.", "grammar": ["b1.for-since"] },
+        { "id": "travel.u04.l03.e05", "type": "fill_gap", "text": "I haven't eaten anything ___ breakfast.", "translation": "Я ничего не ел с завтрака.", "answers": [["since"]], "options": ["since", "for", "after"], "hint": "С какого момента.", "explanation": "Правильно: I haven't eaten anything since breakfast.", "grammar": ["b1.for-since"] },
+        { "id": "travel.u04.l03.e06", "type": "fill_gap", "text": "We have been in this hotel ___ a week.", "translation": "Мы живём в этой гостинице неделю.", "answers": [["for"]], "options": ["for", "since", "ago"], "hint": "Сколько времени.", "explanation": "Правильно: We have been in this hotel for a week.", "grammar": ["b1.for-since"] },
+        { "id": "travel.u04.l03.e07", "type": "error_correction", "text": "I have a headache since yesterday.", "wrong": "have", "correction": "have had", "options": ["have had", "had have", "am having"], "hint": "До сих пор — Present Perfect.", "explanation": "Правильно: I have had a headache since yesterday.", "grammar": ["b1.for-since"], "troubles": ["tenses"] },
+        { "id": "travel.u04.l03.e08", "type": "error_correction", "text": "I have felt sick since three hours.", "wrong": "since", "correction": "for", "options": ["for", "from", "during"], "hint": "Отрезок времени.", "explanation": "Правильно: I have felt sick for three hours.", "grammar": ["b1.for-since"] },
+        { "id": "travel.u04.l03.e09", "type": "error_correction", "text": "How long do you have this pain?", "wrong": "do you have", "correction": "have you had", "options": ["have you had", "you have had", "did you have"], "hint": "Образец: How long + Present Perfect.", "explanation": "Правильно: How long have you had this pain?", "grammar": ["b1.for-since"], "troubles": ["tenses"] },
+        { "id": "travel.u04.l03.e10", "type": "translate_choice", "from": "ru", "text": "У меня температура с утра.", "options": ["I've had a temperature since this morning.", "I have a temperature since this morning.", "I've had a temperature for this morning."], "answer": 0, "hint": "Образец: Present Perfect + since.", "explanation": "Правильно: I've had a temperature since this morning.", "grammar": ["b1.for-since"] },
+        { "id": "travel.u04.l03.e11", "type": "tiles", "from": "ru", "text": "Как давно у вас болит горло?", "answer": "How long have you had a sore throat?", "distractors": ["do", "since"], "difficulty": 2, "hint": "Образец: How long have you had…?", "explanation": "Правильно: How long have you had a sore throat?", "grammar": ["b1.for-since"] },
+        { "id": "travel.u04.l03.e12", "type": "tiles", "from": "ru", "text": "У него кружится голова уже час.", "answer": "He has felt dizzy for an hour.", "distractors": ["since", "is"], "difficulty": 2, "hint": "Образец: Has + V3 + for.", "explanation": "Правильно: He has felt dizzy for an hour.", "grammar": ["b1.for-since"] },
+        { "id": "travel.u04.l03.e13", "type": "type_translation", "from": "ru", "text": "У меня болит голова со вчерашнего дня.", "answers": ["I've had a headache since yesterday.", "I have had a headache since yesterday.", "My head has hurt since yesterday."], "difficulty": 3, "hint": "Образец: I've had… since…", "explanation": "Правильно: I've had a headache since yesterday.", "grammar": ["b1.for-since"] },
+        { "id": "travel.u04.l03.e14", "type": "listen_choice", "audio": "I've had a stomachache since last night, and I feel sick.", "question": "Что вы слышите?", "options": ["I've had a stomachache since last night, and I feel sick.", "I had a stomachache last night, but I feel fine now.", "I've had a headache for a week, and I feel tired."], "answer": 0, "hint": "Образец: Since last night.", "explanation": "Правильно: I've had a stomachache since last night, and I feel sick.", "grammar": ["b1.for-since"] },
+        { "id": "travel.u04.l03.e15", "type": "speak_answer", "question": "You are at the doctor's. Describe two symptoms and say how long you have had them.", "questionRu": "Вы у врача. Опишите два симптома и скажите, как давно они у вас. Используйте I've had… for / since…", "keywords": [["\\b(have|has|'ve) (had|been|felt)\\b"], ["\\b(for|since)\\b"]], "minKeywords": 2, "samples": ["I've had a sore throat since Monday, and I've felt very tired for two days.", "I have had a fever since last night, and my head has been hot for three hours."], "difficulty": 3, "hint": "Образец: I've had… since… I've felt… for…", "explanation": "Ответ: I've had a sore throat since Monday, and I've felt very tired for two days.", "grammar": ["b1.for-since"] }
+      ]
+    },
+    {
+      "id": "travel.u04.l04",
+      "kind": "grammar",
+      "title": "It must be the seafood",
+      "grammar": "b1.deduction-present",
+      "exercises": [
+        { "id": "travel.u04.l04.e01", "type": "fill_gap", "text": "You ate seafood, and your wife is fine. It ___ be the seafood.", "translation": "Вы ели морепродукты, а жена здорова. Дело наверняка в морепродуктах.", "answers": [["must"]], "options": ["must", "can't", "mustn't"], "hint": "Почти уверен — да.", "explanation": "Правильно: It must be the seafood.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l04.e02", "type": "fill_gap", "text": "Your fever isn't high. It ___ be very serious.", "translation": "Температура невысокая. Вряд ли это что-то серьёзное.", "answers": [["can't"]], "options": ["can't", "must", "mustn't"], "hint": "Почти уверен — нет.", "explanation": "Правильно: It can't be very serious.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l04.e03", "type": "fill_gap", "text": "I'm not sure. It ___ be an allergy.", "translation": "Не уверен. Возможно, это аллергия.", "answers": [["might", "may", "could"]], "options": ["might", "must", "can't"], "hint": "Возможно.", "explanation": "Правильно: It might be an allergy.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l04.e04", "type": "fill_gap", "text": "These ___ be mosquito bites. There were a lot of mosquitoes last night.", "translation": "Это наверняка укусы комаров. Вчера вечером было много комаров.", "answers": [["must"]], "options": ["must", "can't", "mustn't"], "hint": "Почти уверен.", "explanation": "Правильно: These must be mosquito bites.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l04.e05", "type": "fill_gap", "text": "She might ___ dehydrated. She hasn't drunk anything all day.", "translation": "Возможно, у неё обезвоживание. Она весь день ничего не пила.", "answers": [["be"]], "options": ["be", "is", "to be"], "hint": "После might — начальная форма.", "explanation": "Правильно: She might be dehydrated.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l04.e06", "type": "fill_gap", "text": "Your ankle is very swollen. It ___ be broken, so you need an x-ray.", "translation": "Лодыжка сильно опухла. Возможно, это перелом, так что нужен рентген.", "answers": [["could", "might", "may"]], "options": ["could", "can't", "mustn't"], "hint": "Возможно.", "explanation": "Правильно: It could be broken.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l04.e07", "type": "error_correction", "text": "It must to be food poisoning.", "wrong": "must to be", "correction": "must be", "options": ["must be", "must is", "must being"], "hint": "После must — без to.", "explanation": "Правильно: It must be food poisoning.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l04.e08", "type": "error_correction", "text": "It mustn't be serious. You only have a small cut.", "wrong": "mustn't", "correction": "can't", "options": ["can't", "must", "don't"], "hint": "Не может быть — другой глагол.", "explanation": "Правильно: It can't be serious.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l04.e09", "type": "error_correction", "text": "He might is allergic to fish.", "wrong": "might is", "correction": "might be", "options": ["might be", "might being", "might to be"], "hint": "После might — be.", "explanation": "Правильно: He might be allergic to fish.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l04.e10", "type": "translate_choice", "from": "en", "text": "It can't be sunburn. You were inside all day.", "options": ["Это не может быть солнечный ожог. Ты весь день был в помещении.", "Это наверняка солнечный ожог. Ты весь день был на солнце.", "Нельзя загорать, лучше сиди в помещении."], "answer": 0, "hint": "Can't be — не может быть.", "explanation": "Правильно: It can't be sunburn. You were inside all day.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l04.e11", "type": "tiles", "from": "ru", "text": "Наверное, это аллергия.", "answer": "It must be an allergy.", "distractors": ["to", "is"], "difficulty": 2, "hint": "Образец: Must + be.", "explanation": "Правильно: It must be an allergy.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l04.e12", "type": "tiles", "from": "ru", "text": "Это не может быть ничего серьёзного.", "answer": "It can't be anything serious.", "distractors": ["mustn't", "nothing"], "difficulty": 2, "hint": "Образец: Can't + be.", "explanation": "Правильно: It can't be anything serious.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l04.e13", "type": "type_translation", "from": "ru", "text": "Возможно, у него пищевое отравление.", "answers": ["He might have food poisoning.", "He may have food poisoning.", "He could have food poisoning.", "It might be food poisoning.", "It may be food poisoning.", "It could be food poisoning."], "difficulty": 3, "hint": "Образец: Might + глагол.", "explanation": "Правильно: He might have food poisoning.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l04.e14", "type": "listen_choice", "audio": "It can't be the water. We only drink water from a bottle.", "question": "Что вы слышите?", "options": ["It can't be the water. We only drink water from a bottle.", "It must be the water. We drink water from the tap.", "It might be the water, so buy a bottle."], "answer": 0, "hint": "Образец: Can't be.", "explanation": "Правильно: It can't be the water. We only drink water from a bottle.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l04.e15", "type": "speak_answer", "question": "Your friend has a red, itchy rash on their arms after a day at the beach. What could it be?", "questionRu": "У друга после дня на пляже красная зудящая сыпь на руках. Что это может быть? Используйте must be, might be, can't be.", "keywords": [["\\b(must|might|may|could|can't) be\\b"], ["\\b(allergy|allergic|sunburn|bites|mosquito|sunscreen|rash)\\b"]], "minKeywords": 2, "samples": ["It might be an allergy to the sunscreen, or it could be mosquito bites.", "It can't be sunburn, because she used sunscreen all day. It must be mosquito bites."], "difficulty": 3, "hint": "Образец: It might be… It can't be…, because…", "explanation": "Ответ: It might be an allergy to the sunscreen, or it could be mosquito bites.", "grammar": ["b1.deduction-present"] }
+      ]
+    },
+    {
+      "id": "travel.u04.l05",
+      "kind": "grammar",
+      "title": "The doctor said I should rest",
+      "grammar": "b1.reported-speech",
+      "exercises": [
+        { "id": "travel.u04.l05.e01", "type": "fill_gap", "text": "\"It's an allergy.\" — The pharmacist said that it ___ an allergy.", "translation": "Фармацевт сказала, что это аллергия.", "answers": [["was"]], "options": ["was", "is being", "be"], "hint": "Сдвиг времени: is → …", "explanation": "Правильно: The pharmacist said that it was an allergy.", "grammar": ["b1.reported-speech"] },
+        { "id": "travel.u04.l05.e02", "type": "fill_gap", "text": "\"You'll recover soon.\" — The doctor told me that I ___ recover soon.", "translation": "Врач сказала мне, что я скоро поправлюсь.", "answers": [["would"]], "options": ["would", "will", "did"], "hint": "Образец: Will → …", "explanation": "Правильно: The doctor told me that I would recover soon.", "grammar": ["b1.reported-speech"] },
+        { "id": "travel.u04.l05.e03", "type": "fill_gap", "text": "The doctor ___ me that I had food poisoning.", "translation": "Врач сказал мне, что у меня пищевое отравление.", "answers": [["told"]], "options": ["told", "said", "spoke"], "hint": "С человеком.", "explanation": "Правильно: The doctor told me that I had food poisoning.", "grammar": ["b1.reported-speech"] },
+        { "id": "travel.u04.l05.e04", "type": "fill_gap", "text": "She ___ that I should drink a lot of water.", "translation": "Она сказала, что мне нужно пить много воды.", "answers": [["said"]], "options": ["said", "told", "told me to"], "hint": "Без человека.", "explanation": "Правильно: She said that I should drink a lot of water.", "grammar": ["b1.reported-speech"] },
+        { "id": "travel.u04.l05.e05", "type": "fill_gap", "text": "\"I can give you a cream.\" — He said that he ___ give me a cream.", "translation": "Он сказал, что может дать мне мазь.", "answers": [["could"]], "options": ["could", "can", "will"], "hint": "Образец: Can → …", "explanation": "Правильно: He said that he could give me a cream.", "grammar": ["b1.reported-speech"] },
+        { "id": "travel.u04.l05.e06", "type": "fill_gap", "text": "\"I have broken my arm.\" — She told us that she ___ broken her arm.", "translation": "Она сказала нам, что сломала руку.", "answers": [["had"]], "options": ["had", "has", "was"], "hint": "Образец: Have done → … done.", "explanation": "Правильно: She told us that she had broken her arm.", "grammar": ["b1.reported-speech"] },
+        { "id": "travel.u04.l05.e07", "type": "error_correction", "text": "The doctor said me that I needed an x-ray.", "wrong": "said me", "correction": "told me", "options": ["told me", "said to", "say me"], "hint": "С человеком — другой глагол.", "explanation": "Правильно: The doctor told me that I needed an x-ray.", "grammar": ["b1.reported-speech"] },
+        { "id": "travel.u04.l05.e08", "type": "error_correction", "text": "She said that she will call the clinic.", "wrong": "will", "correction": "would", "options": ["would", "is", "can't"], "hint": "Will сдвигается.", "explanation": "Правильно: She said that she would call the clinic.", "grammar": ["b1.reported-speech"], "troubles": ["tenses"] },
+        { "id": "travel.u04.l05.e09", "type": "error_correction", "text": "He told that the rash wasn't serious.", "wrong": "told that", "correction": "said that", "options": ["said that", "told to", "say that"], "hint": "Без человека.", "explanation": "Правильно: He said that the rash wasn't serious.", "grammar": ["b1.reported-speech"] },
+        { "id": "travel.u04.l05.e10", "type": "translate_choice", "from": "ru", "text": "Врач сказал, что мне нужно отдохнуть.", "options": ["The doctor said that I needed to rest.", "The doctor said me that I needed to rest.", "The doctor told that I need rest."], "answer": 0, "hint": "Said без человека.", "explanation": "Правильно: The doctor said that I needed to rest.", "grammar": ["b1.reported-speech"] },
+        { "id": "travel.u04.l05.e11", "type": "tiles", "from": "ru", "text": "Она сказала мне, что это не серьёзно.", "answer": "She told me that it wasn't serious.", "distractors": ["said", "isn't"], "difficulty": 2, "hint": "Образец: Told me that + сдвиг времени.", "explanation": "Правильно: She told me that it wasn't serious.", "grammar": ["b1.reported-speech"] },
+        { "id": "travel.u04.l05.e12", "type": "tiles", "from": "ru", "text": "Он сказал, что придёт на следующий день.", "answer": "He said that he would come the next day.", "distractors": ["will", "tomorrow"], "difficulty": 3, "hint": "Образец: Will → would, tomorrow → the next day.", "explanation": "Правильно: He said that he would come the next day.", "grammar": ["b1.reported-speech"] },
+        { "id": "travel.u04.l05.e13", "type": "type_translation", "from": "ru", "text": "Фармацевт сказала, что это аллергия.", "answers": ["The pharmacist said that it was an allergy.", "The pharmacist said it was an allergy.", "The pharmacist told me that it was an allergy.", "The pharmacist told me it was an allergy."], "difficulty": 3, "hint": "Образец: Said that it was…", "explanation": "Правильно: The pharmacist said that it was an allergy.", "grammar": ["b1.reported-speech"] },
+        { "id": "travel.u04.l05.e14", "type": "listen_choice", "audio": "She told me that if it got worse, I would need to see a doctor.", "question": "Что вы слышите?", "options": ["She told me that if it got worse, I would need to see a doctor.", "She told me that it was getting better, so I didn't need a doctor.", "She said that the doctor would see me tomorrow."], "answer": 0, "hint": "Образец: Told me that…", "explanation": "Правильно: She told me that if it got worse, I would need to see a doctor.", "grammar": ["b1.reported-speech"] },
+        { "id": "travel.u04.l05.e15", "type": "speak_answer", "question": "Tell a friend what the doctor or pharmacist said to you last time you were ill.", "questionRu": "Расскажите другу, что сказал вам врач или фармацевт, когда вы в последний раз болели. Используйте He / She said that… и told me that…", "keywords": [["\\b(said|told me|told us)\\b"], ["\\b(was|were|had|would|could|should|needed)\\b"]], "minKeywords": 2, "samples": ["The doctor said that it was the flu and told me that I should stay in bed.", "The pharmacist told me that the cream would help and said that I could buy it without a prescription."], "difficulty": 3, "hint": "Образец: The doctor said that it was… She told me that I should…", "explanation": "Ответ: The doctor said that it was the flu and told me that I should stay in bed.", "grammar": ["b1.reported-speech"] }
+      ]
+    },
+    {
+      "id": "travel.u04.l06",
+      "kind": "listening",
+      "title": "В клинике",
+      "textId": "travel.u04.clinic",
+      "exercises": [
+        {
+          "id": "travel.u04.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "travel.u04.clinic",
+          "hint": "Слушайте симптомы Макса, догадку врача и её советы.",
+          "explanation": "У Макса со вчерашнего вечера болит живот, тошнит и кружится голова, с утра температура. Он ел морепродукты, а жена — суп, и она здорова, поэтому врач решает, что это пищевое отравление. В больницу не нужно: пить воду, лежать, принимать таблетки два раза в день и прийти снова, если через два дня не станет лучше.",
+          "questions": [
+            { "kind": "mcq", "question": "С какого времени у Макса болит живот?", "options": ["since last night", "since this morning", "for a week"], "answer": 0, "explanation": "Макс: I've had a terrible stomachache since last night." },
+            { "kind": "mcq", "question": "Почему врач думает, что дело в морепродуктах?", "options": ["His wife didn't eat them and she's fine.", "The restaurant was dirty.", "He is allergic to fish."], "answer": 0, "explanation": "Жена ела только суп, и с ней всё в порядке, поэтому врач говорит: it must be the seafood." },
+            { "kind": "mcq", "question": "Как принимать таблетки?", "options": ["one tablet twice a day after meals", "two tablets once a day", "one tablet before bed"], "answer": 0, "explanation": "Врач: Take one tablet twice a day after meals." },
+            { "kind": "tfn", "statement": "Max has to go to the hospital.", "answer": "false", "explanation": "Врач: No, you don't." },
+            { "kind": "tfn", "statement": "Max should ask for a receipt for his insurance company.", "answer": "true", "explanation": "Врач: ask for a receipt so that your insurance company can pay you back." },
+            { "kind": "tfn", "statement": "Max and his wife are leaving tomorrow.", "answer": "not_given", "explanation": "Когда они уезжают, не сказано." }
+          ]
+        },
+        { "id": "travel.u04.l06.e02", "type": "listen_choice", "audio": "Then it must be the seafood. You've probably got food poisoning.", "question": "Что вы слышите?", "options": ["Then it must be the seafood. You've probably got food poisoning.", "Then it can't be the seafood. You've probably got the flu.", "Then it might be the soup. Your wife has food poisoning."], "answer": 0, "hint": "Образец: Must be.", "explanation": "Правильно: Then it must be the seafood. You've probably got food poisoning.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l06.e03", "type": "listen_dictation", "text": "What seems to be the problem?", "hint": "Шесть слов.", "explanation": "What seems to be the problem? — «На что жалуетесь?», вежливый вопрос врача." },
+        { "id": "travel.u04.l06.e04", "type": "listen_dictation", "text": "Do I need to go to the hospital?", "hint": "Восемь слов.", "explanation": "Do I need to go to the hospital? — «Мне нужно в больницу?»" },
+        { "id": "travel.u04.l06.e05", "type": "fill_gap", "text": "Yes, I've had a temperature ___ this morning.", "translation": "Да, температура у меня с утра.", "answers": [["since"]], "options": ["since", "for", "from"], "hint": "Точка начала.", "explanation": "Правильно: I've had a temperature since this morning.", "grammar": ["b1.for-since"] },
+        { "id": "travel.u04.l06.e06", "type": "fill_gap", "text": "Drink a lot of water so that you don't get ___.", "translation": "Пейте много воды, чтобы не было обезвоживания.", "answers": [["dehydrated"]], "options": ["dehydrated", "dizzy", "allergic"], "hint": "Обезвоженный.", "explanation": "Правильно: so that you don't get dehydrated." },
+        { "id": "travel.u04.l06.e07", "type": "tiles", "from": "ru", "text": "Можете дать мне что-нибудь от боли?", "answer": "Can you give me something for the pain?", "distractors": ["from", "anything"], "difficulty": 2, "hint": "От боли — for the pain.", "explanation": "Правильно: Can you give me something for the pain?" },
+        { "id": "travel.u04.l06.e08", "type": "type_translation", "from": "ru", "text": "У меня есть туристическая страховка.", "answers": ["I have travel insurance.", "I've got travel insurance.", "I have got travel insurance."], "difficulty": 2, "hint": "Образец: Travel + …", "explanation": "Правильно: I have travel insurance." },
+        { "id": "travel.u04.l06.e09", "type": "speak_answer", "question": "Have you ever been ill or hurt on a trip? What happened?", "questionRu": "Вы когда-нибудь болели или получали травму в поездке? Что случилось?", "keywords": [["\\b(ill|sick|hurt|fever|stomachache|headache|sunburn|ankle|cut|allergy|rash|bites|cold|flu)\\b"], ["\\b(was|were|had|got|went|took|didn't)\\b"]], "minKeywords": 2, "samples": ["Yes, once I got a bad sunburn on the first day, and I had to stay inside for two days.", "I sprained my ankle in the mountains, so I went to a clinic, and they put a bandage on it."], "difficulty": 3, "hint": "Образец: Once I got… and I had to…", "explanation": "Ответ: Once I got a bad sunburn on the first day, and I had to stay inside for two days." },
+        { "id": "travel.u04.l06.e10", "type": "speak_repeat", "text": "I've had a terrible stomachache since last night.", "hint": "Ударение на terrible.", "explanation": "I've had — коротко, terrible stomachache — с ударением, since last night — спокойно." }
+      ]
+    },
+    {
+      "id": "travel.u04.l07",
+      "kind": "writing",
+      "title": "Как не заболеть в отпуске",
+      "textId": "travel.u04.tips",
+      "exercises": [
+        {
+          "id": "travel.u04.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "travel.u04.tips",
+          "hint": "Найдите советы о страховке, солнце, еде и воде, и прочитайте историю читательницы.",
+          "explanation": "Перед поездкой — страховка и аптечка. В жару — солнцезащитный крем, шляпа и много воды. С едой — осторожно: вода из бутылки, без сырых салатов и льда. У читательницы оказалась аллергия на новый крем; фармацевт велела перестать им пользоваться и дала мазь, и через два дня сыпь прошла.",
+          "questions": [
+            { "kind": "mcq", "question": "Зачем покупать страховку?", "options": ["A visit to a doctor abroad can be very expensive.", "You can't leave the country without it.", "It pays for your hotel."], "answer": 0, "explanation": "В тексте: a visit to a doctor abroad can be very expensive." },
+            { "kind": "mcq", "question": "Что может быть первыми симптомами обезвоживания?", "options": ["a headache and feeling dizzy", "a rash and itchy skin", "a stomachache and a fever"], "answer": 0, "explanation": "В тексте: A headache and feeling dizzy can be the first symptoms." },
+            { "kind": "mcq", "question": "Что сказала фармацевт читательнице?", "options": ["that it was an allergy to her sunscreen", "that it was a sunburn", "that she had to see a doctor at once"], "answer": 0, "explanation": "В тексте: the pharmacist told me that it was an allergy to my new sunscreen." },
+            { "kind": "tfn", "statement": "The article says you should avoid raw salads in some places.", "answer": "true", "explanation": "В тексте: it is better… to avoid raw salads and ice." },
+            { "kind": "tfn", "statement": "The reader had to see a doctor in the end.", "answer": "false", "explanation": "Через два дня сыпь прошла, к врачу идти не пришлось." },
+            { "kind": "tfn", "statement": "The reader was on holiday with her family.", "answer": "not_given", "explanation": "С кем она отдыхала, не сказано." }
+          ]
+        },
+        { "id": "travel.u04.l07.e02", "type": "translate_choice", "from": "en", "text": "She also said that if it got worse, I would need to see a doctor.", "options": ["Ещё она сказала, что если станет хуже, придётся идти к врачу.", "Ещё она сказала, что ей стало хуже и она пошла к врачу.", "Она сказала, что врач меня посмотрит, если я захочу."], "answer": 0, "hint": "Would need — придётся.", "explanation": "Правильно: She also said that if it got worse, I would need to see a doctor.", "grammar": ["b1.reported-speech"] },
+        { "id": "travel.u04.l07.e03", "type": "fill_gap", "text": "If you get a stomachache after eating seafood, it ___ be food poisoning.", "translation": "Если после морепродуктов заболел живот, возможно, это пищевое отравление.", "answers": [["might", "may", "could"]], "options": ["might", "mustn't", "has"], "hint": "Возможно.", "explanation": "Правильно: it might be food poisoning.", "grammar": ["b1.deduction-present"] },
+        { "id": "travel.u04.l07.e04", "type": "fill_gap", "text": "She said I ___ stop using it and gave me a cream.", "translation": "Она сказала, что мне нужно перестать им пользоваться, и дала мне мазь.", "answers": [["should"]], "options": ["should", "shall", "will"], "hint": "Совет в косвенной речи.", "explanation": "Правильно: She said I should stop using it.", "grammar": ["b1.reported-speech"] },
+        { "id": "travel.u04.l07.e05", "type": "type_translation", "from": "ru", "text": "Пейте много воды.", "answers": ["Drink a lot of water.", "Drink lots of water."], "difficulty": 2, "hint": "Образец: A lot of…", "explanation": "Правильно: Drink a lot of water." },
+        { "id": "travel.u04.l07.e06", "type": "speak_describe", "picture": { "emoji": "💊" }, "situation": "Вы в аптеке за границей. Объясните фармацевту, что с вами: какие симптомы, как давно, и спросите, что вам принимать.", "keywords": [["\\b(have|has|'ve) (had|been|felt)\\b"], ["\\b(for|since)\\b"], ["\\b(could you|can you|what should I|do you have|something for)\\b"]], "minKeywords": 2, "samples": ["Hello, I've had a sore throat since yesterday, and I've felt very tired for two days. Do you have something for the pain?"], "difficulty": 3, "hint": "Образец: I've had… since… Do you have something for…?", "explanation": "Опишите симптомы, скажите, как давно они у вас (I've had… since / for…), и спросите, что принимать." },
+        { "id": "travel.u04.l07.e07", "type": "speak_answer", "question": "Which piece of advice from the article do you always remember? Which do you forget?", "questionRu": "Какому совету из статьи вы всегда следуете, а о каком забываете?", "keywords": [["\\b(always|usually|never|often|forget|remember)\\b"], ["\\b(sunscreen|insurance|water|hat|painkillers|raw|ice|bandage|medicine)\\b"]], "minKeywords": 2, "samples": ["I always buy travel insurance, but I often forget to drink enough water.", "I never forget my sunscreen, but I usually don't take painkillers with me."], "difficulty": 3, "hint": "Образец: I always… but I often forget to…", "explanation": "Ответ: I always buy travel insurance, but I often forget to drink enough water." },
+        {
+          "id": "travel.u04.l07.e08",
+          "type": "write",
+          "task": "Вы заболели или получили травму в поездке. Напишите другу: какие симптомы и как давно (I've had… since / for…), что, по-вашему, стало причиной (It must be… / It might be…), что сказал врач или фармацевт (She said that… / He told me that…) и как вы себя чувствуете сейчас.",
+          "minWords": 100,
+          "maxWords": 200,
+          "criteria": [
+            { "id": "duration", "label": "Сказано, как давно: I've had… for / since…", "patterns": ["\\b(have|has|haven't|hasn't|'ve|'s) (had|been|felt)\\b[^.]*\\b(for|since)\\b"] },
+            { "id": "deduction", "label": "Есть догадка: must be, might be, can't be", "patterns": ["\\b(must|might|may|could|can't) be\\b"] },
+            { "id": "reported", "label": "Пересказаны слова врача или фармацевта", "patterns": ["\\b(said|told (me|us|him|her))( that)? (I|it|he|she|we|you|they|the|my)\\b"] },
+            { "id": "symptoms", "label": "Названы симптомы", "patterns": ["\\b(fever|temperature|headache|stomachache|rash|pain|sore|dizzy|sick|cough|itchy|swollen|sunburn|bites)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\b(I am|I'm) (ill|sick|unwell|in bed) (since|for)\\b", "message": "Если это продолжается до сих пор — Present Perfect: I've been ill since Monday." },
+            { "pattern": "\\bsince (two|three|four|five|six|a few|several) (days|hours|weeks)\\b", "message": "Отрезок времени — for: for two days." },
+            { "pattern": "\\bsaid (me|us|him|her)\\b", "message": "С человеком — told me; said — без человека." },
+            { "pattern": "\\bmust to be\\b", "message": "После must — без to: it must be." }
+          ],
+          "samples": [
+            "Hi Lena, I'm sorry I haven't written for a few days, but I've been ill. I've had a terrible stomachache since Saturday, and on the first night I had a high fever too. It must be the seafood that I ate at a small restaurant by the sea, because Tom had pizza and he's fine. Yesterday I went to a clinic near the hotel. The doctor said that it was food poisoning and that it wasn't serious. She told me that I should drink a lot of water and rest, and she gave me some tablets. She also said that I would recover in a few days. I feel much better today, and I'm going to have some soup for lunch. See you soon! Maria",
+            "Hi Daniel, our holiday in the mountains has been great, but I've had a problem with my ankle for three days now. I was walking down a steep road when I fell. At first I thought it was nothing, but the next morning my ankle was swollen and it hurt a lot. It can't be broken, because I can still walk on it, but it might be a bad sprain. The doctor at the clinic sent me for an x-ray. He told me that nothing was broken and said that I had sprained it. He put a bandage on it and said I shouldn't walk too much for a week. So now I'm sitting by the pool with a book! See you soon, Ivan"
+          ],
+          "difficulty": 3,
+          "hint": "План: что случилось → симптомы и как давно (I've had… since…) → ваша догадка (It must be…) → что сказал врач (She said that… / He told me that…) → как вы сейчас.",
+          "explanation": "Для «до сих пор» — Present Perfect с for (отрезок) или since (точка). Догадки — must be (почти наверняка), might be (возможно), can't be (не может быть). В косвенной речи время сдвигается: «It's serious» → he said it was serious; told — с человеком, said — без.",
+          "grammar": ["b1.for-since", "b1.deduction-present", "b1.reported-speech"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "travel.u04.test.e01", "type": "match_pairs", "pairs": [{ "en": "rash", "ru": "сыпь" }, { "en": "prescription", "ru": "рецепт" }, { "en": "painkiller", "ru": "обезболивающее" }, { "en": "sunburn", "ru": "солнечный ожог" }, { "en": "ankle", "ru": "лодыжка" }], "hint": "Слова юнита.", "explanation": "Rash — сыпь, prescription — рецепт, painkiller — обезболивающее, sunburn — солнечный ожог, ankle — лодыжка." },
+      { "id": "travel.u04.test.e02", "type": "translate_choice", "from": "ru", "text": "фармацевт", "options": ["pharmacist", "pharmacy", "prescription"], "answer": 0, "hint": "Человек.", "explanation": "Pharmacist — «фармацевт», pharmacy — «аптека»." },
+      { "id": "travel.u04.test.e03", "type": "fill_gap", "text": "I've had a stomachache ___ last night.", "translation": "У меня болит живот со вчерашнего вечера.", "answers": [["since"]], "options": ["since", "for", "from"], "hint": "Точка начала.", "explanation": "Правильно: since last night.", "grammar": ["b1.for-since"] },
+      { "id": "travel.u04.test.e04", "type": "fill_gap", "text": "She has had a fever ___ two days.", "translation": "У неё температура уже два дня.", "answers": [["for"]], "options": ["for", "since", "during"], "hint": "Отрезок.", "explanation": "Правильно: for two days.", "grammar": ["b1.for-since"] },
+      { "id": "travel.u04.test.e05", "type": "fill_gap", "text": "Your fever isn't high. It ___ be very serious.", "translation": "Температура невысокая. Вряд ли это что-то серьёзное.", "answers": [["can't"]], "options": ["can't", "must", "mustn't"], "hint": "Не может быть.", "explanation": "Правильно: It can't be very serious.", "grammar": ["b1.deduction-present"] },
+      { "id": "travel.u04.test.e06", "type": "fill_gap", "text": "I'm not sure. It ___ be an allergy.", "translation": "Не уверен. Возможно, это аллергия.", "answers": [["might", "may", "could"]], "options": ["might", "must", "can't"], "hint": "Возможно.", "explanation": "Правильно: It might be an allergy.", "grammar": ["b1.deduction-present"] },
+      { "id": "travel.u04.test.e07", "type": "fill_gap", "text": "The doctor ___ me that I had food poisoning.", "translation": "Врач сказал мне, что у меня пищевое отравление.", "answers": [["told"]], "options": ["told", "said", "spoke"], "hint": "С человеком.", "explanation": "Правильно: The doctor told me…", "grammar": ["b1.reported-speech"] },
+      { "id": "travel.u04.test.e08", "type": "fill_gap", "text": "\"You'll recover soon.\" — The doctor told me that I ___ recover soon.", "translation": "Врач сказала мне, что я скоро поправлюсь.", "answers": [["would"]], "options": ["would", "will", "did"], "hint": "Образец: Will → …", "explanation": "Правильно: that I would recover soon.", "grammar": ["b1.reported-speech"] },
+      { "id": "travel.u04.test.e09", "type": "error_correction", "text": "I have a headache since yesterday.", "wrong": "have", "correction": "have had", "options": ["have had", "had have", "am having"], "hint": "Образец: Present Perfect.", "explanation": "Правильно: I have had a headache since yesterday.", "grammar": ["b1.for-since"] },
+      { "id": "travel.u04.test.e10", "type": "error_correction", "text": "It must to be food poisoning.", "wrong": "must to be", "correction": "must be", "options": ["must be", "must is", "must being"], "hint": "Без to.", "explanation": "Правильно: It must be food poisoning.", "grammar": ["b1.deduction-present"] },
+      { "id": "travel.u04.test.e11", "type": "error_correction", "text": "The doctor said me that I needed an x-ray.", "wrong": "said me", "correction": "told me", "options": ["told me", "said to", "say me"], "hint": "С человеком.", "explanation": "Правильно: The doctor told me that I needed an x-ray.", "grammar": ["b1.reported-speech"] },
+      { "id": "travel.u04.test.e12", "type": "listen_choice", "audio": "It can't be the water. We only drink water from a bottle.", "question": "Что вы слышите?", "options": ["It can't be the water. We only drink water from a bottle.", "It must be the water. We drink water from the tap.", "It might be the water, so buy a bottle."], "answer": 0, "hint": "Образец: Can't be.", "explanation": "Правильно: It can't be the water. We only drink water from a bottle." },
+      { "id": "travel.u04.test.e13", "type": "listen_dictation", "text": "I think I've sprained my ankle.", "hint": "Шесть слов.", "explanation": "I think I've sprained my ankle — «кажется, я растянул связки на лодыжке»." },
+      { "id": "travel.u04.test.e14", "type": "tiles", "from": "ru", "text": "Как давно у вас болит горло?", "answer": "How long have you had a sore throat?", "distractors": ["do", "since"], "difficulty": 2, "hint": "Образец: How long have you had…?", "explanation": "Правильно: How long have you had a sore throat?", "grammar": ["b1.for-since"] },
+      { "id": "travel.u04.test.e15", "type": "type_translation", "from": "ru", "text": "Фармацевт сказала, что это аллергия.", "answers": ["The pharmacist said that it was an allergy.", "The pharmacist said it was an allergy.", "The pharmacist told me that it was an allergy.", "The pharmacist told me it was an allergy."], "difficulty": 3, "hint": "Образец: Said that it was…", "explanation": "Правильно: The pharmacist said that it was an allergy.", "grammar": ["b1.reported-speech"] },
+      { "id": "travel.u04.test.e16", "type": "speak_repeat", "text": "Can you give me something for the pain?", "hint": "Вежливая просьба.", "explanation": "Can you give me… — вежливая просьба, голос в конце поднимается." }
+    ]
+  }
+}
