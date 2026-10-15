@@ -151,7 +151,7 @@ export function createNativeRecognizer(
 
 /** Registers the native recognizer when the module is present. Safe to call anywhere. */
 export function registerNativeRecognizer(): boolean {
-  // The web build would use the browser's recognition, which sends audio to Google: not used.
+  // The website has its own recognizer built on the browser's API (web-stt.ts).
   if (Platform.OS === 'web') return false;
   try {
     // eslint-disable-next-line @typescript-eslint/no-require-imports

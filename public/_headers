@@ -1,0 +1,8 @@
+# Read by Netlify and Cloudflare Pages. expo-sqlite in the browser needs SharedArrayBuffer, which
+# only cross-origin isolated pages get. require-corp (not credentialless) because Safari supports
+# only require-corp; the site loads nothing from other origins.
+/*
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Opener-Policy: same-origin
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer

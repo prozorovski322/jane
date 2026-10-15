@@ -12,6 +12,8 @@ import {
   requestNotifications,
   type PermissionOutcome,
 } from '@/core/permissions';
+import { IS_WEB } from '@/core/platform';
+import { browserRecognition } from '@/core/speech/web-stt';
 import { getDb } from '@/core/storage';
 import { AppText } from '@/ui/components/AppText';
 import { Button } from '@/ui/components/Button';
@@ -26,6 +28,7 @@ import { useTheme } from '@/ui/theme/ThemeProvider';
 import { PlacementRunner } from '../placement/PlacementScreen';
 import { SELF_LEVELS, type SelfLevel } from '../placement/engine';
 import { setDailyMinutes } from '../progress/service';
+import { useSettings } from '../settings/store';
 import { useProgress } from '../progress/store';
 import { GOALS, saveReminderPrefs, useOnboarding, type Goal } from './store';
 
@@ -122,7 +125,11 @@ export function OnboardingScreen() {
         <StepScreen
           step={step}
           title="Привет! Я Jane"
-          subtitle="Помогу выучить английский с нуля: слова, грамматика, аудирование, чтение, говорение и письмо. Готовы все уровни — от нуля до C1. Без подписок и рекламы, всё работает без интернета."
+          subtitle={
+            IS_WEB
+              ? 'Помогу выучить английский с нуля: слова, грамматика, аудирование, чтение, говорение и письмо. Готовы все уровни — от нуля до C1. Без подписок, рекламы и регистрации: прогресс хранится только в вашем браузере.'
+              : 'Помогу выучить английский с нуля: слова, грамматика, аудирование, чтение, говорение и письмо. Готовы все уровни — от нуля до C1. Без подписок и рекламы, всё работает без интернета.'
+          }
           footer={<Button label="Начать" icon="arrow-right" onPress={() => setStep('goal')} />}
         >
           <View style={{ alignItems: 'center' }}>
@@ -243,6 +250,7 @@ export function OnboardingScreen() {
       );
 
     case 'permissions':
+      if (IS_WEB) return <WebSpeechStep saving={saving} onDone={() => void finish()} />;
       return (
         <StepScreen
           step={step}
@@ -299,6 +307,56 @@ export function OnboardingScreen() {
         </StepScreen>
       );
   }
+}
+
+/** The website's last step: browser speech recognition, which sends audio to the browser maker. */
+function WebSpeechStep({ saving, onDone }: { saving: boolean; onDone: () => void }) {
+  const [outcome, setOutcome] = useState<PermissionOutcome | null>(null);
+  const enable = async () => {
+    const mic = await requestMicrophone();
+    if (mic === 'granted') useSettings.getState().update({ cloudSpeech: true });
+    setOutcome(mic);
+  };
+  return (
+    <StepScreen
+      step="permissions"
+      title="Распознавание речи"
+      subtitle="Необязательно — сайт работает и без него."
+      footer={<Button label="Готово" loading={saving} onPress={onDone} />}
+    >
+      <Card>
+        <AppText variant="heading">Проверка произношения</AppText>
+        <AppText variant="small">
+          В заданиях на говорение браузер может распознать, что вы сказали, и Jane проверит ответ.
+          Для этого браузер отправляет запись голоса на свой сервер: Chrome — в Google, Safari — в
+          Apple, Edge — в Microsoft. Без распознавания вы слушаете себя и проверяете ответ сами.
+          Включить или выключить можно в настройках.
+        </AppText>
+        {!browserRecognition() ? (
+          <AppText variant="smallStrong" color="textMuted">
+            В этом браузере распознавания речи нет. Оно есть в Chrome, Edge и Safari.
+          </AppText>
+        ) : outcome ? (
+          <AppText
+            variant="smallStrong"
+            color={outcome === 'granted' ? 'success' : 'textMuted'}
+            aria-live="polite"
+          >
+            {outcome === 'granted'
+              ? 'Включено'
+              : 'Микрофон не разрешён. Его можно разрешить в настройках сайта в браузере.'}
+          </AppText>
+        ) : (
+          <Button
+            label="Включить распознавание"
+            variant="secondary"
+            compact
+            onPress={() => void enable()}
+          />
+        )}
+      </Card>
+    </StepScreen>
+  );
 }
 
 const styles = StyleSheet.create({

@@ -8,7 +8,9 @@ import { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { countWords } from '@/core/content/lexical';
+import { IS_WEB } from '@/core/platform';
 import { recognizer, speechErrorMessage } from '@/core/speech/stt';
+import { browserRecognition } from '@/core/speech/web-stt';
 import { AppText } from '@/ui/components/AppText';
 import { Button } from '@/ui/components/Button';
 import { Choice } from '@/ui/components/Choice';
@@ -108,6 +110,12 @@ export function SpeakView({
             </AppText>
           )}
           {canRecognize && <Button label="Говорить" icon="mic" onPress={() => void listen()} />}
+          {!canRecognize && IS_WEB && browserRecognition() && (
+            <AppText variant="small" color="textMuted">
+              Чтобы сайт сам проверял сказанное, включите «Распознавание речи в браузере» в
+              настройках.
+            </AppText>
+          )}
           <Button
             label={canRecognize ? 'Проверю себя сам' : 'Сказать и проверить себя'}
             icon="mic"

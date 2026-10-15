@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { View } from 'react-native';
 
 import { clearAiKey } from '@/core/checker/ai-key';
+import { IS_WEB } from '@/core/platform';
 import { syncReminders } from '@/core/notifications/reminders';
 import { requestNotifications } from '@/core/permissions';
 import { tts } from '@/core/speech/tts';
@@ -218,8 +219,9 @@ function Data() {
     <Card>
       <SettingGroup>
         <AppText variant="small" color="textMuted">
-          Прогресс хранится только на этом устройстве. Сохраните копию, чтобы перенести его на
-          другой телефон или не потерять при переустановке.
+          {IS_WEB
+            ? 'Прогресс хранится только в этом браузере. Сохраните копию, чтобы перенести его на другое устройство или не потерять, если данные браузера будут очищены.'
+            : 'Прогресс хранится только на этом устройстве. Сохраните копию, чтобы перенести его на другой телефон или не потерять при переустановке.'}
         </AppText>
         <Button
           label="Сохранить копию прогресса"
@@ -319,8 +321,12 @@ export function SettingsScreen() {
         </SettingGroup>
       </Card>
 
-      <SectionTitle>Напоминания</SectionTitle>
-      <Reminders />
+      {!IS_WEB && (
+        <>
+          <SectionTitle>Напоминания</SectionTitle>
+          <Reminders />
+        </>
+      )}
 
       <SectionTitle>Озвучка</SectionTitle>
       <Voice />
@@ -347,11 +353,13 @@ export function SettingsScreen() {
       <SectionTitle>Отклик</SectionTitle>
       <Card>
         <SettingGroup>
-          <SwitchRow
-            label="Вибрация"
-            value={s.haptics}
-            onChange={(haptics) => update({ haptics })}
-          />
+          {!IS_WEB && (
+            <SwitchRow
+              label="Вибрация"
+              value={s.haptics}
+              onChange={(haptics) => update({ haptics })}
+            />
+          )}
           <SwitchRow label="Звуки" value={s.sounds} onChange={(sounds) => update({ sounds })} />
         </SettingGroup>
       </Card>
@@ -360,8 +368,12 @@ export function SettingsScreen() {
       <Card>
         <SettingGroup>
           <SwitchRow
-            label="Распознавание через сервис системы"
-            description="Только если на телефоне нет распознавания без интернета. Тогда звук обрабатывает Apple или Google. По умолчанию выключено."
+            label={IS_WEB ? 'Распознавание речи в браузере' : 'Распознавание через сервис системы'}
+            description={
+              IS_WEB
+                ? 'Браузер отправляет запись голоса на свой сервер: Chrome — в Google, Safari — в Apple, Edge — в Microsoft. Без этого ответы в заданиях на говорение вы проверяете сами. По умолчанию выключено.'
+                : 'Только если на телефоне нет распознавания без интернета. Тогда звук обрабатывает Apple или Google. По умолчанию выключено.'
+            }
             value={s.cloudSpeech}
             onChange={(cloudSpeech) => update({ cloudSpeech })}
           />
