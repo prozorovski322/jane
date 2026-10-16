@@ -2,7 +2,7 @@
  * Extracts the English and Russian strings an exercise shows to the learner. Used to derive the
  * words an exercise trains and by the content checker (language and vocabulary-level checks).
  */
-import type { Exercise } from './schema';
+import type { Chart, Exercise } from './schema';
 
 export interface ExerciseStrings {
   en: string[];
@@ -39,6 +39,11 @@ export function replaceFragment(text: string, fragment: string, replacement: str
 /** Removes `___` gap markers so the remaining words can be checked. */
 function withoutGaps(text: string): string {
   return text.replace(/___/g, ' ');
+}
+
+/** The English a chart shows: its title and series names (labels are numbers or years). */
+export function chartStrings(chart: Chart | undefined): string[] {
+  return chart ? [chart.title, ...chart.series.map((s) => s.name)] : [];
 }
 
 export function exerciseStrings(ex: Exercise): ExerciseStrings {
@@ -102,11 +107,11 @@ export function exerciseStrings(ex: Exercise): ExerciseStrings {
       ru.push(ex.questionRu);
       break;
     case 'speak_describe':
-      en.push(...ex.samples);
+      en.push(...ex.samples, ...chartStrings(ex.chart));
       ru.push(ex.situation);
       break;
     case 'write':
-      en.push(...ex.samples);
+      en.push(...ex.samples, ...chartStrings(ex.chart));
       ru.push(
         ex.task,
         ...ex.criteria.map((c) => c.label),

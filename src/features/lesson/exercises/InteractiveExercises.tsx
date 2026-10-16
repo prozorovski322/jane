@@ -13,6 +13,7 @@ import { normalizeAnswer } from '@/core/scoring/normalize';
 import { tts } from '@/core/speech/tts';
 import { shuffle } from '@/lib/random';
 import { AppText } from '@/ui/components/AppText';
+import { DataChart } from '@/ui/components/DataChart';
 import { Button } from '@/ui/components/Button';
 import { Choice, type ChoiceState } from '@/ui/components/Choice';
 import { useTheme } from '@/ui/theme/ThemeProvider';
@@ -324,6 +325,7 @@ export function ComprehensionView({
           />
         </View>
       )}
+      {textVisible && text?.chart && <DataChart chart={text.chart} />}
       {textVisible && text && (
         <View
           style={[

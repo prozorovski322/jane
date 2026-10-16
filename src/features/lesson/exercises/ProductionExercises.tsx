@@ -14,6 +14,7 @@ import { browserRecognition } from '@/core/speech/web-stt';
 import { AppText } from '@/ui/components/AppText';
 import { Button } from '@/ui/components/Button';
 import { Choice } from '@/ui/components/Choice';
+import { DataChart } from '@/ui/components/DataChart';
 import { SpeakButtons } from '@/ui/components/SpeakButtons';
 import { TextField } from '@/ui/components/TextField';
 import { useTheme } from '@/ui/theme/ThemeProvider';
@@ -92,13 +93,20 @@ export function SpeakView({
       {ex.type === 'speak_describe' && (
         <>
           <Instruction>Расскажите вслух</Instruction>
-          <View
-            style={[local.picture, { backgroundColor: colors.surfaceAlt, borderRadius: radius.xl }]}
-          >
-            <AppText style={local.emoji} aria-hidden>
-              {'emoji' in ex.picture ? ex.picture.emoji : '🖼️'}
-            </AppText>
-          </View>
+          {ex.chart ? (
+            <DataChart chart={ex.chart} />
+          ) : (
+            <View
+              style={[
+                local.picture,
+                { backgroundColor: colors.surfaceAlt, borderRadius: radius.xl },
+              ]}
+            >
+              <AppText style={local.emoji} aria-hidden>
+                {'emoji' in ex.picture ? ex.picture.emoji : '🖼️'}
+              </AppText>
+            </View>
+          )}
           <AppText variant="body">{ex.situation}</AppText>
         </>
       )}
@@ -229,6 +237,7 @@ export function WriteView({ exercise: ex, onChange, verdict }: ExerciseViewProps
     <View style={common.stack}>
       <Instruction>Напишите короткий текст</Instruction>
       <AppText variant="body">{ex.task}</AppText>
+      {ex.chart && <DataChart chart={ex.chart} />}
       <TextField
         label="Ваш текст"
         placeholder="Пишите по-английски"

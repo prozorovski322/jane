@@ -7,7 +7,12 @@ import { join } from 'node:path';
 
 import { countKeywordGroups, compilePattern } from '../../src/core/checker/patterns';
 import { checkWriting } from '../../src/core/checker/writing';
-import { countFragment, exerciseStrings, hasCyrillic } from '../../src/core/content/extract';
+import {
+  chartStrings,
+  countFragment,
+  exerciseStrings,
+  hasCyrillic,
+} from '../../src/core/content/extract';
 import {
   expandContraction,
   headwordTokens,
@@ -627,6 +632,11 @@ export function checkContent(content: LoadedContent): Issue[] {
             `lines[${li}]`,
             `"${tok.raw}" is above the level (add it to the unit words or to the glossary)`,
           );
+        }
+      }
+      for (const s of chartStrings(t.chart)) {
+        for (const tok of vocab.unknownTokens(s, gloss, `${file} texts[${i}]`)) {
+          report('error', 'chart', `"${tok.raw}" is above the level`);
         }
       }
     });

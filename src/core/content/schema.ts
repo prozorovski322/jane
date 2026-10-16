@@ -159,6 +159,38 @@ export const TextLine = z.strictObject({
   ru: Ru,
 });
 
+/**
+ * A small line or bar chart to describe (IELTS Writing Task 1). Every series has one value per
+ * label; values from `forecastFrom` on are a forecast and are drawn lighter.
+ */
+export const Chart = z
+  .strictObject({
+    kind: z.enum(['line', 'bar']),
+    title: En,
+    /** What the values measure, shown with the numbers: "%", "hours a week", "$". */
+    unit: text,
+    /** Labels along the horizontal axis, usually years. */
+    labels: z.array(text).min(2).max(12),
+    forecastFrom: z.number().int().min(1).optional(),
+    series: z
+      .array(z.strictObject({ name: En, values: z.array(z.number().min(0)) }))
+      .min(1)
+      .max(4),
+  })
+  .superRefine((c, ctx) => {
+    c.series.forEach((s, i) => {
+      if (s.values.length !== c.labels.length)
+        ctx.addIssue({
+          code: 'custom',
+          path: ['series', i, 'values'],
+          message: `${s.values.length} values for ${c.labels.length} labels`,
+        });
+    });
+    if (c.forecastFrom !== undefined && c.forecastFrom >= c.labels.length)
+      ctx.addIssue({ code: 'custom', path: ['forecastFrom'], message: 'past the last label' });
+  });
+export type Chart = z.infer<typeof Chart>;
+
 export const Text = z.strictObject({
   id: Id,
   kind: z.enum(['reading', 'dialogue']),
@@ -168,6 +200,8 @@ export const Text = z.strictObject({
   lines: z.array(TextLine).min(1),
   /** Words above the learner's level that are allowed in this text, with a gloss. */
   glossary: z.array(Bilingual).default([]),
+  /** Data the text describes (a Task 1 answer), drawn above it. */
+  chart: Chart.optional(),
 });
 export type Text = z.infer<typeof Text>;
 
@@ -345,6 +379,8 @@ export const SpeakDescribe = z.strictObject({
   type: z.literal('speak_describe'),
   picture: Picture,
   situation: Ru,
+  /** A chart to describe instead of (or besides) the picture. */
+  chart: Chart.optional(),
   keywords: KeywordGroups,
   minKeywords: z.number().int().min(1),
   samples: z.array(En).min(1),
@@ -372,6 +408,8 @@ export const Write = z.strictObject({
   ...base,
   type: z.literal('write'),
   task: Ru,
+  /** The chart a Task 1 answer describes. */
+  chart: Chart.optional(),
   minWords: z.number().int().min(1),
   maxWords: z.number().int().min(1),
   criteria: z.array(WritingCriterion).min(1),
