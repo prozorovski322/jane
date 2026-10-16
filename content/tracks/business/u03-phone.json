@@ -1,0 +1,310 @@
+{
+  "id": "business.u03",
+  "level": "B1",
+  "track": "business",
+  "order": 3,
+  "title": { "en": "On the phone", "ru": "Деловой телефон" },
+  "description": "Как позвонить в компанию и ответить на звонок: попросить соединить, оставить или принять сообщение, переспросить, когда плохо слышно, продиктовать номер и фамилию. Повторяем Present Perfect Continuous, косвенную речь и пассив.",
+  "goals": [
+    "Могу позвонить в компанию и попросить нужного человека: Could I speak to…?",
+    "Могу принять сообщение для коллеги и передать его: She said she would call back.",
+    "Могу переспросить и попросить говорить громче: Sorry, you're breaking up.",
+    "Могу объяснить, как давно жду: I've been trying to reach him since Monday.",
+    "Могу сказать, что произошло с заказом: It was sent on Thursday.",
+    "Могу оставить понятное голосовое сообщение и написать коллеге о звонке."
+  ],
+  "grammar": ["b1.perfect-continuous", "b1.reported-speech", "b1.passive-basic"],
+  "troubles": ["tenses"],
+  "words": [
+    { "id": "put-through", "en": "put through", "ipa": "pʊt θruː", "pos": "phrasal", "ru": ["соединить (по телефону)"], "example": { "en": "Could you put me through to the sales department?", "ru": "Не могли бы вы соединить меня с отделом продаж?" }, "forms": { "third": "puts through", "ing": "putting through" }, "topics": ["phrasal"] },
+    { "id": "extension", "en": "extension", "ipa": "ɪkˈstenʃən", "pos": "noun", "ru": ["добавочный номер"], "example": { "en": "My extension is 214.", "ru": "Мой добавочный — 214." }, "topics": ["work"] },
+    { "id": "on-hold", "en": "on hold", "ipa": "ɑːn hoʊld", "pos": "phrase", "ru": ["на удержании (на линии)"], "example": { "en": "Sorry to keep you on hold.", "ru": "Простите, что пришлось подождать на линии." }, "topics": ["work"] },
+    { "id": "caller", "en": "caller", "ipa": "ˈkɔːlɚ", "pos": "noun", "ru": ["звонящий"], "example": { "en": "The caller didn't leave her name.", "ru": "Звонившая не назвала имени." }, "topics": ["work"] },
+    { "id": "take-a-message", "en": "take a message", "ipa": "teɪk ə ˈmesɪdʒ", "pos": "phrase", "ru": ["принять сообщение"], "example": { "en": "He's in a meeting. Can I take a message?", "ru": "Он на встрече. Что-нибудь передать?" }, "topics": ["work"] },
+    { "id": "leave-a-message", "en": "leave a message", "ipa": "liːv ə ˈmesɪdʒ", "pos": "phrase", "ru": ["оставить сообщение"], "example": { "en": "Please leave a message after the signal.", "ru": "Пожалуйста, оставьте сообщение после сигнала." }, "topics": ["work"] },
+    { "id": "voicemail", "en": "voicemail", "ipa": "ˈvɔɪsˌmeɪl", "pos": "noun", "ru": ["голосовая почта", "голосовое сообщение"], "example": { "en": "I left you a voicemail.", "ru": "Я оставил тебе голосовое сообщение." }, "topics": ["technology"] },
+    { "id": "missed-call", "en": "missed call", "ipa": "mɪst kɔːl", "pos": "noun", "ru": ["пропущенный звонок"], "example": { "en": "I have three missed calls from you.", "ru": "У меня от тебя три пропущенных." }, "topics": ["technology"] },
+    { "id": "get-through", "en": "get through", "ipa": "ɡet θruː", "pos": "phrasal", "ru": ["дозвониться"], "example": { "en": "I couldn't get through to the office.", "ru": "Я не смог дозвониться в офис." }, "forms": { "third": "gets through", "ing": "getting through" }, "topics": ["phrasal"] },
+    { "id": "hang-up", "en": "hang up", "ipa": "hæŋ ʌp", "pos": "phrasal", "ru": ["положить трубку"], "example": { "en": "Please don't hang up.", "ru": "Пожалуйста, не кладите трубку." }, "forms": { "third": "hangs up" }, "note": "Hang up — hung up в прошедшем.", "topics": ["phrasal"] },
+    { "id": "speak-up", "en": "speak up", "ipa": "spiːk ʌp", "pos": "phrasal", "ru": ["говорить громче"], "example": { "en": "Could you speak up a little?", "ru": "Не могли бы вы говорить чуть громче?" }, "forms": { "third": "speaks up" }, "topics": ["phrasal"] },
+    { "id": "break-up", "en": "break up", "ipa": "breɪk ʌp", "pos": "phrasal", "ru": ["прерываться (о связи)", "расставаться"], "example": { "en": "Sorry, you're breaking up.", "ru": "Простите, вас плохо слышно, связь прерывается." }, "forms": { "third": "breaks up" }, "topics": ["phrasal"] },
+    { "id": "reach", "en": "reach", "ipa": "riːtʃ", "pos": "verb", "ru": ["связаться", "дозвониться", "достигать"], "example": { "en": "What's the best number to reach you on?", "ru": "По какому номеру вам лучше звонить?" }, "forms": { "third": "reaches" }, "topics": ["communication"] },
+    { "id": "receptionist", "en": "receptionist", "ipa": "rɪˈsepʃənɪst", "pos": "noun", "ru": ["администратор (на ресепшене)"], "example": { "en": "The receptionist put me through.", "ru": "Администратор соединил меня." }, "topics": ["work"] },
+    { "id": "out-of-the-office", "en": "out of the office", "ipa": "aʊt ʌv ðə ˈɔːfəs", "pos": "phrase", "ru": ["нет на месте", "вне офиса"], "example": { "en": "She's out of the office until Monday.", "ru": "Её не будет в офисе до понедельника." }, "topics": ["work"] },
+    { "id": "on-the-way", "en": "on the way", "ipa": "ɑːn ðə weɪ", "pos": "phrase", "ru": ["в пути"], "example": { "en": "Your order is on the way.", "ru": "Ваш заказ уже в пути." }, "topics": ["travel"] },
+    { "id": "warehouse", "en": "warehouse", "ipa": "ˈwerˌhaʊs", "pos": "noun", "ru": ["склад"], "example": { "en": "It was sent from our warehouse on Thursday.", "ru": "Его отправили с нашего склада в четверг." }, "topics": ["work"] },
+    { "id": "delivery", "en": "delivery", "ipa": "dɪˈlɪvɚi", "pos": "noun", "ru": ["доставка"], "example": { "en": "The delivery is late.", "ru": "Доставка опаздывает." }, "forms": { "plural": "deliveries" }, "topics": ["shopping"] },
+    { "id": "track", "en": "track", "ipa": "træk", "pos": "verb", "ru": ["отслеживать"], "example": { "en": "Can you track my order?", "ru": "Можете отследить мой заказ?" }, "forms": { "third": "tracks" }, "topics": ["shopping"] },
+    { "id": "record", "en": "record", "ipa": "rɪˈkɔːrd", "pos": "verb", "ru": ["записывать"], "example": { "en": "This call may be recorded.", "ru": "Этот звонок может записываться." }, "forms": { "third": "records" }, "note": "Существительное — record [ˈrekɚd]: запись, рекорд.", "topics": ["technology"] },
+    { "id": "service", "en": "service", "ipa": "ˈsɝːvəs", "pos": "noun", "ru": ["обслуживание", "сервис"], "example": { "en": "I'm calling customer service.", "ru": "Я звоню в службу поддержки." }, "note": "Customer service — служба поддержки клиентов.", "topics": ["work"] },
+    { "id": "address", "en": "address", "ipa": "ˈæˌdres", "pos": "noun", "ru": ["адрес"], "example": { "en": "Could you confirm the delivery address?", "ru": "Подтвердите, пожалуйста, адрес доставки." }, "topics": ["travel"] },
+    { "id": "clearly", "en": "clearly", "ipa": "ˈklɪrli", "pos": "adv", "ru": ["ясно", "чётко"], "example": { "en": "Speak slowly and clearly.", "ru": "Говорите медленно и чётко." }, "topics": ["adverbs"] }
+  ],
+  "texts": [
+    {
+      "id": "business.u03.call",
+      "kind": "dialogue",
+      "genre": "conversation",
+      "title": { "en": "Can I take a message?", "ru": "Что-нибудь передать?" },
+      "speakers": [
+        { "id": "sam", "name": "Sam", "voice": "male" },
+        { "id": "olga", "name": "Olga", "voice": "female" }
+      ],
+      "lines": [
+        { "speaker": "sam", "en": "Good morning, sales department. Sam speaking. How can I help you?", "ru": "Доброе утро, отдел продаж. Сэм слушает. Чем могу помочь?" },
+        { "speaker": "olga", "en": "Hello, this is Olga Smirnova. Could I speak to Daniel Green, please?", "ru": "Здравствуйте, это Ольга Смирнова. Можно поговорить с Даниэлем Грином?" },
+        { "speaker": "sam", "en": "I'm afraid he's in a meeting at the moment. Can I take a message?", "ru": "Боюсь, он сейчас на встрече. Что-нибудь передать?" },
+        { "speaker": "olga", "en": "Yes, please. It's urgent. I've been trying to reach him since Monday. Our order was sent last week, but it still hasn't arrived.", "ru": "Да, пожалуйста. Это срочно. Я пытаюсь дозвониться до него с понедельника. Наш заказ отправили на прошлой неделе, а он до сих пор не пришёл." },
+        { "speaker": "sam", "en": "I'm sorry to hear that. Could you give me the order number?", "ru": "Очень жаль. Назовите, пожалуйста, номер заказа." },
+        { "speaker": "olga", "en": "It's four, seven, one, nine.", "ru": "Четыре, семь, один, девять." },
+        { "speaker": "sam", "en": "Sorry, you're breaking up. Could you speak up a little?", "ru": "Простите, связь прерывается. Можете говорить чуть громче?" },
+        { "speaker": "olga", "en": "Four, seven, one, nine. Can you hear me now?", "ru": "Четыре, семь, один, девять. Теперь слышно?" },
+        { "speaker": "sam", "en": "Yes, that's much better. Let me check. Yes, I can see it. It was sent from our warehouse on Thursday, so it should be on the way.", "ru": "Да, гораздо лучше. Сейчас проверю. Да, вижу. Его отправили с нашего склада в четверг, так что он должен быть в пути." },
+        { "speaker": "olga", "en": "Can you track it?", "ru": "Вы можете его отследить?" },
+        { "speaker": "sam", "en": "Not from here, I'm afraid. But I'll ask Daniel to call you back as soon as his meeting finishes. What's the best number to reach you on?", "ru": "Отсюда, к сожалению, нет. Но я попрошу Даниэля перезвонить вам, как только закончится его встреча. По какому номеру вам лучше звонить?" },
+        { "speaker": "olga", "en": "My mobile. It's 0 7 7 0 0, 9 0 0, 1 2 3.", "ru": "На мобильный: 07700 900 123." },
+        { "speaker": "sam", "en": "Let me read that back: 0 7 7 0 0, 9 0 0, 1 2 3. And could you spell your last name, please?", "ru": "Повторю: 07700 900 123. И не могли бы вы продиктовать фамилию по буквам?" },
+        { "speaker": "olga", "en": "Of course. S, M, I, R, N, O, V, A.", "ru": "Конечно. S, M, I, R, N, O, V, A." },
+        { "speaker": "sam", "en": "Thank you, Ms Smirnova. I'll give him the message at once.", "ru": "Спасибо, госпожа Смирнова. Я сразу передам ему сообщение." }
+      ]
+    },
+    {
+      "id": "business.u03.tips",
+      "kind": "reading",
+      "genre": "article",
+      "title": { "en": "Don't be afraid of the phone", "ru": "Не бойтесь телефона" },
+      "lines": [
+        { "en": "For many people, a phone call in a foreign language is much more difficult than an email. You can't see the other person's face, you can't read their words again, and the line is sometimes bad. The good news is that most work calls are almost the same, and if you prepare a little, it helps a lot.", "ru": "Для многих звонок на иностранном языке гораздо волнительнее, чем письмо. Вы не видите лица собеседника, не можете перечитать его слова, а связь иногда плохая. Хорошая новость: большинство деловых звонков очень похожи, и небольшая подготовка сильно помогает." },
+        { "en": "Before you call, write down what you want to say: who you are, why you are calling and what you need. Have the important numbers in front of you, for example an order number or an invoice number. If you have been waiting for an answer for a long time, say so in a polite but clear way.", "ru": "Перед звонком запишите, что хотите сказать: кто вы, зачем звоните и что вам нужно. Держите перед глазами важные номера — например, номер заказа или счёта. Если вы давно ждёте ответа, скажите об этом вежливо, но чётко." },
+        { "en": "During the call, don't be afraid to ask people to repeat or to speak up. Even English people say \"Sorry, could you say that again?\" all the time. Names and numbers are the most difficult part, so ask people to spell their names, and read numbers back to check them.", "ru": "Во время звонка не бойтесь просить повторить или говорить громче. Даже носители языка постоянно говорят «Простите, повторите, пожалуйста». Труднее всего имена и числа, поэтому просите продиктовать имя по буквам и повторяйте номера вслух, чтобы проверить." },
+        { "en": "If nobody answers, leave a short voicemail. Say your name, your number, and the reason for your call. Say the number slowly, and say it twice. Many people listen to the beginning of a message and stop, so put the most important information first.", "ru": "Если никто не отвечает, оставьте короткое голосовое сообщение. Назовите имя, номер и причину звонка. Номер произносите медленно и дважды. Многие слушают только начало сообщения, поэтому самое важное говорите сразу." },
+        { "en": "Finally, after an important call, send a short email. A woman told us that this had changed her work completely: \"Before, people often forgot what we had agreed on the phone. Now I write: As we discussed, the order will be delivered on Friday. Now nobody forgets.\"", "ru": "И наконец, после важного звонка отправьте короткое письмо. Одна читательница рассказала нам, что это полностью изменило её работу: «Раньше люди часто забывали, о чём мы договорились по телефону. Теперь я пишу: Как мы обсудили, заказ доставят в пятницу. И больше никто не забывает»." }
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "business.u03.l01",
+      "kind": "vocabulary",
+      "title": "Звонок в компанию",
+      "exercises": [
+        { "id": "business.u03.l01.e01", "type": "match_pairs", "pairs": [{ "en": "put through", "ru": "соединить" }, { "en": "extension", "ru": "добавочный номер" }, { "en": "on hold", "ru": "на удержании" }, { "en": "caller", "ru": "звонящий" }, { "en": "receptionist", "ru": "администратор" }], "hint": "Соединение.", "explanation": "Put through — соединить, extension — добавочный номер, on hold — на удержании, caller — звонящий, receptionist — администратор." },
+        { "id": "business.u03.l01.e02", "type": "match_pairs", "pairs": [{ "en": "take a message", "ru": "принять сообщение" }, { "en": "leave a message", "ru": "оставить сообщение" }, { "en": "voicemail", "ru": "голосовая почта" }, { "en": "missed call", "ru": "пропущенный звонок" }, { "en": "reach", "ru": "связаться" }], "hint": "Сообщения.", "explanation": "Take a message — принять сообщение, leave a message — оставить сообщение, voicemail — голосовая почта, missed call — пропущенный звонок, reach — связаться." },
+        { "id": "business.u03.l01.e03", "type": "match_pairs", "pairs": [{ "en": "get through", "ru": "дозвониться" }, { "en": "hang up", "ru": "положить трубку" }, { "en": "speak up", "ru": "говорить громче" }, { "en": "break up", "ru": "прерываться (о связи)" }, { "en": "clearly", "ru": "чётко" }], "hint": "Связь.", "explanation": "Get through — дозвониться, hang up — положить трубку, speak up — говорить громче, break up — прерываться, clearly — чётко." },
+        { "id": "business.u03.l01.e04", "type": "translate_choice", "from": "ru", "text": "Не могли бы вы соединить меня с отделом продаж?", "options": ["Could you put me through to the sales department?", "Could you put me on the sales department?", "Could you hang up the sales department?"], "answer": 0, "hint": "Соединить — put through.", "explanation": "Правильно: Could you put me through to the sales department?" },
+        { "id": "business.u03.l01.e05", "type": "fill_gap", "text": "He's in a meeting. Can I take a ___?", "translation": "Он на встрече. Что-нибудь передать?", "answers": [["message"]], "options": ["message", "call", "number"], "hint": "Сообщение.", "explanation": "Правильно: Can I take a message?" },
+        { "id": "business.u03.l01.e06", "type": "fill_gap", "text": "Please don't ___ up.", "translation": "Пожалуйста, не кладите трубку.", "answers": [["hang"]], "options": ["hang", "speak", "break"], "hint": "Положить трубку.", "explanation": "Правильно: Please don't hang up." },
+        { "id": "business.u03.l01.e07", "type": "fill_gap", "text": "Sorry, you're breaking ___.", "translation": "Простите, связь прерывается.", "answers": [["up"]], "options": ["up", "down", "through"], "hint": "Прерываться.", "explanation": "Правильно: Sorry, you're breaking up." },
+        { "id": "business.u03.l01.e08", "type": "fill_gap", "text": "I couldn't get ___ to the office.", "translation": "Я не смог дозвониться в офис.", "answers": [["through"]], "options": ["through", "up", "on"], "hint": "Дозвониться.", "explanation": "Правильно: I couldn't get through to the office." },
+        { "id": "business.u03.l01.e09", "type": "fill_gap", "text": "My ___ is 214.", "translation": "Мой добавочный — 214.", "answers": [["extension"]], "options": ["extension", "voicemail", "caller"], "hint": "Добавочный номер.", "explanation": "Правильно: My extension is 214." },
+        { "id": "business.u03.l01.e10", "type": "fill_gap", "text": "Sorry to keep you on ___.", "translation": "Простите, что пришлось подождать на линии.", "answers": [["hold"]], "options": ["hold", "line", "call"], "hint": "На удержании.", "explanation": "Правильно: Sorry to keep you on hold." },
+        { "id": "business.u03.l01.e11", "type": "listen_choice", "audio": "Good morning, sales department. Sam speaking.", "question": "Что вы слышите?", "options": ["Good morning, sales department. Sam speaking.", "Good morning, Sam. This is the sales department.", "Good evening, sales department. Can I speak to Sam?"], "answer": 0, "hint": "Образец: Speaking.", "explanation": "Правильно: Good morning, sales department. Sam speaking. «Sam speaking» — «Сэм слушает»." },
+        { "id": "business.u03.l01.e12", "type": "listen_dictation", "text": "Could you speak up a little?", "hint": "Шесть слов.", "explanation": "Could you speak up a little? — «Можете говорить чуть громче?»" },
+        { "id": "business.u03.l01.e13", "type": "type_translation", "from": "ru", "text": "Что-нибудь передать?", "answers": ["Can I take a message?", "Could I take a message?", "Would you like to leave a message?", "Do you want to leave a message?", "Can I take a message for him?", "Can I take a message for her?"], "difficulty": 2, "hint": "Образец: Can I take…?", "explanation": "Правильно: Can I take a message?" },
+        { "id": "business.u03.l01.e14", "type": "word_stress", "word": "extension", "syllables": ["ex", "ten", "sion"], "stress": 1, "hint": "Второй слог.", "explanation": "ex-TEN-sion — ударение на второй слог." }
+      ]
+    },
+    {
+      "id": "business.u03.l02",
+      "kind": "vocabulary",
+      "title": "Заказы и доставка",
+      "exercises": [
+        { "id": "business.u03.l02.e01", "type": "match_pairs", "pairs": [{ "en": "warehouse", "ru": "склад" }, { "en": "delivery", "ru": "доставка" }, { "en": "track", "ru": "отслеживать" }, { "en": "on the way", "ru": "в пути" }, { "en": "address", "ru": "адрес" }], "hint": "Доставка.", "explanation": "Warehouse — склад, delivery — доставка, track — отслеживать, on the way — в пути, address — адрес." },
+        { "id": "business.u03.l02.e02", "type": "match_pairs", "pairs": [{ "en": "out of the office", "ru": "нет на месте" }, { "en": "record", "ru": "записывать" }, { "en": "service", "ru": "обслуживание" }, { "en": "voicemail", "ru": "голосовая почта" }, { "en": "put through", "ru": "соединить" }], "hint": "Офис.", "explanation": "Out of the office — нет на месте, record — записывать, service — обслуживание, voicemail — голосовая почта, put through — соединить." },
+        { "id": "business.u03.l02.e03", "type": "translate_choice", "from": "en", "text": "She's out of the office until Monday.", "options": ["Её не будет в офисе до понедельника.", "Она ушла из офиса в понедельник.", "Она в офисе с понедельника."], "answer": 0, "hint": "Out of the office — нет на месте.", "explanation": "Правильно: She's out of the office until Monday." },
+        { "id": "business.u03.l02.e04", "type": "translate_choice", "from": "ru", "text": "Ваш заказ уже в пути.", "options": ["Your order is on the way.", "Your order is in the warehouse.", "Your order is out of the office."], "answer": 0, "hint": "В пути.", "explanation": "Правильно: Your order is on the way." },
+        { "id": "business.u03.l02.e05", "type": "fill_gap", "text": "Can you ___ my order?", "translation": "Можете отследить мой заказ?", "answers": [["track", "check"]], "options": ["track", "reach", "record"], "hint": "Отследить.", "explanation": "Правильно: Can you track my order?" },
+        { "id": "business.u03.l02.e06", "type": "fill_gap", "text": "It was sent from our ___ on Thursday.", "translation": "Его отправили с нашего склада в четверг.", "answers": [["warehouse"]], "options": ["warehouse", "extension", "delivery"], "hint": "Склад.", "explanation": "Правильно: It was sent from our warehouse on Thursday." },
+        { "id": "business.u03.l02.e07", "type": "fill_gap", "text": "This call may be ___.", "translation": "Этот звонок может записываться.", "answers": [["recorded"]], "options": ["recorded", "record", "recording"], "hint": "Третья форма.", "explanation": "Правильно: This call may be recorded." },
+        { "id": "business.u03.l02.e08", "type": "fill_gap", "text": "What's the best number to ___ you on?", "translation": "По какому номеру вам лучше звонить?", "answers": [["reach", "call"]], "options": ["reach", "track", "record"], "hint": "Связаться.", "explanation": "Правильно: What's the best number to reach you on?" },
+        { "id": "business.u03.l02.e09", "type": "fill_gap", "text": "Could you confirm the delivery ___?", "translation": "Подтвердите, пожалуйста, адрес доставки.", "answers": [["address"]], "options": ["address", "warehouse", "service"], "hint": "Адрес.", "explanation": "Правильно: Could you confirm the delivery address?" },
+        { "id": "business.u03.l02.e10", "type": "fill_gap", "text": "Speak slowly and ___.", "translation": "Говорите медленно и чётко.", "answers": [["clearly"]], "options": ["clearly", "clear", "loud"], "hint": "Наречие.", "explanation": "Правильно: Speak slowly and clearly." },
+        { "id": "business.u03.l02.e11", "type": "listen_choice", "audio": "I have three missed calls from you. Is everything OK?", "question": "Что вы слышите?", "options": ["I have three missed calls from you. Is everything OK?", "I missed three calls this morning. Sorry!", "You have three messages. Is everything OK?"], "answer": 0, "hint": "Пропущенные.", "explanation": "Правильно: I have three missed calls from you. Is everything OK?" },
+        { "id": "business.u03.l02.e12", "type": "listen_dictation", "text": "Please leave a message after the signal.", "hint": "Семь слов.", "explanation": "Please leave a message after the signal — «оставьте сообщение после сигнала»." },
+        { "id": "business.u03.l02.e13", "type": "type_translation", "from": "ru", "text": "Я не смог дозвониться.", "answers": ["I couldn't get through.", "I could not get through.", "I couldn't reach you.", "I couldn't reach him.", "I couldn't reach her."], "difficulty": 2, "hint": "Образец: Get through.", "explanation": "Правильно: I couldn't get through." },
+        { "id": "business.u03.l02.e14", "type": "word_stress", "word": "warehouse", "syllables": ["ware", "house"], "stress": 0, "hint": "Первый слог.", "explanation": "WARE-house — ударение на первый слог." },
+        { "id": "business.u03.l02.e15", "type": "minimal_pair", "pair": [{ "en": "hold", "ipa": "hoʊld" }, { "en": "hole", "ipa": "hoʊl" }], "say": 0, "hint": "Hold — в конце [d].", "explanation": "Hold [hoʊld] — «держать», hole [hoʊl] — «дыра»." }
+      ]
+    },
+    {
+      "id": "business.u03.l03",
+      "kind": "grammar",
+      "title": "I've been trying to reach you",
+      "grammar": "b1.perfect-continuous",
+      "exercises": [
+        { "id": "business.u03.l03.e01", "type": "fill_gap", "text": "I've been ___ to reach him since Monday.", "translation": "Я пытаюсь дозвониться до него с понедельника.", "answers": [["trying"]], "options": ["trying", "try", "tried"], "hint": "Образец: Have been + -ing.", "explanation": "Правильно: I've been trying to reach him since Monday.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "business.u03.l03.e02", "type": "fill_gap", "text": "We have ___ waiting for the delivery for two weeks.", "translation": "Мы ждём доставку уже две недели.", "answers": [["been"]], "options": ["been", "be", "being"], "hint": "Образец: Have … + -ing.", "explanation": "Правильно: We have been waiting for the delivery for two weeks.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "business.u03.l03.e03", "type": "fill_gap", "text": "How long have you been ___ here?", "translation": "Сколько вы уже здесь работаете?", "answers": [["working"]], "options": ["working", "work", "worked"], "hint": "Форма на -ing.", "explanation": "Правильно: How long have you been working here?", "grammar": ["b1.perfect-continuous"] },
+        { "id": "business.u03.l03.e04", "type": "fill_gap", "text": "She ___ been calling customers all morning.", "translation": "Она всё утро обзванивает клиентов.", "answers": [["has"]], "options": ["has", "have", "is"], "hint": "С she.", "explanation": "Правильно: She has been calling customers all morning.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "business.u03.l03.e05", "type": "fill_gap", "text": "I'm tired because I've ___ answering the phone all day.", "translation": "Я устал, потому что весь день отвечал на звонки.", "answers": [["been"]], "options": ["been", "being", "be"], "hint": "Образец: I've … + -ing.", "explanation": "Правильно: I've been answering the phone all day.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "business.u03.l03.e06", "type": "fill_gap", "text": "I have ___ Daniel for ten years.", "translation": "Я знаю Даниэля десять лет.", "answers": [["known"]], "options": ["known", "been knowing", "knew"], "hint": "Know не ставят в continuous.", "explanation": "Правильно: I have known Daniel for ten years.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "business.u03.l03.e07", "type": "error_correction", "text": "I am waiting for your call since nine o'clock.", "wrong": "am waiting", "correction": "have been waiting", "options": ["have been waiting", "was waiting", "am waited"], "hint": "С прошлого до сих пор.", "explanation": "Правильно: I have been waiting for your call since nine o'clock.", "grammar": ["b1.perfect-continuous"], "troubles": ["tenses"] },
+        { "id": "business.u03.l03.e08", "type": "error_correction", "text": "How long are you trying to call them?", "wrong": "are you trying", "correction": "have you been trying", "options": ["have you been trying", "did you try", "you have been trying"], "hint": "Образец: How long have you been…?", "explanation": "Правильно: How long have you been trying to call them?", "grammar": ["b1.perfect-continuous"], "troubles": ["tenses"] },
+        { "id": "business.u03.l03.e09", "type": "error_correction", "text": "I have been knowing her since school.", "wrong": "have been knowing", "correction": "have known", "options": ["have known", "am knowing", "knew been"], "hint": "Know — без continuous.", "explanation": "Правильно: I have known her since school.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "business.u03.l03.e10", "type": "translate_choice", "from": "ru", "text": "Мы ждём ответа с прошлой недели.", "options": ["We have been waiting for an answer since last week.", "We are waiting for an answer since last week.", "We waited for an answer since last week."], "answer": 0, "hint": "С прошлого до сих пор.", "explanation": "Правильно: We have been waiting for an answer since last week.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "business.u03.l03.e11", "type": "tiles", "from": "ru", "text": "Я пытаюсь до вас дозвониться с понедельника.", "answer": "I've been trying to reach you since Monday.", "distractors": ["am", "for"], "difficulty": 2, "hint": "Образец: I've been + -ing + since.", "explanation": "Правильно: I've been trying to reach you since Monday.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "business.u03.l03.e12", "type": "tiles", "from": "ru", "text": "Сколько вы уже ждёте?", "answer": "How long have you been waiting?", "distractors": ["are", "did"], "difficulty": 2, "hint": "Образец: How long have you been…?", "explanation": "Правильно: How long have you been waiting?", "grammar": ["b1.perfect-continuous"] },
+        { "id": "business.u03.l03.e13", "type": "type_translation", "from": "ru", "text": "Я всё утро звоню клиентам.", "answers": ["I've been calling customers all morning.", "I have been calling customers all morning.", "I've been calling clients all morning.", "I have been calling clients all morning.", "I've been phoning customers all morning.", "I have been phoning customers all morning."], "difficulty": 3, "hint": "Образец: I've been + -ing.", "explanation": "Правильно: I've been calling customers all morning.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "business.u03.l03.e14", "type": "listen_choice", "audio": "I've been trying to reach him since Monday.", "question": "Что вы слышите?", "options": ["I've been trying to reach him since Monday.", "I tried to reach him on Monday.", "I'll try to reach him on Monday."], "answer": 0, "hint": "С понедельника.", "explanation": "Правильно: I've been trying to reach him since Monday.", "grammar": ["b1.perfect-continuous"] },
+        { "id": "business.u03.l03.e15", "type": "speak_answer", "question": "You call a company about a problem. Explain how long you have been waiting and what you have been doing.", "questionRu": "Вы звоните в компанию по поводу проблемы. Объясните, сколько вы уже ждёте и что делали. Используйте I've been… for / since…", "keywords": [["\\b(have|has|'ve|'s) been [a-z]+ing\\b"], ["\\b(for|since)\\b"]], "minKeywords": 2, "samples": ["I've been waiting for my order for two weeks, and I've been trying to call you since Monday.", "We have been waiting for an answer since last Friday."], "difficulty": 3, "hint": "Образец: I've been waiting for… I've been trying to… since…", "explanation": "Ответ: I've been waiting for my order for two weeks, and I've been trying to call you since Monday.", "grammar": ["b1.perfect-continuous"] }
+      ]
+    },
+    {
+      "id": "business.u03.l04",
+      "kind": "grammar",
+      "title": "She said she would call back",
+      "grammar": "b1.reported-speech",
+      "exercises": [
+        { "id": "business.u03.l04.e01", "type": "fill_gap", "text": "\"I'll call back later.\" — She said she ___ call back later.", "translation": "Она сказала, что перезвонит позже.", "answers": [["would"]], "options": ["would", "will", "can"], "hint": "Образец: Will → …", "explanation": "Правильно: She said she would call back later.", "grammar": ["b1.reported-speech"] },
+        { "id": "business.u03.l04.e02", "type": "fill_gap", "text": "\"The order is late.\" — He told me that the order ___ late.", "translation": "Он сказал мне, что заказ опаздывает.", "answers": [["was"]], "options": ["was", "is being", "been"], "hint": "Образец: Is → …", "explanation": "Правильно: He told me that the order was late.", "grammar": ["b1.reported-speech"] },
+        { "id": "business.u03.l04.e03", "type": "fill_gap", "text": "Olga ___ me that it was urgent.", "translation": "Ольга сказала мне, что это срочно.", "answers": [["told"]], "options": ["told", "said", "spoke"], "hint": "С человеком.", "explanation": "Правильно: Olga told me that it was urgent.", "grammar": ["b1.reported-speech"] },
+        { "id": "business.u03.l04.e04", "type": "fill_gap", "text": "\"I have sent the invoice.\" — He said that he ___ sent the invoice.", "translation": "Он сказал, что отправил счёт.", "answers": [["had"]], "options": ["had", "has", "was"], "hint": "Образец: Have done → … done.", "explanation": "Правильно: He said that he had sent the invoice.", "grammar": ["b1.reported-speech"] },
+        { "id": "business.u03.l04.e05", "type": "fill_gap", "text": "\"I can deliver it tomorrow.\" — He said he ___ deliver it the next day.", "translation": "Он сказал, что может доставить на следующий день.", "answers": [["could"]], "options": ["could", "can", "will"], "hint": "Образец: Can → …", "explanation": "Правильно: He said he could deliver it the next day.", "grammar": ["b1.reported-speech"] },
+        { "id": "business.u03.l04.e06", "type": "fill_gap", "text": "She said she would call again the ___ day.", "translation": "Она сказала, что позвонит снова на следующий день.", "answers": [["next", "following"]], "options": ["next", "tomorrow", "last"], "hint": "Образец: Tomorrow → the … day.", "explanation": "Правильно: She said she would call again the next day.", "grammar": ["b1.reported-speech"] },
+        { "id": "business.u03.l04.e07", "type": "error_correction", "text": "She said me that the order hadn't arrived.", "wrong": "said me", "correction": "told me", "options": ["told me", "said to", "say me"], "hint": "С человеком.", "explanation": "Правильно: She told me that the order hadn't arrived.", "grammar": ["b1.reported-speech"] },
+        { "id": "business.u03.l04.e08", "type": "error_correction", "text": "He said that he will be in the office tomorrow.", "wrong": "will", "correction": "would", "options": ["would", "is", "can't"], "hint": "Will сдвигается.", "explanation": "Правильно: He said that he would be in the office the next day.", "grammar": ["b1.reported-speech"], "troubles": ["tenses"] },
+        { "id": "business.u03.l04.e09", "type": "error_correction", "text": "Olga told that it was urgent.", "wrong": "told that", "correction": "said that", "options": ["said that", "told to", "say that"], "hint": "Без человека.", "explanation": "Правильно: Olga said that it was urgent.", "grammar": ["b1.reported-speech"] },
+        { "id": "business.u03.l04.e10", "type": "translate_choice", "from": "ru", "text": "Она сказала, что пытается дозвониться с понедельника.", "options": ["She said that she had been trying to call since Monday.", "She said me that she is trying since Monday.", "She told that she tried since Monday."], "answer": 0, "hint": "Образец: Have been trying → had been trying.", "explanation": "Правильно: She said that she had been trying to call since Monday.", "grammar": ["b1.reported-speech"] },
+        { "id": "business.u03.l04.e11", "type": "tiles", "from": "ru", "text": "Она сказала, что перезвонит.", "answer": "She said that she would call back.", "distractors": ["will", "told"], "difficulty": 2, "hint": "Образец: Will → would.", "explanation": "Правильно: She said that she would call back.", "grammar": ["b1.reported-speech"] },
+        { "id": "business.u03.l04.e12", "type": "tiles", "from": "ru", "text": "Он сказал мне, что заказ в пути.", "answer": "He told me that the order was on the way.", "distractors": ["said", "is"], "difficulty": 3, "hint": "Told me + сдвиг времени.", "explanation": "Правильно: He told me that the order was on the way.", "grammar": ["b1.reported-speech"] },
+        { "id": "business.u03.l04.e13", "type": "type_translation", "from": "ru", "text": "Она сказала, что это срочно.", "answers": ["She said that it was urgent.", "She said it was urgent.", "She told me that it was urgent.", "She told me it was urgent."], "difficulty": 2, "hint": "Образец: Is → was.", "explanation": "Правильно: She said that it was urgent.", "grammar": ["b1.reported-speech"] },
+        { "id": "business.u03.l04.e14", "type": "listen_choice", "audio": "She said that her order hadn't arrived and that it was urgent.", "question": "Что вы слышите?", "options": ["She said that her order hadn't arrived and that it was urgent.", "She said that her order had arrived, but it was late.", "She told me to send the order today."], "answer": 0, "hint": "Пересказ.", "explanation": "Правильно: She said that her order hadn't arrived and that it was urgent.", "grammar": ["b1.reported-speech"] },
+        { "id": "business.u03.l04.e15", "type": "speak_answer", "question": "You took a phone message for your colleague. Tell them who called and what the caller said.", "questionRu": "Вы приняли звонок для коллеги. Расскажите, кто звонил и что сказал звонивший. Используйте He / She said that… и told me that…", "keywords": [["\\b(said|told me)\\b"], ["\\b(was|were|had|would|could|wanted|needed)\\b"]], "minKeywords": 2, "samples": ["Olga Smirnova called. She said that her order hadn't arrived and that it was urgent. She told me she would wait for your call.", "A man from the bank called. He said he would call back after lunch."], "difficulty": 3, "hint": "Образец: … called. She said that… She told me…", "explanation": "Ответ: Olga Smirnova called. She said that her order hadn't arrived and that it was urgent.", "grammar": ["b1.reported-speech"] }
+      ]
+    },
+    {
+      "id": "business.u03.l05",
+      "kind": "grammar",
+      "title": "It was sent on Thursday",
+      "grammar": "b1.passive-basic",
+      "exercises": [
+        { "id": "business.u03.l05.e01", "type": "fill_gap", "text": "Your order ___ sent on Thursday.", "translation": "Ваш заказ отправили в четверг.", "answers": [["was"]], "options": ["was", "were", "is been"], "hint": "Пассив в прошлом.", "explanation": "Правильно: Your order was sent on Thursday.", "grammar": ["b1.passive-basic"] },
+        { "id": "business.u03.l05.e02", "type": "fill_gap", "text": "Calls are ___ for training.", "translation": "Звонки записываются для обучения.", "answers": [["recorded"]], "options": ["recorded", "record", "recording"], "hint": "Третья форма.", "explanation": "Правильно: Calls are recorded for training.", "grammar": ["b1.passive-basic"] },
+        { "id": "business.u03.l05.e03", "type": "fill_gap", "text": "The boxes ___ delivered yesterday.", "translation": "Коробки доставили вчера.", "answers": [["were"]], "options": ["were", "was", "are"], "hint": "Boxes — множественное число.", "explanation": "Правильно: The boxes were delivered yesterday.", "grammar": ["b1.passive-basic"] },
+        { "id": "business.u03.l05.e04", "type": "fill_gap", "text": "Orders are ___ from our warehouse every day.", "translation": "Заказы отправляются с нашего склада каждый день.", "answers": [["sent"]], "options": ["sent", "send", "sending"], "hint": "Третья форма send.", "explanation": "Правильно: Orders are sent from our warehouse every day.", "grammar": ["b1.passive-basic"] },
+        { "id": "business.u03.l05.e05", "type": "fill_gap", "text": "The invoice was sent ___ our accountant.", "translation": "Счёт отправил наш бухгалтер.", "answers": [["by"]], "options": ["by", "from", "with"], "hint": "Кем — by.", "explanation": "Правильно: The invoice was sent by our accountant.", "grammar": ["b1.passive-basic"] },
+        { "id": "business.u03.l05.e06", "type": "fill_gap", "text": "English is ___ in our office every day.", "translation": "В нашем офисе каждый день говорят по-английски.", "answers": [["spoken", "used"]], "options": ["spoken", "speak", "spoke"], "hint": "Третья форма speak.", "explanation": "Правильно: English is spoken in our office every day.", "grammar": ["b1.passive-basic"] },
+        { "id": "business.u03.l05.e07", "type": "error_correction", "text": "Your order sent on Thursday.", "wrong": "sent", "correction": "was sent", "options": ["was sent", "is send", "has send"], "hint": "В пассиве нужен be.", "explanation": "Правильно: Your order was sent on Thursday.", "grammar": ["b1.passive-basic"], "troubles": ["tenses"] },
+        { "id": "business.u03.l05.e08", "type": "error_correction", "text": "This call is record for training.", "wrong": "record", "correction": "recorded", "options": ["recorded", "recording", "records"], "hint": "После be — третья форма.", "explanation": "Правильно: This call is recorded for training.", "grammar": ["b1.passive-basic"] },
+        { "id": "business.u03.l05.e09", "type": "error_correction", "text": "The boxes was delivered to the wrong address.", "wrong": "was", "correction": "were", "options": ["were", "is", "be"], "hint": "Boxes — множественное число.", "explanation": "Правильно: The boxes were delivered to the wrong address.", "grammar": ["b1.passive-basic"] },
+        { "id": "business.u03.l05.e10", "type": "translate_choice", "from": "en", "text": "The order was delivered to the wrong address.", "options": ["Заказ доставили не по тому адресу.", "Заказ доставит другой адрес.", "Адрес заказа был неправильный, и его не доставили."], "answer": 0, "hint": "Was delivered — доставили.", "explanation": "Правильно: The order was delivered to the wrong address.", "grammar": ["b1.passive-basic"] },
+        { "id": "business.u03.l05.e11", "type": "tiles", "from": "ru", "text": "Ваш заказ отправили в четверг.", "answer": "Your order was sent on Thursday.", "distractors": ["send", "were"], "difficulty": 2, "hint": "Образец: Was + V3.", "explanation": "Правильно: Your order was sent on Thursday.", "grammar": ["b1.passive-basic"] },
+        { "id": "business.u03.l05.e12", "type": "tiles", "from": "ru", "text": "Звонки записываются.", "answer": "Calls are recorded.", "distractors": ["record", "is"], "difficulty": 2, "hint": "Образец: Are + V3.", "explanation": "Правильно: Calls are recorded.", "grammar": ["b1.passive-basic"] },
+        { "id": "business.u03.l05.e13", "type": "type_translation", "from": "ru", "text": "Заказ доставили вчера.", "answers": ["The order was delivered yesterday.", "The order arrived yesterday.", "Our order was delivered yesterday.", "My order was delivered yesterday."], "difficulty": 2, "hint": "Образец: Was + V3.", "explanation": "Правильно: The order was delivered yesterday.", "grammar": ["b1.passive-basic"] },
+        { "id": "business.u03.l05.e14", "type": "listen_choice", "audio": "This call may be recorded for training.", "question": "Что вы слышите?", "options": ["This call may be recorded for training.", "Please record your message after the signal.", "This call was recorded yesterday."], "answer": 0, "hint": "Пассив.", "explanation": "Правильно: This call may be recorded for training.", "grammar": ["b1.passive-basic"] },
+        { "id": "business.u03.l05.e15", "type": "speak_answer", "question": "A customer calls about an order. Explain what happened to it.", "questionRu": "Клиент звонит по поводу заказа. Объясните, что с ним произошло. Используйте пассив: was sent, was delivered, is checked…", "keywords": [["\\b(was|were|is|are|has been) [a-z]+(ed|en|t)\\b"], ["\\b(order|delivery|warehouse|address|invoice|box|boxes)\\b"]], "minKeywords": 2, "samples": ["Your order was sent from our warehouse on Monday, but it was delivered to the wrong address.", "The boxes were sent yesterday, and the invoice was sent by email this morning."], "difficulty": 3, "hint": "Образец: Your order was sent… It was delivered…", "explanation": "Ответ: Your order was sent from our warehouse on Monday, but it was delivered to the wrong address.", "grammar": ["b1.passive-basic"] }
+      ]
+    },
+    {
+      "id": "business.u03.l06",
+      "kind": "listening",
+      "title": "Что-нибудь передать?",
+      "textId": "business.u03.call",
+      "exercises": [
+        {
+          "id": "business.u03.l06.e01",
+          "type": "comprehension",
+          "mode": "listening",
+          "textId": "business.u03.call",
+          "hint": "Слушайте, кому звонит Ольга, что случилось с заказом и что пообещал Сэм.",
+          "explanation": "Ольга звонит Даниэлю Грину, но он на встрече. Она с понедельника не может до него дозвониться: заказ отправили на прошлой неделе, а он не пришёл. Сэм проверяет: заказ ушёл со склада в четверг и должен быть в пути. Отследить его Сэм не может, но попросит Даниэля перезвонить на мобильный.",
+          "questions": [
+            { "kind": "mcq", "question": "Почему Даниэль не может ответить?", "options": ["He's in a meeting.", "He's out of the office.", "He's on another call."], "answer": 0, "explanation": "Сэм: he's in a meeting at the moment." },
+            { "kind": "mcq", "question": "Когда заказ отправили со склада?", "options": ["on Thursday", "on Monday", "yesterday"], "answer": 0, "explanation": "Сэм: It was sent from our warehouse on Thursday." },
+            { "kind": "mcq", "question": "Что пообещал Сэм?", "options": ["to ask Daniel to call Olga back", "to track the order", "to send a new order"], "answer": 0, "explanation": "Сэм: I'll ask Daniel to call you back." },
+            { "kind": "tfn", "statement": "Olga has been trying to reach Daniel since Monday.", "answer": "true", "explanation": "Ольга: I've been trying to reach him since Monday." },
+            { "kind": "tfn", "statement": "Sam can track the order from his office.", "answer": "false", "explanation": "Сэм: Not from here, I'm afraid." },
+            { "kind": "tfn", "statement": "Olga's company has worked with Daniel for many years.", "answer": "not_given", "explanation": "Об этом не сказано." }
+          ]
+        },
+        { "id": "business.u03.l06.e02", "type": "listen_choice", "audio": "It was sent from our warehouse on Thursday, so it should be on the way.", "question": "Что вы слышите?", "options": ["It was sent from our warehouse on Thursday, so it should be on the way.", "It will be sent from our warehouse on Thursday.", "It was sent back to our warehouse on Thursday."], "answer": 0, "hint": "Образец: Was sent.", "explanation": "Правильно: It was sent from our warehouse on Thursday, so it should be on the way.", "grammar": ["b1.passive-basic"] },
+        { "id": "business.u03.l06.e03", "type": "listen_dictation", "text": "Could I speak to Daniel Green, please?", "hint": "Семь слов.", "explanation": "Could I speak to Daniel Green, please? — «Можно поговорить с Даниэлем Грином?»" },
+        { "id": "business.u03.l06.e04", "type": "listen_dictation", "text": "Let me read that back.", "hint": "Пять слов.", "explanation": "Let me read that back — «повторю, чтобы проверить»." },
+        { "id": "business.u03.l06.e05", "type": "fill_gap", "text": "I'll ask Daniel to call you ___ as soon as his meeting finishes.", "translation": "Я попрошу Даниэля перезвонить вам, как только закончится его встреча.", "answers": [["back"]], "options": ["back", "up", "through"], "hint": "Перезвонить.", "explanation": "Правильно: I'll ask Daniel to call you back." },
+        { "id": "business.u03.l06.e06", "type": "fill_gap", "text": "Could you ___ your last name, please?", "translation": "Не могли бы вы продиктовать фамилию по буквам?", "answers": [["spell"]], "options": ["spell", "say up", "write"], "hint": "По буквам.", "explanation": "Правильно: Could you spell your last name, please?" },
+        { "id": "business.u03.l06.e07", "type": "tiles", "from": "ru", "text": "Можно поговорить с Даниэлем?", "answer": "Could I speak to Daniel, please?", "distractors": ["with", "talk"], "difficulty": 2, "hint": "Образец: Could I speak to…?", "explanation": "Правильно: Could I speak to Daniel, please?" },
+        { "id": "business.u03.l06.e08", "type": "type_translation", "from": "ru", "text": "Это срочно.", "answers": ["It's urgent.", "It is urgent.", "This is urgent."], "difficulty": 1, "hint": "Срочный — urgent.", "explanation": "Правильно: It's urgent." },
+        { "id": "business.u03.l06.e09", "type": "speak_answer", "question": "Do you like phone calls, or do you prefer emails and messages? Why?", "questionRu": "Вы любите звонить или предпочитаете письма и сообщения? Почему?", "keywords": [["\\b(phone|call|calls|email|emails|messages|message)\\b"], ["\\bbecause\\b"]], "minKeywords": 2, "samples": ["I prefer emails, because I can read them again and think before I answer.", "I like phone calls, because it's faster and easier to explain things."], "difficulty": 3, "hint": "Образец: I prefer…, because…", "explanation": "Ответ: I prefer emails, because I can read them again and think before I answer." },
+        { "id": "business.u03.l06.e10", "type": "speak_repeat", "text": "Sorry, you're breaking up. Could you speak up a little?", "hint": "Вежливо, с паузой после up.", "explanation": "Sorry, you're breaking up — пауза — could you speak up a little?" }
+      ]
+    },
+    {
+      "id": "business.u03.l07",
+      "kind": "writing",
+      "title": "Не бойтесь телефона",
+      "textId": "business.u03.tips",
+      "exercises": [
+        {
+          "id": "business.u03.l07.e01",
+          "type": "comprehension",
+          "mode": "reading",
+          "textId": "business.u03.tips",
+          "hint": "Найдите советы: до звонка, во время звонка, голосовое сообщение, после звонка.",
+          "explanation": "До звонка — записать, что хотите сказать, и держать номера перед глазами. Во время — смело переспрашивать, просить продиктовать имя и повторять номера. Голосовое сообщение — имя, номер дважды и причину, самое важное в начале. После важного звонка — короткое письмо с договорённостями.",
+          "questions": [
+            { "kind": "mcq", "question": "Почему звонок сложнее письма?", "options": ["You can't see the person or read their words again.", "Calls are always very long.", "Phones are expensive."], "answer": 0, "explanation": "В тексте: You can't see the other person's face, you can't read their words again." },
+            { "kind": "mcq", "question": "Сколько раз нужно назвать номер в голосовом сообщении?", "options": ["twice", "once", "three times"], "answer": 0, "explanation": "В тексте: say it twice." },
+            { "kind": "mcq", "question": "Что советует сделать читательница после важного звонка?", "options": ["send a short email", "call again the next day", "record the call"], "answer": 0, "explanation": "В тексте: after an important call, send a short email." },
+            { "kind": "tfn", "statement": "English people never ask other people to repeat.", "answer": "false", "explanation": "В тексте: Even English people say \"Sorry, could you say that again?\" all the time." },
+            { "kind": "tfn", "statement": "The article says names and numbers are the most difficult part.", "answer": "true", "explanation": "В тексте: Names and numbers are the most difficult part." },
+            { "kind": "tfn", "statement": "The reader works in a bank.", "answer": "not_given", "explanation": "Где работает читательница, не сказано." }
+          ]
+        },
+        { "id": "business.u03.l07.e02", "type": "translate_choice", "from": "en", "text": "Say the number slowly, and say it twice.", "options": ["Произносите номер медленно и дважды.", "Говорите номер быстро, один раз.", "Дважды проверьте номер перед звонком."], "answer": 0, "hint": "Twice — дважды.", "explanation": "Правильно: Say the number slowly, and say it twice." },
+        { "id": "business.u03.l07.e03", "type": "fill_gap", "text": "As we discussed, the order will be ___ on Friday.", "translation": "Как мы обсудили, заказ доставят в пятницу.", "answers": [["delivered", "sent"]], "options": ["delivered", "deliver", "delivering"], "hint": "Третья форма.", "explanation": "Правильно: the order will be delivered on Friday.", "grammar": ["b1.passive-basic"] },
+        { "id": "business.u03.l07.e04", "type": "fill_gap", "text": "A woman told us that this ___ changed her work completely.", "translation": "Одна читательница рассказала, что это полностью изменило её работу.", "answers": [["had"]], "options": ["had", "has", "was"], "hint": "Сдвиг времени: has changed → … changed.", "explanation": "Правильно: A woman told us that this had changed her work completely.", "grammar": ["b1.reported-speech"] },
+        { "id": "business.u03.l07.e05", "type": "type_translation", "from": "ru", "text": "Простите, повторите, пожалуйста.", "answers": ["Sorry, could you say that again?", "Sorry, could you repeat that?", "Sorry, can you say that again?", "Sorry, can you repeat that?", "Sorry, could you repeat that, please?", "Sorry, could you say that again, please?"], "difficulty": 2, "hint": "Образец: Could you say that…?", "explanation": "Правильно: Sorry, could you say that again?" },
+        { "id": "business.u03.l07.e06", "type": "speak_describe", "picture": { "emoji": "📞" }, "situation": "Вы звоните поставщику, но никто не берёт трубку. Оставьте голосовое сообщение: кто вы, ваш номер, зачем звоните и сколько уже ждёте.", "keywords": [["\\b(this is|my name is|it's)\\b"], ["\\b(number|call me|call back)\\b"], ["\\b(have|has|'ve) been [a-z]+ing\\b"]], "minKeywords": 2, "samples": ["Hello, this is Olga Smirnova. I'm calling about order 4719. We have been waiting for it for two weeks. Please call me back on 07700 900 123. Thank you."], "difficulty": 3, "hint": "Образец: Hello, this is… I'm calling about… We have been waiting… Please call me back on…", "explanation": "Имя, причина, сколько ждёте и номер — медленно и чётко." },
+        { "id": "business.u03.l07.e07", "type": "speak_answer", "question": "Which tip from the article will you use next time you call in English?", "questionRu": "Каким советом из статьи вы воспользуетесь, когда будете звонить по-английски?", "keywords": [["\\b(I will|I'll|next time|I'm going to)\\b"], ["\\b(write|spell|repeat|read|email|voicemail|number|numbers|prepare)\\b"]], "minKeywords": 2, "samples": ["Next time, I'll write down what I want to say before I call.", "I'll read numbers back to check them, because I often make mistakes with numbers."], "difficulty": 3, "hint": "Образец: Next time, I'll…", "explanation": "Ответ: Next time, I'll write down what I want to say before I call." },
+        {
+          "id": "business.u03.l07.e08",
+          "type": "write",
+          "task": "Вы приняли звонок для коллеги, который был на встрече. Напишите ему письмо (80–160 слов): кто звонил, что сказал звонивший (She said that… / He told me that…), что произошло (пассив: was sent, was delivered…), сколько клиент уже ждёт (has been waiting…) и о чём вы просите коллегу.",
+          "minWords": 80,
+          "maxWords": 160,
+          "criteria": [
+            { "id": "reported", "label": "Пересказаны слова звонившего: She said that… / told me that…", "patterns": ["\\b(said|told (me|us|him|her))( that)? [a-z]+\\b"] },
+            { "id": "passive", "label": "Есть пассив: was sent, were delivered…", "patterns": ["\\b(was|were|is|are|has been|have been|had been|will be) [a-z]+(ed|en|t)\\b"] },
+            { "id": "continuous", "label": "Есть has / had been + -ing", "patterns": ["\\b(has|have|had|'s|'ve|'d) been [a-z]+ing\\b"] },
+            { "id": "request", "label": "Есть просьба к коллеге", "patterns": ["\\b(could you|please|call (her|him|them) back|let me know)\\b"] }
+          ],
+          "commonErrors": [
+            { "pattern": "\\bsaid (me|him|her|us)\\b", "message": "С человеком — told me; said — без человека." },
+            { "pattern": "\\b(was|were|is|are) (send|deliver|ship|order|check|make|record)\\b", "message": "После be в пассиве — третья форма: was sent, was delivered." },
+            { "pattern": "\\b(I am|I'm|she is|she's|he is|he's|they are|they're) (trying|waiting|calling) [^.]*\\b(since|for (two|three|a|an|several))\\b", "message": "Действие идёт с прошлого до сих пор — Present Perfect Continuous: she has been waiting since Monday." },
+            { "pattern": "\\bsaid (that )?(she|he|they) will\\b", "message": "В косвенной речи will сдвигается в would: she said she would call." }
+          ],
+          "samples": [
+            "Hi Daniel, Olga Smirnova called while you were in the meeting. She said that her order 4719 hadn't arrived and that it was urgent. She told me that she had been trying to reach you since Monday. I checked on the computer: the order was sent from our warehouse on Thursday, so it should be on the way, but I couldn't track it. Could you call her back this afternoon? Her mobile number is 07700 900 123. She said she would be in the office until five. Thanks, Sam",
+            "Hi Kate, a customer called you at about ten. His name is Tom Wilson, and he is from a small shop in London. He said that he had been waiting for an answer about his invoice for two weeks. He told me that the invoice was sent to the wrong address in May. I promised that you would call him back today, so could you please do that before four? His number is 0207 946 0123. He seemed very angry, so it is probably best to call him soon. Thanks, Max"
+          ],
+          "difficulty": 3,
+          "hint": "План: кто звонил и когда → что сказал (She said that…) → сколько ждёт (has been waiting…) → что произошло (was sent…) → просьба к коллеге и номер.",
+          "explanation": "В косвенной речи время сдвигается: «It's urgent» → she said it was urgent; will → would; have been trying → had been trying. Told — с человеком, said — без. Пассив: be + третья форма (was sent, were delivered).",
+          "grammar": ["b1.reported-speech", "b1.passive-basic", "b1.perfect-continuous"]
+        }
+      ]
+    }
+  ],
+  "test": {
+    "passScore": 0.8,
+    "exercises": [
+      { "id": "business.u03.test.e01", "type": "match_pairs", "pairs": [{ "en": "put through", "ru": "соединить" }, { "en": "hang up", "ru": "положить трубку" }, { "en": "voicemail", "ru": "голосовая почта" }, { "en": "warehouse", "ru": "склад" }, { "en": "extension", "ru": "добавочный номер" }], "hint": "Слова юнита.", "explanation": "Put through — соединить, hang up — положить трубку, voicemail — голосовая почта, warehouse — склад, extension — добавочный номер." },
+      { "id": "business.u03.test.e02", "type": "translate_choice", "from": "ru", "text": "дозвониться", "options": ["get through", "hang up", "break up"], "answer": 0, "hint": "Пробиться.", "explanation": "Get through — «дозвониться»." },
+      { "id": "business.u03.test.e03", "type": "fill_gap", "text": "I've been ___ to reach him since Monday.", "translation": "Я пытаюсь дозвониться до него с понедельника.", "answers": [["trying"]], "options": ["trying", "try", "tried"], "hint": "Форма на -ing.", "explanation": "Правильно: I've been trying…", "grammar": ["b1.perfect-continuous"] },
+      { "id": "business.u03.test.e04", "type": "fill_gap", "text": "I have ___ Daniel for ten years.", "translation": "Я знаю Даниэля десять лет.", "answers": [["known"]], "options": ["known", "been knowing", "knew"], "hint": "Know без continuous.", "explanation": "Правильно: I have known Daniel for ten years.", "grammar": ["b1.perfect-continuous"] },
+      { "id": "business.u03.test.e05", "type": "fill_gap", "text": "\"I'll call back later.\" — She said she ___ call back later.", "translation": "Она сказала, что перезвонит позже.", "answers": [["would"]], "options": ["would", "will", "can"], "hint": "Образец: Will → …", "explanation": "Правильно: She said she would call back later.", "grammar": ["b1.reported-speech"] },
+      { "id": "business.u03.test.e06", "type": "fill_gap", "text": "Olga ___ me that it was urgent.", "translation": "Ольга сказала мне, что это срочно.", "answers": [["told"]], "options": ["told", "said", "spoke"], "hint": "С человеком.", "explanation": "Правильно: Olga told me…", "grammar": ["b1.reported-speech"] },
+      { "id": "business.u03.test.e07", "type": "fill_gap", "text": "Your order ___ sent on Thursday.", "translation": "Ваш заказ отправили в четверг.", "answers": [["was"]], "options": ["was", "were", "is been"], "hint": "Пассив.", "explanation": "Правильно: Your order was sent on Thursday.", "grammar": ["b1.passive-basic"] },
+      { "id": "business.u03.test.e08", "type": "fill_gap", "text": "Calls are ___ for training.", "translation": "Звонки записываются для обучения.", "answers": [["recorded"]], "options": ["recorded", "record", "recording"], "hint": "Третья форма.", "explanation": "Правильно: Calls are recorded for training.", "grammar": ["b1.passive-basic"] },
+      { "id": "business.u03.test.e09", "type": "error_correction", "text": "I am waiting for your call since nine o'clock.", "wrong": "am waiting", "correction": "have been waiting", "options": ["have been waiting", "was waiting", "am waited"], "hint": "С прошлого до сих пор.", "explanation": "Правильно: I have been waiting for your call since nine o'clock.", "grammar": ["b1.perfect-continuous"] },
+      { "id": "business.u03.test.e10", "type": "error_correction", "text": "She said me that the order hadn't arrived.", "wrong": "said me", "correction": "told me", "options": ["told me", "said to", "say me"], "hint": "С человеком.", "explanation": "Правильно: She told me that the order hadn't arrived.", "grammar": ["b1.reported-speech"] },
+      { "id": "business.u03.test.e11", "type": "error_correction", "text": "Your order sent on Thursday.", "wrong": "sent", "correction": "was sent", "options": ["was sent", "is send", "has send"], "hint": "Нужен be.", "explanation": "Правильно: Your order was sent on Thursday.", "grammar": ["b1.passive-basic"] },
+      { "id": "business.u03.test.e12", "type": "listen_choice", "audio": "I've been trying to reach him since Monday.", "question": "Что вы слышите?", "options": ["I've been trying to reach him since Monday.", "I tried to reach him on Monday.", "I'll try to reach him on Monday."], "answer": 0, "hint": "С понедельника.", "explanation": "Правильно: I've been trying to reach him since Monday." },
+      { "id": "business.u03.test.e13", "type": "listen_dictation", "text": "Please leave a message after the signal.", "hint": "Семь слов.", "explanation": "Please leave a message after the signal — «оставьте сообщение после сигнала»." },
+      { "id": "business.u03.test.e14", "type": "tiles", "from": "ru", "text": "Она сказала, что перезвонит.", "answer": "She said that she would call back.", "distractors": ["will", "told"], "difficulty": 2, "hint": "Образец: Will → would.", "explanation": "Правильно: She said that she would call back.", "grammar": ["b1.reported-speech"] },
+      { "id": "business.u03.test.e15", "type": "type_translation", "from": "ru", "text": "Что-нибудь передать?", "answers": ["Can I take a message?", "Could I take a message?", "Would you like to leave a message?", "Do you want to leave a message?", "Can I take a message for him?", "Can I take a message for her?"], "difficulty": 2, "hint": "Образец: Can I take…?", "explanation": "Правильно: Can I take a message?" },
+      { "id": "business.u03.test.e16", "type": "speak_repeat", "text": "Could I speak to Daniel Green, please?", "hint": "Вежливо, голос вверх в конце.", "explanation": "Could I speak to… — вежливая просьба соединить." }
+    ]
+  }
+}
