@@ -12,6 +12,7 @@ Expo SDK 57 · React Native 0.86 · TypeScript (strict) · Expo Router · Zustan
 npm install
 npm run content:check   # проверка всего контента (схемы, ссылки, уровень лексики, транскрипции)
 npm run content:build   # проверка + сборка бандла в src/core/content/generated
+npx tsx scripts/vocab-gap.ts A2   # какие частотные слова ещё не введены к концу уровня
 npm run typecheck
 npm run lint
 npm test

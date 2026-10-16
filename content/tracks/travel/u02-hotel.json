@@ -53,8 +53,7 @@
     { "id": "apology", "en": "apology", "ipa": "əˈpɑːlədʒi", "pos": "noun", "ru": ["извинение"], "example": { "en": "We got an apology from the manager.", "ru": "Менеджер перед нами извинился." }, "forms": { "plural": "apologies" }, "topics": ["communication"] },
     { "id": "unfortunately", "en": "unfortunately", "ipa": "ʌnˈfɔːrtʃənətli", "pos": "adv", "ru": ["к сожалению"], "example": { "en": "Unfortunately, the pool was closed.", "ru": "К сожалению, бассейн был закрыт." }, "topics": ["adverbs"] },
     { "id": "right-away", "en": "right away", "ipa": "raɪt əˈweɪ", "pos": "phrase", "ru": ["сразу", "немедленно"], "example": { "en": "I'll send someone right away.", "ru": "Я сразу кого-нибудь пришлю." }, "topics": ["idioms"] },
-    { "id": "review", "en": "review", "ipa": "rɪˈvjuː", "pos": "noun", "ru": ["отзыв", "рецензия"], "example": { "en": "I wrote a review of the hotel.", "ru": "Я написал отзыв о гостинице." }, "topics": ["communication"] },
-    { "id": "star", "en": "star", "ipa": "stɑːr", "pos": "noun", "ru": ["звезда"], "example": { "en": "It's a four-star hotel.", "ru": "Это четырёхзвёздочная гостиница." }, "topics": ["travel"] }
+    { "id": "review", "en": "review", "ipa": "rɪˈvjuː", "pos": "noun", "ru": ["отзыв", "рецензия"], "example": { "en": "I wrote a review of the hotel.", "ru": "Я написал отзыв о гостинице." }, "topics": ["communication"] }
   ],
   "texts": [
     {

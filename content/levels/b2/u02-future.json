@@ -17,7 +17,6 @@
   "words": [
     { "id": "predict", "en": "predict", "ipa": "prɪˈdɪkt", "pos": "verb", "ru": ["предсказывать"], "example": { "en": "Nobody can predict the future.", "ru": "Никто не может предсказать будущее." }, "forms": { "third": "predicts" }, "topics": ["future"] },
     { "id": "prediction", "en": "prediction", "ipa": "prɪˈdɪkʃən", "pos": "noun", "ru": ["прогноз", "предсказание"], "example": { "en": "Here are five predictions.", "ru": "Вот пять прогнозов." }, "topics": ["future"] },
-    { "id": "expect", "en": "expect", "ipa": "ɪkˈspekt", "pos": "verb", "ru": ["ожидать"], "example": { "en": "We expect prices to increase.", "ru": "Мы ожидаем, что цены вырастут." }, "forms": { "third": "expects" }, "topics": ["future"] },
     { "id": "bound", "en": "bound", "ipa": "baʊnd", "pos": "adj", "ru": ["обязательно (be bound to)"], "example": { "en": "He's bound to get a promotion.", "ru": "Его наверняка повысят." }, "topics": ["future"] },
     { "id": "due", "en": "due", "ipa": "duː", "pos": "adj", "ru": ["ожидаемый по плану", "должный"], "example": { "en": "The plane is due to land at six.", "ru": "Самолёт должен приземлиться в шесть." }, "topics": ["future"] },
     { "id": "schedule", "en": "schedule", "ipa": "ˈskedʒuːl", "pos": "noun", "ru": ["расписание", "график"], "example": { "en": "I have a busy schedule this week.", "ru": "На этой неделе у меня плотный график." }, "topics": ["work"] },
@@ -63,10 +62,7 @@
     { "id": "delayed", "en": "delayed", "ipa": "dɪˈleɪd", "pos": "adj", "ru": ["задержанный (о рейсе)"], "example": { "en": "Our flight is delayed.", "ru": "Наш рейс задерживается." }, "topics": ["travel"] },
     { "id": "board", "en": "board", "ipa": "bɔːrd", "pos": "verb", "ru": ["садиться (на самолёт, поезд)"], "example": { "en": "We are about to board the plane.", "ru": "Мы вот-вот сядем в самолёт." }, "forms": { "third": "boards" }, "topics": ["travel"] },
     { "id": "common", "en": "common", "ipa": "ˈkɑːmən", "pos": "adj", "ru": ["распространённый", "общий"], "example": { "en": "Heart disease is very common.", "ru": "Болезни сердца очень распространены." }, "topics": ["adjectives"] },
-    { "id": "popular", "en": "popular", "ipa": "ˈpɑːpjəlɚ", "pos": "adj", "ru": ["популярный"], "example": { "en": "Electric vehicles are becoming popular.", "ru": "Электромобили становятся популярными." }, "topics": ["adjectives"] },
     { "id": "control", "en": "control", "ipa": "kənˈtroʊl", "pos": "verb", "ru": ["контролировать", "управлять"], "example": { "en": "Who will control the machines?", "ru": "Кто будет управлять машинами?" }, "forms": { "third": "controls", "ing": "controlling" }, "topics": ["technology"] },
-    { "id": "able", "en": "able", "ipa": "ˈeɪbəl", "pos": "adj", "ru": ["способный (be able to — мочь)"], "example": { "en": "You will be able to work from home.", "ru": "Вы сможете работать из дома." }, "note": "У can нет будущего времени — говорят will be able to.", "topics": ["grammar"] },
-    { "id": "follow", "en": "follow", "ipa": "ˈfɑːloʊ", "pos": "verb", "ru": ["следовать", "идти за"], "example": { "en": "Many companies are bound to follow.", "ru": "Многие компании наверняка последуют их примеру." }, "forms": { "third": "follows" }, "topics": ["verbs"] },
     { "id": "least", "en": "least", "ipa": "liːst", "pos": "adv", "ru": ["меньше всего (at least — по крайней мере)"], "example": { "en": "I will visit at least ten countries.", "ru": "Я побываю как минимум в десяти странах." }, "topics": ["grammar"] }
   ],
   "texts": [

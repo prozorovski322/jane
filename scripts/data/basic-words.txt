@@ -1,0 +1,21 @@
+# Very common English words that a learner should meet by the end of A2.
+# Compiled for this project from general knowledge of English word frequency; one or more words per line.
+the a an and or but if because so than then when while where what who whom whose which why how
+i you he she it we they me him her us them my your his its our their mine yours myself yourself himself herself itself ourselves themselves
+this that these those here there now today tonight tomorrow yesterday always often usually sometimes never ever already still yet just also too very really quite
+all some any no none every each both either neither many much more most few little less least lot lots enough several other another
+one two three four five six seven eight nine ten eleven twelve twenty thirty hundred thousand million first second third last next
+be have do say get make go know take see come think look want give use find tell ask work seem feel try leave call keep let begin start show hear play run move live believe hold bring happen write sit stand lose pay meet include continue set learn change lead understand watch follow stop create speak read allow add spend grow open walk win offer remember love consider appear buy wait serve die send expect build stay fall cut reach kill remain suggest raise pass sell require report decide pull return explain hope develop carry break receive agree support hit produce eat cover catch draw choose cause point listen realize place close involve increase drive wear sleep drink cook clean wash sing dance swim fly travel visit study teach help need like hate prefer enjoy finish forget miss arrive answer
+time year people way day man woman child children world life hand part place case week company system program question government number night point home water room mother father area money story fact month lot right study book eye job word business issue side kind head house service friend power hour game line end member law car city community name president team minute idea kid body information back parent face others level office door health person art war history party result change morning reason research girl boy guy moment air teacher force education foot feet boss problem family school country student group
+good new first last long great little own other old right big high different small large next early young important few public bad same able low late hard easy real best better true whole free sure clear full special difficult happy ready simple left wrong dark open short strong possible beautiful nice popular normal similar quick slow hot cold warm cool dry wet clean dirty empty heavy light cheap expensive rich poor safe dangerous famous busy quiet loud tired hungry thirsty sick ill well angry sad glad afraid sorry kind friendly polite funny interesting boring perfect terrible wonderful lovely
+above below under over between behind near far inside outside up down into out off through across along around against without within during before after until since about among toward towards per
+mister miss lady sir madam yes no please thanks thank hello hi goodbye bye sorry maybe perhaps probably almost only even again away together alone soon later once twice instead else enough anyway
+everyone everybody everything everywhere someone somebody something somewhere anyone anybody anything anywhere nobody nothing nowhere
+food bread milk egg meat fish fruit apple rice tea coffee sugar salt water juice dinner lunch breakfast meal
+city town village street road bridge park shop store market bank hospital school church station airport hotel restaurant cafe museum library office factory farm
+red blue green yellow black white brown grey gray pink orange purple color colour
+head hair face eye ear nose mouth tooth teeth neck arm hand finger leg foot knee back heart blood skin
+dog cat bird horse cow pig sheep animal tree flower grass sun moon star sky rain snow wind weather sea river lake mountain hill island forest field garden beach
+clothes shirt dress shoes hat coat jacket bag box key phone computer picture photo letter card paper pen table chair bed window door wall floor wind
+group list piece size shape type sort form page note test exam lesson class course
+enter expect include hate decide finish

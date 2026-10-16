@@ -52,7 +52,6 @@
     { "id": "steep", "en": "steep", "ipa": "stiːp", "pos": "adj", "ru": ["крутой"], "example": { "en": "The mountain road was very steep.", "ru": "Горная дорога была очень крутой." }, "topics": ["adjectives"] },
     { "id": "carefully", "en": "carefully", "ipa": "ˈkerfəli", "pos": "adv", "ru": ["аккуратно", "осторожно"], "example": { "en": "Please drive carefully.", "ru": "Пожалуйста, веди машину осторожно." }, "topics": ["adverbs"] },
     { "id": "crash", "en": "crash", "ipa": "kræʃ", "pos": "noun", "ru": ["авария", "крушение"], "example": { "en": "Nobody was hurt in the crash.", "ru": "В аварии никто не пострадал." }, "forms": { "plural": "crashes" }, "topics": ["events"] },
-    { "id": "hit", "en": "hit", "ipa": "hɪt", "pos": "verb", "ru": ["ударять", "попадать"], "example": { "en": "A car hit us from behind.", "ru": "В нас сзади врезалась машина." }, "forms": { "third": "hits", "ing": "hitting" }, "note": "Неправильный глагол: hit — hit — hit.", "topics": ["actions"] },
     { "id": "witness", "en": "witness", "ipa": "ˈwɪtnəs", "pos": "noun", "ru": ["свидетель"], "example": { "en": "A woman saw everything and agreed to be a witness.", "ru": "Женщина всё видела и согласилась быть свидетелем." }, "forms": { "plural": "witnesses" }, "topics": ["people"] }
   ],
   "texts": [

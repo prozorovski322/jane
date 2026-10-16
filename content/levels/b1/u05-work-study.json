@@ -15,7 +15,6 @@
   "grammar": ["b1.passive-basic", "b1.gerund-infinitive", "b1.be-used-to"],
   "troubles": ["tenses", "word-order"],
   "words": [
-    { "id": "company", "en": "company", "ipa": "ˈkʌmpəni", "pos": "noun", "ru": ["компания"], "example": { "en": "She works for a big company.", "ru": "Она работает в большой компании." }, "forms": { "plural": "companies" }, "topics": ["work"] },
     { "id": "employee", "en": "employee", "ipa": "ɪmˈplɔɪi", "pos": "noun", "ru": ["сотрудник"], "example": { "en": "The company has two hundred employees.", "ru": "В компании двести сотрудников." }, "topics": ["work"] },
     { "id": "employer", "en": "employer", "ipa": "ɪmˈplɔɪɚ", "pos": "noun", "ru": ["работодатель"], "example": { "en": "My employer pays for my English course.", "ru": "Мой работодатель оплачивает мне курс английского." }, "topics": ["work"] },
     { "id": "salary", "en": "salary", "ipa": "ˈsælɚi", "pos": "noun", "ru": ["зарплата"], "example": { "en": "The salary is good.", "ru": "Зарплата хорошая." }, "forms": { "plural": "salaries" }, "topics": ["work"] },
@@ -50,8 +49,6 @@
     { "id": "college", "en": "college", "ipa": "ˈkɑːlɪdʒ", "pos": "noun", "ru": ["колледж"], "example": { "en": "When I finished college, I looked for a job.", "ru": "Когда я окончил колледж, я стал искать работу." }, "topics": ["study"] },
     { "id": "certificate", "en": "certificate", "ipa": "sɚˈtɪfɪkət", "pos": "noun", "ru": ["сертификат", "свидетельство"], "example": { "en": "I got a certificate after the course.", "ru": "После курса я получил сертификат." }, "topics": ["study"] },
     { "id": "sign", "en": "sign", "ipa": "saɪn", "pos": "verb", "ru": ["подписывать"], "example": { "en": "I signed a contract for one year.", "ru": "Я подписал контракт на год." }, "forms": { "third": "signs" }, "note": "G в слове sign не читается.", "topics": ["work"] },
-    { "id": "hard", "en": "hard", "ipa": "hɑːrd", "pos": "adv", "ru": ["усердно", "тяжело"], "example": { "en": "If you work hard, you will succeed.", "ru": "Если будешь усердно работать, добьёшься успеха." }, "note": "Hard — и «трудный», и «усердно»: work hard.", "topics": ["work"] },
-    { "id": "into", "en": "into", "ipa": "ˈɪntuː", "pos": "prep", "ru": ["в (внутрь)", "на (язык)"], "example": { "en": "The book was translated into Russian.", "ru": "Книга была переведена на русский." }, "topics": ["grammar"] },
     { "id": "product", "en": "product", "ipa": "ˈprɑːdʌkt", "pos": "noun", "ru": ["продукт", "товар"], "example": { "en": "Our products are sold all over the world.", "ru": "Наша продукция продаётся по всему миру." }, "topics": ["work"] },
     { "id": "excellent", "en": "excellent", "ipa": "ˈeksələnt", "pos": "adj", "ru": ["отличный"], "example": { "en": "Excellent work!", "ru": "Отличная работа!" }, "topics": ["adjectives"] },
     { "id": "assistant", "en": "assistant", "ipa": "əˈsɪstənt", "pos": "noun", "ru": ["помощник", "ассистент"], "example": { "en": "I was hired as an assistant.", "ru": "Меня взяли помощником." }, "topics": ["work"] },
@@ -64,7 +61,6 @@
     { "id": "design", "en": "design", "ipa": "dɪˈzaɪn", "pos": "verb", "ru": ["проектировать", "разрабатывать дизайн"], "example": { "en": "This bag was designed in Italy.", "ru": "Эта сумка разработана в Италии." }, "forms": { "third": "designs" }, "topics": ["work"] },
     { "id": "translate", "en": "translate", "ipa": "trænsˈleɪt", "pos": "verb", "ru": ["переводить"], "example": { "en": "The book was translated into Russian.", "ru": "Книга была переведена на русский." }, "forms": { "third": "translates" }, "note": "Переводить на язык — translate into.", "topics": ["work"] },
     { "id": "deliver", "en": "deliver", "ipa": "dɪˈlɪvɚ", "pos": "verb", "ru": ["доставлять"], "example": { "en": "The letters are delivered every morning.", "ru": "Письма приносят каждое утро." }, "forms": { "third": "delivers" }, "topics": ["work"] },
-    { "id": "sell", "en": "sell", "ipa": "sel", "pos": "verb", "ru": ["продавать"], "example": { "en": "Our products are sold all over the world.", "ru": "Наша продукция продаётся по всему миру." }, "forms": { "third": "sells" }, "topics": ["work"] },
     { "id": "get-used-to", "en": "get used to", "ipa": "ɡet juːst tuː", "pos": "phrase", "ru": ["привыкать"], "example": { "en": "I got used to getting up early.", "ru": "Я привык вставать рано." }, "forms": { "third": "gets used to" }, "note": "После get used to — существительное или глагол на -ing.", "topics": ["grammar"] }
   ],
   "texts": [

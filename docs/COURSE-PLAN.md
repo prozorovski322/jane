@@ -213,6 +213,12 @@ Id уроков и юнитов остаются прежними (`a1.u01.l01`)
 - Грамматика: Present Perfect и Past Simple, Present Perfect Continuous, Past Continuous и Past Perfect, условные предложения 1-го и 2-го типа, догадки (might, must, can't), пассив (включая has been done и can be done), герундий и инфинитив, be used to, much/many/a few, фразовые глаголы, too/enough, советы (had better, ought to), косвенная речь, вопросы и глаголы пересказа, относительные придаточные (с запятыми и без), -ed/-ing, although/however/despite, so that и such … that, связки для эссе.
 - Письмо: в каждом юните задание с критериями; в b1.u10 эссе-мнение на 120–250 слов.
 - **Словарь:** в юниты B1 пришлось добавить много базовых слов, которых не хватало после A1–A2 (without, almost, understand, place, which, bring и др.). Это ещё один довод расширить словарь A1–A2.
+
+### Базовый словарь A1–A2 (16.10.2026)
+
+- `scripts/vocab-gap.ts` сверяет список из ~660 самых частотных слов (`scripts/data/basic-words.txt`) со словарём курса к концу уровня и показывает, где каждое слово появляется сейчас.
+- До правки к концу A2 не были введены 226 из них, в том числе if, very, all, other, only, same, something, nothing, everyone, put, high, low, problem, question. 150 слов перенесены в юниты A1–A2 (по теме юнита, с новыми простыми примерами и заданиями на пары), из них 20 написаны заново (above, below, each, either, enter, part, kid, parent, art, river и др.). Записи этих слов убраны из юнитов B1–C1 и треков; id не изменились, поэтому задания и повторение на них по-прежнему ссылаются.
+- Осталось 76 слов, которым место на B1 и выше (ever, yet, while, since, government, research, require и т. п.).
 - Онбординг и README теперь говорят, что готовы уровни от нуля до B1.
 
 ### B2

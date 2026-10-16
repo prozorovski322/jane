@@ -44,7 +44,15 @@
     { "id": "him", "en": "him", "ipa": "hɪm", "pos": "pron", "ru": ["ему", "его"], "example": { "en": "The coat is for him.", "ru": "Пальто для него." }, "topics": ["pronouns"] },
     { "id": "her#pron", "en": "her", "ipa": "hɝː", "pos": "pron", "ru": ["ей", "её"], "example": { "en": "I like her.", "ru": "Она мне нравится." }, "topics": ["pronouns"] },
     { "id": "us", "en": "us", "ipa": "ʌs", "pos": "pron", "ru": ["нам", "нас"], "example": { "en": "Give us the menu, please.", "ru": "Дайте нам меню, пожалуйста." }, "topics": ["pronouns"] },
-    { "id": "them", "en": "them", "ipa": "ðem", "pos": "pron", "ru": ["им", "их"], "example": { "en": "I like them.", "ru": "Они мне нравятся." }, "troubles": ["pron-th"], "topics": ["pronouns"] }
+    { "id": "them", "en": "them", "ipa": "ðem", "pos": "pron", "ru": ["им", "их"], "example": { "en": "I like them.", "ru": "Они мне нравятся." }, "troubles": ["pron-th"], "topics": ["pronouns"] },
+    { "id": "sell", "en": "sell", "ipa": "sel", "pos": "verb", "ru": ["продавать"], "example": { "en": "They sell shoes here.", "ru": "Здесь продают обувь." }, "forms": { "third": "sells" }, "topics": ["work"] },
+    { "id": "rich", "en": "rich", "ipa": "rɪtʃ", "pos": "adj", "ru": ["богатый"], "example": { "en": "He is very rich.", "ru": "Он очень богатый." }, "topics": ["life"] },
+    { "id": "poor", "en": "poor", "ipa": "pʊr", "pos": "adj", "ru": ["бедный"], "example": { "en": "They are poor, but happy.", "ru": "Они бедные, но счастливые." }, "topics": ["life"] },
+    { "id": "real", "en": "real", "ipa": "riːl", "pos": "adj", "ru": ["настоящий"], "example": { "en": "Is it real?", "ru": "Это настоящее?" }, "topics": ["adjectives"] },
+    { "id": "perfect", "en": "perfect", "ipa": "ˈpɝːfɪkt", "pos": "adj", "ru": ["идеальный", "безупречный"], "example": { "en": "This dress is perfect!", "ru": "Это платье идеальное!" }, "topics": ["adjectives"] },
+    { "id": "shape", "en": "shape", "ipa": "ʃeɪp", "pos": "noun", "ru": ["форма"], "example": { "en": "I like the shape of this bag.", "ru": "Мне нравится форма этой сумки." }, "topics": ["things"] },
+    { "id": "purple", "en": "purple", "ipa": "ˈpɝːpəl", "pos": "adj", "ru": ["фиолетовый"], "example": { "en": "Her dress is purple.", "ru": "У неё фиолетовое платье." }, "topics": ["colors"] },
+    { "id": "if", "en": "if", "ipa": "ɪf", "pos": "conj", "ru": ["если"], "example": { "en": "If you like it, buy it.", "ru": "Если тебе нравится, купи." }, "topics": ["grammar"] }
   ],
   "texts": [
     {
@@ -88,6 +96,8 @@
         { "id": "a1.u08.l01.e01", "type": "match_pairs", "pairs": [{ "en": "shirt", "ru": "рубашка" }, { "en": "jeans", "ru": "джинсы" }, { "en": "shoes", "ru": "туфли" }, { "en": "coat", "ru": "пальто" }, { "en": "dress", "ru": "платье" }], "hint": "Jeans и shoes — всегда во множественном числе.", "explanation": "Shirt — рубашка, jeans — джинсы, shoes — туфли, coat — пальто, dress — платье." },
         { "id": "a1.u08.l01.e02", "type": "match_pairs", "pairs": [{ "en": "money", "ru": "деньги" }, { "en": "cash", "ru": "наличные" }, { "en": "euro", "ru": "евро" }, { "en": "dollar", "ru": "доллар" }, { "en": "price", "ru": "цена" }], "hint": "Euro и dollar — виды денег.", "explanation": "Money — деньги, cash — наличные, euro — евро, dollar — доллар, price — цена." },
         { "id": "a1.u08.l01.e03", "type": "match_pairs", "pairs": [{ "en": "buy", "ru": "покупать" }, { "en": "pay", "ru": "платить" }, { "en": "cost", "ru": "стоить" }, { "en": "wear", "ru": "носить" }, { "en": "need", "ru": "нуждаться" }], "hint": "Три глагола — про деньги.", "explanation": "Buy — покупать, pay — платить, cost — стоить, wear — носить, need — нуждаться." },
+        { "id": "a1.u08.l01.e90", "type": "match_pairs", "pairs": [{ "en": "sell", "ru": "продавать" }, { "en": "rich", "ru": "богатый" }, { "en": "poor", "ru": "бедный" }, { "en": "real", "ru": "настоящий" }, { "en": "perfect", "ru": "идеальный" }], "hint": "Новые слова.", "explanation": "Sell — продавать, rich — богатый, poor — бедный, real — настоящий, perfect — идеальный." },
+        { "id": "a1.u08.l01.e91", "type": "match_pairs", "pairs": [{ "en": "shape", "ru": "форма" }, { "en": "purple", "ru": "фиолетовый" }, { "en": "if", "ru": "если" }], "hint": "Новые слова.", "explanation": "Shape — форма, purple — фиолетовый, if — если." },
         { "id": "a1.u08.l01.e04", "type": "picture_choice", "mode": "picture-to-word", "word": "coat", "distractors": ["shirt", "dress"], "hint": "Её носят зимой.", "explanation": "Coat — «пальто»: [koʊt]." },
         { "id": "a1.u08.l01.e05", "type": "picture_choice", "mode": "picture-to-word", "word": "jeans", "distractors": ["shirt", "shoes"], "hint": "Их носят на ногах и они обычно синие.", "explanation": "Jeans — «джинсы»: [dʒiːnz]." },
         { "id": "a1.u08.l01.e06", "type": "picture_choice", "mode": "word-to-picture", "word": "dress", "distractors": ["coat", "shirt"], "hint": "Женская одежда.", "explanation": "Dress — «платье»: [dres]." },

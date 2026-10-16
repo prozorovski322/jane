@@ -66,7 +66,6 @@
     { "id": "truly", "en": "truly", "ipa": "ˈtruːli", "pos": "adv", "ru": ["по-настоящему", "действительно"], "example": { "en": "You have truly learned the ropes.", "ru": "Вы по-настоящему освоились." }, "topics": ["adverbs"] },
     { "id": "glass", "en": "glass", "ipa": "ɡlæs", "pos": "noun", "ru": ["стекло", "стакан"], "example": { "en": "Can I have a glass of water?", "ru": "Можно стакан воды?" }, "forms": { "plural": "glasses" }, "topics": ["things"] },
     { "id": "silence", "en": "silence", "ipa": "ˈsaɪləns", "pos": "noun", "ru": ["тишина", "молчание"], "example": { "en": "There was a long silence.", "ru": "Повисло долгое молчание." }, "topics": ["communication"] },
-    { "id": "sky", "en": "sky", "ipa": "skaɪ", "pos": "noun", "ru": ["небо"], "example": { "en": "The sky was blue.", "ru": "Небо было голубым." }, "topics": ["nature"] },
     { "id": "bee", "en": "bee", "ipa": "biː", "pos": "noun", "ru": ["пчела"], "example": { "en": "He's as busy as a bee.", "ru": "Он трудится как пчёлка." }, "topics": ["animals"] },    { "id": "unnatural", "en": "unnatural", "ipa": "ʌnˈnætʃɚəl", "pos": "adj", "ru": ["неестественный"], "example": { "en": "Too many idioms sound unnatural.", "ru": "Слишком много идиом звучит неестественно." }, "topics": ["communication"] }
   ],
   "texts": [

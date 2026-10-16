@@ -16,13 +16,10 @@
   "grammar": ["b1.perfect-vs-past", "b1.purpose-result", "b1.first-conditional"],
   "troubles": ["tenses"],
   "words": [
-    { "id": "clear", "en": "clear", "ipa": "klɪr", "pos": "adj", "ru": ["ясный", "понятный"], "example": { "en": "Write a clear subject line.", "ru": "Напишите понятную тему письма." }, "topics": ["adjectives"] },
     { "id": "draft", "en": "draft", "ipa": "dræft", "pos": "noun", "ru": ["черновик"], "example": { "en": "I've written a draft.", "ru": "Я написал черновик." }, "topics": ["study"] },
     { "id": "document", "en": "document", "ipa": "ˈdɑːkjəmənt", "pos": "noun", "ru": ["документ"], "example": { "en": "I have attached the document.", "ru": "Я приложил документ." }, "topics": ["work"] },
-    { "id": "list", "en": "list", "ipa": "lɪst", "pos": "noun", "ru": ["список"], "example": { "en": "I've attached our price list.", "ru": "Прилагаю наш прайс-лист." }, "note": "Price list — прайс-лист.", "topics": ["things"] },
     { "id": "detail", "en": "detail", "ipa": "dɪˈteɪl", "pos": "noun", "ru": ["подробность", "деталь"], "example": { "en": "Give the details briefly.", "ru": "Кратко изложите подробности." }, "note": "In detail — подробно.", "topics": ["communication"] },
     { "id": "sentence", "en": "sentence", "ipa": "ˈsentəns", "pos": "noun", "ru": ["предложение (фраза)"], "example": { "en": "Say why you are writing in the first sentence.", "ru": "В первом же предложении скажите, зачем пишете." }, "topics": ["study"] },
-    { "id": "put", "en": "put", "ipa": "pʊt", "pos": "verb", "ru": ["класть", "ставить"], "example": { "en": "Put the most important information first.", "ru": "Самое важное ставьте в начало." }, "forms": { "third": "puts", "ing": "putting" }, "note": "Неправильный глагол: put — put — put.", "topics": ["actions"] },
     { "id": "action", "en": "action", "ipa": "ˈækʃən", "pos": "noun", "ru": ["действие"], "example": { "en": "Ask for one specific action.", "ru": "Просите об одном конкретном действии." }, "topics": ["work"] },
     { "id": "subject-line", "en": "subject line", "ipa": "ˈsʌbdʒɪkt laɪn", "pos": "noun", "ru": ["тема письма"], "example": { "en": "Write a clear subject line.", "ru": "Напишите понятную тему письма." }, "topics": ["work"] },
     { "id": "inbox", "en": "inbox", "ipa": "ˈɪnˌbɑːks", "pos": "noun", "ru": ["входящие (почта)"], "example": { "en": "I have two hundred emails in my inbox.", "ru": "У меня во входящих двести писем." }, "forms": { "plural": "inboxes" }, "topics": ["technology"] },

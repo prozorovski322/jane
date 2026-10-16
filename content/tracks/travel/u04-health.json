@@ -17,7 +17,6 @@
   "troubles": ["tenses"],
   "words": [
     { "id": "symptom", "en": "symptom", "ipa": "ˈsɪmptəm", "pos": "noun", "ru": ["симптом"], "example": { "en": "What are your symptoms?", "ru": "Какие у вас симптомы?" }, "topics": ["health"] },
-    { "id": "high", "en": "high", "ipa": "haɪ", "pos": "adj", "ru": ["высокий"], "example": { "en": "See a doctor if you have a high fever.", "ru": "При высокой температуре обратитесь к врачу." }, "note": "High — о температуре, горах, ценах. О людях — tall.", "topics": ["adjectives"] },
     { "id": "rash", "en": "rash", "ipa": "ræʃ", "pos": "noun", "ru": ["сыпь"], "example": { "en": "I have a red rash on my arm.", "ru": "У меня красная сыпь на руке." }, "forms": { "plural": "rashes" }, "topics": ["health"] },
     { "id": "itchy", "en": "itchy", "ipa": "ˈɪtʃi", "pos": "adj", "ru": ["зудящий", "чешется"], "example": { "en": "My skin is very itchy.", "ru": "У меня сильно чешется кожа." }, "topics": ["health"] },
     { "id": "swollen", "en": "swollen", "ipa": "ˈswoʊlən", "pos": "adj", "ru": ["опухший"], "example": { "en": "My ankle is swollen.", "ru": "У меня опухла лодыжка." }, "topics": ["health"] },
@@ -30,8 +29,6 @@
     { "id": "mosquito", "en": "mosquito", "ipa": "məˈskiːtoʊ", "pos": "noun", "ru": ["комар"], "example": { "en": "There were a lot of mosquitoes by the lake.", "ru": "У озера было много комаров." }, "forms": { "plural": "mosquitoes" }, "topics": ["animals"] },
     { "id": "ankle", "en": "ankle", "ipa": "ˈæŋkəl", "pos": "noun", "ru": ["лодыжка"], "example": { "en": "I hurt my ankle on the stairs.", "ru": "Я подвернул ногу на лестнице." }, "topics": ["body"] },
     { "id": "sprain", "en": "sprain", "ipa": "spreɪn", "pos": "verb", "ru": ["растянуть (связки)"], "example": { "en": "I think I've sprained my ankle.", "ru": "Кажется, я растянул связки на лодыжке." }, "forms": { "third": "sprains" }, "topics": ["health"] },
-    { "id": "skin", "en": "skin", "ipa": "skɪn", "pos": "noun", "ru": ["кожа"], "example": { "en": "Use sunscreen to protect your skin.", "ru": "Пользуйтесь солнцезащитным кремом, чтобы защитить кожу." }, "topics": ["body"] },
-    { "id": "cut", "en": "cut", "ipa": "kʌt", "pos": "verb", "ru": ["резать", "сокращать"], "example": { "en": "I cut my finger in the kitchen.", "ru": "Я порезал палец на кухне." }, "forms": { "third": "cuts", "ing": "cutting" }, "note": "Неправильный глагол: cut — cut — cut.", "topics": ["actions"] },
     { "id": "injured", "en": "injured", "ipa": "ˈɪndʒɚd", "pos": "adj", "ru": ["раненый", "травмированный"], "example": { "en": "Was anyone injured?", "ru": "Кто-нибудь пострадал?" }, "topics": ["health"] },
     { "id": "food-poisoning", "en": "food poisoning", "ipa": "fuːd ˈpɔɪzənɪŋ", "pos": "noun", "ru": ["пищевое отравление"], "example": { "en": "I think I've got food poisoning.", "ru": "Кажется, я отравился." }, "topics": ["health"] },
     { "id": "dehydrated", "en": "dehydrated", "ipa": "diˈhaɪˌdreɪtɪd", "pos": "adj", "ru": ["обезвоженный"], "example": { "en": "Drink water so that you don't get dehydrated.", "ru": "Пейте воду, чтобы не было обезвоживания." }, "topics": ["health"] },

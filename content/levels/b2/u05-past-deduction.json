@@ -46,19 +46,17 @@
     { "id": "stone", "en": "stone", "ipa": "stoʊn", "pos": "noun", "ru": ["камень"], "example": { "en": "The stones are very heavy.", "ru": "Камни очень тяжёлые." }, "topics": ["nature"] },
     { "id": "wood", "en": "wood", "ipa": "wʊd", "pos": "noun", "ru": ["дерево (материал)", "лес"], "example": { "en": "The table is made of wood.", "ru": "Стол сделан из дерева." }, "note": "Растущее дерево — tree, материал — wood.", "topics": ["nature"] },
     { "id": "circle", "en": "circle", "ipa": "ˈsɝːkəl", "pos": "noun", "ru": ["круг"], "example": { "en": "The stones stand in a circle.", "ru": "Камни стоят по кругу." }, "topics": ["things"] },
-    { "id": "field", "en": "field", "ipa": "fiːld", "pos": "noun", "ru": ["поле"], "example": { "en": "It stands in a large field.", "ru": "Он стоит посреди большого поля." }, "topics": ["nature"] },
     { "id": "ceremony", "en": "ceremony", "ipa": "ˈserəˌmoʊni", "pos": "noun", "ru": ["церемония", "обряд"], "example": { "en": "It may have been a place for ceremonies.", "ru": "Возможно, это было место для обрядов." }, "forms": { "plural": "ceremonies" }, "topics": ["events"] },
     { "id": "kilometer", "en": "kilometer", "ipa": "kɪˈlɑːmətɚ", "pos": "noun", "ru": ["километр"], "example": { "en": "It's two hundred kilometers away.", "ru": "Это в двухстах километрах отсюда." }, "note": "Британское написание — kilometre.", "topics": ["numbers"] },
     { "id": "rope", "en": "rope", "ipa": "roʊp", "pos": "noun", "ru": ["верёвка", "канат"], "example": { "en": "They pulled the stones with ropes.", "ru": "Они тащили камни верёвками." }, "topics": ["things"] },
     { "id": "pull", "en": "pull", "ipa": "pʊl", "pos": "verb", "ru": ["тянуть", "тащить"], "example": { "en": "Pull the door, don't push it.", "ru": "Дверь на себя, не толкай." }, "forms": { "third": "pulls" }, "topics": ["actions"] },
     { "id": "witness", "en": "witness", "ipa": "ˈwɪtnəs", "pos": "noun", "ru": ["свидетель"], "example": { "en": "There were no witnesses.", "ru": "Свидетелей не было." }, "forms": { "plural": "witnesses" }, "topics": ["people"] },
-    { "id": "clear", "en": "clear", "ipa": "klɪr", "pos": "adj", "ru": ["ясный", "понятный"], "example": { "en": "One thing is clear.", "ru": "Ясно одно." }, "topics": ["adjectives"] },
     { "id": "expert", "en": "expert", "ipa": "ˈekspɚt", "pos": "noun", "ru": ["специалист", "эксперт"], "example": { "en": "Experts don't agree.", "ru": "Специалисты расходятся во мнениях." }, "topics": ["people"] },
     { "id": "sailor", "en": "sailor", "ipa": "ˈseɪlɚ", "pos": "noun", "ru": ["моряк"], "example": { "en": "The sailors climbed on board.", "ru": "Моряки поднялись на борт." }, "topics": ["people"] },
     { "id": "attack", "en": "attack", "ipa": "əˈtæk", "pos": "verb", "ru": ["нападать"], "example": { "en": "A monster attacked the ship.", "ru": "На корабль напало чудовище." }, "forms": { "third": "attacks" }, "topics": ["events"] },
     { "id": "south", "en": "south", "ipa": "saʊθ", "pos": "noun", "ru": ["юг"], "example": { "en": "It's in the south of England.", "ru": "Это на юге Англии." }, "note": "North — север, east — восток, west — запад.", "topics": ["places"] },
     { "id": "tool", "en": "tool", "ipa": "tuːl", "pos": "noun", "ru": ["инструмент"], "example": { "en": "They had very simple tools.", "ru": "У них были очень простые инструменты." }, "note": "Музыкальный инструмент — instrument.", "topics": ["things"] },
-    { "id": "group", "en": "group", "ipa": "ɡruːp", "pos": "noun", "ru": ["группа"], "example": { "en": "They worked in large groups.", "ru": "Они работали большими группами." }, "topics": ["people"] },    { "id": "neednt", "en": "needn't", "ipa": "ˈniːdənt", "pos": "modal", "ru": ["можно не", "не нужно"], "example": { "en": "We needn't have worried.", "ru": "Зря мы волновались." }, "note": "Needn't have + V3 — сделал зря.", "topics": ["grammar"] }
+    { "id": "neednt", "en": "needn't", "ipa": "ˈniːdənt", "pos": "modal", "ru": ["можно не", "не нужно"], "example": { "en": "We needn't have worried.", "ru": "Зря мы волновались." }, "note": "Needn't have + V3 — сделал зря.", "topics": ["grammar"] }
   ],
   "texts": [
     {
