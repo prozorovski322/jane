@@ -3,6 +3,7 @@ node_modules
 dist
 coverage
 src/core/content/generated
+public/content
 package-lock.json
 content/**/*.json
 scripts/data

@@ -1,12 +1,12 @@
 import { router, useLocalSearchParams } from 'expo-router';
-import { useEffect, useState } from 'react';
 
 import { getDb } from '@/core/storage';
 import { LessonScreen } from '@/features/lesson/LessonScreen';
-import type { LessonSession } from '@/features/lesson/session';
 import { PRACTICE_KINDS, practiceId, type PracticeKind } from '@/features/practice/build';
 import { loadPracticeSession } from '@/features/practice/load';
 import { useProgress } from '@/features/progress/store';
+import { useLoad } from '@/lib/useLoad';
+import { LoadFailed } from '@/ui/components/LoadFailed';
 
 export default function PracticeRoute() {
   const params = useLocalSearchParams<{ kind: string; ref?: string; title?: string }>();
@@ -14,30 +14,27 @@ export default function PracticeRoute() {
     ? (params.kind as PracticeKind)
     : null;
   const spec = kind ? { kind, ref: params.ref || undefined } : null;
-  const [session, setSession] = useState<LessonSession | null | undefined>(undefined);
-
-  useEffect(() => {
-    if (!kind) return;
-    let alive = true;
-    const completed = useProgress.getState().snapshot?.completedLessons ?? new Set<string>();
-    void loadPracticeSession(
-      getDb(),
-      { kind, ref: params.ref || undefined },
-      completed,
-      params.title ?? '',
-    ).then((s) => alive && setSession(s));
-    return () => {
-      alive = false;
-    };
-  }, [kind, params.ref, params.title]);
+  const loaded = useLoad(
+    async () =>
+      spec
+        ? loadPracticeSession(
+            getDb(),
+            spec,
+            useProgress.getState().snapshot?.completedLessons ?? new Set<string>(),
+            params.title ?? '',
+          )
+        : null,
+    [kind ?? '', params.ref ?? '', params.title ?? ''],
+  );
 
   const exit = () => (router.canGoBack() ? router.back() : router.replace('/practice'));
   if (!spec) return <LessonScreen session={null} onExit={exit} />;
-  if (session === undefined) return null;
+  if (loaded.status === 'failed') return <LoadFailed onRetry={loaded.retry} onExit={exit} />;
+  if (loaded.status === 'loading') return null;
 
   return (
     <LessonScreen
-      session={session}
+      session={loaded.value}
       onComplete={(summary) =>
         useProgress
           .getState()

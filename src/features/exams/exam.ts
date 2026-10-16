@@ -3,7 +3,7 @@
  * exercises of the units they cover, balanced by skill, so a test always matches what the course
  * actually teaches. A test is available once every unit of the module (or level) is written.
  */
-import { getCourse, getUnit } from '@/core/content';
+import { getCourse, getUnit, loadUnits } from '@/core/content';
 import type { LevelOutline, ModuleOutline, TrackOutline } from '@/core/content/bundle-types';
 import type { Exercise, Level, Skill, Text } from '@/core/content/schema';
 import { LEVEL_LABEL, LEVELS } from '@/core/content/schema';
@@ -101,6 +101,27 @@ export function selectExercises(pool: readonly Exercise[], size: number, seed: s
     chosen.push(...shuffle(pool, `${seed}:fill`).filter((e) => !taken.has(e.id)));
   }
   return shuffle(chosen.slice(0, size), `${seed}:order`);
+}
+
+/** Units a test is assembled from (to load them first on the website); empty if unknown. */
+export function examUnitIds(id: string): string[] {
+  const ref = parseExamId(id);
+  if (!ref) return [];
+  const course = getCourse();
+  if (ref.kind === 'track') {
+    return course.tracks.find((t) => t.id === ref.trackId)?.units.map((u) => u.id) ?? [];
+  }
+  const level = course.levels.find((l) => l.level === ref.level);
+  if (!level) return [];
+  const units =
+    ref.kind === 'module' ? level.modules.find((m) => m.id === ref.moduleId)?.units : level.units;
+  return units?.map((u) => u.id) ?? [];
+}
+
+/** `sessionForExam` after loading the units it draws on. */
+export async function loadExamSession(id: string, seed: string): Promise<LessonSession | null> {
+  await loadUnits(examUnitIds(id));
+  return sessionForExam(id, seed);
 }
 
 /** Module test or level exam as a lesson session, or null if unknown or not ready yet. */

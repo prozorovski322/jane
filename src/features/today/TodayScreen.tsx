@@ -21,7 +21,7 @@ import { QuestsCard } from '../quests/QuestsCard';
 import { loadToday, loadWeakSpots } from '../progress/insights';
 import { dailyMinutes, setDailyMinutes } from '../progress/service';
 import { useProgress } from '../progress/store';
-import { courseExercises } from '../review/sources';
+import { loadCourseExercises } from '../review/sources';
 import { isDone, todayPlan, type PlanItem } from './plan';
 
 const MINUTES = [5, 10, 15, 30];
@@ -98,7 +98,7 @@ export function TodayScreen() {
         .filter((n) => n.status !== 'done')
         .slice(0, 4)
         .map((n) => ({ id: n.id, title: n.title, isTest: n.isTest, kind: n.kind }));
-      const seen = courseExercises(done);
+      const seen = await loadCourseExercises(done);
       const plan = await todayPlan(db, {
         minutes,
         dueCount: due,

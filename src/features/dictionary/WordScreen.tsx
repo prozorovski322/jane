@@ -2,7 +2,7 @@ import { router } from 'expo-router';
 import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import { getLexicon, getUnit } from '@/core/content';
+import { getLexicon, getUnitOutline } from '@/core/content';
 import { getDb } from '@/core/storage';
 import { deleteUserWord, setFavorite } from '@/core/storage/words-repo';
 import { useDbQuery } from '@/lib/useDbQuery';
@@ -86,7 +86,7 @@ export function WordScreen({ id }: { id: string }) {
             {[
               entry.pos && POS_LABEL[entry.pos],
               entry.level,
-              entry.unit && `юнит «${getUnit(entry.unit).title.ru}»`,
+              entry.unit && `юнит «${getUnitOutline(entry.unit)?.title.ru ?? entry.unit}»`,
             ]
               .filter(Boolean)
               .join(' · ')}
@@ -175,11 +175,11 @@ export function WordScreen({ id }: { id: string }) {
           />
         ))}
 
-      {entry.unit && (
+      {entry.unit && getUnitOutline(entry.unit) && (
         <Button
           label="Открыть юнит"
           variant="ghost"
-          onPress={() => router.push(`/lesson/${getUnit(entry.unit!).lessons[0]!.id}`)}
+          onPress={() => router.push(`/lesson/${getUnitOutline(entry.unit!)!.lessons[0]!.id}`)}
         />
       )}
     </SubScreen>

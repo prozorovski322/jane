@@ -1,4 +1,4 @@
-import { getLesson, getUnit } from '@/core/content';
+import { getLesson, getUnit, loadUnits, unitIdOf } from '@/core/content';
 import type { Exercise, Text } from '@/core/content/schema';
 import type { SessionKind } from '@/core/progress/xp';
 
@@ -29,18 +29,18 @@ export function sessionForLesson(id: string): LessonSession | null {
   };
 }
 
+/** A lesson or unit test, after loading its unit (the website downloads units on demand). */
+export async function loadLessonSession(id: string): Promise<LessonSession | null> {
+  await loadUnits([unitIdOf(id)]);
+  return sessionForLesson(id);
+}
+
+const unitsOfExercises = (exercises: readonly Exercise[]) =>
+  new Set(exercises.map((e) => unitIdOf(e.id.replace(/^review\./, ''))));
+
 /** Texts of every unit an exercise list may refer to (review sessions mix units). */
 export function textsFor(exercises: readonly Exercise[]): Text[] {
-  const unitIds = new Set(
-    exercises.map((e) =>
-      e.id
-        .replace(/^review\./, '')
-        .split('.')
-        .slice(0, 2)
-        .join('.'),
-    ),
-  );
-  return [...unitIds].flatMap((id) => {
+  return [...unitsOfExercises(exercises)].flatMap((id) => {
     try {
       return getUnit(id).texts;
     } catch {

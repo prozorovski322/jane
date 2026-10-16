@@ -123,6 +123,26 @@ function LessonRunner({
     void persist(summary);
   }, [summary, persist]);
 
+  // On a computer, Enter checks the answer and moves on. Not in the essay field (Enter is a new
+  // line there) and not on a focused button, which handles Enter itself.
+  useEffect(() => {
+    if (Platform.OS !== 'web' || typeof window === 'undefined') return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Enter' || e.shiftKey || e.isComposing || confirmExit) return;
+      const target = e.target instanceof HTMLElement ? e.target : null;
+      if (target?.tagName === 'TEXTAREA' || target?.closest('button, [role="button"], a')) return;
+      if (state.phase === 'feedback') {
+        e.preventDefault();
+        dispatch({ type: 'continue' });
+      } else if (state.phase === 'answering' && pending) {
+        e.preventDefault();
+        dispatch({ type: 'answer', response: pending });
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [state.phase, pending, confirmExit]);
+
   // Leaving an exercise stops its audio.
   useEffect(() => () => void tts.stop(), [key]);
 
@@ -182,7 +202,7 @@ function LessonRunner({
       edges={['top', 'bottom']}
     >
       <KeyboardAvoidingView
-        style={styles.flex}
+        style={[styles.flex, styles.column]}
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       >
         <View style={[styles.header, { paddingHorizontal: space.md }]}>
@@ -289,6 +309,8 @@ function LessonRunner({
 const styles = StyleSheet.create({
   safe: { flex: 1 },
   flex: { flex: 1 },
+  // The same column as other screens: on a wide screen the lesson stays phone-width in the middle.
+  column: { width: '100%', maxWidth: 640, alignSelf: 'center' },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 16, padding: 24 },
   header: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingVertical: 8 },
   hint: { padding: 12 },

@@ -18,7 +18,8 @@ jobs:
       - name: Content bundle is up to date
         run: |
           npm run content:build
-          git diff --exit-code -- src/core/content/generated
+          git diff --exit-code -- src/core/content/generated public/content
+          test -z "$(git status --porcelain -- src/core/content/generated public/content)"
       - run: npm run format:check
       - run: npm run typecheck
       - run: npm run lint

@@ -1,29 +1,85 @@
 /**
  * Runtime access to the compiled course content. Units are loaded lazily and cached.
+ *
+ * The app bundles every unit and reads it on first use. The website downloads units on demand:
+ * call `loadUnits` (or a helper built on it) before `getUnit` for anything a screen needs.
  */
-import type { CourseOutline, GrammarBundle, LexiconEntry, UnitBundle } from './bundle-types';
-import { loadCourse, loadGrammar, loadLexicon, loadPlacement, unitLoaders } from './generated';
+import type {
+  CourseOutline,
+  GrammarBundle,
+  LexiconEntry,
+  UnitBundle,
+  UnitOutline,
+} from './bundle-types';
+import { loadCourse, loadGrammar, loadLexicon, loadPlacement, unitIds } from './generated';
+import { fetchUnit, loadUnitSync } from './generated/units';
 import type { Exercise, PlacementBank } from './schema';
 
 let course: CourseOutline | null = null;
 let lexicon: Map<string, LexiconEntry> | null = null;
 let grammar: Map<string, GrammarBundle[number]> | null = null;
 const units = new Map<string, UnitBundle>();
+const knownUnits = new Set(unitIds);
 
 export function getCourse(): CourseOutline {
   course ??= loadCourse();
   return course;
 }
 
+/** Whether a unit with this id exists in the course. */
+export const isKnownUnit = (id: string) => knownUnits.has(id);
+
+/** The unit an exercise or lesson id belongs to: "a1.u01.l03.e05" → "a1.u01". */
+export const unitIdOf = (id: string) => id.split('.').slice(0, 2).join('.');
+
+/** A unit's full content. On the website it must have been loaded with `loadUnits` first. */
 export function getUnit(id: string): UnitBundle {
   let unit = units.get(id);
   if (!unit) {
-    const load = unitLoaders[id];
-    if (!load) throw new Error(`Unknown unit ${id}`);
-    unit = load();
+    if (!knownUnits.has(id)) throw new Error(`Unknown unit ${id}`);
+    unit = loadUnitSync(id);
+    if (!unit) throw new Error(`Unit ${id} is not loaded yet`);
     units.set(id, unit);
   }
   return unit;
+}
+
+const pending = new Map<string, Promise<void>>();
+
+/** Makes the given units available to `getUnit`; unknown ids are ignored. */
+export async function loadUnits(ids: Iterable<string>): Promise<void> {
+  const missing = [...new Set(ids)].filter((id) => knownUnits.has(id) && !units.has(id));
+  await Promise.all(
+    missing.map((id) => {
+      let p = pending.get(id);
+      if (!p) {
+        p = (async () => {
+          units.set(id, loadUnitSync(id) ?? (await fetchUnit(id)));
+        })().finally(() => pending.delete(id));
+        pending.set(id, p);
+      }
+      return p;
+    }),
+  );
+}
+
+/** Units of the course levels (not the optional tracks), in course order. */
+export const levelUnitIds = () => getCourse().levels.flatMap((l) => l.units.map((u) => u.id));
+
+/** Outline of a unit (title, lessons) without loading its content. */
+export function getUnitOutline(id: string): UnitOutline | undefined {
+  const c = getCourse();
+  return [...c.levels.flatMap((l) => l.units), ...c.tracks.flatMap((t) => t.units)].find(
+    (u) => u.id === id,
+  );
+}
+
+/** Title of a lesson or unit test from the outline, without loading the unit. */
+export function lessonTitle(id: string): string | undefined {
+  const unit = getUnitOutline(unitIdOf(id));
+  if (!unit) return undefined;
+  if (id === `${unit.id}.test`) return `Тест: ${unit.title.ru}`;
+  return unit.lessons.find((l) => l.id === id)?.title;
 }
 
 export function getLexicon(): Map<string, LexiconEntry> {
@@ -41,8 +97,8 @@ export interface ResolvedLesson {
 
 /** A lesson by id ("a1.u01.l03"), or the unit test ("a1.u01.test"). */
 export function getLesson(id: string): ResolvedLesson | null {
-  const unitId = id.split('.').slice(0, 2).join('.');
-  if (!unitLoaders[unitId]) return null;
+  const unitId = unitIdOf(id);
+  if (!knownUnits.has(unitId)) return null;
   const unit = getUnit(unitId);
   if (id === `${unitId}.test`) {
     return {

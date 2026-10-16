@@ -6,3 +6,7 @@
   Cross-Origin-Opener-Policy: same-origin
   X-Content-Type-Options: nosniff
   Referrer-Policy: no-referrer
+
+# The service worker must be checked for updates on every visit.
+/sw.js
+  Cache-Control: no-cache

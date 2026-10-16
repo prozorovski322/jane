@@ -1,35 +1,36 @@
 import { router } from 'expo-router';
-import { useEffect, useState } from 'react';
 
 import { getDb } from '@/core/storage';
 import { LessonScreen } from '@/features/lesson/LessonScreen';
-import type { LessonSession } from '@/features/lesson/session';
 import { useProgress } from '@/features/progress/store';
 import { loadReviewSession } from '@/features/review/sources';
+import { useLoad } from '@/lib/useLoad';
+import { LoadFailed } from '@/ui/components/LoadFailed';
+
+const exit = () => (router.canGoBack() ? router.back() : router.replace('/'));
 
 export default function ReviewRoute() {
-  const [session, setSession] = useState<LessonSession | null>(null);
+  const loaded = useLoad(
+    () =>
+      loadReviewSession(
+        getDb(),
+        useProgress.getState().snapshot?.completedLessons ?? new Set<string>(),
+      ),
+    [],
+  );
 
-  useEffect(() => {
-    let alive = true;
-    const completed = useProgress.getState().snapshot?.completedLessons ?? new Set<string>();
-    void loadReviewSession(getDb(), completed).then((s) => alive && setSession(s));
-    return () => {
-      alive = false;
-    };
-  }, []);
-
-  if (!session) return null;
+  if (loaded.status === 'failed') return <LoadFailed onRetry={loaded.retry} onExit={exit} />;
+  if (loaded.status === 'loading') return null;
 
   return (
     <LessonScreen
-      session={session}
+      session={loaded.value}
       onComplete={(summary) =>
         useProgress
           .getState()
           .record(getDb(), { id: 'review', unitId: null, kind: 'review' }, summary)
       }
-      onExit={() => (router.canGoBack() ? router.back() : router.replace('/'))}
+      onExit={exit}
     />
   );
 }

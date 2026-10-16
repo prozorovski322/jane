@@ -1,7 +1,7 @@
 import { router } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 
-import { getLesson } from '@/core/content';
+import { lessonTitle } from '@/core/content';
 import { parseDay } from '@/core/progress/dates';
 import { isMastered } from '@/core/srs/scheduler';
 import { allCards } from '@/core/storage/srs-repo';
@@ -57,7 +57,7 @@ function historyTitle(h: HistoryItem): string {
     const kind = h.lessonId.split('.')[1] as PracticeKind | undefined;
     return `Практика: ${kind && PRACTICE_INFO[kind] ? PRACTICE_INFO[kind].title : h.lessonId}`;
   }
-  return getLesson(h.lessonId)?.title ?? h.lessonId;
+  return lessonTitle(h.lessonId) ?? h.lessonId;
 }
 
 function Calendar() {

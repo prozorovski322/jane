@@ -1,13 +1,17 @@
 import { router, useLocalSearchParams } from 'expo-router';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import type { Exercise } from '@/core/content/schema';
 import { getDb } from '@/core/storage';
-import { isExamId, sessionForExam } from '@/features/exams/exam';
+import { isExamId, loadExamSession } from '@/features/exams/exam';
 import { LessonScreen } from '@/features/lesson/LessonScreen';
-import { sessionForLesson } from '@/features/lesson/session';
+import { loadLessonSession } from '@/features/lesson/session';
 import { useProgress } from '@/features/progress/store';
 import { loadMasteredSkip } from '@/features/review/sources';
+import { useLoad } from '@/lib/useLoad';
+import { LoadFailed } from '@/ui/components/LoadFailed';
+
+const exit = () => (router.canGoBack() ? router.back() : router.replace('/'));
 
 export default function LessonRoute() {
   const { id, start } = useLocalSearchParams<{ id: string; start?: string }>();
@@ -15,10 +19,12 @@ export default function LessonRoute() {
   const startAt = __DEV__ && start ? Math.max(0, Number(start) || 0) : 0;
   // A module test or level exam is assembled from the course's exercises; each attempt differs.
   const [seed] = useState(() => String(Date.now()));
-  const session = useMemo(
-    () => (isExamId(id) ? sessionForExam(id, seed) : sessionForLesson(id)),
+  // The website downloads the units first.
+  const loaded = useLoad(
+    () => (isExamId(id) ? loadExamSession(id, seed) : loadLessonSession(id)),
     [id, seed],
   );
+  const session = loaded.status === 'done' ? loaded.value : undefined;
   const repeat = useProgress(
     (s) => (!isExamId(id) && s.snapshot?.completedLessons.has(id)) ?? false,
   );
@@ -36,7 +42,8 @@ export default function LessonRoute() {
     };
   }, [repeat]);
 
-  if (skip === undefined) return null;
+  if (loaded.status === 'failed') return <LoadFailed onRetry={loaded.retry} onExit={exit} />;
+  if (skip === undefined || session === undefined) return null;
 
   return (
     <LessonScreen
@@ -60,7 +67,7 @@ export default function LessonRoute() {
               )
       }
       onOpenCertificate={(level) => router.replace(`/certificate/${level.toLowerCase()}`)}
-      onExit={() => (router.canGoBack() ? router.back() : router.replace('/'))}
+      onExit={exit}
     />
   );
 }

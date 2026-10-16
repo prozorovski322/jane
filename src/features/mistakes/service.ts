@@ -2,7 +2,7 @@
  * The "Mistakes" section: exercises whose latest answer was wrong, from the last 30 days.
  * Answering one right removes it from the list, so the list is what still needs work.
  */
-import { getCourse, getUnit } from '@/core/content';
+import { getCourse, getUnit, loadUnits, unitIdOf } from '@/core/content';
 import type { Exercise } from '@/core/content/schema';
 import type { Db } from '@/core/storage/db';
 import { expectedAnswer } from '@/core/scoring/check';
@@ -12,7 +12,7 @@ const LIMIT = 100;
 
 /** An exercise of the course by id ("a1.u01.l03.e05" or "a1.u01.test.e02"), or null. */
 export function findExercise(id: string): Exercise | null {
-  const unitId = id.split('.').slice(0, 2).join('.');
+  const unitId = unitIdOf(id);
   if (!getCourse().levels.some((l) => l.units.some((u) => u.id === unitId))) return null;
   const unit = getUnit(unitId);
   for (const lesson of unit.lessons) {
@@ -37,6 +37,7 @@ export async function loadMistakes(db: Db, now = new Date()): Promise<Mistake[]>
      ORDER BY a.at DESC LIMIT ?`,
     [since, LIMIT],
   );
+  await loadUnits(rows.map((r) => unitIdOf(r.exercise_id)));
   const out: Mistake[] = [];
   const seen = new Set<string>();
   for (const r of rows) {

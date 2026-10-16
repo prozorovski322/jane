@@ -1,4 +1,4 @@
-import { getCourse, getLexicon, getUnit } from '@/core/content';
+import { getCourse, getLexicon, getUnit, loadUnits } from '@/core/content';
 import type { LexiconEntry } from '@/core/content/bundle-types';
 import type { Exercise } from '@/core/content/schema';
 import { isMastered, type SrsCard } from '@/core/srs/scheduler';
@@ -12,17 +12,35 @@ import type { LessonSession } from '../lesson/session';
 import { textsFor } from '../lesson/session';
 import { buildReview, REVIEW_SIZE, type ReviewSources } from './generate';
 
-/** Exercises of completed lessons (or of all lessons), in course order. */
+/** Units of the course levels with at least one completed lesson (or all of them). */
+function unitsWithLessons(completedLessons?: ReadonlySet<string>): string[] {
+  return getCourse().levels.flatMap((level) =>
+    level.units
+      .filter((u) => !completedLessons || u.lessons.some((l) => completedLessons.has(l.id)))
+      .map((u) => u.id),
+  );
+}
+
+/**
+ * Exercises of completed lessons (or of all lessons), in course order. On the website the units
+ * must be loaded first: use `loadCourseExercises`.
+ */
 export function courseExercises(completedLessons?: ReadonlySet<string>): Exercise[] {
   const out: Exercise[] = [];
-  for (const level of getCourse().levels) {
-    for (const u of level.units) {
-      for (const l of getUnit(u.id).lessons) {
-        if (!completedLessons || completedLessons.has(l.id)) out.push(...l.exercises);
-      }
+  for (const id of unitsWithLessons(completedLessons)) {
+    for (const l of getUnit(id).lessons) {
+      if (!completedLessons || completedLessons.has(l.id)) out.push(...l.exercises);
     }
   }
   return out;
+}
+
+/** `courseExercises` after loading the units it reads. */
+export async function loadCourseExercises(
+  completedLessons?: ReadonlySet<string>,
+): Promise<Exercise[]> {
+  await loadUnits(unitsWithLessons(completedLessons));
+  return courseExercises(completedLessons);
 }
 
 /**
@@ -49,7 +67,11 @@ export async function loadReviewSession(
   completedLessons: ReadonlySet<string>,
   now = new Date(),
 ): Promise<LessonSession> {
-  const [cards, own] = await Promise.all([dueCards(db, now, REVIEW_SIZE * 2), loadOwnLexicon(db)]);
+  const [cards, own] = await Promise.all([
+    dueCards(db, now, REVIEW_SIZE * 2),
+    loadOwnLexicon(db),
+    loadCourseExercises(completedLessons),
+  ]);
   // One seed per day: reopening the review the same day shows the same exercises.
   const exercises = buildReview(
     cards,

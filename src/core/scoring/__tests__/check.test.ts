@@ -1,10 +1,11 @@
+import { getUnit } from '../../content';
 import type { UnitBundle } from '../../content/bundle-types';
-import { unitLoaders } from '../../content/generated';
+import { unitIds } from '../../content/generated';
 import type { Exercise, ExerciseOf } from '../../content/schema';
 import { checkExercise, needsRetry, type Response } from '../check';
 import { splitTiles } from '../tiles';
 
-const units: UnitBundle[] = Object.values(unitLoaders).map((load) => load());
+const units: UnitBundle[] = unitIds.map(getUnit);
 const allExercises: Exercise[] = units.flatMap((u) => [
   ...u.lessons.flatMap((l) => l.exercises),
   ...u.test.exercises,

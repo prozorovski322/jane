@@ -8,7 +8,7 @@ import { loadMistakes } from '../mistakes/service';
 import type { LessonSession } from '../lesson/session';
 import { textsFor } from '../lesson/session';
 import { loadWeakSpots } from '../progress/insights';
-import { courseExercises } from '../review/sources';
+import { courseExercises, loadCourseExercises } from '../review/sources';
 import {
   buildPractice,
   practiceId,
@@ -21,17 +21,18 @@ export async function loadPracticeSources(
   db: Db,
   completed: ReadonlySet<string>,
 ): Promise<PracticeSources> {
-  const [cards, own, weak, mistakes] = await Promise.all([
+  const [cards, own, weak, mistakes, all] = await Promise.all([
     allCards(db, 'word'),
     loadOwnLexicon(db),
     loadWeakSpots(db),
     loadMistakes(db),
+    loadCourseExercises(),
   ]);
   const lexicon = getLexicon();
   const ownById = new Map(own.map((w) => [w.id, w]));
   return {
     seen: courseExercises(completed),
-    all: courseExercises(),
+    all,
     wordCards: cards,
     word: (id) => lexicon.get(id) ?? ownById.get(id),
     words: [...lexicon.values()],
