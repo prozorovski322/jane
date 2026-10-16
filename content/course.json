@@ -406,10 +406,8 @@
       "title": { "en": "Exam preparation", "ru": "Подготовка к IELTS и TOEFL" },
       "description": "Как устроены международные экзамены, стратегии для каждой части и тренировка в их формате. Это подготовка, а не официальный материал экзаменов и не гарантия балла.",
       "requires": "B2",
-      "units": ["ielts.u01", "ielts.u02", "ielts.u03", "ielts.u04", "ielts.u05", "ielts.u06", "ielts.u07"],
-      "planned": [
-        { "id": "ielts.u08", "title": { "en": "Practice test", "ru": "Пробный экзамен" } }
-      ]
+      "units": ["ielts.u01", "ielts.u02", "ielts.u03", "ielts.u04", "ielts.u05", "ielts.u06", "ielts.u07", "ielts.u08"],
+      "planned": []
     }
   ]
 }
