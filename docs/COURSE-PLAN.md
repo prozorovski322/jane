@@ -219,6 +219,7 @@ Id уроков и юнитов остаются прежними (`a1.u01.l01`)
 - `scripts/vocab-gap.ts` сверяет список из ~660 самых частотных слов (`scripts/data/basic-words.txt`) со словарём курса к концу уровня и показывает, где каждое слово появляется сейчас.
 - До правки к концу A2 не были введены 226 из них, в том числе if, very, all, other, only, same, something, nothing, everyone, put, high, low, problem, question. 150 слов перенесены в юниты A1–A2 (по теме юнита, с новыми простыми примерами и заданиями на пары), из них 20 написаны заново (above, below, each, either, enter, part, kid, parent, art, river и др.). Записи этих слов убраны из юнитов B1–C1 и треков; id не изменились, поэтому задания и повторение на них по-прежнему ссылаются.
 - Осталось 76 слов, которым место на B1 и выше (ever, yet, while, since, government, research, require и т. п.).
+- Из этих 76 слов 28 вводились слишком поздно (только на C1 или в треках) или не вводились вовсе. Они перенесены в юниты B1 по три-четыре на юнит, с примерами и заданиями на пары: receive, similar, anyway, war, lead, among, raise, cover, towards, none, neither, nor, nowhere, form, require, involve, system, program, type, itself, ourselves, serve, president, guy, force, area, community, lady. Не введены нарочно: whom, per, sir, madam (формальная лексика C1), toward, gray, colour (варианты написания towards, grey, color) и mister.
 - Онбординг и README теперь говорят, что готовы уровни от нуля до B1.
 
 ### B2

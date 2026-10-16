@@ -57,7 +57,6 @@
     { "id": "fairly", "en": "fairly", "ipa": "ˈferli", "pos": "adv", "ru": ["справедливо", "довольно"], "example": { "en": "Trees are not shared fairly.", "ru": "Деревья распределены несправедливо." }, "topics": ["adverbs"] },
     { "id": "measure", "en": "measure", "ipa": "ˈmeʒɚ", "pos": "verb", "ru": ["измерять", "оценивать"], "example": { "en": "It is hard to measure the benefits.", "ru": "Пользу трудно измерить." }, "forms": { "third": "measures" }, "topics": ["science"] },
     { "id": "decoration", "en": "decoration", "ipa": "ˌdekɚˈeɪʃən", "pos": "noun", "ru": ["украшение"], "example": { "en": "Trees are more than decoration.", "ru": "Деревья — не просто украшение." }, "topics": ["things"] },
-    { "id": "system", "en": "system", "ipa": "ˈsɪstəm", "pos": "noun", "ru": ["система"], "example": { "en": "It's a system whereby residents choose.", "ru": "Это система, при которой выбирают жители." }, "topics": ["society"] },
     { "id": "material", "en": "material", "ipa": "məˈtɪriəl", "pos": "noun", "ru": ["материал"], "example": { "en": "There's a lot of good material here.", "ru": "Здесь много хорошего материала." }, "topics": ["study"] },
     { "id": "noun", "en": "noun", "ipa": "naʊn", "pos": "noun", "ru": ["существительное"], "example": { "en": "Use this plus a noun.", "ru": "Используйте this плюс существительное." }, "topics": ["study"] },
     { "id": "plus", "en": "plus", "ipa": "plʌs", "pos": "prep", "ru": ["плюс"], "example": { "en": "This plus a noun is clearer.", "ru": "This плюс существительное — понятнее." }, "topics": ["numbers"] },
@@ -72,7 +71,7 @@
     { "id": "contrary", "en": "contrary", "ipa": "ˈkɑːnˌtreri", "pos": "noun", "ru": ["противоположное"], "example": { "en": "On the contrary, it was a success.", "ru": "Напротив, это был успех." }, "note": "On the contrary — напротив (возражение). In contrast — для сравнения двух фактов.", "topics": ["grammar"] },
     { "id": "wherever", "en": "wherever", "ipa": "werˈevɚ", "pos": "conj", "ru": ["где бы ни", "куда угодно"], "example": { "en": "Sit wherever you like.", "ru": "Садитесь, где хотите." }, "topics": ["grammar"] },
     { "id": "unclear", "en": "unclear", "ipa": "ənˈklɪr", "pos": "adj", "ru": ["неясный"], "example": { "en": "The reason is still unclear.", "ru": "Причина до сих пор неясна." }, "topics": ["adjectives"] },
-    { "id": "raise", "en": "raise", "ipa": "reɪz", "pos": "verb", "ru": ["поднимать", "повышать"], "example": { "en": "Trees can raise property prices.", "ru": "Деревья могут повышать цены на жильё." }, "forms": { "third": "raises" }, "topics": ["actions"] },    { "id": "priority", "en": "priority", "ipa": "praɪˈɔːrəti", "pos": "noun", "ru": ["приоритет"], "example": { "en": "Give priority to the poorest areas.", "ru": "Отдайте приоритет беднейшим районам." }, "forms": { "plural": "priorities" }, "topics": ["society"] }
+    { "id": "priority", "en": "priority", "ipa": "praɪˈɔːrəti", "pos": "noun", "ru": ["приоритет"], "example": { "en": "Give priority to the poorest areas.", "ru": "Отдайте приоритет беднейшим районам." }, "forms": { "plural": "priorities" }, "topics": ["society"] }
   ],
   "texts": [
     {

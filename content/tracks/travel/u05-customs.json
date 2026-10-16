@@ -49,7 +49,6 @@
     { "id": "bargain", "en": "bargain", "ipa": "ˈbɑːrɡən", "pos": "verb", "ru": ["торговаться"], "example": { "en": "In markets, people bargain about the price.", "ru": "На рынках торгуются о цене." }, "forms": { "third": "bargains" }, "topics": ["money"] },
     { "id": "queue", "en": "queue", "ipa": "kjuː", "pos": "noun", "ru": ["очередь"], "example": { "en": "People wait in a queue at the bus stop.", "ru": "На остановке стоят в очереди." }, "note": "Американцы говорят line. Пишется queue, читается [kjuː].", "topics": ["city"] },
     { "id": "temple", "en": "temple", "ipa": "ˈtempəl", "pos": "noun", "ru": ["храм"], "example": { "en": "Take off your shoes in the temple.", "ru": "В храме снимите обувь." }, "topics": ["places"] },
-    { "id": "cover", "en": "cover", "ipa": "ˈkʌvɚ", "pos": "verb", "ru": ["закрывать", "покрывать"], "example": { "en": "Cover your shoulders when you visit a church.", "ru": "Когда идёте в церковь, прикройте плечи." }, "forms": { "third": "covers" }, "topics": ["actions"] },
     { "id": "shoulder", "en": "shoulder", "ipa": "ˈʃoʊldɚ", "pos": "noun", "ru": ["плечо"], "example": { "en": "My shoulders got red in the sun.", "ru": "У меня обгорели плечи." }, "topics": ["body"] },
     { "id": "allowed", "en": "allowed", "ipa": "əˈlaʊd", "pos": "adj", "ru": ["разрешённый"], "example": { "en": "You aren't allowed to take photos here.", "ru": "Здесь нельзя фотографировать." }, "note": "Be allowed to — иметь право, можно.", "topics": ["rules"] }
   ],

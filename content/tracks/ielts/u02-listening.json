@@ -44,8 +44,7 @@
     { "id": "focus", "en": "focus", "ipa": "ˈfoʊkəs", "pos": "verb", "ru": ["сосредоточиться"], "example": { "en": "Focus on the keywords.", "ru": "Сосредоточьтесь на ключевых словах." }, "forms": { "third": "focuses" }, "topics": ["study"] },
     { "id": "context", "en": "context", "ipa": "ˈkɑːntekst", "pos": "noun", "ru": ["контекст"], "example": { "en": "Guess the meaning from the context.", "ru": "Догадайтесь о значении по контексту." }, "topics": ["study"] },
     { "id": "meaning", "en": "meaning", "ipa": "ˈmiːnɪŋ", "pos": "noun", "ru": ["значение", "смысл"], "example": { "en": "The words are different, but the meaning is the same.", "ru": "Слова разные, а смысл один." }, "topics": ["study"] },
-    { "id": "phrase", "en": "phrase", "ipa": "freɪz", "pos": "noun", "ru": ["фраза", "выражение"], "example": { "en": "Listen for phrases like \"on the other hand\".", "ru": "Обращайте внимание на фразы вроде «с другой стороны»." }, "topics": ["study"] },
-    { "id": "similar", "en": "similar", "ipa": "ˈsɪməlɚ", "pos": "adj", "ru": ["похожий"], "example": { "en": "Fifteen and fifty sound similar.", "ru": "Fifteen и fifty звучат похоже." }, "note": "Similar to — похожий на.", "topics": ["adjectives"] }
+    { "id": "phrase", "en": "phrase", "ipa": "freɪz", "pos": "noun", "ru": ["фраза", "выражение"], "example": { "en": "Listen for phrases like \"on the other hand\".", "ru": "Обращайте внимание на фразы вроде «с другой стороны»." }, "topics": ["study"] }
   ],
   "texts": [
     {
