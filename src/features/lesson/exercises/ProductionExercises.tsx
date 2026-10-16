@@ -18,6 +18,7 @@ import { SpeakButtons } from '@/ui/components/SpeakButtons';
 import { TextField } from '@/ui/components/TextField';
 import { useTheme } from '@/ui/theme/ThemeProvider';
 
+import { ExamTimer } from '../components/ExamTimer';
 import { AiReviewCard } from './AiReviewCard';
 import { Instruction, Prompt, styles as common } from './common';
 import { SelfRecorder } from './SelfRecorder';
@@ -100,6 +101,10 @@ export function SpeakView({
           </View>
           <AppText variant="body">{ex.situation}</AppText>
         </>
+      )}
+
+      {ex.type !== 'speak_repeat' && ex.timer && !verdict && (
+        <ExamTimer prepare={ex.timer.prepare} speak={ex.timer.speak} />
       )}
 
       {!verdict && mode === 'choose' && (

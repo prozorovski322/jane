@@ -16,6 +16,7 @@ export type IconName =
   | 'arrow-right'
   | 'skip'
   | 'refresh'
+  | 'clock'
   | 'book'
   | 'path'
   | 'sun'
@@ -95,6 +96,12 @@ const paths: Record<IconName, React.ReactNode> = {
       <Circle cx={6} cy={18} r={2.5} />
       <Circle cx={18} cy={6} r={2.5} />
       <Path d="M8.5 18H15a3.5 3.5 0 000-7H9a3.5 3.5 0 010-7h6.5" />
+    </>
+  ),
+  clock: (
+    <>
+      <Circle cx={12} cy={12} r={9} />
+      <Path d="M12 7v5l3 2" />
     </>
   ),
   sun: (

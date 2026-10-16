@@ -321,6 +321,12 @@ export const SpeakRepeat = z.strictObject({
 /** Groups of alternatives; a group counts when any of its patterns matches. */
 const KeywordGroups = z.array(z.array(text).min(1)).min(1);
 
+/** Exam-style timing (IELTS Speaking Part 2): seconds to prepare, then seconds to speak. */
+const SpeakTimer = z.strictObject({
+  prepare: z.number().int().min(0).max(300),
+  speak: z.number().int().min(10).max(600),
+});
+
 /** Answer a question out loud. */
 export const SpeakAnswer = z.strictObject({
   ...base,
@@ -330,6 +336,7 @@ export const SpeakAnswer = z.strictObject({
   keywords: KeywordGroups,
   minKeywords: z.number().int().min(1),
   samples: z.array(En).min(1),
+  timer: SpeakTimer.optional(),
 });
 
 /** Describe a picture / situation out loud. */
@@ -341,6 +348,7 @@ export const SpeakDescribe = z.strictObject({
   keywords: KeywordGroups,
   minKeywords: z.number().int().min(1),
   samples: z.array(En).min(1),
+  timer: SpeakTimer.optional(),
 });
 
 /**
