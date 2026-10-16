@@ -65,6 +65,7 @@ export const unitLoaders: Record<string, () => UnitBundle> = {
   'ielts.u02': () => require('./units/ielts.u02.json') as UnitBundle,
   'ielts.u03': () => require('./units/ielts.u03.json') as UnitBundle,
   'ielts.u04': () => require('./units/ielts.u04.json') as UnitBundle,
+  'ielts.u05': () => require('./units/ielts.u05.json') as UnitBundle,
   'pa1.u01': () => require('./units/pa1.u01.json') as UnitBundle,
   'pa1.u02': () => require('./units/pa1.u02.json') as UnitBundle,
   'pa1.u03': () => require('./units/pa1.u03.json') as UnitBundle,
