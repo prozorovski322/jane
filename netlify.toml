@@ -1,0 +1,8 @@
+# Netlify builds the website from the repository with these settings (docs/WEBSITE.md).
+# Headers and the single-page fallback come from public/_headers and public/_redirects.
+[build]
+  command = "npm run web:build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
