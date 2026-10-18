@@ -26,6 +26,11 @@ export interface ListenOptions {
   contextualStrings?: string[];
   /** Called with the text heard so far while the learner is still talking. */
   onInterim?: (text: string) => void;
+  /**
+   * A long answer (an exam monologue): keep listening through pauses until `stop()` or until
+   * `maxMs` has passed, instead of ending at the first pause.
+   */
+  long?: { maxMs: number };
 }
 
 export interface SpeechRecognizer {

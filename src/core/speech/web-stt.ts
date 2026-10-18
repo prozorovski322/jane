@@ -37,6 +37,8 @@ export type BrowserRecognitionConstructor = new () => BrowserRecognition;
 
 /** Longest a single attempt may take before it is stopped and what was heard is used. */
 const MAX_LISTEN_MS = 15_000;
+/** A long answer restarts a session the browser ended; this many times at most. */
+const MAX_RESTARTS = 20;
 
 function errorCode(browser: string): SpeechErrorCode {
   switch (browser) {
@@ -72,6 +74,8 @@ export function createWebRecognizer(
   allowCloud: () => boolean = () => useSettings.getState().cloudSpeech,
 ): SpeechRecognizer {
   let current: BrowserRecognition | null = null;
+  /** Ends the listening in progress for good (a long answer would otherwise restart). */
+  let stopCurrent: (() => void) | null = null;
 
   return {
     async isAvailable() {
@@ -80,50 +84,79 @@ export function createWebRecognizer(
 
     listen(opts: ListenOptions) {
       return new Promise<string>((resolve, reject) => {
+        const long = !!opts.long;
+        // A long answer may span several browser sessions: what earlier ones heard is kept here.
+        let committed = '';
         let heard = '';
         let done = false;
+        let stopping = false;
+        let restarts = 0;
         let timer: ReturnType<typeof setTimeout> | undefined;
         let rec: BrowserRecognition;
 
+        const all = () => [committed, heard].filter((s) => s.trim()).join(' ');
         const finish = (fn: () => void) => {
           if (done) return;
           done = true;
           if (timer) clearTimeout(timer);
           rec.onresult = rec.onerror = rec.onend = null;
           if (current === rec) current = null;
+          stopCurrent = null;
           fn();
         };
         const finishWithHeard = () =>
-          finish(() =>
-            heard.trim() ? resolve(heard.trim()) : reject(new SpeechError('no-speech')),
-          );
+          finish(() => {
+            const text = all().trim();
+            if (text) resolve(text);
+            else reject(new SpeechError('no-speech'));
+          });
 
-        try {
-          if (!allowCloud()) throw new SpeechError('unavailable');
+        const startSession = () => {
           rec = new Recognition();
           rec.lang = opts.lang;
           rec.interimResults = true;
-          rec.continuous = false;
+          rec.continuous = long;
           rec.maxAlternatives = 1;
           rec.onresult = (e) => {
             const { text, final } = transcriptOf(e);
             heard = text || heard;
-            if (final) finishWithHeard();
-            else if (heard) opts.onInterim?.(heard);
+            if (final && !long) finishWithHeard();
+            else if (all()) opts.onInterim?.(all());
           };
           rec.onerror = (e) => {
             const code = errorCode(e.error);
             // Chrome reports "no speech" after a partial result now and then: keep what we have.
-            if (code === 'no-speech' && heard.trim()) finishWithHeard();
-            else finish(() => reject(new SpeechError(code, e.message)));
+            if (code === 'no-speech' && (long || all().trim())) {
+              if (!long) finishWithHeard();
+            } else finish(() => reject(new SpeechError(code, e.message)));
           };
-          rec.onend = finishWithHeard;
+          rec.onend = () => {
+            // Browsers end even a continuous session after a while or a long pause: in a long
+            // answer that is not the learner's choice, so listening goes on in a new session.
+            if (long && !stopping && restarts++ < MAX_RESTARTS) {
+              committed = all();
+              heard = '';
+              startSession();
+            } else finishWithHeard();
+          };
           current = rec;
           // The browser asks for the microphone itself the first time.
           rec.start();
-          timer = setTimeout(() => rec.stop(), MAX_LISTEN_MS);
+        };
+
+        const stopListening = () => {
+          stopping = true;
+          rec.stop();
+        };
+
+        try {
+          if (!allowCloud()) throw new SpeechError('unavailable');
+          stopCurrent = stopListening;
+          startSession();
+          timer = setTimeout(stopListening, opts.long?.maxMs ?? MAX_LISTEN_MS);
         } catch (e) {
           done = true;
+          stopCurrent = null;
           reject(e instanceof SpeechError ? e : new SpeechError('failed', String(e)));
         }
       });
@@ -131,7 +164,8 @@ export function createWebRecognizer(
 
     stop() {
       try {
-        current?.stop();
+        if (stopCurrent) stopCurrent();
+        else current?.stop();
       } catch {
         // Nothing is being recognized: nothing to stop.
       }

@@ -117,3 +117,35 @@ describe('native recognizer', () => {
     expect(mod.started).toHaveLength(0);
   });
 });
+
+describe('native recognizer, long answer', () => {
+  it('keeps listening and joins phrases sent one at a time (Android)', async () => {
+    const mod = fakeModule();
+    const r = createNativeRecognizer(mod);
+    const p = r.listen({ lang: 'en-US', long: { maxMs: 120_000 } });
+    await tick();
+    expect(mod.started[0]).toMatchObject({ continuous: true });
+    mod.handlers.result!({ isFinal: true, results: [{ transcript: 'I learned to drive' }] });
+    mod.handlers.end!();
+    expect(mod.started).toHaveLength(2);
+    mod.handlers.result!({ isFinal: true, results: [{ transcript: 'two years ago' }] });
+    r.stop();
+    mod.handlers.end!();
+    await expect(p).resolves.toBe('I learned to drive two years ago');
+  });
+
+  it('does not repeat text when every result holds the whole answer (iOS)', async () => {
+    const mod = fakeModule();
+    const r = createNativeRecognizer(mod);
+    const p = r.listen({ lang: 'en-US', long: { maxMs: 120_000 } });
+    await tick();
+    mod.handlers.result!({ isFinal: true, results: [{ transcript: 'I learned to drive' }] });
+    mod.handlers.result!({
+      isFinal: false,
+      results: [{ transcript: 'I learned to drive two years ago' }],
+    });
+    r.stop();
+    mod.handlers.end!();
+    await expect(p).resolves.toBe('I learned to drive two years ago');
+  });
+});

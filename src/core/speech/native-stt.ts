@@ -46,6 +46,8 @@ export interface NativeResultEvent {
 
 /** Longest a single attempt may take before it is stopped and what was heard is used. */
 const MAX_LISTEN_MS = 15_000;
+/** A long answer restarts a session the recognizer ended; this many times at most. */
+const MAX_RESTARTS = 20;
 
 function errorCode(native: string): SpeechErrorCode {
   switch (native) {
@@ -71,6 +73,8 @@ export function createNativeRecognizer(
   // Cloud recognition sends audio to Apple or Google: only when the learner has allowed it.
   const usable = () =>
     mod.isRecognitionAvailable() && (mod.supportsOnDeviceRecognition() || allowCloud());
+  /** Ends the listening in progress for good (a long answer would otherwise restart). */
+  let stopCurrent: (() => void) | null = null;
 
   return {
     async isAvailable() {
@@ -84,21 +88,40 @@ export function createNativeRecognizer(
     listen(opts: ListenOptions) {
       return new Promise<string>((resolve, reject) => {
         const subs: Subscription[] = [];
+        const long = !!opts.long;
+        // A long answer: phrases already finished, and the one being said now.
+        let committed = '';
         let heard = '';
         let done = false;
+        let stopping = false;
+        let restarts = 0;
         let timer: ReturnType<typeof setTimeout> | undefined;
 
+        const all = () => [committed, heard].filter((s) => s.trim()).join(' ');
         const finish = (fn: () => void) => {
           if (done) return;
           done = true;
           if (timer) clearTimeout(timer);
           subs.forEach((s) => s.remove());
+          stopCurrent = null;
           fn();
         };
         const finishWithHeard = () =>
-          finish(() =>
-            heard.trim() ? resolve(heard.trim()) : reject(new SpeechError('no-speech')),
-          );
+          finish(() => {
+            const text = all().trim();
+            if (text) resolve(text);
+            else reject(new SpeechError('no-speech'));
+          });
+
+        const startSession = () =>
+          mod.start({
+            lang: opts.lang,
+            interimResults: true,
+            continuous: long,
+            contextualStrings: opts.contextualStrings,
+            requiresOnDeviceRecognition: mod.supportsOnDeviceRecognition(),
+            addsPunctuation: false,
+          });
 
         void (async () => {
           try {
@@ -108,28 +131,47 @@ export function createNativeRecognizer(
 
             subs.push(
               mod.addListener('result', (e) => {
-                heard = e.results[0]?.transcript ?? heard;
-                if (e.isFinal) finishWithHeard();
-                else if (heard) opts.onInterim?.(heard);
+                const text = e.results[0]?.transcript ?? '';
+                if (!long) {
+                  heard = text || heard;
+                  if (e.isFinal) finishWithHeard();
+                  else if (heard) opts.onInterim?.(heard);
+                  return;
+                }
+                // iOS repeats the whole answer in every result; Android sends one phrase at a time.
+                heard =
+                  committed && text.startsWith(committed)
+                    ? text.slice(committed.length).trim()
+                    : text;
+                if (e.isFinal) {
+                  committed = all();
+                  heard = '';
+                }
+                if (all()) opts.onInterim?.(all());
               }),
               mod.addListener('error', (e) => {
                 const code = errorCode(e.error);
                 // Some recognizers report "no speech" after a partial result: keep what we have.
-                if (code === 'no-speech' && heard.trim()) finishWithHeard();
-                else finish(() => reject(new SpeechError(code, e.message)));
+                // In a long answer a pause is normal; the session that ended is started again.
+                if (code === 'no-speech' && (long || all().trim())) {
+                  if (!long) finishWithHeard();
+                } else finish(() => reject(new SpeechError(code, e.message)));
               }),
-              mod.addListener('end', finishWithHeard),
+              mod.addListener('end', () => {
+                if (long && !stopping && restarts++ < MAX_RESTARTS) {
+                  committed = all();
+                  heard = '';
+                  startSession();
+                } else finishWithHeard();
+              }),
             );
 
-            mod.start({
-              lang: opts.lang,
-              interimResults: true,
-              continuous: false,
-              contextualStrings: opts.contextualStrings,
-              requiresOnDeviceRecognition: mod.supportsOnDeviceRecognition(),
-              addsPunctuation: false,
-            });
-            timer = setTimeout(() => mod.stop(), MAX_LISTEN_MS);
+            stopCurrent = () => {
+              stopping = true;
+              mod.stop();
+            };
+            startSession();
+            timer = setTimeout(() => stopCurrent?.(), opts.long?.maxMs ?? MAX_LISTEN_MS);
           } catch (e) {
             finish(() =>
               reject(e instanceof SpeechError ? e : new SpeechError('failed', String(e))),
@@ -141,7 +183,8 @@ export function createNativeRecognizer(
 
     stop() {
       try {
-        mod.stop();
+        if (stopCurrent) stopCurrent();
+        else mod.stop();
       } catch {
         // Nothing is being recognized: nothing to stop.
       }

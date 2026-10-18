@@ -52,6 +52,8 @@ export function SpeakView({
   }, []);
 
   const sample = ex.type === 'speak_repeat' ? ex.text : ex.samples[0]!;
+  // An exam-style long turn: listening goes on through pauses until the learner stops it.
+  const timer = ex.type === 'speak_repeat' ? undefined : ex.timer;
 
   const listen = async () => {
     setMode('listening');
@@ -62,6 +64,7 @@ export function SpeakView({
         lang: 'en-US',
         contextualStrings: [sample],
         onInterim: setInterim,
+        long: timer ? { maxMs: (timer.speak + 15) * 1000 } : undefined,
       });
       setHeard(transcript);
       onChange({ kind: 'speech', transcript });
@@ -111,9 +114,7 @@ export function SpeakView({
         </>
       )}
 
-      {ex.type !== 'speak_repeat' && ex.timer && !verdict && (
-        <ExamTimer prepare={ex.timer.prepare} speak={ex.timer.speak} />
-      )}
+      {timer && !verdict && <ExamTimer prepare={timer.prepare} speak={timer.speak} />}
 
       {!verdict && mode === 'choose' && (
         <View style={common.stack}>
@@ -149,7 +150,12 @@ export function SpeakView({
           <AppText variant="body" color="textMuted" align="center" aria-live="polite">
             {interim ? `Слышу: «${interim}»` : 'Слушаю…'}
           </AppText>
-          <Button label="Хватит" variant="secondary" compact onPress={() => recognizer.stop()} />
+          <Button
+            label={timer ? 'Закончить ответ' : 'Хватит'}
+            variant="secondary"
+            compact
+            onPress={() => recognizer.stop()}
+          />
         </View>
       )}
       {heard !== null && (

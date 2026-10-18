@@ -106,3 +106,49 @@ describe('web recognizer', () => {
     expect(last!.stopped).toBe(1);
   });
 });
+
+describe('web recognizer, long answer', () => {
+  it('keeps listening through pauses and joins the sessions the browser ends', async () => {
+    const r = createWebRecognizer(FakeRecognition, () => true);
+    const interim: string[] = [];
+    const p = r.listen({
+      lang: 'en-US',
+      long: { maxMs: 120_000 },
+      onInterim: (t) => interim.push(t),
+    });
+    const first = last!;
+    expect(first.continuous).toBe(true);
+    first.onresult!(result([{ text: "I'd like to talk about my driving test", final: true }]));
+    // The browser ends the session on its own: a new one starts, the text so far is kept.
+    first.onend!();
+    const second = last!;
+    expect(second).not.toBe(first);
+    expect(second.started).toBe(1);
+    second.onresult!(result([{ text: 'which I took two years ago', final: false }]));
+    expect(interim.at(-1)).toBe(
+      "I'd like to talk about my driving test which I took two years ago",
+    );
+    r.stop();
+    await expect(p).resolves.toBe(
+      "I'd like to talk about my driving test which I took two years ago",
+    );
+    expect(last).toBe(second);
+  });
+
+  it('does not end at a pause, only when stopped or when the time is up', async () => {
+    jest.useFakeTimers();
+    try {
+      const p = createWebRecognizer(FakeRecognition, () => true).listen({
+        lang: 'en-US',
+        long: { maxMs: 60_000 },
+      });
+      const rec = last!;
+      rec.onerror!({ error: 'no-speech' });
+      rec.onresult!(result([{ text: 'Well, let me think', final: true }]));
+      jest.advanceTimersByTime(60_000);
+      await expect(p).resolves.toBe('Well, let me think');
+    } finally {
+      jest.useRealTimers();
+    }
+  });
+});
