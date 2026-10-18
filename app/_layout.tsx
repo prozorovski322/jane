@@ -1,8 +1,3 @@
-import { Unbounded_600SemiBold } from '@expo-google-fonts/unbounded/600SemiBold';
-import { GolosText_400Regular } from '@expo-google-fonts/golos-text/400Regular';
-import { GolosText_500Medium } from '@expo-google-fonts/golos-text/500Medium';
-import { GolosText_600SemiBold } from '@expo-google-fonts/golos-text/600SemiBold';
-import { GolosText_700Bold } from '@expo-google-fonts/golos-text/700Bold';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
@@ -21,6 +16,7 @@ import { bindSettings, useSettings } from '@/features/settings/store';
 import { usePageTitle } from '@/lib/pageTitle';
 import { AppText } from '@/ui/components/AppText';
 import { Button } from '@/ui/components/Button';
+import { FONT_FILES } from '@/ui/theme/fontFiles';
 import { ThemeProvider, useTheme } from '@/ui/theme/ThemeProvider';
 
 void SplashScreen.preventAutoHideAsync();
@@ -127,13 +123,7 @@ export default function RootLayout() {
   const theme = useSettings((s) => s.theme);
   const fontScale = useSettings((s) => s.fontScale);
   const { boot, retry } = useBoot();
-  const [fontsLoaded, fontError] = useFonts({
-    Unbounded_600SemiBold,
-    GolosText_400Regular,
-    GolosText_500Medium,
-    GolosText_600SemiBold,
-    GolosText_700Bold,
-  });
+  const [fontsLoaded, fontError] = useFonts(FONT_FILES);
   // If fonts fail to load the app still works with system fonts. The website does not wait for
   // them at all: text shows in a system font and switches when the fonts arrive.
   const fontsDone = Platform.OS === 'web' || fontsLoaded || !!fontError;
