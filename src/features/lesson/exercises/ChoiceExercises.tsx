@@ -3,7 +3,7 @@
  * minimal pairs, word stress.
  */
 import { useEffect, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { Platform, StyleSheet, View } from 'react-native';
 
 import { tts } from '@/core/speech/tts';
 import { AppText } from '@/ui/components/AppText';
@@ -29,6 +29,30 @@ function OptionList({
 }) {
   const order = useOrder(options.length, seed);
   const [selected, setSelected] = useState<number | null>(null);
+  const choose = (i: number) => {
+    setSelected(i);
+    onSelect(i);
+  };
+
+  // On a computer the numbers shown next to the options pick them: 1 for the first, and so on.
+  useEffect(() => {
+    if (Platform.OS !== 'web' || typeof window === 'undefined' || checked) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      const target = e.target instanceof HTMLElement ? e.target : null;
+      if (target?.closest('input, textarea, [contenteditable="true"]')) return;
+      const pos = Number(e.key) - 1;
+      const i = order[pos];
+      if (!Number.isInteger(pos) || i === undefined) return;
+      e.preventDefault();
+      choose(i);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+    // `choose` only calls setters and `onSelect`, which belongs to this exercise.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [order, checked]);
+
   return (
     <View style={common.stack} role="radiogroup">
       {order.map((i, pos) => (
@@ -38,10 +62,7 @@ function OptionList({
           label={options[i]}
           state={optionState(i, selected, correct, checked)}
           disabled={checked}
-          onPress={() => {
-            setSelected(i);
-            onSelect(i);
-          }}
+          onPress={() => choose(i)}
         />
       ))}
     </View>
@@ -134,7 +155,7 @@ export function PictureChoiceView({
       <View style={common.stack}>
         <Instruction>Выберите картинку</Instruction>
         <Prompt text={target?.en ?? ex.word} lang="en" />
-        <View style={local.grid}>
+        <View style={local.grid} role="radiogroup">
           {order.map((i) => (
             <Choice
               key={i}
@@ -190,7 +211,7 @@ export function MinimalPairView({
       <View style={local.center}>
         <SpeakButtons text={said} large label="Прослушать ещё раз" />
       </View>
-      <View style={local.grid}>
+      <View style={local.grid} role="radiogroup">
         {order.map((i) => (
           <Choice
             key={i}

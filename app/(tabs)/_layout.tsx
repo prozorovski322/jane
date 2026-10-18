@@ -1,15 +1,15 @@
 import { Redirect } from 'expo-router';
 import { Tabs } from 'expo-router/js-tabs';
-
-import { useOnboarding } from '@/features/onboarding/store';
 import { useWindowDimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { Icon, type IconName } from '@/ui/components/Icon';
+import { useOnboarding } from '@/features/onboarding/store';
+import { Icon } from '@/ui/components/Icon';
+import { SideMenu, type SideMenuTab } from '@/ui/components/SideMenu';
 import { useTheme } from '@/ui/theme/ThemeProvider';
 import { fonts } from '@/ui/theme/tokens';
 
-const TABS: { name: string; title: string; icon: IconName }[] = [
+const TABS: SideMenuTab[] = [
   { name: 'index', title: 'Путь', icon: 'path' },
   { name: 'today', title: 'Сегодня', icon: 'sun' },
   { name: 'practice', title: 'Практика', icon: 'target' },
@@ -30,35 +30,21 @@ export default function TabsLayout() {
   if (onboarded === false) return <Redirect href="/onboarding" />;
   return (
     <Tabs
+      tabBar={sidebar ? (props) => <SideMenu {...props} tabs={TABS} /> : undefined}
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: colors.primary,
         tabBarInactiveTintColor: colors.textMuted,
-        ...(sidebar
-          ? {
-              tabBarPosition: 'left',
-              tabBarLabelPosition: 'beside-icon',
-              tabBarActiveBackgroundColor: colors.primarySoft,
-              tabBarStyle: {
-                backgroundColor: colors.surface,
-                borderRightColor: colors.border,
-                width: 220,
-                paddingTop: 24 + insets.top,
-                paddingHorizontal: 12,
-              },
-              tabBarLabelStyle: { fontFamily: fonts.medium, fontSize: 16, marginLeft: 16 },
-            }
-          : {
-              // Explicit height: Golos Text's line height does not fit the default 49pt bar.
-              tabBarStyle: {
-                backgroundColor: colors.surface,
-                borderTopColor: colors.border,
-                height: 62 + insets.bottom,
-                paddingTop: 6,
-                paddingBottom: 6 + insets.bottom,
-              },
-              tabBarLabelStyle: { fontFamily: fonts.medium, fontSize: 12, lineHeight: 16 },
-            }),
+        tabBarPosition: sidebar ? 'left' : 'bottom',
+        // Explicit height and line height: Golos Text's descenders do not fit the default bar.
+        tabBarStyle: {
+          backgroundColor: colors.surface,
+          borderTopColor: colors.border,
+          height: 68 + insets.bottom,
+          paddingTop: 6,
+          paddingBottom: 8 + insets.bottom,
+        },
+        tabBarLabelStyle: { fontFamily: fonts.medium, fontSize: 12, lineHeight: 18 },
         sceneStyle: { backgroundColor: colors.background },
       }}
     >

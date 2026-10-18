@@ -13,6 +13,11 @@ export interface LessonSession {
   texts: Text[];
   /** Unit tests: minimum mean score to pass. */
   passScore?: number;
+  /**
+   * Words of the unit this lesson teaches, in the order exercises first use them: a vocabulary
+   * lesson introduces each one with a card before its first exercise (first pass only).
+   */
+  introWords?: string[];
 }
 
 export function sessionForLesson(id: string): LessonSession | null {
@@ -26,7 +31,17 @@ export function sessionForLesson(id: string): LessonSession | null {
     exercises: lesson.exercises,
     texts: lesson.unit.texts,
     passScore: lesson.isTest ? lesson.unit.test.passScore : undefined,
+    introWords:
+      lesson.isTest || lesson.unit.lessons.find((l) => l.id === id)?.kind !== 'vocabulary'
+        ? undefined
+        : newWordsOf(lesson.exercises, lesson.unit.wordIds),
   };
+}
+
+/** The unit's own words in the order the exercises first use them. */
+export function newWordsOf(exercises: readonly Exercise[], unitWords: readonly string[]): string[] {
+  const own = new Set(unitWords);
+  return [...new Set(exercises.flatMap((e) => e.words))].filter((w) => own.has(w));
 }
 
 /** A lesson or unit test, after loading its unit (the website downloads units on demand). */

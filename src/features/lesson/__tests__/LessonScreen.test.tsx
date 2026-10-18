@@ -1,14 +1,25 @@
 import { render, screen, userEvent } from '@testing-library/react-native';
 
+import { getLexicon } from '@/core/content';
+
 import type { CompletionInfo } from '../../progress/service';
 import type { LessonSummary } from '../engine';
 import { LessonScreen } from '../LessonScreen';
 import { sessionForLesson, type LessonSession } from '../session';
 
 const press = (user: ReturnType<typeof userEvent.setup>, name: string | RegExp) =>
-  user.press(screen.getByRole('button', { name }));
+  user.press(screen.queryByRole('radio', { name }) ?? screen.getByRole('button', { name }));
 
-const lesson1 = sessionForLesson('a1.u01.l01')!;
+const withCards = sessionForLesson('a1.u01.l01')!;
+/** The first exercise of the lesson that uses a word new in this unit (it gets a card). */
+const withNew = withCards.exercises.find((e) =>
+  e.words.some((w) => withCards.introWords!.includes(w)),
+)!;
+const firstWithNewWord: LessonSession = { ...withCards, exercises: [withNew] };
+const newWord = getLexicon().get(
+  withNew.words.find((w) => withCards.introWords!.includes(w))!,
+)!; /** The first lesson without its new-word cards (tested separately). */
+const lesson1: LessonSession = { ...withCards, introWords: undefined };
 
 /** A one-exercise session: the picture exercise ("hello"). */
 const tiny: LessonSession = { ...lesson1, exercises: lesson1.exercises.slice(0, 1) };
@@ -59,6 +70,24 @@ describe('LessonScreen', () => {
     expect(screen.getByText('Этим жестом машут при встрече.')).toBeOnTheScreen();
   });
 
+  it('introduces a new word with a card before its first exercise', async () => {
+    const user = userEvent.setup();
+    await render(<LessonScreen session={firstWithNewWord} onExit={jest.fn()} />);
+    expect(screen.getByText('Новое слово')).toBeOnTheScreen();
+    expect(screen.getByText(newWord.en)).toBeOnTheScreen();
+    expect(screen.queryByRole('button', { name: 'Проверить' })).not.toBeOnTheScreen();
+    await press(user, 'Понятно, дальше');
+    expect(screen.queryByText('Новое слово')).not.toBeOnTheScreen();
+    expect(screen.getByRole('button', { name: 'Проверить' })).toBeOnTheScreen();
+  });
+
+  it('lets the learner skip the new-word cards', async () => {
+    const user = userEvent.setup();
+    await render(<LessonScreen session={firstWithNewWord} onExit={jest.fn()} />);
+    await press(user, 'Пропустить новые слова');
+    expect(screen.queryByText('Новое слово')).not.toBeOnTheScreen();
+    expect(screen.getByRole('button', { name: 'Проверить' })).toBeOnTheScreen();
+  });
   it('asks before leaving and saves nothing', async () => {
     const user = userEvent.setup();
     const onExit = jest.fn();

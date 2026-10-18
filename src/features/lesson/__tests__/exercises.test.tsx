@@ -37,7 +37,10 @@ async function show(exercise: Exercise, context: ExerciseContext = ctx) {
 }
 
 const press = (name: string | RegExp) =>
-  userEvent.setup().press(screen.getByRole('button', { name }));
+  // Answer options are radios; other controls (pairs, sentence words, actions) are buttons.
+  userEvent
+    .setup()
+    .press(screen.queryByRole('radio', { name }) ?? screen.getByRole('button', { name }));
 
 describe('exercise views report responses that check correctly', () => {
   it('translate_choice', async () => {
@@ -119,8 +122,8 @@ describe('exercise views report responses that check correctly', () => {
         q.kind === 'mcq'
           ? q.options[q.answer]!
           : { true: 'Верно', false: 'Неверно', not_given: 'Нет информации' }[q.answer];
-      const buttons = screen.getAllByRole('button', { name: label });
-      // True/false buttons repeat per question; take the one of question i.
+      const buttons = screen.getAllByRole('radio', { name: label });
+      // True/false options repeat per question; take the one of question i.
       const tfnIndex = ex.questions.slice(0, i).filter((x) => x.kind === 'tfn').length;
       await userEvent.setup().press(q.kind === 'mcq' ? buttons[0]! : buttons[tfnIndex]!);
     }

@@ -8,7 +8,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useCallback, useEffect, useState } from 'react';
-import { Platform, StyleSheet, View } from 'react-native';
+import { Platform, StyleSheet, Text, useColorScheme, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { configureNotifications, syncReminders } from '@/core/notifications/reminders';
@@ -18,6 +18,7 @@ import { initDatabase } from '@/core/storage';
 import { useOnboarding } from '@/features/onboarding/store';
 import { useProgress } from '@/features/progress/store';
 import { bindSettings, useSettings } from '@/features/settings/store';
+import { usePageTitle } from '@/lib/pageTitle';
 import { AppText } from '@/ui/components/AppText';
 import { Button } from '@/ui/components/Button';
 import { ThemeProvider, useTheme } from '@/ui/theme/ThemeProvider';
@@ -82,6 +83,7 @@ function BootError({ message, onRetry }: { message: string; onRetry: () => void 
 
 function ThemedStack() {
   const { colors, scheme } = useTheme();
+  usePageTitle();
   return (
     <>
       <Stack
@@ -110,6 +112,17 @@ function ThemedStack() {
   );
 }
 
+function WebLoading() {
+  const dark = useColorScheme() !== 'light';
+  return (
+    <View style={[styles.center, { backgroundColor: dark ? '#14110E' : '#FBF8F3' }]}>
+      <Text style={{ color: dark ? '#5FC2BC' : '#2B8A84', fontSize: 17, fontWeight: '600' }}>
+        Загружаем курс…
+      </Text>
+    </View>
+  );
+}
+
 export default function RootLayout() {
   const theme = useSettings((s) => s.theme);
   const fontScale = useSettings((s) => s.fontScale);
@@ -121,15 +134,18 @@ export default function RootLayout() {
     GolosText_600SemiBold,
     GolosText_700Bold,
   });
-  // If fonts fail to load the app still works with system fonts.
-  const fontsDone = fontsLoaded || !!fontError;
+  // If fonts fail to load the app still works with system fonts. The website does not wait for
+  // them at all: text shows in a system font and switches when the fonts arrive.
+  const fontsDone = Platform.OS === 'web' || fontsLoaded || !!fontError;
   const ready = fontsDone && boot.status !== 'loading';
 
   useEffect(() => {
     if (ready) void SplashScreen.hideAsync();
   }, [ready]);
 
-  if (!ready) return null;
+  // The website has no native splash screen: while the database opens, say so instead of a blank
+  // page (index.html shows the same while the script downloads).
+  if (!ready) return Platform.OS === 'web' ? <WebLoading /> : null;
 
   return (
     <GestureHandlerRootView style={styles.flex}>

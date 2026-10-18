@@ -47,7 +47,8 @@ export default function LessonRoute() {
 
   return (
     <LessonScreen
-      session={session}
+      // New-word cards are for the first pass; a repeat goes straight to the exercises.
+      session={repeat && session ? { ...session, introWords: undefined } : session}
       skip={skip ?? undefined}
       startAt={startAt}
       // A lesson opened in the middle (`?start=`) is a preview: it would count as completed.

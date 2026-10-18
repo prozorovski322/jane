@@ -1,11 +1,18 @@
-# Read by Netlify and Cloudflare Pages. expo-sqlite in the browser needs SharedArrayBuffer, which
-# only cross-origin isolated pages get. require-corp (not credentialless) because Safari supports
-# only require-corp; the site loads nothing from other origins.
+# Read by Netlify and Cloudflare Pages, and by scripts/serve-web.mjs for local checks.
+#
+# expo-sqlite in the browser needs SharedArrayBuffer, which only cross-origin isolated pages get.
+# require-corp (not credentialless) because Safari supports only require-corp; the site loads
+# nothing from other origins.
+#
+# Content-Security-Policy: everything comes from this site. 'wasm-unsafe-eval' lets SQLite's
+# WebAssembly run; 'unsafe-inline' styles are needed because react-native-web writes its styles
+# into the page at run time. Scripts stay strict: no inline scripts, no eval.
 /*
   Cross-Origin-Embedder-Policy: require-corp
   Cross-Origin-Opener-Policy: same-origin
   X-Content-Type-Options: nosniff
   Referrer-Policy: no-referrer
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self'; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
 
 # The service worker must be checked for updates on every visit.
 /sw.js

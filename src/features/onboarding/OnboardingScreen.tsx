@@ -4,7 +4,7 @@
  */
 import { router } from 'expo-router';
 import { useState } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, useWindowDimensions, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import {
@@ -64,13 +64,17 @@ function StepScreen({
   step: Step;
 }) {
   const { colors, space } = useTheme();
+  const { width } = useWindowDimensions();
+  // On a wide screen the step is a card in the middle: progress, text and button stay together
+  // instead of the bar spanning the screen and the button sitting at its very bottom.
+  const wide = width >= 900;
   const index = STEPS.indexOf(step);
   return (
     <SafeAreaView
-      style={[styles.flex, { backgroundColor: colors.background }]}
+      style={[styles.flex, { backgroundColor: colors.background }, wide && styles.centered]}
       edges={['top', 'bottom']}
     >
-      <View style={[styles.header, { paddingHorizontal: space.md }]}>
+      <View style={[styles.header, styles.column, { paddingHorizontal: space.md }]}>
         {onBack ? (
           <IconButton icon="back" label="Назад" color="text" onPress={onBack} />
         ) : (
@@ -81,7 +85,10 @@ function StepScreen({
           label={`Шаг ${index + 1} из ${STEPS.length}`}
         />
       </View>
-      <ScrollView contentContainerStyle={[styles.content, { padding: space.lg, gap: space.md }]}>
+      <ScrollView
+        style={wide && styles.shrink}
+        contentContainerStyle={[styles.content, { padding: space.lg, gap: space.md }]}
+      >
         <AppText variant="display" role="heading">
           {title}
         </AppText>
@@ -364,6 +371,9 @@ const styles = StyleSheet.create({
   header: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingVertical: 8 },
   spacer: { width: 48, height: 48 },
   content: { width: '100%', maxWidth: 560, alignSelf: 'center' },
+  column: { width: '100%', maxWidth: 560, alignSelf: 'center' },
+  centered: { justifyContent: 'center' },
+  shrink: { flexGrow: 0 },
   list: { gap: 10 },
   footer: { gap: 8, width: '100%', maxWidth: 560, alignSelf: 'center' },
 });

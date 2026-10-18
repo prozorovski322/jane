@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { View } from 'react-native';
 
 import { clearAiKey } from '@/core/checker/ai-key';
+import { canStoreCourse, storeWholeCourse, type OfflineProgress } from '@/core/offline';
 import { IS_WEB } from '@/core/platform';
 import { syncReminders } from '@/core/notifications/reminders';
 import { requestNotifications } from '@/core/permissions';
@@ -289,6 +290,58 @@ function Data() {
   );
 }
 
+/** Website only: download every unit now, so the whole course works without a connection. */
+function OfflineCourse() {
+  const [progress, setProgress] = useState<OfflineProgress | null>(null);
+  const [state, setState] = useState<'idle' | 'busy' | 'done' | 'failed'>('idle');
+  const available = canStoreCourse();
+  const start = async () => {
+    setState('busy');
+    try {
+      const result = await storeWholeCourse(setProgress);
+      setState(result.failed ? 'failed' : 'done');
+    } catch {
+      setState('failed');
+    }
+  };
+  return (
+    <Card>
+      <SettingGroup>
+        <AppText variant="small" color="textMuted">
+          Сайт уже работает без интернета, но уроки сохраняются по мере того, как вы их открываете.
+          Можно сохранить весь курс сразу — это около 4 МБ.
+        </AppText>
+        <Button
+          label={state === 'done' ? 'Весь курс сохранён' : 'Сохранить весь курс'}
+          icon={state === 'done' ? 'check' : 'arrow-right'}
+          variant="secondary"
+          compact
+          disabled={!available || state === 'busy' || state === 'done'}
+          loading={state === 'busy'}
+          onPress={() => void start()}
+        />
+        {!available && (
+          <AppText variant="small" color="textMuted">
+            Станет доступно после перезагрузки страницы.
+          </AppText>
+        )}
+        {state === 'busy' && progress && (
+          <AppText variant="small" aria-live="polite">
+            Сохранено {progress.done} из {progress.total} юнитов…
+          </AppText>
+        )}
+        {state === 'failed' && (
+          <AppText variant="small" aria-live="polite">
+            Часть юнитов не скачалась
+            {progress?.failed ? ` (${progress.failed})` : ''}. Проверьте подключение и попробуйте
+            ещё раз.
+          </AppText>
+        )}
+      </SettingGroup>
+    </Card>
+  );
+}
+
 export function SettingsScreen() {
   const s = useSettings();
   const [minutes, setMinutes] = useKvState<number>('goal.dailyMinutes', DEFAULT_MINUTES);
@@ -388,6 +441,12 @@ export function SettingsScreen() {
 
       <SectionTitle>Данные</SectionTitle>
       <Data />
+      {IS_WEB && (
+        <>
+          <SectionTitle>Без интернета</SectionTitle>
+          <OfflineCourse />
+        </>
+      )}
 
       <SectionTitle>О приложении</SectionTitle>
       <ListRow

@@ -38,7 +38,9 @@ afterEach(async () => {
 });
 
 const press = (name: string | RegExp) =>
-  userEvent.setup().press(screen.getByRole('button', { name }));
+  userEvent
+    .setup()
+    .press(screen.queryByRole('radio', { name }) ?? screen.getByRole('button', { name }));
 
 describe('onboarding', () => {
   it('a complete beginner skips the test and finishes with the chosen settings', async () => {

@@ -76,6 +76,7 @@ export function MatchPairsView({ exercise: ex, onChange, seed }: ExerciseViewPro
             <Choice
               key={i}
               label={ex.pairs[i]!.en}
+              role="button"
               compact
               state={state(i, 'en')}
               disabled={matched.has(i)}
@@ -91,6 +92,7 @@ export function MatchPairsView({ exercise: ex, onChange, seed }: ExerciseViewPro
             <Choice
               key={i}
               compact
+              role="button"
               label={ex.pairs[i]!.ru}
               state={state(i, 'ru')}
               disabled={matched.has(i)}
@@ -155,6 +157,7 @@ export function ErrorCorrectionView({
             <Choice
               key={i}
               label={tok}
+              role="button"
               state={state}
               disabled={!!verdict}
               compact

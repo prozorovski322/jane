@@ -19,6 +19,11 @@ export interface ChoiceProps {
   index?: number;
   /** Smaller text and padding for narrow columns (match pairs, sentence words). */
   compact?: boolean;
+  /**
+   * "radio" (default): one option of a radiogroup, read as selected or not. "button": a toggle
+   * outside a group of options (match pairs, the words of a sentence).
+   */
+  role?: 'radio' | 'button';
   style?: StyleProp<ViewStyle>;
   testID?: string;
 }
@@ -32,6 +37,7 @@ export function Choice({
   disabled,
   index,
   compact,
+  role = 'radio',
   style,
   testID,
 }: ChoiceProps) {
@@ -50,9 +56,11 @@ export function Choice({
   return (
     <PressableScale
       testID={testID}
-      role="button"
+      role={role}
       aria-label={`${label ?? ''}${stateLabel}`}
-      aria-selected={state === 'selected'}
+      {...(role === 'radio'
+        ? { 'aria-checked': state === 'selected' }
+        : { 'aria-pressed': state === 'selected' })}
       aria-disabled={disabled}
       disabled={disabled}
       onPress={onPress}

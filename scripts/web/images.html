@@ -1,0 +1,89 @@
+<!doctype html>
+<!--
+  Source of the website's PNG images (icons, link preview), rendered by scripts/web-images.mjs.
+  ?kind=icon&size=512 draws an app icon, ?kind=og the 1200×630 link preview.
+-->
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      @font-face {
+        font-family: 'Unbounded';
+        src: url('../../node_modules/@expo-google-fonts/unbounded/600SemiBold/Unbounded_600SemiBold.ttf');
+      }
+      @font-face {
+        font-family: 'Golos';
+        src: url('../../node_modules/@expo-google-fonts/golos-text/500Medium/GolosText_500Medium.ttf');
+      }
+      html,
+      body {
+        margin: 0;
+        background: #14110e;
+        overflow: hidden;
+      }
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #14110e;
+      }
+      .og {
+        width: 1200px;
+        height: 630px;
+        box-sizing: border-box;
+        padding: 80px 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 28px;
+        color: #fbf8f3;
+        font-family: 'Golos', sans-serif;
+        background: radial-gradient(circle at 85% 20%, #1f3b39 0, #14110e 55%);
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+      }
+      h1 {
+        margin: 0;
+        font:
+          600 120px/1 'Unbounded',
+          sans-serif;
+      }
+      .lead {
+        font-size: 50px;
+        line-height: 1.2;
+      }
+      .muted {
+        font-size: 32px;
+        color: #b9b1a6;
+      }
+      .accent {
+        color: #5fc2bc;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const p = new URLSearchParams(location.search);
+      const mascot = (size) =>
+        `<svg width="${size}" height="${size}" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 8h36a10 10 0 0 1 10 10v20a10 10 0 0 1-10 10H26L12 58l3-10h-1A10 10 0 0 1 4 38V18A10 10 0 0 1 14 8z" fill="#5FC2BC"/>
+          <path d="M19 26q4-5 8 0M37 26q4-5 8 0" stroke="#14110E" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <path d="M24 35q8 7 16 0" stroke="#14110E" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        </svg>`;
+      if (p.get('kind') === 'og') {
+        document.body.innerHTML = `<div class="og">
+          <div class="row">${mascot(150)}<h1>Jane</h1></div>
+          <div class="lead">Английский <span class="accent">с нуля до C1</span></div>
+          <div class="muted">Слова, грамматика, аудирование, чтение, говорение и письмо.<br>Бесплатно, без регистрации и рекламы.</div>
+        </div>`;
+      } else {
+        const size = Number(p.get('size') ?? 512);
+        // The mascot fills 70% of the square: inside the safe zone of maskable icons.
+        document.body.innerHTML = `<div class="icon" style="width:${size}px;height:${size}px">${mascot(Math.round(size * 0.7))}</div>`;
+      }
+    </script>
+  </body>
+</html>

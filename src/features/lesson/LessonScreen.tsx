@@ -16,6 +16,7 @@ import { useTheme } from '@/ui/theme/ThemeProvider';
 
 import type { CompletionInfo } from '../progress/service';
 import { FeedbackPanel } from './components/FeedbackPanel';
+import { WordIntro } from './components/WordIntro';
 import { LessonSummary, type SaveState } from './components/LessonSummary';
 import {
   canSkip,
@@ -29,6 +30,9 @@ import {
 import { ExerciseView } from './exercises/ExerciseView';
 import type { ExerciseContext } from './exercises/types';
 import type { LessonSession } from './session';
+
+/** DOM id of the exercise area on the web (keyboard handling). */
+const EXERCISE_AREA = 'lesson-exercise';
 
 const reducer = makeReducer({ isWord: isCourseWord, wordLabel: (id) => getLexicon().get(id)?.en });
 
@@ -101,6 +105,19 @@ function LessonRunner({
 
   const summary = useMemo(() => (state.phase === 'done' ? summarize(state) : null), [state]);
 
+  // New words: before the first exercise that uses a word, a card introduces it.
+  const [introduced, setIntroduced] = useState<ReadonlySet<string>>(() => new Set());
+  const introWord = useMemo(() => {
+    if (!exercise || state.phase !== 'answering' || item?.retry || !session.introWords) return null;
+    const id = exercise.words.find((w) => session.introWords!.includes(w) && !introduced.has(w));
+    return id ? (getLexicon().get(id) ?? null) : null;
+  }, [exercise, state.phase, item?.retry, session.introWords, introduced]);
+  const nextIntro = useCallback(
+    () => introWord && setIntroduced((s) => new Set(s).add(introWord.id)),
+    [introWord],
+  );
+  const skipIntros = () => setIntroduced(new Set(session.introWords));
+
   // State changes only after the await: "idle" with a summary already reads as "saving".
   const persist = useCallback(
     async (s: Summary) => {
@@ -123,25 +140,38 @@ function LessonRunner({
     void persist(summary);
   }, [summary, persist]);
 
-  // On a computer, Enter checks the answer and moves on. Not in the essay field (Enter is a new
-  // line there) and not on a focused button, which handles Enter itself.
+  // On a computer, Enter checks the answer and moves on. After a click on an option the focus stays
+  // on it: Enter there is taken before the option sees it (capture phase), so it checks instead of
+  // pressing the option again. The essay field keeps Enter for new lines; the buttons below the
+  // exercise (Check, Continue, Close) handle Enter themselves.
   useEffect(() => {
     if (Platform.OS !== 'web' || typeof window === 'undefined') return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== 'Enter' || e.shiftKey || e.isComposing || confirmExit) return;
       const target = e.target instanceof HTMLElement ? e.target : null;
-      if (target?.tagName === 'TEXTAREA' || target?.closest('button, [role="button"], a')) return;
-      if (state.phase === 'feedback') {
+      if (target?.tagName === 'TEXTAREA') return;
+      const inExercise = !!target?.closest(`#${EXERCISE_AREA}`);
+      if (!inExercise && target?.closest('button, [role="button"], a')) return;
+      if (introWord) {
         e.preventDefault();
-        dispatch({ type: 'continue' });
-      } else if (state.phase === 'answering' && pending) {
-        e.preventDefault();
-        dispatch({ type: 'answer', response: pending });
+        nextIntro();
+        return;
       }
+      const action =
+        state.phase === 'feedback'
+          ? ({ type: 'continue' } as const)
+          : state.phase === 'answering' && pending
+            ? ({ type: 'answer', response: pending } as const)
+            : null;
+      // Nothing to check yet: Enter on an option still picks it.
+      if (!action) return;
+      e.preventDefault();
+      e.stopPropagation();
+      dispatch(action);
     };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [state.phase, pending, confirmExit]);
+    window.addEventListener('keydown', onKey, true);
+    return () => window.removeEventListener('keydown', onKey, true);
+  }, [state.phase, pending, confirmExit, introWord, nextIntro]);
 
   // Leaving an exercise stops its audio.
   useEffect(() => () => void tts.stop(), [key]);
@@ -212,7 +242,7 @@ function LessonRunner({
             icon="bulb"
             label={hintOpen ? 'Скрыть подсказку' : 'Подсказка'}
             color={hintOpen ? 'xp' : 'textMuted'}
-            disabled={state.phase !== 'answering'}
+            disabled={state.phase !== 'answering' || !!introWord}
             onPress={() => {
               if (!hintOpen) dispatch({ type: 'hint' });
               setHintKey(hintOpen ? null : key);
@@ -221,6 +251,7 @@ function LessonRunner({
         </View>
 
         <ScrollView
+          nativeID={EXERCISE_AREA}
           style={styles.flex}
           contentContainerStyle={{ padding: space.md, gap: space.md, paddingBottom: space.xxxl }}
           keyboardShouldPersistTaps="handled"
@@ -230,7 +261,8 @@ function LessonRunner({
               Ещё раз: задание, где была ошибка
             </AppText>
           )}
-          {hintOpen && exercise && (
+          {introWord && <WordIntro key={introWord.id} word={introWord} />}
+          {hintOpen && exercise && !introWord && (
             <Appear
               variant="fade"
               duration={150}
@@ -240,7 +272,7 @@ function LessonRunner({
               <AppText variant="small">{exercise.hint}</AppText>
             </Appear>
           )}
-          {exercise && (
+          {exercise && !introWord && (
             <ExerciseView
               key={key}
               exercise={exercise}
@@ -265,6 +297,17 @@ function LessonRunner({
             </AppText>
             <Button label="Продолжить урок" onPress={() => setConfirmExit(false)} />
             <Button label="Выйти" variant="ghost" onPress={onExit} />
+          </View>
+        ) : introWord ? (
+          <View style={[styles.footer, { borderTopColor: colors.border, padding: space.md }]}>
+            <Button label="Понятно, дальше" icon="arrow-right" onPress={nextIntro} />
+            <Button
+              label="Пропустить новые слова"
+              variant="ghost"
+              compact
+              accessibilityHint="Карточки новых слов в этом уроке больше не появятся"
+              onPress={skipIntros}
+            />
           </View>
         ) : state.phase === 'feedback' && state.verdict && exercise ? (
           <FeedbackPanel
