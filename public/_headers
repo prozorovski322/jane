@@ -17,3 +17,7 @@
 # The service worker must be checked for updates on every visit.
 /sw.js
   Cache-Control: no-cache
+
+# Netlify does not know the .webmanifest extension.
+/manifest.webmanifest
+  Content-Type: application/manifest+json
