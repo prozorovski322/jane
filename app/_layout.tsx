@@ -13,6 +13,8 @@ import { initDatabase } from '@/core/storage';
 import { useOnboarding } from '@/features/onboarding/store';
 import { useProgress } from '@/features/progress/store';
 import { bindSettings, useSettings } from '@/features/settings/store';
+import { AccountGate } from '@/features/account/AccountGate';
+import { useAccount } from '@/features/account/store';
 import { usePageTitle } from '@/lib/pageTitle';
 import { AppText } from '@/ui/components/AppText';
 import { Button } from '@/ui/components/Button';
@@ -41,6 +43,8 @@ function useBoot() {
         unbind = await bindSettings(db);
         await useOnboarding.getState().load(db);
         await useProgress.getState().refresh(db);
+        // Reads the saved session only (no network); sync starts in the background.
+        await useAccount.getState().init();
         configureNotifications();
         void syncReminders(db);
         if (alive) setBoot({ status: 'ready' });
@@ -102,7 +106,9 @@ function ThemedStack() {
           options={{ presentation: 'fullScreenModal', gestureEnabled: false }}
         />
         <Stack.Screen name="onboarding" options={{ gestureEnabled: false }} />
+        <Stack.Screen name="auth" options={{ gestureEnabled: false }} />
       </Stack>
+      <AccountGate />
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
     </>
   );

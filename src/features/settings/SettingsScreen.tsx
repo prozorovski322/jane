@@ -3,6 +3,7 @@ import { router } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { View } from 'react-native';
 
+import { accountsEnabled } from '@/core/account/config';
 import { clearAiKey } from '@/core/checker/ai-key';
 import { canStoreCourse, storeWholeCourse, type OfflineProgress } from '@/core/offline';
 import { IS_WEB } from '@/core/platform';
@@ -26,17 +27,13 @@ import { ChipRow, SettingGroup, SwitchRow } from '@/ui/components/SettingRows';
 import { SubScreen } from '@/ui/components/SubScreen';
 import { FONT_SCALES, type SchemePreference } from '@/ui/theme/ThemeProvider';
 
-import {
-  DEFAULT_REMINDER,
-  REMINDER_KEY,
-  useOnboarding,
-  type ReminderPrefs,
-} from '../onboarding/store';
+import { DEFAULT_REMINDER, REMINDER_KEY, type ReminderPrefs } from '../onboarding/store';
 import { MINUTE_OPTIONS } from '../progress/goal';
 import { useProgress } from '../progress/store';
 import { WEEKLY_GOAL_OPTIONS } from '@/core/progress/week';
 import { pickJsonFile, saveJsonFile } from './files';
-import { loadSettings, useSettings } from './store';
+import { reloadAll } from './reload';
+import { useSettings } from './store';
 import { useKvState } from './useKvState';
 import { listEnglishVoices, type VoiceOption } from './voices';
 
@@ -58,14 +55,6 @@ const pad = (n: number) => String(n).padStart(2, '0');
 type Pending = { kind: 'import'; snap: Snapshot } | { kind: 'wipe' } | null;
 
 /** Reloads everything that was read from the database after an import or a wipe. */
-async function reloadAll() {
-  const db = getDb();
-  await loadSettings(db);
-  await useOnboarding.getState().load(db);
-  await useProgress.getState().refresh(db);
-  void syncReminders(db);
-}
-
 function Reminders() {
   const [prefs, setPrefs] = useKvState<ReminderPrefs>(REMINDER_KEY, DEFAULT_REMINDER);
   const [note, setNote] = useState<string | null>(null);
@@ -220,9 +209,11 @@ function Data() {
     <Card>
       <SettingGroup>
         <AppText variant="small" color="textMuted">
-          {IS_WEB
-            ? 'Прогресс хранится только в этом браузере. Сохраните копию, чтобы перенести его на другое устройство или не потерять, если данные браузера будут очищены.'
-            : 'Прогресс хранится только на этом устройстве. Сохраните копию, чтобы перенести его на другой телефон или не потерять при переустановке.'}
+          {accountsEnabled()
+            ? 'Прогресс хранится на этом устройстве и в вашем аккаунте. Дополнительно можно сохранить копию в файл.'
+            : IS_WEB
+              ? 'Прогресс хранится только в этом браузере. Сохраните копию, чтобы перенести его на другое устройство или не потерять, если данные браузера будут очищены.'
+              : 'Прогресс хранится только на этом устройстве. Сохраните копию, чтобы перенести его на другой телефон или не потерять при переустановке.'}
         </AppText>
         <Button
           label="Сохранить копию прогресса"

@@ -2,6 +2,7 @@ import { router } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 
 import { lessonTitle } from '@/core/content';
+import { AccountCard } from '@/features/account/AccountCard';
 import { parseDay } from '@/core/progress/dates';
 import { isMastered } from '@/core/srs/scheduler';
 import { allCards } from '@/core/storage/srs-repo';
@@ -139,6 +140,8 @@ export function ProfileScreen() {
           <Stat value={snap.completedLessons.size} label="уроков" />
         </View>
       )}
+
+      <AccountCard />
 
       <SectionTitle>Прогноз уровня</SectionTitle>
       <Card>

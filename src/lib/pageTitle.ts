@@ -27,6 +27,9 @@ const FIXED: Record<string, string> = {
   '/privacy': 'Конфиденциальность',
   '/ai-review': 'Проверка письма',
   '/word/new': 'Новое слово',
+  '/auth': 'Вход',
+  '/new-password': 'Новый пароль',
+  '/leaderboard': 'Рейтинг недели',
 };
 
 /** The title for an address; the site's name alone for the start page. */
