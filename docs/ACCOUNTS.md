@@ -7,6 +7,10 @@
 Пока переменные окружения не заданы, аккаунты выключены и сайт работает как раньше: всё хранится
 только в браузере, вход не спрашивается.
 
+Для `jane-english.netlify.app` выбран проект Supabase `rfxzrleoebkipamwicrb`:
+`https://rfxzrleoebkipamwicrb.supabase.co`, регион `eu-west-1` (Ирландия). Локальные параметры
+подключения находятся в `.env.local` и не попадают в git.
+
 ## Как устроено
 
 | Где                                    | Что                                                                     |
@@ -47,12 +51,18 @@
 **Authentication → URL Configuration:**
 
 - **Site URL:** `https://jane-english.netlify.app`
-- **Redirect URLs:** `https://jane-english.netlify.app/**` и `http://localhost:8081/**`
+- **Redirect URLs:** `https://jane-english.netlify.app/` и
+  `https://jane-english.netlify.app/new-password`.
 
-**Authentication → Emails → SMTP Settings.** Встроенная почта Supabase предназначена для проб: она
-отправляет всего несколько писем в час. Для настоящих пользователей подключите свою почту для
+Для локальной проверки можно отдельно разрешить те же пути на используемом адресе localhost.
+Для опубликованного сайта достаточно двух точных адресов выше.
+
+**Authentication → Emails → SMTP Settings.** Встроенная почта Supabase предназначена для проб:
+письма приходят только на адреса участников проекта, с ограничением числа отправок. Для
+регистрации остальных пользователей подключите свою почту для
 рассылки (SMTP): например, Яндекс 360, Mail.ru для бизнеса, Unisender или Resend. Без этого
-письма подтверждения и восстановления пароля будут теряться.
+регистрация пользователей вне команды не будет работать. Подробнее — в
+[документации SMTP Supabase](https://supabase.com/docs/guides/auth/auth-smtp).
 
 **Authentication → Emails → Templates:** переведите письма на русский (тексты могу подготовить).
 
@@ -83,11 +93,12 @@
 ```
 EXPO_PUBLIC_SUPABASE_URL=https://ваш-проект.supabase.co
 EXPO_PUBLIC_SUPABASE_ANON_KEY=publishable-ключ
-EXPO_PUBLIC_AUTH_PROVIDERS=google,custom:yandex,custom:vk
+EXPO_PUBLIC_AUTH_PROVIDERS=
 ```
 
-В `EXPO_PUBLIC_AUTH_PROVIDERS` перечисляются только настроенные провайдеры — кнопки остальных не
-показываются. После изменения переменных сайт нужно пересобрать (**Deploys → Trigger deploy**).
+Для начала оставьте `EXPO_PUBLIC_AUTH_PROVIDERS` пустым: регистрация и вход будут по почте и
+паролю. Позже перечислите только настроенные провайдеры (например, `google`) — кнопки остальных
+не показываются. После изменения переменных сайт нужно пересобрать (**Deploys → Trigger deploy**).
 
 ## Закон
 

@@ -19,6 +19,10 @@ create table public.profiles (
 
 alter table public.profiles enable row level security;
 
+-- New Supabase projects may not grant table access by default. RLS still limits every
+-- request to the signed-in user's rows; the client never inserts or deletes profiles.
+grant select on public.profiles to authenticated;
+
 create policy "profiles: read own" on public.profiles
   for select using (auth.uid() = id);
 create policy "profiles: update own" on public.profiles
@@ -63,6 +67,8 @@ create table public.progress (
 
 alter table public.progress enable row level security;
 
+grant select, insert, update on public.progress to authenticated;
+
 create policy "progress: read own" on public.progress
   for select using (auth.uid() = user_id);
 create policy "progress: insert own" on public.progress
@@ -84,6 +90,8 @@ create table public.stats (
 
 alter table public.stats enable row level security;
 
+grant select, insert, update on public.stats to authenticated;
+
 create policy "stats: read own" on public.stats
   for select using (auth.uid() = user_id);
 create policy "stats: insert own" on public.stats
@@ -102,6 +110,8 @@ create table public.friendships (
 );
 
 alter table public.friendships enable row level security;
+
+grant select, delete on public.friendships to authenticated;
 
 create policy "friendships: read own" on public.friendships
   for select using (auth.uid() = user_id);
