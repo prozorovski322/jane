@@ -21,6 +21,12 @@ export function accountMessage(e: AuthError | PostgrestError | Error | null | un
   if (/invalid login credentials/i.test(text)) return 'Неверная почта или пароль.';
   if (/email not confirmed/i.test(text))
     return 'Почта ещё не подтверждена. Откройте письмо от Jane и нажмите на ссылку в нём.';
+  if (
+    /token.*expired|token.*invalid|otp.*expired|otp.*invalid|email link.*(?:expired|invalid)/i.test(
+      text,
+    )
+  )
+    return 'Код или ссылка недействительны либо уже использованы. Запросите новое письмо.';
   if (/already registered|already been registered|user already exists/i.test(text))
     return 'Эта почта уже зарегистрирована. Войдите или восстановите пароль.';
   if (/password should be at least|weak password/i.test(text))
@@ -51,6 +57,29 @@ export const MIN_PASSWORD = 8;
 
 export async function signIn(email: string, password: string) {
   check(await supabase().auth.signInWithPassword({ email: email.trim(), password }));
+}
+
+/** Existing accounts only: new learners register with a name and privacy consent first. */
+export async function sendEmailSignIn(email: string) {
+  check(
+    await supabase().auth.signInWithOtp({
+      email: email.trim(),
+      options: { shouldCreateUser: false, emailRedirectTo: siteUrl('/') },
+    }),
+  );
+}
+
+export async function verifyEmailCode(email: string, code: string) {
+  check(
+    await supabase().auth.verifyOtp({ email: email.trim(), token: code.trim(), type: 'email' }),
+  );
+}
+
+/** The link opens a confirmation screen; loading or previewing it never consumes the token. */
+export async function verifyEmailLink(tokenHash: string) {
+  if (!/^[a-zA-Z0-9_-]{32,256}$/.test(tokenHash))
+    throw new AccountError('Ссылка недействительна. Запросите новое письмо на экране входа.');
+  check(await supabase().auth.verifyOtp({ token_hash: tokenHash, type: 'email' }));
 }
 
 /** Returns true when the account still needs its e-mail confirmed. */

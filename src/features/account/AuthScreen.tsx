@@ -2,12 +2,17 @@
  * Sign-in and sign-up. E-mail with a password, or one button for Google, Yandex ID or VK ID
  * (whichever are configured). Sign-up asks for a name and for consent to the privacy policy.
  */
-import { Link } from 'expo-router';
+import { Link, useLocalSearchParams } from 'expo-router';
 import { useState } from 'react';
 import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { oauthProviders, PROVIDER_LABEL } from '@/core/account/config';
+import {
+  emailPasswordlessEnabled,
+  oauthProviders,
+  PROVIDER_LABEL,
+  type OAuthProvider,
+} from '@/core/account/config';
 import { AppText } from '@/ui/components/AppText';
 import { Button } from '@/ui/components/Button';
 import { Mascot } from '@/ui/components/Mascot';
@@ -15,14 +20,10 @@ import { SwitchRow } from '@/ui/components/SettingRows';
 import { TextField } from '@/ui/components/TextField';
 import { useTheme } from '@/ui/theme/ThemeProvider';
 
-import {
-  AccountError,
-  MIN_PASSWORD,
-  sendPasswordReset,
-  signIn,
-  signInWith,
-  signUp,
-} from './service';
+import { EmailLinkScreen, EmailSignInScreen } from './EmailSignInScreen';
+import { OAuthConsentScreen } from './OAuthConsentScreen';
+
+import { AccountError, MIN_PASSWORD, sendPasswordReset, signIn, signUp } from './service';
 
 type Mode = 'signin' | 'signup' | 'reset';
 
@@ -51,6 +52,13 @@ export function formProblem(
 }
 
 export function AuthScreen() {
+  const { token_hash: tokenHash } = useLocalSearchParams<{ token_hash?: string | string[] }>();
+  if (tokenHash !== undefined)
+    return <EmailLinkScreen tokenHash={typeof tokenHash === 'string' ? tokenHash : ''} />;
+  return <PasswordAuthScreen />;
+}
+
+function PasswordAuthScreen() {
   const { colors, space } = useTheme();
   const [mode, setMode] = useState<Mode>('signin');
   const [email, setEmail] = useState('');
@@ -60,6 +68,8 @@ export function AuthScreen() {
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<{ text: string; error: boolean } | null>(null);
   const [tried, setTried] = useState(false);
+  const [emailOnly, setEmailOnly] = useState(false);
+  const [provider, setProvider] = useState<OAuthProvider | null>(null);
   const providers = oauthProviders();
 
   const problem = formProblem(mode, { email, password, name, consent });
@@ -101,6 +111,9 @@ export function AuthScreen() {
     setMessage(null);
   };
 
+  if (emailOnly) return <EmailSignInScreen onBack={() => setEmailOnly(false)} />;
+  if (provider) return <OAuthConsentScreen provider={provider} onBack={() => setProvider(null)} />;
+
   return (
     <SafeAreaView style={[styles.flex, { backgroundColor: colors.background }]}>
       <KeyboardAvoidingView
@@ -131,8 +144,8 @@ export function AuthScreen() {
                   key={p}
                   label={PROVIDER_LABEL[p]}
                   variant="secondary"
-                  disabled={busy || (mode === 'signup' && !consent)}
-                  onPress={() => void run(() => signInWith(p))}
+                  disabled={busy}
+                  onPress={() => setProvider(p)}
                 />
               ))}
               <AppText variant="small" color="textMuted" align="center">
@@ -226,7 +239,17 @@ export function AuthScreen() {
               <Button label="Создать аккаунт" variant="ghost" onPress={() => switchTo('signup')} />
             )}
             {mode === 'signin' && (
-              <Button label="Забыли пароль?" variant="ghost" onPress={() => switchTo('reset')} />
+              <>
+                {emailPasswordlessEnabled() && (
+                  <Button
+                    label="Войти по коду или ссылке на почту"
+                    variant="secondary"
+                    disabled={busy}
+                    onPress={() => setEmailOnly(true)}
+                  />
+                )}
+                <Button label="Забыли пароль?" variant="ghost" onPress={() => switchTo('reset')} />
+              </>
             )}
           </View>
         </ScrollView>

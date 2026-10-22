@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Вход в Jane</title>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 32px 16px;
+      background: #14110e;
+      color: #f8f4ee;
+      font-family: Arial, sans-serif;
+    "
+  >
+    <div style="max-width: 480px; margin: auto">
+      <h1 style="color: #5fc2bc">Jane</h1>
+      <h2>Вход в аккаунт</h2>
+      <p>Введите этот одноразовый код на экране входа в Jane:</p>
+      <p style="font-size: 32px; letter-spacing: 4px; font-weight: bold">{{ .Token }}</p>
+      <p>Или перейдите по ссылке и подтвердите вход:</p>
+      <p>
+        <a
+          href="{{ .SiteURL }}/auth?token_hash={{ .TokenHash }}"
+          style="
+            display: inline-block;
+            padding: 16px 24px;
+            background: #5fc2bc;
+            color: #14110e;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+          "
+          >Войти в Jane</a
+        >
+      </p>
+      <p>Код и ссылка одноразовые: после входа одним способом второй уже не сработает.</p>
+      <p>Если вы не запрашивали вход, просто проигнорируйте это письмо. Никому не сообщайте код.</p>
+    </div>
+  </body>
+</html>

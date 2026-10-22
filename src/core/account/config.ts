@@ -13,6 +13,9 @@ export const SUPABASE_ANON_KEY = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY ?? ''
 
 export const accountsEnabled = () => !!SUPABASE_URL && !!SUPABASE_ANON_KEY;
 
+/** Enable only after the Magic Link e-mail template contains both the code and sign-in link. */
+export const emailPasswordlessEnabled = () => process.env.EXPO_PUBLIC_EMAIL_PASSWORDLESS === 'true';
+
 export type OAuthProvider = 'google' | 'custom:yandex' | 'custom:vk';
 
 const KNOWN: readonly OAuthProvider[] = ['google', 'custom:yandex', 'custom:vk'];
