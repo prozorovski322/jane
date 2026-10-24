@@ -94,11 +94,11 @@ export const lightColors: ThemeColors = {
 };
 
 export const darkColors: ThemeColors = {
-  background: sand[950],
-  surface: sand[900],
-  surfaceAlt: sand[850],
-  border: '#3A342C',
-  borderStrong: sand[700],
+  background: '#0B0B0B',
+  surface: '#171717',
+  surfaceAlt: '#222222',
+  border: '#333333',
+  borderStrong: '#4A4A4A',
   text: '#F4EFE7',
   textMuted: '#B3A999',
   primary: teal[300],
