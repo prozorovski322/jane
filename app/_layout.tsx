@@ -3,7 +3,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useCallback, useEffect, useState } from 'react';
-import { Platform, StyleSheet, Text, useColorScheme, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { configureNotifications, syncReminders } from '@/core/notifications/reminders';
@@ -125,10 +125,9 @@ function ThemedStack() {
 }
 
 function WebLoading() {
-  const dark = useColorScheme() !== 'light';
   return (
-    <View style={[styles.center, { backgroundColor: dark ? '#000000' : '#FBF8F3' }]}>
-      <Text style={{ color: dark ? '#5FC2BC' : '#2B8A84', fontSize: 17, fontWeight: '600' }}>
+    <View style={[styles.center, { backgroundColor: '#000000' }]}>
+      <Text style={{ color: '#5FC2BC', fontSize: 17, fontWeight: '600' }}>
         Загружаем курс…
       </Text>
     </View>
