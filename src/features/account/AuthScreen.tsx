@@ -1,5 +1,5 @@
 /**
- * Sign-in and sign-up. E-mail with a password, or one button for Google, Yandex ID or VK ID
+ * Sign-in and sign-up. E-mail with a password, or one button for Google or Yandex ID
  * (whichever are configured). Sign-up asks for a name and for consent to the privacy policy.
  */
 import { Link, useLocalSearchParams } from 'expo-router';

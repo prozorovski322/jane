@@ -104,7 +104,7 @@ describe('account helpers', () => {
   });
 
   it('shows only the configured sign-in buttons, in a fixed order', () => {
-    expect(oauthProviders('custom:vk, google ,unknown')).toEqual(['google', 'custom:vk']);
+    expect(oauthProviders('custom:yandex, google ,unknown')).toEqual(['google', 'custom:yandex']);
     expect(oauthProviders('')).toEqual([]);
   });
 

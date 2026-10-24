@@ -1,7 +1,7 @@
 /**
  * The Supabase client, created on first use. The session is kept in the browser's storage on
  * the website and in expo-sqlite's key-value store in the app. Sign-in redirects (Google, Yandex,
- * VK, password reset) come back with a code that the client exchanges itself (PKCE).
+ * password reset) come back with a code that the client exchanges itself (PKCE).
  */
 import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 import { Platform } from 'react-native';
