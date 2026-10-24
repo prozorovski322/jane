@@ -53,8 +53,8 @@ secret сохранять только в настройках серверно�
    - Client ID: `6d6b261bc97b4f3eb5bc3e83ed05ccf8`
    - Client Secret владелец переносит из Яндекса непосредственно в Supabase.
    - PKCE включён. Allow users without email выключен.
-   - Issuer и JWKS для OAuth2 не нужны. Если форма требует их, не выдумывать значения:
-     проверить тип провайдера/совместимость формы.
+   - Issuer URL: `https://oauth.yandex.ru` (поле обязательно в текущей форме Dashboard,
+     но OAuth2 не использует OIDC discovery). JWKS оставить пустым: ID token здесь не используется.
 4. `netlify/functions/yandex-userinfo.mjs` проверяет access token через фиксированный HTTPS API
    Яндекса и требует совпадения `client_id` с приложением Jane. Переводит `id` в `sub`,
    `default_email` в `email`, `real_name` в `name`. Ответ не кешируется; токены и сырые ошибки
