@@ -4,7 +4,6 @@ import { StyleSheet, View } from 'react-native';
 import { lessonTitle } from '@/core/content';
 import { AccountCard } from '@/features/account/AccountCard';
 import { parseDay } from '@/core/progress/dates';
-import { isMastered } from '@/core/srs/scheduler';
 import { allCards } from '@/core/storage/srs-repo';
 import { useDbQuery } from '@/lib/useDbQuery';
 import { AppText } from '@/ui/components/AppText';
@@ -26,35 +25,18 @@ import { useProgress } from '../progress/store';
 import { Button } from '@/ui/components/Button';
 import { ProgressBar } from '@/ui/components/ProgressBar';
 import { SkillRadar } from './SkillRadar';
+import { LearningOverview } from '../dashboard/LearningOverview';
+import { STUDY_SCENARIOS } from '../study/content';
+import { LearningTools } from '../dashboard/LearningTools';
+import { GoalPlanCard } from '../dashboard/GoalPlanCard';
 
 const NO_CERTIFICATES: Certificate[] = [];
-
-function Stat({
-  value,
-  label,
-  color,
-}: {
-  value: string | number;
-  label: string;
-  color?: 'xp' | 'accent' | 'success';
-}) {
-  return (
-    <Card style={styles.stat}>
-      <View accessible aria-label={`${label}: ${value}`}>
-        <AppText variant="title" color={color ?? 'text'}>
-          {value}
-        </AppText>
-        <AppText variant="caption" color="textMuted">
-          {label}
-        </AppText>
-      </View>
-    </Card>
-  );
-}
 
 function historyTitle(h: HistoryItem): string {
   if (h.kind === 'review') return 'Повторение';
   if (h.kind === 'practice') {
+    const study = STUDY_SCENARIOS.find((s) => h.lessonId === `practice.study-${s.id}`);
+    if (study) return `Практика: ${study.title}`;
     const kind = h.lessonId.split('.')[1] as PracticeKind | undefined;
     return `Практика: ${kind && PRACTICE_INFO[kind] ? PRACTICE_INFO[kind].title : h.lessonId}`;
   }
@@ -109,7 +91,6 @@ export function ProfileScreen() {
         history,
         forecast,
         placement,
-        learned: cards.filter(isMastered).length,
         learning: cards.length,
       };
     },
@@ -132,16 +113,20 @@ export function ProfileScreen() {
         />
       }
     >
-      {snap && (
-        <View style={styles.stats}>
-          <Stat value={snap.totalXp} label="опыт" color="xp" />
-          <Stat value={snap.streak} label="серия" color="accent" />
-          <Stat value={data?.learned ?? '…'} label="выучено слов" color="success" />
-          <Stat value={snap.completedLessons.size} label="уроков" />
-        </View>
-      )}
+      <LearningOverview />
+      <GoalPlanCard />
+
+      <ListRow
+        icon="sun"
+        title="Мой план на сегодня"
+        subtitle="Ежедневные задания и цель занятий"
+        onPress={() => router.push('/today')}
+      />
 
       <AccountCard />
+
+      <SectionTitle>Мои инструменты</SectionTitle>
+      <LearningTools />
 
       <SectionTitle>Прогноз уровня</SectionTitle>
       <Card>
@@ -266,8 +251,6 @@ export function ProfileScreen() {
 
 const styles = StyleSheet.create({
   flex: { flex: 1 },
-  stats: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
-  stat: { flexGrow: 1, flexBasis: '45%', padding: 12 },
   skillRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   // Exactly 7 days per row: 7 cells of 28 and 6 gaps of 6.
   calendar: {

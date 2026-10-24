@@ -96,7 +96,7 @@ export function ListRow({
 }
 
 const styles = StyleSheet.create({
-  card: { borderWidth: 2, padding: 14, gap: 8 },
+  card: { borderWidth: 1, padding: 18, gap: 12 },
   row: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   icon: { width: 40, height: 40, borderRadius: 12, alignItems: 'center', justifyContent: 'center' },
   flex: { flex: 1 },

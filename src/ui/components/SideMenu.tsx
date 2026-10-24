@@ -9,6 +9,7 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { useTheme } from '../theme/ThemeProvider';
 import { AppText } from './AppText';
 import { Icon, type IconName } from './Icon';
+import { Mascot } from './Mascot';
 
 export const SIDE_MENU_WIDTH = 220;
 
@@ -76,6 +77,7 @@ export function SideMenu({
       ]}
     >
       <View style={styles.brand}>
+        <Mascot size={42} />
         <AppText variant="title">Jane</AppText>
         <AppText variant="caption" color="textMuted">
           английский с нуля до C1

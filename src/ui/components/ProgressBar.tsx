@@ -37,6 +37,13 @@ export function ProgressBar({ value, label }: { value: number; label: string }) 
 }
 
 const styles = StyleSheet.create({
-  track: { height: 14, flex: 1, overflow: 'hidden' },
+  track: {
+    height: 14,
+    minHeight: 14,
+    flexGrow: 1,
+    flexShrink: 0,
+    flexBasis: 'auto',
+    overflow: 'hidden',
+  },
   fill: { height: '100%' },
 });

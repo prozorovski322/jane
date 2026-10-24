@@ -20,6 +20,7 @@ export type IconName =
   | 'book'
   | 'path'
   | 'sun'
+  | 'moon'
   | 'target'
   | 'user'
   | 'search'
@@ -37,6 +38,7 @@ export type IconName =
   | 'trophy';
 
 const paths: Record<IconName, React.ReactNode> = {
+  moon: <Path d="M20.5 14A8.8 8.8 0 0110 3.5 8.8 8.8 0 1020.5 14z" />,
   close: <Path d="M6 6l12 12M18 6L6 18" />,
   speaker: (
     <>

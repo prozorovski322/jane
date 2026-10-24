@@ -14,6 +14,8 @@ import { Screen, SectionTitle } from '@/ui/components/Screen';
 import { useTheme } from '@/ui/theme/ThemeProvider';
 
 import { KIND_ICON } from '../path/kinds';
+import { LearningOverview } from '../dashboard/LearningOverview';
+import { LearningTools } from '../dashboard/LearningTools';
 import { pathState } from '../path/state';
 import { StreakXp } from '../progress/Badges';
 import { WeekGoal } from '../progress/WeekGoal';
@@ -140,6 +142,7 @@ export function TodayScreen() {
 
   return (
     <Screen title="Сегодня" subtitle={date} right={<StreakXp />}>
+      <LearningOverview />
       {snap && (
         <Card>
           <View style={styles.row}>
@@ -208,6 +211,8 @@ export function TodayScreen() {
           onPress={() => router.push('/review')}
         />
       )}
+      <SectionTitle>Всё для вашей цели</SectionTitle>
+      <LearningTools />
     </Screen>
   );
 }

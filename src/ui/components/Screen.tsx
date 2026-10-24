@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { useTheme } from '../theme/ThemeProvider';
 import { AppText } from './AppText';
+import { ThemeToggle } from './ThemeToggle';
 
 /** A scrolling screen with a large title; content is capped in width on tablets. */
 export function Screen({
@@ -40,7 +41,10 @@ export function Screen({
                 </AppText>
               )}
             </View>
-            {right}
+            <View style={styles.actions}>
+              {right}
+              <ThemeToggle />
+            </View>
           </View>
         )}
         {children}
@@ -62,7 +66,15 @@ export function SectionTitle({ children, action }: { children: string; action?: 
 
 const styles = StyleSheet.create({
   safe: { flex: 1 },
-  content: { width: '100%', maxWidth: 640, alignSelf: 'center', paddingBottom: 48 },
+  content: { width: '100%', maxWidth: 760, alignSelf: 'center', paddingBottom: 48 },
+  actions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-end',
+    gap: 4,
+    maxWidth: '45%',
+  },
   header: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   section: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 8 },
   flex: { flex: 1 },

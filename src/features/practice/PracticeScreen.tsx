@@ -1,10 +1,12 @@
 import { router } from 'expo-router';
+import { StyleSheet, View } from 'react-native';
 
 import { TROUBLES, type Trouble } from '@/core/content/schema';
 import { useDbQuery } from '@/lib/useDbQuery';
 import { AppText } from '@/ui/components/AppText';
-import { ListRow } from '@/ui/components/Card';
-import type { IconName } from '@/ui/components/Icon';
+import { Card, ListRow } from '@/ui/components/Card';
+import { Icon, type IconName } from '@/ui/components/Icon';
+import { useTheme } from '@/ui/theme/ThemeProvider';
 import { Screen, SectionTitle } from '@/ui/components/Screen';
 
 import { TROUBLE_LABEL } from '../progress/insights';
@@ -29,6 +31,7 @@ function open(spec: PracticeSpec, title?: string) {
 }
 
 export function PracticeScreen() {
+  const { colors } = useTheme();
   const completed = useProgress((s) => s.snapshot?.completedLessons);
   const data = useDbQuery(
     async (db) => {
@@ -68,18 +71,38 @@ export function PracticeScreen() {
       )}
 
       <SectionTitle>Навыки</SectionTitle>
-      {SKILLS.map(({ kind, icon }) => {
-        const n = counts ? (counts[kind] ?? 0) : 0;
-        return (
-          <ListRow
-            key={kind}
-            icon={icon}
-            title={PRACTICE_INFO[kind].title}
-            subtitle={n ? `${PRACTICE_INFO[kind].subtitle} · заданий: ${n}` : 'Пока нет материала'}
-            onPress={n ? () => open({ kind }) : undefined}
-          />
-        );
-      })}
+      <View style={styles.grid}>
+        {SKILLS.map(({ kind, icon }) => {
+          const n = counts ? (counts[kind] ?? 0) : 0;
+          return (
+            <Card
+              key={kind}
+              style={styles.skill}
+              tone={kind === 'speaking' || kind === 'pronunciation' ? 'infoSoft' : 'surface'}
+              label={`${PRACTICE_INFO[kind].title}. ${n ? `${PRACTICE_INFO[kind].subtitle} · заданий: ${n}` : 'Пока нет материала'}`}
+              onPress={n ? () => open({ kind }) : undefined}
+            >
+              <Icon
+                name={icon}
+                size={26}
+                color={colors[kind === 'speaking' ? 'info' : 'primary']}
+              />
+              <AppText variant="bodyStrong">{PRACTICE_INFO[kind].title}</AppText>
+              <AppText variant="caption" color="textMuted">
+                {n ? `${PRACTICE_INFO[kind].subtitle} · заданий: ${n}` : 'Пока нет материала'}
+              </AppText>
+            </Card>
+          );
+        })}
+      </View>
+
+      <SectionTitle>Для реальной жизни</SectionTitle>
+      <ListRow
+        icon="book"
+        title="Учёба за границей"
+        subtitle="Колледж, преподаватели и собеседование · A2–B1"
+        onPress={() => router.push('/study')}
+      />
 
       <SectionTitle>Ошибки и повторение</SectionTitle>
       <ListRow
@@ -155,3 +178,8 @@ export function PracticeScreen() {
     </Screen>
   );
 }
+
+const styles = StyleSheet.create({
+  grid: { flexDirection: 'row', flexWrap: 'wrap', gap: 12 },
+  skill: { flexGrow: 1, flexBasis: '45%', minWidth: 125, gap: 10 },
+});
