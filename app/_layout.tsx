@@ -127,7 +127,7 @@ function ThemedStack() {
 function WebLoading() {
   const dark = useColorScheme() !== 'light';
   return (
-    <View style={[styles.center, { backgroundColor: dark ? '#14110E' : '#FBF8F3' }]}>
+    <View style={[styles.center, { backgroundColor: dark ? '#000000' : '#FBF8F3' }]}>
       <Text style={{ color: dark ? '#5FC2BC' : '#2B8A84', fontSize: 17, fontWeight: '600' }}>
         Загружаем курс…
       </Text>
