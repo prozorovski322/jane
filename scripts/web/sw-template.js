@@ -50,9 +50,7 @@ self.addEventListener('fetch', (event) => {
   if (req.mode === 'navigate') {
     event.respondWith(
       fetch(req).catch(() =>
-        caches.match(
-          url.pathname === '/' || url.pathname === '/index.html' ? '/index.html' : '/app.html',
-        ),
+        caches.match('/index.html'),
       ),
     );
     return;

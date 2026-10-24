@@ -44,66 +44,16 @@
         display: flex;
         height: 100%;
         flex: 1;
-      }
-    </style>
-    <!-- The page shown while the app loads (and what search engines read). The app replaces it. -->
-    <style>
-      .intro {
-        --fg: #fbf8f3;
-        --muted: #b9b1a6;
-        --accent: #5fc2bc;
-        --line: #333333;
-        box-sizing: border-box;
-        width: 100%;
-        max-width: 640px;
-        margin: 0 auto;
-        padding: 48px 20px;
-        overflow-y: auto;
-        color: var(--fg);
-        font:
-          17px/1.5 system-ui,
-          -apple-system,
-          'Segoe UI',
-          Roboto,
-          sans-serif;
-      }
-      .intro header {
-        display: flex;
         align-items: center;
-        gap: 16px;
+        justify-content: center;
       }
-      .intro h1 {
+      .loading {
         margin: 0;
-        font-size: 40px;
-        line-height: 1;
-      }
-      .intro h2 {
-        margin: 32px 0 8px;
-        font-size: 19px;
-      }
-      .intro p,
-      .intro ul {
-        margin: 8px 0;
-      }
-      .intro ul {
-        padding-left: 20px;
-      }
-      .intro .lead {
-        font-size: 21px;
-        margin-top: 20px;
-      }
-      .intro .muted {
-        color: var(--muted);
-      }
-      .intro .loading {
-        margin-top: 28px;
         padding: 14px 16px;
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        color: var(--accent);
-        font-weight: 600;
+        color: #b69cff;
+        font: 600 17px/1.5 system-ui, sans-serif;
       }
-      .intro .loading::before {
+      .loading::before {
         content: '';
         display: inline-block;
         width: 10px;
@@ -119,7 +69,7 @@
         }
       }
       @media (prefers-reduced-motion: reduce) {
-        .intro .loading::before {
+        .loading::before {
           animation: none;
         }
       }
@@ -128,45 +78,8 @@
 
   <body>
     <div id="root">
-      <main class="intro">
-        <header>
-          <img src="/favicon.svg" width="56" height="56" alt="" />
-          <h1>Jane</h1>
-        </header>
-        <p class="lead">Бесплатный курс английского для русскоговорящих — с нуля до C1.</p>
-        <noscript>
-          <p class="loading">Чтобы заниматься, включите JavaScript в браузере.</p>
-        </noscript>
-        <p class="loading" aria-live="polite">Загружаем курс…</p>
-
-        <h2>Что внутри</h2>
-        <ul>
-          <li>Слова с озвучкой и транскрипцией, интервальное повторение.</li>
-          <li>Грамматика с объяснениями на русском и упражнениями.</li>
-          <li>Аудирование: диалоги с медленной озвучкой и текстом.</li>
-          <li>Чтение: тексты и вопросы на понимание.</li>
-          <li>Говорение: распознавание речи или самопроверка.</li>
-          <li>Письмо: короткие тексты и эссе с проверкой по критериям.</li>
-        </ul>
-
-        <h2>Уровни</h2>
-        <ul>
-          <li>Pre-A1 — с нуля: звуки, алфавит, первые слова.</li>
-          <li>A1 и A2 — базовый английский для жизни и поездок.</li>
-          <li>B1 — свободно объясниться в большинстве ситуаций.</li>
-          <li>B2 — работа, учёба, споры и сложные тексты.</li>
-          <li>C1 — академический и деловой английский.</li>
-        </ul>
-        <p>
-          Дополнительные треки: «Путешествия», «Деловой английский» и подготовка к IELTS и TOEFL.
-        </p>
-
-        <h2>Как это устроено</h2>
-        <p class="muted">
-          Без подписок и рекламы. Учитесь в удобном темпе: слова, грамматика и упражнения доступны
-          на телефоне и компьютере.
-        </p>
-      </main>
+      <noscript><p class="loading">Чтобы открыть курс, включите JavaScript.</p></noscript>
+      <p class="loading" aria-live="polite">Загружаем курс…</p>
     </div>
     <script src="/register-sw.js" defer></script>
   </body>
