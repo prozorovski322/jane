@@ -5,14 +5,18 @@
 - Почта и пароль опубликованы; владелец подтвердил успешный вход.
 - Код и ссылка на почту опубликованы; владелец сохранил шаблон письма в Supabase.
   Полный вход этими способами пока не подтверждён владельцем.
-- Google настроен; владелец подтвердил полный вход и возврат в Jane.
-  В Production `EXPO_PUBLIC_AUTH_PROVIDERS=google`.
+- Google и Яндекс настроены; владелец подтвердил полный вход и возврат в Jane для обоих.
+  В Production `EXPO_PUBLIC_AUTH_PROVIDERS=google,custom:yandex`.
 - Отдельное приложение Jane в Яндекс ID создано владельцем: Client ID
-  `6d6b261bc97b4f3eb5bc3e83ed05ccf8`. Supabase-провайдер пока не сохранён.
-  VK ID пока не настроен. Эти кнопки остаются скрытыми.
+  `6d6b261bc97b4f3eb5bc3e83ed05ccf8`. Supabase-провайдер сохранён владельцем.
+- Владелец создал Web-приложение Jane в VK ID: `54849871`, callback
+  `https://jane-english.netlify.app/.netlify/functions/vk-callback`.
+  Серверные обработчики подготовлены; Supabase-провайдер и полный вход пока не проверены.
+  Кнопка VK остаётся скрытой.
 - Доступ агента к `supabase.com` ранее отклонён браузерным инструментом сохранённым правилом.
-  Владелец сообщил, что разрешения с тех пор не менялись. Не обходить это правило другими
-  браузерами, API, сессионными токенами или CDP.
+  После сообщения владельца об изменении разрешений повторная проверка также отклонена.
+  Доступ к `id.vk.ru` отклонён политикой безопасности сайта. Не обходить эти правила другими
+  браузерами, API, сессионными токенами или CDP для доступа к панелям управления.
 
 Не включать кнопки провайдеров до проверки полного входа на тестовой сборке. Значения client
 secret сохранять только в настройках серверного провайдера Supabase, не в `EXPO_PUBLIC_*`, git
@@ -75,17 +79,52 @@ secret сохранять только в настройках серверно�
 
 ## VK ID
 
-1. В кабинете `https://id.vk.ru` создать отдельное приложение Jane с адресами её сайта.
-2. Проверить актуальный поток VK ID. У него есть PKCE и дополнительный `device_id`, который
-   приходит с callback и требуется для обмена кода. Наличие кнопки `custom:vk` в интерфейсе Jane
-   само по себе не делает этот обмен совместимым с generic OAuth2 провайдером Supabase.
-3. До реализации и проверки обмена не включать `custom:vk`. Если стандартный провайдер не
-   передаёт необходимые параметры, нужен серверный адаптер; секреты и обмен кода остаются на
-   сервере. Не подменять идентификатор пользователя данными, присланными клиентом.
-4. Проверить email, привязку аккаунта, state/PKCE и полный вход. Только после этого показывать
-   кнопку на сайте.
+Приложение Jane `54849871` создано владельцем. На экране настройки One Tap код копировать
+в приложение не нужно: Jane использует перенаправление с PKCE через Supabase.
 
-Интеграция не проверена с настоящим приложением VK: нужны доступ к кабинету и внешние настройки.
+Настройки Supabase Custom Provider:
+
+| Поле                      | Значение                                                           |
+| ------------------------- | ------------------------------------------------------------------ |
+| Provider Identifier       | `vk` (форма сама добавляет `custom:`)                              |
+| Display Name              | `VK ID`                                                            |
+| Configuration Method      | Manual configuration / OAuth2                                      |
+| Issuer URL                | `https://id.vk.ru`                                                 |
+| Authorization URL         | `https://jane-english.netlify.app/.netlify/functions/vk-authorize` |
+| Token URL                 | `https://jane-english.netlify.app/.netlify/functions/vk-token`     |
+| Userinfo URL              | `https://jane-english.netlify.app/.netlify/functions/vk-userinfo`  |
+| JWKS URI                  | пусто, ID token не используется                                    |
+| Client ID                 | `54849871`                                                         |
+| Client Secret             | владелец переносит защищённый ключ прямо из VK в Supabase          |
+| Scopes                    | `email`                                                            |
+| Allow users without email | выключено                                                          |
+
+PKCE оставлять включённым. Callback в Supabase должен совпадать с
+`https://rfxzrleoebkipamwicrb.supabase.co/auth/v1/callback`.
+В VK зарегистрирован другой callback: `https://jane-english.netlify.app/.netlify/functions/vk-callback`.
+
+Обработчики в `netlify/functions/vk-*.mjs` передают challenge/state от Supabase в VK, затем
+упаковывают code/device_id/state в транспортный code для callback Supabase. Этот envelope не
+считается подписанной идентичностью: Supabase проверяет state, VK проверяет одноразовый code и
+исходный PKCE verifier. Обмен производится только на фиксированном адресе VK с фиксированным
+client_id и callback. Ответный state от VK также должен совпадать.
+
+VK поддерживает публичный обмен с PKCE (его SDK не передаёт client secret). Обработчик не
+хранит и не передаёт client secret: секрет из формы Supabase не является способом проверки
+запроса переходником; защиту обмена обеспечивает PKCE на стороне VK. Ни service-role key,
+ни дополнительный серверный секрет не нужны. Refresh и ID tokens не возвращаются; user_info
+проверяется отдельным запросом VK с access token и client_id приложения Jane. Возвращаются
+только sub/email/name, `email_verified=false`. Телефон и дополнительные данные не запрашиваются.
+
+Локальные проверки: `node --test scripts/tests/vk-oauth.test.mjs`.
+Полный обмен с VK, подтверждение почты, существующий аккаунт и отмену нужно проверить вручную
+после сохранения провайдера. До проверки не объявлять вход работающим и не включать кнопку VK.
+
+Первичные источники:
+
+- https://github.com/VKCOM/vkid-web-sdk/blob/master/src/auth/auth.ts
+- https://github.com/VKCOM/vkid-web-sdk/blob/master/src/auth/types.ts
+- https://github.com/VKCOM/vkid-web-sdk/blob/master/src/utils/url/url.ts
 
 ## Приёмка перед включением
 
