@@ -10,7 +10,7 @@ import { useTheme } from '@/ui/theme/ThemeProvider';
 import { fonts } from '@/ui/theme/tokens';
 
 const TABS: SideMenuTab[] = [
-  { name: 'index', title: 'Путь', icon: 'path' },
+  { name: 'course', title: 'Путь', icon: 'path' },
   { name: 'today', title: 'Сегодня', icon: 'sun' },
   { name: 'practice', title: 'Практика', icon: 'target' },
   { name: 'dictionary', title: 'Словарь', icon: 'book' },
@@ -48,6 +48,7 @@ export default function TabsLayout() {
         sceneStyle: { backgroundColor: colors.background },
       }}
     >
+      <Tabs.Screen name="index" options={{ href: null }} />
       {TABS.map((t) => (
         <Tabs.Screen
           key={t.name}

@@ -1,6 +1,6 @@
 // Serves the exported website (`npm run web:build` → dist/) the way the production host does:
 // with the headers from dist/_headers (the same file Netlify reads: cross-origin isolation for
-// expo-sqlite, the Content-Security-Policy) and every unknown path falling back to index.html
+// expo-sqlite, the Content-Security-Policy) and unknown app paths falling back to app.html
 // (the site is a single-page app).
 // Usage: node scripts/serve-web.mjs [dir] [port]
 import { createReadStream, existsSync, readFileSync, statSync } from 'node:fs';
@@ -54,7 +54,10 @@ createServer((req, res) => {
     res.writeHead(403).end();
     return;
   }
-  if (!existsSync(file) || statSync(file).isDirectory()) file = join(root, 'index.html');
+  if (path === '/') file = join(root, 'index.html');
+  else if (!existsSync(file) || statSync(file).isDirectory()) {
+    file = join(root, existsSync(join(root, 'app.html')) ? 'app.html' : 'index.html');
+  }
   const headers = { 'Content-Type': TYPES[extname(file)] ?? 'application/octet-stream' };
   for (const r of rules) if (matches(r.path, path)) Object.assign(headers, r.headers);
   res.writeHead(200, headers);

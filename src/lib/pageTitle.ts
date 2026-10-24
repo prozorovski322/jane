@@ -13,6 +13,7 @@ const SITE = 'Jane — английский с нуля до C1';
 
 const FIXED: Record<string, string> = {
   '/': 'Путь',
+  '/course': 'Курс',
   '/today': 'Сегодня',
   '/study': 'Учёба за границей',
   '/practice': 'Практика',

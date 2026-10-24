@@ -1,3 +1,4 @@
-import { PathScreen } from '@/features/path/PathScreen';
-
-export default PathScreen;
+import { Redirect } from 'expo-router';
+export default function CourseAlias() {
+  return <Redirect href="/course" />;
+}

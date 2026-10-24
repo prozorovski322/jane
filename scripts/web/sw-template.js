@@ -48,7 +48,13 @@ self.addEventListener('fetch', (event) => {
 
   // Pages: the network first, so a new version shows up at once; the stored page offline.
   if (req.mode === 'navigate') {
-    event.respondWith(fetch(req).catch(() => caches.match('/index.html')));
+    event.respondWith(
+      fetch(req).catch(() =>
+        caches.match(
+          url.pathname === '/' || url.pathname === '/index.html' ? '/index.html' : '/app.html',
+        ),
+      ),
+    );
     return;
   }
 

@@ -3,7 +3,7 @@
   "short_name": "Jane",
   "description": "Бесплатный курс английского для русскоговорящих: от нуля до C1.",
   "lang": "ru",
-  "start_url": "/",
+  "start_url": "/course",
   "scope": "/",
   "display": "standalone",
   "background_color": "#14110E",
