@@ -10,6 +10,7 @@ import { configureNotifications, syncReminders } from '@/core/notifications/remi
 import { registerNativeRecognizer } from '@/core/speech/native-stt';
 import { registerWebRecognizer } from '@/core/speech/web-stt';
 import { initDatabase } from '@/core/storage';
+import { storageBootMessage } from '@/core/storage/web-db-lock';
 import { useOnboarding } from '@/features/onboarding/store';
 import { useProgress } from '@/features/progress/store';
 import { bindSettings, useSettings } from '@/features/settings/store';
@@ -60,6 +61,12 @@ function useBoot() {
   }, [attempt]);
 
   const retry = useCallback(() => {
+    // Failed OPFS initialization leaves the SDK worker unusable. Re-running
+    // openDatabase in that worker cannot recover it; reload creates a new worker.
+    if (Platform.OS === 'web' && typeof window !== 'undefined') {
+      window.location.reload();
+      return;
+    }
     setBoot({ status: 'loading' });
     setAttempt((n) => n + 1);
   }, []);
@@ -74,9 +81,12 @@ function BootError({ message, onRetry }: { message: string; onRetry: () => void 
         Не удалось открыть данные приложения
       </AppText>
       <AppText variant="small" color="textMuted" align="center">
-        {message}
+        {storageBootMessage(message)}
       </AppText>
-      <Button label="Попробовать ещё раз" onPress={onRetry} />
+      <Button
+        label={Platform.OS === 'web' ? 'Обновить страницу' : 'Попробовать ещё раз'}
+        onPress={onRetry}
+      />
     </View>
   );
 }

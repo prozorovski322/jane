@@ -1,10 +1,24 @@
 import * as SQLite from 'expo-sqlite';
+import { Platform } from 'react-native';
 
 import { createTransactionLock, type Db } from './db';
+import { acquireWebDatabaseLease } from './web-db-lock';
 
 export async function openExpoDb(name = 'jane.db'): Promise<Db> {
-  const db = await SQLite.openDatabaseAsync(name);
-  await db.execAsync('PRAGMA journal_mode = WAL; PRAGMA foreign_keys = ON;');
+  const release = Platform.OS === 'web' ? await acquireWebDatabaseLease() : () => {};
+  let db: SQLite.SQLiteDatabase;
+  try {
+    db = await SQLite.openDatabaseAsync(name);
+    try {
+      await db.execAsync('PRAGMA journal_mode = WAL; PRAGMA foreign_keys = ON;');
+    } catch (error) {
+      await db.closeAsync().catch(() => {});
+      throw error;
+    }
+  } catch (error) {
+    release();
+    throw error;
+  }
   const lock = createTransactionLock();
 
   return {
@@ -25,6 +39,12 @@ export async function openExpoDb(name = 'jane.db'): Promise<Db> {
         });
         return result;
       }),
-    close: () => db.closeAsync(),
+    close: async () => {
+      try {
+        await db.closeAsync();
+      } finally {
+        release();
+      }
+    },
   };
 }

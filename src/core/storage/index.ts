@@ -11,7 +11,12 @@ let opening: Promise<Db> | null = null;
 export function initDatabase(open: () => Promise<Db> = openExpoDb): Promise<Db> {
   opening ??= (async () => {
     const d = await open();
-    await migrate(d);
+    try {
+      await migrate(d);
+    } catch (error) {
+      await d.close().catch(() => {});
+      throw error;
+    }
     db = d;
     return d;
   })().catch((e: unknown) => {
