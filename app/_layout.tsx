@@ -127,7 +127,7 @@ function ThemedStack() {
 function WebLoading() {
   return (
     <View style={[styles.center, { backgroundColor: '#000000' }]}>
-      <Text style={{ color: '#5FC2BC', fontSize: 17, fontWeight: '600' }}>
+      <Text style={{ color: '#B69CFF', fontSize: 17, fontWeight: '600' }}>
         Загружаем курс…
       </Text>
     </View>
