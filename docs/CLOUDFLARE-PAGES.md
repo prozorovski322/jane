@@ -3,7 +3,7 @@
 Проект можно подключить к Cloudflare Pages из репозитория GitHub:
 
 - Production branch: `main`
-- Build command: `npm run web:build`
+- Build command: `npm run web:build && node scripts/web-cloudflare.mjs dist`
 - Build output directory: `dist`
 - Root directory: `/`
 - Node.js: `24`
@@ -18,6 +18,8 @@
 `https://<project>.pages.dev/api/yandex-userinfo`. Он вызывает тот же проверяющий обработчик,
 который используется Netlify. `public/_routes.json` ограничивает вызов Function только этим
 маршрутом, чтобы остальные файлы сайта обслуживались как статические ресурсы.
+`scripts/web-cloudflare.mjs` удаляет Netlify-only SPA rewrite и обновляет canonical URL в crawler
+metadata для адреса Pages; Cloudflare сам обслуживает SPA-маршруты из `index.html`.
 
 ## Включение после первой публикации
 
