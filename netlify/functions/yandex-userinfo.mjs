@@ -13,7 +13,10 @@ function json(body, status = 200) {
 export default async function handler(request) {
   if (request.method !== 'GET') return json({ error: 'method_not_allowed' }, 405);
   const authorization = request.headers.get('authorization') ?? '';
-  const match = /^(?:Bearer|OAuth) ([A-Za-z0-9._~-]{16,4096})$/i.exec(authorization);
+  // OAuth 2.0 bearer tokens may also contain `+` and `/`, with optional
+  // trailing `=` padding. Keep the value constrained to the RFC token
+  // alphabet before forwarding it to Yandex.
+  const match = /^(?:Bearer|OAuth) ([A-Za-z0-9._~+/-]{16,4096}={0,16})$/i.exec(authorization);
   if (!match) return json({ error: 'invalid_token' }, 401);
   let profile;
   try {
