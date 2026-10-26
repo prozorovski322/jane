@@ -28,7 +28,7 @@ if (existsSync(assetsRoot)) {
     const hash = createHash('sha256').update(contents).digest('hex').slice(0, 16);
     const filename = `asset-${hash}${extname(path)}`;
     writeFileSync(join(root, filename), contents);
-    replacements.set(`/assets/${relative(root, path).split(sep).join('/')}`, `/${filename}`);
+    replacements.set(`/${relative(root, path).split(sep).join('/')}`, `/${filename}`);
   }
 
   const rewriteReferences = (dir) => {
